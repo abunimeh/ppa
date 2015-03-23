@@ -1,0 +1,139 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : qor
+Design : cpu
+Version: J-2014.09
+Date   : Tue Mar 17 00:35:25 2015
+****************************************
+
+
+  Timing Path Group 'COMB'
+  -----------------------------------
+  Levels of Logic:             13.000
+  Critical Path Length:       666.126
+  Critical Path Slack:          0.540
+  Critical Path Clk Period:  2000.000
+  Total Negative Slack:         0.000
+  No. of Violating Paths:       0.000
+  Worst Hold Violation:         0.000
+  Total Hold Violation:         0.000
+  No. of Hold Violations:       0.000
+  -----------------------------------
+
+  Timing Path Group 'INPUTS'
+  -----------------------------------
+  Levels of Logic:             18.000
+  Critical Path Length:      1100.209
+  Critical Path Slack:         38.126
+  Critical Path Clk Period:  2000.000
+  Total Negative Slack:         0.000
+  No. of Violating Paths:       0.000
+  Worst Hold Violation:         0.000
+  Total Hold Violation:         0.000
+  No. of Hold Violations:       0.000
+  -----------------------------------
+
+  Timing Path Group 'OUTPUTS'
+  -----------------------------------
+  Levels of Logic:             17.000
+  Critical Path Length:      1332.749
+  Critical Path Slack:          0.585
+  Critical Path Clk Period:  2000.000
+  Total Negative Slack:         0.000
+  No. of Violating Paths:       0.000
+  Worst Hold Violation:         0.000
+  Total Hold Violation:         0.000
+  No. of Hold Violations:       0.000
+  -----------------------------------
+
+  Timing Path Group 'REG2REG'
+  -----------------------------------
+  Levels of Logic:             22.000
+  Critical Path Length:      1773.839
+  Critical Path Slack:         31.163
+  Critical Path Clk Period:  2000.000
+  Total Negative Slack:         0.000
+  No. of Violating Paths:       0.000
+  Worst Hold Violation:         0.000
+  Total Hold Violation:         0.000
+  No. of Hold Violations:       0.000
+  -----------------------------------
+
+  Timing Path Group 'clk'
+  -----------------------------------
+  Levels of Logic:              7.000
+  Critical Path Length:       774.676
+  Critical Path Slack:       1019.908
+  Critical Path Clk Period:  2000.000
+  Total Negative Slack:         0.000
+  No. of Violating Paths:       0.000
+  Worst Hold Violation:         0.000
+  Total Hold Violation:         0.000
+  No. of Hold Violations:       0.000
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          0
+  Hierarchical Port Count:          0
+  Leaf Cell Count:               1480
+  Buf/Inv Cell Count:             163
+  Buf Cell Count:                   0
+  Inv Cell Count:                 163
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:       962
+  Sequential Cell Count:          518
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:         176.853
+  Noncombinational Area:      398.896
+  Buf/Inv Area:                14.216
+  Total Buffer Area:            0.000
+  Total Inverter Area:         14.216
+  Macro/Black Box Area:         0.000
+  Net Area:                     0.000
+  Net XLength        :       5077.162
+  Net YLength        :       4203.003
+  -----------------------------------
+  Cell Area:                  575.749
+  Design Area:                575.749
+  Net Length        :        9280.165
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:          1492
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: chlr12735
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                   0.000
+  Logic Optimization:                 0.000
+  Mapping Optimization:             303.855
+  -----------------------------------------
+  Overall Compile Time:             454.040
+  Overall Compile Wall Clock Time:  895.543
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.000  TNS: 0.000  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.000  TNS: 0.000  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1
