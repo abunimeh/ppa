@@ -4,14 +4,28 @@ class QorRpt:
     pass
     import re
     from Metrics import Metric
+    from Configurations import Configurations
 
     # Open the file with read only permit
     #f = open(r'C:\Users\dcart_000\Desktop\cpu_testcase\syn\cpu.inc_compile.qor.rpt', "r")
+
+    #print(Configurations.parser_final())
+
+    #self is ok as long as you first initialize it
+    p = Configurations().parser_final()
+    print(p)
+
     f = open(r'C:\python\ppa\cpu_testcase\syn\cpu.inc_compile.qor.rpt', "r")
+
+    #import genCSV
+
+
+
 
     # use readlines to read all lines in the file
     # The variable "lines" is a list containing all lines
     lines = f.readlines()
+
 
     # lookCount is used to search a certain amount after reg2reg
     lookCount = 0
