@@ -1,0 +1,28 @@
+The total number of DRC in the design: 4758 
+The number of DRC relating to Macro/Boundary are: 1425
+The number of actual errors : 3333
+M2_44    152    152     0
+M3_44    312    312     0
+M4_44    152    152     0
+M5_44    312    312     0
+M6_149    177    177     0
+M6_23/24/21/22/123/124/25/26/37/46    80    80     0
+M6_46    80    80     0
+M7_21/22/26/27/37    80    80     0
+M7_37    80    80     0
+NV1a_UV1_31    271    0     271
+NV1b_UV1_31    271    0     271
+NV1c_UV1_31    271    0     271
+NV1d_UV1_31    271    0     271
+NV1e_UV1_31    2    0     2
+NV2a_UV2_31    239    0     239
+NV2b_UV2_31    239    0     239
+NV3a_UV3_31    271    0     271
+PV1a_UV1_31    222    0     222
+PV1b_UV1_31    222    0     222
+PV1c_UV1_31    222    0     222
+PV1d_UV1_31    222    0     222
+PV1e_UV1_31    2    0     2
+PV2a_UV2_31    193    0     193
+PV2b_UV2_31    193    0     193
+PV3a_UV3_31    222    0     222
