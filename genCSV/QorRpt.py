@@ -12,11 +12,11 @@ class QorRpt:
     #print(Configurations.parser_final())
 
     #self is ok as long as you first initialize it
-    p = Configurations().parser_final()
-    print(p)
+    base_path = Configurations().parser_final()
+    print(base_path)
 
-    f = open(r'C:\python\ppa\cpu_testcase\syn\cpu.inc_compile.qor.rpt', "r")
-
+    #f = open(r'C:\python\ppa\cpu_testcase\syn\cpu.inc_compile.qor.rpt', "r")
+    f = open(base_path + "syn\cpu.inc_compile.qor.rpt", "r")
     #import genCSV
 
 
