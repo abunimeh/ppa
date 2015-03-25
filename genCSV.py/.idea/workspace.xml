@@ -18,7 +18,7 @@
     <SUITE FILE_PATH="coverage/genCSV.py$QorRpt.coverage" NAME="QorRpt Coverage Results" MODIFIED="1427089377491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/genCSV.py$dpLog.coverage" NAME="dpLog Coverage Results" MODIFIED="1427088056407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/genCSV.py$FinalRpt.coverage" NAME="FinalRpt Coverage Results" MODIFIED="1426843370096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/genCSV.py$genCSV.coverage" NAME="genCSV Coverage Results" MODIFIED="1427231154591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/genCSV.py$genCSV.coverage" NAME="genCSV Coverage Results" MODIFIED="1427261236274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/genCSV.py$PVTmetric.coverage" NAME="PVTmetric Coverage Results" MODIFIED="1427090086110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -28,15 +28,15 @@
     <disable_hints />
   </component>
   <component name="DockManager">
-    <window id="1">
+    <window id="2">
       <content type="file-editors">
         <state>
           <leaf>
             <file leaf-file-name="QorRpt.py" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/QorRpt.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.41062802" vertical-offset="153" max-vertical-offset="1853">
-                    <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+                  <state vertical-scroll-proportion="-0.32038835" vertical-offset="1016" max-vertical-offset="1836">
+                    <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
                     <folding />
                   </state>
                 </provider>
@@ -56,18 +56,8 @@
       <file leaf-file-name="genCSV.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/genCSV.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="itertools.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm40/system/python_stubs/-1442825926/itertools.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="13537" max-vertical-offset="14433">
-              <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -83,21 +73,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RunTimeRpt.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RunTimeRpt.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RunTimeRpt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66019416" vertical-offset="0" max-vertical-offset="493">
-              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dpLog.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dpLog.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dpLog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="561">
-              <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.041262135" vertical-offset="0" max-vertical-offset="595">
+              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -156,7 +146,6 @@
         <option value="$PROJECT_DIR$/DRC_LVS.py" />
         <option value="$PROJECT_DIR$/PhysicalRpt.py" />
         <option value="$PROJECT_DIR$/FinalRpt.py" />
-        <option value="$PROJECT_DIR$/dpLog.py" />
         <option value="$PROJECT_DIR$/PVTmetric.py" />
         <option value="$PROJECT_DIR$/Layout_Error.py" />
         <option value="$PROJECT_DIR$/Metrics.py" />
@@ -164,6 +153,7 @@
         <option value="$PROJECT_DIR$/genCSV.py" />
         <option value="$PROJECT_DIR$/QorRpt.py" />
         <option value="$PROJECT_DIR$/RunTimeRpt.py" />
+        <option value="$PROJECT_DIR$/dpLog.py" />
       </list>
     </option>
   </component>
@@ -171,8 +161,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="924" />
-    <option name="y" value="118" />
+    <option name="x" value="2317" />
+    <option name="y" value="186" />
     <option name="width" value="960" />
     <option name="height" value="860" />
   </component>
@@ -572,7 +562,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="924" y="118" width="960" height="860" extended-state="0" />
+    <frame x="2317" y="186" width="960" height="860" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -970,22 +960,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dpLog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PVTmetric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Layout_Error.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
@@ -1010,10 +984,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/genCSV.py">
+    <entry file="file://$PROJECT_DIR$/PVTmetric.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1026,18 +1000,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/genCSV.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/QorRpt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41062802" vertical-offset="153" max-vertical-offset="1853">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        <state vertical-scroll-proportion="-0.32038835" vertical-offset="1016" max-vertical-offset="1836">
+          <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RunTimeRpt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66019416" vertical-offset="0" max-vertical-offset="493">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dpLog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.041262135" vertical-offset="0" max-vertical-offset="595">
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
           <folding />
         </state>
       </provider>

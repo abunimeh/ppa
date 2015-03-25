@@ -13,3 +13,4 @@ class Main:
     #from PvPower import PvPower
 
     QorRpt.searchfile()
+    #print(QorRpt.foundCritSlack)

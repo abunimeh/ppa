@@ -1,7 +1,7 @@
 class QorRptData:
     pass
     def outData(self, metric):
-        print(metric)
+        print(metric.group(1), metric.group(2))
 
     def CreateCsv(metricNames):
         import csv
@@ -84,7 +84,7 @@ class QorRpt:
             rptData.foundMaxCapVi = QorRpt.mathcLine("Max", "Cap", "Violations", line)
             rptData.foundMaxFanVi = QorRpt.mathcLine("Max", "trans", "Violations", line)
 
-            rptData.outData()
+            #rptData.outData()
 
             if rptData.foundCellCount:
                 reportDataItems.append(rptData.foundCellCount)
@@ -98,7 +98,6 @@ class QorRpt:
                 reportDataItems.append(rptData.foundMaxFanVi)
 
         for metrics in reportDataItems:
-            star = metrics.group(1)
             qdata =QorRptData()
-            qdata.outData(star, star)
+            qdata.outData(metrics)
         #QorRptData.CreateCsv()
