@@ -1,78 +1,104 @@
+class QorRptData:
+    pass
+    def outData(self, metric):
+        print(metric)
+
+    def CreateCsv(metricNames):
+        import csv
+        from itertools import zip_longest
+        acsvfile = open('C:\Dev\Work\Toms Work\Intel\ppa\cpu_testcase\csvtest.csv', 'w+')
+        thecsv = csv.writer(acsvfile, delimiter=',')
+        #rows = ([metricNames] for metrics in metricNames)
+        rows =""
+        row2 =""
+        for metrics in metricNames:
+            rows += (metrics.name + " , ")
+            row2 += metrics.value + " , "
+            thecsv.writerow(zip_longest(metrics.name, metrics.value))
+        print(rows)
+        print(row2)
+
+        thecsv.writerow([row2])
+        acsvfile.close()
 
 class QorRpt:
+    pass
+    def mathcLine(regex1,regex2, regex3, line):
+        import re
+        regexR = r'(%s[\s]*%s[\s]*%s[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*' %(regex1, regex2, regex3)
+        result = re.search(regexR, line, re.I)
+        return result
 
-    import re
-    from Metrics import Metric
+    def replaceSpace(metricname):
+        import re
+        newName = re.sub(r'[\W]+', "_", metricname)
+        return newName
 
-    # Open the file with read only permit
-    f = open(r'C:\Users\dcart_000\Desktop\cpu_testcase\syn\cpu.inc_compile.qor.rpt', "r")
+    def searchfile():
+        import re
+        reportDataItems = []
 
-    # use readlines to read all lines in the file
-    # The variable "lines" is a list containing all lines
-    lines = f.readlines()
+        # Open the file with read only permit
+        f = open(r'C:\Dev\Work\Toms Work\Intel\ppa\cpu_testcase\syn\cpu.inc_compile.qor.rpt', "r")
 
-    # lookCount is used to search a certain amount of lines after reading reg2reg
-    lookCount = 0
-    MetricNames = []
+        # use readlines to read all lines in the file
+        # The variable "lines" is a list containing all lines
+        lines = f.readlines()
 
-    # close the file after reading the lines.
-    f.close()
-    for line in lines:
-        foundVersion = re.search(r'(Version):[\s]*([\S]*)', line, re.I)
-        foundRegGroup = re.search(r'.*(REG2REG).*', line, re.M | re.I)
+        # lookCount is used to search a certain amount after reg2reg
+        lookCount = 0
 
-        if foundVersion:
-            MetricNames.append(Metric(foundVersion.group(1), foundVersion.group(2)))
-        if foundRegGroup:
-            lookCount = 10
-        if lookCount != 0:
+        # close the file after reading the lines.
+        f.close()
+        rptData = QorRptData()
 
-            foundCritSlack = re.search(r'(Critical[\s]*path[\s]*slack):+[\s]*([\d]+[\.?][\d]+).*', line, re.I)
-            foundWorstHoldVio = re.search(r'(Worst[\s]*hold[\s]*violation):+[\s]*([\d]+[\.?][\d]+).*', line, re.I)
-            foundCritPathLength = re.search(r'(critical[\s]*path[\s]*length):+[\s]*([\d]+[\.?][\d]+).*', line, re.I)
-            foundTotNegSlack = re.search(r'(total[\s]*Negative[\s]*slack):+[\s]*([\d]+[\.?][\d]+).*', line, re.I)
-            foundTotHoldVio = re.search(r'(total[\s]*hold[\s]*violation):+[\s]*([\d]+[\.?][\d]+).*', line, re.I)
+        for line in lines:
+            rptData.foundRegGroup = re.search(r'.*(REG2REG).*', line, re.I)
+            rptData.foundVersion = re.search(r'(Version):[\s]*([\S]*)', line, re.I)
+            if rptData.foundVersion:
+                reportDataItems.append(rptData.foundVersion)
+            if rptData.foundRegGroup:
+                lookCount = 10
+            if lookCount != 0:
+                rptData.foundCritSlack = QorRpt.mathcLine("Critical", "path", "slack", line)
+                rptData.foundWorstHoldVio = QorRpt.mathcLine("Worst", "hold", "violation", line)
+                rptData.foundCritPathLength = QorRpt.mathcLine("critical", "path", "length", line)
+                rptData.foundTotNegSlack = QorRpt.mathcLine("total", "Negative", "slack", line)
+                rptData.foundTotHoldVio = QorRpt.mathcLine("total", "hold", "violation", line)
 
-            if foundCritSlack:
-                CritSlack = re.sub(r'[\W]+', "_", foundCritSlack.group(1))
-                MetricNames.append(Metric(CritSlack, foundCritSlack.group(2)))
-            if foundWorstHoldVio:
-                WorstHoldVio = re.sub(r'[\W]+', "_", foundWorstHoldVio.group(1))
-                MetricNames.append(Metric(WorstHoldVio, foundWorstHoldVio.group(2)))
-            if foundCritPathLength:
-                CritPathLength = re.sub(r'[\W]+', "_", foundCritPathLength.group(1))
-                MetricNames.append(Metric(CritPathLength, foundCritPathLength.group(2)))
-            if foundTotNegSlack:
-                TotNegSlack = re.sub(r'[\W]+', "_", foundTotNegSlack.group(1))
-                MetricNames.append(Metric(TotNegSlack, foundTotNegSlack.group(2)))
-            if foundTotHoldVio:
-                TotHoldVio = re.sub(r'[\W]+', "_", foundTotHoldVio.group(1))
-                MetricNames.append(Metric(TotHoldVio, foundTotHoldVio.group(2)))
-            lookCount -= 1
+                if rptData.foundCritSlack:
+                    reportDataItems.append(rptData.foundCritSlack)
+                if rptData.foundWorstHoldVio:
+                    reportDataItems.append(rptData.foundWorstHoldVio)
+                if rptData.foundCritPathLength:
+                    reportDataItems.append(rptData.foundCritPathLength)
+                if rptData.foundTotNegSlack:
+                    reportDataItems.append(rptData.foundTotNegSlack)
+                if rptData.foundTotHoldVio:
+                    reportDataItems.append(rptData.foundTotHoldVio)
+                lookCount -= 1
 
-        # personal Note Come back for more detailed search!!!
+            rptData.foundCellCount = QorRpt.mathcLine("Leaf", "Cell", "Count", line)
+            rptData.foundCompileTime = QorRpt.mathcLine("Overall", "Compile", "Time", line)
+            rptData.foundMaxTransVi = QorRpt.mathcLine("Max", "trans", "Violations", line)
+            rptData.foundMaxCapVi = QorRpt.mathcLine("Max", "Cap", "Violations", line)
+            rptData.foundMaxFanVi = QorRpt.mathcLine("Max", "trans", "Violations", line)
 
-        foundCellCount = re.search(r'(Leaf[\s]*Cell[\s]*Count[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
-        foundCompileTime = re.search(r'(Overall[\s]*Compile[\s]*Time[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
-        foundMaxTransVi = re.search(r'(Max[\s]*trans[\s]*Violations[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
-        foundMaxCapVi = re.search(r'(Max[\s]*Cap[\s]*Violations[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
-        foundMaxFanVi = re.search(r'(Max[\s]*Fanout[\s]*Violations[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
+            rptData.outData()
 
-        if foundCellCount:
-            CellCount = re.sub(r'[\W]+', "_", foundCellCount.group(1))
-            MetricNames.append(Metric(CellCount, foundCellCount.group(2)))
-        if foundCompileTime:
-            CompileTime = re.sub(r'[\W]+', "_", foundCompileTime.group(1))
-            MetricNames.append(Metric(CompileTime, foundCompileTime.group(2)))
-        if foundMaxTransVi:
-            MaxTransVi = re.sub(r'[\W]+', "_", foundMaxTransVi.group(1))
-            MetricNames.append(Metric(MaxTransVi, foundMaxTransVi.group(2)))
-        if foundMaxCapVi:
-            MaxCapVi = re.sub(r'[\W]+', "_", foundMaxCapVi.group(1))
-            MetricNames.append(Metric(MaxCapVi, foundMaxCapVi.group(2)))
-        if foundMaxFanVi:
-            MaxFanVi = re.sub(r'[\W]+', "_", foundMaxFanVi.group(1))
-            MetricNames.append(Metric(MaxFanVi, foundMaxFanVi.group(2)))
+            if rptData.foundCellCount:
+                reportDataItems.append(rptData.foundCellCount)
+            if rptData.foundCompileTime:
+                reportDataItems.append(rptData.foundCompileTime)
+            if rptData.foundMaxTransVi:
+                reportDataItems.append(rptData.foundMaxTransVi)
+            if rptData.foundMaxCapVi:
+                reportDataItems.append(rptData.foundMaxCapVi)
+            if rptData.foundMaxFanVi:
+                reportDataItems.append(rptData.foundMaxFanVi)
 
-    for met in MetricNames:
-            print(met.name, met.value)
+        for metrics in reportDataItems:
+            star = metrics.group(1)
+            qdata =QorRptData()
+            qdata.outData(star, star)
+        #QorRptData.CreateCsv()

@@ -1,6 +1,7 @@
+class RunTimeRpt:
+    pass
 
 class RunTimeRpt:
-
     import re
     from Metrics import Metric
 

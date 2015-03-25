@@ -6,7 +6,6 @@ class clockTree:
     MetricNames = []
     # Open the file with read only permit
     f = open(r'C:\Users\dcart_000\Desktop\cpu_testcase\apr\cpu.cts.clock_tree.rpt', "r")
-    # use readlines to read all lines in the file
     # The variable "lines" is a list containing all lines
     lines = f.readlines()
     f.close()
