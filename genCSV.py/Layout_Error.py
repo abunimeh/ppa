@@ -29,9 +29,9 @@ class LayoutError:
                 erData.foundToolVersion = LayoutError.replaceSpace(foundToolVersion.group(1)), foundToolVersion.group(2)
                 DataItems.append(erData.foundToolVersion)
             if foundViolation:
-                tempfound = foundViolation.group(1)
+                tempfound = foundViolation.group(2)
                 violationCount += int(foundViolation.group(1))
         if violationCount > 0:
             erData.foundViolation = (tempfound, violationCount)
             DataItems.append(erData.foundViolation)
-        erData.outdata(DataItems)
+        return DataItems

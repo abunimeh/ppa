@@ -2,27 +2,20 @@ class QorRptData:
     def outData(self, metric):
         print(metric.group(1), metric.group(2))
 
-    def CreateCsv(metricNames):
+    def CreateCsv(self, metricNames):
         import csv
-        from itertools import zip_longest
-        acsvfile = open('C:\Dev\Work\Toms Work\Intel\ppa\cpu_testcase\csvtest.csv', 'w+')
-        thecsv = csv.writer(acsvfile, delimiter=',')
-        #rows = ([metricNames] for metrics in metricNames)
-        rows =""
-        row2 =""
-        for metrics in metricNames:
-            rows += (metrics.name + " , ")
-            row2 += metrics.value + " , "
-            thecsv.writerow(zip_longest(metrics.name, metrics.value))
-        print(rows)
-        print(row2)
-
-        thecsv.writerow([row2])
-        acsvfile.close()
+        names = ["%s" % i[0] for i in metricNames]
+        values = ["%s" % i[1] for i in metricNames]
+        with open(r'C:\Dev\Work\Toms Work\Intel\ppa\goodfile.csv', 'wt') as myfile:
+            writer = csv.writer(myfile, lineterminator='\n')
+            #for val in metricNames:
+            writer.writerow(names)
+            writer.writerow(values)
+        myfile.close()
 
 class QorRpt:
     pass
-    def mathcLine(regex1,regex2, regex3, line):
+    def mathcLine(regex1, regex2, regex3, line):
         import re
         regexR = r'(%s[\s]*%s[\s]*%s[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*' %(regex1, regex2, regex3)
         result = re.search(regexR, line, re.I)
@@ -30,7 +23,7 @@ class QorRpt:
 
     def replaceSpace(metricname):
         import re
-        newName = re.sub(r'[\W]+', "_", metricname.group(1))
+        newName = re.sub(r'[\W]+', "_", metricname)
         return newName
 
     def searchfile():
@@ -53,51 +46,58 @@ class QorRpt:
 
         for line in lines:
             rptData.foundRegGroup = re.search(r'.*(REG2REG).*', line, re.I)
-            rptData.foundVersion = re.search(r'(Version):[\s]*([\S]*)', line, re.I)
-            if rptData.foundVersion:
+            foundVersion = re.search(r'(Version):[\s]*([\S]*)', line, re.I)
+            if foundVersion:
+                rptData.foundVersion = QorRpt.replaceSpace(foundVersion.group(1)), foundVersion.group(2)
                 reportDataItems.append(rptData.foundVersion)
             if rptData.foundRegGroup:
                 lookCount = 10
             if lookCount != 0:
-                rptData.foundCritSlack = QorRpt.mathcLine("Critical", "path", "slack", line)
-                rptData.foundWorstHoldVio = QorRpt.mathcLine("Worst", "hold", "violation", line)
-                rptData.foundCritPathLength = QorRpt.mathcLine("critical", "path", "length", line)
-                rptData.foundTotNegSlack = QorRpt.mathcLine("total", "Negative", "slack", line)
-                rptData.foundTotHoldVio = QorRpt.mathcLine("total", "hold", "violation", line)
+                foundCritSlack = QorRpt.mathcLine("Critical", "path", "slack", line)
+                foundWorstHoldVio = QorRpt.mathcLine("Worst", "hold", "violation", line)
+                foundCritPathLength = QorRpt.mathcLine("critical", "path", "length", line)
+                foundTotNegSlack = QorRpt.mathcLine("total", "Negative", "slack", line)
+                foundTotHoldVio = QorRpt.mathcLine("total", "hold", "violation", line)
 
-                if rptData.foundCritSlack:
+                if foundCritSlack:
+                    rptData.foundCritSlack = QorRpt.replaceSpace(foundCritSlack.group(1)), foundCritSlack.group(2)
                     reportDataItems.append(rptData.foundCritSlack)
-                if rptData.foundWorstHoldVio:
+                if foundWorstHoldVio:
+                    rptData.foundWorstHoldVio = QorRpt.replaceSpace(foundWorstHoldVio.group(1)), foundWorstHoldVio.group(2)
                     reportDataItems.append(rptData.foundWorstHoldVio)
-                if rptData.foundCritPathLength:
+                if foundCritPathLength:
+                    rptData.foundCritPathLength = QorRpt.replaceSpace(foundCritPathLength.group(1)), foundCritPathLength.group(2)
                     reportDataItems.append(rptData.foundCritPathLength)
-                if rptData.foundTotNegSlack:
+                if foundTotNegSlack:
+                    rptData.foundTotNegSlack = QorRpt.replaceSpace(foundTotNegSlack.group(1)), foundTotNegSlack.group(2)
                     reportDataItems.append(rptData.foundTotNegSlack)
-                if rptData.foundTotHoldVio:
+                if foundTotHoldVio:
+                    rptData.foundTotHoldVio = QorRpt.replaceSpace(foundTotHoldVio.group(1)), foundTotHoldVio.group(2)
                     reportDataItems.append(rptData.foundTotHoldVio)
                 lookCount -= 1
 
-            rptData.foundCellCount = QorRpt.mathcLine("Leaf", "Cell", "Count", line)
-            rptData.foundCompileTime = QorRpt.mathcLine("Overall", "Compile", "Time", line)
-            rptData.foundMaxTransVi = QorRpt.mathcLine("Max", "trans", "Violations", line)
-            rptData.foundMaxCapVi = QorRpt.mathcLine("Max", "Cap", "Violations", line)
-            rptData.foundMaxFanVi = QorRpt.mathcLine("Max", "trans", "Violations", line)
+            foundCellCount = QorRpt.mathcLine("Leaf", "Cell", "Count", line)
+            foundCompileTime = QorRpt.mathcLine("Overall", "Compile", "Time", line)
+            foundMaxTransVi = QorRpt.mathcLine("Max", "trans", "Violations", line)
+            foundMaxCapVi = QorRpt.mathcLine("Max", "Cap", "Violations", line)
+            foundMaxFanVi = QorRpt.mathcLine("Max", "trans", "Violations", line)
 
             #rptData.outData()
 
-            if rptData.foundCellCount:
-                QorRpt.replaceSpace(rptData.foundCellCount)
+            if foundCellCount:
+                rptData.foundCellCount = QorRpt.replaceSpace(foundCellCount.group(1)), foundCellCount.group(2)
                 reportDataItems.append(rptData.foundCellCount)
-            if rptData.foundCompileTime:
+            if foundCompileTime:
+                rptData.foundCompileTime = QorRpt.replaceSpace(foundCompileTime.group(1)), foundCompileTime.group(2)
                 reportDataItems.append(rptData.foundCompileTime)
-            if rptData.foundMaxTransVi:
+            if foundMaxTransVi:
+                rptData.foundMaxTransVi = QorRpt.replaceSpace(foundMaxTransVi.group(1)), foundMaxTransVi.group(2)
                 reportDataItems.append(rptData.foundMaxTransVi)
-            if rptData.foundMaxCapVi:
+            if foundMaxCapVi:
+                rptData.foundMaxCapVi = QorRpt.replaceSpace(foundMaxCapVi.group(1)), foundMaxCapVi.group(2)
                 reportDataItems.append(rptData.foundMaxCapVi)
-            if rptData.foundMaxFanVi:
+            if foundMaxFanVi:
+                rptData.foundMaxFanVi = QorRpt.replaceSpace(foundMaxFanVi.group(1)), foundMaxFanVi.group(2)
                 reportDataItems.append(rptData.foundMaxFanVi)
-
-        for metrics in reportDataItems:
-            qdata =QorRptData()
-            qdata.outData(metrics)
-        #QorRptData.CreateCsv()
+        rptData.CreateCsv(reportDataItems)
+        return reportDataItems

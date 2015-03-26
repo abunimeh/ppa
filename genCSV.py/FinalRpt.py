@@ -22,4 +22,4 @@ class FinalRpt:
                 rptData.foundNumOfActuEr = (re.sub(r'[\W]+', "_", foundNumOfActuEr.group(1)), foundNumOfActuEr.group(2))
                 DataItems.append(rptData.foundNumOfActuEr)
 
-        rptData.outdata(DataItems)
+        return DataItems

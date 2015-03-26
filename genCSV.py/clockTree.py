@@ -18,7 +18,7 @@ class clockTreeRpt:
             foundMaxGlobeSkew = re.search(r'(Max[\s]*global[\s]*skew)[\s]*:+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
 
             if foundMaxGlobeSkew:
-                rptData.foundMaxGlobeSkew = foundMaxGlobeSkew.group(1),foundMaxGlobeSkew.group(2)
+                rptData.foundMaxGlobeSkew = re.sub(r'[\W]+', "_",foundMaxGlobeSkew.group(1)), foundMaxGlobeSkew.group(2)
                 DataItems.append(rptData.foundMaxGlobeSkew)
 
-        rptData.outdata(DataItems)
+        return DataItems

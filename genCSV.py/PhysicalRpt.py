@@ -43,4 +43,4 @@ class PhysicalRpt:
                 rptData.foundTotalMem = (PhysicalRpt.replaceSpace(foundTotalMem.group(1)), foundTotalMem.group(2))
                 DataItems.append(rptData.foundTotalMem)
 
-        rptData.outdata(DataItems)
+        return DataItems

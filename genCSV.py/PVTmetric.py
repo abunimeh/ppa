@@ -29,4 +29,4 @@ class PVTMetric:
         if Dbfile:
             pvtdata.foundDBfile = (Dbfile, theValue)
             DataItems.append(pvtdata.foundDBfile)
-        pvtdata.outdata(DataItems)
+        return DataItems

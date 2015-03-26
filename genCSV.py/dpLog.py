@@ -26,7 +26,7 @@ class dpLog:
                 DataItems.append(dpData.foundPeakMem)
                 foundFlag = 1
             if foundRuntime:
-                dpData.foundRuntime = (re.sub(r'[\W]+', "_", foundRuntime.group(1)), foundRuntime.group(2))
+                dpData.foundRuntime = re.sub(r'[\W]+', "_", foundRuntime.group(1)), foundRuntime.group(2)
                 DataItems.append(dpData.foundRuntime)
 
-        dpData.outdata(DataItems)
+        return DataItems
