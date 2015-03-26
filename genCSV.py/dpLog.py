@@ -8,7 +8,7 @@ class dpLog:
         foundFlag = 0
         MetricNames = []
         # Open the file with read only permit
-        f = open(r'C:\Users\dcart_000\Desktop\cpu_testcase\drc_lvs\trclvs\trclvs.dp.log', "r")
+        f = open(r'C:\dev\ppa\ppa\cpu_testcase\drc_lvs\trclvs\trclvs.dp.log', "r")
         # use readlines to read all lines in the file
         # The variable "lines" is a list containing all lines
         lines = f.readlines()

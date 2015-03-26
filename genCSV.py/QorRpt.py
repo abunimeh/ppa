@@ -6,7 +6,7 @@ class QorRptData:
     def CreateCsv(metricNames):
         import csv
         from itertools import zip_longest
-        acsvfile = open('C:\Dev\Work\Toms Work\Intel\ppa\cpu_testcase\csvtest.csv', 'w+')
+        acsvfile = open('C:\Dev\ppa\ppa\cpu_testcase\csvtest.csv', 'w+')
         thecsv = csv.writer(acsvfile, delimiter=',')
         #rows = ([metricNames] for metrics in metricNames)
         rows =""
@@ -39,7 +39,7 @@ class QorRpt:
         reportDataItems = []
 
         # Open the file with read only permit
-        f = open(r'C:\Dev\Work\Toms Work\Intel\ppa\cpu_testcase\syn\cpu.inc_compile.qor.rpt', "r")
+        f = open(r'C:\Dev\ppa\ppa\cpu_testcase\syn\cpu.inc_compile.qor.rpt', "r")
 
         # use readlines to read all lines in the file
         # The variable "lines" is a list containing all lines

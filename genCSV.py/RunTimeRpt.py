@@ -9,7 +9,7 @@ class RunTimeRpt:
 
         MetricNames = []
         # Open the file with read only permit
-        f = open(r'C:\Users\dcart_000\Desktop\cpu_testcase\pv_runs\max\cpu.run_time.rpt', "r")
+        f = open(r'C:\dev\ppa\ppa\cpu_testcase\pv_runs\max\cpu.run_time.rpt', "r")
         # use readlines to read all lines in the file
         # The variable "lines" is a list containing all lines
         lines = f.readlines()

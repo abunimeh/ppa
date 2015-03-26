@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d08e4b7e-a7ba-4905-9db3-1fb2a03762ca" name="Default" comment="" />
+    <list default="true" id="d08e4b7e-a7ba-4905-9db3-1fb2a03762ca" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genCSV.py/FinalRpt.py" afterPath="$PROJECT_DIR$/genCSV.py/FinalRpt.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genCSV.py/Layout_Error.py" afterPath="$PROJECT_DIR$/genCSV.py/Layout_Error.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genCSV.py/PVTmetric.py" afterPath="$PROJECT_DIR$/genCSV.py/PVTmetric.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genCSV.py/PhysicalRpt.py" afterPath="$PROJECT_DIR$/genCSV.py/PhysicalRpt.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genCSV.py/PvPower.py" afterPath="$PROJECT_DIR$/genCSV.py/PvPower.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genCSV.py/QorRpt.py" afterPath="$PROJECT_DIR$/genCSV.py/QorRpt.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genCSV.py/RunTimeRpt.py" afterPath="$PROJECT_DIR$/genCSV.py/RunTimeRpt.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genCSV.py/clockTree.py" afterPath="$PROJECT_DIR$/genCSV.py/clockTree.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/genCSV.py/dpLog.py" afterPath="$PROJECT_DIR$/genCSV.py/dpLog.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="ppa.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -14,7 +25,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ppa$genCSV.coverage" NAME="genCSV Coverage Results" MODIFIED="1427269157552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/genCSV.py" />
+    <SUITE FILE_PATH="coverage/ppa$genCSV.coverage" NAME="genCSV Coverage Results" MODIFIED="1427356676055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/genCSV.py" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -28,21 +39,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="QorRpt.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="QorRpt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/genCSV.py/QorRpt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1836">
-              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.7005494" vertical-offset="0" max-vertical-offset="1836">
+              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FinalRpt.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/genCSV.py/FinalRpt.py">
+      <file leaf-file-name="RunTimeRpt.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genCSV.py/RunTimeRpt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5604396" vertical-offset="0" max-vertical-offset="459">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -52,7 +63,77 @@
         <entry file="file://$PROJECT_DIR$/genCSV.py/genCSV.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Layout_Error.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genCSV.py/Layout_Error.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Metrics.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genCSV.py/Metrics.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PhysicalRpt.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genCSV.py/PhysicalRpt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PvPower.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genCSV.py/PvPower.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PVTmetric.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genCSV.py/PVTmetric.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clockTree.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genCSV.py/clockTree.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dpLog.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/genCSV.py/dpLog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -63,6 +144,21 @@
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/genCSV.py/FinalRpt.py" />
+        <option value="$PROJECT_DIR$/genCSV.py/clockTree.py" />
+        <option value="$PROJECT_DIR$/genCSV.py/dpLog.py" />
+        <option value="$PROJECT_DIR$/genCSV.py/Layout_Error.py" />
+        <option value="$PROJECT_DIR$/genCSV.py/PhysicalRpt.py" />
+        <option value="$PROJECT_DIR$/genCSV.py/PvPower.py" />
+        <option value="$PROJECT_DIR$/genCSV.py/PVTmetric.py" />
+        <option value="$PROJECT_DIR$/genCSV.py/RunTimeRpt.py" />
+        <option value="$PROJECT_DIR$/genCSV.py/QorRpt.py" />
+      </list>
+    </option>
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
@@ -432,10 +528,74 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/genCSV.py/QorRpt.py">
+    <entry file="file://$PROJECT_DIR$/genCSV.py/FinalRpt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1836">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genCSV.py/clockTree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genCSV.py/dpLog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genCSV.py/Layout_Error.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genCSV.py/Metrics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="364">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genCSV.py/PhysicalRpt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genCSV.py/PvPower.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genCSV.py/PVTmetric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/genCSV.py/RunTimeRpt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -443,15 +603,15 @@
     <entry file="file://$PROJECT_DIR$/genCSV.py/genCSV.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/genCSV.py/FinalRpt.py">
+    <entry file="file://$PROJECT_DIR$/genCSV.py/QorRpt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5604396" vertical-offset="0" max-vertical-offset="459">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7005494" vertical-offset="0" max-vertical-offset="1836">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
           <folding />
         </state>
       </provider>
