@@ -1,18 +1,20 @@
+class dpLogData:
+    def outdata(self, metric_list):
+        for metrics in metric_list:
+            print(metrics)
 class dpLog:
-    pass
-class dpLog:
-    def searchFile(self):
+    def searchfile():
         import re
-        from Metrics import Metric
 
         foundFlag = 0
-        MetricNames = []
+        DataItems = []
         # Open the file with read only permit
         f = open(r'C:\Users\dcart_000\Desktop\cpu_testcase\drc_lvs\trclvs\trclvs.dp.log', "r")
-        # use readlines to read all lines in the file
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()
+
+        dpData = dpLogData()
 
         #reversed in order to find the last value in the file
         for line in reversed(lines):
@@ -20,11 +22,11 @@ class dpLog:
             foundRuntime = re.search(r'(Overall[\s]*engine[\s]*time)[\s]*=+[\s]*([\d]*:*[\d]*:*[\d]+)+', line, re.I)
 
             if foundPeakMem and foundFlag != 1:
-                MetricNames.append(Metric(foundPeakMem.group(1), foundPeakMem.group(2)))
+                dpData.foundPeakMem = (foundPeakMem.group(1), foundPeakMem.group(2))
+                DataItems.append(dpData.foundPeakMem)
                 foundFlag = 1
             if foundRuntime:
-                Runtime = re.sub(r'[\W]+', "_", foundRuntime.group(1))
-                MetricNames.append(Metric(Runtime, foundRuntime.group(2)))
+                dpData.foundRuntime = (re.sub(r'[\W]+', "_", foundRuntime.group(1)), foundRuntime.group(2))
+                DataItems.append(dpData.foundRuntime)
 
-        for metric in MetricNames:
-            print(metric.name, metric.value)
+        dpData.outdata(DataItems)

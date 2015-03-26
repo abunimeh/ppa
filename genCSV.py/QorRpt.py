@@ -1,5 +1,4 @@
 class QorRptData:
-    pass
     def outData(self, metric):
         print(metric.group(1), metric.group(2))
 
@@ -31,7 +30,7 @@ class QorRpt:
 
     def replaceSpace(metricname):
         import re
-        newName = re.sub(r'[\W]+', "_", metricname)
+        newName = re.sub(r'[\W]+', "_", metricname.group(1))
         return newName
 
     def searchfile():
@@ -87,6 +86,7 @@ class QorRpt:
             #rptData.outData()
 
             if rptData.foundCellCount:
+                QorRpt.replaceSpace(rptData.foundCellCount)
                 reportDataItems.append(rptData.foundCellCount)
             if rptData.foundCompileTime:
                 reportDataItems.append(rptData.foundCompileTime)

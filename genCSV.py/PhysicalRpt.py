@@ -1,34 +1,46 @@
+class PhysicalRptData:
+    def outdata(self, metric_list):
+        for metrics in metric_list:
+            print(metrics)
+
 class PhysicalRpt:
+    def mathcLine(regex1,regex2, regex3, line):
+        import re
+        regexR = r'(%s[\s]*%s[\s]*%s[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*' %(regex1, regex2, regex3)
+        result = re.search(regexR, line, re.I)
+        return result
 
-    import re
-    from Metrics import Metric
+    def replaceSpace(metric_name):
+        import re
+        newName = re.sub(r'[\W]+', "_", metric_name)
+        return newName
 
-    MetricNames = []
-    # Open the file with read only permit
-    f = open(r'C:\Users\dcart_000\Desktop\cpu_testcase\apr\cpu.fill.physical.rpt', "r")
-    # use readlines to read all lines in the file
-    # The variable "lines" is a list containing all lines
-    lines = f.readlines()
-    f.close()
+    def searchfile():
+        DataItems = []
+        # Open the file with read only permit
+        f = open(r'C:\Users\dcart_000\Desktop\cpu_testcase\apr\cpu.fill.physical.rpt', "r")
+        # The variable "lines" is a list containing all lines
+        lines = f.readlines()
+        f.close()
+        rptData = PhysicalRptData()
 
-    for line in lines:
-        foundUtil = re.search(r'(Std[\s]*cells[\s]*utilization):+[\s]*([\d]+[\.]*[\d]*%+)+.*', line, re.I)
-        foundShort = re.search(r'(Short[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
-        foundTotalEr = re.search(r'(Total[\s]*error[\s]*number[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
-        foundTotalMem = re.search(r'(Total[\s]*Proc[\s]*Memory[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
+        for line in lines:
+            foundUtil = PhysicalRpt.mathcLine("Std", "cells", "utilization", line)
+            foundShort = PhysicalRpt.mathcLine("Short", " ", " ", line)
+            foundTotalEr = PhysicalRpt.mathcLine("Total", "error", "number", line)
+            foundTotalMem = PhysicalRpt.mathcLine("Total", "Proc", "Memory", line)
 
-        if foundUtil:
-            Util = re.sub(r'[\W]+', "_", foundUtil.group(1))
-            MetricNames.append(Metric(Util, foundUtil.group(2)))
-        if foundShort:
-            Short = re.sub(r'[\W]+', "_", foundShort.group(1))
-            MetricNames.append(Metric(Short, foundShort.group(2)))
-        if foundTotalEr:
-            TotalEr = re.sub(r'[\W]+', "_", foundTotalEr.group(1))
-            MetricNames.append(Metric(TotalEr, foundTotalEr.group(2)))
-        if foundTotalMem:
-            TotalMem = re.sub(r'[\W]+', "_", foundTotalMem.group(1))
-            MetricNames.append(Metric(TotalMem, foundTotalMem.group(2)))
+            if foundUtil:
+                rptData.foundUtil = (PhysicalRpt.replaceSpace(foundUtil.group(1))), foundUtil.group(2)
+                DataItems.append(rptData.foundUtil)
+            if foundShort:
+                rptData.foundShort = (PhysicalRpt.replaceSpace(foundShort.group(1))), foundShort.group(2)
+                DataItems.append(rptData.foundShort)
+            if foundTotalEr:
+                rptData.foundTotalEr = (PhysicalRpt.replaceSpace(foundTotalEr.group(1)), foundTotalEr.group(2))
+                DataItems.append(rptData.foundTotalEr)
+            if foundTotalMem:
+                rptData.foundTotalMem = (PhysicalRpt.replaceSpace(foundTotalMem.group(1)), foundTotalMem.group(2))
+                DataItems.append(rptData.foundTotalMem)
 
-    for met in MetricNames:
-        print(met.name, met.value)
+        rptData.outdata(DataItems)

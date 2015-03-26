@@ -1,34 +1,46 @@
+class PvPowerData:
+    def outdata(self, metric_list):
+        for metrics in metric_list:
+            print(metrics)
 
 class PvPower:
-    import re
-    from Metrics import Metric
+    def mathcLine(regex1,regex2, regex3, line):
+        import re
+        regexR = r'(%s[\s]*%s[\s]*%s)[\s]*=+[\s]*([\d]+[\.]*[\d]*[\S]+)+[\s]*' %(regex1, regex2, regex3)
+        result = re.search(regexR, line, re.I)
+        return result
 
-    MetricNames = []
-    # Open the file with read only permit
-    f = open(r'C:\Users\dcart_000\Desktop\cpu_testcase\pv_runs\power\cpu.power.power.rpt', "r")
-    # use readlines to read all lines in the file
-    # The variable "lines" is a list containing all lines
-    lines = f.readlines()
-    f.close()
+    def replaceSpace(metricname):
+        import re
+        newName = re.sub(r'[\W]+', "_", metricname)
+        return newName
 
-    for line in lines:
-        foundCInternPwr = re.search(r'(Cell[\s]*Internal[\s]*Power)[\s]*=+[\s]*([\d]+[\.]*[\d]*[\S]+)+[\s]*', line, re.I)
-        foundCLeakPwr = re.search(r'(Cell[\s]*Leakage[\s]*Power)[\s]*=+[\s]*([\d]+[\.]*[\d]*[\S]+)+.[\s]*', line, re.I)
-        foundNetSwPwr = re.search(r'(Net[\s]*switching[\s]*power)[\s]*=+[\s]*([\d]+[\.]*[\d]*[\S]+)+[\s]*', line, re.I)
-        foundTotalPwr = re.search(r'(Total[\s]*Power)[\s]*=+[\s]*([\d]+[\.]*[\d]*[\S]+)+[\s]*', line, re.I)
+    def searchfile():
+        DataItems = []
+        # Open the file with read only permit
+        f = open(r'C:\Users\dcart_000\Desktop\cpu_testcase\pv_runs\power\cpu.power.power.rpt', "r")
+        # The variable "lines" is a list containing all lines
+        lines = f.readlines()
+        f.close()
 
-        if foundCInternPwr:
-            CInternPwr = re.sub(r'[\W]+', "_", foundCInternPwr.group(1))
-            MetricNames.append(Metric(CInternPwr, foundCInternPwr.group(2)))
-        if foundCLeakPwr:
-            CLeakPwr = re.sub(r'[\W]+', "_", foundCLeakPwr.group(1))
-            MetricNames.append(Metric(CLeakPwr, foundCLeakPwr.group(2)))
-        if foundNetSwPwr:
-            NetSwPwr = re.sub(r'[\W]+', "_", foundNetSwPwr.group(1))
-            MetricNames.append(Metric(NetSwPwr, foundNetSwPwr.group(2)))
-        if foundTotalPwr:
-            TotalPwr = re.sub(r'[\W]+', "_", foundTotalPwr.group(1))
-            MetricNames.append(Metric(TotalPwr, foundTotalPwr.group(2)))
+        pvData = PvPowerData()
+        for line in lines:
+            foundCInternPwr = PvPower.mathcLine("Cell","Internal","Power",line)
+            foundCLeakPwr = PvPower.mathcLine("Cell","Leakage","Power",line)
+            foundNetSwPwr = PvPower.mathcLine("Net","switching","Power",line)
+            foundTotalPwr = PvPower.mathcLine("Total","Power", " ", line)
 
-    for met in MetricNames:
-        print(met.name, met.value)
+            if foundCInternPwr:
+                pvData.foundCInternPwr = PvPower.replaceSpace(foundCInternPwr.group(1)), foundCInternPwr.group(2)
+                DataItems.append(pvData.foundCInternPwr)
+            if foundCLeakPwr:
+                pvData.foundCLeakPwr = PvPower.replaceSpace(foundCLeakPwr.group(1)), foundCLeakPwr.group(2)
+                DataItems.append(pvData.foundCLeakPwr)
+            if foundNetSwPwr:
+                pvData.foundNetSwPwr = PvPower.replaceSpace(foundNetSwPwr.group(1)), foundNetSwPwr.group(2)
+                DataItems.append(pvData.foundNetSwPwr)
+            if foundTotalPwr:
+                pvData.foundTotalPwr = PvPower.replaceSpace(foundTotalPwr.group(1)), foundTotalPwr.group(2)
+                DataItems.append(pvData.foundTotalPwr)
+
+        pvData.outdata(DataItems)
