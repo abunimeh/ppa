@@ -29,4 +29,5 @@ class PVTMetric:
         if Dbfile:
             pvtdata.foundDBfile = (Dbfile, theValue)
             DataItems.append(pvtdata.foundDBfile)
-        return DataItems
+        return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]
+        #return DataItems

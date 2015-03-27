@@ -34,4 +34,4 @@ class LayoutError:
         if violationCount > 0:
             erData.foundViolation = (tempfound, violationCount)
             DataItems.append(erData.foundViolation)
-        return DataItems
+        return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]

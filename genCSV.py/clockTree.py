@@ -21,4 +21,5 @@ class clockTreeRpt:
                 rptData.foundMaxGlobeSkew = re.sub(r'[\W]+', "_",foundMaxGlobeSkew.group(1)), foundMaxGlobeSkew.group(2)
                 DataItems.append(rptData.foundMaxGlobeSkew)
 
-        return DataItems
+        return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]
+        #return DataItems

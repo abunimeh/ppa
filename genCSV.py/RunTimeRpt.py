@@ -22,4 +22,5 @@ class RunTimeRpt:
                 rptData.foundRunTime = (re.sub(r'[\W]+', "_", foundRunTime.group(1)), foundRunTime.group(2))
                 DataItems.append(rptData.foundRunTime)
 
-        return DataItems
+        return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]
+        #return DataItems

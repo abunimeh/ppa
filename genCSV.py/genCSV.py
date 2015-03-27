@@ -2,6 +2,7 @@
 # STATUS -- MISSING TOTAL RUNSET ERROR (OF ALL LAYOUT ERROR RUNS OF THE TESTCASE) COUNT METRIC
 
 from QorRpt import QorRpt
+from QorRpt import QorRptData
 from FinalRpt import FinalRpt
 from PVTmetric import PVTMetric
 from PhysicalRpt import PhysicalRpt
@@ -11,27 +12,41 @@ from Layout_Error import LayoutError
 from dpLog import dpLog
 from PvPower import PvPower
 
-QorRpt.searchfile()
+#QorRpt.searchfile()
 import csv
-# metricNames = []
-#
-# metricNames.append(QorRpt.searchfile())
-# metricNames.append(LayoutError.searchfile())
-# metricNames.append(PVTMetric.searchfile())
-# metricNames.append(PvPower.searchfile())
-# metricNames.append(FinalRpt.searchfile())
-# metricNames.append(PhysicalRpt.searchfile())
-# metricNames.append(RunTimeRpt.searchfile())
-# metricNames.append(clockTreeRpt.searchfile())
-# metricNames.append(dpLog.searchfile())
-# for met in metricNames:
-#     print(met[1][0])
-# names = ["%s" % i[][0] for i in metricNames]
-# values = ["%s" % i[][1] for i in metricNames]
-# with open(r'C:\Dev\Work\Toms Work\Intel\ppa\goodfile.csv', 'wt') as myfile:
-#     writer = csv.writer(myfile, lineterminator='\n')
-#     #for val in metricNames:
-#     writer.writerow(names)
-#     writer.writerow(values)
-# myfile.close()
+
+metricNames = []
+qrpt = QorRpt.searchfile()
+ppower = PvPower.searchfile()
+pvtmetrics = PVTMetric.searchfile()
+finalrpt = FinalRpt.searchfile()
+physicalrpt = PhysicalRpt.searchfile()
+runtimerpt = RunTimeRpt.searchfile()
+clocktreerpt = clockTreeRpt.searchfile()
+dplog = dpLog.searchfile()
+layouter = LayoutError.searchfile()
+
+metricNames.append(qrpt)
+metricNames.append(ppower)
+metricNames.append(pvtmetrics)
+metricNames.append(finalrpt)
+metricNames.append(physicalrpt)
+metricNames.append(runtimerpt)
+metricNames.append(clocktreerpt)
+metricNames.append(dplog)
+metricNames.append(layouter)
+
+names = []
+values = []
+for met in metricNames:
+    print(met[0])
+for metric in metricNames:
+    names += metric[0]
+    values += metric[1]
+
+with open(r'C:\Dev\Work\Toms Work\Intel\ppa\goodfile.csv', 'wt') as myfile:
+    writer = csv.writer(myfile, lineterminator='\n')
+    writer.writerow(names)
+    writer.writerow(values)
+myfile.close()
 

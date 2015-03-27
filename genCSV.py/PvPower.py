@@ -43,4 +43,5 @@ class PvPower:
                 pvData.foundTotalPwr = PvPower.replaceSpace(foundTotalPwr.group(1)), foundTotalPwr.group(2)
                 DataItems.append(pvData.foundTotalPwr)
 
-        return DataItems
+        return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]
+        #return DataItems

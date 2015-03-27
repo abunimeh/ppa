@@ -15,6 +15,7 @@ class QorRptData:
 
 class QorRpt:
     pass
+
     def mathcLine(regex1, regex2, regex3, line):
         import re
         regexR = r'(%s[\s]*%s[\s]*%s[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*' %(regex1, regex2, regex3)
@@ -49,7 +50,7 @@ class QorRpt:
             foundVersion = re.search(r'(Version):[\s]*([\S]*)', line, re.I)
             if foundVersion:
                 rptData.foundVersion = QorRpt.replaceSpace(foundVersion.group(1)), foundVersion.group(2)
-                reportDataItems.append(rptData.foundVersion)
+                #QorRpt.reportDataItems.append(rptData.foundVersion)
             if rptData.foundRegGroup:
                 lookCount = 10
             if lookCount != 0:
@@ -99,5 +100,7 @@ class QorRpt:
             if foundMaxFanVi:
                 rptData.foundMaxFanVi = QorRpt.replaceSpace(foundMaxFanVi.group(1)), foundMaxFanVi.group(2)
                 reportDataItems.append(rptData.foundMaxFanVi)
-        rptData.CreateCsv(reportDataItems)
-        return reportDataItems
+        #rptData.CreateCsv(reportDataItems)
+        #print(type())
+        return ["%s" % i[0] for i in reportDataItems], ["%s" % i[1] for i in reportDataItems]
+        #return reportDataItems
