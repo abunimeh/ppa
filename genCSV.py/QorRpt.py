@@ -18,11 +18,8 @@ class QorRptData:
         myfile.close()
 
 class QorRpt:
-    pass
-
     def mathcLine(regex1, regex2, regex3, line):
         import re
-        
         regexR = r'(%s[\s]*%s[\s]*%s[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*' %(regex1, regex2, regex3)
         result = re.search(regexR, line, re.I)
         return result
@@ -35,18 +32,16 @@ class QorRpt:
     def searchfile():
         import re
         from Configurations import Configurations
-        reportDataItems = []
+
         base_path = Configurations().parser_final()
         # Open the file with read only permit
-        f = open(base_path + "cpu_testcase\syn\cpu.inc_compile.qor.rpt", "r")
-
-        # use readlines to read all lines in the file
+        f = open(base_path + r'cpu_testcase\syn\cpu.inc_compile.qor.rpt', "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
 
         # lookCount is used to search a certain amount after reg2reg
         lookCount = 0
-
+        reportDataItems = []
         # close the file after reading the lines.
         f.close()
         rptData = QorRptData()
@@ -106,7 +101,5 @@ class QorRpt:
             if foundMaxFanVi:
                 rptData.foundMaxFanVi = QorRpt.replaceSpace(foundMaxFanVi.group(1)), foundMaxFanVi.group(2)
                 reportDataItems.append(rptData.foundMaxFanVi)
-        #rptData.CreateCsv(reportDataItems)
-        #print(type())
+
         return ["%s" % i[0] for i in reportDataItems], ["%s" % i[1] for i in reportDataItems]
-        #return reportDataItems

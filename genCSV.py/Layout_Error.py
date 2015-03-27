@@ -21,7 +21,7 @@ class LayoutError:
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()
-        erData = LayoutErrorData()
+        errorData = LayoutErrorData()
         violationCount = 0
         DataItems = []
 
@@ -30,12 +30,13 @@ class LayoutError:
             foundViolation = re.search(r'[\s]*([\d]+)[\s]*(violation+[s]*[\s]*found)+[\s]*', line, re.I)
 
             if foundToolVersion:
-                erData.foundToolVersion = LayoutError.replaceSpace(foundToolVersion.group(1)), foundToolVersion.group(2)
-                DataItems.append(erData.foundToolVersion)
+                errorData.foundToolVersion = LayoutError.replaceSpace(foundToolVersion.group(1)), foundToolVersion.group(2)
+                DataItems.append(errorData.foundToolVersion)
             if foundViolation:
                 tempfound = foundViolation.group(2)
                 violationCount += int(foundViolation.group(1))
+                
         if violationCount > 0:
-            erData.foundViolation = (tempfound, violationCount)
-            DataItems.append(erData.foundViolation)
+            errorData.foundViolation = (tempfound, violationCount)
+            DataItems.append(errorData.foundViolation)
         return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]

@@ -6,16 +6,15 @@ class RunTimeRptData:
 class RunTimeRpt:
     def searchfile():
         import re
-        DataItems = []
         from Configurations import Configurations
         base_path = Configurations().parser_final()
 
         # Open the file with read only permit
-        f = open(base_path + 'pv_runs\max\cpu.run_time.rpt', "r")
+        f = open(base_path + r'cpu_testcase\pv_runs\max\cpu.run_time.rpt', "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()
-
+        DataItems = []
         rptData = RunTimeRptData()
 
         for line in lines:
@@ -26,4 +25,3 @@ class RunTimeRpt:
                 DataItems.append(rptData.foundRunTime)
 
         return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]
-        #return DataItems

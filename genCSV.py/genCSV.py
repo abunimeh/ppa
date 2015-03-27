@@ -1,8 +1,9 @@
 # MAIN
 # STATUS -- MISSING TOTAL RUNSET ERROR (OF ALL LAYOUT ERROR RUNS OF THE TESTCASE) COUNT METRIC
+from Configurations import Configurations
+base_path = Configurations().parser_final()
 
 from QorRpt import QorRpt
-from QorRpt import QorRptData
 from FinalRpt import FinalRpt
 from PVTmetric import PVTMetric
 from PhysicalRpt import PhysicalRpt
@@ -12,7 +13,6 @@ from Layout_Error import LayoutError
 from dpLog import dpLog
 from PvPower import PvPower
 
-#QorRpt.searchfile()
 import csv
 
 metricNames = []
@@ -44,7 +44,7 @@ for metric in metricNames:
     names += metric[0]
     values += metric[1]
 
-with open(r'C:\Dev\Work\Toms Work\Intel\ppa\goodfile.csv', 'wt') as myfile:
+with open(base_path + r'goodfile.csv', 'wt') as myfile:
     writer = csv.writer(myfile, lineterminator='\n')
     writer.writerow(names)
     writer.writerow(values)

@@ -25,4 +25,3 @@ class FinalRpt:
                 DataItems.append(rptData.foundNumOfActuEr)
 
         return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]
-        # return DataItems

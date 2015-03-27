@@ -10,7 +10,7 @@ class dpLog:
         foundFlag = 0
         DataItems = []
         # Open the file with read only permit
-        f = open(base_path + 'cpu_testcase\drc_lvs\trclvs\trclvs.dp.log', "r")
+        f = open(base_path + r'cpu_testcase\drc_lvs\trclvs\trclvs.dp.log', "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()

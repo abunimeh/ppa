@@ -20,7 +20,7 @@ class PhysicalRpt:
         from Configurations import Configurations
         base_path = Configurations().parser_final()
         # Open the file with read only permit
-        f = open(base_path + 'cpu_testcase\apr\cpu.fill.physical.rpt', "r")
+        f = open(base_path + r'cpu_testcase\apr\cpu.fill.physical.rpt', "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()
@@ -46,4 +46,3 @@ class PhysicalRpt:
                 DataItems.append(rptData.foundTotalMem)
 
         return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]
-        #return DataItems

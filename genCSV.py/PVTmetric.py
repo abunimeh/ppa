@@ -10,14 +10,14 @@ class PVTMetric:
         from Configurations import Configurations
         base_path = Configurations().parser_final()
 
-        DataItems = []
-        foundValue = []
-        theValue = ""
         # Open the file with read only permit
-        f = open(base_path + 'cpu_testcase\apr\icc.log', "r")
+        f = open(base_path + r'cpu_testcase\apr\icc.log', "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()
+        DataItems = []
+        foundValue = []
+        theValue = ""
         pvtdata = PVTMetricData()
         for line in lines:
             foundDBfile = re.search(r'(Loading[\s]*db[\s]*file).*_([rx\d]+_[prt][sft]+_[\d\.]+v_[-]*[\d]+c_[\w]+)', line, re.I)
@@ -32,4 +32,3 @@ class PVTMetric:
             pvtdata.foundDBfile = (Dbfile, theValue)
             DataItems.append(pvtdata.foundDBfile)
         return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]
-        #return DataItems
