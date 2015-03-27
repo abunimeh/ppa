@@ -17,8 +17,10 @@ class PhysicalRpt:
 
     def searchfile():
         DataItems = []
+        from Configurations import Configurations
+        base_path = Configurations().parser_final()
         # Open the file with read only permit
-        f = open(r'C:\Users\dcart_000\Desktop\cpu_testcase\apr\cpu.fill.physical.rpt', "r")
+        f = open(base_path + 'cpu_testcase\apr\cpu.fill.physical.rpt', "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()

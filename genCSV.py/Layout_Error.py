@@ -7,13 +7,17 @@ class LayoutError:
 
     def replaceSpace(metricname):
         import re
+        
         newName = re.sub(r'[\W]+', "_", metricname)
         return newName
 
     def searchfile():
         import re
+        from Configurations import Configurations
+        base_path = Configurations().parser_final()
         # Open the file with read only permit
-        f = open(r'C:\Users\dcart_000\Desktop\cpu_testcase\drc_lvs\denall\cpu.LAYOUT_ERRORS', "r")
+        
+        f = open(base_path + 'cpu_testcase\drc_lvs\denall\cpu.LAYOUT_ERRORS', "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()

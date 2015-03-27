@@ -7,8 +7,11 @@ class RunTimeRpt:
     def searchfile():
         import re
         DataItems = []
+        from Configurations import Configurations
+        base_path = Configurations().parser_final()
+
         # Open the file with read only permit
-        f = open(r'C:\Users\dcart_000\Desktop\cpu_testcase\pv_runs\max\cpu.run_time.rpt', "r")
+        f = open(base_path + 'pv_runs\max\cpu.run_time.rpt', "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()

@@ -5,10 +5,11 @@ class clockTreeRptData:
 class clockTreeRpt:
     def searchfile():
         import re
-
+        from Configurations import Configurations
         DataItems = []
+        base_path = Configurations().parser_final()
         # Open the file with read only permit
-        f = open(r'C:\Users\dcart_000\Desktop\cpu_testcase\apr\cpu.cts.clock_tree.rpt', "r")
+        f = open(base_path + "cpu_testcase\apr\cpu.cts.clock_tree.rpt", "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()

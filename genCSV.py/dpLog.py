@@ -5,11 +5,12 @@ class dpLogData:
 class dpLog:
     def searchfile():
         import re
-
+        from Configurations import Configurations
+        base_path = Configurations().parser_final()
         foundFlag = 0
         DataItems = []
         # Open the file with read only permit
-        f = open(r'C:\Users\dcart_000\Desktop\cpu_testcase\drc_lvs\trclvs\trclvs.dp.log', "r")
+        f = open(base_path + 'cpu_testcase\drc_lvs\trclvs\trclvs.dp.log', "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()
