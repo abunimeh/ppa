@@ -1,12 +1,16 @@
+from test.test_tools import basepath
 class QorRptData:
     def outData(self, metric):
         print(metric.group(1), metric.group(2))
 
     def CreateCsv(self, metricNames):
         import csv
+        from Configurations import Configurations
         names = ["%s" % i[0] for i in metricNames]
         values = ["%s" % i[1] for i in metricNames]
-        with open(r'C:\Dev\Work\Toms Work\Intel\ppa\goodfile.csv', 'wt') as myfile:
+        base_path = Configurations().parser_final()
+        
+        with open(base_path + "goodfile.csv", 'wt') as myfile:
             writer = csv.writer(myfile, lineterminator='\n')
             #for val in metricNames:
             writer.writerow(names)
@@ -18,6 +22,7 @@ class QorRpt:
 
     def mathcLine(regex1, regex2, regex3, line):
         import re
+        
         regexR = r'(%s[\s]*%s[\s]*%s[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*' %(regex1, regex2, regex3)
         result = re.search(regexR, line, re.I)
         return result
@@ -29,10 +34,11 @@ class QorRpt:
 
     def searchfile():
         import re
+        from Configurations import Configurations
         reportDataItems = []
-
+        base_path = Configurations().parser_final()
         # Open the file with read only permit
-        f = open(r'C:\Dev\Work\Toms Work\Intel\ppa\cpu_testcase\syn\cpu.inc_compile.qor.rpt', "r")
+        f = open(base_path + "cpu_testcase\syn\cpu.inc_compile.qor.rpt", "r")
 
         # use readlines to read all lines in the file
         # The variable "lines" is a list containing all lines

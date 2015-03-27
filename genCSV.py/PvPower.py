@@ -18,7 +18,10 @@ class PvPower:
     def searchfile():
         DataItems = []
         # Open the file with read only permit
-        f = open(r'C:\Users\dcart_000\Desktop\cpu_testcase\pv_runs\power\cpu.power.power.rpt', "r")
+        from Configurations import Configurations
+        base_path = Configurations().parser_final()
+
+        f = open(base_path + 'cpu_testcase\pv_runs\power\cpu.power.power.rpt', "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()
