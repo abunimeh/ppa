@@ -1,4 +1,6 @@
 from test.test_tools import basepath
+
+
 class QorRptData:
     def outData(self, metric):
         print(metric.group(1), metric.group(2))
@@ -9,7 +11,7 @@ class QorRptData:
         names = ["%s" % i[0] for i in metricNames]
         values = ["%s" % i[1] for i in metricNames]
         base_path = Configurations().parser_final()
-        
+
         with open(base_path + "goodfile.csv", 'wt') as myfile:
             writer = csv.writer(myfile, lineterminator='\n')
             #for val in metricNames:
@@ -17,25 +19,28 @@ class QorRptData:
             writer.writerow(values)
         myfile.close()
 
+
 class QorRpt:
+    def metric_naming(file):
+        return
     def mathcLine(regex1, regex2, regex3, line):
         import re
-        regexR = r'(%s[\s]*%s[\s]*%s[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*' %(regex1, regex2, regex3)
-        result = re.search(regexR, line, re.I)
+        line_variables = r'(%s[\s]*%s[\s]*%s[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*' % (regex1, regex2, regex3)
+        result = re.search(line_variables, line, re.I)
         return result
 
     def replaceSpace(metricname):
         import re
-        newName = re.sub(r'[\W]+', "_", metricname)
-        return newName
+        new_name = re.sub(r'[\W]+', "_", metricname)
+        return new_name
 
-    def searchfile():
+    def searchfile(file):
         import re
         from Configurations import Configurations
-
+        stage = QorRpt.metric_naming(file)
         base_path = Configurations().parser_final()
         # Open the file with read only permit
-        f = open(base_path + r'cpu_testcase\syn\cpu.inc_compile.qor.rpt', "r")
+        f = open(file, "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
 
@@ -51,7 +56,7 @@ class QorRpt:
             foundVersion = re.search(r'(Version):[\s]*([\S]*)', line, re.I)
             if foundVersion:
                 rptData.foundVersion = QorRpt.replaceSpace(foundVersion.group(1)), foundVersion.group(2)
-                #QorRpt.reportDataItems.append(rptData.foundVersion)
+                reportDataItems.append(rptData.foundVersion)
             if rptData.foundRegGroup:
                 lookCount = 10
             if lookCount != 0:
@@ -83,8 +88,6 @@ class QorRpt:
             foundMaxTransVi = QorRpt.mathcLine("Max", "trans", "Violations", line)
             foundMaxCapVi = QorRpt.mathcLine("Max", "Cap", "Violations", line)
             foundMaxFanVi = QorRpt.mathcLine("Max", "trans", "Violations", line)
-
-            #rptData.outData()
 
             if foundCellCount:
                 rptData.foundCellCount = QorRpt.replaceSpace(foundCellCount.group(1)), foundCellCount.group(2)

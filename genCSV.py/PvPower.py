@@ -15,13 +15,13 @@ class PvPower:
         newName = re.sub(r'[\W]+', "_", metricname)
         return newName
 
-    def searchfile():
+    def searchfile(file):
         DataItems = []
         # Open the file with read only permit
         from Configurations import Configurations
         base_path = Configurations().parser_final()
 
-        f = open(base_path + 'cpu_testcase\pv_runs\power\cpu.power.power.rpt', "r")
+        f = open(file, "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()

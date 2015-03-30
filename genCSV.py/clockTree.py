@@ -3,13 +3,13 @@ class clockTreeRptData:
         for metrics in metric_list:
             print(metrics)
 class clockTreeRpt:
-    def searchfile():
+    def searchfile(file):
         import re
         from Configurations import Configurations
         DataItems = []
         base_path = Configurations().parser_final()
         # Open the file with read only permit
-        f = open(base_path + r'cpu_testcase\apr\cpu.cts.clock_tree.rpt', "r")
+        f = open(file, "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()

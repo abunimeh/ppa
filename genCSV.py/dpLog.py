@@ -2,15 +2,17 @@ class dpLogData:
     def outdata(self, metric_list):
         for metrics in metric_list:
             print(metrics)
+
+
 class dpLog:
-    def searchfile():
+    def searchfile(file):
         import re
         from Configurations import Configurations
         base_path = Configurations().parser_final()
         foundFlag = 0
         DataItems = []
         # Open the file with read only permit
-        f = open(base_path + r'cpu_testcase\drc_lvs\trclvs\trclvs.dp.log', "r")
+        f = open(file, "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()
