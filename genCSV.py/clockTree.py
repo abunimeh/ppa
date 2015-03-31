@@ -16,11 +16,11 @@ class clockTreeRpt:
         rptData = clockTreeRptData()
 
         for line in lines:
-            foundMaxGlobeSkew = re.search(r'(Max[\s]*global[\s]*skew)[\s]*:+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
+            found_max_globe_skew = re.search(r'(Max[\s]*global[\s]*skew)[\s]*:+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
 
-            if foundMaxGlobeSkew:
-                rptData.foundMaxGlobeSkew = re.sub(r'[\W]+', "_",foundMaxGlobeSkew.group(1)), foundMaxGlobeSkew.group(2)
+            if found_max_globe_skew:
+                rptData.foundMaxGlobeSkew = "apr_cts_max_global_skew", found_max_globe_skew.group(2)
                 DataItems.append(rptData.foundMaxGlobeSkew)
 
         return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]
-        #return DataItems
+

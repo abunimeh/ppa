@@ -22,7 +22,25 @@ class QorRptData:
 
 class QorRpt:
     def metric_naming(file):
-        return
+        import re
+        stage = ""
+        syn = re.search(r'.*syn.*', file, re.I)
+        apr = re.search(r'.*apr.*', file, re.I)
+        pv_max = re.search(r'.*pv_runs.*max.*', file, re.I)
+        pv_min = re.search(r'.*pv_runs.*min.*', file, re.I)
+        pv_noise = re.search(r'.*pv_runs.*noise.*', file, re.I)
+        if syn:
+            stage = 'syn'
+        if apr:
+            stage = 'apr'
+        if pv_max:
+            stage = 'pv max tttt'
+        if pv_min:
+            stage = 'pv min tttt'
+        if pv_noise:
+            stage = 'pv noise tttt'
+        return stage
+
     def mathcLine(regex1, regex2, regex3, line):
         import re
         line_variables = r'(%s[\s]*%s[\s]*%s[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*' % (regex1, regex2, regex3)
@@ -55,7 +73,7 @@ class QorRpt:
             rptData.foundRegGroup = re.search(r'.*(REG2REG).*', line, re.I)
             foundVersion = re.search(r'(Version):[\s]*([\S]*)', line, re.I)
             if foundVersion:
-                rptData.foundVersion = QorRpt.replaceSpace(foundVersion.group(1)), foundVersion.group(2)
+                rptData.foundVersion = QorRpt.replaceSpace(stage + " tool version"), foundVersion.group(2)
                 reportDataItems.append(rptData.foundVersion)
             if rptData.foundRegGroup:
                 lookCount = 10
@@ -67,19 +85,19 @@ class QorRpt:
                 foundTotHoldVio = QorRpt.mathcLine("total", "hold", "violation", line)
 
                 if foundCritSlack:
-                    rptData.foundCritSlack = QorRpt.replaceSpace(foundCritSlack.group(1)), foundCritSlack.group(2)
+                    rptData.foundCritSlack = QorRpt.replaceSpace(stage + " REG2REG " + "worst setup viol"), foundCritSlack.group(2)
                     reportDataItems.append(rptData.foundCritSlack)
                 if foundWorstHoldVio:
-                    rptData.foundWorstHoldVio = QorRpt.replaceSpace(foundWorstHoldVio.group(1)), foundWorstHoldVio.group(2)
+                    rptData.foundWorstHoldVio = QorRpt.replaceSpace(stage + " REG2REG " + "worst hold viol"), foundWorstHoldVio.group(2)
                     reportDataItems.append(rptData.foundWorstHoldVio)
                 if foundCritPathLength:
-                    rptData.foundCritPathLength = QorRpt.replaceSpace(foundCritPathLength.group(1)), foundCritPathLength.group(2)
+                    rptData.foundCritPathLength = QorRpt.replaceSpace(stage + " REG2REG " + "critical path len"), foundCritPathLength.group(2)
                     reportDataItems.append(rptData.foundCritPathLength)
                 if foundTotNegSlack:
-                    rptData.foundTotNegSlack = QorRpt.replaceSpace(foundTotNegSlack.group(1)), foundTotNegSlack.group(2)
+                    rptData.foundTotNegSlack = QorRpt.replaceSpace(stage + " REG2REG " + "total neg slack"), foundTotNegSlack.group(2)
                     reportDataItems.append(rptData.foundTotNegSlack)
                 if foundTotHoldVio:
-                    rptData.foundTotHoldVio = QorRpt.replaceSpace(foundTotHoldVio.group(1)), foundTotHoldVio.group(2)
+                    rptData.foundTotHoldVio = QorRpt.replaceSpace(stage + " REG2REG " + "total hold viol"), foundTotHoldVio.group(2)
                     reportDataItems.append(rptData.foundTotHoldVio)
                 lookCount -= 1
 
@@ -90,19 +108,19 @@ class QorRpt:
             foundMaxFanVi = QorRpt.mathcLine("Max", "trans", "Violations", line)
 
             if foundCellCount:
-                rptData.foundCellCount = QorRpt.replaceSpace(foundCellCount.group(1)), foundCellCount.group(2)
+                rptData.foundCellCount = QorRpt.replaceSpace(stage + " Cell Count"), foundCellCount.group(2)
                 reportDataItems.append(rptData.foundCellCount)
             if foundCompileTime:
-                rptData.foundCompileTime = QorRpt.replaceSpace(foundCompileTime.group(1)), foundCompileTime.group(2)
+                rptData.foundCompileTime = QorRpt.replaceSpace(stage + " cpu runtime"), foundCompileTime.group(2)
                 reportDataItems.append(rptData.foundCompileTime)
             if foundMaxTransVi:
-                rptData.foundMaxTransVi = QorRpt.replaceSpace(foundMaxTransVi.group(1)), foundMaxTransVi.group(2)
+                rptData.foundMaxTransVi = QorRpt.replaceSpace(stage + " max trans viols"), foundMaxTransVi.group(2)
                 reportDataItems.append(rptData.foundMaxTransVi)
             if foundMaxCapVi:
-                rptData.foundMaxCapVi = QorRpt.replaceSpace(foundMaxCapVi.group(1)), foundMaxCapVi.group(2)
+                rptData.foundMaxCapVi = QorRpt.replaceSpace(stage + " max cap viols"), foundMaxCapVi.group(2)
                 reportDataItems.append(rptData.foundMaxCapVi)
             if foundMaxFanVi:
-                rptData.foundMaxFanVi = QorRpt.replaceSpace(foundMaxFanVi.group(1)), foundMaxFanVi.group(2)
+                rptData.foundMaxFanVi = QorRpt.replaceSpace(stage + " max fanout viols"), foundMaxFanVi.group(2)
                 reportDataItems.append(rptData.foundMaxFanVi)
 
         return ["%s" % i[0] for i in reportDataItems], ["%s" % i[1] for i in reportDataItems]

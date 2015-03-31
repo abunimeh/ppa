@@ -33,16 +33,16 @@ class PhysicalRpt:
             foundTotalMem = PhysicalRpt.mathcLine("Total", "Proc", "Memory", line)
 
             if foundUtil:
-                rptData.foundUtil = (PhysicalRpt.replaceSpace(foundUtil.group(1))), foundUtil.group(2)
+                rptData.foundUtil = PhysicalRpt.replaceSpace("apr utilization"), foundUtil.group(2)
                 DataItems.append(rptData.foundUtil)
             if foundShort:
-                rptData.foundShort = (PhysicalRpt.replaceSpace(foundShort.group(1))), foundShort.group(2)
+                rptData.foundShort = PhysicalRpt.replaceSpace("apr Shorts"), foundShort.group(2)
                 DataItems.append(rptData.foundShort)
             if foundTotalEr:
-                rptData.foundTotalEr = (PhysicalRpt.replaceSpace(foundTotalEr.group(1)), foundTotalEr.group(2))
+                rptData.foundTotalEr = PhysicalRpt.replaceSpace("apr DRC"), foundTotalEr.group(2)
                 DataItems.append(rptData.foundTotalEr)
             if foundTotalMem:
-                rptData.foundTotalMem = (PhysicalRpt.replaceSpace(foundTotalMem.group(1)), foundTotalMem.group(2))
+                rptData.foundTotalMem = PhysicalRpt.replaceSpace("apr Memory"), foundTotalMem.group(2)
                 DataItems.append(rptData.foundTotalMem)
 
         return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]

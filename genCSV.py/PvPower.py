@@ -28,22 +28,22 @@ class PvPower:
 
         pvData = PvPowerData()
         for line in lines:
-            foundCInternPwr = PvPower.mathcLine("Cell","Internal","Power",line)
-            foundCLeakPwr = PvPower.mathcLine("Cell","Leakage","Power",line)
-            foundNetSwPwr = PvPower.mathcLine("Net","switching","Power",line)
+            foundCInternPwr = PvPower.mathcLine("Cell","Internal", "Power", line)
+            foundCLeakPwr = PvPower.mathcLine("Cell","Leakage", "Power", line)
+            foundNetSwPwr = PvPower.mathcLine("Net","switching", "Power", line)
             foundTotalPwr = PvPower.mathcLine("Total","Power", " ", line)
-
+            pv = "pv power tttt"
             if foundCInternPwr:
-                pvData.foundCInternPwr = PvPower.replaceSpace(foundCInternPwr.group(1)), foundCInternPwr.group(2)
+                pvData.foundCInternPwr = PvPower.replaceSpace(pv + " internal"), foundCInternPwr.group(2)
                 DataItems.append(pvData.foundCInternPwr)
             if foundCLeakPwr:
-                pvData.foundCLeakPwr = PvPower.replaceSpace(foundCLeakPwr.group(1)), foundCLeakPwr.group(2)
+                pvData.foundCLeakPwr = PvPower.replaceSpace(pv + " leakage"), foundCLeakPwr.group(2)
                 DataItems.append(pvData.foundCLeakPwr)
             if foundNetSwPwr:
-                pvData.foundNetSwPwr = PvPower.replaceSpace(foundNetSwPwr.group(1)), foundNetSwPwr.group(2)
+                pvData.foundNetSwPwr = PvPower.replaceSpace(pv + " switch"), foundNetSwPwr.group(2)
                 DataItems.append(pvData.foundNetSwPwr)
             if foundTotalPwr:
-                pvData.foundTotalPwr = PvPower.replaceSpace(foundTotalPwr.group(1)), foundTotalPwr.group(2)
+                pvData.foundTotalPwr = PvPower.replaceSpace(pv + " total"), foundTotalPwr.group(2)
                 DataItems.append(pvData.foundTotalPwr)
 
         return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]

@@ -9,7 +9,7 @@ from PVTmetric import PVTMetric
 from PhysicalRpt import PhysicalRpt
 from RunTimeRpt import RunTimeRpt
 from clockTree import clockTreeRpt
-from Layout_Error import LayoutError
+from Drc_Errors import DRCError
 from dpLog import dpLog
 from PvPower import PvPower
 
@@ -71,7 +71,7 @@ for file in list_of_files:
     if file.endswith('LAYOUT_ERRORS'):
             i += 1
             print(file)
-            layouter = LayoutError.searchfile(file)
+            layouter = DRCError.searchfile(file)
             metricNames.append(layouter)
 print(i)
 names = []
