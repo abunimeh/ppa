@@ -1,0 +1,11 @@
+#! /bin/sh
+
+echo $HOSTNAME | grep chlr16420 > /dev/null 2>&1 
+if [ $? == 0  ]
+then 
+kill 21160 
+else 
+/usr/bin/ssh chlr16420 kill 21160 
+ sleep 10 
+/usr/bin/ssh chlr16420 kill -9 21160 
+fi

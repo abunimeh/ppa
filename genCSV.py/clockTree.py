@@ -6,6 +6,7 @@ class clockTreeRpt:
     def searchfile(file):
         import re
         from Configurations import Configurations
+        from operator import itemgetter
         DataItems = []
         base_path = Configurations().parser_final()
         # Open the file with read only permit
@@ -22,5 +23,6 @@ class clockTreeRpt:
                 rptData.foundMaxGlobeSkew = "apr_cts_max_global_skew", found_max_globe_skew.group(2)
                 DataItems.append(rptData.foundMaxGlobeSkew)
 
-        return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]
+        data_items = sorted(DataItems, key=itemgetter(0))
+        return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]
 

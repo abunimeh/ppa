@@ -1,0 +1,257 @@
+
+Prining logic levels per start/end point
+
+Startpoint, Endpoint, # of logic cells, slack
+=============================================
+scan_enable, flag_ded0, 5, -320.76
+scan_enable, flag_ded_alu, 5, -319.859
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+scan_enable, fifo0/data_mem_reg_28__51_/ss, 12, -357.979
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+test_tm, fifo0/clk_gate_data_mem_reg_27__latch/te, 7, -354.348
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+test_tm, fifo0/clk_gate_data_mem_reg_22__0_latch/te, 7, -349.911
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+en_wr_alu, fifo2/clk_gate_data_mem_reg_28__4_latch/en, 8, -349.648
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+test_tm, fifo0/clk_gate_data_mem_reg_4__0_latch/te, 7, -348.613
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+en_wr_alu, fifo2/clk_gate_data_mem_reg_1__0_latch/en, 9, -348.363
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+test_tm, fifo0/clk_gate_data_mem_reg_1__0_latch/te, 7, -347.762
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+en_wr_alu, fifo2/clk_gate_data_mem_reg_30__7_latch/en, 8, -347.389
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+en_wr_alu, fifo2/clk_gate_data_mem_reg_6__5_latch/en, 9, -345.89
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+en_wr_alu, fifo2/clk_gate_data_mem_reg_17__4_latch/en, 8, -345.103
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+scan_enable, fifo0/data_mem_reg_18__70_/ss, 12, -343.242
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+scan_enable, fifo0/data_mem_reg_29__64_/ss, 12, -342.025
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+scan_enable, fifo0/data_mem_reg_29__63_/ss, 12, -341.169
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+scan_enable, fifo0/data_mem_reg_3__71_/ss, 12, -340.779
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+scan_enable, fifo0/data_mem_reg_0__66_/ss, 12, -340.667
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+scan_enable, fifo0/data_mem_reg_5__65_/ss, 12, -340.546
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+scan_enable, fifo0/data_mem_reg_28__49_/ss, 12, -340.458
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+scan_enable, fifo0/data_mem_reg_30__46_/ss, 12, -340.377
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+scan_enable, fifo0/data_mem_reg_30__50_/ss, 12, -340.223
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+scan_enable, fifo0/data_mem_reg_8__33_/ss, 12, -339.765
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+scan_enable, fifo0/data_mem_reg_3__65_/ss, 12, -339.603
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+scan_enable, fifo0/data_mem_reg_0__65_/ss, 12, -339.125
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+en_rd_alu, fifo2/cnt_data_reg_3_/d, 4, -339.121
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+scan_enable, fifo0/data_mem_reg_15__70_/ss, 12, -339.069
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+en_wr_alu, fifo2/clk_gate_data_mem_reg_30__latch/en, 8, -338.263
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo1/LOCKUP1/clkb, test_so6, 2, -253.353
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+LOCKUP1/clkb, test_so14, 1, -253.142
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+LOCKUP6/clkb, test_so19, 1, -249.478
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/LOCKUP4/clkb, test_so12, 1, -248.927
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/LOCKUP2/clkb, test_so10, 1, -246.902
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+check_ecc_alu0/LOCKUP/clkb, flag_ded_alu, 2, -246.615
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/LOCKUP3/clkb, test_so11, 1, -246.575
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+LOCKUP5/clkb, test_so18, 1, -246.402
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+LOCKUP4/clkb, test_so17, 0, -245.845
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo0/LOCKUP/clkb, test_so3, 2, -243.558
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/LOCKUP/clkb, test_so8, 1, -241.683
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/LOCKUP5/clkb, test_so13, 2, -239.973
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/LOCKUP1/clkb, test_so9, 1, -229.176
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo0/LOCKUP1/clkb, test_so4, 1, -224.668
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+LOCKUP/clkb, flag_ded0, 4, -222.792
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo1/LOCKUP/clkb, test_so5, 0, -218.698
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+LOCKUP2/clkb, test_so15, 0, -214.305
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo1/LOCKUP2/clkb, test_so7, 0, -213.179
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+LOCKUP3/clkb, test_so16, 0, -212.659
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+check_ecc_alu0/secded_alu0_data_rxc_reg_94_/clk, dout[94], 1, -30.4886
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+check_ecc_alu0/secded_alu0_data_rxc_reg_15_/clk, dout[15], 0, -25.3315
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+check_ecc_alu0/secded_alu0_data_rxc_reg_103_/clk, dout[103], 1, -24.9577
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+check_ecc_alu0/secded_alu0_data_rxc_reg_8_/clk, dout[8], 0, -23.7505
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+check_ecc_alu0/secded_alu0_data_rxc_reg_90_/clk, dout[90], 1, -23.7067
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+check_ecc_alu0/secded_alu0_data_rxc_reg_3_/clk, dout[3], 0, -23.0795
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_129_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_7_/d, 16, -90.8327
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_129_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_87_/d, 16, -87.322
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_129_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_74_/d, 17, -87.138
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_128_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_59_/d, 12, -85.7927
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_128_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_57_/d, 13, -85.6733
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_129_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_93_/d, 17, -84.669
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_129_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_75_/d, 16, -84.5797
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_129_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_64_/d, 17, -84.4146
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_128_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_55_/d, 13, -84.0648
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_128_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_62_/d, 13, -83.6139
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_129_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_79_/d, 17, -83.3298
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_129_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_68_/d, 16, -82.8992
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_129_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_66_/d, 16, -82.6263
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_129_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_15_/d, 16, -82.4754
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_128_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_58_/d, 13, -82.1692
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_129_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_80_/d, 17, -82.1422
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_129_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_88_/d, 17, -81.58
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_129_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_73_/d, 17, -81.3691
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_129_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_65_/d, 17, -80.7019
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_128_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_61_/d, 13, -80.5785
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_129_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_90_/d, 16, -80.1406
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_129_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_81_/d, 17, -79.9507
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_129_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_78_/d, 17, -79.6147
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_128_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_60_/d, 12, -78.4658
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/data_rd_reg_129_/clk, check_ecc_alu0/secded_alu0_data_tmp_reg_89_/d, 16, -78.2106
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo0/addr_wr_reg_0_/clk, fifo0/clk_gate_data_mem_reg_0__0_latch/en, 4, 4.56396
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo0/addr_wr_reg_1_/clk, fifo0/clk_gate_data_mem_reg_21__0_latch/en, 3, 7.87427
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo1/addr_wr_reg_1_/clk, fifo1/clk_gate_data_mem_reg_15__3_latch/en, 5, 9.78058
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo1/addr_wr_reg_1_/clk, fifo1/clk_gate_data_mem_reg_15__latch/en, 5, 12.5936
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo1/addr_wr_reg_1_/clk, fifo1/clk_gate_data_mem_reg_15__0_latch/en, 5, 12.9084
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/addr_wr_reg_1_/clk, fifo2/clk_gate_data_mem_reg_30__7_latch/en, 5, 15.4911
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo1/cnt_data_reg_3_/clk, fifo1/clk_gate_data_rd_reg_1_latch/en, 3, 15.9247
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo1/addr_wr_reg_1_/clk, fifo1/clk_gate_data_mem_reg_9__0_latch/en, 3, 16.816
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo1/addr_wr_reg_1_/clk, fifo1/clk_gate_data_mem_reg_22__0_latch/en, 6, 16.8703
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo1/cnt_data_reg_3_/clk, fifo1/clk_gate_data_rd_reg_latch/en, 3, 17.6314
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/addr_wr_reg_1_/clk, fifo2/clk_gate_data_mem_reg_30__latch/en, 5, 24.9248
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo1/addr_wr_reg_0_/clk, fifo1/clk_gate_data_mem_reg_24__2_latch/en, 4, 25.6327
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo0/addr_wr_reg_3_/clk, fifo0/clk_gate_data_mem_reg_22__0_latch/en, 4, 26.3611
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo1/addr_wr_reg_0_/clk, fifo1/clk_gate_data_mem_reg_24__3_latch/en, 4, 26.3912
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/addr_wr_reg_1_/clk, fifo2/clk_gate_data_mem_reg_30__6_latch/en, 5, 26.7222
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/addr_wr_reg_0_/clk, fifo2/clk_gate_data_mem_reg_28__4_latch/en, 4, 27.6884
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo1/addr_wr_reg_1_/clk, fifo1/clk_gate_data_mem_reg_15__1_latch/en, 5, 28.7856
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo0/addr_wr_reg_1_/clk, fifo0/clk_gate_data_mem_reg_7__0_latch/en, 4, 30.8744
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo1/addr_wr_reg_1_/clk, fifo1/clk_gate_data_mem_reg_15__2_latch/en, 5, 32.1081
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo1/cnt_data_reg_3_/clk, fifo1/clk_gate_data_rd_reg_0_latch/en, 3, 33.1234
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo1/addr_wr_reg_0_/clk, fifo1/clk_gate_data_mem_reg_24__1_latch/en, 4, 36.3123
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/addr_wr_reg_1_/clk, fifo2/clk_gate_data_mem_reg_30__0_latch/en, 5, 36.4505
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/addr_wr_reg_0_/clk, fifo2/clk_gate_data_mem_reg_5__2_latch/en, 4, 36.6074
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo1/cnt_data_reg_5_/clk, fifo1/clk_gate_data_mem_reg_31__0_latch/en, 8, 37.9113
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+Warning: No cell objects matched '-of_objects collection' (SEL-004)
+fifo2/addr_wr_reg_0_/clk, fifo2/clk_gate_data_mem_reg_5__3_latch/en, 4, 38.539

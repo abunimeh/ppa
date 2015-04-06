@@ -1,0 +1,24 @@
+
+Id             Severity         Limit    Occurrences   Suppressed
+--------------------------------------------------------------------
+SEL-005           Error             0              1            0
+UITE-216        Warning             0            856            0
+PTE-003         Warning             0              1            0
+PTE-117         Warning             0              1            0
+SEL-004         Warning             0              1            0
+UITE-315        Warning             0              1            0
+NOISE-010   Information             0             13            0
+LNK-044     Information           100 *            4            0
+CMD-041     Information             0              3            0
+LNK-040     Information             0              1            0
+LNK-041     Information             0              1            0
+NOISE-014   Information             0              1            0
+PARA-107    Information             0              1            0
+PT-019      Information             0              1            0
+UITE-499    Information             0              1            0
+XTALK-001   Information             0              1            0
+XTALK-015   Information             0              1            0
+XTALK-105   Information             0              1            0
+XTALK-303   Information             0              1            0
+
+Diagnostics summary: 1 error, 860 warnings, 30 informationals

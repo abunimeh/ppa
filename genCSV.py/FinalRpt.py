@@ -29,6 +29,7 @@ class FinalRpt:
     def searchfile(file):
         import re
         from Configurations import Configurations
+        from operator import itemgetter
         DataItems = []
         stage = FinalRpt.metric_naming(file)
         base_path = Configurations().parser_final()
@@ -46,5 +47,5 @@ class FinalRpt:
             if foundNumOfActuEr:
                 rptData.foundNumOfActuEr = FinalRpt.replaceSpace(stage), foundNumOfActuEr.group(2)
                 DataItems.append(rptData.foundNumOfActuEr)
-
-        return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]
+        data_items = sorted(DataItems, key=itemgetter(0))
+        return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]

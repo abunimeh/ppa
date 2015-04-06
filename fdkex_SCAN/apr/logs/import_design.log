@@ -1,0 +1,780 @@
+#INFO-MSG==>   Setting log file  : ./logs/import_design.log
+#INFO-MSG==>    ALL import_design substeps :  dont_use import_design read_constraints create_scenarios create_path_group derive_pg
+#INFO-MSG==>    Current MW lib  : fdkex_51074_LIB
+#INFO-MSG==>    Completed substeps : 
+#INFO-MSG==>    Remaining substeps :  dont_use import_design read_constraints create_scenarios create_path_group derive_pg 
+#INFO-MSG==>  Executing substep dont_use
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/kit/afdk73_kit_s/asicflows/synopsys/common/dot3/d04/dont_use.tcl : START Tue Mar 31 00:56:40 MST 2015
+#INFO-MSG==>  Setting APR dont_use cells
+#INFO-MSG==>  Setting dont_use on seleted cells based on dont_use_default the ASIC flow
+#INFO-MSG==>  Setting dont_use on vcc
+   because SPECIAL: voltage pins
+#INFO-MSG==>  Setting dont_use on vss
+   because SPECIAL: voltage pins
+#INFO-MSG==>  Setting dont_use on d04bfn00*ua5
+   because HIGH_COST: Buffer count increases and synthesis uses only this drive strength if allowed
+#INFO-MSG==>  Setting dont_use on d04bfn00?n0b3
+   because SPECIAL:b3 and b4 were pruned to maintain cell P/N timing, area, totalZ across the family
+#INFO-MSG==>  Setting dont_use on d04bfn00?n0b4
+   because SPECIAL:b3 and b4 were pruned to maintain cell P/N timing, area, totalZ across the family
+#INFO-MSG==>  Setting dont_use on d04hgy*
+   because SPECIAL:Synchronizers and Metastable Hardened DFFs
+#INFO-MSG==>  Setting dont_use on d04hhy*
+   because  SPECIAL:Synchronizer Cell
+#INFO-MSG==>  Setting dont_use on d04nob03wn0c0
+   because  Incorrect transition value is library
+#INFO-MSG==>  Setting dont_use on d04bbf*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bca*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bco*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bfy*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bin*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bly*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bmb*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bna*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bno*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bth*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bxo*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bdc*
+   because FILL_ONLY:Functional bonus cells
+#INFO-MSG==>  Setting dont_use on d04bgn*
+   because FILL_ONLY:Functional bonus cells
+#INFO-MSG==>  Setting dont_use on d04bfn00?nua5
+   because LOW_DRIVE CELL
+#INFO-MSG==>  Setting dont_use on d04ann04?n0a5
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04ann04?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04ann04?n0b5
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04con01?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04nab03?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04nan02?n0a5
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04nan02?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04nan03?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04nan04?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04non02?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04non03?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04non04?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04orn03?n0a5
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04orn04?n0a5
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04orn04?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04orn04?n0b5
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04bfn1*
+   because ROUTE_ONLY:Min delay buffers/inverters.  Used during hold fixing
+#INFO-MSG==>  Setting dont_use on d04inn12*
+   because ROUTE_ONLY:Min delay buffers/inverters.  Used during hold fixing
+#INFO-MSG==>  Setting dont_use on d04gbf*
+   because CTS_ONLY:Clock buffers and inverters.  Used during CTS
+#INFO-MSG==>  Setting dont_use on d04gin*
+   because CTS_ONLY:Clock buffers and inverters.  Used during CTS
+#INFO-MSG==>  Setting dont_use on d04gan*
+   because RTL_ONLY:RTL instantition required. Clock logical cells
+#INFO-MSG==>  Setting dont_use on d04gna*
+   because RTL_ONLY:RTL instantition required. Clock logical cells
+#INFO-MSG==>  Setting dont_use on d04gno*
+   because RTL_ONLY:RTL instantition required. Clock logical cells
+#INFO-MSG==>  Setting dont_use on d04gor*
+   because RTL_ONLY:RTL instantition required. Clock logical cells
+#INFO-MSG==>  Setting dont_use on d04gmx22*
+   because RTL_ONLY:RTL instantition required. Clock logical cells
+#INFO-MSG==>  Setting dont_use on d04cdc03*
+   because RTL_ONLY:RTL instantition required. Clock divider.
+#INFO-MSG==>  Setting dont_use on d04cgc00*
+   because CTS_ONLY:Gated clock buffers.  CTS uses cgc01
+#INFO-MSG==>  Setting dont_use on d04cgc02*
+   because CTS_ONLY:Gated clock buffers.  CTS uses cgc01
+#INFO-MSG==>  Setting dont_use on d04cgc03*
+   because CTS_ONLY:Gated clock buffers.  CTS uses cgc01
+#INFO-MSG==>  Setting dont_use on d04cgm22*
+   because CTS_ONLY:Gated clock buffers.  CTS uses cgc01
+#INFO-MSG==>  Setting dont_use on d04frt03?d0k0
+   because Retention flop : incorrect embedded well tap causes DRC violation 
+#INFO-MSG==>  Setting dont_use on d04f2*
+   because HIGH_COST:Multi Bit Flop: Need special flow to use it. 
+#INFO-MSG==>  Setting dont_use on d04f4*
+   because HIGH_COST:Multi Bit Flop: Need special flow to use it. 
+#INFO-MSG==>  Setting dont_use on d04qct01*
+   because SPECIAL:Inconsitent direction of lib pins b/w logical and physical library
+#INFO-MSG==>  Setting dont_use on d04qct00*
+   because SPECIAL:Inconsitent direction of lib pins b/w logical and physical library
+#INFO-MSG==>  Setting dont_use on d04cab13?d0b5
+   because HIGH_COST:Have implant layers missing, and cause drcd NV*_UV* violations
+#INFO-MSG==>  Setting dont_use on d04cab13?d0c5
+   because HIGH_COST:Have implant layers missing, and cause drcd NV*_UV* violations
+#INFO-MSG==>  Setting dont_use on 
+   because SPECIAL: Cells with max_capacitance=0 in the lib file
+==>INFORMATION: P_source_if_exists: dont_use.tcl : END Tue Mar 31 00:56:42 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:00:01 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:01 hrs : MEMORY : 1701056 KB
+#INFO-MSG==>  Time to run substep dont_use in (hh:mm:ss) : 00:00:02 hrs
+#INFO-MSG==>  Executing substep import_design
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/kit/afdk73_kit_s/asicflows/synopsys/apr/import_design.tcl : START Tue Mar 31 00:56:42 MST 2015
+#INFO-MSG==>  Reading netlist inputs/fdkex.syn.vg
+Type of creating bus for undefined cells : 0
+Warning: /nfs/ch/disks/ch_ciaf_disk032/fdk73/shelf/repo/halo/dot3/fram/1.6/7/intel73halo_d04: bus naming style _<%d> is not consistent with main lib. (MWNL-111)
+
+*****  Verilog HDL translation! *****
+
+*****    Start Pass 1 *****
+
+*****  Pass 1 Complete *****
+Elapsed =    0:00:01, CPU =    0:00:00
+
+*****  Verilog HDL translation! *****
+
+*****    Start Pass 2 *****
+
+*****  Pass 2 Complete *****
+
+*****   Verilog HDL translation completed! *****
+Elapsed =    0:00:01, CPU =    0:00:01
+Hierarchy Preservation is turned ON
+The quick-attach skip-search mode has been turned on.
+  Start axu naming escaping style change ...
+  End axu naming escaping style change, status is 1
+Checking single pin net for cell 'fdkex.CEL' now...
+Total number of cell instances: 37398
+Total number of nets: 37574
+Total number of ports: 309 (include 0 PG ports)
+Total number of hierarchical cell instances: 5
+
+The quick-attach skip-search mode has been turned off.
+INFO:  total find 0 pg nets connected with tie net.
+Elapsed =    0:00:01, CPU =    0:00:00
+Information: Read verilog completed successfully.
+Loading db file '/p/foundry/eda/em64t_SLES11/iccompiler/J-2014.09-SP1/libraries/syn/gtech.db'
+Loading db file '/p/foundry/eda/em64t_SLES11/iccompiler/J-2014.09-SP1/libraries/syn/standard.sldb'
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/ln/d04_ln_misc. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/ln/d04_ln_misc_tapcore2h. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/nn/d04_nn_misc. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/nn/d04_nn_misc_tapcore2h. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/wn/d04_wn_misc. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/wn/d04_wn_misc_tapcore2h. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/yn/d04_yn_misc. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/yn/d04_yn_misc_tapcore2h. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0//fram/ln/d04_ln. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0//fram/nn/d04_nn. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0//fram/wn/d04_wn. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0//fram/yn/d04_yn. (PSYN-878)
+Information: linking reference library : /nfs/ch/disks/ch_ciaf_disk032/fdk73/shelf/repo/halo/dot3/fram/1.6/7/intel73halo_d04. (PSYN-878)
+Warning: The 'vcc' cell in the 'd04_ln_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library is being 
+        marked as "dont_use". (PSYN-039)
+Warning: The 'vcc' cell in the 'd04_ln_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library does not 
+        have corresponding physical cell description. (PSYN-024)
+Warning: The 'vss' cell in the 'd04_ln_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library is being 
+        marked as "dont_use". (PSYN-039)
+Warning: The 'vss' cell in the 'd04_ln_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library does not 
+        have corresponding physical cell description. (PSYN-024)
+Warning: The 'vcc' cell in the 'd04_nn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library is being 
+        marked as "dont_use". (PSYN-039)
+Warning: The 'vcc' cell in the 'd04_nn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library does not 
+        have corresponding physical cell description. (PSYN-024)
+Warning: The 'vss' cell in the 'd04_nn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library is being 
+        marked as "dont_use". (PSYN-039)
+Warning: The 'vss' cell in the 'd04_nn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library does not 
+        have corresponding physical cell description. (PSYN-024)
+Warning: The 'vcc' cell in the 'd04_wn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library is being 
+        marked as "dont_use". (PSYN-039)
+Warning: The 'vcc' cell in the 'd04_wn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library does not 
+        have corresponding physical cell description. (PSYN-024)
+Warning: The 'vss' cell in the 'd04_wn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library is being 
+        marked as "dont_use". (PSYN-039)
+Warning: The 'vss' cell in the 'd04_wn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library does not 
+        have corresponding physical cell description. (PSYN-024)
+Warning: The 'vcc' cell in the 'd04_yn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library is being 
+        marked as "dont_use". (PSYN-039)
+Warning: The 'vcc' cell in the 'd04_yn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library does not 
+        have corresponding physical cell description. (PSYN-024)
+Warning: The 'vss' cell in the 'd04_yn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library is being 
+        marked as "dont_use". (PSYN-039)
+Warning: The 'vss' cell in the 'd04_yn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library does not 
+        have corresponding physical cell description. (PSYN-024)
+
+  Linking design 'fdkex'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (5 designs)               fdkex.CEL, etc
+  d04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/ln/d04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb
+  d04_wn_p1273_3x1r6u1_psss_0.75v_-10c_ccst (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/wn/d04_wn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb
+  d04_nn_p1273_3x1r6u1_psss_0.75v_-10c_ccst (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/nn/d04_nn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb
+  d04_yn_p1273_3x1r6u1_psss_0.75v_-10c_ccst (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/yn/d04_yn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb
+  d04_ln_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/lib/ln/d04_ln_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm.ldb
+  d04_nn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/lib/nn/d04_nn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm.ldb
+  d04_wn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/lib/wn/d04_wn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm.ldb
+  d04_yn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/lib/yn/d04_yn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm.ldb
+  dw_foundation.sldb (library) /p/foundry/eda/em64t_SLES11/iccompiler/J-2014.09-SP1/libraries/syn/dw_foundation.sldb
+
+
+Sanity check for TLU+ vs MW-Tech files:
+ max_tlu+: /p/fdk/fdk73/builds/pdk733_r1.7/extraction/icc/techfiles/p1273_3x1r6.tttt.tluplus
+ min_tlu+: /p/fdk/fdk73/builds/pdk733_r1.7/extraction/icc/techfiles/p1273_3x1r6.tttt.tluplus
+ mapping_file: /p/fdk/fdk73/builds/pdk733_r1.7/extraction/starrc/cmdfiles/asic.starrc.map
+ max_emul_tlu+: /p/fdk/fdk73/builds/pdk733_r1.7/extraction/icc/techfiles/p1273_3x1r6.tttt.mfill.tluplus
+ min_emul_tlu+: /p/fdk/fdk73/builds/pdk733_r1.7/extraction/icc/techfiles/p1273_3x1r6.tttt.mfill.tluplus
+ MW design lib: fdkex_51074_LIB
+
+--------- Sanity Check on TLUPlus Files -------------
+1. Checking the conducting layer names in ITF and mapping file ... 
+[ Passed! ]
+2. Checking the via layer names in ITF and mapping file ... 
+[ Passed! ]
+3. Checking the consistency of Min Width and Min Spacing between MW-tech and ITF ... 
+Warning: minSpacing value of layer "c4" (metal12) does not match : ITF (30.000) vs MW-tech (45.000). (TLUP-005)
+Warning: minWidth value of layer "c4" (metal12) does not match : ITF (54.600) vs MW-tech (85.000). (TLUP-004)
+----------------- Check Ends ------------------
+==>INFORMATION: P_source_if_exists: import_design.tcl : END Tue Mar 31 00:57:12 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:00:29 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:23 hrs : MEMORY : 1918560 KB
+#INFO-MSG==>  Time to run substep import_design in (hh:mm:ss) : 00:00:30 hrs
+#INFO-MSG==>  Executing substep read_constraints
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/kit/afdk73_kit_s/asicflows/synopsys/common/read_constraints.tcl : START Tue Mar 31 00:57:12 MST 2015
+Using operating conditions 'slow_1.00' found in library 'd04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst'.
+Using operating conditions 'fast_1.00' found in library 'd04_ln_p1273_3x1r6u1_pfff_1.1v_-40c_ccst'.
+==>INFORMATION: Setting default Operating Conditions
+set_operating_conditions -analysis_type bc_wc -min fast_1.00 -max slow_1.00 
+==>INFORMATION: Sourcing the fdkex.clocks.tcl file
+##############################################################################
+## Intel Top Secret                                                         ##
+##############################################################################
+## Copyright (C) 2012, Intel Corporation.  All rights reserved.             ##
+##                                                                          ##
+## This is the property of Intel Corporation and may only be utilized       ##
+## pursuant to a written Restricted Use Nondisclosure Agreement             ##
+## with Intel Corporation.  It may not be used, reproduced, or              ##
+## disclosed to others except in accordance with the terms and              ##
+## conditions of such agreement.                                            ##
+##                                                                          ##
+## All products, processes, computer systems, dates, and figures            ##
+## specified are preliminary based on current expectations, and are         ##
+## subject to change without notice.                                        ##
+##############################################################################
+# This is a TEMPLATE file for CLOCK CONSTRAINTS FILE
+# create_clock -name pxclk -period 6666.67 -waveform {0 3333.33} [get_ports {pxclk}]
+# set_input_transition 150 -max [ get_ports pxclk ]
+# set_input_transition 75 -min [ get_ports pxclk ]
+# create_clock -name xtclk_13p5 -period 73337 -waveform {0 36668.5} [get_ports {xtclk_13p5}]
+# set_input_transition 150 -max [ get_ports xtclk_13p5 ]
+# set_input_transition 75 -min [ get_ports xtclk_13p5 ]
+# Make sure all combinations are here
+# for n clocks, there should be n^2 max clock uncertainty lines and n^2 min clock uncertainty
+# set_clock_uncertainty -hold 300 -from pxclk -to pxclk
+# set_clock_uncertainty -hold 300 -from pxclk -to xtclk_13p5
+# set_clock_uncertainty -hold 300 -from xtclk_13p5 -to pxclk
+# set_clock_uncertainty -hold 300 -from xtclk_13p5 -to xtclk_13p5
+# set_clock_uncertainty -setup 235 -from pxclk -to pxclk
+# set_clock_uncertainty -setup 235 -from pxclk -to xtclk_13p5
+# set_clock_uncertainty -setup 235 -from xtclk_13p5 -to pxclk
+# set_clock_uncertainty -setup 235 -from xtclk_13p5 -to xtclk_13p5
+# clock insertion delay
+# This is the same as specified for CTS in APR
+# set_clock_latency <number> [get_clocks {pxclk}]
+# set_clock_latency <number> [get_clocks {xtclk_13p5}]
+#GENERATED CLOCKS
+#create_generated_clock -name GEN_CLK -source [get_pins clk_div2_ckcorediv2/clockdivff_cknameout/ffout_reg/ck] -divide_by 2 [get_pins clk_div2_ckcorediv2/clockdivff_cknameout/ffout_reg/o]
+#VIRTUAL CLOCKS
+#create_clock -name  VIRTUAL_CLK   -period  1088   -waveform {0.000 0544}
+create_clock -name clk -period 500 -waveform {0 250} [get_ports {clk}]
+1
+set_clock_uncertainty -setup 50 [get_clocks clk]
+1
+set_clock_uncertainty -hold  50 [get_clocks clk]
+1
+==>INFORMATION: Sourcing the design constraints file
+##############################################################################
+## Intel Top Secret                                                         ##
+##############################################################################
+## Copyright (C) 2012, Intel Corporation.  All rights reserved.             ##
+##                                                                          ##
+## This is the property of Intel Corporation and may only be utilized       ##
+## pursuant to a written Restricted Use Nondisclosure Agreement             ##
+## with Intel Corporation.  It may not be used, reproduced, or              ##
+## disclosed to others except in accordance with the terms and              ##
+## conditions of such agreement.                                            ##
+##                                                                          ##
+## All products, processes, computer systems, dates, and figures            ##
+## specified are preliminary based on current expectations, and are         ##
+## subject to change without notice.                                        ##
+##############################################################################
+###############################
+# Default Loading Constraints
+###############################
+#User should copy this file in ./inputs/constraints/${G_DESIGN_NAME}.constraints.tcl and overwrite the actual value
+#Default setting input_delay & output_delay of 2/3rd  of fastest clock
+#-----------------------------------------------------------------------
+set delay_value [expr [lindex [lsort -real -decreasing [get_attribute [get_clocks ] period]] end] * 2/3]
+333.333333333
+set clock_name [get_clocks clk]
+{clk}
+set_input_delay  -clock $clock_name $delay_value [remove_from_collection [all_inputs] [get_ports clk]]
+1
+set_output_delay -clock $clock_name $delay_value [all_outputs]
+1
+#Default input transition or loading cons
+#-----------------------------------------
+set my_driving_cell d04bfn00ln0b0
+d04bfn00ln0b0
+if {[get_lib_cells */$my_driving_cell -quiet] != ""} {
+   set_driving_cell -lib_cell $my_driving_cell [all_inputs]
+   puts "==>INFORMATION: Setting driving cell to $my_driving_cell"
+} else {
+   set_input_transition 50 [all_inputs]
+   puts "==>INFORMATION: Specified driving cell $my_driving_cell was not found. Setting default input transition as 50"
+}
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+==>INFORMATION: Setting driving cell to d04bfn00ln0b0
+set_load 10 [all_outputs]
+1
+set_max_transition 350 *
+Warning: set_max_transition has been applied on clock objects without specifying -clock_path.  Constraint will be considered by both clock network pins and data pins launched by that clock. (OPT-1029)
+1
+set_max_fanout 30 [get_designs *]
+1
+set_max_area 0
+1
+==>INFORMATION: P_source_if_exists: read_constraints.tcl : END Tue Mar 31 00:57:12 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:00:00 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:00 hrs : MEMORY : 1918560 KB
+#INFO-MSG==>  Time to run substep read_constraints in (hh:mm:ss) : 00:00:00 hrs
+#INFO-MSG==>  Executing substep create_scenarios
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/kit/afdk73_kit_s/asicflows/synopsys/common/create_scenarios.tcl : START Tue Mar 31 00:57:12 MST 2015
+==>INFORMATION: P_source_if_exists: create_scenarios.tcl : END Tue Mar 31 00:57:12 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:00:00 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:00 hrs : MEMORY : 1918560 KB
+#INFO-MSG==>  Time to run substep create_scenarios in (hh:mm:ss) : 00:00:00 hrs
+#INFO-MSG==>  Executing substep create_path_group
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/kit/afdk73_kit_s/asicflows/synopsys/common/create_path_group.tcl : START Tue Mar 31 00:57:12 MST 2015
+Information: Using 4 cores for timing computations. (TIM-270)
+Information: Updating graph... (UID-83)
+Warning: Design 'fdkex' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+==>INFORMATION: P_source_if_exists: create_path_group.tcl : END Tue Mar 31 00:57:14 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:00:02 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:05 hrs : MEMORY : 1952352 KB
+#INFO-MSG==>  Time to run substep create_path_group in (hh:mm:ss) : 00:00:02 hrs
+#INFO-MSG==>  Executing substep derive_pg
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/kit/afdk73_kit_s/asicflows/synopsys/apr/derive_pg.tcl : START Tue Mar 31 00:57:14 MST 2015
+Information: connected 37398 power ports and 37398 ground ports
+==>INFORMATION: P_source_if_exists: derive_pg.tcl : END Tue Mar 31 00:57:15 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:00:01 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:00 hrs : MEMORY : 1960184 KB
+#INFO-MSG==>  Time to run substep derive_pg in (hh:mm:ss) : 00:00:01 hrs
+#INFO-MSG==>  Time to run step import_design in (hh:mm:ss) : 00:00:35 hrs
+#INFO-MSG==>  Saving design fdkex ...
+Information: Performing CEL netlist consistency check. (MWDC-118)
+Information: CEL consistency check PASSED. (MWDC-119)
+Information: Saved design named fdkex. (UIG-5)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/ln/d04_ln_misc. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/ln/d04_ln_misc_tapcore2h. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/nn/d04_nn_misc. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/nn/d04_nn_misc_tapcore2h. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/wn/d04_wn_misc. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/wn/d04_wn_misc_tapcore2h. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/yn/d04_yn_misc. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/yn/d04_yn_misc_tapcore2h. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0//fram/ln/d04_ln. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0//fram/nn/d04_nn. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0//fram/wn/d04_wn. (PSYN-878)
+Information: linking reference library : /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0//fram/yn/d04_yn. (PSYN-878)
+Information: linking reference library : /nfs/ch/disks/ch_ciaf_disk032/fdk73/shelf/repo/halo/dot3/fram/1.6/7/intel73halo_d04. (PSYN-878)
+Warning: The 'vcc' cell in the 'd04_ln_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library is being 
+        marked as "dont_use". (PSYN-039)
+Warning: The 'vcc' cell in the 'd04_ln_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library does not 
+        have corresponding physical cell description. (PSYN-024)
+Warning: The 'vss' cell in the 'd04_ln_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library is being 
+        marked as "dont_use". (PSYN-039)
+Warning: The 'vss' cell in the 'd04_ln_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library does not 
+        have corresponding physical cell description. (PSYN-024)
+Warning: The 'vcc' cell in the 'd04_nn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library is being 
+        marked as "dont_use". (PSYN-039)
+Warning: The 'vcc' cell in the 'd04_nn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library does not 
+        have corresponding physical cell description. (PSYN-024)
+Warning: The 'vss' cell in the 'd04_nn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library is being 
+        marked as "dont_use". (PSYN-039)
+Warning: The 'vss' cell in the 'd04_nn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library does not 
+        have corresponding physical cell description. (PSYN-024)
+Warning: The 'vcc' cell in the 'd04_wn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library is being 
+        marked as "dont_use". (PSYN-039)
+Warning: The 'vcc' cell in the 'd04_wn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library does not 
+        have corresponding physical cell description. (PSYN-024)
+Warning: The 'vss' cell in the 'd04_wn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library is being 
+        marked as "dont_use". (PSYN-039)
+Warning: The 'vss' cell in the 'd04_wn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library does not 
+        have corresponding physical cell description. (PSYN-024)
+Warning: The 'vcc' cell in the 'd04_yn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library is being 
+        marked as "dont_use". (PSYN-039)
+Warning: The 'vcc' cell in the 'd04_yn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library does not 
+        have corresponding physical cell description. (PSYN-024)
+Warning: The 'vss' cell in the 'd04_yn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library is being 
+        marked as "dont_use". (PSYN-039)
+Warning: The 'vss' cell in the 'd04_yn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm' technology library does not 
+        have corresponding physical cell description. (PSYN-024)
+Warning: Could not find a valid driver for the hierarchical Power net 'vcc'. (MWDC-285)
+Warning: Could not find a valid driver for the hierarchical Ground net 'vss'. (MWDC-285)
+
+  Linking design 'fdkex'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (5 designs)               fdkex.CEL, etc
+  d04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/ln/d04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb
+  d04_wn_p1273_3x1r6u1_psss_0.75v_-10c_ccst (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/wn/d04_wn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb
+  d04_nn_p1273_3x1r6u1_psss_0.75v_-10c_ccst (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/nn/d04_nn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb
+  d04_yn_p1273_3x1r6u1_psss_0.75v_-10c_ccst (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/yn/d04_yn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb
+  d04_ln_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/lib/ln/d04_ln_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm.ldb
+  d04_nn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/lib/nn/d04_nn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm.ldb
+  d04_wn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/lib/wn/d04_wn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm.ldb
+  d04_yn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/lib/yn/d04_yn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm.ldb
+  dw_foundation.sldb (library) /p/foundry/eda/em64t_SLES11/iccompiler/J-2014.09-SP1/libraries/syn/dw_foundation.sldb
+
+==>INFORMATION: Generating timing_setup_zeroRC report...
+Warning: Timer is in zero interconnect delay mode. (TIM-177)
+Information: Timer is not in zero interconnect delay mode. (TIM-176)
+==>INFORMATION: Generating flow_vars report...
+#INFO-MSG==>  Runtime for reports: 0.2 minutes
+#INFO-MSG==>   No report requirement specified INTEL_OUTPUTS(import_design) 
+#INFO-MSG==>  Saving/rsync-ing  fdkex_51074_LIB into ./mwdb/fdkex_import_design_LIB
+sending incremental file list
+created directory ./mwdb/fdkex_import_design_LIB
+./
+lib
+lib_1
+lib_bck
+CEL/
+CEL/fdkex:1
+CEL/fdkex:1_2
+
+sent 11060468 bytes  received 114 bytes  7373721.33 bytes/sec
+total size is 11058756  speedup is 1.00
+#INFO-MSG==>  Time to create reports and outputs for import_design in (hh:mm:ss) : 00:00:16 hrs
+

@@ -1,0 +1,57 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+        -verbose
+Design : fdkex
+Version: J-2014.09
+Date   : Tue Mar 31 00:54:00 2015
+****************************************
+
+
+Library(s) Used:
+
+    d04_wn_p1273_3x1r6u1_psss_0.75v_-10c_ccst (File: /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/wn/d04_wn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb)
+    d04_yn_p1273_3x1r6u1_psss_0.75v_-10c_ccst (File: /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/yn/d04_yn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb)
+    d04_nn_p1273_3x1r6u1_psss_0.75v_-10c_ccst (File: /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/nn/d04_nn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb)
+    d04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst (File: /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/ln/d04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb)
+
+
+Operating Conditions: slow_1.00   Library: d04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst
+Wire Load Model Mode: Inactive.
+
+
+Global Operating Voltage = 0.75 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ps
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1uW
+
+Warning: Cannot report correlated power unless power prediction mode is set. (PWR-727)
+Power Breakdown
+---------------
+
+                             Cell        Driven Net  Tot Dynamic      Cell
+                             Internal    Switching   Power (mW)       Leakage
+Cell                         Power (mW)  Power (mW)  (% Cell/Tot)     Power (uW)
+--------------------------------------------------------------------------------
+Netlist Power                  60.2391     30.7202     90.9593 (66%)    16.5277
+Estimated Clock Tree Power   N/A         N/A          (N/A)           N/A
+--------------------------------------------------------------------------------
+Leakage power with reduced spread = 0
+
+                 Internal         Switching           Leakage            Total                         Cell
+Power Group      Power            Power               Power              Power   (   %    )  Attrs  Count
+---------------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+clock_network      2.9466           25.5141        6.7691e-02           28.4607  (  31.28%)            856
+register          55.0784            1.7221            3.8463           56.8046  (  62.44%)            13948
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+combinational      2.2141            3.4840           12.6137            5.7107  (   6.28%)            22594
+---------------------------------------------------------------------------------------------------------
+Total             60.2391 mW        30.7202 mW        16.5277 uW        90.9759 mW
+1

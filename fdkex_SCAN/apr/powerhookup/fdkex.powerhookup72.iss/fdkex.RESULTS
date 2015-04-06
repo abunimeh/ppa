@@ -1,0 +1,15 @@
+IC Validator (R) Hierarchical Design Verification, SUSE.64 Release J-2014.06.SP2.HF1.4045 2014/09/29
+
+  (C) Copyright 1996-2014.
+  Synopsys, Inc.  All rights reserved.
+
+Called as: icv -i /tmp/spalutla_fdkex_51074/spalutla.fdkex.51074.iss/input/fdkex.stm -c fdkex -f GDSII -I /tmp/spalutla_fdkex_51074/spalutla.fdkex.51074.iss/spalutla.fdkex.powerhookup72.iss -I /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill -I /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/PXL -I /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/PXL -norscache -D DR_DFM_PROCESS=1273 /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill/powerhookup72_combined.rs
+
+
+- Parsing runset "/p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill/powerhookup72_combined.rs" ... DONE
+
+- Performing DRC checks and/or device extraction ... DONE
+    ### Layout errors, refer to fdkex.LAYOUT_ERRORS
+
+IC Validator Run: Time=0:02:21
+IC Validator is done.

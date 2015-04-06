@@ -1,5 +1,5 @@
 class findFiles:
-    def searchDir():
+    def searchDir(test_case):
         import fnmatch
         import os
         from Configurations import Configurations
@@ -8,13 +8,18 @@ class findFiles:
                     '*.inc_compile.qor.rpt' , 'dc.log', '*.link.rpt', '*.max.qor.rpt', '*.run_time.rpt',
                     '*.noise.qor.rpt', '*.power.power.rpt', '*.LAYOUT_ERRORS', 'Final_Report.txt',
                     'drc_IPall.dp.log', 'trclvs.dp.log']
-        base_path = Configurations().parser_final()
+        base_path = Configurations().parser_final() + test_case
         matches = []
 
         for root, dirnames, filenames in os.walk(base_path):
-            for files in fileNames:
-                for filename in fnmatch.filter(filenames, files):
-                    matches.append(os.path.join(root, filename))
+            for file in fileNames:
+                if ".LAYOUT_ERRORS" not in file:
+                    for filename in fnmatch.filter(filenames, file):
+                        matches.append(os.path.join(root, filename))
+                else:
+                    if 'drc_lvs' in root:
+                        for filename in fnmatch.filter(filenames, file):
+                            matches.append(os.path.join(root, filename))
         for file in matches:
             print(file)
         print(len(matches), "\n\n\n")

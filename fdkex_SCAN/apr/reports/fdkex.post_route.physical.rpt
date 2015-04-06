@@ -1,0 +1,1321 @@
+ 
+****************************************
+Report : design
+        -physical
+Design : fdkex
+Version: J-2014.09-SP1
+Date   : Tue Mar 31 06:00:06 2015
+****************************************
+
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MIN_MAX
+	Extraction derating : -40/-10/-10
+****************************** P&R Summary ********************************
+Date : Tue Mar 31 06:00:06 2015
+Machine Host Name: chlr16420
+Working Directory: /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/apr
+Library Name:      fdkex_51074_LIB
+Cell Name:         fdkex.CEL;1
+Design Statistics:
+    Number of Module Cells:        60528
+    Number of Pins:                666157
+    Number of IO Pins:             1039
+    Number of Nets:                59427
+    Average Pins Per Net (Signal): 3.26581
+
+Chip Utilization:
+    Total Std Cell Area:           27004.18
+    Core Size:     width 302.40, height 303.24; area 91699.78
+    Chip Size:     width 302.40, height 303.24; area 91699.78
+    Std cells utilization:         29.45% 
+    Cell/Core Ratio:               29.45%
+    Cell/Chip Ratio:               29.45%
+    Number of Cell Rows:            1900
+
+Master Instantiation:
+	MasterName	Type	InstCount
+	=================================
+	d04spc00nnz03	STD	36699
+	d04dcp00wnz08	STD	31192
+	d04spc00nnz01	STD	20443
+	d04spc00nnz02	STD	20283
+	d04bfn11wn0a5	STD	14761
+	d04dcp00wnz04	STD	13504
+	d04bar00nnz64	STD	11818
+	d04bar01nnz04	STD	10605
+	d04fyj03yd0b0	STD	10311
+	d04bar01nnz08	STD	7463
+	d04dcp00wdz64	STD	5590
+	d04bar01nnz16	STD	4678
+	d04bfn12wn0b0	STD	2971
+	d04bar00nnz32	STD	2589
+	d04can03nn0a5	STD	2094
+	d04fyj03yd0c0	STD	1672
+	d04bfn00yduk0	STD	1535
+	d04qfd02nnz00	STD	1244
+	d04qfd01ndz00	STD	1187
+	d04tap02ldz05	STD	1134
+	d04bfn13wn0c0	STD	1029
+	d04inn00wn0a5	STD	836
+	d04bfn00yduo0	STD	834
+	d04nan02ln0b5	STD	757
+	fdk73d84_asic_halo_hvn	STD	756
+	d04can03ln0a5	STD	712
+	d04can03wn0a5	STD	701
+	d04fyj03ld0b0	STD	696
+	d04nan02yn0b5	STD	686
+	d04cgc01nd0h0	STD	620
+	d04bfn00ynud5	STD	525
+	d04bfn13wn0b0	STD	511
+	d04nan02yn0c0	STD	501
+	d04nan02nn0c0	STD	486
+	d04nan02wn0c0	STD	347
+	d04nan02ln0c0	STD	341
+	d04can03yn0a5	STD	313
+	d04fyj03ld0c0	STD	296
+	d04xob03yd0c7	STD	286
+	d04xnk04yn0b5	STD	284
+	d04xnb02yn0a5	STD	269
+	d04tih00wnz00	STD	269
+	d04nan02yn0b6	STD	264
+	d04inn00ynuh5	STD	248
+	d04nan04nd0b7	STD	247
+	d04fyj03nd0b0	STD	239
+	d04fyj03yd0g0	STD	226
+	d04bfn11wn0b5	STD	219
+	d04nan04yn0b5	STD	200
+	d04bfn11wn0c0	STD	198
+	d04can03yn0d0	STD	194
+	d04fky00yd0b0	STD	194
+	d04ann02ln0b5	STD	191
+	d04non02yn0b5	STD	191
+	d04nan02nn0b5	STD	188
+	d04xnk04yn0c0	STD	182
+	fdk73d84_asic_halo_hhb	STD	178
+	fdk73d84_asic_halo_hhc	STD	178
+	d04bfn13wn0a5	STD	178
+	d04con03yn0b0	STD	169
+	d04ann02yn0a5	STD	166
+	d04gnc01lnz00	STD	160
+	d04inn00ynuf5	STD	156
+	d04nan04yd0b7	STD	144
+	d04bfn00ynue3	STD	142
+	d04bfn11wn0b0	STD	140
+	d04non02ln0b7	STD	139
+	d04nan02wn0b6	STD	139
+	d04can03yn0b5	STD	128
+	d04ann02nn0b5	STD	125
+	d04inn00ynud0	STD	124
+	d04fyj03wd0b0	STD	120
+	d04mkn22yn0a5	STD	118
+	d04nan02wn0b5	STD	117
+	d04cgc01nd0i0	STD	116
+	d04non02nn0c0	STD	109
+	d04ann02nn0a5	STD	108
+	d04inn00ln0a5	STD	104
+	d04inn00yduq0	STD	102
+	d04nan02yn0d0	STD	99
+	d04inn00yn0b5	STD	97
+	d04inn00yduo7	STD	96
+	d04ann02yn0b3	STD	95
+	d04ann02yn0c0	STD	94
+	d04non02yn0b3	STD	94
+	d04inn00ynuc5	STD	91
+	d04inn00yn0a5	STD	88
+	d04inn00ydui0	STD	88
+	d04inn00ynue3	STD	86
+	d04inn00yd0f7	STD	86
+	d04xob03yn0d0	STD	85
+	d04can03yn0c0	STD	83
+	d04xnk04nn0b5	STD	83
+	d04gbf00nd0g0	STD	83
+	d04xnb02yn0d0	STD	81
+	d04xnb02nn0a5	STD	78
+	d04xnb02yn0b5	STD	78
+	d04cak01nn0b0	STD	78
+	d04nan03yn0d0	STD	77
+	d04nan02yn0d5	STD	77
+	d04non02nn0b7	STD	76
+	d04cak01yn0b0	STD	76
+	d04inn00nn0a5	STD	73
+	d04non02yn0b7	STD	72
+	d04ann02yn0b5	STD	72
+	d04qfd02ndz00	STD	72
+	d04mkn22nn0a5	STD	69
+	d04ann02yn0e3	STD	69
+	d04non02ln0b5	STD	69
+	d04xnk04nn0c0	STD	68
+	d04non02yn0c0	STD	68
+	d04inn00ynui5	STD	67
+	d04non02wn0b5	STD	66
+	d04inn00yn0b3	STD	66
+	d04non02yd0f7	STD	63
+	d04xob03nd0c7	STD	62
+	d04gbf00nd0e0	STD	61
+	d04bfn00yd0i0	STD	60
+	d04xnb02wn0a5	STD	59
+	d04nan02nn0b6	STD	59
+	d04non02yn0f0	STD	58
+	d04non02wn0b7	STD	57
+	d04gbf00nd0c0	STD	53
+	d04xnk04yn0e0	STD	52
+	d04bfn00yn0a5	STD	51
+	d04gbf00nd0h0	STD	51
+	d04non02wn0b3	STD	50
+	d04con01nn0c0	STD	50
+	d04gbf00nd0f5	STD	50
+	d04bfn00yd0k0	STD	49
+	d04orn02yn0b0	STD	49
+	d04con02yn0b0	STD	48
+	d04bfn12wn0c0	STD	47
+	d04non02yn0e0	STD	46
+	d04ann02ld0d3	STD	46
+	d04nob02wn0b0	STD	46
+	d04cak01yn0b5	STD	45
+	d04nob02yn0b0	STD	45
+	d04non02nn0b5	STD	45
+	d04gbf00nd0d0	STD	45
+	d04non02yd0h5	STD	43
+	d04ann02yn0b0	STD	43
+	d04bfn00nnud5	STD	42
+	d04non02yn0d5	STD	42
+	d04bfn00yn0f0	STD	41
+	d04can03yn0b0	STD	41
+	d04gbf00nd0f0	STD	41
+	d04nab02yn0f0	STD	40
+	d04non02yd0f0	STD	40
+	d04bar01nnz64	STD	40
+	d04con03nn0b0	STD	39
+	d04nan04yn0c0	STD	39
+	d04xob02yn0b5	STD	38
+	d04non02yn0d0	STD	38
+	d04bfn00yn0e0	STD	38
+	d04non02ld0c7	STD	37
+	d04nob02nn0b0	STD	37
+	d04nob02ln0b0	STD	37
+	d04xnk04yn0a5	STD	37
+	d04xob02yn0a5	STD	36
+	d04nan04nd0d7	STD	36
+	d04non02yn0c5	STD	36
+	d04inn00nn0b5	STD	34
+	d04can03nn0b5	STD	34
+	d04nab02yn0b0	STD	34
+	d04aon03yn0a5	STD	34
+	d04ann04yd0d7	STD	34
+	d04nak24yn0c0	STD	33
+	d04fky00yd0e0	STD	33
+	d04fyj03nd0c0	STD	32
+	d04ann04yd0c5	STD	32
+	d04ann02yd0c5	STD	32
+	d04xob03yn0a5	STD	31
+	d04inn00ynub3	STD	31
+	d04qin00nd0i0	STD	30
+	d04nab02yn0c0	STD	29
+	d04nan02yd0c0	STD	29
+	d04ann02wn0a5	STD	28
+	d04nan02yd0f0	STD	28
+	d04cgc01nd0c0	STD	28
+	d04gbf00nd0e5	STD	27
+	d04non02nn0d5	STD	26
+	d04fky00ld0a5	STD	26
+	d04fyj43yd0g0	STD	26
+	d04xob02wn0a5	STD	26
+	d04xnk04yn0b0	STD	26
+	d04xob03yn0e0	STD	25
+	d04nab02nn0b0	STD	25
+	d04ann03yd0d3	STD	25
+	d04ann02wn0b5	STD	25
+	d04xnb02yn0b4	STD	25
+	d04nan04yn0d0	STD	25
+	d04bfn00yn0c5	STD	25
+	d04xob03yn0b5	STD	24
+	d04xnb02nn0b5	STD	24
+	d04con01yn0c0	STD	24
+	d04con03yn0c0	STD	24
+	d04ann03yn0a5	STD	24
+	d04ann02yn0b4	STD	24
+	d04ann04yd0b7	STD	24
+	d04cgc01nd0j0	STD	24
+	d04inn00wn0b5	STD	23
+	d04xnb02ln0a5	STD	23
+	d04xnk04yn0d0	STD	23
+	d04nob02yn0f0	STD	23
+	d04nan04nn0b5	STD	23
+	d04cgc01nd0g0	STD	23
+	d04bfn00lnud5	STD	22
+	d04bfn00yn0d0	STD	22
+	d04xnb02yn0b0	STD	22
+	d04orn02yn0a5	STD	22
+	d04gbf00nd0d5	STD	22
+	d04bfn00ynub5	STD	21
+	d04nan04yd0d7	STD	21
+	d04nan04ld0b7	STD	21
+	d04ann03yn0b5	STD	21
+	d04mkn22yn0b5	STD	20
+	d04qbf00nd0o0	STD	20
+	d04qna02nd0c7	STD	20
+	d04mkn22yn0d0	STD	20
+	d04nan03yd0e0	STD	20
+	d04bfn00yn0b0	STD	20
+	d04cgc01nd0e0	STD	20
+	d04nab02yd0i0	STD	19
+	d04orn02yn0c0	STD	19
+	d04cob13yn0c0	STD	18
+	d04ann02yd0d3	STD	18
+	d04mkn22yn0b0	STD	18
+	d04ann02yn0b6	STD	18
+	d04inn00ln0b5	STD	17
+	d04mkn22ln0b5	STD	17
+	d04con01ln0c0	STD	17
+	d04nan02yn0f0	STD	17
+	d04orn02yn0f0	STD	17
+	d04ann03yn0c0	STD	17
+	d04bfn00nduk0	STD	16
+	d04bfn00yd0c7	STD	16
+	d04fky00yd0g0	STD	16
+	d04fyj43yd0b0	STD	16
+	d04xnb02yn0g0	STD	15
+	d04con02yn0c0	STD	15
+	d04non02yd0i0	STD	15
+	d04can03yn0b7	STD	15
+	d04cgc01nd0b0	STD	15
+	d04non02nn0d0	STD	14
+	d04nab02yn0d0	STD	14
+	d04bfn00lduk0	STD	14
+	d04non02yd0g0	STD	14
+	d04can03yn0b4	STD	14
+	d04ann02yd0b7	STD	14
+	d04gbf00nd0h5	STD	14
+	d04xob02nn0a5	STD	13
+	d04nob02ln0b5	STD	13
+	d04inn00nnuc5	STD	13
+	d04con01wn0c0	STD	13
+	d04xnb03yn0d0	STD	13
+	d04nan02yd0h0	STD	13
+	d04nab02yd0f5	STD	13
+	d04non02ln0c0	STD	13
+	d04bfn00ld0b0	STD	13
+	d04nan02yd0i0	STD	12
+	d04orn02nn0b0	STD	12
+	d04cak01ln0b0	STD	12
+	d04con01wd0b5	STD	12
+	d04ann02ln0a5	STD	12
+	d04bfn00nn0e0	STD	12
+	d04xob02yn0b4	STD	12
+	d04orn02yn0b5	STD	12
+	d04nan02yd0b7	STD	12
+	d04ann02yd0k0	STD	12
+	d04ann02nn0b4	STD	12
+	d04nan02yd0b6	STD	12
+	d04gbf00nd0j0	STD	12
+	d04gbf00nd0g5	STD	12
+	d04nan02ln0d0	STD	11
+	d04xnb02ln0d0	STD	11
+	d04nab02yd0g0	STD	11
+	d04con03yd0d7	STD	11
+	d04cak01yd0c7	STD	11
+	d04nob02yn0b5	STD	11
+	d04mkn22yd0c7	STD	11
+	d04nab02yd0d3	STD	11
+	d04ann04yn0c0	STD	11
+	d04con03yn0d0	STD	11
+	d04bfn12wn0b5	STD	11
+	d04xob02nn0b5	STD	10
+	d04xnk04yd0e5	STD	10
+	d04xnk04nn0d0	STD	10
+	d04nan04yd0f0	STD	10
+	d04bfn00wn0a5	STD	10
+	d04nan02yd0g0	STD	10
+	d04ltn80yd0e0	STD	10
+	d04nan03yn0b5	STD	10
+	d04qin00nd0q0	STD	10
+	d04qno02nd0c7	STD	10
+	d04qno03nd0d0	STD	10
+	d04qbf00nd0h0	STD	10
+	d04qna03nd0d0	STD	10
+	d04nan02yd0d0	STD	10
+	d04xob03yn0b0	STD	10
+	d04non02nn0b3	STD	10
+	d04can03wd0c5	STD	10
+	d04mkn22ln0a5	STD	10
+	d04cob11yn0b0	STD	10
+	d04nan04nn0d0	STD	10
+	d04nob02yn0d0	STD	9
+	d04bfn00nn0f0	STD	9
+	d04con01nn0d0	STD	9
+	d04cob13nn0b0	STD	9
+	d04con01yn0d0	STD	9
+	d04con02nn0b0	STD	9
+	d04bfn00yn0e3	STD	9
+	d04con01yd0b5	STD	9
+	d04nan04yd0e0	STD	9
+	d04ann02yd0f7	STD	9
+	d04can03yn8b0	STD	9
+	d04nan02ln0b6	STD	9
+	d04bfn00wd0b3	STD	9
+	d04nak24ln0c0	STD	9
+	d04gbf00nd0b5	STD	9
+	d04bfn00nnue3	STD	9
+	d04bfn00ld0b4	STD	9
+	d04xob03nn0d0	STD	8
+	d04cak01yn0f0	STD	8
+	d04inn00wnuc5	STD	8
+	d04cob13yn0b0	STD	8
+	d04nan02nn0d0	STD	8
+	d04xob03ld0c7	STD	8
+	d04inn00nnud0	STD	8
+	d04can03yn0e3	STD	8
+	d04cak01nn0b5	STD	8
+	d04orn02yd0f7	STD	8
+	d04con01ld0c7	STD	8
+	d04bfn00wnud5	STD	8
+	d04nan02yd0c3	STD	8
+	d04xnb02yd0i0	STD	8
+	d04xnk04yd0f5	STD	8
+	d04xnb02yn0c0	STD	8
+	d04bfn00yd0a5	STD	8
+	d04xnb02yn0b3	STD	8
+	d04non02yd0c5	STD	8
+	d04bfn00yd0b5	STD	8
+	d04ann02nn0c0	STD	8
+	d04bfn00wd0a5	STD	8
+	d04gbf00nd0c5	STD	8
+	d04gbf00nd0i5	STD	8
+	d04gbf00nd0i0	STD	8
+	d04inn00nnue3	STD	7
+	d04non02yn0f5	STD	7
+	d04ann02yd0h7	STD	7
+	d04nan02yd0c7	STD	7
+	d04nan04wd0b7	STD	7
+	d04xob02ln0a5	STD	7
+	d04non02yd0f5	STD	7
+	d04bfn00nn0c0	STD	7
+	d04xob02yn0b0	STD	7
+	d04bfn00yd0o0	STD	7
+	d04non02yd0c0	STD	7
+	d04nab02yn0b5	STD	7
+	d04non02yd0d0	STD	7
+	d04xnk04ln0a5	STD	7
+	d04bfn00yduh0	STD	7
+	d04can03yd0b5	STD	7
+	d04mkn22wd0c7	STD	7
+	d04can03yd0c5	STD	7
+	d04xnk04ln0b5	STD	7
+	d04ann02ln0b6	STD	7
+	d04nan02wd0b7	STD	7
+	d04nan02ld0c3	STD	7
+	d04orn02wn0a5	STD	7
+	d04bfn12wn0a5	STD	7
+	d04bfn00nn0d0	STD	6
+	d04nab02ln0b0	STD	6
+	d04mkn22nn0d0	STD	6
+	d04xob03nn0a5	STD	6
+	d04con04yn0d0	STD	6
+	d04con02yn0d0	STD	6
+	d04inn00nduq0	STD	6
+	d04fyj43yd0c0	STD	6
+	d04nab02nn0c0	STD	6
+	d04rrb22wn0a5	STD	6
+	d04cab13yn0b0	STD	6
+	d04nob02nn0b5	STD	6
+	d04con01nd0c7	STD	6
+	d04mkn22nn0b5	STD	6
+	d04con01yd0c7	STD	6
+	d04cab11yn0b0	STD	6
+	d04kak01yn0b0	STD	6
+	d04oan01yn0a5	STD	6
+	d04non02yn0e5	STD	6
+	d04con03nn0d0	STD	6
+	d04orn02yd0c5	STD	6
+	d04xob02yn0c0	STD	6
+	d04orn02yd0d5	STD	6
+	d04bfn00ld0b3	STD	6
+	d04xnb02nn0b4	STD	6
+	d04nan03yd0b7	STD	6
+	d04gbf00nd0b0	STD	6
+	d04nak24nn0c0	STD	6
+	d04nan02nn0d5	STD	5
+	d04nan02yd0e0	STD	5
+	d04mkn22nn0b0	STD	5
+	d04xob02yn0e0	STD	5
+	d04nob02yd0g0	STD	5
+	d04ann04nd0c5	STD	5
+	d04can03ld0c7	STD	5
+	d04aon11yn0b0	STD	5
+	d04ann02yn0d0	STD	5
+	d04inn00yn0c5	STD	5
+	d04bfn00yd0h0	STD	5
+	d04bfn00yn0c0	STD	5
+	d04non02yd0c7	STD	5
+	d04nan04yd0d0	STD	5
+	d04xnb03yn0e0	STD	5
+	d04xnb03yd0g3	STD	5
+	d04non02ln0b3	STD	5
+	d04bfn00nd0b3	STD	5
+	d04bfn00nd0c5	STD	5
+	d04ann02wn0b6	STD	5
+	d04nan02nd0b6	STD	5
+	d04bfn00wduk0	STD	5
+	d04fky00nd0b0	STD	5
+	d04bfn00nduo0	STD	5
+	d04cgc01nd0f0	STD	5
+	d04bfn13wn0b5	STD	5
+	d04cgc01nd0d0	STD	5
+	d04bfn00yd0b0	STD	5
+	d04bfn00nnub4	STD	5
+	d04nan02ld0b7	STD	5
+	d04xob02yd0h0	STD	4
+	d04xnb02nn0d0	STD	4
+	d04bfn00nn0a5	STD	4
+	d04can03nd0c7	STD	4
+	d04xnb02ln0b5	STD	4
+	d04nob02yd0f5	STD	4
+	d04nan03yd0f5	STD	4
+	d04orn02yd0i0	STD	4
+	d04fyj03nd0g0	STD	4
+	d04nab02wn0b0	STD	4
+	d04nob02yn0c0	STD	4
+	d04cak01nn0c0	STD	4
+	d04cab13yn0c0	STD	4
+	d04inn00yn0d0	STD	4
+	d04cak01yd0c5	STD	4
+	d04ann02yn0e0	STD	4
+	d04cak01yn0d0	STD	4
+	d04xnk04yn0f0	STD	4
+	d04nob02yd0i0	STD	4
+	d04nan02yd0b5	STD	4
+	d04con02nn0c0	STD	4
+	d04cob13yn0d0	STD	4
+	d04inn00ln0b3	STD	4
+	d04con03yd0b5	STD	4
+	d04cob13yn0f0	STD	4
+	d04can03yn0f0	STD	4
+	d04nan02wd0c3	STD	4
+	d04cob11nn0b0	STD	4
+	d04xnk04nn0b0	STD	4
+	d04mkn22ld0c7	STD	4
+	d04inn00wn0c5	STD	4
+	d04fky00yd0a5	STD	4
+	d04bfn00yn0b5	STD	4
+	d04cob13nd0b5	STD	4
+	d04bfn00nnuc0	STD	4
+	d04bfn00nd0c7	STD	3
+	d04bfn00nnub5	STD	3
+	d04bfn00wd0c7	STD	3
+	d04inn00nnuf5	STD	3
+	d04xnb02wn0b5	STD	3
+	d04can03nn0b0	STD	3
+	d04can03nn0d0	STD	3
+	d04nab02ld0d3	STD	3
+	d04nan04nn0e0	STD	3
+	d04bfn00ln0a5	STD	3
+	d04bfn00ld0i0	STD	3
+	d04bfn00nd0i0	STD	3
+	d04nan04yn0e0	STD	3
+	d04inn00nnuh5	STD	3
+	d04non02nd0f0	STD	3
+	d04bfn00wnub5	STD	3
+	d04nan03yn0f0	STD	3
+	d04orn02wn0b5	STD	3
+	d04ltn80ld0c0	STD	3
+	d04bfn00ln0f0	STD	3
+	d04aon11wn0b0	STD	3
+	d04bfn00wd0i0	STD	3
+	d04can03wd0c7	STD	3
+	d04fyj03wd0c0	STD	3
+	d04nan03yd0d7	STD	3
+	d04cab11nn0b0	STD	3
+	d04xnk04ln0c0	STD	3
+	d04bfn00wn0f0	STD	3
+	d04inn00yd0i0	STD	3
+	d04xnb03yd0c7	STD	3
+	d04xob03yd0g5	STD	3
+	d04cak01yn0c0	STD	3
+	d04mbn22yn0a5	STD	3
+	d04con01yd0c5	STD	3
+	d04xnb02yn0b7	STD	3
+	d04bfn00yn0d5	STD	3
+	d04con01yd0c3	STD	3
+	d04ltn80yd0g0	STD	3
+	d04inn00yd0q0	STD	3
+	d04cob13yd0b5	STD	3
+	d04inn00wd0f7	STD	3
+	d04mkn22ln0d0	STD	3
+	d04ann03yn0f0	STD	3
+	d04con01nd0c5	STD	3
+	d04nan03nd0e0	STD	3
+	d04nan02wd0c0	STD	3
+	d04ann02ln0b3	STD	3
+	d04bfn00nn0c5	STD	3
+	d04ann02nd0b7	STD	3
+	d04ann02ln0c0	STD	3
+	d04mkn22nd0c7	STD	3
+	d04bfn00wnue3	STD	3
+	d04non02ld0c5	STD	3
+	d04non02wd0c5	STD	3
+	d04inn00wnue3	STD	3
+	d04nan04ln0b5	STD	3
+	d04nan02nd0b7	STD	3
+	d04nan04nn0c0	STD	3
+	d04inn00yd0c7	STD	3
+	d04con03nd0c7	STD	3
+	d04gbf10nd0f5	STD	3
+	d04gbf00nd0l0	STD	3
+	d04gbf10nd0d5	STD	3
+	d04gbf10nd0g0	STD	3
+	d04gbf00nd0j5	STD	3
+	d04nan02wd0b5	STD	3
+	d04inn00yd0b3	STD	3
+	d04bfn00yd0c0	STD	3
+	d04bfn00ynub3	STD	3
+	d04inn00ld0f7	STD	2
+	d04nan03yn0e0	STD	2
+	d04nab02nd0g0	STD	2
+	d04xob03ln0d0	STD	2
+	d04nab02ld0f5	STD	2
+	d04non02ld0f0	STD	2
+	d04xob03nn0b5	STD	2
+	d04non02nd0h5	STD	2
+	d04ann04ld0b7	STD	2
+	d04fky00wd0a5	STD	2
+	d04can03wn0b0	STD	2
+	d04nob03yn0b0	STD	2
+	d04ann02nd0f7	STD	2
+	d04nak24wn0c0	STD	2
+	d04cab13nn0b0	STD	2
+	d04nan03nn0b5	STD	2
+	d04orn02wn0b0	STD	2
+	d04nan04ld0d7	STD	2
+	d04rrb22wn0b5	STD	2
+	d04kak01wn0b0	STD	2
+	d04bfn00ld0c7	STD	2
+	d04rrb22yn0a5	STD	2
+	d04con02nn0d0	STD	2
+	d04cak01nd0i5	STD	2
+	d04con03nn0c0	STD	2
+	d04aon03yd0b3	STD	2
+	d04ltn80yd0a5	STD	2
+	fdk73d84_asic_halo_hib	STD	2
+	fdk73d84_asic_halo_hic	STD	2
+	d04cob11nn0c0	STD	2
+	d04kok01yn0b0	STD	2
+	d04cak02nn0c0	STD	2
+	d04bfn00ld0k0	STD	2
+	d04xob02yn0g0	STD	2
+	d04xob02yn0d0	STD	2
+	d04inn00yd0c5	STD	2
+	d04cak04yn0b0	STD	2
+	d04nan03yd0d0	STD	2
+	d04mkn22yd0d5	STD	2
+	d04con01yn0f0	STD	2
+	d04xnb02yd0h0	STD	2
+	d04cab11yn0c0	STD	2
+	d04nob02yd0d3	STD	2
+	d04aon03yn0d0	STD	2
+	d04kok01yn0f0	STD	2
+	d04xob03yn0c0	STD	2
+	d04mkn22wn0b5	STD	2
+	d04can03nn0c0	STD	2
+	d04orn02yn0d0	STD	2
+	d04can03nn0b7	STD	2
+	d04can03yn0e0	STD	2
+	d04con03ln0b0	STD	2
+	d04non02nd0d0	STD	2
+	d04inn00nd0q0	STD	2
+	d04can03yn0b3	STD	2
+	d04nan03nd0b7	STD	2
+	d04con01yd0d7	STD	2
+	d04inn00yd0b5	STD	2
+	d04inn00nd0f7	STD	2
+	d04inn00wd0c5	STD	2
+	d04nan03nnuc0	STD	2
+	d04cak01wn0b0	STD	2
+	d04ann02nn0b3	STD	2
+	d04xnb02ln0b0	STD	2
+	d04nab02nd0d3	STD	2
+	d04bfn00wd0b5	STD	2
+	d04ann02nd0d3	STD	2
+	d04ann02wn0c0	STD	2
+	d04non02nn0c5	STD	2
+	d04xnk04nn0e0	STD	2
+	d04xnk04ln0e0	STD	2
+	d04inn00wdui0	STD	2
+	d04xnb02yn0f0	STD	2
+	d04cak01yd0b7	STD	2
+	d04can03nd0b5	STD	2
+	d04nan04wn0b5	STD	2
+	d04can03ln0b5	STD	2
+	d04cab13yn0d0	STD	2
+	d04bfn00wduh0	STD	2
+	d04inn00wnud0	STD	2
+	d04can03wn0b5	STD	2
+	d04inn00nn0c5	STD	2
+	d04kok01wd0b0	STD	2
+	d04can03ld0c5	STD	2
+	d04nan04yn0e5	STD	2
+	d04bfn00ld0h0	STD	2
+	d04inn00wd0b5	STD	2
+	d04gbf10nd0f0	STD	2
+	d04inn00wn0f5	STD	2
+	d04gbf10nd0d0	STD	2
+	d04bfn00yd0c5	STD	2
+	d04xnb02wn0d0	STD	2
+	d04bfn00nn0b0	STD	2
+	d04nan02ld0b5	STD	2
+	d04inn00yn0i5	STD	2
+	d04bfn00yd0b4	STD	2
+	d04can03wn0b4	STD	2
+	d04inn00wn0h5	STD	2
+	d04bfn00wd0c5	STD	2
+	d04con04yn0b5	STD	2
+	d04xob02yn0b7	STD	2
+	d04bfn00ynub4	STD	2
+	d04bfn00wnub4	STD	2
+	d04xob02yn0b3	STD	2
+	d04non03nn0b5	STD	1
+	d04con03nd0d7	STD	1
+	d04cob13nn0d0	STD	1
+	d04xnk04ln0d0	STD	1
+	d04inn00ldui0	STD	1
+	d04nab02wn0d0	STD	1
+	d04can03wd0b3	STD	1
+	d04non02nn0f0	STD	1
+	d04con03wn0c0	STD	1
+	d04nab02nn0d0	STD	1
+	d04oan01yn0b5	STD	1
+	d04inn00lnud0	STD	1
+	d04cob13nn0c0	STD	1
+	d04cak01yd0i5	STD	1
+	d04con04yn0f0	STD	1
+	d04rrb22ln0b5	STD	1
+	d04inn00nduo7	STD	1
+	d04nab02nn0f0	STD	1
+	d04nan03nn0d0	STD	1
+	d04non02nn0f5	STD	1
+	d04inn00wduq0	STD	1
+	d04ann03nn0a5	STD	1
+	d04ann04nd0d7	STD	1
+	d04ann02wd0b7	STD	1
+	d04kok01wn0b0	STD	1
+	d04nob02wd0d3	STD	1
+	d04nob03yn0b5	STD	1
+	d04nab02wn0c0	STD	1
+	d04non04nn0b5	STD	1
+	d04orn02wd0c5	STD	1
+	d04nab03yd0f5	STD	1
+	d04ltn80ld0e0	STD	1
+	d04cak01nd0f5	STD	1
+	d04con01ld0d7	STD	1
+	d04ann02nn0d0	STD	1
+	d04oan01ln0b5	STD	1
+	d04ann02nn0e3	STD	1
+	d04kok01nn0b0	STD	1
+	d04xob02ln0b5	STD	1
+	d04cak01wd0b7	STD	1
+	d04mbn22yn0b0	STD	1
+	d04cak02nn0b0	STD	1
+	d04cak01yd0f5	STD	1
+	d04cak04nn0b0	STD	1
+	d04cak01nn0f0	STD	1
+	d04aon01yn0b5	STD	1
+	d04cak01nd0c7	STD	1
+	d04can16nn0b0	STD	1
+	d04xnb02yn0e0	STD	1
+	d04cob11yn0c0	STD	1
+	d04oan01nn0b0	STD	1
+	d04xnb03yn0b5	STD	1
+	d04aon03yn0b0	STD	1
+	d04nab03yn0c0	STD	1
+	d04oan01yn0b0	STD	1
+	d04can16nn0b5	STD	1
+	d04xok04nn0b5	STD	1
+	d04nob03ln0b0	STD	1
+	d04non03nn0f0	STD	1
+	d04inn00yd0o7	STD	1
+	d04bfn00ln0c0	STD	1
+	d04aon01yn0d0	STD	1
+	d04xob03yn0g0	STD	1
+	d04xok04yn0c0	STD	1
+	d04cak02yn0c0	STD	1
+	d04aon01yn0a5	STD	1
+	d04con03yd0c7	STD	1
+	d04mbn22yn0d0	STD	1
+	d04ann03yn0d0	STD	1
+	d04nan03ynuc0	STD	1
+	d04orn04yn0c0	STD	1
+	d04nak24yn0f0	STD	1
+	d04nob03yn0d0	STD	1
+	d04nan04yd0c7	STD	1
+	d04inn00wn0d0	STD	1
+	d04inn00ln0c5	STD	1
+	d04ann03yd0f7	STD	1
+	d04con01nd0b5	STD	1
+	d04xnb03yn0b0	STD	1
+	d04aon11yd0f5	STD	1
+	d04non02nd0i0	STD	1
+	d04non02wd0h5	STD	1
+	d04non02nd0g0	STD	1
+	d04xob02yd0c7	STD	1
+	d04mkn22ld0d5	STD	1
+	d04fyj03ld0g0	STD	1
+	d04inn00nn0d0	STD	1
+	d04can03nd0b0	STD	1
+	d04inn00yn0e3	STD	1
+	d04non03yd0g0	STD	1
+	d04non02ld0d0	STD	1
+	d04con01ld0c5	STD	1
+	d04bfn00wn0c0	STD	1
+	d04ann02yn0f0	STD	1
+	d04cob11yn0f0	STD	1
+	d04mkn22yn0c0	STD	1
+	d04kok01yn0d0	STD	1
+	d04nan02wd0b6	STD	1
+	d04xob02yn0f0	STD	1
+	d04kak01nn0b0	STD	1
+	d04non02ld0f5	STD	1
+	d04xnk04ln0b0	STD	1
+	d04oan01wn0b0	STD	1
+	d04cak01nd0d0	STD	1
+	d04nob02nn0c0	STD	1
+	d04non02wd0f0	STD	1
+	d04oan01wn0a5	STD	1
+	d04nan02wd0d0	STD	1
+	d04oan01yn0c0	STD	1
+	d04xob03nn0b0	STD	1
+	d04nan02wn0d0	STD	1
+	d04inn00wnub3	STD	1
+	d04con10wn0b0	STD	1
+	d04inn00ld0b5	STD	1
+	d04nan02nd0c0	STD	1
+	d04can03yd0b3	STD	1
+	d04mbn22nn0d0	STD	1
+	d04xnk04wn0b5	STD	1
+	d04xob03ln0a5	STD	1
+	d04xnk04ld0f5	STD	1
+	d04xnk04nn0a5	STD	1
+	d04ann02ln0b4	STD	1
+	d04nab02wd0f5	STD	1
+	d04mkn22wn0a5	STD	1
+	d04con03nd0b5	STD	1
+	d04mbn22nn0b4	STD	1
+	d04aon11yd0d5	STD	1
+	d04aon03wn0a5	STD	1
+	d04non02nn0e0	STD	1
+	d04orn04wn0c0	STD	1
+	d04nan04ln0d0	STD	1
+	d04fky00ld0b0	STD	1
+	d04inn00ndui0	STD	1
+	d04orn02nn0c0	STD	1
+	d04orn02nn0a5	STD	1
+	d04non02wn0c0	STD	1
+	d04non02nd0c7	STD	1
+	d04inn00lnuf5	STD	1
+	d04nan02nd0d0	STD	1
+	d04can03ln0c0	STD	1
+	d04can03wd0b5	STD	1
+	d04ann02nn0b0	STD	1
+	d04nan02wd0e0	STD	1
+	d04ann04nd0b7	STD	1
+	d04non04yn0c0	STD	1
+	d04aon03ln0a5	STD	1
+	d04orn02ln0a5	STD	1
+	d04nak24ld0f7	STD	1
+	d04nan03wd0d7	STD	1
+	d04aon03yn0f0	STD	1
+	d04inn00nd0c5	STD	1
+	d04nab02wn0b5	STD	1
+	d04cab13yn0f0	STD	1
+	d04nan04yn0f0	STD	1
+	d04nab03yd0i5	STD	1
+	d04non02ln0d5	STD	1
+	d04cob11yd0d7	STD	1
+	d04gbf30nd0b5	STD	1
+	d04gbf30nd0e5	STD	1
+	d04gbf10nd0h0	STD	1
+	d04gbf20nd0l0	STD	1
+	d04gbf10nd0c0	STD	1
+	d04aon03nn0c0	STD	1
+	d04ann02wn0b3	STD	1
+	d04nan04ld0c7	STD	1
+	d04bfn00ld0c0	STD	1
+	d04aon03yn0b5	STD	1
+	d04nab03yn0f0	STD	1
+	d04ann03ln0b0	STD	1
+	d04cob11yd0c7	STD	1
+	d04bfn00ynuc0	STD	1
+	d04nab02nd0f5	STD	1
+	d04inn00yn0h5	STD	1
+	d04bfn00ln0d0	STD	1
+	d04bfn00wd0h0	STD	1
+	d04inn00ln0d0	STD	1
+	d04con02yd0c0	STD	1
+	d04non02wd0f7	STD	1
+	d04xob02wn0d0	STD	1
+	d04nan02nd0b5	STD	1
+	d04can03wn0b7	STD	1
+	d04inn00wn0b3	STD	1
+	d04bfn00wn0b5	STD	1
+	d04nan02nd0c3	STD	1
+	d04xnb02nn0b3	STD	1
+	d04nan03yn0c0	STD	1
+	d04bfn00ld0o0	STD	1
+	d04bfn00ld0c5	STD	1
+	d04bfn00nn0b5	STD	1
+	d04nan02nd0c7	STD	1
+	d04bfn00nd0b4	STD	1
+	d04bfn00lnuc0	STD	1
+	d04non02ld0c0	STD	1
+	d04orn02yd0c3	STD	1
+	d04nan02nd0h0	STD	1
+	d04rrb22yn0b0	STD	1
+	d04cak01ln0c0	STD	1
+	d04cak04yn0b5	STD	1
+	d04con01wd0c7	STD	1
+	d04nan04nd0i0	STD	1
+	d04nak24nn0d0	STD	1
+	=================================
+
+Timing/Optimization Information:
+
+Global Routing Information:
+    layer m0, dir Hor, min width = 0.03, min space = 0.03 pitch = 0.06
+    layer m1, dir Ver, min width = 0.04, min space = 0.03 pitch = 0.07
+    layer m2, dir Hor, min width = 0.03, min space = 0.02 pitch = 0.05
+    layer m3, dir Ver, min width = 0.03, min space = 0.02 pitch = 0.05
+    layer m4, dir Hor, min width = 0.03, min space = 0.02 pitch = 0.06
+    layer m5, dir Ver, min width = 0.03, min space = 0.02 pitch = 0.05
+    layer m6, dir Hor, min width = 0.04, min space = 0.04 pitch = 0.08
+    layer m7, dir Ver, min width = 0.06, min space = 0.06 pitch = 0.11
+    layer m8, dir Hor, min width = 0.13, min space = 0.13 pitch = 0.25
+    layer m9, dir Ver, min width = 0.54, min space = 0.54 pitch = 1.08
+    layer tm1, dir Hor, min width = 5.50, min space = 5.50 pitch = 16.00
+    layer c4, dir Ver, min width = 85.00, min space = 45.00 pitch = 130.30
+     
+    Average gCell capacity  4.50	 on layer (1)	 m0
+    Average gCell capacity  4.27	 on layer (2)	 m1
+    Average gCell capacity  5.32	 on layer (3)	 m2
+    Average gCell capacity  6.65	 on layer (4)	 m3
+    Average gCell capacity  5.75	 on layer (5)	 m4
+    Average gCell capacity  6.64	 on layer (6)	 m5
+    Average gCell capacity  3.75	 on layer (7)	 m6
+    Average gCell capacity  3.08	 on layer (8)	 m7
+    Average gCell capacity  0.87	 on layer (9)	 m8
+    Average gCell capacity  0.12	 on layer (10)	 m9
+    Average gCell capacity  0.00	 on layer (11)	 tm1
+    Average gCell capacity  0.00	 on layer (12)	 c4
+     
+    Initial. Both Dirs: Overflow =     0 Max = 0 GRCs =     0 (0.00%)
+    Initial. H routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+    Initial. V routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+     
+    phase1. Both Dirs: Overflow =     0 Max = 0 GRCs =     0 (0.00%)
+    phase1. H routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+    phase1. V routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+     
+    phase2. Both Dirs: Overflow =     0 Max = 0 GRCs =     0 (0.00%)
+    phase2. H routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+    phase2. V routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+     
+    Total Wire Length = 186.02
+    Layer m0 wire length = 3.90
+    Layer m1 wire length = 37.92
+    Layer m2 wire length = 118.23
+    Layer m3 wire length = 19.01
+    Layer m4 wire length = 2.64
+    Layer m5 wire length = 4.02
+    Layer m6 wire length = 0.30
+    Layer m7 wire length = 0.00
+    Layer m8 wire length = 0.00
+    Layer m9 wire length = 0.00
+    Layer tm1 wire length = 0.00
+    Layer c4 wire length = 0.00
+    Total Number of Contacts = 2871
+    Via VIA0AX count = 595
+    Via VIA1A count = 1927
+    Via VIA2A count = 171
+    Via VIA3C_32 count = 91
+    Via VIA4A count = 58
+    Via VIA5B count = 26
+    Via VIA6A44 count = 3
+    Via VIA7F count = 0
+    Via VIA8A count = 0
+    Via VIA9A count = 0
+    Via TV1A count = 0
+     
+    Elapsed real time: 0:00:04
+    Elapsed cpu time: sys = 0:00:00 usr = 0:00:06 total = 0:00:06
+    Total Proc Memory(MB): 5230
+
+Track Assignment Information:
+    Number of wires with overlap after iteration 0 = 3054 of 6081
+
+    Number of wires with overlap after iteration 1 = 697 of 1791
+
+    Total m0 wire length: 8.2
+    Total m1 wire length: 69.1
+    Total m2 wire length: 198.2
+    Total m3 wire length: 25.7
+    Total m4 wire length: 4.6
+    Total m5 wire length: 5.7
+    Total m6 wire length: 0.6
+    Total m7 wire length: 0.4
+    Total m8 wire length: 0.0
+    Total m9 wire length: 0.0
+    Total tm1 wire length: 0.0
+    Total c4 wire length: 0.0
+    Total wire length: 312.4
+
+    Elapsed real time: 0:01:02
+    Elapsed cpu time: sys = 0:00:00 usr = 0:01:01 total = 0:01:01
+    Total Proc Memory(MB): 5230
+
+Detailed Routing Information:
+    
+
+    ---------- Detail route ----------
+
+     
+    Iteration 14: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	559
+    	@@@@ Total number of instance ports with antenna violations =	0
+     
+    Iteration 15: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	20
+    	@@@@ Total number of instance ports with antenna violations =	0
+     
+    Iteration 16: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	5
+    	@@@@ Total number of instance ports with antenna violations =	0
+     
+    Iteration 17: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	1
+    	@@@@ Total number of instance ports with antenna violations =	0
+     
+    Iteration 18: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	1
+    	@@@@ Total number of instance ports with antenna violations =	0
+     
+    Iteration 19: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	1
+    	@@@@ Total number of instance ports with antenna violations =	0
+     
+    Iteration 20: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	1
+    	@@@@ Total number of instance ports with antenna violations =	0
+     
+    Iteration 21: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	1
+    	@@@@ Total number of instance ports with antenna violations =	0
+     
+    Iteration 22: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	1
+    	@@@@ Total number of instance ports with antenna violations =	0
+    DR finished with 1 violations
+     
+    DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	1
+    	Same net via-cut spacing : 1
+    
+
+    ---------- Chip finish: insert redundant vias ----------
+
+    RedundantVia finished with 40 violations
+     
+    DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	40
+    	Same net via-cut spacing : 1
+    	Less than minimum length : 37
+    	Internal-only types : 2
+     
+    Begin DRC fixing ...
+
+     
+    Iteration 23: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	1
+    	@@@@ Total number of instance ports with antenna violations =	0
+     
+    Elapsed real time: 0:02:07
+    Elapsed cpu time: sys = 0:00:03 usr = 0:04:07 total = 0:04:10
+    Total Proc Memory(MB): 5317
+     
+    Cumulative run time upto current stage: Elapsed = 0:02:07 CPU = 0:04:10
+     
+    DR finished with 0 open nets, of which 0 are frozen
+    DR finished with 1 violations
+     
+    DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	1
+    	Same net via-cut spacing : 1
+    Total number of nets = 59427
+    0 open nets, of which 0 are frozen
+    Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                     0 ports without pins of 0 cells connected to 0 nets
+                                     0 ports of 0 cover cells connected to 0 non-pg nets
+    Total number of DRCs = 1
+    Total number of antenna violations = 0
+    Total number of voltage-area violations = no voltage-areas defined
+    
+
+     
+    Elapsed real time: 0:00:21
+    Elapsed cpu time: sys = 0:00:00 usr = 0:00:05 total = 0:00:06
+    Total Proc Memory(MB): 5317
+     
+    Cumulative run time upto current stage: Elapsed = 0:02:28 CPU = 0:04:16
+     
+    Total Wire Length =                    560703 micron
+    Total Number of Contacts =             523766
+    Total Number of Wires =                401403
+    Total Number of PtConns =              7602
+    Total Number of Routed Wires =       401403
+    Total Routed Wire Length =           560337 micron
+    Total Number of Routed Contacts =       523766
+    	Layer          m0 :       5320 micron
+    	Layer          m1 :      17021 micron
+    	Layer          m2 :     132258 micron
+    	Layer          m3 :     158184 micron
+    	Layer          m4 :      90903 micron
+    	Layer          m5 :      37537 micron
+    	Layer          m6 :      50168 micron
+    	Layer          m7 :      56604 micron
+    	Layer          m8 :      12708 micron
+    	Layer          m9 :          0 micron
+    	Layer         tm1 :          0 micron
+    	Layer          c4 :          0 micron
+    	Via         VIA7F :        194
+    	Via      VIA7F_DA :        225
+    	Via      VIA7F_DC :       1719
+    	Via       VIA6A44 :        288
+    	Via    VIA6A44_DA :        122
+    	Via    VIA6A44_DB :        323
+    	Via    VIA6A44_DC :      26408
+    	Via      VIA5B_DA :        207
+    	Via      VIA5B_DB :          5
+    	Via      VIA5B_DC :      24065
+    	Via   VIA5B_44_DA :          1
+    	Via   VIA5B_44_DC :        103
+    	Via   VIA4A_32_DA :        147
+    	Via   VIA4A_32_DB :         11
+    	Via   VIA4A_32_DC :      30321
+    	Via      VIA4C_DC :        486
+    	Via         VIA3S :          2
+    	Via         VIA3O :          3
+    	Via      VIA3C_DB :          1
+    	Via      VIA3C_DC :        962
+    	Via   VIA3C_32_DC :      55074
+    	Via         VIA2A :          9
+    	Via         VIA2O :         17
+    	Via      VIA2A_DB :       1574
+    	Via      VIA2A_DC :     160642
+    	Via      VIA2C_DA :          1
+    	Via      VIA2C_DB :         93
+    	Via      VIA2C_DC :       3624
+    	Via         VIA1A :         54
+    	Via         VIA1F :       1798
+    	Via      VIA1F_PG :          1
+    	Via      VIA1A_DA :       6176
+    	Via      VIA1A_DB :       1416
+    	Via      VIA1A_DC :     182815
+    	Via        VIA0AX :      18292
+    	Via        VIA0CX :       1115
+    	Via         VIA0A :       5453
+    	Via         VIA0B :         19
+     
+    Redundant via conversion report:
+    --------------------------------
+
+      Total optimized via conversion rate = 94.80% (496521 / 523766 vias)
+     
+        Layer v0         =  0.00% (0      / 24879   vias)
+            Un-optimized = 100.00% (24879   vias)
+        Layer v1         = 99.04% (190407 / 192260  vias)
+            Weight 30    = 95.09% (182815  vias)
+            Weight 10    =  3.95% (7592    vias)
+            Un-optimized =  0.96% (1853    vias)
+        Layer v2         = 99.98% (165934 / 165960  vias)
+            Weight 30    = 98.98% (164266  vias)
+            Weight 10    =  1.01% (1668    vias)
+            Un-optimized =  0.02% (26      vias)
+        Layer v3         = 99.99% (56037  / 56042   vias)
+            Weight 30    = 99.99% (56036   vias)
+            Weight 10    =  0.00% (1       vias)
+            Un-optimized =  0.01% (5       vias)
+        Layer v4         = 100.00% (30965  / 30965   vias)
+            Weight 30    = 99.49% (30807   vias)
+            Weight 10    =  0.51% (158     vias)
+            Un-optimized =  0.00% (0       vias)
+        Layer v5         = 100.00% (24381  / 24381   vias)
+            Weight 30    = 99.13% (24168   vias)
+            Weight 10    =  0.87% (213     vias)
+            Un-optimized =  0.00% (0       vias)
+        Layer v6         = 98.94% (26853  / 27141   vias)
+            Weight 30    = 97.30% (26408   vias)
+            Weight 10    =  1.64% (445     vias)
+            Un-optimized =  1.06% (288     vias)
+        Layer v7         = 90.93% (1944   / 2138    vias)
+            Weight 30    = 80.40% (1719    vias)
+            Weight 10    = 10.52% (225     vias)
+            Un-optimized =  9.07% (194     vias)
+     
+      Total double via conversion rate    =  0.00% (0 / 523766 vias)
+     
+        Layer v0         =  0.00% (0      / 24879   vias)
+        Layer v1         =  0.00% (0      / 192260  vias)
+        Layer v2         =  0.00% (0      / 165960  vias)
+        Layer v3         =  0.00% (0      / 56042   vias)
+        Layer v4         =  0.00% (0      / 30965   vias)
+        Layer v5         =  0.00% (0      / 24381   vias)
+        Layer v6         =  0.00% (0      / 27141   vias)
+        Layer v7         =  0.00% (0      / 2138    vias)
+     
+      The optimized via conversion rate based on total routed via count = 94.80% (496521 / 523766 vias)
+     
+        Layer v0         =  0.00% (0      / 24879   vias)
+            Un-optimized = 100.00% (24879   vias)
+        Layer v1         = 99.04% (190407 / 192260  vias)
+            Weight 30    = 95.09% (182815  vias)
+            Weight 10    =  3.95% (7592    vias)
+            Un-optimized =  0.96% (1853    vias)
+        Layer v2         = 99.98% (165934 / 165960  vias)
+            Weight 30    = 98.98% (164266  vias)
+            Weight 10    =  1.01% (1668    vias)
+            Un-optimized =  0.02% (26      vias)
+        Layer v3         = 99.99% (56037  / 56042   vias)
+            Weight 30    = 99.99% (56036   vias)
+            Weight 10    =  0.00% (1       vias)
+            Un-optimized =  0.01% (5       vias)
+        Layer v4         = 100.00% (30965  / 30965   vias)
+            Weight 30    = 99.49% (30807   vias)
+            Weight 10    =  0.51% (158     vias)
+            Un-optimized =  0.00% (0       vias)
+        Layer v5         = 100.00% (24381  / 24381   vias)
+            Weight 30    = 99.13% (24168   vias)
+            Weight 10    =  0.87% (213     vias)
+            Un-optimized =  0.00% (0       vias)
+        Layer v6         = 98.94% (26853  / 27141   vias)
+            Weight 30    = 97.30% (26408   vias)
+            Weight 10    =  1.64% (445     vias)
+            Un-optimized =  1.06% (288     vias)
+        Layer v7         = 90.93% (1944   / 2138    vias)
+            Weight 30    = 80.40% (1719    vias)
+            Weight 10    = 10.52% (225     vias)
+            Un-optimized =  9.07% (194     vias)
+     
+
+DRC information: 
+      Multiple pin connections: 162 
+      Same net via-cut spacing: 1 
+      Total error number: 163
+
+Ring Wiring Statistics:
+
+Stripe Wiring Statistics:
+    metal3 Wire Length(count):             344613.64(1140)
+    metal4 Wire Length(count):             109116.00(360)
+    metal5 Wire Length(count):             172291.24(570)
+    metal6 Wire Length(count):             109116.00(360)
+    metal7 Wire Length(count):             114837.52(380)
+    metal8 Wire Length(count):              54552.96(180)
+    metal9 Wire Length(count):              28660.17(95)
+    metal10 Wire Length(count):              27194.40(90)
+  ==============================================
+    Total Wire Length(count):              960381.93(3175)
+    Number of via3 Contacts:         204660
+    Number of via4 Contacts:         102600
+    Number of via5 Contacts:         102600
+    Number of via6 Contacts:          68400
+    Number of via7 Contacts:          34200
+    Number of via8 Contacts:           8550
+    Number of via9 Contacts:           4275
+  ==============================================
+    Total Number of Contacts:    525285
+
+User Wiring Statistics:
+    poly Wire Length(count):                235.42(1490)
+    metal1 Wire Length(count):              26560.51(16563)
+    metal6 Wire Length(count):                585.20(380)
+    metal7 Wire Length(count):                576.00(360)
+    metal8 Wire Length(count):                572.28(380)
+    metal9 Wire Length(count):                579.60(180)
+  ==============================================
+    Total Wire Length(count):               29109.01(19353)
+    Number of via1 Contacts:         262713
+    Number of via2 Contacts:         262713
+  ==============================================
+    Total Number of Contacts:    525426
+
+PG follow-pin Wiring Statistics:
+
+Signal Wiring Statistics:
+    metal1 Wire Length(count):               5320.42(14337)
+    metal2 Wire Length(count):              17020.28(64222)
+    metal3 Wire Length(count):             132255.39(145081)
+    metal4 Wire Length(count):             158183.48(105255)
+    metal5 Wire Length(count):              90903.33(24070)
+    metal6 Wire Length(count):              37536.60(10371)
+    metal7 Wire Length(count):              50168.07(25921)
+    metal8 Wire Length(count):              56603.81(18348)
+    metal9 Wire Length(count):              12708.38(1383)
+  ==============================================
+    Total Wire Length(count):              560699.75(408988)
+
+      Mask Name      Contact Code    Number Of Contacts    Percentage
+        via1          VIA0AX(2)             18292	       73.5
+        via1          VIA0CX(4)              1115	       4.48
+        via1           VIA0A(8)              5453	       21.9
+        via1           VIA0B(9)                19	     0.0764
+        via2           VIA1A(5)                54	     0.0281
+        via2           VIA1F(6)              1798	      0.935
+        via2        VIA1F_PG(159)                 1	    0.00052
+        via2        VIA1A_DA(276)              6176	       3.21
+        via2        VIA1A_DB(277)              1416	      0.737
+        via2        VIA1A_DC(278)            182815	       95.1
+        via3           VIA2A(18)                 9	    0.00542
+        via3           VIA2O(76)                17	     0.0102
+        via3        VIA2A_DB(280)              1574	      0.948
+        via3        VIA2A_DC(281)            160642	       96.8
+        via3        VIA2C_DA(282)                 1	   0.000603
+        via3        VIA2C_DB(283)                93	      0.056
+        via3        VIA2C_DC(284)              3624	       2.18
+        via4           VIA3S(81)                 2	    0.00357
+        via4           VIA3O(87)                 3	    0.00535
+        via4        VIA3C_DB(286)                 1	    0.00178
+        via4        VIA3C_DC(287)               962	       1.72
+        via4     VIA3C_32_DC(290)             55074	       98.3
+        via5     VIA4A_32_DA(291)               147	      0.475
+        via5     VIA4A_32_DB(292)                11	     0.0355
+        via5     VIA4A_32_DC(293)             30321	       97.9
+        via5        VIA4C_DC(296)               486	       1.57
+        via6        VIA5B_DA(313)               207	      0.849
+        via6        VIA5B_DB(314)                 5	     0.0205
+        via6        VIA5B_DC(315)             24065	       98.7
+        via6     VIA5B_44_DA(316)                 1	     0.0041
+        via6     VIA5B_44_DC(318)               103	      0.422
+        via7         VIA6A44(44)               288	       1.06
+        via7      VIA6A44_DA(297)               122	       0.45
+        via7      VIA6A44_DB(298)               323	       1.19
+        via7      VIA6A44_DC(299)             26408	       97.3
+        via8           VIA7F(91)               194	       9.07
+        via8        VIA7F_DA(319)               225	       10.5
+        via8        VIA7F_DC(326)              1719	       80.4
+  ==============================================
+    Total Number of Contacts:    523766
+
+  Horizontal/Vertical Wire Distribution:
+    Layer      Hor. Wire (% of Hor.)     Ver. Wire (% of Ver.)
+    metal1          5320.42 ( 1.83%)             0.00 ( 0.00%)
+    metal2             0.00 ( 0.00%)         17020.28 ( 6.32%)
+    metal3        132255.39 (45.39%)             0.00 ( 0.00%)
+    metal4             0.00 ( 0.00%)        158183.48 (58.73%)
+    metal5         90903.33 (31.20%)             0.00 ( 0.00%)
+    metal6             0.00 ( 0.00%)         37536.60 (13.94%)
+    metal7         50168.07 (17.22%)             0.00 ( 0.00%)
+    metal8             0.00 ( 0.00%)         56603.81 (21.02%)
+    metal9         12708.38 ( 4.36%)             0.00 ( 0.00%)
+  ==============================================================
+    Total         291355.58                 269344.18
+
+LVS Run Time:
+    Elapsed =    0:00:22, CPU =    0:00:08
+1

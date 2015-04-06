@@ -1,0 +1,4 @@
+    DRC_DENALL_REUSE: COMPLETED with 89 (NB) viols after waiving LDI and NODATA (Check file drc_lvs/denall_reuse/fdkex.LAYOUT_ERRORS)
+    DRC_TRCLVS: PASS
+    DRC_IPALL: PASS
+    DRC_DRCD: COMPLETED with 53382 (NB) viols (Check file drc_lvs/drcd/fdkex.LAYOUT_ERRORS)

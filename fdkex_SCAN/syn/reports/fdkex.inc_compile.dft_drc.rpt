@@ -1,0 +1,101 @@
+In mode: Internal_scan...
+  Design has scan chains in this mode
+  Design is scan routed
+  Post-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking vector rules...
+  ...checking clock rules...
+  ...checking scan chain rules...
+  ...checking scan compression rules...
+  ...checking X-state rules...
+  ...checking tristate rules...
+  ...extracting scan details...
+
+-----------------------------------------------------------------
+Begin Other violations...
+
+Warning: Cell init_mask_in0_clk_gate_seed6_reg_6_latch has constant 1 value. (TEST-505)
+Information: There are 855 other cells with the same violation. (TEST-171)
+
+Other violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 856
+
+-----------------------------------------------------------------
+
+856 OTHER VIOLATIONS
+   856 Cell is constant 1 violations (TEST-505)
+
+
+Warning: Violations occurred during test design rule checking. (TEST-124)
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  856 out of 14804 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+      * 856 cells have constant 1 value
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      *13929 cells are valid scan cells
+      *  19 cells are synchronization elements
+
+Information: Test design rule checking completed. (TEST-123)
+  Running test coverage estimation...
+ 328986 faults were added to fault list.
+ 0          172414  30896         0/0/0    89.38%      0.09
+ 0           12257  18639         0/0/0    93.13%      0.12
+ 0            7454  11185         0/0/0    95.41%      0.14
+ 0            4239   6945         1/0/0    96.71%      0.15
+ 0            2079   4866         1/0/0    97.34%      0.16
+ 0            1277   3589         1/0/0    97.73%      0.17
+ 0             985   2604         1/0/0    98.03%      0.18
+ 0             386   2218         1/0/0    98.15%      0.21
+ 0             456   1762         1/0/0    98.29%      0.22
+ 0             287   1474         2/0/0    98.38%      0.23
+ 0             320   1152         3/1/0    98.48%      0.24
+ 0             164    988         3/1/0    98.53%      0.25
+ 0             132    851         5/1/0    98.57%      0.26
+ 0             147    703         6/1/0    98.61%      0.28
+ 0             116    584         6/2/0    98.65%      0.29
+ 0             112    472         6/2/0    98.68%      0.30
+ 0             112    360         6/2/0    98.72%      0.31
+ 0              81    278         6/3/0    98.74%      0.34
+ 0              81    195         7/3/0    98.77%      0.34
+ 0              78    113         8/4/0    98.79%      0.36
+ 0              72     41         8/4/0    98.82%      0.37
+ 0              29      0        16/4/0    98.83%      0.38
+ 
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                           0
+ -----------------------------------------------
+ 
+
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT     323026
+ Possibly detected                PT          0
+ Undetectable                     UD       2129
+ ATPG untestable                  AU       3831
+ Not detected                     ND          0
+ -----------------------------------------------
+ total faults                            328986
+ test coverage                            98.83%
+ -----------------------------------------------
+  Information: The test coverage above may be inferior
+               than the real test coverage with customized
+               protocol and test simulation library.
+1

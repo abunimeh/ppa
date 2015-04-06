@@ -1,0 +1,41 @@
+Start Time: Tue Mar 31 10:02:42 2015
+*stamp start 1427821362
+SkipCells 2
+SkipCells 2
+SkipCells 3
+SkipCells 3
+Translate 1
+Translate 7
+Translate 10
+Partition 2
+Partition 5
+Partition 6
+*stamp xtract_start 1427821477
+*stamp xtract_finish 1427821477
+*stamp xtract_start 1427821478
+*stamp xtract_finish 1427821478
+*stamp xtract_start 1427821478
+*stamp xtract_start 1427821479
+*stamp xtract_start 1427821479
+*stamp xtract_finish 1427821480
+*stamp xtract_finish 1427821480
+*stamp xtract_start 1427821480
+xTract 2
+*stamp xtract_finish 1427821481
+xTract 1
+*stamp xtract_finish 1427821481
+*stamp xtract_start 1427821482
+*stamp xtract_start 1427821482
+*stamp xtract_start 1427821483
+xTract 1
+*stamp xtract_finish 1427821484
+xTract 32
+*stamp xtract_finish 1427821514
+xTract 297
+*stamp xtract_finish 1427821780
+Netlist 0
+Netlist 0
+Netlist 12
+Netlist 149
+End Time: Tue Mar 31 10:14:09 2015
+*stamp end 1427822049

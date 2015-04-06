@@ -1,0 +1,1049 @@
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/ln/d04_ln_misc (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+        12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_ln_misc)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_ln_misc)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_ln_misc)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/ln/d04_ln_misc_tapcore2h (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+        12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_ln_misc_tapcore2h)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_ln_misc_tapcore2h)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_ln_misc_tapcore2h)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/nn/d04_nn_misc (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+        12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_nn_misc)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_nn_misc)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_nn_misc)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/nn/d04_nn_misc_tapcore2h (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+        12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_nn_misc_tapcore2h)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_nn_misc_tapcore2h)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_nn_misc_tapcore2h)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/wn/d04_wn_misc (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+        12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_wn_misc)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_wn_misc)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_wn_misc)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/wn/d04_wn_misc_tapcore2h (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+        12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_wn_misc_tapcore2h)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_wn_misc_tapcore2h)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_wn_misc_tapcore2h)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/yn/d04_yn_misc (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+        12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_yn_misc)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_yn_misc)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_yn_misc)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/yn/d04_yn_misc_tapcore2h (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+        12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_yn_misc_tapcore2h)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_yn_misc_tapcore2h)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_yn_misc_tapcore2h)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0//fram/ln/d04_ln (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+        12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_ln)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_ln)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_ln)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0//fram/nn/d04_nn (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+        12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_nn)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_nn)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_nn)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0//fram/wn/d04_wn (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+        12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_wn)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_wn)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_wn)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0//fram/yn/d04_yn (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+        12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_yn)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_yn)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+        Main Library (fdkex_51074_LIB)    |     Reference Library (d04_yn)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Using default value = 1 for From_Via-X-Size
+Using default value = 1 for From_Via-Y-Size
+Warning: Cell contains tie connections which are not connected to real PG. (MW-349)
+Turn off antenna since no rule is specified
+Cell Min-Routing-Layer = m0
+Cell Max-Routing-Layer = m8
+Information: Multiple default contact VIA2A_32 found for layer v2. (ZRT-021)
+Warning: The 'VIA5B' via enclosure width is less than NDR width constraint of 'm6' layer. (RT-066)
+Warning: The 'VIA6A44' via enclosure width is less than NDR width constraint of 'm6' layer. (RT-066)
+Warning: The 'VIA6A44' via enclosure width is less than NDR width constraint of 'm7' layer. (RT-066)
+Warning: The 'VIA7F' via enclosure width is less than NDR width constraint of 'm7' layer. (RT-066)
+Warning: The 'VIA5B' via enclosure width is less than NDR width constraint of 'm6' layer. (RT-066)
+Warning: The 'VIA6A44' via enclosure width is less than NDR width constraint of 'm6' layer. (RT-066)
+Warning: The 'VIA6A44' via enclosure width is less than NDR width constraint of 'm7' layer. (RT-066)
+Warning: The 'VIA7F' via enclosure width is less than NDR width constraint of 'm7' layer. (RT-066)
+track auto-fill added 2 tracks on m0
+track auto-fill added 1 tracks on m1
+track auto-fill added 0 tracks on m2
+track auto-fill added 0 tracks on m3
+track auto-fill added 0 tracks on m4
+track auto-fill added 0 tracks on m5
+track auto-fill added 1 tracks on m6
+track auto-fill added 1 tracks on m7
+track auto-fill added 203 tracks on m8
+track auto-fill added 2 tracks on m9
+track auto-fill added 2 tracks on tm1
+track auto-fill added 2 tracks on c4
+Warning: Contact VIA3B's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA3GX's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA5V's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA5W's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA7E's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA4J's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA7A's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA7D's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA7D's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA2JX's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA2JX's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA2RX's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA4JX's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA4F_30's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA4B_30's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA3B_30's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA3B_40's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA4A_30's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA5MP's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA2J's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA4RX's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA7C's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA7C's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA3S's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA3D's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA3S_TIE's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA6C's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA6CX's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA6CX's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA7C_A's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA7C_A's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA0CX_XN's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA0A_XN's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA0BW's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA1V_XN's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA5MP_56's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA4O_30's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA2G's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA2G_32's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA2G_38's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA2G_40's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA2GY's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA2GY's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA3B_60's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA3S_30's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA3S_40's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA3S_60's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA3S_68's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA3S_76's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA4A_36's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA4B_36's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA4C_30's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA4C_36's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA1HJ's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA5MP_66's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA5C_36's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA5CP's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA5CP_46's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA5CP_46's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA5CP_56's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA5CP_56's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA5CP_60's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA5CP_66's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA5CP_66's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA5CP_74's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA5CP_76's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA5CP_84's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA6C_44's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA6C_90's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA6C_108's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA5O's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA6F_60's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA6A60's lower layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA7A_168's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA1HL's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA1HA's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA1HK's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+Warning: Contact VIA1S's upper layer enclosure does not satisfy legal width requirement. (ZRT-083)
+auto selected default vias for NDR rule ndr_wideW_m6_m7_Sh layer v0:
+  VIA0AX
+auto selected default vias for NDR rule ndr_wideW_m6_m7_Sh layer v1:
+  VIA1A
+auto selected default vias for NDR rule ndr_wideW_m6_m7_Sh layer v2:
+  VIA2A
+  VIA2A_32
+auto selected default vias for NDR rule ndr_wideW_m6_m7_Sh layer v3:
+  VIA3C_32_DA
+  VIA3C_32_DC
+  VIA3C_32
+  VIA3C_32_DB
+  VIA3C_32
+auto selected default vias for NDR rule ndr_wideW_m6_m7_Sh layer v4:
+  VIA4A_32_DA
+  VIA4A_32_DC
+  VIA4A_32
+  VIA4A_32_DB
+  VIA4A
+auto selected default vias for NDR rule ndr_wideW_m6_m7_Sh layer v5:
+  VIA5FA
+  VIA5B
+auto selected default vias for NDR rule ndr_wideW_m6_m7_Sh layer v6:
+  VIA6E_108
+  VIA6A44
+auto selected default vias for NDR rule ndr_wideW_m6_m7_Sh layer v7:
+  VIA7F_168
+  VIA7F
+auto selected default vias for NDR rule ndr_wideW_m6_m7_Sh layer v8:
+  VIA8A
+auto selected default vias for NDR rule ndr_wideW_m6_m7_Sh layer v9:
+  VIA9A
+auto selected default vias for NDR rule ndr_wideW_m6_m7_Sh layer tv1:
+  TV1A
+auto selected default vias for NDR rule ndr_wideW_m6_m7_noSh layer v0:
+  VIA0AX
+auto selected default vias for NDR rule ndr_wideW_m6_m7_noSh layer v1:
+  VIA1A
+auto selected default vias for NDR rule ndr_wideW_m6_m7_noSh layer v2:
+  VIA2A
+  VIA2A_32
+auto selected default vias for NDR rule ndr_wideW_m6_m7_noSh layer v3:
+  VIA3C_32_DA
+  VIA3C_32_DC
+  VIA3C_32
+  VIA3C_32_DB
+  VIA3C_32
+auto selected default vias for NDR rule ndr_wideW_m6_m7_noSh layer v4:
+  VIA4A_32_DA
+  VIA4A_32_DC
+  VIA4A_32
+  VIA4A_32_DB
+  VIA4A
+auto selected default vias for NDR rule ndr_wideW_m6_m7_noSh layer v5:
+  VIA5FA
+  VIA5B
+auto selected default vias for NDR rule ndr_wideW_m6_m7_noSh layer v6:
+  VIA6E_108
+  VIA6A44
+auto selected default vias for NDR rule ndr_wideW_m6_m7_noSh layer v7:
+  VIA7F_168
+  VIA7F
+auto selected default vias for NDR rule ndr_wideW_m6_m7_noSh layer v8:
+  VIA8A
+auto selected default vias for NDR rule ndr_wideW_m6_m7_noSh layer v9:
+  VIA9A
+auto selected default vias for NDR rule ndr_wideW_m6_m7_noSh layer tv1:
+  TV1A
+auto selected default vias for NDR rule ndr_defaultW_3T_Sh layer v0:
+  VIA0AX
+auto selected default vias for NDR rule ndr_defaultW_3T_Sh layer v1:
+  VIA1A
+auto selected default vias for NDR rule ndr_defaultW_3T_Sh layer v2:
+  VIA2A
+  VIA2A_32
+auto selected default vias for NDR rule ndr_defaultW_3T_Sh layer v3:
+  VIA3C_32_DA
+  VIA3C_32_DC
+  VIA3C_32
+  VIA3C_32_DB
+  VIA3C_32
+auto selected default vias for NDR rule ndr_defaultW_3T_Sh layer v4:
+  VIA4A_32_DA
+  VIA4A_32_DC
+  VIA4A_32
+  VIA4A_32_DB
+  VIA4A
+auto selected default vias for NDR rule ndr_defaultW_3T_Sh layer v5:
+  VIA5B_DA
+  VIA5B_DC
+  VIA5B
+  VIA5B_DB
+  VIA5B
+auto selected default vias for NDR rule ndr_defaultW_3T_Sh layer v6:
+  VIA6A44_DA
+  VIA6A44_DC
+  VIA6A44
+  VIA6A44_DB
+  VIA6A44
+auto selected default vias for NDR rule ndr_defaultW_3T_Sh layer v7:
+  VIA7F_DA
+  VIA7F_DC
+  VIA7F
+  VIA7F_DB
+  VIA7F
+auto selected default vias for NDR rule ndr_defaultW_3T_Sh layer v8:
+  VIA8A
+auto selected default vias for NDR rule ndr_defaultW_3T_Sh layer v9:
+  VIA9A
+auto selected default vias for NDR rule ndr_defaultW_3T_Sh layer tv1:
+  TV1A
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh_Lth layer v0:
+  VIA0AX
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh_Lth layer v1:
+  VIA1A
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh_Lth layer v2:
+  VIA2A
+  VIA2A_32
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh_Lth layer v3:
+  VIA3C_32_DA
+  VIA3C_32_DC
+  VIA3C_32
+  VIA3C_32_DB
+  VIA3C_32
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh_Lth layer v4:
+  VIA4A_32_DA
+  VIA4A_32_DC
+  VIA4A_32
+  VIA4A_32_DB
+  VIA4A
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh_Lth layer v5:
+  VIA5B_DA
+  VIA5B_DC
+  VIA5B
+  VIA5B_DB
+  VIA5B
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh_Lth layer v6:
+  VIA6A44_DA
+  VIA6A44_DC
+  VIA6A44
+  VIA6A44_DB
+  VIA6A44
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh_Lth layer v7:
+  VIA7F_DA
+  VIA7F_DC
+  VIA7F
+  VIA7F_DB
+  VIA7F
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh_Lth layer v8:
+  VIA8A
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh_Lth layer v9:
+  VIA9A
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh_Lth layer tv1:
+  TV1A
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh layer v0:
+  VIA0AX
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh layer v1:
+  VIA1A
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh layer v2:
+  VIA2A
+  VIA2A_32
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh layer v3:
+  VIA3C_32_DA
+  VIA3C_32_DC
+  VIA3C_32
+  VIA3C_32_DB
+  VIA3C_32
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh layer v4:
+  VIA4A_32_DA
+  VIA4A_32_DC
+  VIA4A_32
+  VIA4A_32_DB
+  VIA4A
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh layer v5:
+  VIA5B_DA
+  VIA5B_DC
+  VIA5B
+  VIA5B_DB
+  VIA5B
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh layer v6:
+  VIA6A44_DA
+  VIA6A44_DC
+  VIA6A44
+  VIA6A44_DB
+  VIA6A44
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh layer v7:
+  VIA7F_DA
+  VIA7F_DC
+  VIA7F
+  VIA7F_DB
+  VIA7F
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh layer v8:
+  VIA8A
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh layer v9:
+  VIA9A
+auto selected default vias for NDR rule ndr_defaultW_3T_noSh layer tv1:
+  TV1A
+Wire on layer (m6) needs more than one tracks
+Via on layer (v5) needs more than one tracks
+Via on layer (v6) needs more than one tracks
+Warning: Layer m6 pitch 0.080 may be too small: wire/via-down 0.084, wire/via-up 0.084. (ZRT-026)
+Wire on layer (m8) needs more than one tracks
+Via on layer (v7) needs more than one tracks
+Via on layer (v8) needs more than one tracks
+Warning: Layer m8 pitch 0.252 may be too small: wire/via-down 0.266, wire/via-up 0.546. (ZRT-026)
+Via on layer (v9) needs more than one tracks
+Warning: Layer m9 pitch 1.080 may be too small: wire/via-down 1.080, wire/via-up 1.350. (ZRT-026)
+Via on layer (tv1) needs more than one tracks
+Warning: Layer tm1 pitch 16.000 may be too small: wire/via-down 12.175, wire/via-up 26.250. (ZRT-026)
+Warning: Invalid routing layer 'vcn' on path (ZRT-032)
+Warning: Invalid routing layer 'vcn' on path (ZRT-032)
+Warning: Invalid routing layer 'vcn' on path (ZRT-032)
+Warning: Invalid routing layer 'vcn' on path (ZRT-032)
+Warning: Invalid routing layer 'vcn' on path (ZRT-032)
+Warning: Invalid routing layer 'vcn' on path (ZRT-032)
+Warning: Invalid routing layer 'vcn' on path (ZRT-032)
+Warning: Invalid routing layer 'vcn' on path (ZRT-032)
+Warning: Invalid routing layer 'vcn' on path (ZRT-032)
+Warning: Invalid routing layer 'vcn' on path (ZRT-032)
+Note - message 'ZRT-032' limit (10) exceeded.  Remainder will be suppressed.
+Total number of nets = 58995, of which 0 are not extracted
+Total number of open nets = 0, of which 0 are frozen
+soft rule shld_1 is redundant
+soft rule shld_3 is redundant
+[DBIn Done] Elapsed real time: 0:00:33 
+[DBIn Done] Elapsed cpu  time: sys=0:00:00 usr=0:00:08 total=0:00:09
+[DBIn Done] Stage (MB): Used  202  Alloctr  211  Proc  335 
+[DBIn Done] Total (MB): Used  203  Alloctr  212  Proc 1164 
+
+
+Start checking for open nets ... 
+
+Total number of nets = 58995, of which 0 are not extracted
+Total number of open nets = 0, of which 0 are frozen
+
+Check 58995 nets, 0 have Errors
+
+[CHECK OPEN NETS] Elapsed real time: 0:00:00 
+[CHECK OPEN NETS] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[CHECK OPEN NETS] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[CHECK OPEN NETS] Total (MB): Used  198  Alloctr  208  Proc 1164 
+Printing options for 'set_route_zrt_common_options'
+-allow_pg_as_shield                                     :        true                
+-child_process_net_threshold                            :        -1                  
+-concurrent_redundant_via_effort_level                  :        low                 
+-concurrent_redundant_via_mode                          :        off                 
+-connect_floating_shapes                                :        false               
+-connect_tie_off                                        :        true                
+-connect_within_pins_by_layer_name                      :        {}                  
+-default                                                :        false               
+-eco_route_concurrent_redundant_via_effort_level        :        low                 
+-eco_route_concurrent_redundant_via_mode                :        off                 
+-enforce_voltage_areas                                  :        relaxed             
+-extra_nonpreferred_direction_wire_cost_multiplier_by_layer_name:        {}                  
+-extra_preferred_direction_wire_cost_multiplier_by_layer_name:   {}                  
+-extra_via_cost_multiplier_by_layer_name                :        {}                  
+-extra_via_off_grid_cost_multiplier_by_layer_name       :        {}                  
+-rc_driven_setup_effort_level                           :        medium              
+-forbid_new_metal_by_layer_name                         :        {}                  
+-freeze_layer_by_layer_name                             :        {}                  
+-freeze_via_to_frozen_layer_by_layer_name               :        {}                  
+-ignore_var_spacing_to_blockage                         :        false               
+-ignore_var_spacing_to_pg                               :        true                
+-ignore_var_spacing_to_shield                           :        true                
+-mark_clock_nets_minor_change                           :        true                
+-net_max_layer_mode                                     :        hard                
+-net_max_layer_mode_soft_cost                           :        medium              
+-global_max_layer_mode                                  :        hard                
+-net_min_layer_mode                                     :        soft                
+-net_min_layer_mode_soft_cost                           :        medium              
+-global_min_layer_mode                                  :        allow_pin_connection
+-min_edge_offset_for_macro_pin_connection_by_layer_name :        {}                  
+-number_of_vias_over_net_max_layer                      :        1                   
+-number_of_vias_over_global_max_layer                   :        1                   
+-number_of_vias_under_net_min_layer                     :        1                   
+-number_of_vias_under_global_min_layer                  :        1                   
+-pg_shield_distance_threshold                           :        0.000000            
+-plan_group_aware                                       :        off                 
+-post_detail_route_fix_soft_violations                  :        false               
+-post_eco_route_fix_soft_violations                     :        false               
+-post_group_route_fix_soft_violations                   :        false               
+-post_incremental_detail_route_fix_soft_violations      :        false               
+-post_detail_route_redundant_via_insertion              :        medium              
+-read_user_metal_blockage_layer                         :        true                
+-report_local_double_pattern_odd_cycles                 :        false               
+-reroute_clock_shapes                                   :        false               
+-reroute_user_shapes                                    :        false               
+-reshield_modified_nets                                 :        reshield            
+-rotate_default_vias                                    :        false               
+-routing_rule_effort_level                              :        {}                  
+-route_soft_rule_effort_level                           :        medium              
+-route_top_boundary_mode                                :        stay_inside         
+-number_of_secondary_pg_pin_connections                 :        0                   
+-clock_topology                                         :        normal              
+-comb_distance                                          :        2                   
+-shielding_nets                                         :        {}                  
+-soft_rule_weight_to_effort_level_map                   :        {}                  
+-single_connection_to_pins                              :        all_pins            
+-standard_cell_blockage_as_thin                         :        false               
+-tie_off_mode                                           :        all                 
+-track_auto_fill                                        :        true                
+-verbose_level                                          :        1                   
+-via_array_mode                                         :        all                 
+-voltage_area_weight                                    :        {}                  
+-via_on_grid_by_layer_name                              :        {}                  
+-wire_on_grid_by_layer_name                             :        {}                  
+-wide_macro_pin_as_fat_wire                             :        false               
+-separate_tie_off_from_secondary_pg                     :        false               
+
+Printing options for 'set_route_zrt_detail_options'
+-antenna                                                :        true                
+-antenna_fixing_preference                              :        hop_layers          
+-antenna_on_iteration                                   :        1                   
+-antenna_verbose_level                                  :        1                   
+-check_antenna_on_pg                                    :        false               
+-check_patchable_drc_from_fixed_shapes                  :        false               
+-check_pin_min_area_min_length                          :        true                
+-check_port_min_area_min_length                         :        true                
+-continue_after_large_design_rule_value_error           :        false               
+-default_diode_protection                               :        0.000000            
+-default_gate_size                                      :        0.000000            
+-default_port_external_gate_size                        :        0.000000            
+-default_port_external_antenna_area                     :        0.000000            
+-default                                                :        false               
+-detail_route_special_design_rule_fixing_stage          :        late_routing        
+-diagonal_min_width                                     :        true                
+-diode_insertion_mode                                   :        new_and_spare       
+-diode_libcell_names                                    :        {}                  
+-diode_preference                                       :        none                
+-drc_convergence_effort_level                           :        medium              
+-eco_route_use_soft_spacing_for_timing_optimization     :        true                
+-eco_route_special_design_rule_fixing_stage             :        late_routing        
+-elapsed_time_limit                                     :        -1                  
+-force_max_number_iterations                            :        false               
+-generate_extra_off_grid_pin_tracks                     :        false               
+-generate_off_grid_feed_through_tracks                  :        low                 
+-group_route_special_design_rule_fixing_stage           :        late_routing        
+-hop_layers_to_fix_antenna                              :        true                
+-incremental_detail_route_special_design_rule_fixing_stage:      late_routing        
+-ignore_drc                                             :        {{same_net_metal_space false} }
+-insert_diodes_during_routing                           :        false               
+-macro_pin_antenna_mode                                 :        normal              
+-max_antenna_pin_count                                  :        -1                  
+-merge_gates_for_antenna                                :        true                
+-optimize_wire_via_effort_level                         :        medium              
+-optimize_tie_off_effort_level                          :        low                 
+-pin_taper_mode                                         :        default_width       
+-port_antenna_mode                                      :        float               
+-post_process_special_design_rule_fixing_stage          :        late_routing        
+-repair_shorts_over_macros_effort_level                 :        off                 
+-report_ignore_drc                                      :        {}                  
+-reuse_filler_locations_for_diodes                      :        true                
+-save_after_iterations                                  :        {1 }                
+-save_cell_prefix                                       :        fdkex_INIT_RT       
+-skip_antenna_fixing_for_nets                           :        {}                  
+-timing_driven                                          :        true                
+-top_layer_antenna_fix_threshold                        :        -1                  
+-use_default_width_for_min_area_min_len_stub            :        false               
+-use_lower_hierarchy_for_port_diodes                    :        false               
+-use_wide_wire_to_input_pin                             :        false               
+-use_wide_wire_to_macro_pin                             :        false               
+-use_wide_wire_to_output_pin                            :        false               
+-use_wide_wire_to_pad_pin                               :        same_as_macro_pin   
+-use_wide_wire_to_port                                  :        same_as_macro_pin   
+-user_defined_partition                                 :        {}                  
+-var_spacing_to_same_net                                :        false               
+
+
+Begin full DRC check ...
+
+Information: Using 4 threads for routing. (ZRT-444)
+Checked 1/361 Partitions, Violations =  0
+Checked 14/361 Partitions, Violations = 0
+Checked 35/361 Partitions, Violations = 12
+Checked 48/361 Partitions, Violations = 20
+Checked 56/361 Partitions, Violations = 26
+Checked 71/361 Partitions, Violations = 36
+Checked 87/361 Partitions, Violations = 60
+Checked 98/361 Partitions, Violations = 72
+Checked 112/361 Partitions, Violations =        78
+Checked 126/361 Partitions, Violations =        82
+Checked 140/361 Partitions, Violations =        100
+Checked 154/361 Partitions, Violations =        100
+Checked 169/361 Partitions, Violations =        124
+Checked 182/361 Partitions, Violations =        142
+Checked 196/361 Partitions, Violations =        158
+Checked 210/361 Partitions, Violations =        164
+Checked 225/361 Partitions, Violations =        174
+Checked 243/361 Partitions, Violations =        184
+Checked 252/361 Partitions, Violations =        194
+Checked 266/361 Partitions, Violations =        208
+Checked 283/361 Partitions, Violations =        212
+Checked 299/361 Partitions, Violations =        214
+Checked 308/361 Partitions, Violations =        216
+Checked 323/361 Partitions, Violations =        216
+Checked 347/361 Partitions, Violations =        216
+Checked 350/361 Partitions, Violations =        216
+[DRC CHECK] Elapsed real time: 0:00:16 
+[DRC CHECK] Elapsed cpu  time: sys=0:00:00 usr=0:00:47 total=0:00:47
+[DRC CHECK] Stage (MB): Used    1  Alloctr    1  Proc  110 
+[DRC CHECK] Total (MB): Used  228  Alloctr  235  Proc 1277 
+Warning: No antenna rules defined, Skip antenna analysis. (ZRT-309)
+Information: Merged away 8 aligned/redundant DRCs. (ZRT-305)
+
+DRC-SUMMARY:
+        @@@@@@@ TOTAL VIOLATIONS =      214
+        Multiple pin connections : 214
+
+
+
+begin full chip DRC detailed report
+
+EBox: m0-m0 [99855,146608..99925,146636] (din_rxc0[35],NULL) Multiple pin connections
+EBox: m0-m0 [112155,149366..112294,149394] (n18026,NULL) Multiple pin connections
+EBox: m0-m0 [107255,138992..107534,139020] (n13434,NULL) Multiple pin connections
+EBox: m0-m0 [87276,138250..87415,138278] (n17883,NULL) Multiple pin connections
+EBox: m0-m0 [70735,132664..70805,132692] (n3053,NULL) Multiple pin connections
+EBox: m0-m0 [68335,62496..68474,62524] (fifo1/data_mem_1248_,NULL) Multiple pin connections
+EBox: m0-m0 [39466,77602..39605,77630] (fifo1/data_mem_298_,NULL) Multiple pin connections
+EBox: m0-m0 [72395,41748..72604,41776] (fifo1/data_mem_1892_,NULL) Multiple pin connections
+EBox: m0-m0 [102635,245980..102774,246008] (fifo2/n4947,NULL) Multiple pin connections
+EBox: m0-m0 [49665,38500..49735,38528] (fifo1/n1287,NULL) Multiple pin connections
+EBox: m0-m0 [196295,211666..196504,211694] (fifo2/data_mem_3145_,NULL) Multiple pin connections
+EBox: m0-m0 [124405,147084..124544,147112] (fifo2/data_mem_1018_,NULL) Multiple pin connections
+EBox: m0-m0 [171305,151074..171514,151102] (fifo2/data_mem_3486_,NULL) Multiple pin connections
+EBox: m0-m0 [162386,212464..162525,212492] (fifo2/data_mem_2355_,NULL) Multiple pin connections
+EBox: m0-m0 [127415,123088..127554,123116] (fifo2/n3559,NULL) Multiple pin connections
+EBox: m0-m0 [100429,59066..100729,59108] (fifo0/n2643,NULL) Multiple pin connections
+EBox: m1-m1 [90699,72597..90741,72639] (fifo0/n7265,NULL) Multiple pin connections
+EBox: m1-m1 [90699,72708..90741,72760] (fifo0/n7265,NULL) Multiple pin connections
+EBox: m1-m1 [128989,203793..129031,204036] (fifo2/n12566,NULL) Multiple pin connections
+EBox: m1-m1 [128989,204262..129031,204314] (fifo2/n12566,NULL) Multiple pin connections
+EBox: m1-m1 [98609,148407..98651,148449] (n10724,NULL) Multiple pin connections
+EBox: m1-m1 [98609,148570..98651,148622] (n10724,NULL) Multiple pin connections
+EBox: m1-m1 [71169,92547..71211,92589] (n10324,NULL) Multiple pin connections
+EBox: m1-m1 [71169,92658..71211,92710] (n10324,NULL) Multiple pin connections
+EBox: m1-m1 [86779,49334..86821,49386] (fifo0/n5104,NULL) Multiple pin connections
+EBox: m1-m1 [86779,49455..86821,49497] (fifo0/n5104,NULL) Multiple pin connections
+EBox: m1-m1 [95739,51849..95781,51891] (fifo0/n4728,NULL) Multiple pin connections
+EBox: m1-m1 [95739,51960..95781,52012] (fifo0/n4728,NULL) Multiple pin connections
+EBox: m1-m1 [75019,42273..75061,42315] (fifo1/n6104,NULL) Multiple pin connections
+EBox: m1-m1 [75019,42546..75061,42945] (fifo1/n6104,NULL) Multiple pin connections
+EBox: m1-m1 [10829,65294..10871,65346] (fifo1/n5648,NULL) Multiple pin connections
+EBox: m1-m1 [10829,65415..10871,65457] (fifo1/n5648,NULL) Multiple pin connections
+EBox: m1-m1 [56049,33495..56091,33537] (fifo1/n5432,NULL) Multiple pin connections
+EBox: m1-m1 [56049,33658..56091,33710] (fifo1/n5432,NULL) Multiple pin connections
+EBox: m1-m1 [38409,137912..38451,137964] (n9634,NULL) Multiple pin connections
+EBox: m1-m1 [38409,138033..38451,138075] (n9634,NULL) Multiple pin connections
+EBox: m1-m1 [71379,80577..71421,80619] (n7609,NULL) Multiple pin connections
+EBox: m1-m1 [71379,80740..71421,80792] (n7609,NULL) Multiple pin connections
+EBox: m1-m1 [44569,59031..44611,59073] (fifo1/n15703,NULL) Multiple pin connections
+EBox: m1-m1 [44569,59246..44611,59298] (fifo1/n15703,NULL) Multiple pin connections
+EBox: m1-m1 [56119,229526..56161,229578] (n3154,NULL) Multiple pin connections
+EBox: m1-m1 [56119,229803..56161,229845] (n3154,NULL) Multiple pin connections
+EBox: m1-m1 [156989,214641..157031,214683] (fifo2/n13702,NULL) Multiple pin connections
+EBox: m1-m1 [156989,214804..157031,214856] (fifo2/n13702,NULL) Multiple pin connections
+EBox: m1-m1 [83139,147609..83181,147651] (n1237,NULL) Multiple pin connections
+EBox: m1-m1 [83139,147876..83181,147928] (n1237,NULL) Multiple pin connections
+EBox: m1-m1 [98679,155589..98721,155631] (n1241,NULL) Multiple pin connections
+EBox: m1-m1 [98679,155700..98721,155752] (n1241,NULL) Multiple pin connections
+EBox: m1-m1 [58919,137235..58961,137277] (n3259,NULL) Multiple pin connections
+EBox: m1-m1 [58919,137346..58961,137398] (n3259,NULL) Multiple pin connections
+EBox: m1-m1 [102809,213722..102851,213774] (n3325,NULL) Multiple pin connections
+EBox: m1-m1 [102809,213843..102851,213885] (n3325,NULL) Multiple pin connections
+EBox: m1-m1 [99519,146690..99561,146742] (n677,NULL) Multiple pin connections
+EBox: m1-m1 [99519,146811..99561,146853] (n677,NULL) Multiple pin connections
+EBox: m1-m1 [92729,138831..92771,138873] (n687,NULL) Multiple pin connections
+EBox: m1-m1 [92729,139098..92771,139150] (n687,NULL) Multiple pin connections
+EBox: m1-m1 [959,168831..1001,168924] (n3502,NULL) Multiple pin connections
+EBox: m1-m1 [959,169155..1001,169197] (n3502,NULL) Multiple pin connections
+EBox: m1-m1 [99799,146811..99841,146853] (din_rxc0[35],NULL) Multiple pin connections
+EBox: m1-m1 [84959,205863..85001,205905] (n3633,NULL) Multiple pin connections
+EBox: m1-m1 [84959,205974..85001,206026] (n3633,NULL) Multiple pin connections
+EBox: m1-m1 [112119,149205..112161,149247] (n18026,NULL) Multiple pin connections
+EBox: m1-m1 [93009,138831..93051,138873] (din_rxc0[26],NULL) Multiple pin connections
+EBox: m1-m1 [93009,138942..93051,138994] (din_rxc0[26],NULL) Multiple pin connections
+EBox: m1-m1 [151319,136316..151361,136368] (fifo2/n5136,NULL) Multiple pin connections
+EBox: m1-m1 [151319,136437..151361,136479] (fifo2/n5136,NULL) Multiple pin connections
+EBox: m1-m1 [91749,132968..91791,133020] (n17780,NULL) Multiple pin connections
+EBox: m1-m1 [91749,133245..91791,133287] (n17780,NULL) Multiple pin connections
+EBox: m1-m1 [107219,138831..107261,138873] (n13434,NULL) Multiple pin connections
+EBox: m1-m1 [60529,137756..60571,137808] (n17151,NULL) Multiple pin connections
+EBox: m1-m1 [60529,138033..60571,138075] (n17151,NULL) Multiple pin connections
+EBox: m1-m1 [65499,112497..65541,112539] (mask_in[411],NULL) Multiple pin connections
+EBox: m1-m1 [65499,112608..65541,112660] (mask_in[411],NULL) Multiple pin connections
+EBox: m1-m1 [31899,118881..31941,118923] (mask_in[197],NULL) Multiple pin connections
+EBox: m1-m1 [31899,118992..31941,119044] (mask_in[197],NULL) Multiple pin connections
+EBox: m1-m1 [158669,130626..158711,130678] (fifo2/n5277,NULL) Multiple pin connections
+EBox: m1-m1 [158669,130851..158711,130893] (fifo2/n5277,NULL) Multiple pin connections
+EBox: m1-m1 [74179,151074..74221,151317] (n17249,NULL) Multiple pin connections
+EBox: m1-m1 [74319,150801..74361,150843] (n17249,NULL) Multiple pin connections
+EBox: m1-m1 [22799,117285..22841,117327] (mask_in[213],NULL) Multiple pin connections
+EBox: m1-m1 [22799,117396..22841,117448] (mask_in[213],NULL) Multiple pin connections
+EBox: m1-m1 [34489,122871..34531,122913] (mask_in[332],NULL) Multiple pin connections
+EBox: m1-m1 [34489,122982..34531,123034] (mask_in[332],NULL) Multiple pin connections
+EBox: m1-m1 [130319,243369..130361,243411] (fifo2/n5348,NULL) Multiple pin connections
+EBox: m1-m1 [130319,243532..130361,243584] (fifo2/n5348,NULL) Multiple pin connections
+EBox: m1-m1 [109319,135414..109361,135466] (din_rxc0[57],NULL) Multiple pin connections
+EBox: m1-m1 [109319,135639..109361,135681] (din_rxc0[57],NULL) Multiple pin connections
+EBox: m1-m1 [81109,153669..81151,153762] (din_rxc0[5],NULL) Multiple pin connections
+EBox: m1-m1 [81109,153993..81151,154035] (din_rxc0[5],NULL) Multiple pin connections
+EBox: m1-m1 [87409,138033..87451,138075] (n17883,NULL) Multiple pin connections
+EBox: m1-m1 [90279,153993..90321,154203] (n19588,NULL) Multiple pin connections
+EBox: m1-m1 [90559,153993..90601,154035] (n19588,NULL) Multiple pin connections
+EBox: m1-m1 [68019,155589..68061,155631] (mask_alu[202],NULL) Multiple pin connections
+EBox: m1-m1 [68019,155908..68061,155960] (mask_alu[202],NULL) Multiple pin connections
+EBox: m1-m1 [93919,45465..93961,45507] (fifo0/data_mem_30__43_,NULL) Multiple pin connections
+EBox: m1-m1 [93919,45680..93961,45732] (fifo0/data_mem_30__43_,NULL) Multiple pin connections
+EBox: m1-m1 [115969,244167..116011,244209] (fifo2/n5778,NULL) Multiple pin connections
+EBox: m1-m1 [115969,244278..116011,244330] (fifo2/n5778,NULL) Multiple pin connections
+EBox: m1-m1 [146769,94143..146811,94185] (fifo0/data_mem_12__63_,NULL) Multiple pin connections
+EBox: m1-m1 [146769,94617..146811,94815] (fifo0/data_mem_12__63_,NULL) Multiple pin connections
+EBox: m1-m1 [109739,98931..109781,98973] (fifo0/data_mem_4__12_,NULL) Multiple pin connections
+EBox: m1-m1 [109739,99042..109781,99094] (fifo0/data_mem_4__12_,NULL) Multiple pin connections
+EBox: m1-m1 [115899,102123..115941,102165] (fifo0/data_mem_19__9_,NULL) Multiple pin connections
+EBox: m1-m1 [115899,102597..115941,102743] (fifo0/data_mem_19__9_,NULL) Multiple pin connections
+EBox: m1-m1 [70819,132447..70861,132489] (n3053,NULL) Multiple pin connections
+EBox: m1-m1 [158179,186711..158221,186753] (fifo2/n5843,NULL) Multiple pin connections
+EBox: m1-m1 [158179,187180..158221,187232] (fifo2/n5843,NULL) Multiple pin connections
+EBox: m1-m1 [114429,65415..114471,65457] (fifo0/n10600,NULL) Multiple pin connections
+EBox: m1-m1 [114429,65578..114471,65630] (fifo0/n10600,NULL) Multiple pin connections
+EBox: m1-m1 [174699,140150..174741,140202] (fifo2/n4387,NULL) Multiple pin connections
+EBox: m1-m1 [174699,140427..174741,140469] (fifo2/n4387,NULL) Multiple pin connections
+EBox: m1-m1 [158669,189903..158711,189945] (fifo2/n5877,NULL) Multiple pin connections
+EBox: m1-m1 [158669,190170..158711,190222] (fifo2/n5877,NULL) Multiple pin connections
+EBox: m1-m1 [55279,65415..55321,65457] (fifo1/data_mem_510_,NULL) Multiple pin connections
+EBox: m1-m1 [55279,65682..55321,65734] (fifo1/data_mem_510_,NULL) Multiple pin connections
+EBox: m1-m1 [52129,17535..52171,17577] (fifo1/data_mem_2197_,NULL) Multiple pin connections
+EBox: m1-m1 [52129,18009..52171,18103] (fifo1/data_mem_2197_,NULL) Multiple pin connections
+EBox: m1-m1 [69279,29505..69321,29547] (fifo1/data_mem_1478_,NULL) Multiple pin connections
+EBox: m1-m1 [69279,29616..69321,29668] (fifo1/data_mem_1478_,NULL) Multiple pin connections
+EBox: m1-m1 [68299,62223..68341,62265] (fifo1/data_mem_1248_,NULL) Multiple pin connections
+EBox: m1-m1 [52479,23919..52521,23961] (fifo1/data_mem_1698_,NULL) Multiple pin connections
+EBox: m1-m1 [52479,24030..52521,24082] (fifo1/data_mem_1698_,NULL) Multiple pin connections
+EBox: m1-m1 [39599,77385..39641,77427] (fifo1/data_mem_298_,NULL) Multiple pin connections
+EBox: m1-m1 [35189,12747..35231,12789] (fifo1/data_mem_1424_,NULL) Multiple pin connections
+EBox: m1-m1 [35189,12910..35231,12962] (fifo1/data_mem_1424_,NULL) Multiple pin connections
+EBox: m1-m1 [44779,59031..44821,59073] (fifo1/n1859,NULL) Multiple pin connections
+EBox: m1-m1 [44779,59142..44821,59194] (fifo1/n1859,NULL) Multiple pin connections
+EBox: m1-m1 [72359,41475..72401,41517] (fifo1/data_mem_1892_,NULL) Multiple pin connections
+EBox: m1-m1 [57029,70203..57071,70245] (fifo1/data_mem_2163_,NULL) Multiple pin connections
+EBox: m1-m1 [57029,70314..57071,70366] (fifo1/data_mem_2163_,NULL) Multiple pin connections
+EBox: m1-m1 [39389,15141..39431,15183] (fifo1/data_mem_2125_,NULL) Multiple pin connections
+EBox: m1-m1 [39389,15414..39431,15507] (fifo1/data_mem_2125_,NULL) Multiple pin connections
+EBox: m1-m1 [20349,35889..20391,35931] (fifo1/data_mem_1508_,NULL) Multiple pin connections
+EBox: m1-m1 [20349,36000..20391,36052] (fifo1/data_mem_1508_,NULL) Multiple pin connections
+EBox: m1-m1 [11809,35091..11851,35133] (fifo1/data_mem_2228_,NULL) Multiple pin connections
+EBox: m1-m1 [11809,35565..11851,35966] (fifo1/data_mem_2228_,NULL) Multiple pin connections
+EBox: m1-m1 [70959,19929..71001,19971] (fifo1/n1776,NULL) Multiple pin connections
+EBox: m1-m1 [70959,20144..71001,20196] (fifo1/n1776,NULL) Multiple pin connections
+EBox: m1-m1 [22029,69405..22071,69447] (fifo1/n1862,NULL) Multiple pin connections
+EBox: m1-m1 [22029,69568..22071,69620] (fifo1/n1862,NULL) Multiple pin connections
+EBox: m1-m1 [16779,42273..16821,42315] (fifo1/n1801,NULL) Multiple pin connections
+EBox: m1-m1 [16779,42546..16821,42893] (fifo1/n1801,NULL) Multiple pin connections
+EBox: m1-m1 [189889,243890..189931,243942] (fifo2/n5946,NULL) Multiple pin connections
+EBox: m1-m1 [189889,244167..189931,244209] (fifo2/n5946,NULL) Multiple pin connections
+EBox: m1-m1 [158739,214317..158781,214410] (fifo2/n4711,NULL) Multiple pin connections
+EBox: m1-m1 [158739,214641..158781,214683] (fifo2/n4711,NULL) Multiple pin connections
+EBox: m1-m1 [102599,245763..102641,245805] (fifo2/n4947,NULL) Multiple pin connections
+EBox: m1-m1 [49609,38283..49651,38325] (fifo1/n1287,NULL) Multiple pin connections
+EBox: m1-m1 [71169,19929..71211,19971] (fifo1/n1287,NULL) Multiple pin connections
+EBox: m1-m1 [71169,20144..71211,20196] (fifo1/n1287,NULL) Multiple pin connections
+EBox: m1-m1 [143619,126063..143661,126105] (fifo2/n5070,NULL) Multiple pin connections
+EBox: m1-m1 [143619,126226..143661,126278] (fifo2/n5070,NULL) Multiple pin connections
+EBox: m1-m1 [150829,206661..150871,206703] (fifo2/data_mem_2042_,NULL) Multiple pin connections
+EBox: m1-m1 [150829,206772..150871,206824] (fifo2/data_mem_2042_,NULL) Multiple pin connections
+EBox: m1-m1 [116669,198681..116711,198723] (fifo2/data_mem_4285_,NULL) Multiple pin connections
+EBox: m1-m1 [116669,199000..116711,199052] (fifo2/data_mem_4285_,NULL) Multiple pin connections
+EBox: m1-m1 [116599,212247..116641,212289] (fifo2/data_mem_2085_,NULL) Multiple pin connections
+EBox: m1-m1 [116599,212410..116641,212462] (fifo2/data_mem_2085_,NULL) Multiple pin connections
+EBox: m1-m1 [144459,146013..144501,146055] (fifo2/data_mem_772_,NULL) Multiple pin connections
+EBox: m1-m1 [144459,146176..144501,146228] (fifo2/data_mem_772_,NULL) Multiple pin connections
+EBox: m1-m1 [22589,36462..22631,36514] (fifo1/n2473,NULL) Multiple pin connections
+EBox: m1-m1 [22589,36687..22631,36729] (fifo1/n2473,NULL) Multiple pin connections
+EBox: m1-m1 [196259,211449..196301,211491] (fifo2/data_mem_3145_,NULL) Multiple pin connections
+EBox: m1-m1 [76279,48484..76321,48536] (fifo1/n2479,NULL) Multiple pin connections
+EBox: m1-m1 [76279,48657..76321,48699] (fifo1/n2479,NULL) Multiple pin connections
+EBox: m1-m1 [190449,169155..190491,169197] (fifo2/data_mem_1877_,NULL) Multiple pin connections
+EBox: m1-m1 [190449,169266..190491,169318] (fifo2/data_mem_1877_,NULL) Multiple pin connections
+EBox: m1-m1 [163569,240975..163611,241017] (fifo2/data_mem_2884_,NULL) Multiple pin connections
+EBox: m1-m1 [163569,241086..163611,241138] (fifo2/data_mem_2884_,NULL) Multiple pin connections
+EBox: m1-m1 [125209,217035..125251,217077] (fifo2/data_mem_3727_,NULL) Multiple pin connections
+EBox: m1-m1 [125209,217509..125251,217655] (fifo2/data_mem_3727_,NULL) Multiple pin connections
+EBox: m1-m1 [25669,37260..25711,37312] (fifo1/n2309,NULL) Multiple pin connections
+EBox: m1-m1 [25669,37485..25711,37527] (fifo1/n2309,NULL) Multiple pin connections
+EBox: m1-m1 [156709,161175..156751,161217] (fifo2/n3402,NULL) Multiple pin connections
+EBox: m1-m1 [156709,161390..156751,161442] (fifo2/n3402,NULL) Multiple pin connections
+EBox: m1-m1 [154749,188984..154791,189036] (fifo2/addr_wr[1],NULL) Multiple pin connections
+EBox: m1-m1 [154749,189105..154791,189147] (fifo2/addr_wr[1],NULL) Multiple pin connections
+EBox: m1-m1 [154959,189105..155001,189147] (fifo2/addr_wr[0],NULL) Multiple pin connections
+EBox: m1-m1 [154959,189372..155001,189424] (fifo2/addr_wr[0],NULL) Multiple pin connections
+EBox: m1-m1 [166159,185913..166201,185955] (fifo2/data_mem_39_,NULL) Multiple pin connections
+EBox: m1-m1 [166159,186024..166201,186076] (fifo2/data_mem_39_,NULL) Multiple pin connections
+EBox: m1-m1 [127099,193893..127141,193935] (fifo2/data_mem_1542_,NULL) Multiple pin connections
+EBox: m1-m1 [127099,194004..127141,194056] (fifo2/data_mem_1542_,NULL) Multiple pin connections
+EBox: m1-m1 [14189,46038..14231,46090] (fifo1/n2506,NULL) Multiple pin connections
+EBox: m1-m1 [14189,46263..14231,46305] (fifo1/n2506,NULL) Multiple pin connections
+EBox: m1-m1 [107219,59031..107261,59073] (fifo0/n2215,NULL) Multiple pin connections
+EBox: m1-m1 [107219,59142..107261,59194] (fifo0/n2215,NULL) Multiple pin connections
+EBox: m1-m1 [124369,146811..124411,146853] (fifo2/data_mem_1018_,NULL) Multiple pin connections
+EBox: m1-m1 [21259,58858..21301,58910] (n11087,NULL) Multiple pin connections
+EBox: m1-m1 [21259,59031..21301,59073] (n11087,NULL) Multiple pin connections
+EBox: m1-m1 [171269,150801..171311,150843] (fifo2/data_mem_3486_,NULL) Multiple pin connections
+EBox: m1-m1 [143619,221025..143661,221067] (fifo2/data_mem_684_,NULL) Multiple pin connections
+EBox: m1-m1 [143619,221136..143661,221188] (fifo2/data_mem_684_,NULL) Multiple pin connections
+EBox: m1-m1 [144389,222621..144431,222663] (fifo2/data_mem_819_,NULL) Multiple pin connections
+EBox: m1-m1 [144389,223095..144431,223345] (fifo2/data_mem_819_,NULL) Multiple pin connections
+EBox: m1-m1 [162519,212247..162561,212289] (fifo2/data_mem_2355_,NULL) Multiple pin connections
+EBox: m1-m1 [128009,82173..128051,82215] (fifo0/n2443,NULL) Multiple pin connections
+EBox: m1-m1 [128009,82388..128051,82440] (fifo0/n2443,NULL) Multiple pin connections
+EBox: m1-m1 [157409,200277..157451,200319] (fifo2/data_mem_445_,NULL) Multiple pin connections
+EBox: m1-m1 [157409,200388..157451,200440] (fifo2/data_mem_445_,NULL) Multiple pin connections
+EBox: m1-m1 [127379,122871..127421,122913] (fifo2/n3559,NULL) Multiple pin connections
+EBox: m1-m1 [156499,161175..156541,161217] (fifo2/n3414,NULL) Multiple pin connections
+EBox: m1-m1 [156499,161448..156541,162593] (fifo2/n3414,NULL) Multiple pin connections
+EBox: m1-m1 [100919,59031..100961,59073] (fifo0/n2641,NULL) Multiple pin connections
+EBox: m1-m1 [100919,59246..100961,59298] (fifo0/n2641,NULL) Multiple pin connections
+EBox: m1-m1 [100709,59031..100751,59073] (fifo0/n2643,NULL) Multiple pin connections
+EBox: m1-m1 [38339,96260..38381,96312] (n9917,NULL) Multiple pin connections
+EBox: m1-m1 [38339,96537..38381,96579] (n9917,NULL) Multiple pin connections
+EBox: m1-m1 [130669,23798..130711,23850] (fifo0/n2826,NULL) Multiple pin connections
+EBox: m1-m1 [130669,23919..130711,23961] (fifo0/n2826,NULL) Multiple pin connections
+EBox: m1-m1 [50589,209853..50631,209895] (mask_alu[764],NULL) Multiple pin connections
+EBox: m1-m1 [50589,209964..50631,210016] (mask_alu[764],NULL) Multiple pin connections
+EBox: m1-m1 [15169,192297..15211,192339] (check_ecc_alu0/n1907,NULL) Multiple pin connections
+EBox: m1-m1 [15169,192564..15211,192616] (check_ecc_alu0/n1907,NULL) Multiple pin connections
+
+end full chip DRC detailed report
+
+
+Total Wire Length =                    563973 micron
+Total Number of Contacts =             518849
+Total Number of Wires =                398783
+Total Number of PtConns =              7335
+Total Number of Routed Wires =       398783
+Total Routed Wire Length =           563612 micron
+Total Number of Routed Contacts =       518849
+        Layer          m0 :       4959 micron
+        Layer          m1 :      18310 micron
+        Layer          m2 :     136249 micron
+        Layer          m3 :     158384 micron
+        Layer          m4 :      89769 micron
+        Layer          m5 :      37050 micron
+        Layer          m6 :      49996 micron
+        Layer          m7 :      56733 micron
+        Layer          m8 :      12522 micron
+        Layer          m9 :          0 micron
+        Layer         tm1 :          0 micron
+        Layer          c4 :          0 micron
+        Via         VIA7F :        191
+        Via      VIA7F_DA :        229
+        Via      VIA7F_DB :          1
+        Via      VIA7F_DC :       1692
+        Via       VIA6A44 :        307
+        Via    VIA6A44_DA :        123
+        Via    VIA6A44_DB :        322
+        Via    VIA6A44_DC :      26321
+        Via         VIA5B :          1
+        Via      VIA5B_DA :        214
+        Via      VIA5B_DB :          5
+        Via      VIA5B_DC :      23781
+        Via   VIA5B_44_DA :          1
+        Via   VIA5B_44_DC :        106
+        Via      VIA4A_32 :          3
+        Via   VIA4A_32_DA :        152
+        Via   VIA4A_32_DB :         12
+        Via   VIA4A_32_DC :      29519
+        Via      VIA4C_DC :        490
+        Via         VIA3S :          1
+        Via         VIA3O :          1
+        Via      VIA3C_32 :          2
+        Via      VIA3C_DB :          1
+        Via      VIA3C_DC :        914
+        Via   VIA3C_32_DC :      52696
+        Via         VIA2A :          3
+        Via         VIA2O :         51
+        Via      VIA2A_DB :       1632
+        Via      VIA2A_DC :     158078
+        Via      VIA2C_DA :          1
+        Via      VIA2C_DB :         98
+        Via      VIA2C_DC :       3604
+        Via         VIA1A :         73
+        Via         VIA1F :         61
+        Via      VIA1A_DA :       6400
+        Via      VIA1A_DB :       1430
+        Via      VIA1A_DC :     186503
+        Via        VIA0AX :      17251
+        Via        VIA0CX :       1015
+        Via         VIA0A :       5545
+        Via         VIA0B :         19
+
+ 
+Redundant via conversion report:
+--------------------------------
+
+  Total optimized via conversion rate = 95.27% (494325 / 518849 vias)
+ 
+    Layer v0         =  0.00% (0      / 23830   vias)
+        Un-optimized = 100.00% (23830   vias)
+    Layer v1         = 99.93% (194333 / 194467  vias)
+        Weight 30    = 95.90% (186503  vias)
+        Weight 10    =  4.03% (7830    vias)
+        Un-optimized =  0.07% (134     vias)
+    Layer v2         = 99.97% (163413 / 163467  vias)
+        Weight 30    = 98.91% (161682  vias)
+        Weight 10    =  1.06% (1731    vias)
+        Un-optimized =  0.03% (54      vias)
+    Layer v3         = 99.99% (53611  / 53615   vias)
+        Weight 30    = 99.99% (53610   vias)
+        Weight 10    =  0.00% (1       vias)
+        Un-optimized =  0.01% (4       vias)
+    Layer v4         = 99.99% (30173  / 30176   vias)
+        Weight 30    = 99.45% (30009   vias)
+        Weight 10    =  0.54% (164     vias)
+        Un-optimized =  0.01% (3       vias)
+    Layer v5         = 100.00% (24107  / 24108   vias)
+        Weight 30    = 99.08% (23887   vias)
+        Weight 10    =  0.91% (220     vias)
+        Un-optimized =  0.00% (1       vias)
+    Layer v6         = 98.87% (26766  / 27073   vias)
+        Weight 30    = 97.22% (26321   vias)
+        Weight 10    =  1.64% (445     vias)
+        Un-optimized =  1.13% (307     vias)
+    Layer v7         = 90.96% (1922   / 2113    vias)
+        Weight 30    = 80.08% (1692    vias)
+        Weight 10    = 10.88% (230     vias)
+        Un-optimized =  9.04% (191     vias)
+ 
+  Total double via conversion rate    =  0.00% (0 / 518849 vias)
+ 
+    Layer v0         =  0.00% (0      / 23830   vias)
+    Layer v1         =  0.00% (0      / 194467  vias)
+    Layer v2         =  0.00% (0      / 163467  vias)
+    Layer v3         =  0.00% (0      / 53615   vias)
+    Layer v4         =  0.00% (0      / 30176   vias)
+    Layer v5         =  0.00% (0      / 24108   vias)
+    Layer v6         =  0.00% (0      / 27073   vias)
+    Layer v7         =  0.00% (0      / 2113    vias)
+ 
+  The optimized via conversion rate based on total routed via count = 95.27% (494325 / 518849 vias)
+ 
+    Layer v0         =  0.00% (0      / 23830   vias)
+        Un-optimized = 100.00% (23830   vias)
+    Layer v1         = 99.93% (194333 / 194467  vias)
+        Weight 30    = 95.90% (186503  vias)
+        Weight 10    =  4.03% (7830    vias)
+        Un-optimized =  0.07% (134     vias)
+    Layer v2         = 99.97% (163413 / 163467  vias)
+        Weight 30    = 98.91% (161682  vias)
+        Weight 10    =  1.06% (1731    vias)
+        Un-optimized =  0.03% (54      vias)
+    Layer v3         = 99.99% (53611  / 53615   vias)
+        Weight 30    = 99.99% (53610   vias)
+        Weight 10    =  0.00% (1       vias)
+        Un-optimized =  0.01% (4       vias)
+    Layer v4         = 99.99% (30173  / 30176   vias)
+        Weight 30    = 99.45% (30009   vias)
+        Weight 10    =  0.54% (164     vias)
+        Un-optimized =  0.01% (3       vias)
+    Layer v5         = 100.00% (24107  / 24108   vias)
+        Weight 30    = 99.08% (23887   vias)
+        Weight 10    =  0.91% (220     vias)
+        Un-optimized =  0.00% (1       vias)
+    Layer v6         = 98.87% (26766  / 27073   vias)
+        Weight 30    = 97.22% (26321   vias)
+        Weight 10    =  1.64% (445     vias)
+        Un-optimized =  1.13% (307     vias)
+    Layer v7         = 90.96% (1922   / 2113    vias)
+        Weight 30    = 80.08% (1692    vias)
+        Weight 10    = 10.88% (230     vias)
+        Un-optimized =  9.04% (191     vias)
+ 
+
+
+Verify Summary:
+
+Total number of nets = 58995, of which 0 are not extracted
+Total number of open nets = 0, of which 0 are frozen
+Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                 0 ports without pins of 0 cells connected to 0 nets
+                                 0 ports of 0 cover cells connected to 0 non-pg nets
+Total number of DRCs = 214
+Total number of antenna violations = no antenna rules defined
+Total number of voltage-area violations = no voltage-areas defined
+Total number of tie to rail violations = not checked
+Total number of tie to rail directly violations = not checked
+
+

@@ -10,10 +10,10 @@ class PVTMetric:
         stage = ""
         syn = re.search(r'.*syn.*', file, re.I)
         apr = re.search(r'.*apr.*', file, re.I)
-        pv_max = re.search(r'.*pv_runs.*max.*', file, re.I)
-        pv_min = re.search(r'.*pv_runs.*min.*', file, re.I)
-        pv_noise = re.search(r'.*pv_runs.*noise.*', file, re.I)
-        pv_power = re.search(r'.*pv_runs.*power.*', file, re.I)
+        pv_max = re.search(r'.*pv.*max.*', file, re.I)
+        pv_min = re.search(r'.*pv.*min.*', file, re.I)
+        pv_noise = re.search(r'.*pv.*noise.*', file, re.I)
+        pv_power = re.search(r'.*pv.*power.*', file, re.I)
         if syn:
             stage = 'syn'
         if apr:
@@ -31,6 +31,7 @@ class PVTMetric:
     def searchfile(file):
         import re
         from Configurations import Configurations
+        from operator import itemgetter
         base_path = Configurations().parser_final()
         stage = PVTMetric.metric_naming(file)
         # Open the file with read only permit
@@ -40,7 +41,8 @@ class PVTMetric:
         f.close()
         DataItems = []
         foundValue = []
-        theValue = ""
+        value_sum = ""
+        value = 0
         pvtdata = PVTMetricData()
         for line in lines:
             found_db_file = re.search(r'(Loading[\s]*db[\s]*file).*_([rx\d]+_[prt][sft]+_[\d\.]+v_[-]*[\d]+c_[\w]+)', line, re.I)
@@ -49,8 +51,10 @@ class PVTMetric:
                 if value not in foundValue:
                     foundValue.append(value)
         for value in foundValue:
-            theValue += (value+" ")
+            value_sum += (value+" ")
         if value:
-            pvtdata.foundDBfile = (stage + "_pvt"), theValue
+            pvtdata.foundDBfile = (stage + "_pvt"), value_sum
             DataItems.append(pvtdata.foundDBfile)
-        return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]
+
+        data_items = sorted(DataItems, key=itemgetter(0))
+        return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]

@@ -1,0 +1,19 @@
+
+
+                         StarRC (TM)
+             Copyright (c) 1999-2014 Synopsys, Inc.
+                      All Rights Reserved
+
+
+ExecName: /p/foundry/eda/em64t_SLES11/starrcxt/J-2014.06-SP3/suse64_starrc/bin/StarXtract
+Version: J-2014.06-SP3
+Built on: Oct 15 2014 13:38:17
+Start Time: Tue Mar 31 10:03:44 2015
+
+Host ............ chlr16420
+
+  
+Reconnect     Elp=00:00:38 Cpu=00:00:36 Usr=35.9   Sys=0.2    Mem=437.4 
+WriteDB       Elp=00:00:08 Cpu=00:00:07 Usr=6.8    Sys=0.4    Mem=1047.8
+  
+Done          Elp=00:00:46 Cpu=00:00:43 Usr=42.7   Sys=0.6    Mem=1047.8

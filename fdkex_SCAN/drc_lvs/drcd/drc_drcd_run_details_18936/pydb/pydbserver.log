@@ -1,0 +1,112 @@
+PYDB_Server(R) , SUSE.64 Release J-2014.06.SP2.HF1.4016 2014/09/22
+
+  (C) Copyright 2007-2014.
+  Synopsys, Inc.  All rights reserved.
+
+Listening for connections on port 8272
+PYDB_Server Started on host chlr16420, Tue 03/31/2015 10:34:15
+Client chlr16420(20303) connected (1 total client)
+Verified current licenses.
+Client chlr16420(39494) connected (2 total clients)
+Client chlr16420(39488) connected (3 total clients)
+Client chlr16420(39494) disconnected (2 clients remain)
+Client chlr16420(39494) connected (3 total clients)
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:1495:internal2
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:1495:internal2
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.01 Mem=9.804 MySQL=33.446 Unpooled=0.019
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:1868:not
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:1868:not
+  Error Insertion Time=0:00:00  User=0.02 Sys=0.01 Mem=10.178 MySQL=33.556 Unpooled=0.025
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:1890:not
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:1890:not
+  Error Insertion Time=0:00:00  User=0.02 Sys=0.00 Mem=10.210 MySQL=33.593 Unpooled=0.025
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:2095:not
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:2095:not
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=9.913 MySQL=32.694 Unpooled=0.025
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:2095:not
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:2095:not
+  Error Insertion Time=0:00:00  User=0.02 Sys=0.00 Mem=10.241 MySQL=32.694 Unpooled=0.029
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:1776:not
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:1776:not
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=10.061 MySQL=32.694 Unpooled=0.029
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:2933:not
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:2933:not
+  Error Insertion Time=0:00:00  User=0.01 Sys=0.00 Mem=10.022 MySQL=32.696 Unpooled=0.029
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:2095:not
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:2095:not
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=9.944 MySQL=32.695 Unpooled=0.029
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:1890:not
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:1890:not
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=9.991 MySQL=32.695 Unpooled=0.029
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:1776:not
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:1776:not
+  Error Insertion Time=0:00:00  User=0.02 Sys=0.01 Mem=10.241 MySQL=32.695 Unpooled=0.029
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:1776:not
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:1776:not
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=9.913 MySQL=32.640 Unpooled=0.028
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+  Error Insertion Time=0:00:00  User=0.01 Sys=0.01 Mem=10.194 MySQL=33.630 Unpooled=0.033
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+  Error Insertion Time=0:00:00  User=0.01 Sys=0.00 Mem=10.155 MySQL=32.741 Unpooled=0.033
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=10.186 MySQL=32.741 Unpooled=0.033
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+  Error Insertion Time=0:00:00  User=0.01 Sys=0.00 Mem=10.217 MySQL=32.741 Unpooled=0.033
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+  Error Insertion Time=0:00:00  User=0.01 Sys=0.00 Mem=10.217 MySQL=32.741 Unpooled=0.033
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+  Error Insertion Time=0:00:00  User=0.01 Sys=0.00 Mem=10.217 MySQL=32.741 Unpooled=0.033
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=10.202 MySQL=32.741 Unpooled=0.033
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+  Error Insertion Time=0:00:00  User=0.01 Sys=0.00 Mem=10.209 MySQL=32.741 Unpooled=0.033
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+  Error Insertion Time=0:00:00  User=0.01 Sys=0.00 Mem=10.209 MySQL=32.741 Unpooled=0.033
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+  Error Insertion Time=0:00:00  User=0.01 Sys=0.00 Mem=10.209 MySQL=32.741 Unpooled=0.033
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+  Error Insertion Time=0:00:00  User=0.01 Sys=0.00 Mem=10.209 MySQL=32.741 Unpooled=0.033
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+  Error Insertion Time=0:00:00  User=0.01 Sys=0.01 Mem=10.209 MySQL=32.741 Unpooled=0.033
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=10.170 MySQL=32.741 Unpooled=0.033
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+  Error Insertion Time=0:00:00  User=0.01 Sys=0.00 Mem=10.170 MySQL=32.741 Unpooled=0.033
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+  Error Insertion Time=0:00:00  User=0.01 Sys=0.00 Mem=10.170 MySQL=32.741 Unpooled=0.033
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=10.170 MySQL=32.741 Unpooled=0.033
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=10.069 MySQL=32.741 Unpooled=0.033
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_implant_functions.rs:48:external1
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=10.069 MySQL=32.741 Unpooled=0.033
+Begin error insertion: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:3080:not
+Error insertion complete: /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_functions.rs:3080:not
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=10.108 MySQL=32.732 Unpooled=0.033
+Client chlr16420(39494) disconnected (2 clients remain)
+Client chlr16420(39488) disconnected (1 client remains)
+ Total error insertion Time=0:02:32  User=0.21 Sys=0.06 Mem=10.287 MySQL=33.630 Unpooled=0.033
+  Total Commands: 30
+  Total Errors: 53692
+  Avg Time/Cmd: Wall=0 User=0.01 Sys=0.00 Mem=10.129 MySQL Mem=0.031
+Shutdown requested by client chlr16420(20303)
+0 clients remain connected
+Overall server Time=0:30:46  User=0.55 Sys=0.10 Mem=10.318 MySQL=34.145 Unpooled=0.033

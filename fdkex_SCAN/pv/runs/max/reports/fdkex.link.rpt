@@ -1,0 +1,38 @@
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/nn/d04_nn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb'
+Warning: New technology license is required to read the frequency-based max_capacitance constraint tables from the library. PrimeTime will ignore these library tables. (PTE-117)
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/ln/d04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb'
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/wn/d04_wn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb'
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/yn/d04_yn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb'
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/lib/nn/d04_nn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm.ldb'
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/lib/ln/d04_ln_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm.ldb'
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/lib/wn/d04_wn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm.ldb'
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/lib/yn/d04_yn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm.ldb'
+Linking design fdkex...
+
+Designs used to link fdkex:
+Information: Design: check_ecc_alu_width_data128_width_sec8_width_ecc9_width_data_ecc137... (LNK-044)
+Information: Design: fifo_width_data137... (LNK-044)
+Information: Design: fifo_width_data72_0... (LNK-044)
+Information: Design: fifo_width_data72_1... (LNK-044)
+
+
+Libraries used to link fdkex:
+  d04_ln_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm, 
+  d04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst, 
+  d04_nn_p1273_3x1r6u1_psss_0.75v_-10c_ccst, 
+  d04_wn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm, 
+  d04_wn_p1273_3x1r6u1_psss_0.75v_-10c_ccst, 
+  d04_yn_p1273_3x1r6u1_psss_0.75v_-10c_ccst
+
+Information: 1170 (83.87%) library cells are unused in library d04_nn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.....
+Information: 1284 (92.04%) library cells are unused in library d04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst.....
+Information: 1272 (91.18%) library cells are unused in library d04_wn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.....
+Information: 1047 (75.05%) library cells are unused in library d04_yn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.....
+Information: 53 (100.00%) library cells are unused in library d04_nn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm.....
+Information: 35 (97.22%) library cells are unused in library d04_ln_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm.....
+Information: 35 (97.22%) library cells are unused in library d04_wn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm.....
+Information: 36 (100.00%) library cells are unused in library d04_yn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm.....
+Information: total 4932 library cells are unused.
+Information: Net *Logic0* has been identified as a large constant net. (LNK-040)
+Design 'fdkex' was successfully linked.
+1

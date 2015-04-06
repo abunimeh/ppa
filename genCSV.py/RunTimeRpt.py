@@ -7,10 +7,10 @@ class RunTimeRpt:
     def metric_naming(file):
         import re
         stage = ""
-        pv_max = re.search(r'.*pv_runs.*max.*', file, re.I)
-        pv_min = re.search(r'.*pv_runs.*min.*', file, re.I)
-        pv_power = re.search(r'.*pv_runs.*power.*', file, re.I)
-        pv_noise = re.search(r'.*pv_runs.*noise.*', file, re.I)
+        pv_max = re.search(r'.*pv.*max.*', file, re.I)
+        pv_min = re.search(r'.*pv.*min.*', file, re.I)
+        pv_power = re.search(r'.*pv.*power.*', file, re.I)
+        pv_noise = re.search(r'.*pv.*noise.*', file, re.I)
         if pv_max:
             stage = 'pv max tttt'
         if pv_min:
@@ -29,6 +29,7 @@ class RunTimeRpt:
     def searchfile(file):
         import re
         from Configurations import Configurations
+        from operator import itemgetter
         base_path = Configurations().parser_final()
         stage = RunTimeRpt.metric_naming(file)
         # Open the file with read only permit
@@ -46,4 +47,5 @@ class RunTimeRpt:
                 rptData.foundRunTime = RunTimeRpt.replaceSpace(stage + "run time"), foundRunTime.group(2)
                 DataItems.append(rptData.foundRunTime)
 
-        return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]
+        data_items = sorted(DataItems, key=itemgetter(0))
+        return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]

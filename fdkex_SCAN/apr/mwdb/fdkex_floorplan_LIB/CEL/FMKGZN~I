@@ -1,0 +1,5 @@
+set_object_boundary -boundary {  { 0.0000 303.0400 } { 30.8000 303.0400 } { 30.8000 124.2880 } { 0.0000 124.2880 } } [get_plan_groups { check_ecc_alu0 } ]
+set_object_boundary -boundary {  { 209.0200 303.0400 } { 302.4000 303.0400 } { 302.4000 151.4200 } { 209.0200 151.4200 } } [get_plan_groups { fifo0 } ]
+set_object_boundary -boundary {  { 209.0200 151.4200 } { 302.4000 151.4200 } { 302.4000 0.1990 } { 209.0200 0.1990 } } [get_plan_groups { fifo1 } ]
+set_object_boundary -boundary {  { 0.0000 124.2880 } { 209.0200 124.2880 } { 209.0200 0.1990 } { 0.0000 0.1990 } } [get_plan_groups { fifo2 } ]
+

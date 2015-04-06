@@ -1,0 +1,8 @@
+-stage_id 2
+-just_split
+-i xout
+-skip_xtract_pp xout
+-num_cores 4
+-num_parts 9
+-bidirectional
+-xout_offset_file xout_offset

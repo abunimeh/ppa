@@ -26,9 +26,9 @@ class QorRpt:
         stage = ""
         syn = re.search(r'.*syn.*', file, re.I)
         apr = re.search(r'.*apr.*', file, re.I)
-        pv_max = re.search(r'.*pv_runs.*max.*', file, re.I)
-        pv_min = re.search(r'.*pv_runs.*min.*', file, re.I)
-        pv_noise = re.search(r'.*pv_runs.*noise.*', file, re.I)
+        pv_max = re.search(r'.*pv.*max.*', file, re.I)
+        pv_min = re.search(r'.*pv.*min.*', file, re.I)
+        pv_noise = re.search(r'.*pv.*noise.*', file, re.I)
         if syn:
             stage = 'syn'
         if apr:
@@ -43,7 +43,7 @@ class QorRpt:
 
     def mathcLine(regex1, regex2, regex3, line):
         import re
-        line_variables = r'(%s[\s]*%s[\s]*%s[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*' % (regex1, regex2, regex3)
+        line_variables = r'(%s[\s]*%s[\s]*%s[\s]*):+[\s]*(-*[\d]+[\.]*[\d]*)+.*' % (regex1, regex2, regex3)
         result = re.search(line_variables, line, re.I)
         return result
 
@@ -55,6 +55,7 @@ class QorRpt:
     def searchfile(file):
         import re
         from Configurations import Configurations
+        from operator import itemgetter
         stage = QorRpt.metric_naming(file)
         base_path = Configurations().parser_final()
         # Open the file with read only permit
@@ -122,5 +123,6 @@ class QorRpt:
             if foundMaxFanVi:
                 rptData.foundMaxFanVi = QorRpt.replaceSpace(stage + " max fanout viols"), foundMaxFanVi.group(2)
                 reportDataItems.append(rptData.foundMaxFanVi)
-
-        return ["%s" % i[0] for i in reportDataItems], ["%s" % i[1] for i in reportDataItems]
+        print(["%s" % i[0] for i in reportDataItems], ["%s" % i[1] for i in reportDataItems])
+        data_items = sorted(reportDataItems, key=itemgetter(0))
+        return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]

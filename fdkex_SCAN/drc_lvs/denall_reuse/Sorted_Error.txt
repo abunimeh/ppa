@@ -1,0 +1,17 @@
+
+
+**********************************************************
+Classification of Errors for each Macro/Boundary 
+LDI_500   0
+LDI_501   0
+LDI_502   0
+LDI_503   0
+LDI_504   0
+LDI_505   0
+LDI_506   0
+LD_506   24
+LD_507   0
+NODATA_ce1   0
+NODATA_ce2   0
+NODATA_tm1   0
+NODATA_v9   0

@@ -1,0 +1,95 @@
+setenv PATH /p/foundry/env/bin:/p/foundry/fdk-env/env-core/15ww13a/bin:/p/foundry/fdk-env/env-core/15ww13a/isobin:/p/foundry/env/bin:/usr/intel/bin:/bin:/usr/bin:.:/usr/sbin:/usr/bin/X11:/usr/X11R6/bin:/usr/local/bin:/usr/local/adm/bin:/stor/common/bin:/p/foundry/env/pkgs/megatest/bin
+setenv INTEL_ASIC /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/kit/afdk73_kit_s/
+setenv INTEL_PDK /p/fdk/fdk73/builds/pdk733_r1.7
+setenv INTEL_PDK_VER 47
+setenv INTEL_HALO /p/fdk/fdk73/builds/halo733_r1.7
+setenv INTEL_TIC /p/fdk/fdk73/builds/tic733_r1.7
+setenv INTEL_STDCELLS /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0
+setenv INTEL_STDCELLS_MISC /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc
+
+##### SYN FLOW STEP CMDS #####
+mkdir -p syn syn/logs; cd syn
+
+dc_shell-t -64 -topo -x 'source /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/kit/afdk73_kit_s//asicflows/synopsys/syn/dot3/d04/run.tcl; runDC; exit' >& logs/syn_run.log
+
+cd ..
+
+##### APR FLOW STEP CMDS #####
+mkdir -p apr apr/logs; cd apr
+
+echo source /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/kit/afdk73_kit_s//asicflows/synopsys/apr/dot3/d04/run.tcl > icc_batch.tcl
+echo runICC -start import_design >> icc_batch.tcl
+echo exit >> icc_batch.tcl
+
+icc_shell -64 -f ./apr/icc_batch.tcl >& logs/apr_run.log
+
+cd ..
+
+##### EXT FLOW STEP CMDS #####
+mkdir -p ext ext/logs; cd ext
+
+
+/p/fdkgt/adf_qa/nightly_adf_kit_build_regr/adf_nightly_regr_repo_clone/system/scripts/genExtCmdDecks.tcl -tf starrc -ed /p/fdk/fdk73/builds/pdk733_r1.7/extraction/starrc -ctp "tttt_-10 tttt_-40 tttt_110 tttt_90" -ef mw -dd /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/ext/../apr/mwdb/fdkex_fill_LIB -dn fdkex  -o star_rcxt.asic.cmd |& tee logs/genExtCmdDecks.tcl.log
+
+StarXtract -clean star_rcxt.asic.cmd |& tee logs/starrc.log
+
+cd ..
+
+##### STA FLOW STEP CMDS #####
+mkdir -p  pv pv/logs; cd pv
+
+
+pt_shell -x 'set run_type max; set stage postlayout;set si on' -f /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/kit/afdk73_kit_s//asicflows/synopsys/sta/dot3/d04/run.tcl >& logs/sta.max.log &
+
+pt_shell -x 'set run_type min; set stage postlayout;set si on' -f /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/kit/afdk73_kit_s//asicflows/synopsys/sta/dot3/d04/run.tcl >& logs/sta.min.log &
+
+pt_shell -x 'set run_type power; set stage postlayout;set si on' -f /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/kit/afdk73_kit_s//asicflows/synopsys/sta/dot3/d04/run.tcl >& logs/sta.power.log &
+
+pt_shell -x 'set run_type noise; set stage postlayout;set si on' -f /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/kit/afdk73_kit_s//asicflows/synopsys/sta/dot3/d04/run.tcl >& logs/sta.noise.log &
+
+cd ..
+
+##### DRC_LVS FLOW STEP CMDS #####
+mkdir -p drc_lvs drc_lvs/logs; cd drc_lvs
+
+icv_nettran -verilog /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/drc_lvs/../apr/outputs/fdkex.apr_lvs.vg -sp  /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/cdl/ln/d04_ln.cdl /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/cdl/nn/d04_nn.cdl /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/cdl/wn/d04_wn.cdl /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/cdl/yn/d04_yn.cdl /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/cdl/xn/d04_xn.cdl /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/cdl/nn/d04_nn_misc.cdl /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/cdl/wn/d04_wn_misc.cdl /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/cdl/yn/d04_yn_misc.cdl /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/cdl/xn/d04_xn_misc.cdl /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/cdl/ln/d04_ln_misc.cdl /p/fdk/fdk73/builds/halo733_r1.7/cdl/intel73halo.cdl /p/fdk/fdk73/builds/tic733_r1.7/cdl/intel73tapeout.cdl -cell fdkex -outName fdkex.icv -noflatten -mprop -verilog-b1 vcc -verilog-b0 vss -logFile logs/icv_nettran.log
+
+setenv INTEL_RUNSETS ${INTEL_PDK}/runsets/icv
+
+### drcd Runset ###
+mkdir -p drcd; cd drcd
+/bin/cp -r ${INTEL_RUNSETS}/CPYDB .
+chmod -R u+w ./CPYDB
+
+icv -i /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/drc_lvs/drcd/../../apr/outputs/fdkex.apr.oas -c fdkex -vue -D _drPROCESS=_drdotThree -D _drSECTION_LEVEL=_drYES -I . -I ${INTEL_RUNSETS}/PXL -f OASIS  ${INTEL_RUNSETS}/drcd.rs >& drcd_run.log &
+
+cd ..
+
+### drc_IPall Runset ###
+mkdir -p drc_IPall; cd drc_IPall
+/bin/cp -r ${INTEL_RUNSETS}/CPYDB .
+chmod -R u+w ./CPYDB
+
+icv -i /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/drc_lvs/drc_IPall/../../apr/outputs/fdkex.apr.oas -c fdkex -vue -D _drPROCESS=_drdotThree -D _drSECTION_LEVEL=_drYES -I . -I ${INTEL_RUNSETS}/PXL -f OASIS  ${INTEL_RUNSETS}/drc_IPall.rs >& drc_IPall_run.log &
+
+cd ..
+
+### denall_reuse Runset ###
+mkdir -p denall_reuse; cd denall_reuse
+/bin/cp -r ${INTEL_RUNSETS}/CPYDB .
+chmod -R u+w ./CPYDB
+
+icv -i /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/drc_lvs/denall_reuse/../../apr/outputs/fdkex.apr.oas -c fdkex -vue -D _drPROCESS=_drdotThree -D _drSECTION_LEVEL=_drYES -I . -I ${INTEL_RUNSETS}/PXL -f OASIS  ${INTEL_RUNSETS}/denall_reuse.rs >& denall_reuse_run.log &
+
+cd ..
+
+### trclvs Runset ###
+mkdir -p trclvs; cd trclvs
+/bin/cp -r ${INTEL_RUNSETS}/CPYDB .
+chmod -R u+w ./CPYDB
+
+icv -i /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/drc_lvs/trclvs/../../apr/outputs/fdkex.apr.oas -c fdkex -vue -D _drPROCESS=_drdotThree -D _drSECTION_LEVEL=_drYES -I . -I ${INTEL_RUNSETS}/PXL -f OASIS -D _drTRCVIEW=_drstandard -sf icv -s ../fdkex.icv ${INTEL_RUNSETS}/trclvs.rs >& trclvs_run.log &
+
+cd ..
+
+cd ..

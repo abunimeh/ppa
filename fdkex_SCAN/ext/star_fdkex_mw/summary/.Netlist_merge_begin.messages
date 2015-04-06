@@ -1,0 +1,42 @@
+Parsing option_file: netlist_merge_begin.tech (EX-304)
+Running Amd_64b    
+mergeAsciiNetlist
+concatenateAsciiFilesSub ../fdkex_mw.spef_part1.tttt_-10.gz ../fdkex_mw.spef.tttt_-10.gz
+concatenateAsciiFilesSub ../fdkex_mw.spef_part2.tttt_-10.gz ../fdkex_mw.spef.tttt_-10.gz
+concatenateAsciiFilesSub ../fdkex_mw.spef_part3.tttt_-10.gz ../fdkex_mw.spef.tttt_-10.gz
+concatenateAsciiFilesSub ../fdkex_mw.spef_part4.tttt_-10.gz ../fdkex_mw.spef.tttt_-10.gz
+concatenateAsciiFilesSub opens.sum_part1.tttt_-10 opens.sum.tttt_-10
+concatenateAsciiFilesSub opens.sum_part2.tttt_-10 opens.sum.tttt_-10
+concatenateAsciiFilesSub opens.sum_part3.tttt_-10 opens.sum.tttt_-10
+concatenateAsciiFilesSub opens.sum_part4.tttt_-10 opens.sum.tttt_-10
+concatenateAsciiFilesSub ../fdkex_mw.spef_part1.tttt_-40.gz ../fdkex_mw.spef.tttt_-40.gz
+concatenateAsciiFilesSub ../fdkex_mw.spef_part2.tttt_-40.gz ../fdkex_mw.spef.tttt_-40.gz
+concatenateAsciiFilesSub ../fdkex_mw.spef_part3.tttt_-40.gz ../fdkex_mw.spef.tttt_-40.gz
+concatenateAsciiFilesSub ../fdkex_mw.spef_part4.tttt_-40.gz ../fdkex_mw.spef.tttt_-40.gz
+concatenateAsciiFilesSub opens.sum_part1.tttt_-40 opens.sum.tttt_-40
+concatenateAsciiFilesSub opens.sum_part2.tttt_-40 opens.sum.tttt_-40
+concatenateAsciiFilesSub opens.sum_part3.tttt_-40 opens.sum.tttt_-40
+concatenateAsciiFilesSub opens.sum_part4.tttt_-40 opens.sum.tttt_-40
+concatenateAsciiFilesSub ../fdkex_mw.spef_part1.tttt_110.gz ../fdkex_mw.spef.tttt_110.gz
+concatenateAsciiFilesSub ../fdkex_mw.spef_part2.tttt_110.gz ../fdkex_mw.spef.tttt_110.gz
+concatenateAsciiFilesSub ../fdkex_mw.spef_part3.tttt_110.gz ../fdkex_mw.spef.tttt_110.gz
+concatenateAsciiFilesSub ../fdkex_mw.spef_part4.tttt_110.gz ../fdkex_mw.spef.tttt_110.gz
+concatenateAsciiFilesSub opens.sum_part1.tttt_110 opens.sum.tttt_110
+concatenateAsciiFilesSub opens.sum_part2.tttt_110 opens.sum.tttt_110
+concatenateAsciiFilesSub opens.sum_part3.tttt_110 opens.sum.tttt_110
+concatenateAsciiFilesSub opens.sum_part4.tttt_110 opens.sum.tttt_110
+concatenateAsciiFilesSub ../fdkex_mw.spef_part1.tttt_90.gz ../fdkex_mw.spef.tttt_90.gz
+concatenateAsciiFilesSub ../fdkex_mw.spef_part2.tttt_90.gz ../fdkex_mw.spef.tttt_90.gz
+concatenateAsciiFilesSub ../fdkex_mw.spef_part3.tttt_90.gz ../fdkex_mw.spef.tttt_90.gz
+concatenateAsciiFilesSub ../fdkex_mw.spef_part4.tttt_90.gz ../fdkex_mw.spef.tttt_90.gz
+concatenateAsciiFilesSub opens.sum_part1.tttt_90 opens.sum.tttt_90
+concatenateAsciiFilesSub opens.sum_part2.tttt_90 opens.sum.tttt_90
+concatenateAsciiFilesSub opens.sum_part3.tttt_90 opens.sum.tttt_90
+concatenateAsciiFilesSub opens.sum_part4.tttt_90 opens.sum.tttt_90
+mergeExtraFiles:
+cleanStarDirXout
+  
+xTractor      Elp=00:00:01 Cpu=00:00:00 Usr=0.0    Sys=0.1    Mem=65.7  
+  
+Done          Elp=00:00:01 Cpu=00:00:00 Usr=0.0    Sys=0.1    Mem=65.7  
+

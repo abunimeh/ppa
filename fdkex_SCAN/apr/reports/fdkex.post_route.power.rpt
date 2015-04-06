@@ -1,0 +1,64 @@
+Warning: The following library cells don't have power description:d04spc00nnz01  d04spc00nnz02  d04spc00nnz03  d04qfd01ndz00  d04bar00nnz64  d04bar00nnz32  d04bar01nnz16  d04bar01nnz08  d04bar01nnz04  d04qfd02nnz00  d04bar01nnz64  d04qfd02ndz00  d04tap02ldz05  fdk73d84_asic_halo_hvn  fdk73d84_asic_halo_hhb  fdk73d84_asic_halo_hib  fdk73d84_asic_halo_hhc  fdk73d84_asic_halo_hic   (PWR-682)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+        -verbose
+Design : fdkex
+Version: J-2014.09-SP1
+Date   : Tue Mar 31 06:00:03 2015
+****************************************
+
+
+Library(s) Used:
+
+    d04_wn_p1273_3x1r6u1_psss_0.75v_-10c_ccst (File: /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/wn/d04_wn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb)
+    d04_yn_p1273_3x1r6u1_psss_0.75v_-10c_ccst (File: /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/yn/d04_yn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb)
+    d04_wn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm (File: /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/lib/wn/d04_wn_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm.ldb)
+    d04_nn_p1273_3x1r6u1_psss_0.75v_-10c_ccst (File: /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/nn/d04_nn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb)
+    d04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst (File: /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/ln/d04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb)
+    d04_ln_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm (File: /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_misc/lib/ln/d04_ln_misc_p1273_3x1r6u1_psss_0.75v_-10c_nldm.ldb)
+
+
+Operating Conditions: slow_1.00   Library: d04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+
+
+Global Operating Voltage = 0.75 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ps
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1uW
+
+
+  Cell Internal Power  =  48.5364 mW   (60%)
+  Net Switching Power  =  32.2020 mW   (40%)
+                         ---------
+Total Dynamic Power    =  80.7384 mW  (100%)
+
+  Leakage Power from Non-physical-only Cell =  55.3482 uW  (100%)
+  Leakage Power from Physical-only Cell = 100.0179 nW    (0%)
+                         ---------
+Cell Leakage Power     =  55.4483 uW  (100%)
+
+                 Internal         Switching           Leakage            Total                         Cell
+Power Group      Power            Power               Power              Power   (   %    )  Attrs  Count
+---------------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+black_box      2.1416e-06            0.0000        1.0977e-03        3.2393e-06  (   0.00%)            160
+clock_network     12.0395           25.5776            0.8904           37.6180  (  46.56%)            1390
+register          32.9069            0.8212           27.4169           33.7553  (  41.78%)            13948
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+combinational      3.5901            5.8032           27.0383            9.4204  (  11.66%)            43645
+---------------------------------------------------------------------------------------------------------
+Total             48.5365 mW        32.2019 mW        55.3467 uW        80.7937 mW
+1

@@ -30,6 +30,7 @@ class dpLog:
     def searchfile(file):
         import re
         from Configurations import Configurations
+        from operator import itemgetter
         base_path = Configurations().parser_final()
         foundFlag = 0
         DataItems = []
@@ -54,5 +55,5 @@ class dpLog:
             if foundRuntime:
                 dpData.foundRuntime = dpLog.replaceSpace(stage +" Runtime"), foundRuntime.group(2)
                 DataItems.append(dpData.foundRuntime)
-
-        return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]
+        data_items = sorted(DataItems, key=itemgetter(0))
+        return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]

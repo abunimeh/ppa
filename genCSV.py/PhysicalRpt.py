@@ -18,6 +18,7 @@ class PhysicalRpt:
     def searchfile(file):
         DataItems = []
         from Configurations import Configurations
+        from operator import itemgetter
         base_path = Configurations().parser_final()
         # Open the file with read only permit
         f = open(file, "r")
@@ -45,4 +46,5 @@ class PhysicalRpt:
                 rptData.foundTotalMem = PhysicalRpt.replaceSpace("apr Memory"), foundTotalMem.group(2)
                 DataItems.append(rptData.foundTotalMem)
 
-        return ["%s" % i[0] for i in DataItems], ["%s" % i[1] for i in DataItems]
+        data_items = sorted(DataItems, key=itemgetter(0))
+        return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]

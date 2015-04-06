@@ -1,0 +1,34 @@
+logs/cts.log:#ERROR-MSG==>  check_ecc_alu0/U1176 is a dont_use cell found in design: d04xnk04yd0e5
+logs/cts.log:#ERROR-MSG==>  check_ecc_alu0/U1555 is a dont_use cell found in design: d04xnk04yd0e5
+logs/cts.log:#ERROR-MSG==>  check_ecc_alu0/U1310 is a dont_use cell found in design: d04xnk04yd0e5
+logs/cts.log:#ERROR-MSG==>  U21973 is a dont_use cell found in design: d04xnk04yd0e5
+logs/cts.log:#ERROR-MSG==>  U13925 is a dont_use cell found in design: d04xnk04yd0e5
+logs/cts.log:#ERROR-MSG==>  U18673 is a dont_use cell found in design: d04xnk04yd0e5
+logs/cts.log:#ERROR-MSG==>  U18110 is a dont_use cell found in design: d04xnk04yd0e5
+logs/cts.log:#ERROR-MSG==>  U13716 is a dont_use cell found in design: d04xnk04yd0e5
+logs/cts.log:#ERROR-MSG==>  U16797 is a dont_use cell found in design: d04xnk04yd0e5
+logs/cts.log:#ERROR-MSG==>  U17544 is a dont_use cell found in design: d04xnk04yd0e5
+logs/cts.log:#ERROR-MSG==>  10 dont_use cells found in your design
+logs/fill.log:Error: cp: cannot stat `/nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/apr/asic_uin/d04/uin_implant.rs': No such file or directory
+logs/post_place.log:#ERROR-MSG==>  check_ecc_alu0/U1176 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_place.log:#ERROR-MSG==>  check_ecc_alu0/U1555 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_place.log:#ERROR-MSG==>  check_ecc_alu0/U1310 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_place.log:#ERROR-MSG==>  U21973 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_place.log:#ERROR-MSG==>  U13925 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_place.log:#ERROR-MSG==>  U18673 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_place.log:#ERROR-MSG==>  U18110 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_place.log:#ERROR-MSG==>  U13716 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_place.log:#ERROR-MSG==>  U16797 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_place.log:#ERROR-MSG==>  U17544 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_place.log:#ERROR-MSG==>  10 dont_use cells found in your design
+logs/post_route.log:#ERROR-MSG==>  check_ecc_alu0/U1176 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_route.log:#ERROR-MSG==>  check_ecc_alu0/U1555 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_route.log:#ERROR-MSG==>  check_ecc_alu0/U1310 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_route.log:#ERROR-MSG==>  U13716 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_route.log:#ERROR-MSG==>  U18673 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_route.log:#ERROR-MSG==>  U18110 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_route.log:#ERROR-MSG==>  U16797 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_route.log:#ERROR-MSG==>  U13925 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_route.log:#ERROR-MSG==>  U17544 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_route.log:#ERROR-MSG==>  U21973 is a dont_use cell found in design: d04xnk04yd0e5
+logs/post_route.log:#ERROR-MSG==>  10 dont_use cells found in your design

@@ -1,0 +1,48 @@
+In mode: all_dft...
+  Pre-DFT DRC enabled
+Warning: Design 'fdkex' contains 5 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  	...checking for scan equivalents...
+  ...checking vector rules...
+  ...checking pre-dft rules...
+
+-----------------------------------------------------------------
+Begin Pre-DFT violations...
+
+Warning: Clock gating cell init_mask_in0/clk_gate_seed6_reg_6/latch has unconnected test pin. (TEST-130)
+Information: There are 855 other cells with the same violation. (TEST-171)
+
+Pre-DFT violations completed...
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 1712
+
+-----------------------------------------------------------------
+
+856 PRE-DFT VIOLATIONS
+   856 Test pin of clock gating cell is unconnected violations (TEST-130)
+
+
+Warning: Violations occurred during test design rule checking. (TEST-124)
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  856 out of 14785 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITH VIOLATIONS
+      * 856 cells are clock gating cells
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      *13929 cells are valid scan cells
+
+Information: Test design rule checking completed. (TEST-123)
+1
