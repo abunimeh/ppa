@@ -1,9 +1,11 @@
 class DRCErrorData:
-    def outdata(self, metric_list):
+    @staticmethod
+    def outdata(metric_list):
         for metrics in metric_list:
             print(metrics)
 
 class DRCError:
+    @staticmethod
     def metric_naming(file):
         import re
         stage = ""
@@ -21,18 +23,19 @@ class DRCError:
             stage = 'drc trclvs'
         return stage
 
+    @staticmethod
     def replaceSpace(metricname):
         import re
         newName = re.sub(r'[\W]+', "_", metricname)
         return newName
+
+    @staticmethod
     def searchfile(file):
 #         import os
 # os.path.join(os.path.dirname(__file__), os.pardir)
 #     def searchErrLayout(file):
         import re
-        from Configurations import Configurations
         from operator import itemgetter
-        base_path = Configurations().parser_final()
         stage = DRCError.metric_naming(file)
         # Open the file with read only permit
         f = open(file, "r")

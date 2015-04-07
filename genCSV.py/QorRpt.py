@@ -2,6 +2,8 @@ from test.test_tools import basepath
 
 
 class QorRptData:
+    foundCellCount = ()
+
     def outData(self, metric):
         print(metric.group(1), metric.group(2))
 
@@ -21,6 +23,8 @@ class QorRptData:
 
 
 class QorRpt:
+    foundCellCount = ()
+    @staticmethod
     def metric_naming(file):
         import re
         stage = ""
@@ -41,23 +45,25 @@ class QorRpt:
             stage = 'pv noise tttt'
         return stage
 
+    @staticmethod
     def mathcLine(regex1, regex2, regex3, line):
         import re
         line_variables = r'(%s[\s]*%s[\s]*%s[\s]*):+[\s]*(-*[\d]+[\.]*[\d]*)+.*' % (regex1, regex2, regex3)
         result = re.search(line_variables, line, re.I)
         return result
 
+    @staticmethod
     def replaceSpace(metricname):
         import re
         new_name = re.sub(r'[\W]+', "_", metricname)
         return new_name
 
+    @staticmethod
     def searchfile(file):
         import re
-        from Configurations import Configurations
         from operator import itemgetter
         stage = QorRpt.metric_naming(file)
-        base_path = Configurations().parser_final()
+
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
@@ -109,7 +115,7 @@ class QorRpt:
             foundMaxFanVi = QorRpt.mathcLine("Max", "trans", "Violations", line)
 
             if foundCellCount:
-                rptData.foundCellCount = QorRpt.replaceSpace(stage + " Cell Count"), foundCellCount.group(2)
+                QorRptData.foundCellCount = QorRpt.replaceSpace(stage + " Cell Count"), foundCellCount.group(2)
                 reportDataItems.append(rptData.foundCellCount)
             if foundCompileTime:
                 rptData.foundCompileTime = QorRpt.replaceSpace(stage + " cpu runtime"), foundCompileTime.group(2)
@@ -123,6 +129,6 @@ class QorRpt:
             if foundMaxFanVi:
                 rptData.foundMaxFanVi = QorRpt.replaceSpace(stage + " max fanout viols"), foundMaxFanVi.group(2)
                 reportDataItems.append(rptData.foundMaxFanVi)
-        print(["%s" % i[0] for i in reportDataItems], ["%s" % i[1] for i in reportDataItems])
+
         data_items = sorted(reportDataItems, key=itemgetter(0))
         return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]

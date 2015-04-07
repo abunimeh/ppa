@@ -1,10 +1,12 @@
 class PVTMetricData:
-    def outdata(self, metric_list):
+    @staticmethod
+    def outdata(metric_list):
         for metrics in metric_list:
             print(metrics)
 
 
 class PVTMetric:
+    @staticmethod
     def metric_naming(file):
         import re
         stage = ""
@@ -28,11 +30,10 @@ class PVTMetric:
             stage = 'pv_power'
         return stage
 
+    @staticmethod
     def searchfile(file):
         import re
-        from Configurations import Configurations
         from operator import itemgetter
-        base_path = Configurations().parser_final()
         stage = PVTMetric.metric_naming(file)
         # Open the file with read only permit
         f = open(file, "r")

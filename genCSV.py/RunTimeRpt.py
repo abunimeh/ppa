@@ -4,6 +4,7 @@ class RunTimeRptData:
             print(metrics)
 
 class RunTimeRpt:
+    @staticmethod
     def metric_naming(file):
         import re
         stage = ""
@@ -21,16 +22,16 @@ class RunTimeRpt:
             stage = 'pv noise tttt'
         return stage
 
+    @staticmethod
     def replaceSpace(metricname):
         import re
         newName = re.sub(r'[\W]+', "_", metricname)
         return newName
 
+    @staticmethod
     def searchfile(file):
         import re
-        from Configurations import Configurations
         from operator import itemgetter
-        base_path = Configurations().parser_final()
         stage = RunTimeRpt.metric_naming(file)
         # Open the file with read only permit
         f = open(file, "r")

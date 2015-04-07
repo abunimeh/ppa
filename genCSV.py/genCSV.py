@@ -54,6 +54,7 @@ for test_case in testcases:
         if file.endswith('LAYOUT_ERRORS'):
             layouter = DRCError.searchfile(file)
             metricNames.append(layouter)
+
     names = []
     values = []
     # temp =[]
@@ -117,13 +118,15 @@ for test_case in testcases:
     # temp.append(pv_noise)
     for items in metricNames:
         try:
+            # Names and values are concatenated into a string in order to have horizontal column
             names += items[0]
             values += items[1]
         except IndexError:
             print("not found")
-    print(names, values)
+    print("Metrics found: \n", names, values)
     if csv_file_exist == 0:
         csv_file_exist = 1
+        # Creates a csv with the first testcase
         with open(base_path + r'goodfile.csv', 'wt') as myfile:
             writer = csv.writer(myfile, lineterminator='\n')
             writer.writerow(names)
@@ -133,6 +136,7 @@ for test_case in testcases:
         print('csv created (%sgoodfile.csv) with %s' % (base_path, test_case))
 
     else:
+        # Appends the csv with the following testcases
         with open(base_path + r'goodfile.csv', 'a') as myfile:
             writer = csv.writer(myfile, lineterminator='\n')
             writer.writerow(names)

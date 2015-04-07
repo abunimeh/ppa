@@ -1,9 +1,11 @@
 class FinalRptData:
+    @staticmethod
     def outdata(self, metric_list):
         for metrics in metric_list:
             print(metrics)
 
 class FinalRpt:
+    @staticmethod
     def metric_naming(file):
         import re
         stage = ""
@@ -21,18 +23,18 @@ class FinalRpt:
             stage = 'drc trclvs'
         return stage
 
+    @staticmethod
     def replaceSpace(metricname):
         import re
         newName = re.sub(r'[\W]+', "_", metricname)
         return newName
 
+    @staticmethod
     def searchfile(file):
         import re
-        from Configurations import Configurations
         from operator import itemgetter
         DataItems = []
         stage = FinalRpt.metric_naming(file)
-        base_path = Configurations().parser_final()
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines

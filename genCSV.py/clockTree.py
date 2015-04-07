@@ -1,14 +1,15 @@
 class clockTreeRptData:
-    def outdata(self, metric_list):
+    @staticmethod
+    def outdata(metric_list):
         for metrics in metric_list:
             print(metrics)
+
 class clockTreeRpt:
+    @staticmethod
     def searchfile(file):
         import re
-        from Configurations import Configurations
         from operator import itemgetter
         DataItems = []
-        base_path = Configurations().parser_final()
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines

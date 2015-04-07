@@ -1,25 +1,27 @@
 class PhysicalRptData:
-    def outdata(self, metric_list):
+    @staticmethod
+    def outdata(metric_list):
         for metrics in metric_list:
             print(metrics)
 
 class PhysicalRpt:
+    @staticmethod
     def mathcLine(regex1,regex2, regex3, line):
         import re
         regexR = r'(%s[\s]*%s[\s]*%s[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*' %(regex1, regex2, regex3)
         result = re.search(regexR, line, re.I)
         return result
 
+    @staticmethod
     def replaceSpace(metric_name):
         import re
         newName = re.sub(r'[\W]+', "_", metric_name)
         return newName
 
+    @staticmethod
     def searchfile(file):
         DataItems = []
-        from Configurations import Configurations
         from operator import itemgetter
-        base_path = Configurations().parser_final()
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines

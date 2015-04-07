@@ -1,10 +1,12 @@
 class dpLogData:
-    def outdata(self, metric_list):
+    @staticmethod
+    def outdata( metric_list):
         for metrics in metric_list:
             print(metrics)
 
 
 class dpLog:
+    @staticmethod
     def metric_naming(file):
         import re
         stage = ""
@@ -22,16 +24,16 @@ class dpLog:
             stage = 'drc trclvs'
         return stage
 
+    @staticmethod
     def replaceSpace(metricname):
         import re
         newName = re.sub(r'[\W]+', "_", metricname)
         return newName
 
+    @staticmethod
     def searchfile(file):
         import re
-        from Configurations import Configurations
         from operator import itemgetter
-        base_path = Configurations().parser_final()
         foundFlag = 0
         DataItems = []
         stage = dpLog.metric_naming(file)
@@ -49,11 +51,11 @@ class dpLog:
             foundRuntime = re.search(r'(Overall[\s]*engine[\s]*time)[\s]*=+[\s]*([\d]*:*[\d]*:*[\d]+)+', line, re.I)
 
             if foundPeakMem and foundFlag != 1:
-                dpData.foundPeakMem =dpLog.replaceSpace(stage +" Peak Memory"), foundPeakMem.group(2)
+                dpData.foundPeakMem = dpLog.replaceSpace(stage + " Peak Memory"), foundPeakMem.group(2)
                 DataItems.append(dpData.foundPeakMem)
                 foundFlag = 1
             if foundRuntime:
-                dpData.foundRuntime = dpLog.replaceSpace(stage +" Runtime"), foundRuntime.group(2)
+                dpData.foundRuntime = dpLog.replaceSpace(stage + " Runtime"), foundRuntime.group(2)
                 DataItems.append(dpData.foundRuntime)
         data_items = sorted(DataItems, key=itemgetter(0))
         return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]
