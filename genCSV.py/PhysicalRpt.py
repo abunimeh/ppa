@@ -1,9 +1,5 @@
 class PhysicalRptData:
-    @staticmethod
-    def outdata(metric_list):
-        for metrics in metric_list:
-            print(metrics)
-
+    pass
 class PhysicalRpt:
     @staticmethod
     def mathcLine(regex1,regex2, regex3, line):
@@ -21,7 +17,6 @@ class PhysicalRpt:
     @staticmethod
     def searchfile(file):
         DataItems = []
-        from operator import itemgetter
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
@@ -48,6 +43,4 @@ class PhysicalRpt:
                 rptData.foundTotalMem = PhysicalRpt.replaceSpace("apr Memory"), foundTotalMem.group(2)
                 DataItems.append(rptData.foundTotalMem)
 
-        data_items = sorted(DataItems, key=itemgetter(0))
-        # return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]
-        return data_items
+        return DataItems

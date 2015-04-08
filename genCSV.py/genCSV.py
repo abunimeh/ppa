@@ -1,6 +1,7 @@
 # MAIN
 # STATUS -- MISSING TOTAL RUNSET ERROR (OF ALL LAYOUT ERROR RUNS OF THE TESTCASE) COUNT METRIC
 import csv
+from operator import itemgetter
 from Configurations import Configurations
 from findFiles import findFiles
 from QorRpt import QorRpt
@@ -12,90 +13,94 @@ from clockTree import clockTreeRpt
 from Drc_Errors import DRCError
 from dpLog import dpLog
 from PvPower import PvPower
+
 test_cases_list = ["cpu_testcase", "fdkex_SCAN"]
 base_path = Configurations().parser_final()
 csv_file_exist = 0
+
 for test_case in test_cases_list:
     metricNames = []
-    test_case_metric = [("Testcase", test_case)]
-    metricNames.append(test_case_metric)
     list_of_files = findFiles.searchDir(test_case)
+    found_tool_version = 0
     for file in list_of_files:
         if file.endswith('.qor.rpt'):
             qrpt = QorRpt.searchfile(file)
             metricNames.append(qrpt)
-        if file.endswith('power.power.rpt'):
+        elif file.endswith('power.power.rpt'):
             ppower = PvPower.searchfile(file)
             metricNames.append(ppower)
-        if file.endswith('dc.log'):
+        elif file.endswith('dc.log'):
             pvtmetrics = PVTMetric.searchfile(file)
             metricNames.append(pvtmetrics)
-        if file.endswith('icc.log'):
+        elif file.endswith('icc.log'):
             pvtmetrics = PVTMetric.searchfile(file)
             metricNames.append(pvtmetrics)
-        if file.endswith('link.rpt'):
+        elif file.endswith('link.rpt'):
             pvtmetrics = PVTMetric.searchfile(file)
             metricNames.append(pvtmetrics)
-        if file.endswith('fill.physical.rpt'):
+        elif file.endswith('fill.physical.rpt'):
             physicalrpt = PhysicalRpt.searchfile(file)
             metricNames.append(physicalrpt)
-        if file.endswith('run_time.rpt'):
+        elif file.endswith('run_time.rpt'):
             runtimerpt = RunTimeRpt.searchfile(file)
             metricNames.append(runtimerpt)
-        if file.endswith('cts.clock_tree.rpt'):
+        elif file.endswith('cts.clock_tree.rpt'):
             clocktreerpt = clockTreeRpt.searchfile(file)
             metricNames.append(clocktreerpt)
-        if file.endswith('.dp.log'):
+        elif file.endswith('.dp.log'):
             dplog = dpLog.searchfile(file)
             metricNames.append(dplog)
-        if file.endswith('Final_Report.txt'):
+        elif file.endswith('Final_Report.txt'):
             finalrpt = FinalRpt.searchfile(file)
             metricNames.append(finalrpt)
-        if file.endswith('LAYOUT_ERRORS'):
-            layouter = DRCError.searchfile(file)
-            metricNames.append(layouter)
+        elif file.endswith('LAYOUT_ERRORS'):
+            if found_tool_version == 0:
+                layout_er = DRCError.searchfile(file)
+                for i in range(len(layout_er)):
+                    if "drc_tool_version" in layout_er[i]:
+                        found_tool_version = 1
+                metricNames.append(layout_er)
 
     names, values, temp, syn, apr, drc, pv_max, pv_min, pv_power, pv_noise = [], [], [], [], [], [], [], [], [], []
 
     for metric in metricNames:
         met = tuple(metric)
         for name in range(len(met)):
-                print("metric[%s]" % name, met[name])
                 if "syn" in met[name][0]:
-                    print("metric", met[name], "added")
                     syn.append(met[name])
                     continue
-                if "apr" in met[name][0]:
-                    print("metric added:", met[name])
+                elif "apr" in met[name][0]:
                     apr.append(met[name])
                     continue
-                if "drc" in met[name][0]:
-                    print("metric", met[name], "added")
+                elif "drc" in met[name][0]:
                     drc.append(met[name])
                     continue
-                if "pv_max" in met[name][0]:
-                    print("metric", met[name], "added")
+                elif "pv_max" in met[name][0]:
                     pv_max.append(met[name])
                     continue
-                if "pv_min" in met[name][0]:
-                    print("metric", met[name], "added")
+                elif "pv_min" in met[name][0]:
                     pv_min.append((met[name]))
                     continue
-                if "pv_power" in met[name][0]:
-                    print("metric", met[name], "added")
+                elif "pv_power" in met[name][0]:
                     pv_power.append((met[name]))
                     continue
-                if "pv_noise" in met[name][0]:
-                    print("metric", met[name], "added")
+                elif "pv_noise" in met[name][0]:
                     pv_noise.append((met[name]))
                     continue
 
-    temp = [test_case_metric, syn, apr, drc, pv_max, pv_min, pv_power, pv_noise]
-    print("temp:", temp)
+    test_case_metric = [("Testcase", test_case)]
+    syn_list = tuple(sorted(syn, key=itemgetter(0)))
+    apr_list = tuple(sorted(apr, key=itemgetter(0)))
+    drc_list = tuple(sorted(drc, key=itemgetter(0)))
+    pv_max_list = tuple(sorted(pv_max, key=itemgetter(0)))
+    pv_min_list = tuple(sorted(pv_min, key=itemgetter(0)))
+    pv_power_list = tuple(sorted(pv_power, key=itemgetter(0)))
+    pv_noise_list = tuple(sorted(pv_noise, key=itemgetter(0)))
+
+    temp = [test_case_metric, syn_list, apr_list, drc_list, pv_max_list, pv_min_list, pv_power_list, pv_noise_list]
 
     for metrics in temp:
         metric = tuple(metrics)
-        print("The length of the 'item' is :", len(metric), "items: ", metric)
         for name in range(len(metric)):
                 # Names and values are concatenated into a string in order to have horizontal column
                 names += [metric[name][0]]
@@ -110,7 +115,7 @@ for test_case in test_cases_list:
             writer.writerow(values)
             writer.writerow(' ')
         myfile.close()
-        print('csv created (%sgoodfile.csv) with %s' % (base_path, test_case))
+        print('%sgoodfile.csv created with %s' % (base_path, test_case))
     else:
         # Appends the csv with the following testcases
         with open(base_path + r'goodfile.csv', 'a') as myfile:
@@ -119,4 +124,4 @@ for test_case in test_cases_list:
             writer.writerow(values)
             writer.writerow(' ')
         myfile.close()
-        print('csv appended (%sgoodfile.csv) with %s' % (base_path, test_case))
+        print('%sgoodfile.csv appended with %s' % (base_path, test_case))

@@ -31,7 +31,6 @@ class RunTimeRpt:
     @staticmethod
     def searchfile(file):
         import re
-        from operator import itemgetter
         stage = RunTimeRpt.metric_naming(file)
         # Open the file with read only permit
         f = open(file, "r")
@@ -48,6 +47,4 @@ class RunTimeRpt:
                 rptData.foundRunTime = RunTimeRpt.replaceSpace(stage + "run time"), foundRunTime.group(2)
                 DataItems.append(rptData.foundRunTime)
 
-        data_items = sorted(DataItems, key=itemgetter(0))
-        # return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]
-        return data_items
+        return DataItems

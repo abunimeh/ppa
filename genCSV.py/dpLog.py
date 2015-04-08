@@ -1,10 +1,5 @@
 class dpLogData:
-    @staticmethod
-    def outdata( metric_list):
-        for metrics in metric_list:
-            print(metrics)
-
-
+    pass
 class dpLog:
     @staticmethod
     def metric_naming(file):
@@ -33,7 +28,6 @@ class dpLog:
     @staticmethod
     def searchfile(file):
         import re
-        from operator import itemgetter
         foundFlag = 0
         DataItems = []
         stage = dpLog.metric_naming(file)
@@ -57,6 +51,5 @@ class dpLog:
             if foundRuntime:
                 dpData.foundRuntime = dpLog.replaceSpace(stage + " Runtime"), foundRuntime.group(2)
                 DataItems.append(dpData.foundRuntime)
-        data_items = sorted(DataItems, key=itemgetter(0))
-        #return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]
-        return data_items
+
+        return DataItems

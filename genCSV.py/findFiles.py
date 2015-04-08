@@ -21,7 +21,8 @@ class findFiles:
                     if 'drc_lvs' in root:
                         for filename in fnmatch.filter(filenames, file):
                             matches.append(os.path.join(root, filename))
+        print("files to be searched:")
         for file in matches:
             print(file)
-        print(len(matches), "\n\n\n")
+        print(len(matches), "Total found\n\n")
         return matches

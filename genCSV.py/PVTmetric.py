@@ -1,9 +1,5 @@
 class PVTMetricData:
-    @staticmethod
-    def outdata(metric_list):
-        for metrics in metric_list:
-            print(metrics)
-
+    pass
 
 class PVTMetric:
     @staticmethod
@@ -33,7 +29,6 @@ class PVTMetric:
     @staticmethod
     def searchfile(file):
         import re
-        from operator import itemgetter
         stage = PVTMetric.metric_naming(file)
         # Open the file with read only permit
         f = open(file, "r")
@@ -46,7 +41,7 @@ class PVTMetric:
         value = 0
         pvtdata = PVTMetricData()
         for line in lines:
-            found_db_file = re.search(r'(Loading[\s]*db[\s]*file).*/[\w]*_[\w]*_[\w]*_([rx\d]+[\w]+_[prt][sft]+_[\d\.]+v_[-]*[\d]+c_[\w]+)', line, re.I)
+            found_db_file = re.search(r'(Loading[\s]*db[\s]*file).*/[\w]*_[\w]*_[\w]*_([rx\d]+[\w]+_[\w]+_[\d\.]+v_[-]*[\d]+c_[\w]+)', line, re.I)
             if found_db_file:
                 value = found_db_file.group(2)
                 if value not in foundValue:
@@ -57,7 +52,4 @@ class PVTMetric:
             pvtdata.foundDBfile = (stage + "_pvt"), value_sum
             DataItems.append(pvtdata.foundDBfile)
 
-        data_items = sorted(DataItems, key=itemgetter(0))
-        #return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]
-        print("pvt metric found for", file, "pvt: ", data_items)
-        return data_items
+        return DataItems

@@ -1,9 +1,5 @@
 class PvPowerData:
-    @staticmethod
-    def outdata(self, metric_list):
-        for metrics in metric_list:
-            print(metrics)
-
+    pass
 class PvPower:
     @staticmethod
     def mathcLine(regex1,regex2, regex3, line):
@@ -22,8 +18,6 @@ class PvPower:
     def searchfile(file):
         DataItems = []
         # Open the file with read only permit
-        from operator import itemgetter
-
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
@@ -49,6 +43,4 @@ class PvPower:
                 pvData.foundTotalPwr = PvPower.replaceSpace(pv + " total"), foundTotalPwr.group(2)
                 DataItems.append(pvData.foundTotalPwr)
 
-        data_items = sorted(DataItems, key=itemgetter(0))
-        # return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]
-        return data_items
+        return DataItems

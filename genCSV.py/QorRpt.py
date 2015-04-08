@@ -1,27 +1,6 @@
-from test.test_tools import basepath
-
 
 class QorRptData:
     foundCellCount = ()
-
-    def outData(self, metric):
-        print(metric.group(1), metric.group(2))
-
-    def CreateCsv(self, metricNames):
-        import csv
-        from Configurations import Configurations
-        names = ["%s" % i[0] for i in metricNames]
-        values = ["%s" % i[1] for i in metricNames]
-        base_path = Configurations().parser_final()
-
-        with open(base_path + "goodfile.csv", 'wt') as myfile:
-            writer = csv.writer(myfile, lineterminator='\n')
-            #for val in metricNames:
-            writer.writerow(names)
-            writer.writerow(values)
-        myfile.close()
-
-
 class QorRpt:
     foundCellCount = ()
     @staticmethod
@@ -61,7 +40,6 @@ class QorRpt:
     @staticmethod
     def searchfile(file):
         import re
-        from operator import itemgetter
         stage = QorRpt.metric_naming(file)
 
         # Open the file with read only permit
@@ -112,7 +90,7 @@ class QorRpt:
             foundCompileTime = QorRpt.mathcLine("Overall", "Compile", "Time", line)
             foundMaxTransVi = QorRpt.mathcLine("Max", "trans", "Violations", line)
             foundMaxCapVi = QorRpt.mathcLine("Max", "Cap", "Violations", line)
-            foundMaxFanVi = QorRpt.mathcLine("Max", "trans", "Violations", line)
+            foundMaxFanVi = QorRpt.mathcLine("Max", "Fanout", "Violations", line)
 
             if foundCellCount:
                 QorRptData.foundCellCount = QorRpt.replaceSpace(stage + " Cell Count"), foundCellCount.group(2)
@@ -130,7 +108,4 @@ class QorRpt:
                 rptData.foundMaxFanVi = QorRpt.replaceSpace(stage + " max fanout viols"), foundMaxFanVi.group(2)
                 reportDataItems.append(rptData.foundMaxFanVi)
 
-        data_items = sorted(reportDataItems, key=itemgetter(0))
-        #return ("%s" % i[0] for i in data_items), ("%s" % i[1] for i in data_items)
-        # return data_items
-        return (i for i in data_items)
+        return reportDataItems
