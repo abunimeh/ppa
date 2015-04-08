@@ -46,7 +46,7 @@ class PVTMetric:
         value = 0
         pvtdata = PVTMetricData()
         for line in lines:
-            found_db_file = re.search(r'(Loading[\s]*db[\s]*file).*_([rx\d]+_[prt][sft]+_[\d\.]+v_[-]*[\d]+c_[\w]+)', line, re.I)
+            found_db_file = re.search(r'(Loading[\s]*db[\s]*file).*/[\w]*_[\w]*_[\w]*_([rx\d]+[\w]+_[prt][sft]+_[\d\.]+v_[-]*[\d]+c_[\w]+)', line, re.I)
             if found_db_file:
                 value = found_db_file.group(2)
                 if value not in foundValue:
@@ -58,4 +58,6 @@ class PVTMetric:
             DataItems.append(pvtdata.foundDBfile)
 
         data_items = sorted(DataItems, key=itemgetter(0))
-        return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]
+        #return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]
+        print("pvt metric found for", file, "pvt: ", data_items)
+        return data_items

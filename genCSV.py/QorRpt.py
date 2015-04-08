@@ -69,8 +69,8 @@ class QorRpt:
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
 
-        # lookCount is used to search a certain amount after reg2reg
-        lookCount = 0
+        # look_count is used to search a certain amount after reg2reg
+        look_count = 0
         reportDataItems = []
         # close the file after reading the lines.
         f.close()
@@ -83,8 +83,8 @@ class QorRpt:
                 rptData.foundVersion = QorRpt.replaceSpace(stage + " tool version"), foundVersion.group(2)
                 reportDataItems.append(rptData.foundVersion)
             if rptData.foundRegGroup:
-                lookCount = 10
-            if lookCount != 0:
+                look_count = 10
+            if look_count != 0:
                 foundCritSlack = QorRpt.mathcLine("Critical", "path", "slack", line)
                 foundWorstHoldVio = QorRpt.mathcLine("Worst", "hold", "violation", line)
                 foundCritPathLength = QorRpt.mathcLine("critical", "path", "length", line)
@@ -106,7 +106,7 @@ class QorRpt:
                 if foundTotHoldVio:
                     rptData.foundTotHoldVio = QorRpt.replaceSpace(stage + " REG2REG " + "total hold viol"), foundTotHoldVio.group(2)
                     reportDataItems.append(rptData.foundTotHoldVio)
-                lookCount -= 1
+                look_count -= 1
 
             foundCellCount = QorRpt.mathcLine("Leaf", "Cell", "Count", line)
             foundCompileTime = QorRpt.mathcLine("Overall", "Compile", "Time", line)
@@ -131,4 +131,6 @@ class QorRpt:
                 reportDataItems.append(rptData.foundMaxFanVi)
 
         data_items = sorted(reportDataItems, key=itemgetter(0))
-        return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]
+        #return ("%s" % i[0] for i in data_items), ("%s" % i[1] for i in data_items)
+        # return data_items
+        return (i for i in data_items)

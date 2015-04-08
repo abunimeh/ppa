@@ -63,7 +63,8 @@ class DRCError:
             errorData.foundViolation = DRCError.replaceSpace(stage), "PASS"
             DataItems.append(errorData.foundViolation)
         data_items = sorted(DataItems, key=itemgetter(0))
-        return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]
+        #return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]
+        return data_items
 
     # def searchFinalrpt(file):
     #     import re

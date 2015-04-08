@@ -12,14 +12,14 @@ from clockTree import clockTreeRpt
 from Drc_Errors import DRCError
 from dpLog import dpLog
 from PvPower import PvPower
-testcases = ["cpu_testcase", "fdkex_SCAN"]
+test_cases_list = ["cpu_testcase", "fdkex_SCAN"]
 base_path = Configurations().parser_final()
 csv_file_exist = 0
-for test_case in testcases:
+for test_case in test_cases_list:
     metricNames = []
-    metricNames.append([['Testcase'], [test_case]])
+    test_case_metric = [("Testcase", test_case)]
+    metricNames.append(test_case_metric)
     list_of_files = findFiles.searchDir(test_case)
-
     for file in list_of_files:
         if file.endswith('.qor.rpt'):
             qrpt = QorRpt.searchfile(file)
@@ -55,74 +55,51 @@ for test_case in testcases:
             layouter = DRCError.searchfile(file)
             metricNames.append(layouter)
 
-    names = []
-    values = []
-    # temp =[]
-    #
-    # syn = []
-    # apr = []
-    # drc = []
-    # pv_max = []
-    # pv_min = []
-    # pv_power = []
-    # pv_noise = []
-    # import re
-    # for metric in metricNames:
-    #     try:
-    #         if metric[0][0]:
-    #             print("metric[0][0]", metric[0][0])
-    #
-    #             print("metric[0]", metric[0], metric[1])
-    #             sy = re.search('.*syn.*', metric[0][0], re.I)
-    #             if sy:
-    #                 print(metric[0], metric[1])
-    #                 syn.append([[metric[0]], [metric[1]]])
-    #             if "apr" in metric[0][0]:
-    #                 apr.append((metric[0], metric[1]))
-    #             if "drc" in metric[0][0]:
-    #                 drc.append((metric[0], metric[1]))
-    #             if "pv_max" in metric[0][0]:
-    #                 pv_max.append((metric[0], metric[1]))
-    #             if "pv_min" in metric[0][0]:
-    #                 pv_min.append((metric[0], metric[1]))
-    #             if "pv_power" in metric[0][0]:
-    #                 pv_power.append((metric[0], metric[1]))
-    #             if "pv_noise" in metric[0][0]:
-    #                 pv_noise.append((metric[0], metric[1]))
-    #     except IndexError:
-    #         print("not found")
-    #
-    # print("Metrics Found:")
-    # for syn in syn:
-    #     print(syn[0], syn[1])
-    # for apr in apr:
-    #     print(apr[0], apr[1])
-    # for drc in drc:
-    #     print(drc[0], drc[1])
-    # for pv_max in pv_max:
-    #     print(pv_max[0], pv_max[1])
-    # for pv_min in pv_min:
-    #     print(pv_min[0], pv_min[1])
-    # for pv_power in pv_power:
-    #     print(pv_power[0], pv_power[1])
-    # for pv_noise in pv_noise:
-    #     print(pv_noise[0], pv_noise[1])
-    #
-    # #temp = [syn, apr , drc , pv_max , pv_min , pv_power , pv_noise]
-    # temp.append(syn)
-    # temp.append(apr)
-    # temp.append(drc)
-    # temp.append(pv_max)
-    # temp.append(pv_min)
-    # temp.append(pv_power)
-    # temp.append(pv_noise)
-    for items in metricNames:
-        try:
-            # Names and values are concatenated into a string in order to have horizontal column
-            names += items[0]
-            values += items[1]
-        except IndexError:
-            print("not found")
+    names, values, temp, syn, apr, drc, pv_max, pv_min, pv_power, pv_noise = [], [], [], [], [], [], [], [], [], []
+
+    for metric in metricNames:
+        met = tuple(metric)
+        for name in range(len(met)):
+                print("metric[%s]" % name, met[name])
+                if "syn" in met[name][0]:
+                    print("metric", met[name], "added")
+                    syn.append(met[name])
+                    continue
+                if "apr" in met[name][0]:
+                    print("metric added:", met[name])
+                    apr.append(met[name])
+                    continue
+                if "drc" in met[name][0]:
+                    print("metric", met[name], "added")
+                    drc.append(met[name])
+                    continue
+                if "pv_max" in met[name][0]:
+                    print("metric", met[name], "added")
+                    pv_max.append(met[name])
+                    continue
+                if "pv_min" in met[name][0]:
+                    print("metric", met[name], "added")
+                    pv_min.append((met[name]))
+                    continue
+                if "pv_power" in met[name][0]:
+                    print("metric", met[name], "added")
+                    pv_power.append((met[name]))
+                    continue
+                if "pv_noise" in met[name][0]:
+                    print("metric", met[name], "added")
+                    pv_noise.append((met[name]))
+                    continue
+
+    temp = [test_case_metric, syn, apr, drc, pv_max, pv_min, pv_power, pv_noise]
+    print("temp:", temp)
+
+    for metrics in temp:
+        metric = tuple(metrics)
+        print("The length of the 'item' is :", len(metric), "items: ", metric)
+        for name in range(len(metric)):
+                # Names and values are concatenated into a string in order to have horizontal column
+                names += [metric[name][0]]
+                values += [metric[name][1]]
     print("Metrics found: \n", names, values)
     if csv_file_exist == 0:
         csv_file_exist = 1
@@ -134,7 +111,6 @@ for test_case in testcases:
             writer.writerow(' ')
         myfile.close()
         print('csv created (%sgoodfile.csv) with %s' % (base_path, test_case))
-
     else:
         # Appends the csv with the following testcases
         with open(base_path + r'goodfile.csv', 'a') as myfile:

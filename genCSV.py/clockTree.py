@@ -25,5 +25,6 @@ class clockTreeRpt:
                 DataItems.append(rptData.foundMaxGlobeSkew)
 
         data_items = sorted(DataItems, key=itemgetter(0))
-        return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]
+        #return ["%s" % i[0] for i in data_items], ["%s" % i[1] for i in data_items]
+        return data_items
 
