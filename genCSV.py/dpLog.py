@@ -48,7 +48,7 @@ class dpLog:
                 dpData.foundPeakMem = dpLog.replaceSpace(stage + " Peak Memory"), foundPeakMem.group(2)
                 DataItems.append(dpData.foundPeakMem)
                 foundFlag = 1
-            if foundRuntime:
+            elif foundRuntime:
                 dpData.foundRuntime = dpLog.replaceSpace(stage + " Runtime"), foundRuntime.group(2)
                 DataItems.append(dpData.foundRuntime)
 

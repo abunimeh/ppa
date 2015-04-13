@@ -1,11 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/python
 # MAIN
 # STATUS -- MISSING TOTAL RUNSET ERROR (OF ALL LAYOUT ERROR RUNS OF THE TESTCASE) COUNT METRIC
+
+#def __main__(file):
 import csv
-import sys
-import os
 from operator import itemgetter
-#from Configurations import Configurations
+from Configurations import Configurations
 from findFiles import findFiles
 from QorRpt import QorRpt
 from FinalRpt import FinalRpt
@@ -16,31 +16,12 @@ from clockTree import clockTreeRpt
 from Drc_Errors import DRCError
 from dpLog import dpLog
 from PvPower import PvPower
-from Total_DRC_Errors import total_drc_errors
-#directory_to_search = input("Enter first to be searched: ")
-#test_cases_list = [directory_to_search]
-#while True:
-#    directory_to_search = input("Enter any other to be searched (or Enter to quit): ")
-#    if not directory_to_search:
-#        break
-#    test_cases_list.append(directory_to_search)
-print("number of arguments recieved:", (len(sys.argv)-1))
-test_cases_list= []
-for argument in sys.argv:
-    if argument is not sys.argv[0]:
-        print(argument)
-        test_cases_list.append(argument)
-#print("test_case: ",  test_cases)
 
-#base_path = Configurations().parser_final()
+test_cases_list = ["cpu_testcase", "fdkex_SCAN"]
+base_path = Configurations().parser_final()
 csv_file_exist = 0
 
 for test_case in test_cases_list:
-    directory = os.path.dirname(test_case)
-    files_in_directory = os.listdir(directory)
-    for files in files_in_directory:
-        print("files in dir:",  files)
-    print("### Searching:", test_case)
     metricNames = []
     list_of_files = findFiles.searchDir(test_case)
     found_tool_version = 0
@@ -82,7 +63,7 @@ for test_case in test_cases_list:
                     if "drc_tool_version" in layout_er[i]:
                         found_tool_version = 1
                 metricNames.append(layout_er)
-    metricNames.append([("drc_total_viols", total_drc_errors.get_total_count(metricNames))])
+
     names, values, temp, syn, apr, drc, pv_max, pv_min, pv_power, pv_noise = [], [], [], [], [], [], [], [], [], []
 
     for metric in metricNames:
@@ -132,19 +113,19 @@ for test_case in test_cases_list:
     if csv_file_exist == 0:
         csv_file_exist = 1
         # Creates a csv with the first testcase
-        with open(test_case + r'goodfile.csv', 'wt') as myfile:
+        with open(base_path + r'goodfile.csv', 'wt') as myfile:
             writer = csv.writer(myfile, lineterminator='\n')
             writer.writerow(names)
             writer.writerow(values)
             writer.writerow(' ')
         myfile.close()
-        print('%sgoodfile.csv created with ' % ( test_case))
+        print('%sgoodfile.csv created with %s' % (base_path, test_case))
     else:
         # Appends the csv with the following testcases
-        with open(test_case + r'goodfile.csv', 'a') as myfile:
+        with open(base_path + r'goodfile.csv', 'a') as myfile:
             writer = csv.writer(myfile, lineterminator='\n')
             writer.writerow(names)
             writer.writerow(values)
             writer.writerow(' ')
         myfile.close()
-        print('%sgoodfile.csv appended with ' % (test_case))
+        print('%sgoodfile.csv appended with %s' % (base_path, test_case))

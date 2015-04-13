@@ -33,13 +33,13 @@ class PvPower:
             if foundCInternPwr:
                 pvData.foundCInternPwr = PvPower.replaceSpace(pv + " internal"), foundCInternPwr.group(2)
                 DataItems.append(pvData.foundCInternPwr)
-            if foundCLeakPwr:
+            elif foundCLeakPwr:
                 pvData.foundCLeakPwr = PvPower.replaceSpace(pv + " leakage"), foundCLeakPwr.group(2)
                 DataItems.append(pvData.foundCLeakPwr)
-            if foundNetSwPwr:
+            elif foundNetSwPwr:
                 pvData.foundNetSwPwr = PvPower.replaceSpace(pv + " switch"), foundNetSwPwr.group(2)
                 DataItems.append(pvData.foundNetSwPwr)
-            if foundTotalPwr:
+            elif foundTotalPwr:
                 pvData.foundTotalPwr = PvPower.replaceSpace(pv + " total"), foundTotalPwr.group(2)
                 DataItems.append(pvData.foundTotalPwr)
 

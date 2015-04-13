@@ -4,7 +4,7 @@ class PhysicalRpt:
     @staticmethod
     def mathcLine(regex1,regex2, regex3, line):
         import re
-        regexR = r'(%s[\s]*%s[\s]*%s[\s]*):+[\s]*([\d]+[\.]*[\d]*)+.*' %(regex1, regex2, regex3)
+        regexR = r'(%s[\s]*%s[\s]*%s[\s]*):+[\s]*([\d]+[\.]*[\d]*.*%s*)' %(regex1, regex2, regex3, '%')
         result = re.search(regexR, line, re.I)
         return result
 
@@ -33,13 +33,13 @@ class PhysicalRpt:
             if foundUtil:
                 rptData.foundUtil = PhysicalRpt.replaceSpace("apr utilization"), foundUtil.group(2)
                 DataItems.append(rptData.foundUtil)
-            if foundShort:
+            elif foundShort:
                 rptData.foundShort = PhysicalRpt.replaceSpace("apr Shorts"), foundShort.group(2)
                 DataItems.append(rptData.foundShort)
-            if foundTotalEr:
+            elif foundTotalEr:
                 rptData.foundTotalEr = PhysicalRpt.replaceSpace("apr DRC"), foundTotalEr.group(2)
                 DataItems.append(rptData.foundTotalEr)
-            if foundTotalMem:
+            elif foundTotalMem:
                 rptData.foundTotalMem = PhysicalRpt.replaceSpace("apr Memory"), foundTotalMem.group(2)
                 DataItems.append(rptData.foundTotalMem)
 

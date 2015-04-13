@@ -42,7 +42,7 @@ class FinalRpt:
             foundNumOfActuEr = re.search(r'(The[\s]*number[\s]*of[\s]*actual[\s]*errors)[\s]*:+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
 
             if foundNumOfActuEr:
-                rptData.foundNumOfActuEr = FinalRpt.replaceSpace(stage), foundNumOfActuEr.group(2)
+                rptData.foundNumOfActuEr = FinalRpt.replaceSpace(stage), (foundNumOfActuEr.group(2)+" (NB)")
                 DataItems.append(rptData.foundNumOfActuEr)
 
         return DataItems
