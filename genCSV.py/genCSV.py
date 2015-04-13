@@ -4,6 +4,7 @@
 import csv
 import sys
 import os
+from datetime import datetime
 from operator import itemgetter
 #from Configurations import Configurations
 from findFiles import findFiles
@@ -104,9 +105,12 @@ for test_case in test_cases_list:
                     pv_noise.append((met[name]))
                     continue
 
-    test_case_metric = [("Testcase", test_case)]
+    test_case_metric = [("Testcase_Name", test_case)]
+    date = str(datetime.now())
+    print("date: %s" %date)
+    date_metric = [("DateTime", date)]
 
-    temp = [test_case_metric, tuple(sorted(syn, key=itemgetter(0))), tuple(sorted(apr, key=itemgetter(0))),
+    temp = [test_case_metric, date_metric, tuple(sorted(syn, key=itemgetter(0))), tuple(sorted(apr, key=itemgetter(0))),
         tuple(sorted(drc, key=itemgetter(0))), tuple(sorted(pv_max, key=itemgetter(0))), 
         tuple(sorted(pv_min, key=itemgetter(0))), tuple(sorted(pv_power, key=itemgetter(0))), 
         tuple(sorted(pv_noise, key=itemgetter(0)))]

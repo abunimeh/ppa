@@ -6,7 +6,7 @@ class Configurations:
     def parser_final(self):
         from configparser import ConfigParser
         parser = ConfigParser()
-        parser.read('/home/Dev/Intel/ppa/genCSV.py/Config.ini')
+        parser.read('Config.ini')
         parser_finals = parser.get('file_path', 'common_base_path')
-        return  parser_finals
+        return parser_finals
         #print(parser.get('file_path', 'common_base_path'))
