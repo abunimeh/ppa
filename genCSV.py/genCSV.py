@@ -119,7 +119,10 @@ for test_case in test_cases_list:
     pv_power_list = tuple(sorted(pv_power, key=itemgetter(0)))
     pv_noise_list = tuple(sorted(pv_noise, key=itemgetter(0)))
 
-    temp = [test_case_metric, syn_list, apr_list, drc_list, pv_max_list, pv_min_list, pv_power_list, pv_noise_list]
+    temp = [test_case_metric, tuple(sorted(syn, key=itemgetter(0))), tuple(sorted(apr, key=itemgetter(0))),
+        tuple(sorted(drc, key=itemgetter(0))), tuple(sorted(pv_max, key=itemgetter(0))), 
+        tuple(sorted(pv_min, key=itemgetter(0))), tuple(sorted(pv_power, key=itemgetter(0))), 
+        tuple(sorted(pv_noise, key=itemgetter(0)))]
     print("metrics found: ")
     for metrics in temp:
         metric = tuple(metrics)
