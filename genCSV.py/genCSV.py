@@ -17,13 +17,7 @@ from Drc_Errors import DRCError
 from dpLog import dpLog
 from PvPower import PvPower
 from Total_DRC_Errors import total_drc_errors
-#directory_to_search = input("Enter first to be searched: ")
-#test_cases_list = [directory_to_search]
-#while True:
-#    directory_to_search = input("Enter any other to be searched (or Enter to quit): ")
-#    if not directory_to_search:
-#        break
-#    test_cases_list.append(directory_to_search)
+
 print("number of arguments recieved:", (len(sys.argv)-1))
 test_cases_list= []
 for argument in sys.argv:
@@ -111,13 +105,6 @@ for test_case in test_cases_list:
                     continue
 
     test_case_metric = [("Testcase", test_case)]
-    syn_list = tuple(sorted(syn, key=itemgetter(0)))
-    apr_list = tuple(sorted(apr, key=itemgetter(0)))
-    drc_list = tuple(sorted(drc, key=itemgetter(0)))
-    pv_max_list = tuple(sorted(pv_max, key=itemgetter(0)))
-    pv_min_list = tuple(sorted(pv_min, key=itemgetter(0)))
-    pv_power_list = tuple(sorted(pv_power, key=itemgetter(0)))
-    pv_noise_list = tuple(sorted(pv_noise, key=itemgetter(0)))
 
     temp = [test_case_metric, tuple(sorted(syn, key=itemgetter(0))), tuple(sorted(apr, key=itemgetter(0))),
         tuple(sorted(drc, key=itemgetter(0))), tuple(sorted(pv_max, key=itemgetter(0))), 
