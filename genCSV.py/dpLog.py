@@ -46,6 +46,7 @@ class dpLog:
 
             if foundPeakMem and foundFlag != 1:
                 dpData.foundPeakMem = dpLog.replaceSpace(stage + " Peak Memory"), foundPeakMem.group(2)
+                print("found peak_mem", dpData.foundPeakMem, file)
                 DataItems.append(dpData.foundPeakMem)
                 foundFlag = 1
             elif foundRuntime:

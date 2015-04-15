@@ -20,7 +20,7 @@ from PvPower import PvPower
 from Total_DRC_Errors import total_drc_errors
 
 print("number of arguments recieved:", (len(sys.argv)-1))
-test_cases_list= []
+test_cases_list = []
 for argument in sys.argv:
     if argument is not sys.argv[0]:
         print(argument)
@@ -29,12 +29,12 @@ for argument in sys.argv:
 
 #base_path = Configurations().parser_final()
 csv_file_exist = 0
-
+tool = "none"
 for test_case in test_cases_list:
-    directory = os.path.dirname(test_case)
-    files_in_directory = os.listdir(directory)
-    for files in files_in_directory:
-        print("files in dir:",  files)
+    # directory = os.path.dirname(test_case)
+    # files_in_directory = os.listdir(directory)
+    # for files in files_in_directory:
+    #     print("files in dir:",  files)
     print("### Searching:", test_case)
     metricNames = []
     list_of_files = findFiles.searchDir(test_case)
@@ -104,16 +104,19 @@ for test_case in test_cases_list:
                 elif "pv_noise" in met[name][0]:
                     pv_noise.append((met[name]))
                     continue
+    if "cadence" in test_case:
+        tool = "cadence"
+    elif "synopsys" in test_case:
+        tool = "synopsys"
+    tool_metric = [("Tool", tool)]
+    test_case_metric = [("Testcase_Name", os.path.basename(test_case))]
+    date_metric = [("DateTime", str(datetime.now()))]
 
-    test_case_metric = [("Testcase_Name", test_case)]
-    date = str(datetime.now())
-    print("date: %s" %date)
-    date_metric = [("DateTime", date)]
+    temp = [test_case_metric, date_metric, tool_metric, tuple(sorted(syn, key=itemgetter(0))),
+        tuple(sorted(apr, key=itemgetter(0))), tuple(sorted(drc, key=itemgetter(0))),
+        tuple(sorted(pv_max, key=itemgetter(0))), tuple(sorted(pv_min, key=itemgetter(0))),
+        tuple(sorted(pv_power, key=itemgetter(0))), tuple(sorted(pv_noise, key=itemgetter(0)))]
 
-    temp = [test_case_metric, date_metric, tuple(sorted(syn, key=itemgetter(0))), tuple(sorted(apr, key=itemgetter(0))),
-        tuple(sorted(drc, key=itemgetter(0))), tuple(sorted(pv_max, key=itemgetter(0))), 
-        tuple(sorted(pv_min, key=itemgetter(0))), tuple(sorted(pv_power, key=itemgetter(0))), 
-        tuple(sorted(pv_noise, key=itemgetter(0)))]
     print("metrics found: ")
     for metrics in temp:
         metric = tuple(metrics)
@@ -126,19 +129,19 @@ for test_case in test_cases_list:
     if csv_file_exist == 0:
         csv_file_exist = 1
         # Creates a csv with the first testcase
-        with open(test_case + r'goodfile.csv', 'wt') as myfile:
+        with open(r'Regr_Suite_Runs_Comparison_Data.csv', 'wt') as myfile:
             writer = csv.writer(myfile, lineterminator='\n')
             writer.writerow(names)
             writer.writerow(values)
             writer.writerow(' ')
         myfile.close()
-        print('%sgoodfile.csv created with ' % ( test_case))
+        print('Regr_Suite_Runs_Comparison_Data.csv created with %s' % test_case)
     else:
         # Appends the csv with the following testcases
-        with open(test_case + r'goodfile.csv', 'a') as myfile:
+        with open(r'Regr_Suite_Runs_Comparison_Data.csv', 'a') as myfile:
             writer = csv.writer(myfile, lineterminator='\n')
             writer.writerow(names)
             writer.writerow(values)
             writer.writerow(' ')
         myfile.close()
-        print('%sgoodfile.csv appended with ' % (test_case))
+        print('Regr_Suite_Runs_Comparison_Data.csv appended with %s' % test_case)

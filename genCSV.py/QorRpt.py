@@ -14,13 +14,13 @@ class QorRpt:
         pv_noise = re.search(r'.*pv.*noise.*', file, re.I)
         if syn:
             stage = 'syn'
-        if apr:
+        elif apr:
             stage = 'apr'
-        if pv_max:
+        elif pv_max:
             stage = 'pv max tttt'
-        if pv_min:
+        elif pv_min:
             stage = 'pv min tttt'
-        if pv_noise:
+        elif pv_noise:
             stage = 'pv noise tttt'
         return stage
 
@@ -53,7 +53,9 @@ class QorRpt:
         # close the file after reading the lines.
         f.close()
         rptData = QorRptData()
-
+        rptData.foundCritSlack = [QorRpt.replaceSpace(stage + " REG2REG " + "worst setup viol"), "none"]
+        if 'pv min' in stage:
+            rptData.foundCritSlack[0] = QorRpt.replaceSpace(stage + " REG2REG " + "worst hold viol")
         for line in lines:
             rptData.foundRegGroup = re.search(r'.*(REG2REG).*', line, re.I)
             foundVersion = re.search(r'(Version):[\s]*([\S]*)', line, re.I)
@@ -61,19 +63,26 @@ class QorRpt:
                 rptData.foundVersion = QorRpt.replaceSpace(stage + " tool version"), foundVersion.group(2)
                 reportDataItems.append(rptData.foundVersion)
             elif rptData.foundRegGroup:
-                look_count = 10
-            if look_count != 0:
+                if 'pv max tttt' in stage:
+                    if 'max_delay/setup' in line:
+                        look_count = 10
+                elif 'pv min tttt' in stage:
+                    if 'min_delay/hold' in line:
+                        look_count = 10
+                else:
+                    look_count = 10
+            elif look_count != 0 and stage != 'pv noise tttt':
                 foundCritSlack = QorRpt.mathcLine("Critical", "path", "slack", line)
                 foundWorstHoldVio = QorRpt.mathcLine("Worst", "hold", "violation", line)
                 foundCritPathLength = QorRpt.mathcLine("critical", "path", "length", line)
                 foundTotNegSlack = QorRpt.mathcLine("total", "Negative", "slack", line)
                 foundTotHoldVio = QorRpt.mathcLine("total", "hold", "violation", line)
-
+                found_new_section = re.search(r'.*Timing[\s]*Path[\s]*Group.*', line, re.I)
                 if foundCritSlack:
-                    rptData.foundCritSlack = QorRpt.replaceSpace(stage + " REG2REG " + "worst setup viol"), foundCritSlack.group(2)
-                    reportDataItems.append(rptData.foundCritSlack)
+                    rptData.foundCritSlack[1] = foundCritSlack.group(2)
+                    reportDataItems.append(tuple(rptData.foundCritSlack))
                 elif foundWorstHoldVio:
-                    rptData.foundWorstHoldVio = QorRpt.replaceSpace(stage + " REG2REG " + "worst hold viol"), foundWorstHoldVio.group(2)
+                    rptData.foundWorstHoldVio = QorRpt.replaceSpace(stage + " REG2REG " + "worst hold violation"), foundWorstHoldVio.group(2)
                     reportDataItems.append(rptData.foundWorstHoldVio)
                 elif foundCritPathLength:
                     rptData.foundCritPathLength = QorRpt.replaceSpace(stage + " REG2REG " + "critical path len"), foundCritPathLength.group(2)
@@ -84,7 +93,8 @@ class QorRpt:
                 elif foundTotHoldVio:
                     rptData.foundTotHoldVio = QorRpt.replaceSpace(stage + " REG2REG " + "total hold viol"), foundTotHoldVio.group(2)
                     reportDataItems.append(rptData.foundTotHoldVio)
-                look_count -= 1
+                elif found_new_section:
+                    look_count = 0
 
             foundCellCount = QorRpt.mathcLine("Leaf", "Cell", "Count", line)
             foundCompileTime = QorRpt.mathcLine("Overall", "Compile", "Time", line)
@@ -107,5 +117,4 @@ class QorRpt:
             elif foundMaxFanVi:
                 rptData.foundMaxFanVi = QorRpt.replaceSpace(stage + " max fanout viols"), foundMaxFanVi.group(2)
                 reportDataItems.append(rptData.foundMaxFanVi)
-
         return reportDataItems
