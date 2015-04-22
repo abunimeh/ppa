@@ -1,0 +1,17 @@
+ICV_HOME_DIR      = /p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1
+WORKING_DIR       = .
+INLIB             = /tmp/spalutla_fdkex_51074/spalutla.fdkex.51074.iss/input/fdkex.stm
+INLIB_PATH        = 
+OUTLIB            = run_details/fdkex
+OUTLIB_PATH       = .
+BLOCK             = fdkex
+PYDB_PATH         = run_details/pydb
+RUN_DETAILS_DIR   = run_details
+NDB_PATH          = run_details/.ndb
+FORMAT            = GDSII
+EVACCESS_PATH     = run_details/pydb
+GROUP_PATH        = run_details/group
+RUNSET_FILE_NAME  = powerhookup72_combined.rs
+ENVIRONMENT STRING  DR_GATE_DIRECTION = VERTICAL
+ENVIRONMENT STRING  PDSSTM = /tmp/spalutla_fdkex_51074/spalutla.fdkex.51074.iss/spalutla.fdkex.powerhookup72.iss
+ENVIRONMENT STRING  SYNOP_ZROUTE_TECH_FILE = UNDEFINED

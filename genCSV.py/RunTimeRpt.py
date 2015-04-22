@@ -39,12 +39,14 @@ class RunTimeRpt:
         f.close()
         DataItems = []
         rptData = RunTimeRptData()
+        rptData.foundRunTime = [RunTimeRpt.replaceSpace(stage + " run time"), "N/A"]
 
         for line in lines:
             foundRunTime = re.search(r'(Runtime[\s]*of[\s]*Entire[\s]*Timing[\s]*Run)[\s]*=+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
 
             if foundRunTime:
-                rptData.foundRunTime = RunTimeRpt.replaceSpace(stage + " run time"), foundRunTime.group(2)
-                DataItems.append(rptData.foundRunTime)
+                rptData.foundRunTime[1] = foundRunTime.group(2)
+
+        DataItems.append(rptData.foundRunTime)
 
         return DataItems

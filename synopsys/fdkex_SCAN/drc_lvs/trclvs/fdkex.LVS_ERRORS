@@ -1,0 +1,54 @@
++------------------------------------------------------------------------+
+|                    ICV_Compare LVS Comparison Report                   |
++------------------------------------------------------------------------+
+
+ICV_Compare (R) Hierarchical Layout Vs. Schematic
+	SUSE.64 Release J-2014.06.SP2.HF1.4006 2014/07/31
+Copyright (C) Synopsys, Inc. All rights reserved.
+
+
+--------------------------------------------------------------------------
+LVS error file     = fdkex.LVS_ERRORS
+Layout error file  = fdkex.LAYOUT_ERRORS
+Schematic netlist  = /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/drc_lvs/fdkex.icv
+Layout netlist     = /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/drc_lvs/trclvs/fdkex.net
+Runset file        = /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/1273/p1273dx_LVScompare.rs
+Working directory  = /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/drc_lvs/trclvs
+Compare directory  = /tmp/spalutla/adf_nightly_regr/2015-03-31/drc_trclvs_run_details_18936/compare
+Compare start time = 2015-03-31 10:36:47
+
+
+
+--------------------------------------------------------------------------
+Final comparison result:PASS
+
+			#####   ##   ##### #####
+			#   #  #  #  #     #    
+			##### ###### ##### #####
+			#     #    #     #     #
+			#     #    # ##### #####
+
+
+TOP equivalence point:
+		[FDKEX, FDKEX]
+
+Comparison summary
+
+    839 successful equivalencies
+      0 failed equivalencies
+
+Schematic and layout agree at all user-intended equivalent points involved
+in compare.
+
+
+--------------------------------------------------------------------------
+The following user-intended equivalence point(s) are invalid;
+
+ - Schematic cell not defined.
+   Layout cell not defined.
+   	[D8XSRCPRTGUVM2B, D8XSRCPRTGUVM2B]
+	[D8XSRTCNUVM2VTUN, D8XSRTCNUVM2VTUN]
+	[D8XSRCPRTGUVM2A, D8XSRCPRTGUVM2A]
+	[D8XSRCPRTGUVM2C, D8XSRCPRTGUVM2C]
+
+End of LVS comparison report

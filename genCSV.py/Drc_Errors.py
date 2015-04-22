@@ -48,11 +48,13 @@ class DRCError:
         violationCount = 0
         DataItems = []
         fin_rpt = DRCError.does_fin_rpt_exist(file)
+        errorData.foundToolVersion = [DRCError.replaceSpace("drc tool version"), "N/A"]
+        errorData.foundViolation = [DRCError.replaceSpace(stage), "N/A"]
+
         for line in lines:
             foundToolVersion = re.search(r'(Generated[\s]*by):.*[\s]+([\S]*[\.]+[\S]*[\.]*[\S]*[\.]*[\S]*[\.]*[\S]*)[\s]*', line, re.I)
             if foundToolVersion:
-                errorData.foundToolVersion = DRCError.replaceSpace("drc tool version"), foundToolVersion.group(2)
-                DataItems.append(errorData.foundToolVersion)
+                errorData.foundToolVersion[1] = foundToolVersion.group(2)
             if fin_rpt != 1:
                 foundViolation = re.search(r'[\s]*([\d]+)[\s]*(violation+[s]*[\s]*found)+[\s]*', line, re.I)
                 if foundViolation:
@@ -61,10 +63,11 @@ class DRCError:
         if fin_rpt == 1:
             return DataItems
         if violationCount > 0:
-            errorData.foundViolation = DRCError.replaceSpace(stage), violationCount
-            DataItems.append(errorData.foundViolation)
+            errorData.foundViolation[1] = violationCount
         else:
-            errorData.foundViolation = DRCError.replaceSpace(stage), "PASS"
-            DataItems.append(errorData.foundViolation)
+            errorData.foundViolation[1] = "PASS"
+
+        DataItems.append(tuple(errorData.foundToolVersion))
+        DataItems.append(tuple(errorData.foundViolation))
 
         return DataItems

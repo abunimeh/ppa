@@ -1,8 +1,11 @@
 
 class QorRptData:
     foundCellCount = ()
+
+
 class QorRpt:
     foundCellCount = ()
+
     @staticmethod
     def metric_naming(file):
         import re
@@ -53,15 +56,25 @@ class QorRpt:
         # close the file after reading the lines.
         f.close()
         rptData = QorRptData()
-        rptData.foundCritSlack = [QorRpt.replaceSpace(stage + " REG2REG " + "worst setup viol"), "none"]
+        rptData.foundVersion = [QorRpt.replaceSpace(stage + " tool version"), "N/A"]
+        rptData.foundCritSlack = [QorRpt.replaceSpace(stage + " REG2REG " + "worst setup viol"), "N/A"]
         if 'pv min' in stage:
             rptData.foundCritSlack[0] = QorRpt.replaceSpace(stage + " REG2REG " + "worst hold viol")
+        rptData.foundWorstHoldVio = [QorRpt.replaceSpace(stage + " REG2REG " + "worst hold violation"), "N/A"]
+        rptData.foundCritPathLength = [QorRpt.replaceSpace(stage + " REG2REG " + "critical path len"), "N/A"]
+        rptData.foundTotNegSlack = [QorRpt.replaceSpace(stage + " REG2REG " + "total neg slack"), "N/A"]
+        rptData.foundTotHoldVio = [QorRpt.replaceSpace(stage + " REG2REG " + "total hold viol"), "N/A"]
+        QorRptData.foundCellCount = [QorRpt.replaceSpace(stage + " Cell Count"), "N/A"]
+        rptData.foundCompileTime = [QorRpt.replaceSpace(stage + " cpu runtime"), "N/A"]
+        rptData.foundMaxTransVi = [QorRpt.replaceSpace(stage + " max trans viols"), "N/A"]
+        rptData.foundMaxCapVi = [QorRpt.replaceSpace(stage + " max cap viols"), "N/A"]
+        rptData.foundMaxFanVi = [QorRpt.replaceSpace(stage + " max fanout viols"), "N/A"]
+
         for line in lines:
             rptData.foundRegGroup = re.search(r'.*(REG2REG).*', line, re.I)
             foundVersion = re.search(r'(Version):[\s]*([\S]*)', line, re.I)
             if foundVersion:
-                rptData.foundVersion = QorRpt.replaceSpace(stage + " tool version"), foundVersion.group(2)
-                reportDataItems.append(rptData.foundVersion)
+                rptData.foundVersion[1] = foundVersion.group(2)
             elif rptData.foundRegGroup:
                 if 'pv max tttt' in stage:
                     if 'max_delay/setup' in line:
@@ -78,21 +91,17 @@ class QorRpt:
                 foundTotNegSlack = QorRpt.mathcLine("total", "Negative", "slack", line)
                 foundTotHoldVio = QorRpt.mathcLine("total", "hold", "violation", line)
                 found_new_section = re.search(r'.*Timing[\s]*Path[\s]*Group.*', line, re.I)
+
                 if foundCritSlack:
                     rptData.foundCritSlack[1] = foundCritSlack.group(2)
-                    reportDataItems.append(tuple(rptData.foundCritSlack))
                 elif foundWorstHoldVio:
-                    rptData.foundWorstHoldVio = QorRpt.replaceSpace(stage + " REG2REG " + "worst hold violation"), foundWorstHoldVio.group(2)
-                    reportDataItems.append(rptData.foundWorstHoldVio)
+                    rptData.foundWorstHoldVio[1] = foundWorstHoldVio.group(2)
                 elif foundCritPathLength:
-                    rptData.foundCritPathLength = QorRpt.replaceSpace(stage + " REG2REG " + "critical path len"), foundCritPathLength.group(2)
-                    reportDataItems.append(rptData.foundCritPathLength)
+                    rptData.foundCritPathLength[1] = foundCritPathLength.group(2)
                 elif foundTotNegSlack:
-                    rptData.foundTotNegSlack = QorRpt.replaceSpace(stage + " REG2REG " + "total neg slack"), foundTotNegSlack.group(2)
-                    reportDataItems.append(rptData.foundTotNegSlack)
+                    rptData.foundTotNegSlack[1] = foundTotNegSlack.group(2)
                 elif foundTotHoldVio:
-                    rptData.foundTotHoldVio = QorRpt.replaceSpace(stage + " REG2REG " + "total hold viol"), foundTotHoldVio.group(2)
-                    reportDataItems.append(rptData.foundTotHoldVio)
+                    rptData.foundTotHoldVio[1] = foundTotHoldVio.group(2)
                 elif found_new_section:
                     look_count = 0
 
@@ -103,18 +112,26 @@ class QorRpt:
             foundMaxFanVi = QorRpt.mathcLine("Max", "Fanout", "Violations", line)
 
             if foundCellCount:
-                QorRptData.foundCellCount = QorRpt.replaceSpace(stage + " Cell Count"), foundCellCount.group(2)
-                reportDataItems.append(rptData.foundCellCount)
+                rptData.foundCellCount[1] = foundCellCount.group(2)
             elif foundCompileTime:
-                rptData.foundCompileTime = QorRpt.replaceSpace(stage + " cpu runtime"), foundCompileTime.group(2)
-                reportDataItems.append(rptData.foundCompileTime)
+                rptData.foundCompileTime[1] = foundCompileTime.group(2)
             elif foundMaxTransVi:
-                rptData.foundMaxTransVi = QorRpt.replaceSpace(stage + " max trans viols"), foundMaxTransVi.group(2)
-                reportDataItems.append(rptData.foundMaxTransVi)
+                rptData.foundMaxTransVi[1] = foundMaxTransVi.group(2)
             elif foundMaxCapVi:
-                rptData.foundMaxCapVi = QorRpt.replaceSpace(stage + " max cap viols"), foundMaxCapVi.group(2)
-                reportDataItems.append(rptData.foundMaxCapVi)
+                rptData.foundMaxCapVi[1] = foundMaxCapVi.group(2)
             elif foundMaxFanVi:
-                rptData.foundMaxFanVi = QorRpt.replaceSpace(stage + " max fanout viols"), foundMaxFanVi.group(2)
-                reportDataItems.append(rptData.foundMaxFanVi)
+                rptData.foundMaxFanVi[1] = foundMaxFanVi.group(2)
+
+        reportDataItems.append(tuple(rptData.foundVersion))
+        reportDataItems.append(tuple(rptData.foundCritSlack))
+        reportDataItems.append(tuple(rptData.foundWorstHoldVio))
+        reportDataItems.append(tuple(rptData.foundCritPathLength))
+        reportDataItems.append(tuple(rptData.foundTotNegSlack))
+        reportDataItems.append(tuple(rptData.foundTotHoldVio))
+        reportDataItems.append(tuple(rptData.foundCellCount))
+        reportDataItems.append(tuple(rptData.foundCompileTime))
+        reportDataItems.append(tuple(rptData.foundMaxTransVi))
+        reportDataItems.append(tuple(rptData.foundMaxCapVi))
+        reportDataItems.append(tuple(rptData.foundMaxFanVi))
+
         return reportDataItems

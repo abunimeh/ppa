@@ -36,8 +36,9 @@ class dpLog:
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()
-
         dpData = dpLogData()
+        dpData.foundPeakMem = [dpLog.replaceSpace(stage + " Peak Memory"), "N/A"]
+        dpData.foundRuntime = [dpLog.replaceSpace(stage + " Runtime"), "N/A"]
 
         # reversed in order to find the last value in the file
         for line in reversed(lines):
@@ -45,12 +46,12 @@ class dpLog:
             foundRuntime = re.search(r'(Overall[\s]*engine[\s]*time)[\s]*=+[\s]*([\d]*:*[\d]*:*[\d]+)+', line, re.I)
 
             if foundPeakMem and foundFlag != 1:
-                dpData.foundPeakMem = dpLog.replaceSpace(stage + " Peak Memory"), foundPeakMem.group(2)
-                print("found peak_mem", dpData.foundPeakMem, file)
-                DataItems.append(dpData.foundPeakMem)
+                dpData.foundPeakMem[1] = foundPeakMem.group(2)
                 foundFlag = 1
             elif foundRuntime:
-                dpData.foundRuntime = dpLog.replaceSpace(stage + " Runtime"), foundRuntime.group(2)
-                DataItems.append(dpData.foundRuntime)
+                dpData.foundRuntime[1] = foundRuntime.group(2)
+
+        DataItems.append(tuple(dpData.foundRuntime))
+        DataItems.append(tuple(dpData.foundPeakMem))
 
         return DataItems

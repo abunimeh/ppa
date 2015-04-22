@@ -1,9 +1,0 @@
-Parsing option_file: split_netlist.tech (EX-304)
-Running Amd_64b    
-numNets 59428 numNetsPerAssembly 767
-total number of split nets: 2303 (3.87528%)
-  
-xTractor      Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=68.6  
-  
-Done          Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=68.6  
-

@@ -22,25 +22,31 @@ class PvPower:
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()
-
         pvData = PvPowerData()
+        pv = "pv power tttt"
+        pvData.foundCInternPwr = [PvPower.replaceSpace(pv + " internal"), "N/A"]
+        pvData.foundCLeakPwr = [PvPower.replaceSpace(pv + " leakage"), "N/A"]
+        pvData.foundNetSwPwr = [PvPower.replaceSpace(pv + " switch"), "N/A"]
+        pvData.foundTotalPwr = [PvPower.replaceSpace(pv + " total"), "N/A"]
+
         for line in lines:
             foundCInternPwr = PvPower.mathcLine("Cell", "Internal", "Power", line)
             foundCLeakPwr = PvPower.mathcLine("Cell", "Leakage", "Power", line)
             foundNetSwPwr = PvPower.mathcLine("Net", "switching", "Power", line)
             foundTotalPwr = PvPower.mathcLine("Total", "Power", " ", line)
-            pv = "pv power tttt"
+
             if foundCInternPwr:
-                pvData.foundCInternPwr = PvPower.replaceSpace(pv + " internal"), foundCInternPwr.group(2)
-                DataItems.append(pvData.foundCInternPwr)
+                pvData.foundCInternPwr[1] = foundCInternPwr.group(2)
             elif foundCLeakPwr:
-                pvData.foundCLeakPwr = PvPower.replaceSpace(pv + " leakage"), foundCLeakPwr.group(2)
-                DataItems.append(pvData.foundCLeakPwr)
+                pvData.foundCLeakPwr[1] = foundCLeakPwr.group(2)
             elif foundNetSwPwr:
-                pvData.foundNetSwPwr = PvPower.replaceSpace(pv + " switch"), foundNetSwPwr.group(2)
-                DataItems.append(pvData.foundNetSwPwr)
+                pvData.foundNetSwPwr[1] = foundNetSwPwr.group(2)
             elif foundTotalPwr:
-                pvData.foundTotalPwr = PvPower.replaceSpace(pv + " total"), foundTotalPwr.group(2)
-                DataItems.append(pvData.foundTotalPwr)
+                pvData.foundTotalPwr[1] = foundTotalPwr.group(2)
+
+        DataItems.append(tuple(pvData.foundCInternPwr))
+        DataItems.append(tuple(pvData.foundCLeakPwr))
+        DataItems.append(tuple(pvData.foundNetSwPwr))
+        DataItems.append(tuple(pvData.foundTotalPwr))
 
         return DataItems

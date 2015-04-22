@@ -1,0 +1,30 @@
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/ccs/nn/d04_nn_p1273_3x1r6_psss_0.75v_-10c_ccst.ldb'
+Warning: New technology license is required to read the frequency-based max_capacitance constraint tables from the library. PrimeTime will ignore these library tables. (PTE-117)
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/ccs/ln/d04_ln_p1273_3x1r6_psss_0.75v_-10c_ccst.ldb'
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/ccs/wn/d04_wn_p1273_3x1r6_psss_0.75v_-10c_ccst.ldb'
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/ccs/yn/d04_yn_p1273_3x1r6_psss_0.75v_-10c_ccst.ldb'
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_pre_misca1/lib/nn/d04_nn_misc_p1273_3x1r6_psss_0.75v_-10c_nldm.ldb'
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_pre_misca1/lib/ln/d04_ln_misc_p1273_3x1r6_psss_0.75v_-10c_nldm.ldb'
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_pre_misca1/lib/wn/d04_wn_misc_p1273_3x1r6_psss_0.75v_-10c_nldm.ldb'
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_pre_misca1/lib/yn/d04_yn_misc_p1273_3x1r6_psss_0.75v_-10c_nldm.ldb'
+Linking design cpu...
+
+Libraries used to link cpu:
+  d04_ln_misc_p1273_3x1r6_psss_0.75v_-10c_nldm, 
+  d04_ln_p1273_3x1r6_psss_0.75v_-10c_ccst, 
+  d04_nn_p1273_3x1r6_psss_0.75v_-10c_ccst, 
+  d04_wn_misc_p1273_3x1r6_psss_0.75v_-10c_nldm, 
+  d04_wn_p1273_3x1r6_psss_0.75v_-10c_ccst, 
+  d04_yn_p1273_3x1r6_psss_0.75v_-10c_ccst
+
+Information: 1335 (95.70%) library cells are unused in library d04_nn_p1273_3x1r6_psss_0.75v_-10c_ccst.....
+Information: 1337 (95.84%) library cells are unused in library d04_ln_p1273_3x1r6_psss_0.75v_-10c_ccst.....
+Information: 1317 (94.41%) library cells are unused in library d04_wn_p1273_3x1r6_psss_0.75v_-10c_ccst.....
+Information: 1374 (98.49%) library cells are unused in library d04_yn_p1273_3x1r6_psss_0.75v_-10c_ccst.....
+Information: 53 (100.00%) library cells are unused in library d04_nn_misc_p1273_3x1r6_psss_0.75v_-10c_nldm.....
+Information: 35 (97.22%) library cells are unused in library d04_ln_misc_p1273_3x1r6_psss_0.75v_-10c_nldm.....
+Information: 35 (97.22%) library cells are unused in library d04_wn_misc_p1273_3x1r6_psss_0.75v_-10c_nldm.....
+Information: 36 (100.00%) library cells are unused in library d04_yn_misc_p1273_3x1r6_psss_0.75v_-10c_nldm.....
+Information: total 5522 library cells are unused.
+Design 'cpu' was successfully linked.
+1

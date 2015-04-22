@@ -1,0 +1,22 @@
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : timing
+        -loops
+        -max_paths 1000
+        -transition_time
+        -capacitance
+Design : fdkex
+Version: J-2014.09
+Date   : Tue Mar 31 00:54:05 2015
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow_1.00   Library: d04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst
+Wire Load Model Mode: Inactive.
+No loops.
+
+1

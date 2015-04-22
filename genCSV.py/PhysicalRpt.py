@@ -23,6 +23,10 @@ class PhysicalRpt:
         lines = f.readlines()
         f.close()
         rptData = PhysicalRptData()
+        rptData.foundUtil = [PhysicalRpt.replaceSpace("apr utilization"), "N/A"]
+        rptData.foundShort = [PhysicalRpt.replaceSpace("apr Shorts"), "N/A"]
+        rptData.foundTotalEr = [PhysicalRpt.replaceSpace("apr DRC"), "N/A"]
+        rptData.foundTotalMem = [PhysicalRpt.replaceSpace("apr Memory"), "N/A"]
 
         for line in lines:
             foundUtil = PhysicalRpt.mathcLine("Std", "cells", "utilization", line)
@@ -31,16 +35,17 @@ class PhysicalRpt:
             foundTotalMem = PhysicalRpt.mathcLine("Total", "Proc", "Memory", line)
 
             if foundUtil:
-                rptData.foundUtil = PhysicalRpt.replaceSpace("apr utilization"), foundUtil.group(2)
-                DataItems.append(rptData.foundUtil)
+                rptData.foundUtil[1] = foundUtil.group(2)
             elif foundShort:
-                rptData.foundShort = PhysicalRpt.replaceSpace("apr Shorts"), foundShort.group(2)
-                DataItems.append(rptData.foundShort)
+                rptData.foundShort[1] = foundShort.group(2)
             elif foundTotalEr:
-                rptData.foundTotalEr = PhysicalRpt.replaceSpace("apr DRC"), foundTotalEr.group(2)
-                DataItems.append(rptData.foundTotalEr)
+                rptData.foundTotalEr[1] = foundTotalEr.group(2)
             elif foundTotalMem:
-                rptData.foundTotalMem = PhysicalRpt.replaceSpace("apr Memory"), foundTotalMem.group(2)
-                DataItems.append(rptData.foundTotalMem)
+                rptData.foundTotalMem[1] = foundTotalMem.group(2)
+
+        DataItems.append(tuple(rptData.foundUtil))
+        DataItems.append(tuple(rptData.foundShort))
+        DataItems.append(tuple(rptData.foundTotalEr))
+        DataItems.append(tuple(rptData.foundTotalMem))
 
         return DataItems

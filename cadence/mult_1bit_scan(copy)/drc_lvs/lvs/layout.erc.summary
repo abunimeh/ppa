@@ -1,0 +1,300 @@
+
+
+==================================================================================
+=== CALIBRE::ERC-H SUMMARY REPORT
+===
+Execution Date/Time:          Sat Apr  4 00:28:47 2015
+Calibre Version:              v2014.4_18.13    Wed Nov 5 16:04:06 PST 2014
+Rule File Pathname:           /p/fdk/fdk73/builds/pdk736_r2.2/runsets/calibre/p1273_lvs.svrf
+Rule File Title:              
+Layout System:                OASIS
+Layout Path(s):               /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/../apr/outputs/mult.signoff.post_mfill.oas
+Layout Primary Cell:          mult
+Current Directory:            /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/lvs
+User Name:                    spalutla
+Maximum Results/ERC Check:    1000
+Maximum ERC Result Vertices:  4096
+ERC Results Database:         layout.erc.results (ASCII)
+Layout Depth:                 ALL
+Text Depth:                   PRIMARY
+Summary Report File:          layout.erc.summary (REPLACE)
+Geometry Flagging:            ACUTE = NO  SKEW = NO  ANGLED = NO  OFFGRID = NO
+                              NONSIMPLE POLYGON = NO  NONSIMPLE PATH = NO
+Excluded Cells:              
+CheckText Mapping:            COMMENT TEXT + RULE FILE INFORMATION
+Layers:                       MEMORY-BASED
+Keep Empty Checks:            YES
+----------------------------------------------------------------------------------
+--- RUNTIME WARNINGS
+---
+Rule file precision 10000 is not consistent with database precision 1000 in input file /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/../apr/outputs/mult.signoff.post_mfill.oas.
+TEXT PRINT MAXIMUM limit of 5 exceeded. 6309 object(s) not printed.
+TEXT PRINT MAXIMUM limit of 5 exceeded. 1190 object(s) not printed.
+There is no data for layout net name VDD?.
+There is no data for layout net name vccxx.
+There is no data for layout net name vxx.
+There is no data for layout net name vdd.
+There is no data for layout net name vcca.
+There is no data for layout net name vcclcsfr.
+There is no data for layout net name vccsfr.
+There is no data for layout net name xvccpllsfr.
+There is no data for layout net name vccd.
+There is no data for layout net name vccddq.
+There is no data for layout net name vccdq.
+There is no data for layout net name vccidvhv.
+There is no data for layout net name vccouth.
+There is no data for layout net name vccthm.
+There is no data for layout net name xvccddr.
+There is no data for layout net name vcc1p1xx.
+There is no data for layout net name vcccore.
+There is no data for layout net name vcccp.
+There is no data for layout net name vcccp2.
+There is no data for layout net name vcccp3.
+There is no data for layout net name vcccsipll.
+There is no data for layout net name vccctrl.
+There is no data for layout net name vccdist.
+There is no data for layout net name vccidv.
+There is no data for layout net name vccin.
+There is no data for layout net name vccinst.
+There is no data for layout net name vccint.
+There is no data for layout net name vccio.
+There is no data for layout net name vccl.
+There is no data for layout net name vcclccp1.
+There is no data for layout net name vcclccp2.
+There is no data for layout net name vcclcvco1.
+There is no data for layout net name vcclcvco2.
+There is no data for layout net name vccmbf.
+There is no data for layout net name vccout.
+There is no data for layout net name vccp.
+There is no data for layout net name vccpa.
+There is no data for layout net name vccpd.
+There is no data for layout net name vccpe.
+There is no data for layout net name vccpcm.
+There is no data for layout net name vccpll.
+There is no data for layout net name vccpll0.
+There is no data for layout net name vccpll1.
+There is no data for layout net name vccpll2.
+There is no data for layout net name vccpll3.
+There is no data for layout net name vccpllcsi.
+There is no data for layout net name vccpllg.
+There is no data for layout net name vccppa.
+There is no data for layout net name vccppd.
+There is no data for layout net name vccpvd.
+There is no data for layout net name vcct.
+There is no data for layout net name vccthmdig.
+There is no data for layout net name vcctt.
+There is no data for layout net name vcctta.
+There is no data for layout net name vccttd.
+There is no data for layout net name vccu.
+There is no data for layout net name vccvco.
+There is no data for layout net name vccvco2.
+There is no data for layout net name vccvco3.
+There is no data for layout net name vccx.
+There is no data for layout net name vccxxh.
+There is no data for layout net name vccyy.
+There is no data for layout net name vccp1p1s3local.
+There is no data for layout net name vccbgin.
+There is no data for layout net name vccthmd.
+There is no data for layout net name vccosc.
+There is no data for layout net name vccdig.
+There is no data for layout net name vccp_nom.
+There is no data for layout net name xvcc0sfr.
+There is no data for layout net name xvcc1sfr.
+There is no data for layout net name xvcc1pllf.
+There is no data for layout net name xvcc1pllc.
+There is no data for layout net name xvccplls.
+There is no data for layout net name xvccexp.
+There is no data for layout net name vccplls.
+There is no data for layout net name vccexp.
+There is no data for layout net name xvccthmdig.
+There is no data for layout net name vccthmtp.
+There is no data for layout net name xvccthmtp.
+There is no data for layout net name vccthmsfr.
+There is no data for layout net name xvccthmsfr.
+There is no data for layout net name xvccpll0.
+There is no data for layout net name xvccpll0l.
+There is no data for layout net name xvccpll1.
+There is no data for layout net name xvccpll2.
+There is no data for layout net name xvccpllg.
+There is no data for layout net name vccd_hv.
+There is no data for layout net name vccs3local.
+There is no data for layout net name vcc0sfr.
+There is no data for layout net name vcc1pllc.
+There is no data for layout net name vcc1pllf.
+There is no data for layout net name vcc1sfr.
+There is no data for layout net name vccf.
+There is no data for layout net name vccfhv.
+There is no data for layout net name vccflv.
+There is no data for layout net name vccvref.
+There is no data for layout net name vccvreflpf.
+There is no data for layout net name vccpedllqu.
+There is no data for layout net name vccpedllqg.
+There is no data for layout net name vccps3local.
+There is no data for layout net name vccpqe.
+There is no data for layout net name vccdu.
+There is no data for layout net name vccremote.
+There is no data for layout net name vccthmdsm.
+There is no data for layout net name vccthmdsmdig.
+There is no data for layout net name vccsrsbpll.
+There is no data for layout net name vccalg.
+There is no data for layout net name vccvbg.
+There is no data for layout net name vccpdllq.
+There is no data for layout net name vcciog.
+There is no data for layout net name vccddr10.
+There is no data for layout net name vcciox.
+There is no data for layout net name vccioxxg.
+There is no data for layout net name vccioag.
+There is no data for layout net name vccioa.
+There is no data for layout net name vccags.
+There is no data for layout net name vccg.
+There is no data for layout net name vccidv_nom.
+There is no data for layout net name vccxx_nom.
+There is no data for layout net name vccx_uhv.
+There is no data for layout net name vccx_ehv.
+There is no data for layout net name vccx_nom.
+There is no data for layout net name vcc_nom.
+There is no data for layout net name vccsirlv.
+----------------------------------------------------------------------------------
+--- ORIGINAL LAYER STATISTICS
+---
+LAYER CELLBOUNDARY .... TOTAL Original Geometry Count = 42     (3816)
+LAYER ALLNWELL ........ TOTAL Original Geometry Count = 40     (3814)
+LAYER DEEPNWELL ....... TOTAL Original Geometry Count = 0      (0)
+LAYER NWELL ........... TOTAL Original Geometry Count = 40     (3814)
+LAYER PWELL_SUBISO .... TOTAL Original Geometry Count = 0      (0)
+LAYER DIFF ............ TOTAL Original Geometry Count = 3058   (749504)
+LAYER POLY ............ TOTAL Original Geometry Count = 3728   (855417)
+LAYER DIODEID ......... TOTAL Original Geometry Count = 0      (0)
+LAYER PDIFF ........... TOTAL Original Geometry Count = 1470   (372732)
+LAYER GATED_NACID ..... TOTAL Original Geometry Count = 1      (8)
+LAYER ACTCAP_ID ....... TOTAL Original Geometry Count = 132    (68280)
+LAYER NV0 ............. TOTAL Original Geometry Count = 0      (0)
+LAYER NV1 ............. TOTAL Original Geometry Count = 140    (608)
+LAYER NV2 ............. TOTAL Original Geometry Count = 153    (71003)
+LAYER NV3 ............. TOTAL Original Geometry Count = 0      (0)
+LAYER PV0 ............. TOTAL Original Geometry Count = 0      (0)
+LAYER PV1 ............. TOTAL Original Geometry Count = 132    (436)
+LAYER PV2 ............. TOTAL Original Geometry Count = 152    (70503)
+LAYER PV3 ............. TOTAL Original Geometry Count = 0      (0)
+LAYER NU1 ............. TOTAL Original Geometry Count = 0      (0)
+LAYER PU1 ............. TOTAL Original Geometry Count = 0      (0)
+LAYER RFREQDEVTYPE .... TOTAL Original Geometry Count = 0      (0)
+LAYER STACKDEVTYPE .... TOTAL Original Geometry Count = 0      (0)
+LAYER NDIFF ........... TOTAL Original Geometry Count = 1588   (376772)
+LAYER ETCHRINGID ...... TOTAL Original Geometry Count = 0      (0)
+LAYER PRSDUMMYID ...... TOTAL Original Geometry Count = 0      (0)
+LAYER FIDUCIALID ...... TOTAL Original Geometry Count = 0      (0)
+LAYER ISO_ID .......... TOTAL Original Geometry Count = 0      (0)
+LAYER NES_ID .......... TOTAL Original Geometry Count = 0      (0)
+LAYER INDUCTORID1 ..... TOTAL Original Geometry Count = 0      (0)
+LAYER LVS_DUMMYGATE ... TOTAL Original Geometry Count = 0      (0)
+LAYER POLYDUMMYID ..... TOTAL Original Geometry Count = 126    (72422)
+LAYER POLYCON ......... TOTAL Original Geometry Count = 2620   (301744)
+LAYER WELLRES_ID ...... TOTAL Original Geometry Count = 0      (0)
+LAYER VDMOSID ......... TOTAL Original Geometry Count = 0      (0)
+LAYER NALMG ........... TOTAL Original Geometry Count = 0      (0)
+LAYER PALMG ........... TOTAL Original Geometry Count = 0      (0)
+LAYER POLYOD .......... TOTAL Original Geometry Count = 0      (0)
+LAYER XGOXID .......... TOTAL Original Geometry Count = 0      (0)
+LAYER ULPPITCHID ...... TOTAL Original Geometry Count = 0      (0)
+LAYER TGOXID .......... TOTAL Original Geometry Count = 0      (0)
+LAYER V3PITCHID ....... TOTAL Original Geometry Count = 0      (0)
+LAYER V1PITCHID ....... TOTAL Original Geometry Count = 0      (0)
+LAYER LLNMG ........... TOTAL Original Geometry Count = 0      (0)
+LAYER LLPMG ........... TOTAL Original Geometry Count = 0      (0)
+LAYER PRES_ID ......... TOTAL Original Geometry Count = 0      (0)
+LAYER NWELLESD ........ TOTAL Original Geometry Count = 0      (0)
+LAYER ALLNWELL_DNW .... TOTAL Original Geometry Count = 40     (3814)
+LAYER POLYCONRESID .... TOTAL Original Geometry Count = 0      (0)
+LAYER DIFFCONRESID .... TOTAL Original Geometry Count = 0      (0)
+LAYER DIFFCON ......... TOTAL Original Geometry Count = 3881   (525089)
+LAYER VIACON .......... TOTAL Original Geometry Count = 3188   (56897)
+LAYER METAL0BC ........ TOTAL Original Geometry Count = 112041 (254827)
+LAYER VIA0 ............ TOTAL Original Geometry Count = 3032   (56227)
+LAYER MET0BCPORT ...... TOTAL Original Geometry Count = 132    (379)
+LAYER SVNTG ........... TOTAL Original Geometry Count = 0      (0)
+LAYER MET0BCRESID ..... TOTAL Original Geometry Count = 0      (0)
+LAYER MET1BCRESID ..... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL1BC ........ TOTAL Original Geometry Count = 69343  (243678)
+LAYER MET2BCRESID ..... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL2BC ........ TOTAL Original Geometry Count = 16678  (78738)
+LAYER MET3BCRESID ..... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL3BC ........ TOTAL Original Geometry Count = 19043  (19357)
+LAYER MET4BCRESID ..... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL4BC ........ TOTAL Original Geometry Count = 13292  (13444)
+LAYER MET5BCRESID ..... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL5BC ........ TOTAL Original Geometry Count = 10401  (10401)
+LAYER MET6BCRESID ..... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL6BC ........ TOTAL Original Geometry Count = 6933   (6933)
+LAYER MET7BCRESID ..... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL7BC ........ TOTAL Original Geometry Count = 4111   (4111)
+LAYER MET8BCRESID ..... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL8BC ........ TOTAL Original Geometry Count = 2440   (2440)
+LAYER MET9BCRESID ..... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL9BC ........ TOTAL Original Geometry Count = 2440   (2440)
+LAYER MET10BCRESID .... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL10BC ....... TOTAL Original Geometry Count = 2080   (2080)
+LAYER MET11RESID ...... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL11 ......... TOTAL Original Geometry Count = 2360   (2360)
+LAYER METAL12IND ...... TOTAL Original Geometry Count = 0      (0)
+LAYER INDUCTORPROPS ... TOTAL Original Geometry Count = 0      (0)
+LAYER MET12RESID ...... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL12 ......... TOTAL Original Geometry Count = 517    (517)
+LAYER TM1RESID ........ TOTAL Original Geometry Count = 0      (0)
+LAYER TM1 ............. TOTAL Original Geometry Count = 0      (0)
+LAYER TM1IND .......... TOTAL Original Geometry Count = 0      (0)
+LAYER TM1PORT ......... TOTAL Original Geometry Count = 0      (0)
+LAYER MET12PORT ....... TOTAL Original Geometry Count = 80     (80)
+LAYER SCL_MIM_ID3 ..... TOTAL Original Geometry Count = 0      (0)
+LAYER SCL_MIM_ID2 ..... TOTAL Original Geometry Count = 0      (0)
+LAYER SCL_MIM_ID1 ..... TOTAL Original Geometry Count = 0      (0)
+LAYER CE2DRAWN ........ TOTAL Original Geometry Count = 0      (0)
+LAYER CE2 ............. TOTAL Original Geometry Count = 0      (0)
+LAYER CE1DRAWN ........ TOTAL Original Geometry Count = 0      (0)
+LAYER CE1 ............. TOTAL Original Geometry Count = 0      (0)
+LAYER MET11PORT ....... TOTAL Original Geometry Count = 160    (160)
+LAYER MET10PORT ....... TOTAL Original Geometry Count = 160    (160)
+LAYER MET9PORT ........ TOTAL Original Geometry Count = 160    (160)
+LAYER MET8PORT ........ TOTAL Original Geometry Count = 160    (160)
+LAYER MET7PORT ........ TOTAL Original Geometry Count = 160    (160)
+LAYER MET6PORT ........ TOTAL Original Geometry Count = 344    (344)
+LAYER MET5BCPORT ...... TOTAL Original Geometry Count = 320    (320)
+LAYER MET4BCPORT ...... TOTAL Original Geometry Count = 0      (0)
+LAYER MET3BCPORT ...... TOTAL Original Geometry Count = 0      (0)
+LAYER MET2BCPORT ...... TOTAL Original Geometry Count = 98     (8542)
+LAYER MET1PORT ........ TOTAL Original Geometry Count = 58     (170)
+LAYER POLY1PORT ....... TOTAL Original Geometry Count = 0      (0)
+LAYER POLYCONPORT ..... TOTAL Original Geometry Count = 0      (0)
+LAYER DIFFCONPORT ..... TOTAL Original Geometry Count = 0      (0)
+LAYER TV1 ............. TOTAL Original Geometry Count = 0      (0)
+LAYER C4BEMIB ......... TOTAL Original Geometry Count = 0      (0)
+LAYER VIA12 ........... TOTAL Original Geometry Count = 0      (0)
+LAYER VIA11 ........... TOTAL Original Geometry Count = 400    (400)
+LAYER VIA10 ........... TOTAL Original Geometry Count = 800    (800)
+LAYER VIA9 ............ TOTAL Original Geometry Count = 800    (800)
+LAYER VIA8 ............ TOTAL Original Geometry Count = 800    (800)
+LAYER VIA7 ............ TOTAL Original Geometry Count = 800    (800)
+LAYER VIA6 ............ TOTAL Original Geometry Count = 1616   (1616)
+LAYER VIA5 ............ TOTAL Original Geometry Count = 3224   (3224)
+LAYER VIA4 ............ TOTAL Original Geometry Count = 4834   (4834)
+LAYER VIA3 ............ TOTAL Original Geometry Count = 4849   (4849)
+LAYER VIA2 ............ TOTAL Original Geometry Count = 9710   (9710)
+LAYER VIA1 ............ TOTAL Original Geometry Count = 2948   (55284)
+----------------------------------------------------------------------------------
+--- RULECHECK RESULTS STATISTICS
+---
+RULECHECK wrong_substrate_name .......... TOTAL Result Count = 0 (0)
+RULECHECK softcheck_nwell_nores_upper ... TOTAL Result Count = 0 (0)
+RULECHECK softcheck_subiso_upper ........ TOTAL Result Count = 0 (0)
+RULECHECK softcheck_isopwell_upper ...... TOTAL Result Count = 0 (0)
+----------------------------------------------------------------------------------
+--- ERC RULECHECK RESULTS STATISTICS (BY CELL)
+---
+----------------------------------------------------------------------------------
+--- SUMMARY
+---
+TOTAL CPU Time:                              7
+TOTAL REAL Time:                             14
+TOTAL Original Layer Geometries:             317855 (4327978)
+TOTAL ERC RuleChecks Executed:               4
+TOTAL ERC RuleCheck Results Generated:       0 (0)

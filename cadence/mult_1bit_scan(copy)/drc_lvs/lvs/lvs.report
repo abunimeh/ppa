@@ -1,0 +1,921 @@
+
+
+
+                  ##################################################
+                  ##                                              ##
+                  ##         C A L I B R E    S Y S T E M         ##
+                  ##                                              ##
+                  ##             L V S   R E P O R T              ##
+                  ##                                              ##
+                  ##################################################
+
+
+
+REPORT FILE NAME:         lvs.report
+LAYOUT NAME:              svdb/mult.sp ('mult')
+SOURCE NAME:              /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/mult_cdl.sp ('mult')
+RULE FILE:                /p/fdk/fdk73/builds/pdk736_r2.2/runsets/calibre/p1273_lvs.svrf
+CREATION TIME:            Sat Apr  4 00:29:04 2015
+CURRENT DIRECTORY:        /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/lvs
+USER NAME:                spalutla
+CALIBRE VERSION:          v2014.4_18.13    Wed Nov 5 16:04:06 PST 2014
+
+
+
+                               OVERALL COMPARISON RESULTS
+
+
+
+                  #   #         #####################  
+                   # #          #                   #  
+                    #           #     INCORRECT     #  
+                   # #          #                   #  
+                  #   #         #####################  
+
+
+  Error:    Different numbers of ports.
+  Error:    Different numbers of nets.
+  Error:    Different numbers of instances.
+
+
+**************************************************************************************************************
+                                      CELL  SUMMARY
+**************************************************************************************************************
+
+  Result         Layout                        Source
+  -----------    -----------                   --------------
+  INCORRECT      mult                          mult
+
+
+
+**************************************************************************************************************
+                                      LVS PARAMETERS
+**************************************************************************************************************
+
+
+o LVS Setup:
+
+   // LVS COMPONENT TYPE PROPERTY
+   // LVS COMPONENT SUBTYPE PROPERTY
+   // LVS PIN NAME PROPERTY
+   LVS POWER NAME                         "VCC?" "VDD?" "vcc?" "vdd?" "vcc" "vccxx" "vxx" "vdd" "vcca" "vcclcsfr" "vccsfr"
+                                          "xvccpllsfr" "vccd" "vccddq" "vccdq" "vccidvhv" "vccouth" "vccthm" "xvccddr" "vcc1p1xx"
+                                          "vcccore" "vcccp" "vcccp2" "vcccp3" "vcccsipll" "vccctrl" "vccdist" "vccidv" "vccin"
+                                          "vccinst" "vccint" "vccio" "vccl" "vcclccp1" "vcclccp2" "vcclcvco1" "vcclcvco2" "vccmbf"
+                                          "vccout" "vccp" "vccpa" "vccpd" "vccpe" "vccpcm" "vccpll" "vccpll0" "vccpll1" "vccpll2"
+                                          "vccpll3" "vccpllcsi" "vccpllg" "vccppa" "vccppd" "vccpvd" "vcct" "vccthmdig" "vcctt"
+                                          "vcctta" "vccttd" "vccu" "vccvco" "vccvco2" "vccvco3" "vccx" "vccxxh" "vccyy"
+                                          "vccp1p1s3local" "vccbgin" "vccthmd" "vccosc" "vccdig" "vccp_nom" "xvcc0sfr" "xvcc1sfr"
+                                          "xvcc1pllf" "xvcc1pllc" "xvccplls" "xvccexp" "vccplls" "vccexp" "xvccthmdig" "vccthmtp"
+                                          "xvccthmtp" "vccthmsfr" "xvccthmsfr" "xvccpll0" "xvccpll0l" "xvccpll1" "xvccpll2"
+                                          "xvccpllg" "vccd_hv" "vccs3local" "vcc0sfr" "vcc1pllc" "vcc1pllf" "vcc1sfr" "vccf"
+                                          "vccfhv" "vccflv" "vccvref" "vccvreflpf" "vccpedllqu" "vccpedllqg" "vccps3local" "vccpqe"
+                                          "vccdu" "vccremote" "vccthmdsm" "vccthmdsmdig" "vccsrsbpll" "vccalg" "vccvbg" "vccpdllq"
+                                          "vcciog" "vccddr10" "vcciox" "vccioxxg" "vccioag" "vccioa" "vccags" "vccg" "vccidv_nom"
+                                          "vccxx_nom" "vccx_uhv" "vccx_ehv" "vccx_nom" "vcc_nom" "vccsirlv"
+   LVS GROUND NAME                        "VSS?" "vss?" "vss"
+   LVS CELL SUPPLY                        NO
+   LVS RECOGNIZE GATES                    NONE
+   LVS IGNORE PORTS                       NO
+   LVS CHECK PORT NAMES                   YES
+   LVS IGNORE TRIVIAL NAMED PORTS         NO
+   LVS BUILTIN DEVICE PIN SWAP            YES
+   LVS ALL CAPACITOR PINS SWAPPABLE       NO
+   LVS DISCARD PINS BY DEVICE             NO
+   LVS SOFT SUBSTRATE PINS                NO
+   LVS INJECT LOGIC                       NO
+   LVS EXPAND UNBALANCED CELLS            YES
+   LVS FLATTEN INSIDE CELL                NO
+   LVS EXPAND SEED PROMOTIONS             YES
+   LVS PRESERVE PARAMETERIZED CELLS       NO
+   LVS GLOBALS ARE PORTS                  YES
+   LVS REVERSE WL                         NO
+   LVS SPICE PREFER PINS                  NO
+   LVS SPICE SLASH IS SPACE               YES
+   LVS SPICE ALLOW FLOATING PINS          YES
+   // LVS SPICE ALLOW INLINE PARAMETERS     
+   LVS SPICE ALLOW UNQUOTED STRINGS       YES
+   LVS SPICE CONDITIONAL LDD              NO
+   LVS SPICE CULL PRIMITIVE SUBCIRCUITS   NO
+   LVS SPICE IMPLIED MOS AREA             NO
+   // LVS SPICE MULTIPLIER NAME
+   LVS SPICE OVERRIDE GLOBALS             YES
+   LVS SPICE REDEFINE PARAM               NO
+   LVS SPICE REPLICATE DEVICES            NO
+   LVS SPICE SCALE X PARAMETERS           NO
+   LVS SPICE STRICT WL                    NO
+   // LVS SPICE OPTION
+   LVS STRICT SUBTYPES                    NO
+   LVS EXACT SUBTYPES                     NO
+   LAYOUT CASE                            NO
+   SOURCE CASE                            YES
+   LVS COMPARE CASE                       NO
+   LVS DOWNCASE DEVICE                    NO
+   LVS REPORT MAXIMUM                     50
+   LVS PROPERTY RESOLUTION MAXIMUM        32
+   // LVS SIGNATURE MAXIMUM
+   // LVS FILTER UNUSED OPTION
+   LVS FILTER UNUSED OPTION               F DEVICES MN(hvngatednac)
+   LVS FILTER UNUSED OPTION               F DEVICES MN(ngatednac)
+   LVS REPORT OPTION                      FX S V
+   LVS REPORT UNITS                       YES
+   // LVS NON USER NAME PORT
+   // LVS NON USER NAME NET
+   // LVS NON USER NAME INSTANCE
+   // LVS IGNORE DEVICE PIN
+
+   // Map Device
+
+   LVS MAP DEVICE                      Q(a80bgdiode_prim) Q(d8xmbgdiode_prim)
+   LVS MAP DEVICE                      Q(a80ddrdiode2_prim) Q(ddr1bjtdiode)
+   LVS MAP DEVICE                      Q(bjtdiode) Q(d8xmbgdiode_prim)
+   LVS MAP DEVICE                      Q(c8xbgdiode_prim) Q(d8xmbgdiode_prim)
+   LVS MAP DEVICE                      R(rgcnfm0) R(rgcnfm1)
+   LVS MAP DEVICE                      R(rm0) R(rm0fm1)
+   LVS MAP DEVICE                      R(rm0m1) R(rm0fm1)
+   LVS MAP DEVICE                      R(rm10m9) R(rm10m9m11)
+   LVS MAP DEVICE                      R(rm11m10) R(rm11m10m12)
+   LVS MAP DEVICE                      R(rm12m11) R(rm12m11tm1)
+   LVS MAP DEVICE                      R(rm1m0) R(rm1fm2)
+   LVS MAP DEVICE                      R(rm2m1) R(rm2m1m3)
+   LVS MAP DEVICE                      R(rm3m2) R(rm3m2m4)
+   LVS MAP DEVICE                      R(rm4m3) R(rm4m3m5)
+   LVS MAP DEVICE                      R(rm5m4) R(rm5m4m6)
+   LVS MAP DEVICE                      R(rm6m5) R(rm6m5m7)
+   LVS MAP DEVICE                      R(rm7m6) R(rm7m6m8)
+   LVS MAP DEVICE                      R(rm8m7) R(rm8m7m9)
+   LVS MAP DEVICE                      R(rm9m8) R(rm9m8m10)
+   LVS MAP DEVICE                      R(rpfm0) R(rp)
+   LVS MAP DEVICE                      R(rtcnfm0) R(rtcnfm1)
+   LVS MAP DEVICE                      R(rtm1m12c4) R(rtm1m12)
+   LVS MAP DEVICE                      R(scm0) R(rm0fm1)
+   LVS MAP DEVICE                      R(scm1) R(rm1fm2)
+   LVS MAP DEVICE                      R(scm10) R(rm10m9m11)
+   LVS MAP DEVICE                      R(scm11) R(rm11m10m12)
+   LVS MAP DEVICE                      R(scm12) R(rm12m11tm1)
+   LVS MAP DEVICE                      R(scm2) R(rm2m1m3)
+   LVS MAP DEVICE                      R(scm3) R(rm3m2m4)
+   LVS MAP DEVICE                      R(scm4) R(rm4m3m5)
+   LVS MAP DEVICE                      R(scm5) R(rm5m4m6)
+   LVS MAP DEVICE                      R(scm6) R(rm6m5m7)
+   LVS MAP DEVICE                      R(scm7) R(rm7m6m8)
+   LVS MAP DEVICE                      R(scm8) R(rm8m7m9)
+   LVS MAP DEVICE                      R(scm9) R(rm9m8m10)
+   LVS MAP DEVICE                      R(scmtm1) R(rtm1m12)
+   LVS MAP DEVICE                      R(scmx0) R(scmx) LAYOUT
+   LVS MAP DEVICE                      R(scmx1) R(scmx) LAYOUT
+   LVS MAP DEVICE                      R(scmx10) R(scmx) LAYOUT
+   LVS MAP DEVICE                      R(scmx11) R(scmx) LAYOUT
+   LVS MAP DEVICE                      R(scmx12) R(scmx) LAYOUT
+   LVS MAP DEVICE                      R(scmx2) R(scmx) LAYOUT
+   LVS MAP DEVICE                      R(scmx3) R(scmx) LAYOUT
+   LVS MAP DEVICE                      R(scmx4) R(scmx) LAYOUT
+   LVS MAP DEVICE                      R(scmx5) R(scmx) LAYOUT
+   LVS MAP DEVICE                      R(scmx6) R(scmx) LAYOUT
+   LVS MAP DEVICE                      R(scmx7) R(scmx) LAYOUT
+   LVS MAP DEVICE                      R(scmx8) R(scmx) LAYOUT
+   LVS MAP DEVICE                      R(scmx9) R(scmx) LAYOUT
+   LVS MAP DEVICE                      R(scmxtm1) R(scmx) LAYOUT
+   LVS MAP DEVICE                      R(somx0) R(somx) LAYOUT
+   LVS MAP DEVICE                      R(somx1) R(somx) LAYOUT
+   LVS MAP DEVICE                      R(somx10) R(somx) LAYOUT
+   LVS MAP DEVICE                      R(somx11) R(somx) LAYOUT
+   LVS MAP DEVICE                      R(somx12) R(somx) LAYOUT
+   LVS MAP DEVICE                      R(somx2) R(somx) LAYOUT
+   LVS MAP DEVICE                      R(somx3) R(somx) LAYOUT
+   LVS MAP DEVICE                      R(somx4) R(somx) LAYOUT
+   LVS MAP DEVICE                      R(somx5) R(somx) LAYOUT
+   LVS MAP DEVICE                      R(somx6) R(somx) LAYOUT
+   LVS MAP DEVICE                      R(somx7) R(somx) LAYOUT
+   LVS MAP DEVICE                      R(somx8) R(somx) LAYOUT
+   LVS MAP DEVICE                      R(somx9) R(somx) LAYOUT
+   LVS MAP DEVICE                      R(somxtm1) R(somx) LAYOUT
+
+   // Reduction
+
+   LVS REDUCE SERIES MOS                  YES
+   LVS REDUCE PARALLEL MOS                YES
+   LVS REDUCE SEMI SERIES MOS             NO
+   LVS REDUCE SPLIT GATES                 YES
+   LVS REDUCE PARALLEL BIPOLAR            YES
+   LVS REDUCE SERIES CAPACITORS           YES
+   LVS REDUCE PARALLEL CAPACITORS         YES
+   LVS REDUCE SERIES RESISTORS            YES
+   LVS REDUCE PARALLEL RESISTORS          YES
+   LVS REDUCE PARALLEL DIODES             YES
+
+   LVS REDUCE  MN(nrf)  PARALLEL
+   LVS REDUCE  MP(prf)  PARALLEL
+   LVS REDUCE  MN(nuv2rf)  PARALLEL
+   LVS REDUCE  MP(puv2rf)  PARALLEL
+   LVS REDUCE  MN(ntgulvrf)  PARALLEL
+   LVS REDUCE  MP(ptgulvrf)  PARALLEL
+   LVS REDUCE  MN(ntgrf)  PARALLEL
+   LVS REDUCE  MP(ptgrf)  PARALLEL
+   LVS REDUCTION PRIORITY                 PARALLEL
+   
+   LVS SHORT EQUIVALENT NODES             NO
+
+   // Filter
+
+   LVS FILTER  MN(mncap)  OPEN LAYOUT
+   LVS FILTER  MP(mpcap)  OPEN LAYOUT
+   LVS FILTER  C  OPEN SOURCE
+   LVS FILTER  D(ddnwpsub)  OPEN
+   LVS FILTER  d04bar00lnz04  OPEN SOURCE
+   LVS FILTER  d04bar00lnz08  OPEN SOURCE
+   LVS FILTER  d04bar00lnz12  OPEN SOURCE
+   LVS FILTER  d04bar00lnz16  OPEN SOURCE
+   LVS FILTER  d04bar00lnz20  OPEN SOURCE
+   LVS FILTER  d04bar00lnz24  OPEN SOURCE
+   LVS FILTER  d04bar00lnz28  OPEN SOURCE
+   LVS FILTER  d04bar00lnz32  OPEN SOURCE
+   LVS FILTER  d04bar00lnz36  OPEN SOURCE
+   LVS FILTER  d04bar00lnz40  OPEN SOURCE
+   LVS FILTER  d04bar00lnz48  OPEN SOURCE
+   LVS FILTER  d04bar00lnz64  OPEN SOURCE
+   LVS FILTER  d04bar00nnz04  OPEN SOURCE
+   LVS FILTER  d04bar00nnz08  OPEN SOURCE
+   LVS FILTER  d04bar00nnz12  OPEN SOURCE
+   LVS FILTER  d04bar00nnz16  OPEN SOURCE
+   LVS FILTER  d04bar00nnz20  OPEN SOURCE
+   LVS FILTER  d04bar00nnz24  OPEN SOURCE
+   LVS FILTER  d04bar00nnz28  OPEN SOURCE
+   LVS FILTER  d04bar00nnz32  OPEN SOURCE
+   LVS FILTER  d04bar00nnz36  OPEN SOURCE
+   LVS FILTER  d04bar00nnz40  OPEN SOURCE
+   LVS FILTER  d04bar00nnz48  OPEN SOURCE
+   LVS FILTER  d04bar00nnz64  OPEN SOURCE
+   LVS FILTER  d04bar00wnz04  OPEN SOURCE
+   LVS FILTER  d04bar00wnz08  OPEN SOURCE
+   LVS FILTER  d04bar00wnz12  OPEN SOURCE
+   LVS FILTER  d04bar00wnz16  OPEN SOURCE
+   LVS FILTER  d04bar00wnz20  OPEN SOURCE
+   LVS FILTER  d04bar00wnz24  OPEN SOURCE
+   LVS FILTER  d04bar00wnz28  OPEN SOURCE
+   LVS FILTER  d04bar00wnz32  OPEN SOURCE
+   LVS FILTER  d04bar00wnz36  OPEN SOURCE
+   LVS FILTER  d04bar00wnz40  OPEN SOURCE
+   LVS FILTER  d04bar00wnz48  OPEN SOURCE
+   LVS FILTER  d04bar00wnz64  OPEN SOURCE
+   LVS FILTER  d04bdc00ldz04  OPEN SOURCE
+   LVS FILTER  d04bdc00ldz08  OPEN SOURCE
+   LVS FILTER  d04bdc00ldz16  OPEN SOURCE
+   LVS FILTER  d04bdc00ldz32  OPEN SOURCE
+   LVS FILTER  d04bdc00ldz64  OPEN SOURCE
+   LVS FILTER  d04bdc00lnz04  OPEN SOURCE
+   LVS FILTER  d04bdc00lnz08  OPEN SOURCE
+   LVS FILTER  d04bdc00lnz16  OPEN SOURCE
+   LVS FILTER  d04bdc00lnz32  OPEN SOURCE
+   LVS FILTER  d04bdc00lnz64  OPEN SOURCE
+   LVS FILTER  d04bdc00ndz04  OPEN SOURCE
+   LVS FILTER  d04bdc00ndz08  OPEN SOURCE
+   LVS FILTER  d04bdc00ndz16  OPEN SOURCE
+   LVS FILTER  d04bdc00ndz32  OPEN SOURCE
+   LVS FILTER  d04bdc00ndz64  OPEN SOURCE
+   LVS FILTER  d04bdc00nnz04  OPEN SOURCE
+   LVS FILTER  d04bdc00nnz08  OPEN SOURCE
+   LVS FILTER  d04bdc00nnz16  OPEN SOURCE
+   LVS FILTER  d04bdc00nnz32  OPEN SOURCE
+   LVS FILTER  d04bdc00nnz64  OPEN SOURCE
+   LVS FILTER  d04bdc00wdz04  OPEN SOURCE
+   LVS FILTER  d04bdc00wdz08  OPEN SOURCE
+   LVS FILTER  d04bdc00wdz16  OPEN SOURCE
+   LVS FILTER  d04bdc00wdz32  OPEN SOURCE
+   LVS FILTER  d04bdc00wdz64  OPEN SOURCE
+   LVS FILTER  d04bdc00wnz04  OPEN SOURCE
+   LVS FILTER  d04bdc00wnz08  OPEN SOURCE
+   LVS FILTER  d04bdc00wnz16  OPEN SOURCE
+   LVS FILTER  d04bdc00wnz32  OPEN SOURCE
+   LVS FILTER  d04bdc00wnz64  OPEN SOURCE
+   LVS FILTER  d04bgn00lnz00  OPEN SOURCE
+   LVS FILTER  d04bgn00nnz00  OPEN SOURCE
+   LVS FILTER  d04bgn00wnz00  OPEN SOURCE
+   LVS FILTER  d04bgn01lnz00  OPEN SOURCE
+   LVS FILTER  d04bgn01nnz00  OPEN SOURCE
+   LVS FILTER  d04bgn01wnz00  OPEN SOURCE
+   LVS FILTER  d04dcp00lnz04  OPEN SOURCE
+   LVS FILTER  d04dcp00lnz08  OPEN SOURCE
+   LVS FILTER  d04dcp00lnz16  OPEN SOURCE
+   LVS FILTER  d04dcp00lnz32  OPEN SOURCE
+   LVS FILTER  d04dcp00lnz64  OPEN SOURCE
+   LVS FILTER  d04dcp00nnz04  OPEN SOURCE
+   LVS FILTER  d04dcp00nnz08  OPEN SOURCE
+   LVS FILTER  d04dcp00nnz16  OPEN SOURCE
+   LVS FILTER  d04dcp00nnz32  OPEN SOURCE
+   LVS FILTER  d04dcp00nnz64  OPEN SOURCE
+   LVS FILTER  d04dcp00wnz04  OPEN SOURCE
+   LVS FILTER  d04dcp00wnz08  OPEN SOURCE
+   LVS FILTER  d04dcp00wnz16  OPEN SOURCE
+   LVS FILTER  d04dcp00wnz32  OPEN SOURCE
+   LVS FILTER  d04dcp00wnz64  OPEN SOURCE
+   LVS FILTER  d04gnc00lnz00  OPEN SOURCE
+   LVS FILTER  d04gnc00nnz00  OPEN SOURCE
+   LVS FILTER  d04gnc00wnz00  OPEN SOURCE
+   LVS FILTER  d04gnc01lnz00  OPEN SOURCE
+   LVS FILTER  d04gnc01nnz00  OPEN SOURCE
+   LVS FILTER  d04gnc01wnz00  OPEN SOURCE
+   LVS FILTER  d04gnc02lnz00  OPEN SOURCE
+   LVS FILTER  d04gnc02nnz00  OPEN SOURCE
+   LVS FILTER  d04gnc02wnz00  OPEN SOURCE
+   LVS FILTER  d04qct01ndz00  OPEN SOURCE
+   LVS FILTER  d04qfd01ndz00  OPEN SOURCE
+   LVS FILTER  d04qfd02ndz00  OPEN SOURCE
+   LVS FILTER  d04qfd02nnz00  OPEN SOURCE
+   LVS FILTER  d04qfd11ndz00  OPEN SOURCE
+   LVS FILTER  d04qfd12ndz00  OPEN SOURCE
+   LVS FILTER  d04qfd12nnz00  OPEN SOURCE
+   LVS FILTER  d04qpd01ndz00  OPEN SOURCE
+   LVS FILTER  d04qsw01ndz00  OPEN SOURCE
+   LVS FILTER  d04spc00lnz01  OPEN SOURCE
+   LVS FILTER  d04spc00lnz02  OPEN SOURCE
+   LVS FILTER  d04spc00lnz03  OPEN SOURCE
+   LVS FILTER  d04spc00nnz01  OPEN SOURCE
+   LVS FILTER  d04spc00nnz02  OPEN SOURCE
+   LVS FILTER  d04spc00nnz03  OPEN SOURCE
+   LVS FILTER  d04spc00wnz01  OPEN SOURCE
+   LVS FILTER  d04spc00wnz02  OPEN SOURCE
+   LVS FILTER  d04spc00wnz03  OPEN SOURCE
+   LVS FILTER  d04spc01lnz01  OPEN SOURCE
+   LVS FILTER  d04spc01lnz02  OPEN SOURCE
+   LVS FILTER  d04spc01lnz03  OPEN SOURCE
+   LVS FILTER  d04spc01nnz01  OPEN SOURCE
+   LVS FILTER  d04spc01nnz02  OPEN SOURCE
+   LVS FILTER  d04spc01nnz03  OPEN SOURCE
+   LVS FILTER  d04spc01wnz01  OPEN SOURCE
+   LVS FILTER  d04spc01wnz02  OPEN SOURCE
+   LVS FILTER  d04spc01wnz03  OPEN SOURCE
+   LVS FILTER  d04spc02lnz01  OPEN SOURCE
+   LVS FILTER  d04spc02lnz02  OPEN SOURCE
+   LVS FILTER  d04spc02lnz03  OPEN SOURCE
+   LVS FILTER  d04spc02nnz01  OPEN SOURCE
+   LVS FILTER  d04spc02nnz02  OPEN SOURCE
+   LVS FILTER  d04spc02nnz03  OPEN SOURCE
+   LVS FILTER  d04spc02wnz01  OPEN SOURCE
+   LVS FILTER  d04spc02wnz02  OPEN SOURCE
+   LVS FILTER  d04spc02wnz03  OPEN SOURCE
+   LVS FILTER  d04spc10lnz01  OPEN SOURCE
+   LVS FILTER  d04spc10lnz02  OPEN SOURCE
+   LVS FILTER  d04spc10wnz01  OPEN SOURCE
+   LVS FILTER  d04spc10wnz02  OPEN SOURCE
+   LVS FILTER  d04tap02ldz00  OPEN SOURCE
+   LVS FILTER  d04tap02ldz03  OPEN SOURCE
+   LVS FILTER  d04tap02ldz05  OPEN SOURCE
+   LVS FILTER  d04tap02ndz00  OPEN SOURCE
+   LVS FILTER  d04tap02ndz03  OPEN SOURCE
+   LVS FILTER  d04tap02ndz05  OPEN SOURCE
+   LVS FILTER  d04tap02wdz00  OPEN SOURCE
+   LVS FILTER  d04tap02wdz03  OPEN SOURCE
+   LVS FILTER  d04tap02wdz05  OPEN SOURCE
+
+   // Trace Property
+
+   TRACE PROPERTY  r  w w 0.001
+   TRACE PROPERTY  r(rgcnfm1)  l l 0.001
+   TRACE PROPERTY  r(rtcnfm1)  l l 0.001
+   TRACE PROPERTY  r(rnwell)  l l 0.001
+   TRACE PROPERTY  r(resdw)  l l 0.001
+   TRACE PROPERTY  d(djn)  a a 0.001
+   TRACE PROPERTY  d(djn)  p p 0.001
+   TRACE PROPERTY  d(djp)  a a 0.001
+   TRACE PROPERTY  d(djp)  p p 0.001
+   TRACE PROPERTY  d(djn_esd)  a a 0.001
+   TRACE PROPERTY  d(djn_esd)  p p 0.001
+   TRACE PROPERTY  d(djp_esd)  a a 0.001
+   TRACE PROPERTY  d(djp_esd)  p p 0.001
+   TRACE PROPERTY  m  l l 0.001
+   TRACE PROPERTY  m  w w 0.001
+   TRACE PROPERTY  q(a80ddrdiode2_prim)  a a 0.001
+   TRACE PROPERTY  q(ddr1bjtdiode)  a a 0.001
+   TRACE PROPERTY  ind2t_scl  coilwx coilwx 0
+   TRACE PROPERTY  ind2t_scl  coilspcx coilspcx 0
+   TRACE PROPERTY  ind2t_scl  innerwx innerwx 0
+   TRACE PROPERTY  ind2t_scl  innerwy innerwy 0
+   TRACE PROPERTY  ind2t_scl  nrturns nrturns 0
+   TRACE PROPERTY  mimcap_scl  l1 l1 0
+   TRACE PROPERTY  mimcap_scl  l2 l2 0
+   TRACE PROPERTY  mimcap_scl  l3 l3 0
+   TRACE PROPERTY  mimcap_scl  w w 0
+   TRACE PROPERTY  mimcap_scl  lh lh 0
+   TRACE PROPERTY  mimcap_scl  wh wh 0
+   TRACE PROPERTY  mimcap_scl  nh nh 0
+   TRACE PROPERTY  mimcap_stk_scl  l1 l1 0
+   TRACE PROPERTY  mimcap_stk_scl  l2 l2 0
+   TRACE PROPERTY  mimcap_stk_scl  l3 l3 0
+   TRACE PROPERTY  mimcap_stk_scl  w w 0
+   TRACE PROPERTY  mimcap_stk_scl  lh lh 0
+   TRACE PROPERTY  mimcap_stk_scl  wh wh 0
+   TRACE PROPERTY  mimcap_stk_scl  nh nh 0
+   TRACE PROPERTY  mn(naluv1)  l l 0.001
+   TRACE PROPERTY  mn(naluv1)  w w 0.001
+   TRACE PROPERTY  mp(paluv1)  l l 0.001
+   TRACE PROPERTY  mp(paluv1)  w w 0.001
+   TRACE PROPERTY  mn(naluv2)  l l 0.001
+   TRACE PROPERTY  mn(naluv2)  w w 0.001
+   TRACE PROPERTY  mp(paluv2)  l l 0.001
+   TRACE PROPERTY  mp(paluv2)  w w 0.001
+   TRACE PROPERTY  mn(naluv3)  l l 0.001
+   TRACE PROPERTY  mn(naluv3)  w w 0.001
+   TRACE PROPERTY  mp(paluv3)  l l 0.001
+   TRACE PROPERTY  mp(paluv3)  w w 0.001
+   TRACE PROPERTY  mn(nuv0)  l l 0.001
+   TRACE PROPERTY  mn(nuv0)  w w 0.001
+   TRACE PROPERTY  mp(puv0)  l l 0.001
+   TRACE PROPERTY  mp(puv0)  w w 0.001
+   TRACE PROPERTY  mn(nuv1)  l l 0.001
+   TRACE PROPERTY  mn(nuv1)  w w 0.001
+   TRACE PROPERTY  mp(puv1)  l l 0.001
+   TRACE PROPERTY  mp(puv1)  w w 0.001
+   TRACE PROPERTY  mn(nuv2)  l l 0.001
+   TRACE PROPERTY  mn(nuv2)  w w 0.001
+   TRACE PROPERTY  mp(puv2)  l l 0.001
+   TRACE PROPERTY  mp(puv2)  w w 0.001
+   TRACE PROPERTY  mn(nuv3)  l l 0.001
+   TRACE PROPERTY  mn(nuv3)  w w 0.001
+   TRACE PROPERTY  mp(puv3)  l l 0.001
+   TRACE PROPERTY  mp(puv3)  w w 0.001
+   TRACE PROPERTY  mn(nuv1lp)  l l 0.001
+   TRACE PROPERTY  mn(nuv1lp)  w w 0.001
+   TRACE PROPERTY  mp(puv1lp)  l l 0.001
+   TRACE PROPERTY  mp(puv1lp)  w w 0.001
+   TRACE PROPERTY  mn(nuv2lp)  l l 0.001
+   TRACE PROPERTY  mn(nuv2lp)  w w 0.001
+   TRACE PROPERTY  mp(puv2lp)  l l 0.001
+   TRACE PROPERTY  mp(puv2lp)  w w 0.001
+   TRACE PROPERTY  mn(nulv)  l l 0.001
+   TRACE PROPERTY  mn(nulv)  w w 0.001
+   TRACE PROPERTY  mp(pulv)  l l 0.001
+   TRACE PROPERTY  mp(pulv)  w w 0.001
+   TRACE PROPERTY  mn(nuav)  l l 0.001
+   TRACE PROPERTY  mn(nuav)  w w 0.001
+   TRACE PROPERTY  mp(puav)  l l 0.001
+   TRACE PROPERTY  mp(puav)  w w 0.001
+   TRACE PROPERTY  mn(nallp)  l l 0.001
+   TRACE PROPERTY  mn(nallp)  w w 0.001
+   TRACE PROPERTY  mp(pallp)  l l 0.001
+   TRACE PROPERTY  mp(pallp)  w w 0.001
+   TRACE PROPERTY  mn(nuvt)  l l 0.001
+   TRACE PROPERTY  mn(nuvt)  w w 0.001
+   TRACE PROPERTY  mp(puvt)  l l 0.001
+   TRACE PROPERTY  mp(puvt)  w w 0.001
+   TRACE PROPERTY  mn(nsrhvt)  l l 0.001
+   TRACE PROPERTY  mn(nsrhvt)  w w 0.001
+   TRACE PROPERTY  mn(nsrpg)  l l 0.001
+   TRACE PROPERTY  mn(nsrpg)  w w 0.001
+   TRACE PROPERTY  mn(nsr)  l l 0.001
+   TRACE PROPERTY  mn(nsr)  w w 0.001
+   TRACE PROPERTY  mp(psr)  l l 0.001
+   TRACE PROPERTY  mp(psr)  w w 0.001
+   TRACE PROPERTY  mn(nsrlp)  l l 0.001
+   TRACE PROPERTY  mn(nsrlp)  w w 0.001
+   TRACE PROPERTY  mp(psrlp)  l l 0.001
+   TRACE PROPERTY  mp(psrlp)  w w 0.001
+   TRACE PROPERTY  mn(nxlllp)  l l 0.001
+   TRACE PROPERTY  mn(nxlllp)  w w 0.001
+   TRACE PROPERTY  mp(pxlllp)  l l 0.001
+   TRACE PROPERTY  mp(pxlllp)  w w 0.001
+   TRACE PROPERTY  mn(nlllp)  l l 0.001
+   TRACE PROPERTY  mn(nlllp)  w w 0.001
+   TRACE PROPERTY  mp(plllp)  l l 0.001
+   TRACE PROPERTY  mp(plllp)  w w 0.001
+   TRACE PROPERTY  mn(ntg)  l l 0.001
+   TRACE PROPERTY  mn(ntg)  w w 0.001
+   TRACE PROPERTY  mp(ptg)  l l 0.001
+   TRACE PROPERTY  mp(ptg)  w w 0.001
+   TRACE PROPERTY  mn(nal160)  l l 0.001
+   TRACE PROPERTY  mn(nal160)  w w 0.001
+   TRACE PROPERTY  mp(pal160)  l l 0.001
+   TRACE PROPERTY  mp(pal160)  w w 0.001
+   TRACE PROPERTY  mn(ntgulv)  l l 0.001
+   TRACE PROPERTY  mn(ntgulv)  w w 0.001
+   TRACE PROPERTY  mp(ptgulv)  l l 0.001
+   TRACE PROPERTY  mp(ptgulv)  w w 0.001
+   TRACE PROPERTY  mn(n)  l l 0.001
+   TRACE PROPERTY  mn(n)  w w 0.001
+   TRACE PROPERTY  mp(p)  l l 0.001
+   TRACE PROPERTY  mp(p)  w w 0.001
+   TRACE PROPERTY  mn(nstk)  l l 0.001
+   TRACE PROPERTY  mn(nstk)  w w 0.001
+   TRACE PROPERTY  mp(pstk)  l l 0.001
+   TRACE PROPERTY  mp(pstk)  w w 0.001
+   TRACE PROPERTY  mn(m)  l l 0.001
+   TRACE PROPERTY  mn(m)  w w 0.001
+   TRACE PROPERTY  mn(vs)  l l 0.001
+   TRACE PROPERTY  mn(vs)  w w 0.001
+   TRACE PROPERTY  mn(ngatednac)  l l 0.001
+   TRACE PROPERTY  mn(ngatednac)  w w 0.001
+   TRACE PROPERTY  mn(hvngatednac)  l l 0.001
+   TRACE PROPERTY  mn(hvngatednac)  w w 0.001
+   TRACE PROPERTY  mn(d8xgbnesdclampresistor_prim)  l l 0.001
+   TRACE PROPERTY  mn(d8xgbnesdclampresistor_prim)  w w 0.001
+   TRACE PROPERTY  mn(d8xgbnesdclamptgres_prim)  l l 0.001
+   TRACE PROPERTY  mn(d8xgbnesdclamptgres_prim)  w w 0.001
+
+   TRACE PROPERTY  ind2t_scl  toplayer toplayer STRING
+
+   // User Trace Property
+
+   TRACE PROPERTY  mn(nrf)  stlen nf multx multy l w
+   TRACE PROPERTY  mp(prf)  stlen nf multx multy l w
+   TRACE PROPERTY  mn(nuv2rf)  stlen nf multx multy l w
+   TRACE PROPERTY  mp(puv2rf)  stlen nf multx multy l w
+   TRACE PROPERTY  mn(ntgulvrf)  stlen nf multx multy l w
+   TRACE PROPERTY  mp(ptgulvrf)  stlen nf multx multy l w
+   TRACE PROPERTY  mn(ntgrf)  stlen nf multx multy l w
+   TRACE PROPERTY  mp(ptgrf)  stlen nf multx multy l w
+
+   // LVS SPICE RENAME PARAMETER
+   
+   LVS SPICE RENAME PARAMETER LEV M M RIGHT LEFT SOURCE LAYOUT COMMENT NOCOMMENT
+   
+
+
+                   CELL COMPARISON RESULTS ( TOP LEVEL )
+
+
+
+                  #   #         #####################  
+                   # #          #                   #  
+                    #           #     INCORRECT     #  
+                   # #          #                   #  
+                  #   #         #####################  
+
+
+  Error:    Different numbers of ports (see below).
+  Error:    Different numbers of nets (see below).
+  Error:    Different numbers of instances (see below).
+
+LAYOUT CELL NAME:         mult
+SOURCE CELL NAME:         mult
+
+--------------------------------------------------------------------------------------------------------------
+
+INITIAL NUMBERS OF OBJECTS
+--------------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:             14        15    *
+
+ Nets:             577       578    *
+
+ Instances:        523       477    *    MN (4 pins)
+                 68795       477    *    MP (4 pins)
+                     0        15    *    d04bar00nnz04 (2 pins)
+                     0        81    *    d04bar00nnz08 (2 pins)
+                     0       160    *    d04bar00nnz16 (2 pins)
+                     0       153    *    d04bar00nnz32 (2 pins)
+                     0      1004    *    d04bar00nnz64 (2 pins)
+                     0       500    *    d04dcp00wdz64 (2 pins)
+                     0        26    *    d04dcp00wnz04 (2 pins)
+                     0      1038    *    d04dcp00wnz08 (2 pins)
+                     0         8    *    d04gnc01wnz00 (3 pins)
+                     0         3    *    d04qfd02ndz00 (2 pins)
+                     0         6    *    d04spc00lnz01 (2 pins)
+                     0        33    *    d04spc00nnz01 (2 pins)
+                     0        29    *    d04spc00wnz02 (2 pins)
+                     0       301    *    d04spc00wnz03 (2 pins)
+                     0       156    *    d04tap02ldz00 (2 pins)
+                     0        38    *    fdk73d86_asic_halo_hhb (2 pins)
+                     0        38    *    fdk73d86_asic_halo_hhc (2 pins)
+                     0         2    *    fdk73d86_asic_halo_hib (2 pins)
+                     0         2    *    fdk73d86_asic_halo_hic (2 pins)
+                     0       156    *    fdk73d86_asic_halo_hvn (2 pins)
+                ------    ------
+ Total Inst:     69318      4703
+
+
+NUMBERS OF OBJECTS AFTER TRANSFORMATION
+---------------------------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:             14        15    *
+
+ Nets:             415       416    *
+
+ Instances:        398       398         MN (4 pins)
+                   394       394         MP (4 pins)
+                     0       500    *    d04dcp00wdz64 (2 pins)
+                     0        38    *    fdk73d86_asic_halo_hhb (2 pins)
+                     0        38    *    fdk73d86_asic_halo_hhc (2 pins)
+                     0         2    *    fdk73d86_asic_halo_hib (2 pins)
+                     0         2    *    fdk73d86_asic_halo_hic (2 pins)
+                     0       156    *    fdk73d86_asic_halo_hvn (2 pins)
+                ------    ------
+ Total Inst:       792      1528
+
+
+       * = Number of objects in layout different from number in source.
+
+
+
+**************************************************************************************************************
+                                 INCORRECT OBJECTS
+**************************************************************************************************************
+
+
+LEGEND:
+-------
+
+  ne  = Naming Error (same layout name found in source
+        circuit, but object was matched otherwise).
+
+
+**************************************************************************************************************
+                                   INCORRECT NETS
+
+DISC#  LAYOUT NAME                                               SOURCE NAME
+**************************************************************************************************************
+
+  1    ** missing net **                                         VSS
+
+
+**************************************************************************************************************
+                                   INCORRECT PORTS
+
+DISC#  LAYOUT NAME                                               SOURCE NAME
+**************************************************************************************************************
+
+  2    ** missing port **                                        vss on net: VSS
+
+
+**************************************************************************************************************
+                                 INCORRECT INSTANCES
+
+DISC#  LAYOUT NAME                                               SOURCE NAME
+**************************************************************************************************************
+
+  3    ** missing instance **                                    Xfill_impl0_1913  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+  4    ** missing instance **                                    Xfill_impl0_1912  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+  5    ** missing instance **                                    Xfill_impl0_1911  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+  6    ** missing instance **                                    Xfill_impl0_1910  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+  7    ** missing instance **                                    Xfill_impl0_1909  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+  8    ** missing instance **                                    Xfill_impl0_1908  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+  9    ** missing instance **                                    Xfill_impl0_1907  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 10    ** missing instance **                                    Xfill_impl0_1906  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 11    ** missing instance **                                    Xfill_impl0_1905  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 12    ** missing instance **                                    Xfill_impl0_1904  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 13    ** missing instance **                                    Xfill_impl0_1903  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 14    ** missing instance **                                    Xfill_impl0_1902  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 15    ** missing instance **                                    Xfill_impl0_1901  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 16    ** missing instance **                                    Xfill_impl0_1900  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 17    ** missing instance **                                    Xfill_impl0_1899  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 18    ** missing instance **                                    Xfill_impl0_1898  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 19    ** missing instance **                                    Xfill_impl0_1897  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 20    ** missing instance **                                    Xfill_impl0_1896  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 21    ** missing instance **                                    Xfill_impl0_1895  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 22    ** missing instance **                                    Xfill_impl0_1894  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 23    ** missing instance **                                    Xfill_impl0_1893  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 24    ** missing instance **                                    Xfill_impl0_1892  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 25    ** missing instance **                                    Xfill_impl0_1891  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 26    ** missing instance **                                    Xfill_impl0_1890  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 27    ** missing instance **                                    Xfill_impl0_1889  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 28    ** missing instance **                                    Xfill_impl0_1888  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 29    ** missing instance **                                    Xfill_impl0_1887  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 30    ** missing instance **                                    Xfill_impl0_1886  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 31    ** missing instance **                                    Xfill_impl0_1885  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 32    ** missing instance **                                    Xfill_impl0_1884  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 33    ** missing instance **                                    Xfill_impl0_1883  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 34    ** missing instance **                                    Xfill_impl0_1882  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 35    ** missing instance **                                    Xfill_impl0_1881  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 36    ** missing instance **                                    Xfill_impl0_1880  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 37    ** missing instance **                                    Xfill_impl0_1879  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 38    ** missing instance **                                    Xfill_impl0_1878  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 39    ** missing instance **                                    Xfill_impl0_1877  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 40    ** missing instance **                                    Xfill_impl0_1876  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 41    ** missing instance **                                    Xfill_impl0_1875  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 42    ** missing instance **                                    Xfill_impl0_1874  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 43    ** missing instance **                                    Xfill_impl0_1873  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 44    ** missing instance **                                    Xfill_impl0_1872  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 45    ** missing instance **                                    Xfill_impl0_1871  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 46    ** missing instance **                                    Xfill_impl0_1870  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 47    ** missing instance **                                    Xfill_impl0_1869  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 48    ** missing instance **                                    Xfill_impl0_1868  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 49    ** missing instance **                                    Xfill_impl0_1867  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 50    ** missing instance **                                    Xfill_impl0_1866  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 51    ** missing instance **                                    Xfill_impl0_1865  d04dcp00wdz64
+
+--------------------------------------------------------------------------------------------------------------
+
+ 52    ** missing instance **                                    Xfill_impl0_1864  d04dcp00wdz64
+
+
+
+**************************************************************************************************************
+                               INFORMATION AND WARNINGS
+**************************************************************************************************************
+
+
+                  Matched    Matched    Unmatched    Unmatched    Component
+                   Layout     Source       Layout       Source    Type
+                  -------    -------    ---------    ---------    ---------
+   Ports:              14         14            0            1
+
+   Nets:              415        415            0            1
+
+   Instances:         202        202            0            0    MN(n)
+                      189        189            0            0    MN(nuv1)
+                        7          7            0            0    MN(nuv2)
+                      202        202            0            0    MP(p)
+                      185        185            0            0    MP(puv1)
+                        7          7            0            0    MP(puv2)
+                        0          0            0          500    d04dcp00wdz64
+                        0          0            0           38    fdk73d86_asic_halo_hhb
+                        0          0            0           38    fdk73d86_asic_halo_hhc
+                        0          0            0            2    fdk73d86_asic_halo_hib
+                        0          0            0            2    fdk73d86_asic_halo_hic
+                        0          0            0          156    fdk73d86_asic_halo_hvn
+                  -------    -------    ---------    ---------
+   Total Inst:        792        792            0          736
+
+
+o Statistics:
+
+   2 passthrough source nets were found.
+
+   68280 layout instances were filtered and their pins removed from adjoining nets.
+   3013 source instances were filtered and their pins removed from adjoining nets.
+
+   462 layout mos transistors were reduced to 224.  162 connecting nets were deleted.
+     76 mos transistors were deleted by parallel reduction.
+     162 mos transistors and 162 connecting nets were deleted by series reduction.
+   324 source mos transistors were reduced to 162.  162 connecting nets were deleted.
+     162 mos transistors and 162 connecting nets were deleted by series reduction.
+
+   8 unused layout mos transistors were deleted.
+
+   1 layout net was reduced to a passthrough net.
+
+
+o Source Names That Appear On More Than One Object:
+
+   Ports:        vss
+   Nets:         vss
+
+
+o Initial Correspondence Points:
+
+   Ports:        vcc TEST_TM TEST_SI1 TEST_SO1 Q[2] Q[1] Q[0] DA0[1] DA0[0] DA1[1] DA1[0] MCLK
+                 SCAN_EN
+   Nets:         N_1 N_3 N_7 N_6 N N_5 N_4 FE_PHN35_TEST_SI1 FE_PHN36_TEST_SI1 FE_PHN37_TEST_SI1
+                 FE_PHN38_TEST_SI1 FE_PHN39_TEST_SI1 FE_PHN40_TEST_SI1 FE_PHN34_TEST_SI1 N_2
+                 N_30 FE_PHN4_DA0_0_ FE_PHN19_DA0_0_ N_29 FE_PHN16_TEST_SI1 FE_PHN21_TEST_SI1
+                 FE_PHN25_TEST_SI1 FE_PHN27_TEST_SI1 FE_PHN30_TEST_SI1 FE_PHN11_TEST_SI1
+                 FE_PHN31_TEST_SI1 FE_PHN32_TEST_SI1 FE_PHN33_TEST_SI1 N_15 FE_PHN24_DA0_0_
+                 FE_PHN17_DA0_1_ DA0A[0] DA1A[1] FE_PHN23_DA1_0_ FE_PHN29_DA0_1_ FE_PHN8_DA0_1_
+                 FE_PHN22_DA0_1_ N_27 FE_PHN15_DA0_1_ N_13 DA1A[0] N_16 FE_PHN7_DA1_1_
+                 FE_PHN12_DA1_1_ FE_PHN3_DA1_0_ FE_PHN10_DA1_0_ DA0A[1] FE_PHN2_DA1_1_ N_11
+                 FE_PHN18_DA1_0_
+
+
+**************************************************************************************************************
+                                         SUMMARY
+**************************************************************************************************************
+
+Total CPU Time:      1 sec
+Total Elapsed Time:  2 sec

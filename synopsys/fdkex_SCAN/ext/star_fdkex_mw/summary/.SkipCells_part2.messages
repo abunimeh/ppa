@@ -1,0 +1,11 @@
+  
+ReadLayers    Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=104.3 
+ReadHNdb      Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=117.8 
+NetSelect     Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=117.8 
+CellSelect    Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=117.8 
+SkipCells     Elp=00:00:02 Cpu=00:00:00 Usr=0.1    Sys=0.1    Mem=119.2 
+  
+Done          Elp=00:00:02 Cpu=00:00:00 Usr=0.1    Sys=0.1    Mem=119.2 
+
+End Time: Tue Mar 31 10:03:25 2015
+

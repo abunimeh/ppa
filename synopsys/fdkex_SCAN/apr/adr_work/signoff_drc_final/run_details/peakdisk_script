@@ -1,0 +1,32 @@
+#! /bin/sh
+
+GROUPDIR="/tmp/spalutla_adr_51074"
+DETAILSDIR="/nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/apr/adr_work/signoff_drc_final/run_details"
+TOUT=${DETAILSDIR}/fsize.tmp
+FOUT=${DETAILSDIR}/fsize.txt
+
+die() { echo "$@"; exit -1; }
+
+diskkbytes() { sed -n '/^[0-9]/s/\ttotal//p' $1; }
+listdirs() { ls -lSA ${GROUPDIR} ${GROUPDIR}/CACHE_DIR; }
+header() { date; echo "du -ck  --block-size=1 ${GROUPDIR}:"; du -ck --block-size=1 ${GROUPDIR}; echo; }
+
+[ -d "${GROUPDIR}" ]   || die 'No group directory specified or found'
+[ -d "${DETAILSDIR}" ] || die 'No details directory specified or found'
+
+header > $TOUT
+
+if [ -f $FOUT ]; then
+    /bin/true
+    newval=$(diskkbytes $TOUT)
+    oldval=$(diskkbytes $FOUT)
+    if [ "$newval" -gt "$oldval" ]; then
+        listdirs >> $TOUT
+        mv $TOUT $FOUT
+    else
+        rm -f $TOUT
+    fi
+else
+    listdirs >> $TOUT
+    mv $TOUT $FOUT
+fi

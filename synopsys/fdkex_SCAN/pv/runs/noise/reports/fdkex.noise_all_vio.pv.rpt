@@ -1,0 +1,29 @@
+****************************************
+Report : noise
+	-all_violators
+	-nosplit
+Design : fdkex
+Version: J-2014.06-SP2
+Date   : Tue Mar 31 10:16:29 2015
+****************************************
+
+ analysis mode: report_at_source
+ slack type: height
+
+ noise_region: above_low
+ pin name (net name)       width    height     slack
+ -----------------------------------------------------
+
+ noise_region: below_high
+ pin name (net name)       width    height     slack
+ -----------------------------------------------------
+
+ noise_region: below_low
+ pin name (net name)       width    height     slack
+ -----------------------------------------------------
+
+ noise_region: above_high
+ pin name (net name)       width    height     slack
+ -----------------------------------------------------
+
+1

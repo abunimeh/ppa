@@ -1,0 +1,136 @@
+#INFO-MSG==>   Setting log file  : ./logs/read_constraints.log
+#INFO-MSG==>    ALL read_constraints substeps :  read_constraints read_phys_constraints create_scenarios 
+#INFO-MSG==>    Completed substeps : 
+#INFO-MSG==>    Remaining substeps :  read_constraints read_phys_constraints create_scenarios  
+#INFO-MSG==>  Executing substep read_constraints
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/kit/afdk73_kit_s/asicflows/synopsys/common/read_constraints.tcl : START Tue Mar 31 00:05:43 MST 2015
+Using operating conditions 'slow_1.00' found in library 'd04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst'.
+Using operating conditions 'slow_1.00' found in library 'd04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst'.
+==>INFORMATION: Setting default Operating Conditions
+set_operating_conditions -analysis_type bc_wc -min slow_1.00 -max slow_1.00 
+==>INFORMATION: Sourcing the fdkex.clocks.tcl file
+##############################################################################
+## Intel Top Secret                                                         ##
+##############################################################################
+## Copyright (C) 2012, Intel Corporation.  All rights reserved.             ##
+##                                                                          ##
+## This is the property of Intel Corporation and may only be utilized       ##
+## pursuant to a written Restricted Use Nondisclosure Agreement             ##
+## with Intel Corporation.  It may not be used, reproduced, or              ##
+## disclosed to others except in accordance with the terms and              ##
+## conditions of such agreement.                                            ##
+##                                                                          ##
+## All products, processes, computer systems, dates, and figures            ##
+## specified are preliminary based on current expectations, and are         ##
+## subject to change without notice.                                        ##
+##############################################################################
+# This is a TEMPLATE file for CLOCK CONSTRAINTS FILE
+# create_clock -name pxclk -period 6666.67 -waveform {0 3333.33} [get_ports {pxclk}]
+# set_input_transition 150 -max [ get_ports pxclk ]
+# set_input_transition 75 -min [ get_ports pxclk ]
+# create_clock -name xtclk_13p5 -period 73337 -waveform {0 36668.5} [get_ports {xtclk_13p5}]
+# set_input_transition 150 -max [ get_ports xtclk_13p5 ]
+# set_input_transition 75 -min [ get_ports xtclk_13p5 ]
+# Make sure all combinations are here
+# for n clocks, there should be n^2 max clock uncertainty lines and n^2 min clock uncertainty
+# set_clock_uncertainty -hold 300 -from pxclk -to pxclk
+# set_clock_uncertainty -hold 300 -from pxclk -to xtclk_13p5
+# set_clock_uncertainty -hold 300 -from xtclk_13p5 -to pxclk
+# set_clock_uncertainty -hold 300 -from xtclk_13p5 -to xtclk_13p5
+# set_clock_uncertainty -setup 235 -from pxclk -to pxclk
+# set_clock_uncertainty -setup 235 -from pxclk -to xtclk_13p5
+# set_clock_uncertainty -setup 235 -from xtclk_13p5 -to pxclk
+# set_clock_uncertainty -setup 235 -from xtclk_13p5 -to xtclk_13p5
+# clock insertion delay
+# This is the same as specified for CTS in APR
+# set_clock_latency <number> [get_clocks {pxclk}]
+# set_clock_latency <number> [get_clocks {xtclk_13p5}]
+#GENERATED CLOCKS
+#create_generated_clock -name GEN_CLK -source [get_pins clk_div2_ckcorediv2/clockdivff_cknameout/ffout_reg/ck] -divide_by 2 [get_pins clk_div2_ckcorediv2/clockdivff_cknameout/ffout_reg/o]
+#VIRTUAL CLOCKS
+#create_clock -name  VIRTUAL_CLK   -period  1088   -waveform {0.000 0544}
+create_clock -name clk -period 500 -waveform {0 250} [get_ports {clk}]
+1
+set_clock_uncertainty -setup 50 [get_clocks clk]
+1
+set_clock_uncertainty -hold  50 [get_clocks clk]
+1
+==>INFORMATION: Sourcing the design constraints file
+##############################################################################
+## Intel Top Secret                                                         ##
+##############################################################################
+## Copyright (C) 2012, Intel Corporation.  All rights reserved.             ##
+##                                                                          ##
+## This is the property of Intel Corporation and may only be utilized       ##
+## pursuant to a written Restricted Use Nondisclosure Agreement             ##
+## with Intel Corporation.  It may not be used, reproduced, or              ##
+## disclosed to others except in accordance with the terms and              ##
+## conditions of such agreement.                                            ##
+##                                                                          ##
+## All products, processes, computer systems, dates, and figures            ##
+## specified are preliminary based on current expectations, and are         ##
+## subject to change without notice.                                        ##
+##############################################################################
+###############################
+# Default Loading Constraints
+###############################
+#User should copy this file in ./inputs/constraints/${G_DESIGN_NAME}.constraints.tcl and overwrite the actual value
+#Default setting input_delay & output_delay of 2/3rd  of fastest clock
+#-----------------------------------------------------------------------
+set delay_value [expr [lindex [lsort -real -decreasing [get_attribute [get_clocks ] period]] end] * 2/3]
+333.333333333
+set clock_name [get_clocks clk]
+{clk}
+set_input_delay  -clock $clock_name $delay_value [remove_from_collection [all_inputs] [get_ports clk]]
+1
+set_output_delay -clock $clock_name $delay_value [all_outputs]
+1
+#Default input transition or loading cons
+#-----------------------------------------
+set my_driving_cell d04bfn00ln0b0
+d04bfn00ln0b0
+if {[get_lib_cells */$my_driving_cell -quiet] != ""} {
+   set_driving_cell -lib_cell $my_driving_cell [all_inputs]
+   puts "==>INFORMATION: Setting driving cell to $my_driving_cell"
+} else {
+   set_input_transition 50 [all_inputs]
+   puts "==>INFORMATION: Specified driving cell $my_driving_cell was not found. Setting default input transition as 50"
+}
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Note - message 'UID-401' limit (5) exceeded.  Remainder will be suppressed.
+==>INFORMATION: Setting driving cell to d04bfn00ln0b0
+set_load 10 [all_outputs]
+1
+set_max_transition 350 *
+Warning: set_max_transition has been applied on clock objects without specifying -clock_path.  Constraint will be considered by both clock network pins and data pins launched by that clock. (OPT-1029)
+1
+set_max_fanout 30 [get_designs *]
+1
+set_max_area 0
+1
+==>INFORMATION: P_source_if_exists: read_constraints.tcl : END Tue Mar 31 00:05:43 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:00:00 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:00 hrs : MEMORY : 2352236 KB
+#INFO-MSG==>  Time to run substep read_constraints in (hh:mm:ss) : 00:00:00 hrs
+#INFO-MSG==>  Executing substep read_phys_constraints
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/kit/afdk73_kit_s/asicflows/synopsys/syn/read_phys_constraints.tcl : START Tue Mar 31 00:05:44 MST 2015
+==>INFORMATION: P_source_if_exists: read_phys_constraints.tcl : END Tue Mar 31 00:05:44 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:00:01 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:00 hrs : MEMORY : 2352236 KB
+#INFO-MSG==>  Time to run substep read_phys_constraints in (hh:mm:ss) : 00:00:01 hrs
+#INFO-MSG==>  Executing substep create_scenarios
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/kit/afdk73_kit_s/asicflows/synopsys/common/create_scenarios.tcl : START Tue Mar 31 00:05:44 MST 2015
+==>INFORMATION: P_source_if_exists: create_scenarios.tcl : END Tue Mar 31 00:05:44 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:00:00 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:00 hrs : MEMORY : 2352236 KB
+#INFO-MSG==>  Time to run substep create_scenarios in (hh:mm:ss) : 00:00:00 hrs
+#INFO-MSG==>  Time to run step read_constraints in (hh:mm:ss) : 00:00:01 hrs
+#INFO-MSG==>  Saving design fdkex ...
+Writing ddc file './ddc/fdkex_read_constraints.ddc'.
+#INFO-MSG==>   No report requirement specified INTEL_REPORTS(read_constraints) 
+#INFO-MSG==>   No report requirement specified INTEL_OUTPUTS(read_constraints) 
+#INFO-MSG==>  Time to create reports and outputs for read_constraints in (hh:mm:ss) : 00:00:00 hrs
+

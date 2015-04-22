@@ -1,0 +1,29 @@
+
+                               OVERALL   STATUS
+                              ------------------
+
+                                                          User     System   Average
+Task                      Running     Idle    Utilized    Time      Time     Load
+------------------------  --------  --------  --------  --------  --------  -------
+chlr16420(0)              00:30:34  00:00:08    99.5%      0.00      0.00    9.52
+chlr16420(1)              00:30:00  00:00:42    97.7%      0.00      0.00 
+------------------------  --------  --------  --------  --------  --------  -------
+Overall utilization                             98.6%
+Total preprocessing time  00:00:35
+
+
+
+                          POST-PREPROCESSING STATUS
+                        -----------------------------
+
+                                                          FILE I/O(seconds)     Disk Swap(mem to disk)
+Task                      Running     Idle    Utilized    Copying   Waiting     Tot Swapouts
+------------------------  --------  --------  --------    --------  --------    --------
+chlr16420(0)              00:30:02  00:00:04    99.8%       0.000     0.000       0
+chlr16420(1)              00:29:59  00:00:39    97.8%       0.000     0.000       0
+------------------------  --------  --------  --------    --------  --------    --------
+Overall utilization                             98.8%
+Total time for file copying                                 0.000
+Average time for file waiting                                         0.000
+
+

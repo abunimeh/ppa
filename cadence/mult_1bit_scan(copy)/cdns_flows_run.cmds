@@ -1,0 +1,132 @@
+setenv PATH /p/foundry/env/bin:/p/foundry/fdk-env/env-core/15ww14c/bin:/p/foundry/fdk-env/env-core/15ww14c/isobin:/p/foundry/env/bin:/usr/intel/bin:/bin:/usr/bin:.:/usr/sbin:/usr/bin/X11:/usr/X11R6/bin:/usr/local/bin:/usr/local/adm/bin:/stor/common/bin:/p/foundry/env/pkgs/megatest/bin
+setenv INTEL_ASIC /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/kit/afdk73_kit_c/
+setenv INTEL_PDK /p/fdk/fdk73/builds/pdk736_r2.2
+setenv INTEL_PDK_VER 159
+setenv INTEL_HALO /p/fdk/fdk73/builds/halo736_r2.2
+setenv INTEL_TIC /p/fdk/fdk73/builds/tic736_r2.2
+setenv INTEL_STDCELLS_MISC /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc
+setenv INTEL_STDCELLS /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8
+##### SYN FLOW STEP CMDS #####
+mkdir -p syn syn/logs; cd syn
+
+echo source /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/kit/afdk73_kit_c//asicflows/cadence/syn_dot6_d04_std/run.tcl >> rc_batch.tcl
+echo runADF -start read_design -stop outputs_n_reports  >> rc_batch.tcl
+echo exit >> rc_batch.tcl
+
+rc -64 -f ./rc_batch.tcl >& logs/syn_run.log
+
+cd ..
+
+##### APR FLOW STEP CMDS #####
+mkdir -p  apr apr/logs; cd apr
+
+echo source /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/kit/afdk73_kit_c//asicflows/cadence/apr_dot6_d04_std/run.tcl > enc_batch.tcl
+echo runADF -start import_design -stop signoff >> enc_batch.tcl
+echo exit >> enc_batch.tcl
+
+encounter -64 -nowin -overwrite -init ./enc_batch.tcl -wait 180 >& logs/apr_run.log
+
+cd ..
+/p/fdkgt/adf_qa/nightly_adf_kit_build_regr/adf_nightly_regr_repo_clone/system/scripts/1273.cadence.fill_merge.cmd mult dot6 d04
+
+##### FILL_MERGE FLOW STEP CMDS #####
+mkdir -p fill_merge fill_merge/logs; cd fill_merge
+
+/bin/cp -rLf /p/fdk/fdk73/builds/pdk736_r2.2/fill/calibre/uin/d04 uin_d04
+chmod -R u+w uin_d04
+sed -e '/set DFM_[DIFF|POLY|V][0-9A-z]*FILL true/s/^/#/g' ./uin_d04/flexuin_fill_layers.tcl > ./uin_d04/flexuin_fill_layers.tcl.mod
+/bin/mv ./uin_d04/flexuin_fill_layers.tcl ./uin_d04/flexuin_fill_layers.tcl.orig
+ln -s flexuin_fill_layers.tcl.mod ./uin_d04/flexuin_fill_layers.tcl
+
+
+# Env vars required for Calibre fill run
+setenv DR_INPUT_FILE /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/fill_merge/../apr/outputs/mult.signoff.oas
+setenv DR_INPUT_FILE_TYPE OASIS
+setenv DR_LAY_CELL mult
+setenv UINDIR /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/fill_merge/uin_d04
+
+calibre -64 -drc -hier -turbo -hyper -E dfmfill.svrf /p/fdk/fdk73/builds/pdk736_r2.2/fill/calibre/flexfill/mfill_streamlined.tcl >& logs/calibre_fill.log
+
+calibredrv -64 /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/kit/afdk73_kit_c//asicflows/mentor/merge/layout_merge_calibre.tcl fill_merge /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/fill_merge/../apr/outputs/mult.signoff.oas /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/fill_merge/mult.signoff.post_mfill.oas oas /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/fill_merge/mult_fill.oas >& logs/calibre_merge.log
+
+cd ..
+
+##### EXT FLOW STEP CMDS #####
+mkdir -p ext ext/logs; cd ext
+
+
+##### STA FLOW STEP CMDS #####
+mkdir -p  sta sta/logs; cd sta
+
+
+tempus -nowin -init  /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/kit/afdk73_kit_c//asicflows/cadence/sta_dot6_d04_std/run.tcl -cmd sta.max.cmd >& logs/sta.max.log
+
+tempus -nowin -init  /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/kit/afdk73_kit_c//asicflows/cadence/sta_dot6_d04_std/run.tcl -cmd sta.min.cmd >& logs/sta.min.log
+
+tempus -nowin -init  /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/kit/afdk73_kit_c//asicflows/cadence/sta_dot6_d04_std/run.tcl -cmd sta.noise.cmd >& logs/sta.noise.log
+
+cd ..
+
+##### DRC_LVS FLOW STEP CMDS #####
+mkdir -p drc_lvs drc_lvs/logs; cd drc_lvs
+
+v2lvs -v /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/../apr/outputs/mult.signoff_lvs.v  -s /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8/cdl/ln/d04_ln.cdl -s /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8/cdl/nn/d04_nn.cdl -s /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8/cdl/wn/d04_wn.cdl -s /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/cdl/nn/d04_nn_misc.cdl -s /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/cdl/wn/d04_wn_misc.cdl -s /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/cdl/ln/d04_ln_misc.cdl -s /p/fdk/fdk73/builds/halo736_r2.2/cdl/intel73halo.cdl -s /p/fdk/fdk73/builds/tic736_r2.2/cdl/intel73tapeout.cdl -s /p/fdk/fdk73/builds/tic736_r2.2/cdl/fdk73tic6_s73.cdl -o mult_cdl.sp -log logs/calibre_v2lvs.log
+
+setenv Calibre_RUNSET ${INTEL_PDK}/runsets/calibre
+
+setenv DR_PROCESS dotSix
+source ${Calibre_RUNSET}/p1273.env
+
+setenv DR_INPUT_FILE /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/../apr/outputs/mult.signoff.post_mfill.oas
+
+setenv DR_INPUT_FILE_TYPE OASIS
+
+setenv DR_SCH_CELL mult
+
+setenv DR_SECTION_LEVEL YES
+
+### drcc Runset ###
+mkdir -p drcc; cd drcc
+
+calibre -drc -waiver /p/fdk/fdk73/builds/pdk736_r2.2/runsets/calibre/waive/1273_waivers_setup_oas -hier -turbo /p/fdk/fdk73/builds/pdk736_r2.2/runsets/calibre/p1273_drcc.svrf >& drcc_run.log &
+
+cd ..
+
+### denall_reuse Runset ###
+mkdir -p denall_reuse; cd denall_reuse
+
+calibre -drc -hier -turbo /p/fdk/fdk73/builds/pdk736_r2.2/runsets/calibre/p1273_denall_reuse.svrf >& denall_reuse_run.log &
+
+cd ..
+
+### gden Runset ###
+mkdir -p gden; cd gden
+
+calibre -drc -hier -turbo /p/fdk/fdk73/builds/pdk736_r2.2/runsets/calibre/p1273_gden.svrf >& gden_run.log &
+
+cd ..
+
+### IPall Runset ###
+mkdir -p IPall; cd IPall
+
+calibre -drc -hier -turbo /p/fdk/fdk73/builds/pdk736_r2.2/runsets/calibre/p1273_IPall.svrf >& IPall_run.log &
+
+cd ..
+
+### HV Runset ###
+mkdir -p HV; cd HV
+
+calibre -drc -hier -turbo /p/fdk/fdk73/builds/pdk736_r2.2/runsets/calibre/p1273_HV.svrf >& HV_run.log &
+
+cd ..
+
+setenv DR_SCH_FILE /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/mult_cdl.sp
+
+### lvs Runset ###
+mkdir -p lvs; cd lvs
+
+calibre -lvs -hier -turbo /p/fdk/fdk73/builds/pdk736_r2.2/runsets/calibre/p1273_lvs.svrf >& lvs_run.log &
+
+cd ..
+
+cd ..

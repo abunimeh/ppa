@@ -1,7 +1,0 @@
-fdkex _drSECTION_LEVEL=_drYES _drPROCESS=_drdotThree OASIS /tmp/spalutla/adf_nightly_regr/2015-03-31/drc_denall_reuse_run_details_18936 /p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1/bin/EM64T_SUSE64/icv /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/denall_reuse.rs /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/PXL ../../apr/outputs/fdkex.apr.oas . -vue -rd -i -f -c -I -I -D -D 
-schematic=UNSPECIFIED
-ICV_HOME_DIR=/p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1
-ICV_INLCUDES=/p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1/include
-fdkex
-/tmp/spalutla/adf_nightly_regr/2015-03-31/drc_denall_reuse_run_details_18936
-Complete

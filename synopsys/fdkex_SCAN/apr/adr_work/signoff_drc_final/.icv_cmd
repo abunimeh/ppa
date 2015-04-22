@@ -1,0 +1,7 @@
+layer.map icv fdkex_51074_LIB fdkex TOP MILKYWAY 55 4 14 18 22 26 30 34 38 46 42 92 56 13 17 21 25 29 33 37 41 45 80 /tmp/spalutla_adr_51074 /p/fdk/fdk73/builds/pdk733_r1.7/runsets/adr/adr.rs /p/fdk/fdk73/builds/pdk733_r1.7/runsets/adr/ /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/uin/d04/ /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/apr/adr_work/signoff_drc_final/sdrc.rc /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/apr/adr_work/adr_control/ /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/apr . -sln -rc -p -lf -level1_no_explode -icc_error_categories -icc_error_browser -icc -i -g -f -dp4 -c -I -I -I -I 
+schematic=UNSPECIFIED
+ICV_HOME_DIR=/p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1
+ICV_INLCUDES=/p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1/include
+fdkex
+/nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/apr/adr_work/signoff_drc_final/run_details
+Complete

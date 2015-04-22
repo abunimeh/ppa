@@ -1,0 +1,15 @@
+Design: mult
+InstArea: 4290.048
+Density: 0.0164583333333
+Inst count: 3814
+   physical cell count: 3585
+   macro area: 0
+   macro count: 0
+   stdcell area: 70.60704
+   stdcell count: 229 (stdcell area: 70.60704) 
+      buffer count: 49 ( holdfix count: 41 )
+      inv count: 3
+      sequential cell count: 8
+      comb count: 169
+        sparegate count: 0
+Total wirelength: 430.223

@@ -1,0 +1,17 @@
+* 10000
+wrong_substrate_name
+0 0 2 Apr  4 00:29:02 2015                                                      
+Rule File Pathname: /p/fdk/fdk73/builds/pdk736_r2.2/runsets/calibre/p1273_lvs.svrf
+substrate can only be texted with a valid ground name
+softcheck_nwell_nores_upper
+0 0 2 Apr  4 00:29:02 2015                                                      
+Rule File Pathname: /p/fdk/fdk73/builds/pdk736_r2.2/runsets/calibre/p1273_lvs.svrf
+Soft Connect errors on NWELL
+softcheck_subiso_upper
+0 0 2 Apr  4 00:29:02 2015                                                      
+Rule File Pathname: /p/fdk/fdk73/builds/pdk736_r2.2/runsets/calibre/p1273_lvs.svrf
+Soft Connect errors on PWELL
+softcheck_isopwell_upper
+0 0 2 Apr  4 00:29:02 2015                                                      
+Rule File Pathname: /p/fdk/fdk73/builds/pdk736_r2.2/runsets/calibre/p1273_lvs.svrf
+Soft Connect errors on real sub

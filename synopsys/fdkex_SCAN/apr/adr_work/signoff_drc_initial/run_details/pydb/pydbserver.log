@@ -1,0 +1,50 @@
+PYDB_Server(R) , SUSE.64 Release J-2014.06.SP2.HF1.4016 2014/09/22
+
+  (C) Copyright 2007-2014.
+  Synopsys, Inc.  All rights reserved.
+
+NFS filesystem detected
+Listening for connections on port 8927
+PYDB_Server Started on host chlr16420, Tue 03/31/2015 06:02:48
+Client chlr16420(38674) connected (1 total client)
+Verified current licenses.
+Client chlr16420(38844) connected (2 total clients)
+Client chlr16420(38842) connected (3 total clients)
+Client chlr16420(38837) connected (4 total clients)
+Client chlr16420(38845) connected (5 total clients)
+Client chlr16420(38844) disconnected (4 clients remain)
+Client chlr16420(38844) connected (5 total clients)
+Client chlr16420(38845) disconnected (4 clients remain)
+Client chlr16420(38845) connected (5 total clients)
+Client chlr16420(38842) disconnected (4 clients remain)
+Client chlr16420(38842) connected (5 total clients)
+Begin error insertion: /p/fdk/fdk73/builds/pdk733_r1.7/runsets/adr/adr.rs:238:copy
+Error insertion complete: /p/fdk/fdk73/builds/pdk733_r1.7/runsets/adr/adr.rs:238:copy
+  Error Insertion Time=0:00:01  User=0.00 Sys=0.03 Mem=9.936 MySQL=33.484 Unpooled=0.025
+Begin error insertion: /p/fdk/fdk73/builds/pdk733_r1.7/runsets/adr/adr.rs:247:copy
+Error insertion complete: /p/fdk/fdk73/builds/pdk733_r1.7/runsets/adr/adr.rs:247:copy
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=9.983 MySQL=32.761 Unpooled=0.025
+Client chlr16420(38837) disconnected (4 clients remain)
+Client chlr16420(38844) disconnected (3 clients remain)
+Client chlr16420(38845) disconnected (2 clients remain)
+Client chlr16420(38842) disconnected (1 client remains)
+ Total error insertion Time=0:00:26  User=0.00 Sys=0.03 Mem=9.983 MySQL=33.484 Unpooled=0.025
+  Total Commands: 2
+  Total Errors: 758
+  Avg Time/Cmd: Wall=0 User=0.00 Sys=0.01 Mem=9.960 MySQL Mem=0.025
+Shutdown requested by client chlr16420(38674)
+0 clients remain connected
+Overall server Time=0:02:30  User=0.05 Sys=0.19 Mem=11.285 MySQL=33.484 Unpooled=0.029
+PYDB_Server(R) , SUSE.64 Release J-2014.06.SP2.HF1.4016 2014/09/22
+
+  (C) Copyright 2007-2014.
+  Synopsys, Inc.  All rights reserved.
+
+NFS filesystem detected
+Listening for connections on port 8332
+PYDB_Server Started on host chlr16420, Tue 03/31/2015 06:05:29
+Client chlr16420(41111) connected (1 total client)
+Verified current licenses.
+Shutdown requested by client chlr16420(41111)
+0 clients remain connected
+Overall server Time=0:00:03  User=0.00 Sys=0.02 Mem=9.827 MySQL=32.702 Unpooled=0.006

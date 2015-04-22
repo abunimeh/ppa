@@ -1,0 +1,7 @@
+icv fdkex GDSII DR_DFM_PROCESS=1273 /tmp/spalutla_fdkex_51074/spalutla.fdkex.51074.iss/spalutla.fdkex.powerhookup72.iss /tmp/spalutla_fdkex_51074/spalutla.fdkex.51074.iss/input/fdkex.stm /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill/powerhookup72_combined.rs /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/PXL /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/PXL -norscache -i -f -c -I -I -I -I -D 
+schematic=UNSPECIFIED
+ICV_HOME_DIR=/p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1
+ICV_INLCUDES=/p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1/include
+fdkex
+/tmp/spalutla_fdkex_51074/spalutla.fdkex.51074.iss/spalutla.fdkex.powerhookup72.iss/run_details
+Complete

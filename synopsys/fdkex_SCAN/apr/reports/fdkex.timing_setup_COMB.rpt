@@ -1,0 +1,122 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -derate
+        -input_pins
+        -nets
+        -group COMB
+        -slack_lesser_than 9999.00
+        -max_paths 1000
+        -transition_time
+        -capacitance
+Design : fdkex
+Version: J-2014.09-SP1
+Date   : Tue Mar 31 09:58:59 2015
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow_1.00   Library: d04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MIN_MAX
+	Extraction derating : -40/-10/-10
+
+Information: Percent of Arnoldi-based delays = 48.23%
+
+Information: Percent of CCS-based delays = 48.23%
+
+  Startpoint: scan_enable
+              (input port clocked by clk)
+  Endpoint: flag_ded_alu
+            (output port clocked by clk)
+  Path Group: COMB
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans    Derate      Incr       Path
+  -----------------------------------------------------------------------------------------
+  clock clk (rise edge)                                                  0.00       0.00
+  clock network delay (ideal)                                          346.03     346.03
+  input external delay                                                 333.33     679.37 r
+  scan_enable (in)                                  30.12               18.05     697.41 r
+  scan_enable (net)              2         1.62                          0.00     697.41 r
+  post_place107/a (d04inn00yn0b5)                   30.12                0.43 &   697.84 r
+  post_place107/o1 (d04inn00yn0b5)                  17.37               17.42     715.26 f
+  n3193 (net)                    2         3.94                          0.00     715.26 f
+  post_place318/a (d04inn00ynuf5)                   17.37                1.47 &   716.72 f
+  post_place318/o1 (d04inn00ynuf5)                  15.57               13.84 c   730.57 r
+  n3502 (net)                    4        10.55                          0.00     730.57 r
+  post_place162/a (d04bfn00yduk0)                   16.49                1.16 c   731.73 r
+  post_place162/o (d04bfn00yduk0)                   13.62               21.97 c   753.70 r
+  n3245 (net)                    4        18.40                          0.00     753.70 r
+  U20652/b (d04nan02yd0f0)                          18.92                4.72 c   758.42 r
+  U20652/o1 (d04nan02yd0f0)                         17.92               12.22 c   770.64 f
+  n23334 (net)                   1         6.40                          0.00     770.64 f
+  post_place532/a (d04nan02yd0i0)                   19.96                2.82 c   773.46 f
+  post_place532/o1 (d04nan02yd0i0)                  14.37               14.01 c   787.47 r
+  flag_ded_alu (net)             1        10.47                          0.00     787.47 r
+  flag_ded_alu (out)                                16.63                4.77 c   792.24 r
+  data arrival time                                                               792.24
+
+  clock clk (rise edge)                                                500.00     500.00
+  clock network delay (ideal)                                          346.03     846.03
+  clock reconvergence pessimism                                          0.00     846.03
+  clock uncertainty                                                    -50.00     796.03
+  output external delay                                               -333.33     462.70
+  data required time                                                              462.70
+  -----------------------------------------------------------------------------------------
+  data required time                                                              462.70
+  data arrival time                                                              -792.24
+  -----------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                               -329.54
+
+
+  Startpoint: scan_enable
+              (input port clocked by clk)
+  Endpoint: flag_ded0 (output port clocked by clk)
+  Path Group: COMB
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans    Derate      Incr       Path
+  -----------------------------------------------------------------------------------------
+  clock clk (rise edge)                                                  0.00       0.00
+  clock network delay (ideal)                                          346.03     346.03
+  input external delay                                                 333.33     679.37 r
+  scan_enable (in)                                  30.12               18.05     697.41 r
+  scan_enable (net)              2         1.62                          0.00     697.41 r
+  post_place107/a (d04inn00yn0b5)                   30.12                0.43 &   697.84 r
+  post_place107/o1 (d04inn00yn0b5)                  17.37               17.42     715.26 f
+  n3193 (net)                    2         3.94                          0.00     715.26 f
+  post_place318/a (d04inn00ynuf5)                   17.37                1.47 &   716.72 f
+  post_place318/o1 (d04inn00ynuf5)                  15.57               13.84 c   730.57 r
+  n3502 (net)                    4        10.55                          0.00     730.57 r
+  post_place162/a (d04bfn00yduk0)                   16.49                1.16 c   731.73 r
+  post_place162/o (d04bfn00yduk0)                   13.62               21.97 c   753.70 r
+  n3245 (net)                    4        18.40                          0.00     753.70 r
+  post_place316/b (d04nan02yd0f0)                   19.56                5.46 c   759.16 r
+  post_place316/o1 (d04nan02yd0f0)                  11.24               11.52 c   770.68 f
+  n23026 (net)                   1         4.11                          0.00     770.68 f
+  place859/a (d04nan02yd0g0)                        12.00                1.60 c   772.28 f
+  place859/o1 (d04nan02yd0g0)                       20.19               14.51 c   786.79 r
+  flag_ded0 (net)                1        11.78                          0.00     786.79 r
+  flag_ded0 (out)                                   21.66                4.59 c   791.38 r
+  data arrival time                                                               791.38
+
+  clock clk (rise edge)                                                500.00     500.00
+  clock network delay (ideal)                                          346.03     846.03
+  clock reconvergence pessimism                                          0.00     846.03
+  clock uncertainty                                                    -50.00     796.03
+  output external delay                                               -333.33     462.70
+  data required time                                                              462.70
+  -----------------------------------------------------------------------------------------
+  data required time                                                              462.70
+  data arrival time                                                              -791.38
+  -----------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                               -328.68
+
+
+1

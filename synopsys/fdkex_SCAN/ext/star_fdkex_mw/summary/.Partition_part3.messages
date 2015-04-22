@@ -1,0 +1,16 @@
+create_xin_writer; sort_xin_in_memory NO cut_trap NO text_counter NO
+Completed   0%  Time=00:00:00  RemainingTime=00:00:01  Mem=105.164
+Completed  10%  Time=00:00:00  RemainingTime=00:00:01  Mem=105.41
+Completed  20%  Time=00:00:00  RemainingTime=00:00:01  Mem=105.535
+Completed  40%  Time=00:00:00  RemainingTime=00:00:01  Mem=105.715
+Completed  60%  Time=00:00:00  RemainingTime=00:00:01  Mem=105.84
+Completed  80%  Time=00:00:01  RemainingTime=00:00:00  Mem=105.84
+Completed 100%  Time=00:00:01  RemainingTime=00:00:00  Mem=105.777
+* Maximum opened files = 1
+  
+Partition     Elp=00:00:02 Cpu=00:00:01 Usr=1.4    Sys=0.0    Mem=105.5 
+  
+Done          Elp=00:00:02 Cpu=00:00:01 Usr=1.4    Sys=0.0    Mem=105.5 
+
+End Time: Tue Mar 31 10:04:34 2015
+

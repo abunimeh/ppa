@@ -1,0 +1,226 @@
+
+
+==================================================================================
+=== CALIBRE::DRC-H SUMMARY REPORT
+===
+Execution Date/Time:       Sat Apr  4 00:28:46 2015
+Calibre Version:           v2014.4_18.13    Wed Nov 5 16:04:06 PST 2014
+Rule File Pathname:        /p/fdk/fdk73/builds/pdk736_r2.2/runsets/calibre/p1273_gden.svrf
+Rule File Title:           
+Layout System:             OASIS
+Layout Path(s):            /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/../apr/outputs/mult.signoff.post_mfill.oas
+Layout Primary Cell:       mult
+Current Directory:         /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/gden
+User Name:                 spalutla
+Maximum Results/RuleCheck: ALL
+Maximum Result Vertices:   199
+DRC Results Database:      out.rve (ASCII)
+Layout Depth:              ALL
+Text Depth:                PRIMARY
+Summary Report File:       drc.sum (REPLACE)
+Geometry Flagging:         ACUTE = NO  SKEW = NO  ANGLED = NO  OFFGRID = NO
+                           NONSIMPLE POLYGON = YES  NONSIMPLE PATH = YES
+Excluded Cells:           
+CheckText Mapping:         COMMENT TEXT + RULE FILE INFORMATION
+Layers:                    MEMORY-BASED
+Keep Empty Checks:         YES
+----------------------------------------------------------------------------------
+--- RUNTIME WARNINGS
+---
+Rule file precision 10000 is not consistent with database precision 1000 in input file /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/../apr/outputs/mult.signoff.post_mfill.oas.
+Creating a FLAT COPY of layer DIFF.
+Creating a FLAT COPY of layer NDIFF.
+Creating a FLAT COPY of layer PDIFF.
+Creating a FLAT COPY of layer POLY.
+Creating a FLAT COPY of layer DIFFCON.
+Creating a FLAT COPY of layer POLYCON.
+Creating a FLAT COPY of layer VIACON.
+Creating a FLAT COPY of layer VIA0.
+Creating a FLAT COPY of layer VIA1.
+Creating a FLAT COPY of layer VIA2.
+Creating a FLAT COPY of layer VIA3.
+Creating a FLAT COPY of layer VIA4.
+Creating a FLAT COPY of layer VIA5.
+Creating a FLAT COPY of layer VIA6.
+Creating a FLAT COPY of layer VIA7.
+Creating a FLAT COPY of layer VIA8.
+Creating a FLAT COPY of layer VIA9.
+Creating a FLAT COPY of layer VIA10.
+Creating a FLAT COPY of layer VIA11.
+Creating a FLAT COPY of layer METAL3.
+Creating a FLAT COPY of layer METAL4.
+Creating a FLAT COPY of layer METAL5.
+Creating a FLAT COPY of layer METAL6.
+Creating a FLAT COPY of layer METAL7.
+Creating a FLAT COPY of layer METAL8.
+Creating a FLAT COPY of layer METAL9.
+Creating a FLAT COPY of layer METAL10.
+Creating a FLAT COPY of layer METAL11.
+Creating a FLAT COPY of layer METAL12.
+Creating a FLAT COPY of layer METAL0.
+Creating a FLAT COPY of layer METAL1.
+Creating a FLAT COPY of layer METAL2.
+----------------------------------------------------------------------------------
+--- ORIGINAL LAYER STATISTICS
+---
+LAYER CELLBOUNDARY ........ TOTAL Original Geometry Count = 42     (3816)
+LAYER POLY ................ TOTAL Original Geometry Count = 3728   (855417)
+LAYER ETCHRINGID .......... TOTAL Original Geometry Count = 0      (0)
+LAYER NDIFF ............... TOTAL Original Geometry Count = 1588   (376772)
+LAYER PDIFF ............... TOTAL Original Geometry Count = 1470   (372732)
+LAYER DIFF ................ TOTAL Original Geometry Count = 3058   (749504)
+LAYER POLYCON ............. TOTAL Original Geometry Count = 2620   (301744)
+LAYER DIFFCON ............. TOTAL Original Geometry Count = 3881   (525089)
+LAYER METAL0 .............. TOTAL Original Geometry Count = 109508 (254827)
+LAYER METAL0BC ............ TOTAL Original Geometry Count = 109508 (254827)
+LAYER METAL1 .............. TOTAL Original Geometry Count = 64111  (243678)
+LAYER METAL2 .............. TOTAL Original Geometry Count = 4272   (78738)
+LAYER METAL2BC ............ TOTAL Original Geometry Count = 4272   (78738)
+LAYER METAL3 .............. TOTAL Original Geometry Count = 4490   (19357)
+LAYER METAL3BC ............ TOTAL Original Geometry Count = 4490   (19357)
+LAYER METAL10 ............. TOTAL Original Geometry Count = 482    (2080)
+LAYER METAL4 .............. TOTAL Original Geometry Count = 3614   (13444)
+LAYER METAL4BC ............ TOTAL Original Geometry Count = 3614   (13444)
+LAYER METAL5 .............. TOTAL Original Geometry Count = 2347   (10401)
+LAYER METAL5BC ............ TOTAL Original Geometry Count = 2347   (10401)
+LAYER METAL6 .............. TOTAL Original Geometry Count = 2097   (6933)
+LAYER METAL7 .............. TOTAL Original Geometry Count = 1698   (4111)
+LAYER METAL8 .............. TOTAL Original Geometry Count = 842    (2440)
+LAYER METAL9 .............. TOTAL Original Geometry Count = 842    (2440)
+LAYER METAL11 ............. TOTAL Original Geometry Count = 1162   (2360)
+LAYER METAL12 ............. TOTAL Original Geometry Count = 118    (517)
+LAYER VIACON .............. TOTAL Original Geometry Count = 3188   (56897)
+LAYER VIA0 ................ TOTAL Original Geometry Count = 499    (56227)
+LAYER VIA1 ................ TOTAL Original Geometry Count = 249    (55284)
+LAYER VIA2 ................ TOTAL Original Geometry Count = 3      (9710)
+LAYER VIA3 ................ TOTAL Original Geometry Count = 3      (4849)
+LAYER VIA4 ................ TOTAL Original Geometry Count = 2      (4834)
+LAYER VIA5 ................ TOTAL Original Geometry Count = 2      (3224)
+LAYER VIA6 ................ TOTAL Original Geometry Count = 2      (1616)
+LAYER VIA7 ................ TOTAL Original Geometry Count = 1      (800)
+LAYER VIA8 ................ TOTAL Original Geometry Count = 1      (800)
+LAYER VIA9 ................ TOTAL Original Geometry Count = 1      (800)
+LAYER VIA10 ............... TOTAL Original Geometry Count = 1      (800)
+LAYER VIA11 ............... TOTAL Original Geometry Count = 1      (400)
+LAYER VIA12 ............... TOTAL Original Geometry Count = 0      (0)
+LAYER EOA ................. TOTAL Original Geometry Count = 0      (0)
+LAYER METAL1BC ............ TOTAL Original Geometry Count = 64111  (243678)
+LAYER METAL6BC ............ TOTAL Original Geometry Count = 2097   (6933)
+LAYER METAL7BC ............ TOTAL Original Geometry Count = 1698   (4111)
+LAYER METAL8BC ............ TOTAL Original Geometry Count = 842    (2440)
+LAYER METAL9BC ............ TOTAL Original Geometry Count = 842    (2440)
+LAYER METAL10BC ........... TOTAL Original Geometry Count = 482    (2080)
+LAYER CE1 ................. TOTAL Original Geometry Count = 0      (0)
+LAYER CE2 ................. TOTAL Original Geometry Count = 0      (0)
+LAYER CE3 ................. TOTAL Original Geometry Count = 0      (0)
+LAYER TM1 ................. TOTAL Original Geometry Count = 0      (0)
+LAYER METAL0PLUG .......... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL1PLUG .......... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL2PLUG .......... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL0BCALLOWOTC .... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL1BCALLOWOTC .... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL2BCALLOWOTC .... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL3BCALLOWOTC .... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL4BCALLOWOTC .... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL5BCALLOWOTC .... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL6BCALLOWOTC .... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL7BCALLOWOTC .... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL8BCALLOWOTC .... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL9BCALLOWOTC .... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL10BCALLOWOTC ... TOTAL Original Geometry Count = 0      (0)
+LAYER METB11ALLOWOTC ...... TOTAL Original Geometry Count = 0      (0)
+LAYER METB12ALLOWOTC ...... TOTAL Original Geometry Count = 0      (0)
+LAYER VIA0ALLOWOTC ........ TOTAL Original Geometry Count = 0      (0)
+LAYER VIA1ALLOWOTC ........ TOTAL Original Geometry Count = 0      (0)
+LAYER VIA2ALLOWOTC ........ TOTAL Original Geometry Count = 0      (0)
+LAYER VIA3ALLOWOTC ........ TOTAL Original Geometry Count = 0      (0)
+LAYER VIA4ALLOWOTC ........ TOTAL Original Geometry Count = 0      (0)
+LAYER VIA5ALLOWOTC ........ TOTAL Original Geometry Count = 0      (0)
+LAYER VIA6ALLOWOTC ........ TOTAL Original Geometry Count = 0      (0)
+LAYER VIA7ALLOWOTC ........ TOTAL Original Geometry Count = 0      (0)
+LAYER VIA8ALLOWOTC ........ TOTAL Original Geometry Count = 0      (0)
+LAYER VIA9ALLOWOTC ........ TOTAL Original Geometry Count = 0      (0)
+LAYER VIA10ALLOWOTC ....... TOTAL Original Geometry Count = 0      (0)
+LAYER VIA11ALLOWOTC ....... TOTAL Original Geometry Count = 0      (0)
+LAYER VIA12ALLOWOTC ....... TOTAL Original Geometry Count = 0      (0)
+----------------------------------------------------------------------------------
+--- RULECHECK RESULTS STATISTICS
+---
+RULECHECK OTC_DIFF ...... TOTAL Result Count = 0 (0)
+RULECHECK OTC_NDIFF ..... TOTAL Result Count = 0 (0)
+RULECHECK OTC_PDIFF ..... TOTAL Result Count = 0 (0)
+RULECHECK OTC_POLY ...... TOTAL Result Count = 0 (0)
+RULECHECK OTC_DIFFCON ... TOTAL Result Count = 0 (0)
+RULECHECK OTC_POLYCON ... TOTAL Result Count = 0 (0)
+RULECHECK OTC_VIACON .... TOTAL Result Count = 0 (0)
+RULECHECK OTC_VIA0 ...... TOTAL Result Count = 0 (0)
+RULECHECK OTC_VIA1 ...... TOTAL Result Count = 0 (0)
+RULECHECK OTC_VIA2 ...... TOTAL Result Count = 0 (0)
+RULECHECK OTC_VIA3 ...... TOTAL Result Count = 0 (0)
+RULECHECK OTC_VIA4 ...... TOTAL Result Count = 0 (0)
+RULECHECK OTC_VIA5 ...... TOTAL Result Count = 0 (0)
+RULECHECK OTC_VIA6 ...... TOTAL Result Count = 0 (0)
+RULECHECK OTC_VIA7 ...... TOTAL Result Count = 0 (0)
+RULECHECK OTC_VIA8 ...... TOTAL Result Count = 0 (0)
+RULECHECK OTC_VIA9 ...... TOTAL Result Count = 0 (0)
+RULECHECK OTC_VIA10 ..... TOTAL Result Count = 0 (0)
+RULECHECK OTC_VIA11 ..... TOTAL Result Count = 0 (0)
+RULECHECK OTC_VIA12 ..... TOTAL Result Count = 0 (0)
+RULECHECK OTC_CE1 ....... TOTAL Result Count = 0 (0)
+RULECHECK OTC_CE2 ....... TOTAL Result Count = 0 (0)
+RULECHECK OTC_CE3 ....... TOTAL Result Count = 0 (0)
+RULECHECK OTC_METAL3 .... TOTAL Result Count = 0 (0)
+RULECHECK OTC_METAL4 .... TOTAL Result Count = 0 (0)
+RULECHECK OTC_METAL5 .... TOTAL Result Count = 0 (0)
+RULECHECK OTC_METAL6 .... TOTAL Result Count = 0 (0)
+RULECHECK OTC_METAL7 .... TOTAL Result Count = 0 (0)
+RULECHECK OTC_METAL8 .... TOTAL Result Count = 0 (0)
+RULECHECK OTC_METAL9 .... TOTAL Result Count = 0 (0)
+RULECHECK OTC_METAL10 ... TOTAL Result Count = 0 (0)
+RULECHECK OTC_METAL11 ... TOTAL Result Count = 0 (0)
+RULECHECK OTC_METAL12 ... TOTAL Result Count = 0 (0)
+RULECHECK OTC_TM1 ....... TOTAL Result Count = 0 (0)
+RULECHECK OTC_METAL0 .... TOTAL Result Count = 0 (0)
+RULECHECK OTC_METAL1 .... TOTAL Result Count = 0 (0)
+RULECHECK OTC_METAL2 .... TOTAL Result Count = 0 (0)
+RULECHECK GD_01 ......... TOTAL Result Count = 0 (0)
+RULECHECK GD_02 ......... TOTAL Result Count = 0 (0)
+RULECHECK GD_100 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_101 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_102 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_103 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_104 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_105 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_106 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_107 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_108 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_109 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_120 ........ TOTAL Result Count = 1 (1)
+RULECHECK GD_121 ........ TOTAL Result Count = 1 (1)
+RULECHECK GD_122 ........ TOTAL Result Count = 1 (1)
+RULECHECK GD_21 ......... TOTAL Result Count = 0 (0)
+RULECHECK GD_22 ......... TOTAL Result Count = 0 (0)
+RULECHECK GD_200 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_201 ........ TOTAL Result Count = 1 (1)
+RULECHECK GD_202 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_203 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_204 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_205 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_206 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_207 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_208 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_209 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_110 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_210 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_111 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_112 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_211 ........ TOTAL Result Count = 0 (0)
+RULECHECK GD_212 ........ TOTAL Result Count = 0 (0)
+----------------------------------------------------------------------------------
+--- SUMMARY
+---
+TOTAL CPU Time:                  2
+TOTAL REAL Time:                 7
+TOTAL Original Layer Geometries: 410226 (4661090)
+TOTAL DRC RuleChecks Executed:   70
+TOTAL DRC Results Generated:     4 (4)

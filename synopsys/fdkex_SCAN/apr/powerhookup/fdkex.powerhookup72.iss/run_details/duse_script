@@ -1,0 +1,10 @@
+#! /bin/sh
+total=0
+pathsize=`du -s --block-size=1 /tmp/spalutla_fdkex_51074/spalutla.fdkex.51074.iss/spalutla.fdkex.powerhookup72.iss/run_details | awk '{print $1}'`
+total=$(($total+$pathsize))
+pathsize=`du -s --block-size=1 /tmp/spalutla_fdkex_51074/spalutla.fdkex.51074.iss/spalutla.fdkex.powerhookup72.iss/fdkex.TOP_LAYOUT_ERRORS | awk '{print $1}'`
+total=$(($total+$pathsize))
+pathsize=`du -s --block-size=1 /tmp/spalutla_fdkex_51074/spalutla.fdkex.51074.iss/spalutla.fdkex.powerhookup72.iss/fdkex.TOP_LAYOUT_ERRORS | awk '{print $1}'`
+total=$(($total+$pathsize))
+echo $total > /tmp/spalutla_fdkex_51074/spalutla.fdkex.51074.iss/spalutla.fdkex.powerhookup72.iss/run_details/duse_master.tmp && \
+mv /tmp/spalutla_fdkex_51074/spalutla.fdkex.51074.iss/spalutla.fdkex.powerhookup72.iss/run_details/duse_master.tmp /tmp/spalutla_fdkex_51074/spalutla.fdkex.51074.iss/spalutla.fdkex.powerhookup72.iss/run_details/duse_master

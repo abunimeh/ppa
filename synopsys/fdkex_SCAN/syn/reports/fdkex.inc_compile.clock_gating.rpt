@@ -1,0 +1,2783 @@
+ 
+****************************************
+Report : clock_gating
+        -ungated
+        -style
+Design : fdkex
+Version: J-2014.09
+Date   : Tue Mar 31 00:53:57 2015
+****************************************
+
+
+--------------------------------------------------------------------------------
+                             Clock Gating Style Report
+--------------------------------------------------------------------------------
+
+ Clock Gating Style 0 : (856 clock gates)
+-----------------------
+
+     STYLE : unknown
+
+     CLOCK GATES :
+         init_mask_in0_clk_gate_seed6_reg_6_latch
+         init_mask_in0_clk_gate_seed6_reg_5_latch
+         init_mask_in0_clk_gate_seed6_reg_4_latch
+         init_mask_in0_clk_gate_seed6_reg_3_latch
+         init_mask_in0_clk_gate_seed6_reg_2_latch
+         init_mask_in0_clk_gate_seed6_reg_1_latch
+         init_mask_in0_clk_gate_seed6_reg_0_latch
+         init_mask_in0_clk_gate_seed6_reg_latch
+         init_mask_in0_clk_gate_mask_reg_6__2_latch
+         init_mask_in0_clk_gate_mask_reg_6__1_latch
+         init_mask_in0_clk_gate_mask_reg_6__0_latch
+         init_mask_in0_clk_gate_mask_reg_6__latch
+         init_mask_in0_clk_gate_seed5_reg_6_latch
+         init_mask_in0_clk_gate_seed5_reg_5_latch
+         init_mask_in0_clk_gate_seed5_reg_4_latch
+         init_mask_in0_clk_gate_seed5_reg_3_latch
+         init_mask_in0_clk_gate_seed5_reg_2_latch
+         init_mask_in0_clk_gate_seed5_reg_1_latch
+         init_mask_in0_clk_gate_seed5_reg_0_latch
+         init_mask_in0_clk_gate_seed5_reg_latch
+         init_mask_in0_clk_gate_mask_reg_5__2_latch
+         init_mask_in0_clk_gate_mask_reg_5__1_latch
+         init_mask_in0_clk_gate_mask_reg_5__0_latch
+         init_mask_in0_clk_gate_mask_reg_5__latch
+         init_mask_in0_clk_gate_seed4_reg_4_latch
+         init_mask_in0_clk_gate_seed4_reg_3_latch
+         init_mask_in0_clk_gate_seed4_reg_2_latch
+         init_mask_in0_clk_gate_seed4_reg_1_latch
+         init_mask_in0_clk_gate_seed4_reg_0_latch
+         init_mask_in0_clk_gate_seed4_reg_latch
+         init_mask_in0_clk_gate_mask_reg_4__2_latch
+         init_mask_in0_clk_gate_mask_reg_4__1_latch
+         init_mask_in0_clk_gate_mask_reg_4__0_latch
+         init_mask_in0_clk_gate_mask_reg_4__latch
+         init_mask_in0_clk_gate_seed3_reg_3_latch
+         init_mask_in0_clk_gate_seed3_reg_2_latch
+         init_mask_in0_clk_gate_seed3_reg_1_latch
+         init_mask_in0_clk_gate_seed3_reg_0_latch
+         init_mask_in0_clk_gate_seed3_reg_latch
+         init_mask_in0_clk_gate_mask_reg_3__2_latch
+         init_mask_in0_clk_gate_mask_reg_3__1_latch
+         init_mask_in0_clk_gate_mask_reg_3__0_latch
+         init_mask_in0_clk_gate_mask_reg_3__latch
+         init_mask_in0_clk_gate_seed2_reg_3_latch
+         init_mask_in0_clk_gate_seed2_reg_2_latch
+         init_mask_in0_clk_gate_seed2_reg_1_latch
+         init_mask_in0_clk_gate_seed2_reg_0_latch
+         init_mask_in0_clk_gate_seed2_reg_latch
+         init_mask_in0_clk_gate_mask_reg_2__2_latch
+         init_mask_in0_clk_gate_mask_reg_2__1_latch
+         init_mask_in0_clk_gate_mask_reg_2__0_latch
+         init_mask_in0_clk_gate_mask_reg_2__latch
+         init_mask_in0_clk_gate_seed1_reg_3_latch
+         init_mask_in0_clk_gate_seed1_reg_2_latch
+         init_mask_in0_clk_gate_seed1_reg_1_latch
+         init_mask_in0_clk_gate_seed1_reg_0_latch
+         init_mask_in0_clk_gate_seed1_reg_latch
+         init_mask_in0_clk_gate_mask_reg_1__2_latch
+         init_mask_in0_clk_gate_mask_reg_1__1_latch
+         init_mask_in0_clk_gate_mask_reg_1__0_latch
+         init_mask_in0_clk_gate_mask_reg_1__latch
+         init_mask_in0_clk_gate_seed0_reg_3_latch
+         init_mask_in0_clk_gate_seed0_reg_2_latch
+         init_mask_in0_clk_gate_seed0_reg_1_latch
+         init_mask_in0_clk_gate_seed0_reg_0_latch
+         init_mask_in0_clk_gate_seed0_reg_latch
+         init_mask_in0_clk_gate_mask_reg_0__2_latch
+         init_mask_in0_clk_gate_mask_reg_0__1_latch
+         init_mask_in0_clk_gate_mask_reg_0__0_latch
+         init_mask_in0_clk_gate_mask_reg_0__latch
+         init_mask_alu0_clk_gate_seed7_reg_14_latch
+         init_mask_alu0_clk_gate_seed7_reg_13_latch
+         init_mask_alu0_clk_gate_seed7_reg_12_latch
+         init_mask_alu0_clk_gate_seed7_reg_11_latch
+         init_mask_alu0_clk_gate_seed7_reg_10_latch
+         init_mask_alu0_clk_gate_seed7_reg_9_latch
+         init_mask_alu0_clk_gate_seed7_reg_8_latch
+         init_mask_alu0_clk_gate_seed7_reg_7_latch
+         init_mask_alu0_clk_gate_seed7_reg_6_latch
+         init_mask_alu0_clk_gate_seed7_reg_5_latch
+         init_mask_alu0_clk_gate_seed7_reg_4_latch
+         init_mask_alu0_clk_gate_seed7_reg_3_latch
+         init_mask_alu0_clk_gate_seed7_reg_2_latch
+         init_mask_alu0_clk_gate_seed7_reg_1_latch
+         init_mask_alu0_clk_gate_seed7_reg_0_latch
+         init_mask_alu0_clk_gate_seed7_reg_latch
+         init_mask_alu0_clk_gate_mask_reg_7__6_latch
+         init_mask_alu0_clk_gate_mask_reg_7__5_latch
+         init_mask_alu0_clk_gate_mask_reg_7__4_latch
+         init_mask_alu0_clk_gate_mask_reg_7__3_latch
+         init_mask_alu0_clk_gate_mask_reg_7__2_latch
+         init_mask_alu0_clk_gate_mask_reg_7__1_latch
+         init_mask_alu0_clk_gate_mask_reg_7__0_latch
+         init_mask_alu0_clk_gate_mask_reg_7__latch
+         init_mask_alu0_clk_gate_seed6_reg_14_latch
+         init_mask_alu0_clk_gate_seed6_reg_13_latch
+         init_mask_alu0_clk_gate_seed6_reg_12_latch
+         init_mask_alu0_clk_gate_seed6_reg_11_latch
+         init_mask_alu0_clk_gate_seed6_reg_10_latch
+         init_mask_alu0_clk_gate_seed6_reg_9_latch
+         init_mask_alu0_clk_gate_seed6_reg_8_latch
+         init_mask_alu0_clk_gate_seed6_reg_7_latch
+         init_mask_alu0_clk_gate_seed6_reg_6_latch
+         init_mask_alu0_clk_gate_seed6_reg_5_latch
+         init_mask_alu0_clk_gate_seed6_reg_4_latch
+         init_mask_alu0_clk_gate_seed6_reg_3_latch
+         init_mask_alu0_clk_gate_seed6_reg_2_latch
+         init_mask_alu0_clk_gate_seed6_reg_1_latch
+         init_mask_alu0_clk_gate_seed6_reg_0_latch
+         init_mask_alu0_clk_gate_seed6_reg_latch
+         init_mask_alu0_clk_gate_mask_reg_6__6_latch
+         init_mask_alu0_clk_gate_mask_reg_6__5_latch
+         init_mask_alu0_clk_gate_mask_reg_6__4_latch
+         init_mask_alu0_clk_gate_mask_reg_6__3_latch
+         init_mask_alu0_clk_gate_mask_reg_6__2_latch
+         init_mask_alu0_clk_gate_mask_reg_6__1_latch
+         init_mask_alu0_clk_gate_mask_reg_6__0_latch
+         init_mask_alu0_clk_gate_mask_reg_6__latch
+         init_mask_alu0_clk_gate_seed5_reg_10_latch
+         init_mask_alu0_clk_gate_seed5_reg_9_latch
+         init_mask_alu0_clk_gate_seed5_reg_8_latch
+         init_mask_alu0_clk_gate_seed5_reg_7_latch
+         init_mask_alu0_clk_gate_seed5_reg_6_latch
+         init_mask_alu0_clk_gate_seed5_reg_5_latch
+         init_mask_alu0_clk_gate_seed5_reg_4_latch
+         init_mask_alu0_clk_gate_seed5_reg_3_latch
+         init_mask_alu0_clk_gate_seed5_reg_2_latch
+         init_mask_alu0_clk_gate_seed5_reg_1_latch
+         init_mask_alu0_clk_gate_seed5_reg_0_latch
+         init_mask_alu0_clk_gate_seed5_reg_latch
+         init_mask_alu0_clk_gate_mask_reg_5__6_latch
+         init_mask_alu0_clk_gate_mask_reg_5__5_latch
+         init_mask_alu0_clk_gate_mask_reg_5__4_latch
+         init_mask_alu0_clk_gate_mask_reg_5__3_latch
+         init_mask_alu0_clk_gate_mask_reg_5__2_latch
+         init_mask_alu0_clk_gate_mask_reg_5__1_latch
+         init_mask_alu0_clk_gate_mask_reg_5__0_latch
+         init_mask_alu0_clk_gate_mask_reg_5__latch
+         init_mask_alu0_clk_gate_seed4_reg_8_latch
+         init_mask_alu0_clk_gate_seed4_reg_7_latch
+         init_mask_alu0_clk_gate_seed4_reg_6_latch
+         init_mask_alu0_clk_gate_seed4_reg_5_latch
+         init_mask_alu0_clk_gate_seed4_reg_4_latch
+         init_mask_alu0_clk_gate_seed4_reg_3_latch
+         init_mask_alu0_clk_gate_seed4_reg_2_latch
+         init_mask_alu0_clk_gate_seed4_reg_1_latch
+         init_mask_alu0_clk_gate_seed4_reg_0_latch
+         init_mask_alu0_clk_gate_seed4_reg_latch
+         init_mask_alu0_clk_gate_mask_reg_4__6_latch
+         init_mask_alu0_clk_gate_mask_reg_4__5_latch
+         init_mask_alu0_clk_gate_mask_reg_4__4_latch
+         init_mask_alu0_clk_gate_mask_reg_4__3_latch
+         init_mask_alu0_clk_gate_mask_reg_4__2_latch
+         init_mask_alu0_clk_gate_mask_reg_4__1_latch
+         init_mask_alu0_clk_gate_mask_reg_4__0_latch
+         init_mask_alu0_clk_gate_mask_reg_4__latch
+         init_mask_alu0_clk_gate_seed3_reg_7_latch
+         init_mask_alu0_clk_gate_seed3_reg_6_latch
+         init_mask_alu0_clk_gate_seed3_reg_5_latch
+         init_mask_alu0_clk_gate_seed3_reg_4_latch
+         init_mask_alu0_clk_gate_seed3_reg_3_latch
+         init_mask_alu0_clk_gate_seed3_reg_2_latch
+         init_mask_alu0_clk_gate_seed3_reg_1_latch
+         init_mask_alu0_clk_gate_seed3_reg_0_latch
+         init_mask_alu0_clk_gate_seed3_reg_latch
+         init_mask_alu0_clk_gate_mask_reg_3__6_latch
+         init_mask_alu0_clk_gate_mask_reg_3__5_latch
+         init_mask_alu0_clk_gate_mask_reg_3__4_latch
+         init_mask_alu0_clk_gate_mask_reg_3__3_latch
+         init_mask_alu0_clk_gate_mask_reg_3__2_latch
+         init_mask_alu0_clk_gate_mask_reg_3__1_latch
+         init_mask_alu0_clk_gate_mask_reg_3__0_latch
+         init_mask_alu0_clk_gate_mask_reg_3__latch
+         init_mask_alu0_clk_gate_seed2_reg_7_latch
+         init_mask_alu0_clk_gate_seed2_reg_6_latch
+         init_mask_alu0_clk_gate_seed2_reg_5_latch
+         init_mask_alu0_clk_gate_seed2_reg_4_latch
+         init_mask_alu0_clk_gate_seed2_reg_3_latch
+         init_mask_alu0_clk_gate_seed2_reg_2_latch
+         init_mask_alu0_clk_gate_seed2_reg_1_latch
+         init_mask_alu0_clk_gate_seed2_reg_0_latch
+         init_mask_alu0_clk_gate_seed2_reg_latch
+         init_mask_alu0_clk_gate_mask_reg_2__6_latch
+         init_mask_alu0_clk_gate_mask_reg_2__5_latch
+         init_mask_alu0_clk_gate_mask_reg_2__4_latch
+         init_mask_alu0_clk_gate_mask_reg_2__3_latch
+         init_mask_alu0_clk_gate_mask_reg_2__2_latch
+         init_mask_alu0_clk_gate_mask_reg_2__1_latch
+         init_mask_alu0_clk_gate_mask_reg_2__0_latch
+         init_mask_alu0_clk_gate_mask_reg_2__latch
+         init_mask_alu0_clk_gate_seed1_reg_7_latch
+         init_mask_alu0_clk_gate_seed1_reg_6_latch
+         init_mask_alu0_clk_gate_seed1_reg_5_latch
+         init_mask_alu0_clk_gate_seed1_reg_4_latch
+         init_mask_alu0_clk_gate_seed1_reg_3_latch
+         init_mask_alu0_clk_gate_seed1_reg_2_latch
+         init_mask_alu0_clk_gate_seed1_reg_1_latch
+         init_mask_alu0_clk_gate_seed1_reg_0_latch
+         init_mask_alu0_clk_gate_seed1_reg_latch
+         init_mask_alu0_clk_gate_mask_reg_1__6_latch
+         init_mask_alu0_clk_gate_mask_reg_1__5_latch
+         init_mask_alu0_clk_gate_mask_reg_1__4_latch
+         init_mask_alu0_clk_gate_mask_reg_1__3_latch
+         init_mask_alu0_clk_gate_mask_reg_1__2_latch
+         init_mask_alu0_clk_gate_mask_reg_1__1_latch
+         init_mask_alu0_clk_gate_mask_reg_1__0_latch
+         init_mask_alu0_clk_gate_mask_reg_1__latch
+         init_mask_alu0_clk_gate_seed0_reg_7_latch
+         init_mask_alu0_clk_gate_seed0_reg_6_latch
+         init_mask_alu0_clk_gate_seed0_reg_5_latch
+         init_mask_alu0_clk_gate_seed0_reg_4_latch
+         init_mask_alu0_clk_gate_seed0_reg_3_latch
+         init_mask_alu0_clk_gate_seed0_reg_2_latch
+         init_mask_alu0_clk_gate_seed0_reg_1_latch
+         init_mask_alu0_clk_gate_seed0_reg_0_latch
+         init_mask_alu0_clk_gate_seed0_reg_latch
+         init_mask_alu0_clk_gate_mask_reg_0__6_latch
+         init_mask_alu0_clk_gate_mask_reg_0__5_latch
+         init_mask_alu0_clk_gate_mask_reg_0__4_latch
+         init_mask_alu0_clk_gate_mask_reg_0__3_latch
+         init_mask_alu0_clk_gate_mask_reg_0__2_latch
+         init_mask_alu0_clk_gate_mask_reg_0__1_latch
+         init_mask_alu0_clk_gate_mask_reg_0__0_latch
+         init_mask_alu0_clk_gate_mask_reg_0__latch
+         alu_core0_clk_gate_tmp_add_reg_3_latch
+         alu_core0_clk_gate_tmp_add_reg_2_latch
+         alu_core0_clk_gate_tmp_add_reg_1_latch
+         alu_core0_clk_gate_tmp_add_reg_0_latch
+         alu_core0_clk_gate_tmp_add_reg_latch
+         fifo0/clk_gate_data_rd_reg_latch
+         fifo0/clk_gate_data_rd_reg_0_latch
+         fifo0/clk_gate_data_rd_reg_1_latch
+         fifo0/clk_gate_data_rd_reg_2_latch
+         fifo0/clk_gate_data_rd_reg_3_latch
+         fifo0/clk_gate_data_mem_reg_0__latch
+         fifo0/clk_gate_data_mem_reg_0__0_latch
+         fifo0/clk_gate_data_mem_reg_0__1_latch
+         fifo0/clk_gate_data_mem_reg_0__2_latch
+         fifo0/clk_gate_data_mem_reg_0__3_latch
+         fifo0/clk_gate_data_mem_reg_1__latch
+         fifo0/clk_gate_data_mem_reg_1__0_latch
+         fifo0/clk_gate_data_mem_reg_1__1_latch
+         fifo0/clk_gate_data_mem_reg_1__2_latch
+         fifo0/clk_gate_data_mem_reg_1__3_latch
+         fifo0/clk_gate_data_mem_reg_2__latch
+         fifo0/clk_gate_data_mem_reg_2__0_latch
+         fifo0/clk_gate_data_mem_reg_2__1_latch
+         fifo0/clk_gate_data_mem_reg_2__2_latch
+         fifo0/clk_gate_data_mem_reg_2__3_latch
+         fifo0/clk_gate_data_mem_reg_3__latch
+         fifo0/clk_gate_data_mem_reg_3__0_latch
+         fifo0/clk_gate_data_mem_reg_3__1_latch
+         fifo0/clk_gate_data_mem_reg_3__2_latch
+         fifo0/clk_gate_data_mem_reg_3__3_latch
+         fifo0/clk_gate_data_mem_reg_4__latch
+         fifo0/clk_gate_data_mem_reg_4__0_latch
+         fifo0/clk_gate_data_mem_reg_4__1_latch
+         fifo0/clk_gate_data_mem_reg_4__2_latch
+         fifo0/clk_gate_data_mem_reg_4__3_latch
+         fifo0/clk_gate_data_mem_reg_5__latch
+         fifo0/clk_gate_data_mem_reg_5__0_latch
+         fifo0/clk_gate_data_mem_reg_5__1_latch
+         fifo0/clk_gate_data_mem_reg_5__2_latch
+         fifo0/clk_gate_data_mem_reg_5__3_latch
+         fifo0/clk_gate_data_mem_reg_6__latch
+         fifo0/clk_gate_data_mem_reg_6__0_latch
+         fifo0/clk_gate_data_mem_reg_6__1_latch
+         fifo0/clk_gate_data_mem_reg_6__2_latch
+         fifo0/clk_gate_data_mem_reg_6__3_latch
+         fifo0/clk_gate_data_mem_reg_7__latch
+         fifo0/clk_gate_data_mem_reg_7__0_latch
+         fifo0/clk_gate_data_mem_reg_7__1_latch
+         fifo0/clk_gate_data_mem_reg_7__2_latch
+         fifo0/clk_gate_data_mem_reg_7__3_latch
+         fifo0/clk_gate_data_mem_reg_8__latch
+         fifo0/clk_gate_data_mem_reg_8__0_latch
+         fifo0/clk_gate_data_mem_reg_8__1_latch
+         fifo0/clk_gate_data_mem_reg_8__2_latch
+         fifo0/clk_gate_data_mem_reg_8__3_latch
+         fifo0/clk_gate_data_mem_reg_9__latch
+         fifo0/clk_gate_data_mem_reg_9__0_latch
+         fifo0/clk_gate_data_mem_reg_9__1_latch
+         fifo0/clk_gate_data_mem_reg_9__2_latch
+         fifo0/clk_gate_data_mem_reg_9__3_latch
+         fifo0/clk_gate_data_mem_reg_10__latch
+         fifo0/clk_gate_data_mem_reg_10__0_latch
+         fifo0/clk_gate_data_mem_reg_10__1_latch
+         fifo0/clk_gate_data_mem_reg_10__2_latch
+         fifo0/clk_gate_data_mem_reg_10__3_latch
+         fifo0/clk_gate_data_mem_reg_11__latch
+         fifo0/clk_gate_data_mem_reg_11__0_latch
+         fifo0/clk_gate_data_mem_reg_11__1_latch
+         fifo0/clk_gate_data_mem_reg_11__2_latch
+         fifo0/clk_gate_data_mem_reg_11__3_latch
+         fifo0/clk_gate_data_mem_reg_12__latch
+         fifo0/clk_gate_data_mem_reg_12__0_latch
+         fifo0/clk_gate_data_mem_reg_12__1_latch
+         fifo0/clk_gate_data_mem_reg_12__2_latch
+         fifo0/clk_gate_data_mem_reg_12__3_latch
+         fifo0/clk_gate_data_mem_reg_13__latch
+         fifo0/clk_gate_data_mem_reg_13__0_latch
+         fifo0/clk_gate_data_mem_reg_13__1_latch
+         fifo0/clk_gate_data_mem_reg_13__2_latch
+         fifo0/clk_gate_data_mem_reg_13__3_latch
+         fifo0/clk_gate_data_mem_reg_14__latch
+         fifo0/clk_gate_data_mem_reg_14__0_latch
+         fifo0/clk_gate_data_mem_reg_14__1_latch
+         fifo0/clk_gate_data_mem_reg_14__2_latch
+         fifo0/clk_gate_data_mem_reg_14__3_latch
+         fifo0/clk_gate_data_mem_reg_15__latch
+         fifo0/clk_gate_data_mem_reg_15__0_latch
+         fifo0/clk_gate_data_mem_reg_15__1_latch
+         fifo0/clk_gate_data_mem_reg_15__2_latch
+         fifo0/clk_gate_data_mem_reg_15__3_latch
+         fifo0/clk_gate_data_mem_reg_16__latch
+         fifo0/clk_gate_data_mem_reg_16__0_latch
+         fifo0/clk_gate_data_mem_reg_16__1_latch
+         fifo0/clk_gate_data_mem_reg_16__2_latch
+         fifo0/clk_gate_data_mem_reg_16__3_latch
+         fifo0/clk_gate_data_mem_reg_17__latch
+         fifo0/clk_gate_data_mem_reg_17__0_latch
+         fifo0/clk_gate_data_mem_reg_17__1_latch
+         fifo0/clk_gate_data_mem_reg_17__2_latch
+         fifo0/clk_gate_data_mem_reg_17__3_latch
+         fifo0/clk_gate_data_mem_reg_18__latch
+         fifo0/clk_gate_data_mem_reg_18__0_latch
+         fifo0/clk_gate_data_mem_reg_18__1_latch
+         fifo0/clk_gate_data_mem_reg_18__2_latch
+         fifo0/clk_gate_data_mem_reg_18__3_latch
+         fifo0/clk_gate_data_mem_reg_19__latch
+         fifo0/clk_gate_data_mem_reg_19__0_latch
+         fifo0/clk_gate_data_mem_reg_19__1_latch
+         fifo0/clk_gate_data_mem_reg_19__2_latch
+         fifo0/clk_gate_data_mem_reg_19__3_latch
+         fifo0/clk_gate_data_mem_reg_20__latch
+         fifo0/clk_gate_data_mem_reg_20__0_latch
+         fifo0/clk_gate_data_mem_reg_20__1_latch
+         fifo0/clk_gate_data_mem_reg_20__2_latch
+         fifo0/clk_gate_data_mem_reg_20__3_latch
+         fifo0/clk_gate_data_mem_reg_21__latch
+         fifo0/clk_gate_data_mem_reg_21__0_latch
+         fifo0/clk_gate_data_mem_reg_21__1_latch
+         fifo0/clk_gate_data_mem_reg_21__2_latch
+         fifo0/clk_gate_data_mem_reg_21__3_latch
+         fifo0/clk_gate_data_mem_reg_22__latch
+         fifo0/clk_gate_data_mem_reg_22__0_latch
+         fifo0/clk_gate_data_mem_reg_22__1_latch
+         fifo0/clk_gate_data_mem_reg_22__2_latch
+         fifo0/clk_gate_data_mem_reg_22__3_latch
+         fifo0/clk_gate_data_mem_reg_23__latch
+         fifo0/clk_gate_data_mem_reg_23__0_latch
+         fifo0/clk_gate_data_mem_reg_23__1_latch
+         fifo0/clk_gate_data_mem_reg_23__2_latch
+         fifo0/clk_gate_data_mem_reg_23__3_latch
+         fifo0/clk_gate_data_mem_reg_24__latch
+         fifo0/clk_gate_data_mem_reg_24__0_latch
+         fifo0/clk_gate_data_mem_reg_24__1_latch
+         fifo0/clk_gate_data_mem_reg_24__2_latch
+         fifo0/clk_gate_data_mem_reg_24__3_latch
+         fifo0/clk_gate_data_mem_reg_25__latch
+         fifo0/clk_gate_data_mem_reg_25__0_latch
+         fifo0/clk_gate_data_mem_reg_25__1_latch
+         fifo0/clk_gate_data_mem_reg_25__2_latch
+         fifo0/clk_gate_data_mem_reg_25__3_latch
+         fifo0/clk_gate_data_mem_reg_26__latch
+         fifo0/clk_gate_data_mem_reg_26__0_latch
+         fifo0/clk_gate_data_mem_reg_26__1_latch
+         fifo0/clk_gate_data_mem_reg_26__2_latch
+         fifo0/clk_gate_data_mem_reg_26__3_latch
+         fifo0/clk_gate_data_mem_reg_27__latch
+         fifo0/clk_gate_data_mem_reg_27__0_latch
+         fifo0/clk_gate_data_mem_reg_27__1_latch
+         fifo0/clk_gate_data_mem_reg_27__2_latch
+         fifo0/clk_gate_data_mem_reg_27__3_latch
+         fifo0/clk_gate_data_mem_reg_28__latch
+         fifo0/clk_gate_data_mem_reg_28__0_latch
+         fifo0/clk_gate_data_mem_reg_28__1_latch
+         fifo0/clk_gate_data_mem_reg_28__2_latch
+         fifo0/clk_gate_data_mem_reg_28__3_latch
+         fifo0/clk_gate_data_mem_reg_29__latch
+         fifo0/clk_gate_data_mem_reg_29__0_latch
+         fifo0/clk_gate_data_mem_reg_29__1_latch
+         fifo0/clk_gate_data_mem_reg_29__2_latch
+         fifo0/clk_gate_data_mem_reg_29__3_latch
+         fifo0/clk_gate_data_mem_reg_30__latch
+         fifo0/clk_gate_data_mem_reg_30__0_latch
+         fifo0/clk_gate_data_mem_reg_30__1_latch
+         fifo0/clk_gate_data_mem_reg_30__2_latch
+         fifo0/clk_gate_data_mem_reg_30__3_latch
+         fifo0/clk_gate_data_mem_reg_31__latch
+         fifo0/clk_gate_data_mem_reg_31__0_latch
+         fifo0/clk_gate_data_mem_reg_31__1_latch
+         fifo0/clk_gate_data_mem_reg_31__2_latch
+         fifo0/clk_gate_data_mem_reg_31__3_latch
+         fifo1/clk_gate_data_rd_reg_latch
+         fifo1/clk_gate_data_rd_reg_0_latch
+         fifo1/clk_gate_data_rd_reg_1_latch
+         fifo1/clk_gate_data_rd_reg_2_latch
+         fifo1/clk_gate_data_rd_reg_3_latch
+         fifo1/clk_gate_data_mem_reg_0__latch
+         fifo1/clk_gate_data_mem_reg_0__0_latch
+         fifo1/clk_gate_data_mem_reg_0__1_latch
+         fifo1/clk_gate_data_mem_reg_0__2_latch
+         fifo1/clk_gate_data_mem_reg_0__3_latch
+         fifo1/clk_gate_data_mem_reg_1__latch
+         fifo1/clk_gate_data_mem_reg_1__0_latch
+         fifo1/clk_gate_data_mem_reg_1__1_latch
+         fifo1/clk_gate_data_mem_reg_1__2_latch
+         fifo1/clk_gate_data_mem_reg_1__3_latch
+         fifo1/clk_gate_data_mem_reg_2__latch
+         fifo1/clk_gate_data_mem_reg_2__0_latch
+         fifo1/clk_gate_data_mem_reg_2__1_latch
+         fifo1/clk_gate_data_mem_reg_2__2_latch
+         fifo1/clk_gate_data_mem_reg_2__3_latch
+         fifo1/clk_gate_data_mem_reg_3__latch
+         fifo1/clk_gate_data_mem_reg_3__0_latch
+         fifo1/clk_gate_data_mem_reg_3__1_latch
+         fifo1/clk_gate_data_mem_reg_3__2_latch
+         fifo1/clk_gate_data_mem_reg_3__3_latch
+         fifo1/clk_gate_data_mem_reg_4__latch
+         fifo1/clk_gate_data_mem_reg_4__0_latch
+         fifo1/clk_gate_data_mem_reg_4__1_latch
+         fifo1/clk_gate_data_mem_reg_4__2_latch
+         fifo1/clk_gate_data_mem_reg_4__3_latch
+         fifo1/clk_gate_data_mem_reg_5__latch
+         fifo1/clk_gate_data_mem_reg_5__0_latch
+         fifo1/clk_gate_data_mem_reg_5__1_latch
+         fifo1/clk_gate_data_mem_reg_5__2_latch
+         fifo1/clk_gate_data_mem_reg_5__3_latch
+         fifo1/clk_gate_data_mem_reg_6__latch
+         fifo1/clk_gate_data_mem_reg_6__0_latch
+         fifo1/clk_gate_data_mem_reg_6__1_latch
+         fifo1/clk_gate_data_mem_reg_6__2_latch
+         fifo1/clk_gate_data_mem_reg_6__3_latch
+         fifo1/clk_gate_data_mem_reg_7__latch
+         fifo1/clk_gate_data_mem_reg_7__0_latch
+         fifo1/clk_gate_data_mem_reg_7__1_latch
+         fifo1/clk_gate_data_mem_reg_7__2_latch
+         fifo1/clk_gate_data_mem_reg_7__3_latch
+         fifo1/clk_gate_data_mem_reg_8__latch
+         fifo1/clk_gate_data_mem_reg_8__0_latch
+         fifo1/clk_gate_data_mem_reg_8__1_latch
+         fifo1/clk_gate_data_mem_reg_8__2_latch
+         fifo1/clk_gate_data_mem_reg_8__3_latch
+         fifo1/clk_gate_data_mem_reg_9__latch
+         fifo1/clk_gate_data_mem_reg_9__0_latch
+         fifo1/clk_gate_data_mem_reg_9__1_latch
+         fifo1/clk_gate_data_mem_reg_9__2_latch
+         fifo1/clk_gate_data_mem_reg_9__3_latch
+         fifo1/clk_gate_data_mem_reg_10__latch
+         fifo1/clk_gate_data_mem_reg_10__0_latch
+         fifo1/clk_gate_data_mem_reg_10__1_latch
+         fifo1/clk_gate_data_mem_reg_10__2_latch
+         fifo1/clk_gate_data_mem_reg_10__3_latch
+         fifo1/clk_gate_data_mem_reg_11__latch
+         fifo1/clk_gate_data_mem_reg_11__0_latch
+         fifo1/clk_gate_data_mem_reg_11__1_latch
+         fifo1/clk_gate_data_mem_reg_11__2_latch
+         fifo1/clk_gate_data_mem_reg_11__3_latch
+         fifo1/clk_gate_data_mem_reg_12__latch
+         fifo1/clk_gate_data_mem_reg_12__0_latch
+         fifo1/clk_gate_data_mem_reg_12__1_latch
+         fifo1/clk_gate_data_mem_reg_12__2_latch
+         fifo1/clk_gate_data_mem_reg_12__3_latch
+         fifo1/clk_gate_data_mem_reg_13__latch
+         fifo1/clk_gate_data_mem_reg_13__0_latch
+         fifo1/clk_gate_data_mem_reg_13__1_latch
+         fifo1/clk_gate_data_mem_reg_13__2_latch
+         fifo1/clk_gate_data_mem_reg_13__3_latch
+         fifo1/clk_gate_data_mem_reg_14__latch
+         fifo1/clk_gate_data_mem_reg_14__0_latch
+         fifo1/clk_gate_data_mem_reg_14__1_latch
+         fifo1/clk_gate_data_mem_reg_14__2_latch
+         fifo1/clk_gate_data_mem_reg_14__3_latch
+         fifo1/clk_gate_data_mem_reg_15__latch
+         fifo1/clk_gate_data_mem_reg_15__0_latch
+         fifo1/clk_gate_data_mem_reg_15__1_latch
+         fifo1/clk_gate_data_mem_reg_15__2_latch
+         fifo1/clk_gate_data_mem_reg_15__3_latch
+         fifo1/clk_gate_data_mem_reg_16__latch
+         fifo1/clk_gate_data_mem_reg_16__0_latch
+         fifo1/clk_gate_data_mem_reg_16__1_latch
+         fifo1/clk_gate_data_mem_reg_16__2_latch
+         fifo1/clk_gate_data_mem_reg_16__3_latch
+         fifo1/clk_gate_data_mem_reg_17__latch
+         fifo1/clk_gate_data_mem_reg_17__0_latch
+         fifo1/clk_gate_data_mem_reg_17__1_latch
+         fifo1/clk_gate_data_mem_reg_17__2_latch
+         fifo1/clk_gate_data_mem_reg_17__3_latch
+         fifo1/clk_gate_data_mem_reg_18__latch
+         fifo1/clk_gate_data_mem_reg_18__0_latch
+         fifo1/clk_gate_data_mem_reg_18__1_latch
+         fifo1/clk_gate_data_mem_reg_18__2_latch
+         fifo1/clk_gate_data_mem_reg_18__3_latch
+         fifo1/clk_gate_data_mem_reg_19__latch
+         fifo1/clk_gate_data_mem_reg_19__0_latch
+         fifo1/clk_gate_data_mem_reg_19__1_latch
+         fifo1/clk_gate_data_mem_reg_19__2_latch
+         fifo1/clk_gate_data_mem_reg_19__3_latch
+         fifo1/clk_gate_data_mem_reg_20__latch
+         fifo1/clk_gate_data_mem_reg_20__0_latch
+         fifo1/clk_gate_data_mem_reg_20__1_latch
+         fifo1/clk_gate_data_mem_reg_20__2_latch
+         fifo1/clk_gate_data_mem_reg_20__3_latch
+         fifo1/clk_gate_data_mem_reg_21__latch
+         fifo1/clk_gate_data_mem_reg_21__0_latch
+         fifo1/clk_gate_data_mem_reg_21__1_latch
+         fifo1/clk_gate_data_mem_reg_21__2_latch
+         fifo1/clk_gate_data_mem_reg_21__3_latch
+         fifo1/clk_gate_data_mem_reg_22__latch
+         fifo1/clk_gate_data_mem_reg_22__0_latch
+         fifo1/clk_gate_data_mem_reg_22__1_latch
+         fifo1/clk_gate_data_mem_reg_22__2_latch
+         fifo1/clk_gate_data_mem_reg_22__3_latch
+         fifo1/clk_gate_data_mem_reg_23__latch
+         fifo1/clk_gate_data_mem_reg_23__0_latch
+         fifo1/clk_gate_data_mem_reg_23__1_latch
+         fifo1/clk_gate_data_mem_reg_23__2_latch
+         fifo1/clk_gate_data_mem_reg_23__3_latch
+         fifo1/clk_gate_data_mem_reg_24__latch
+         fifo1/clk_gate_data_mem_reg_24__0_latch
+         fifo1/clk_gate_data_mem_reg_24__1_latch
+         fifo1/clk_gate_data_mem_reg_24__2_latch
+         fifo1/clk_gate_data_mem_reg_24__3_latch
+         fifo1/clk_gate_data_mem_reg_25__latch
+         fifo1/clk_gate_data_mem_reg_25__0_latch
+         fifo1/clk_gate_data_mem_reg_25__1_latch
+         fifo1/clk_gate_data_mem_reg_25__2_latch
+         fifo1/clk_gate_data_mem_reg_25__3_latch
+         fifo1/clk_gate_data_mem_reg_26__latch
+         fifo1/clk_gate_data_mem_reg_26__0_latch
+         fifo1/clk_gate_data_mem_reg_26__1_latch
+         fifo1/clk_gate_data_mem_reg_26__2_latch
+         fifo1/clk_gate_data_mem_reg_26__3_latch
+         fifo1/clk_gate_data_mem_reg_27__latch
+         fifo1/clk_gate_data_mem_reg_27__0_latch
+         fifo1/clk_gate_data_mem_reg_27__1_latch
+         fifo1/clk_gate_data_mem_reg_27__2_latch
+         fifo1/clk_gate_data_mem_reg_27__3_latch
+         fifo1/clk_gate_data_mem_reg_28__latch
+         fifo1/clk_gate_data_mem_reg_28__0_latch
+         fifo1/clk_gate_data_mem_reg_28__1_latch
+         fifo1/clk_gate_data_mem_reg_28__2_latch
+         fifo1/clk_gate_data_mem_reg_28__3_latch
+         fifo1/clk_gate_data_mem_reg_29__latch
+         fifo1/clk_gate_data_mem_reg_29__0_latch
+         fifo1/clk_gate_data_mem_reg_29__1_latch
+         fifo1/clk_gate_data_mem_reg_29__2_latch
+         fifo1/clk_gate_data_mem_reg_29__3_latch
+         fifo1/clk_gate_data_mem_reg_30__latch
+         fifo1/clk_gate_data_mem_reg_30__0_latch
+         fifo1/clk_gate_data_mem_reg_30__1_latch
+         fifo1/clk_gate_data_mem_reg_30__2_latch
+         fifo1/clk_gate_data_mem_reg_30__3_latch
+         fifo1/clk_gate_data_mem_reg_31__latch
+         fifo1/clk_gate_data_mem_reg_31__0_latch
+         fifo1/clk_gate_data_mem_reg_31__1_latch
+         fifo1/clk_gate_data_mem_reg_31__2_latch
+         fifo1/clk_gate_data_mem_reg_31__3_latch
+         fifo2/clk_gate_data_rd_reg_latch
+         fifo2/clk_gate_data_rd_reg_0_latch
+         fifo2/clk_gate_data_rd_reg_1_latch
+         fifo2/clk_gate_data_rd_reg_2_latch
+         fifo2/clk_gate_data_rd_reg_3_latch
+         fifo2/clk_gate_data_rd_reg_4_latch
+         fifo2/clk_gate_data_rd_reg_5_latch
+         fifo2/clk_gate_data_rd_reg_6_latch
+         fifo2/clk_gate_data_rd_reg_7_latch
+         fifo2/clk_gate_data_mem_reg_0__latch
+         fifo2/clk_gate_data_mem_reg_0__0_latch
+         fifo2/clk_gate_data_mem_reg_0__1_latch
+         fifo2/clk_gate_data_mem_reg_0__2_latch
+         fifo2/clk_gate_data_mem_reg_0__3_latch
+         fifo2/clk_gate_data_mem_reg_0__4_latch
+         fifo2/clk_gate_data_mem_reg_0__5_latch
+         fifo2/clk_gate_data_mem_reg_0__6_latch
+         fifo2/clk_gate_data_mem_reg_0__7_latch
+         fifo2/clk_gate_data_mem_reg_1__latch
+         fifo2/clk_gate_data_mem_reg_1__0_latch
+         fifo2/clk_gate_data_mem_reg_1__1_latch
+         fifo2/clk_gate_data_mem_reg_1__2_latch
+         fifo2/clk_gate_data_mem_reg_1__3_latch
+         fifo2/clk_gate_data_mem_reg_1__4_latch
+         fifo2/clk_gate_data_mem_reg_1__5_latch
+         fifo2/clk_gate_data_mem_reg_1__6_latch
+         fifo2/clk_gate_data_mem_reg_1__7_latch
+         fifo2/clk_gate_data_mem_reg_2__latch
+         fifo2/clk_gate_data_mem_reg_2__0_latch
+         fifo2/clk_gate_data_mem_reg_2__1_latch
+         fifo2/clk_gate_data_mem_reg_2__2_latch
+         fifo2/clk_gate_data_mem_reg_2__3_latch
+         fifo2/clk_gate_data_mem_reg_2__4_latch
+         fifo2/clk_gate_data_mem_reg_2__5_latch
+         fifo2/clk_gate_data_mem_reg_2__6_latch
+         fifo2/clk_gate_data_mem_reg_2__7_latch
+         fifo2/clk_gate_data_mem_reg_3__latch
+         fifo2/clk_gate_data_mem_reg_3__0_latch
+         fifo2/clk_gate_data_mem_reg_3__1_latch
+         fifo2/clk_gate_data_mem_reg_3__2_latch
+         fifo2/clk_gate_data_mem_reg_3__3_latch
+         fifo2/clk_gate_data_mem_reg_3__4_latch
+         fifo2/clk_gate_data_mem_reg_3__5_latch
+         fifo2/clk_gate_data_mem_reg_3__6_latch
+         fifo2/clk_gate_data_mem_reg_3__7_latch
+         fifo2/clk_gate_data_mem_reg_4__latch
+         fifo2/clk_gate_data_mem_reg_4__0_latch
+         fifo2/clk_gate_data_mem_reg_4__1_latch
+         fifo2/clk_gate_data_mem_reg_4__2_latch
+         fifo2/clk_gate_data_mem_reg_4__3_latch
+         fifo2/clk_gate_data_mem_reg_4__4_latch
+         fifo2/clk_gate_data_mem_reg_4__5_latch
+         fifo2/clk_gate_data_mem_reg_4__6_latch
+         fifo2/clk_gate_data_mem_reg_4__7_latch
+         fifo2/clk_gate_data_mem_reg_5__latch
+         fifo2/clk_gate_data_mem_reg_5__0_latch
+         fifo2/clk_gate_data_mem_reg_5__1_latch
+         fifo2/clk_gate_data_mem_reg_5__2_latch
+         fifo2/clk_gate_data_mem_reg_5__3_latch
+         fifo2/clk_gate_data_mem_reg_5__4_latch
+         fifo2/clk_gate_data_mem_reg_5__5_latch
+         fifo2/clk_gate_data_mem_reg_5__6_latch
+         fifo2/clk_gate_data_mem_reg_5__7_latch
+         fifo2/clk_gate_data_mem_reg_6__latch
+         fifo2/clk_gate_data_mem_reg_6__0_latch
+         fifo2/clk_gate_data_mem_reg_6__1_latch
+         fifo2/clk_gate_data_mem_reg_6__2_latch
+         fifo2/clk_gate_data_mem_reg_6__3_latch
+         fifo2/clk_gate_data_mem_reg_6__4_latch
+         fifo2/clk_gate_data_mem_reg_6__5_latch
+         fifo2/clk_gate_data_mem_reg_6__6_latch
+         fifo2/clk_gate_data_mem_reg_6__7_latch
+         fifo2/clk_gate_data_mem_reg_7__latch
+         fifo2/clk_gate_data_mem_reg_7__0_latch
+         fifo2/clk_gate_data_mem_reg_7__1_latch
+         fifo2/clk_gate_data_mem_reg_7__2_latch
+         fifo2/clk_gate_data_mem_reg_7__3_latch
+         fifo2/clk_gate_data_mem_reg_7__4_latch
+         fifo2/clk_gate_data_mem_reg_7__5_latch
+         fifo2/clk_gate_data_mem_reg_7__6_latch
+         fifo2/clk_gate_data_mem_reg_7__7_latch
+         fifo2/clk_gate_data_mem_reg_8__latch
+         fifo2/clk_gate_data_mem_reg_8__0_latch
+         fifo2/clk_gate_data_mem_reg_8__1_latch
+         fifo2/clk_gate_data_mem_reg_8__2_latch
+         fifo2/clk_gate_data_mem_reg_8__3_latch
+         fifo2/clk_gate_data_mem_reg_8__4_latch
+         fifo2/clk_gate_data_mem_reg_8__5_latch
+         fifo2/clk_gate_data_mem_reg_8__6_latch
+         fifo2/clk_gate_data_mem_reg_8__7_latch
+         fifo2/clk_gate_data_mem_reg_9__latch
+         fifo2/clk_gate_data_mem_reg_9__0_latch
+         fifo2/clk_gate_data_mem_reg_9__1_latch
+         fifo2/clk_gate_data_mem_reg_9__2_latch
+         fifo2/clk_gate_data_mem_reg_9__3_latch
+         fifo2/clk_gate_data_mem_reg_9__4_latch
+         fifo2/clk_gate_data_mem_reg_9__5_latch
+         fifo2/clk_gate_data_mem_reg_9__6_latch
+         fifo2/clk_gate_data_mem_reg_9__7_latch
+         fifo2/clk_gate_data_mem_reg_10__latch
+         fifo2/clk_gate_data_mem_reg_10__0_latch
+         fifo2/clk_gate_data_mem_reg_10__1_latch
+         fifo2/clk_gate_data_mem_reg_10__2_latch
+         fifo2/clk_gate_data_mem_reg_10__3_latch
+         fifo2/clk_gate_data_mem_reg_10__4_latch
+         fifo2/clk_gate_data_mem_reg_10__5_latch
+         fifo2/clk_gate_data_mem_reg_10__6_latch
+         fifo2/clk_gate_data_mem_reg_10__7_latch
+         fifo2/clk_gate_data_mem_reg_11__latch
+         fifo2/clk_gate_data_mem_reg_11__0_latch
+         fifo2/clk_gate_data_mem_reg_11__1_latch
+         fifo2/clk_gate_data_mem_reg_11__2_latch
+         fifo2/clk_gate_data_mem_reg_11__3_latch
+         fifo2/clk_gate_data_mem_reg_11__4_latch
+         fifo2/clk_gate_data_mem_reg_11__5_latch
+         fifo2/clk_gate_data_mem_reg_11__6_latch
+         fifo2/clk_gate_data_mem_reg_11__7_latch
+         fifo2/clk_gate_data_mem_reg_12__latch
+         fifo2/clk_gate_data_mem_reg_12__0_latch
+         fifo2/clk_gate_data_mem_reg_12__1_latch
+         fifo2/clk_gate_data_mem_reg_12__2_latch
+         fifo2/clk_gate_data_mem_reg_12__3_latch
+         fifo2/clk_gate_data_mem_reg_12__4_latch
+         fifo2/clk_gate_data_mem_reg_12__5_latch
+         fifo2/clk_gate_data_mem_reg_12__6_latch
+         fifo2/clk_gate_data_mem_reg_12__7_latch
+         fifo2/clk_gate_data_mem_reg_13__latch
+         fifo2/clk_gate_data_mem_reg_13__0_latch
+         fifo2/clk_gate_data_mem_reg_13__1_latch
+         fifo2/clk_gate_data_mem_reg_13__2_latch
+         fifo2/clk_gate_data_mem_reg_13__3_latch
+         fifo2/clk_gate_data_mem_reg_13__4_latch
+         fifo2/clk_gate_data_mem_reg_13__5_latch
+         fifo2/clk_gate_data_mem_reg_13__6_latch
+         fifo2/clk_gate_data_mem_reg_13__7_latch
+         fifo2/clk_gate_data_mem_reg_14__latch
+         fifo2/clk_gate_data_mem_reg_14__0_latch
+         fifo2/clk_gate_data_mem_reg_14__1_latch
+         fifo2/clk_gate_data_mem_reg_14__2_latch
+         fifo2/clk_gate_data_mem_reg_14__3_latch
+         fifo2/clk_gate_data_mem_reg_14__4_latch
+         fifo2/clk_gate_data_mem_reg_14__5_latch
+         fifo2/clk_gate_data_mem_reg_14__6_latch
+         fifo2/clk_gate_data_mem_reg_14__7_latch
+         fifo2/clk_gate_data_mem_reg_15__latch
+         fifo2/clk_gate_data_mem_reg_15__0_latch
+         fifo2/clk_gate_data_mem_reg_15__1_latch
+         fifo2/clk_gate_data_mem_reg_15__2_latch
+         fifo2/clk_gate_data_mem_reg_15__3_latch
+         fifo2/clk_gate_data_mem_reg_15__4_latch
+         fifo2/clk_gate_data_mem_reg_15__5_latch
+         fifo2/clk_gate_data_mem_reg_15__6_latch
+         fifo2/clk_gate_data_mem_reg_15__7_latch
+         fifo2/clk_gate_data_mem_reg_16__latch
+         fifo2/clk_gate_data_mem_reg_16__0_latch
+         fifo2/clk_gate_data_mem_reg_16__1_latch
+         fifo2/clk_gate_data_mem_reg_16__2_latch
+         fifo2/clk_gate_data_mem_reg_16__3_latch
+         fifo2/clk_gate_data_mem_reg_16__4_latch
+         fifo2/clk_gate_data_mem_reg_16__5_latch
+         fifo2/clk_gate_data_mem_reg_16__6_latch
+         fifo2/clk_gate_data_mem_reg_16__7_latch
+         fifo2/clk_gate_data_mem_reg_17__latch
+         fifo2/clk_gate_data_mem_reg_17__0_latch
+         fifo2/clk_gate_data_mem_reg_17__1_latch
+         fifo2/clk_gate_data_mem_reg_17__2_latch
+         fifo2/clk_gate_data_mem_reg_17__3_latch
+         fifo2/clk_gate_data_mem_reg_17__4_latch
+         fifo2/clk_gate_data_mem_reg_17__5_latch
+         fifo2/clk_gate_data_mem_reg_17__6_latch
+         fifo2/clk_gate_data_mem_reg_17__7_latch
+         fifo2/clk_gate_data_mem_reg_18__latch
+         fifo2/clk_gate_data_mem_reg_18__0_latch
+         fifo2/clk_gate_data_mem_reg_18__1_latch
+         fifo2/clk_gate_data_mem_reg_18__2_latch
+         fifo2/clk_gate_data_mem_reg_18__3_latch
+         fifo2/clk_gate_data_mem_reg_18__4_latch
+         fifo2/clk_gate_data_mem_reg_18__5_latch
+         fifo2/clk_gate_data_mem_reg_18__6_latch
+         fifo2/clk_gate_data_mem_reg_18__7_latch
+         fifo2/clk_gate_data_mem_reg_19__latch
+         fifo2/clk_gate_data_mem_reg_19__0_latch
+         fifo2/clk_gate_data_mem_reg_19__1_latch
+         fifo2/clk_gate_data_mem_reg_19__2_latch
+         fifo2/clk_gate_data_mem_reg_19__3_latch
+         fifo2/clk_gate_data_mem_reg_19__4_latch
+         fifo2/clk_gate_data_mem_reg_19__5_latch
+         fifo2/clk_gate_data_mem_reg_19__6_latch
+         fifo2/clk_gate_data_mem_reg_19__7_latch
+         fifo2/clk_gate_data_mem_reg_20__latch
+         fifo2/clk_gate_data_mem_reg_20__0_latch
+         fifo2/clk_gate_data_mem_reg_20__1_latch
+         fifo2/clk_gate_data_mem_reg_20__2_latch
+         fifo2/clk_gate_data_mem_reg_20__3_latch
+         fifo2/clk_gate_data_mem_reg_20__4_latch
+         fifo2/clk_gate_data_mem_reg_20__5_latch
+         fifo2/clk_gate_data_mem_reg_20__6_latch
+         fifo2/clk_gate_data_mem_reg_20__7_latch
+         fifo2/clk_gate_data_mem_reg_21__latch
+         fifo2/clk_gate_data_mem_reg_21__0_latch
+         fifo2/clk_gate_data_mem_reg_21__1_latch
+         fifo2/clk_gate_data_mem_reg_21__2_latch
+         fifo2/clk_gate_data_mem_reg_21__3_latch
+         fifo2/clk_gate_data_mem_reg_21__4_latch
+         fifo2/clk_gate_data_mem_reg_21__5_latch
+         fifo2/clk_gate_data_mem_reg_21__6_latch
+         fifo2/clk_gate_data_mem_reg_21__7_latch
+         fifo2/clk_gate_data_mem_reg_22__latch
+         fifo2/clk_gate_data_mem_reg_22__0_latch
+         fifo2/clk_gate_data_mem_reg_22__1_latch
+         fifo2/clk_gate_data_mem_reg_22__2_latch
+         fifo2/clk_gate_data_mem_reg_22__3_latch
+         fifo2/clk_gate_data_mem_reg_22__4_latch
+         fifo2/clk_gate_data_mem_reg_22__5_latch
+         fifo2/clk_gate_data_mem_reg_22__6_latch
+         fifo2/clk_gate_data_mem_reg_22__7_latch
+         fifo2/clk_gate_data_mem_reg_23__latch
+         fifo2/clk_gate_data_mem_reg_23__0_latch
+         fifo2/clk_gate_data_mem_reg_23__1_latch
+         fifo2/clk_gate_data_mem_reg_23__2_latch
+         fifo2/clk_gate_data_mem_reg_23__3_latch
+         fifo2/clk_gate_data_mem_reg_23__4_latch
+         fifo2/clk_gate_data_mem_reg_23__5_latch
+         fifo2/clk_gate_data_mem_reg_23__6_latch
+         fifo2/clk_gate_data_mem_reg_23__7_latch
+         fifo2/clk_gate_data_mem_reg_24__latch
+         fifo2/clk_gate_data_mem_reg_24__0_latch
+         fifo2/clk_gate_data_mem_reg_24__1_latch
+         fifo2/clk_gate_data_mem_reg_24__2_latch
+         fifo2/clk_gate_data_mem_reg_24__3_latch
+         fifo2/clk_gate_data_mem_reg_24__4_latch
+         fifo2/clk_gate_data_mem_reg_24__5_latch
+         fifo2/clk_gate_data_mem_reg_24__6_latch
+         fifo2/clk_gate_data_mem_reg_24__7_latch
+         fifo2/clk_gate_data_mem_reg_25__latch
+         fifo2/clk_gate_data_mem_reg_25__0_latch
+         fifo2/clk_gate_data_mem_reg_25__1_latch
+         fifo2/clk_gate_data_mem_reg_25__2_latch
+         fifo2/clk_gate_data_mem_reg_25__3_latch
+         fifo2/clk_gate_data_mem_reg_25__4_latch
+         fifo2/clk_gate_data_mem_reg_25__5_latch
+         fifo2/clk_gate_data_mem_reg_25__6_latch
+         fifo2/clk_gate_data_mem_reg_25__7_latch
+         fifo2/clk_gate_data_mem_reg_26__latch
+         fifo2/clk_gate_data_mem_reg_26__0_latch
+         fifo2/clk_gate_data_mem_reg_26__1_latch
+         fifo2/clk_gate_data_mem_reg_26__2_latch
+         fifo2/clk_gate_data_mem_reg_26__3_latch
+         fifo2/clk_gate_data_mem_reg_26__4_latch
+         fifo2/clk_gate_data_mem_reg_26__5_latch
+         fifo2/clk_gate_data_mem_reg_26__6_latch
+         fifo2/clk_gate_data_mem_reg_26__7_latch
+         fifo2/clk_gate_data_mem_reg_27__latch
+         fifo2/clk_gate_data_mem_reg_27__0_latch
+         fifo2/clk_gate_data_mem_reg_27__1_latch
+         fifo2/clk_gate_data_mem_reg_27__2_latch
+         fifo2/clk_gate_data_mem_reg_27__3_latch
+         fifo2/clk_gate_data_mem_reg_27__4_latch
+         fifo2/clk_gate_data_mem_reg_27__5_latch
+         fifo2/clk_gate_data_mem_reg_27__6_latch
+         fifo2/clk_gate_data_mem_reg_27__7_latch
+         fifo2/clk_gate_data_mem_reg_28__latch
+         fifo2/clk_gate_data_mem_reg_28__0_latch
+         fifo2/clk_gate_data_mem_reg_28__1_latch
+         fifo2/clk_gate_data_mem_reg_28__2_latch
+         fifo2/clk_gate_data_mem_reg_28__3_latch
+         fifo2/clk_gate_data_mem_reg_28__4_latch
+         fifo2/clk_gate_data_mem_reg_28__5_latch
+         fifo2/clk_gate_data_mem_reg_28__6_latch
+         fifo2/clk_gate_data_mem_reg_28__7_latch
+         fifo2/clk_gate_data_mem_reg_29__latch
+         fifo2/clk_gate_data_mem_reg_29__0_latch
+         fifo2/clk_gate_data_mem_reg_29__1_latch
+         fifo2/clk_gate_data_mem_reg_29__2_latch
+         fifo2/clk_gate_data_mem_reg_29__3_latch
+         fifo2/clk_gate_data_mem_reg_29__4_latch
+         fifo2/clk_gate_data_mem_reg_29__5_latch
+         fifo2/clk_gate_data_mem_reg_29__6_latch
+         fifo2/clk_gate_data_mem_reg_29__7_latch
+         fifo2/clk_gate_data_mem_reg_30__latch
+         fifo2/clk_gate_data_mem_reg_30__0_latch
+         fifo2/clk_gate_data_mem_reg_30__1_latch
+         fifo2/clk_gate_data_mem_reg_30__2_latch
+         fifo2/clk_gate_data_mem_reg_30__3_latch
+         fifo2/clk_gate_data_mem_reg_30__4_latch
+         fifo2/clk_gate_data_mem_reg_30__5_latch
+         fifo2/clk_gate_data_mem_reg_30__6_latch
+         fifo2/clk_gate_data_mem_reg_30__7_latch
+         fifo2/clk_gate_data_mem_reg_31__latch
+         fifo2/clk_gate_data_mem_reg_31__0_latch
+         fifo2/clk_gate_data_mem_reg_31__1_latch
+         fifo2/clk_gate_data_mem_reg_31__2_latch
+         fifo2/clk_gate_data_mem_reg_31__3_latch
+         fifo2/clk_gate_data_mem_reg_31__4_latch
+         fifo2/clk_gate_data_mem_reg_31__5_latch
+         fifo2/clk_gate_data_mem_reg_31__6_latch
+         fifo2/clk_gate_data_mem_reg_31__7_latch
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+                             Ungated Register Report
+--------------------------------------------------------------------------------
+           Ungated Register     |  Reason                  |  What Next?
+--------------------------------------------------------------------------------
+    check_ecc_in1_secded_in0_data_encoded_reg_1_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_7_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_65_      |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_20_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_29_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_30_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_20_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_30_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_50_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_60_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_50_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_51_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_60_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_61_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_9_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_40_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_41_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_25_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_26_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_27_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_28_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_16_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_18_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_21_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_23_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_24_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_15_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_7_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_0_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_9_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_4_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_31_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_16_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_17_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_18_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_19_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_25_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_26_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_27_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_28_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_29_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_22_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_23_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_24_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_58_      |  Scan connected register |  -
+    alu_core0_dout_reg_52_      |  Scan connected register |  -
+    alu_core0_dout_reg_59_      |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_21_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_68_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_70_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_68_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_24_      |  Scan connected register |  -
+    alu_core0_dout_reg_57_      |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_24_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_39_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_69_
+                                |  Scan connected register |  -
+    gen_ecc_in0_ecc_reg_5_      |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_2_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_19_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_27_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_29_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_31_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_35_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_37_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_39_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_47_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_50_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_55_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_58_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_59_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_60_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_61_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_64_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_65_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_66_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_67_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_68_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_31_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_56_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_57_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_58_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_61_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_62_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_64_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_65_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_66_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_67_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_68_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_69_
+                                |  Scan connected register |  -
+    gen_ecc_alu0_ecc_reg_7_     |  Scan connected register |  -
+    alu_core0_dout_reg_83_      |  Scan connected register |  -
+    alu_core0_dout_reg_126_     |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_54_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_55_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_61_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_49_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_64_      |  Scan connected register |  -
+    alu_core0_dout_reg_127_     |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_64_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_65_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_66_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_67_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_69_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_64_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_65_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_66_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_67_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_70_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_54_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_3_       |  Scan connected register |  -
+    alu_core0_dout_reg_110_     |  Scan connected register |  -
+    alu_core0_dout_reg_90_      |  Scan connected register |  -
+    gen_ecc_in0_ecc_reg_2_      |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_34_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_37_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_49_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_19_      |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_16_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_38_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_46_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_62_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_63_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_121_     |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_7_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_15_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_51_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_119_     |  Scan connected register |  -
+    alu_core0_dout_reg_79_      |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_21_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_59_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_51_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_52_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_53_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_62_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_56_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_57_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_58_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_48_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_52_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_53_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_54_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_55_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_48_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_49_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_56_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_59_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_43_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_11_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_10_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_1_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_5_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_8_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_14_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_15_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_4_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_6_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_12_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_13_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_7_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_32_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_2_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_42_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_34_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_42_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_33_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_32_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_12_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_41_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_10_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_5_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_46_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_45_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_47_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_0_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_56_      |  Scan connected register |  -
+    alu_core0_dout_reg_31_      |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_23_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_41_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_51_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_40_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_38_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_18_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_32_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_59_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_30_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_50_      |  Scan connected register |  -
+    alu_core0_dout_reg_12_      |  Scan connected register |  -
+    alu_core0_dout_reg_1_       |  Scan connected register |  -
+    alu_core0_dout_reg_63_      |  Scan connected register |  -
+    alu_core0_dout_reg_26_      |  Scan connected register |  -
+    alu_core0_dout_reg_44_      |  Scan connected register |  -
+    alu_core0_dout_reg_20_      |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_15_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_125_     |  Scan connected register |  -
+    alu_core0_dout_reg_124_     |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_62_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_57_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_106_     |  Scan connected register |  -
+    alu_core0_dout_reg_102_     |  Scan connected register |  -
+    alu_core0_dout_reg_81_      |  Scan connected register |  -
+    alu_core0_dout_reg_38_      |  Scan connected register |  -
+    alu_core0_dout_reg_32_      |  Scan connected register |  -
+    alu_core0_dout_reg_96_      |  Scan connected register |  -
+    alu_core0_dout_reg_94_      |  Scan connected register |  -
+    alu_core0_dout_reg_123_     |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_4_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_5_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_8_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_10_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_12_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_13_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_14_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_16_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_18_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_19_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_20_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_21_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_22_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_25_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_26_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_27_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_53_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_54_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_108_     |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_34_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_5_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_8_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_14_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_16_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_24_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_27_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_43_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_17_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_22_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_37_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_11_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_46_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_45_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_36_      |  Scan connected register |  -
+    alu_core0_dout_reg_69_      |  Scan connected register |  -
+    alu_core0_dout_reg_39_      |  Scan connected register |  -
+    alu_core0_dout_reg_70_      |  Scan connected register |  -
+    alu_core0_dout_reg_9_       |  Scan connected register |  -
+    alu_core0_dout_reg_33_      |  Scan connected register |  -
+    alu_core0_dout_reg_15_      |  Scan connected register |  -
+    alu_core0_dout_reg_17_      |  Scan connected register |  -
+    alu_core0_dout_reg_114_     |  Scan connected register |  -
+    alu_core0_dout_reg_100_     |  Scan connected register |  -
+    alu_core0_dout_reg_74_      |  Scan connected register |  -
+    alu_core0_dout_reg_0_       |  Scan connected register |  -
+    alu_core0_dout_reg_72_      |  Scan connected register |  -
+    alu_core0_dout_reg_54_      |  Scan connected register |  -
+    alu_core0_dout_reg_91_      |  Scan connected register |  -
+    alu_core0_dout_reg_11_      |  Scan connected register |  -
+    alu_core0_dout_reg_78_      |  Scan connected register |  -
+    alu_core0_dout_reg_89_      |  Scan connected register |  -
+    alu_core0_dout_reg_40_      |  Scan connected register |  -
+    alu_core0_dout_reg_4_       |  Scan connected register |  -
+    alu_core0_dout_reg_61_      |  Scan connected register |  -
+    gen_ecc_alu0_ecc_reg_6_     |  Scan connected register |  -
+    alu_core0_dout_reg_42_      |  Scan connected register |  -
+    alu_core0_dout_reg_16_      |  Scan connected register |  -
+    alu_core0_dout_reg_48_      |  Scan connected register |  -
+    alu_core0_dout_reg_6_       |  Scan connected register |  -
+    alu_core0_dout_reg_28_      |  Scan connected register |  -
+    alu_core0_dout_reg_95_      |  Scan connected register |  -
+    alu_core0_dout_reg_109_     |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_3_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_63_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_88_      |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_58_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_47_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_36_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_93_      |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_44_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_46_      |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_1_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_55_      |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_43_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_37_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_46_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_45_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_0_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_4_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_5_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_6_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_8_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_9_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_10_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_11_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_12_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_13_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_14_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_16_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_17_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_18_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_20_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_21_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_22_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_23_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_24_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_25_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_26_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_28_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_30_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_32_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_33_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_34_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_36_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_38_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_40_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_41_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_42_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_43_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_44_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_45_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_46_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_48_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_49_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_52_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_53_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_54_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_56_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_62_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_69_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_70_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_24_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_28_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_29_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_34_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_37_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_42_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_43_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_46_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_47_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_48_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_50_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_51_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_52_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_55_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_60_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_6_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_14_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_35_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_36_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_39_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_33_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_38_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_44_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_45_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_49_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_2_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_2_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_9_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_45_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_53_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_58_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_48_
+                                |  Scan connected register |  -
+    gen_ecc_in0_ecc_reg_1_      |  Scan connected register |  -
+    alu_core0_dout_reg_112_     |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_36_
+                                |  Scan connected register |  -
+    check_ecc_in1_gen_ecc_in0_ecc_reg_1_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_57_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_17_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_56_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_23_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_58_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_50_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_61_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_9_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_51_      |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_11_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_2_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_13_      |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_3_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_35_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_44_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_22_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_54_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_62_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_19_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_1_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_18_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_3_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_51_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_60_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_26_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_2_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_28_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_23_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_104_     |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_57_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_5_       |  Scan connected register |  -
+    alu_core0_dout_reg_66_      |  Scan connected register |  -
+    alu_core0_dout_reg_67_      |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_57_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_10_      |  Scan connected register |  -
+    alu_core0_dout_reg_25_      |  Scan connected register |  -
+    alu_core0_dout_reg_87_      |  Scan connected register |  -
+    alu_core0_dout_reg_7_       |  Scan connected register |  -
+    alu_core0_dout_reg_117_     |  Scan connected register |  -
+    alu_core0_dout_reg_62_      |  Scan connected register |  -
+    alu_core0_dout_reg_120_     |  Scan connected register |  -
+    alu_core0_dout_reg_29_      |  Scan connected register |  -
+    alu_core0_dout_reg_41_      |  Scan connected register |  -
+    alu_core0_dout_reg_118_     |  Scan connected register |  -
+    alu_core0_dout_reg_76_      |  Scan connected register |  -
+    alu_core0_dout_reg_86_      |  Scan connected register |  -
+    alu_core0_dout_reg_18_      |  Scan connected register |  -
+    alu_core0_dout_reg_27_      |  Scan connected register |  -
+    check_ecc_in1_secded_in0_flag_ded_reg
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_8_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_encoded_reg_63_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_42_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_4_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_44_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_59_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_22_      |  Scan connected register |  -
+    alu_core0_dout_reg_49_      |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_63_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_19_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_56_
+                                |  Scan connected register |  -
+    gen_ecc_in1_ecc_reg_1_      |  Scan connected register |  -
+    check_ecc_in1_gen_ecc_in0_ecc_reg_5_
+                                |  Scan connected register |  -
+    gen_ecc_in1_ecc_reg_6_      |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_63_
+                                |  Scan connected register |  -
+    check_ecc_in0_gen_ecc_in0_ecc_reg_4_
+                                |  Scan connected register |  -
+    gen_ecc_alu0_ecc_reg_3_     |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_47_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_55_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_6_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_4_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_22_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_0_
+                                |  Scan connected register |  -
+    check_ecc_in0_gen_ecc_in0_ecc_reg_3_
+                                |  Scan connected register |  -
+    gen_ecc_alu0_ecc_reg_0_     |  Scan connected register |  -
+    check_ecc_in1_gen_ecc_in0_ecc_reg_6_
+                                |  Scan connected register |  -
+    check_ecc_in0_gen_ecc_in0_ecc_reg_5_
+                                |  Scan connected register |  -
+    check_ecc_in0_gen_ecc_in0_ecc_reg_2_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_63_
+                                |  Scan connected register |  -
+    check_ecc_in1_gen_ecc_in0_ecc_reg_3_
+                                |  Scan connected register |  -
+    check_ecc_in1_gen_ecc_in0_ecc_reg_2_
+                                |  Scan connected register |  -
+    check_ecc_in0_gen_ecc_in0_ecc_reg_1_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_3_
+                                |  Scan connected register |  -
+    check_ecc_in0_gen_ecc_in0_ecc_reg_0_
+                                |  Scan connected register |  -
+    check_ecc_in1_gen_ecc_in0_ecc_reg_0_
+                                |  Scan connected register |  -
+    check_ecc_in0_gen_ecc_in0_ecc_reg_6_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_47_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_33_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_35_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_43_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_10_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_36_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_33_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_52_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_6_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_61_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_14_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_0_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_50_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_31_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_15_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_29_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_12_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_10_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_28_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_53_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_49_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_13_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_3_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_7_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_15_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_55_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_8_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_13_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_20_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_25_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_34_      |  Scan connected register |  -
+    alu_core0_dout_reg_45_      |  Scan connected register |  -
+    alu_core0_dout_reg_14_      |  Scan connected register |  -
+    alu_core0_dout_reg_97_      |  Scan connected register |  -
+    alu_core0_dout_reg_80_      |  Scan connected register |  -
+    alu_core0_dout_reg_8_       |  Scan connected register |  -
+    alu_core0_dout_reg_35_      |  Scan connected register |  -
+    alu_core0_dout_reg_68_      |  Scan connected register |  -
+    alu_core0_dout_reg_71_      |  Scan connected register |  -
+    alu_core0_dout_reg_47_      |  Scan connected register |  -
+    alu_core0_dout_reg_60_      |  Scan connected register |  -
+    alu_core0_dout_reg_53_      |  Scan connected register |  -
+    alu_core0_dout_reg_98_      |  Scan connected register |  -
+    alu_core0_dout_reg_23_      |  Scan connected register |  -
+    alu_core0_dout_reg_73_      |  Scan connected register |  -
+    alu_core0_dout_reg_107_     |  Scan connected register |  -
+    alu_core0_dout_reg_116_     |  Scan connected register |  -
+    alu_core0_dout_reg_21_      |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_1_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_59_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_38_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_60_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_39_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_11_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_31_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_37_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_34_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_26_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_48_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_7_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_40_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_41_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_52_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_11_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_19_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_31_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_39_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_42_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_17_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_12_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_29_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_9_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_25_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_32_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_6_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_27_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_30_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_30_      |  Scan connected register |  -
+    alu_core0_dout_reg_99_      |  Scan connected register |  -
+    alu_core0_dout_reg_92_      |  Scan connected register |  -
+    alu_core0_dout_reg_103_     |  Scan connected register |  -
+    alu_core0_dout_reg_85_      |  Scan connected register |  -
+    alu_core0_dout_reg_111_     |  Scan connected register |  -
+    alu_core0_dout_reg_105_     |  Scan connected register |  -
+    alu_core0_dout_reg_113_     |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_38_
+                                |  Scan connected register |  -
+    check_ecc_in1_gen_ecc_in0_ecc_reg_7_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_70_
+                                |  Scan connected register |  -
+    gen_ecc_alu0_ecc_reg_4_     |  Scan connected register |  -
+    gen_ecc_in0_ecc_reg_0_      |  Scan connected register |  -
+    gen_ecc_in1_ecc_reg_2_      |  Scan connected register |  -
+    gen_ecc_in0_ecc_reg_6_      |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_0_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_3_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_41_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_5_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_rxc_reg_1_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_40_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_20_
+                                |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_rxc_reg_21_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_82_      |  Scan connected register |  -
+    alu_core0_dout_reg_101_     |  Scan connected register |  -
+    check_ecc_in0_gen_ecc_in0_ecc_reg_7_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_2_       |  Scan connected register |  -
+    check_ecc_in0_secded_in0_flag_ded_reg
+                                |  Scan connected register |  -
+    gen_ecc_alu0_ecc_reg_2_     |  Scan connected register |  -
+    gen_ecc_alu0_ecc_reg_8_     |  Scan connected register |  -
+    alu_core0_dout_reg_43_      |  Scan connected register |  -
+    gen_ecc_in0_ecc_reg_3_      |  Scan connected register |  -
+    check_ecc_in1_gen_ecc_in0_ecc_reg_4_
+                                |  Scan connected register |  -
+    gen_ecc_in1_ecc_reg_7_      |  Scan connected register |  -
+    gen_ecc_in1_ecc_reg_0_      |  Scan connected register |  -
+    check_ecc_in1_secded_in0_data_tmp_reg_13_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_75_      |  Scan connected register |  -
+    alu_core0_dout_reg_77_      |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_30_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_44_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_33_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_35_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_tmp_reg_17_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_122_     |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_39_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_40_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_32_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_115_     |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_35_
+                                |  Scan connected register |  -
+    check_ecc_in0_secded_in0_data_encoded_reg_36_
+                                |  Scan connected register |  -
+    alu_core0_dout_reg_37_      |  Scan connected register |  -
+    gen_ecc_in1_ecc_reg_3_      |  Scan connected register |  -
+    gen_ecc_alu0_ecc_reg_5_     |  Scan connected register |  -
+    gen_ecc_alu0_ecc_reg_1_     |  Scan connected register |  -
+    gen_ecc_in1_ecc_reg_5_      |  Scan connected register |  -
+    gen_ecc_in0_ecc_reg_7_      |  Scan connected register |  -
+    alu_core0_dout_reg_84_      |  Scan connected register |  -
+    gen_ecc_in0_ecc_reg_4_      |  Scan connected register |  -
+    gen_ecc_in1_ecc_reg_4_      |  Scan connected register |  -
+    fifo0/addr_rd_reg_3_        |  Scan connected register |  -
+    fifo0/addr_rd_reg_4_        |  Scan connected register |  -
+    fifo0/addr_rd_reg_1_        |  Scan connected register |  -
+    fifo0/cnt_data_reg_3_       |  Scan connected register |  -
+    fifo0/cnt_data_reg_2_       |  Scan connected register |  -
+    fifo0/addr_wr_reg_1_        |  Scan connected register |  -
+    fifo0/addr_wr_reg_4_        |  Scan connected register |  -
+    fifo0/cnt_data_reg_1_       |  Scan connected register |  -
+    fifo0/cnt_data_reg_0_       |  Scan connected register |  -
+    fifo0/cnt_data_reg_4_       |  Scan connected register |  -
+    fifo0/addr_wr_reg_2_        |  Scan connected register |  -
+    fifo0/cnt_data_reg_5_       |  Scan connected register |  -
+    fifo0/addr_wr_reg_0_        |  Scan connected register |  -
+    fifo0/addr_rd_reg_2_        |  Scan connected register |  -
+    fifo0/addr_rd_reg_0_        |  Scan connected register |  -
+    fifo0/addr_wr_reg_3_        |  Scan connected register |  -
+    fifo1/addr_rd_reg_2_        |  Scan connected register |  -
+    fifo1/addr_wr_reg_3_        |  Scan connected register |  -
+    fifo1/addr_wr_reg_4_        |  Scan connected register |  -
+    fifo1/addr_wr_reg_1_        |  Scan connected register |  -
+    fifo1/cnt_data_reg_3_       |  Scan connected register |  -
+    fifo1/cnt_data_reg_2_       |  Scan connected register |  -
+    fifo1/cnt_data_reg_4_       |  Scan connected register |  -
+    fifo1/addr_wr_reg_0_        |  Scan connected register |  -
+    fifo1/addr_rd_reg_4_        |  Scan connected register |  -
+    fifo1/cnt_data_reg_0_       |  Scan connected register |  -
+    fifo1/cnt_data_reg_5_       |  Scan connected register |  -
+    fifo1/addr_rd_reg_1_        |  Scan connected register |  -
+    fifo1/addr_wr_reg_2_        |  Scan connected register |  -
+    fifo1/addr_rd_reg_3_        |  Scan connected register |  -
+    fifo1/addr_rd_reg_0_        |  Scan connected register |  -
+    fifo1/cnt_data_reg_1_       |  Scan connected register |  -
+    fifo2/addr_rd_reg_0_        |  Scan connected register |  -
+    fifo2/addr_rd_reg_1_        |  Scan connected register |  -
+    fifo2/cnt_data_reg_2_       |  Scan connected register |  -
+    fifo2/cnt_data_reg_1_       |  Scan connected register |  -
+    fifo2/addr_wr_reg_1_        |  Scan connected register |  -
+    fifo2/cnt_data_reg_3_       |  Scan connected register |  -
+    fifo2/cnt_data_reg_4_       |  Scan connected register |  -
+    fifo2/addr_wr_reg_3_        |  Scan connected register |  -
+    fifo2/addr_wr_reg_4_        |  Scan connected register |  -
+    fifo2/cnt_data_reg_5_       |  Scan connected register |  -
+    fifo2/addr_rd_reg_4_        |  Scan connected register |  -
+    fifo2/addr_wr_reg_2_        |  Scan connected register |  -
+    fifo2/addr_wr_reg_0_        |  Scan connected register |  -
+    fifo2/addr_rd_reg_3_        |  Scan connected register |  -
+    fifo2/addr_rd_reg_2_        |  Scan connected register |  -
+    fifo2/cnt_data_reg_0_       |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_131_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_10_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_7_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_4_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_46_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_37_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_45_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_47_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_93_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_76_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_74_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_114_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_112_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_125_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_105_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_22_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_116_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_115_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_124_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_36_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_13_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_6_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_23_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_98_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_97_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_10_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_11_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_17_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_133_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_133_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_129_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_132_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_120_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_130_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_14_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_128_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_101_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_15_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_37_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_62_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_25_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_27_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_28_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_18_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_90_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_82_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_68_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_92_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_71_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_12_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_11_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_89_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_85_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_86_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_15_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_26_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_20_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_72_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_127_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_120_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_66_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_24_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_110_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_41_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_107_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_19_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_49_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_63_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_9_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_53_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_51_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_29_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_50_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_65_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_67_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_73_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_70_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_8_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_79_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_31_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_91_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_109_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_103_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_5_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_87_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_30_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_83_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_102_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_81_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_69_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_58_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_118_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_113_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_48_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_55_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_61_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_94_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_0_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_3_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_78_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_100_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_95_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_52_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_59_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_57_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_39_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_56_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_34_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_2_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_42_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_32_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_84_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_80_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_64_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_122_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_117_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_108_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_111_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_54_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_104_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_134_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_38_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_77_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_104_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_119_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_35_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_14_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_23_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_25_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_57_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_60_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_62_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_64_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_65_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_66_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_68_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_70_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_73_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_75_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_76_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_77_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_78_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_80_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_81_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_82_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_85_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_87_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_92_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_16_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_1_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_96_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_99_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_113_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_121_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_13_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_16_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_18_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_20_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_22_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_32_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_33_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_34_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_35_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_36_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_38_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_39_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_43_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_44_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_45_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_46_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_47_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_54_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_56_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_59_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_72_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_86_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_90_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_91_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_94_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_96_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_97_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_98_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_99_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_100_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_101_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_102_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_105_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_107_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_109_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_110_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_112_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_114_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_115_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_116_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_118_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_121_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_122_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_123_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_124_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_125_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_128_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_129_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_130_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_132_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_134_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_33_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_43_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_123_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_106_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_127_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_53_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_2_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_9_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_19_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_24_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_30_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_40_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_41_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_42_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_48_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_49_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_50_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_51_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_52_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_55_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_58_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_61_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_69_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_74_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_95_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_103_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_108_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_111_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_117_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_119_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_60_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_21_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_6_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_8_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_21_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_27_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_28_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_29_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_126_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_17_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_40_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_7_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_12_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_26_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_71_
+                                |  Scan connected register |  -
+    check_ecc_alu0/gen_ecc_alu0_ecc_reg_0_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_88_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_75_
+                                |  Scan connected register |  -
+    check_ecc_alu0/gen_ecc_alu0_ecc_reg_4_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_flag_ded_reg
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_65_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_123_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_121_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_20_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_10_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_31_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_69_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_67_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_17_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_125_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_63_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_127_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_91_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_76_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_5_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_95_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_52_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_122_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_72_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_90_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_61_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_119_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_16_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_1_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_79_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_14_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_81_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_68_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_70_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_66_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_4_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_124_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_19_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_64_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_11_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_126_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_54_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_9_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_32_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_6_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_28_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_103_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_94_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_101_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_37_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_92_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_34_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_40_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_73_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_56_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_18_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_104_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_62_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_12_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_2_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_26_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_35_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_120_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_38_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_99_
+                                |  Scan connected register |  -
+    check_ecc_alu0/gen_ecc_alu0_ecc_reg_7_
+                                |  Scan connected register |  -
+    check_ecc_alu0/gen_ecc_alu0_ecc_reg_8_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_106_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_117_
+                                |  Scan connected register |  -
+    check_ecc_alu0/gen_ecc_alu0_ecc_reg_3_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_67_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_82_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_86_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_49_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_60_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_74_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_24_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_22_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_78_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_80_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_36_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_15_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_0_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_109_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_3_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_29_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_41_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_107_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_59_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_57_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_98_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_85_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_50_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_75_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_110_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_87_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_106_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_48_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_21_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_30_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_115_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_96_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_108_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_111_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_3_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_135_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_4_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_131_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_51_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_89_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_71_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_58_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_53_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_55_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_45_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_93_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_97_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_33_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_100_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_13_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_84_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_27_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_47_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_39_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_43_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_102_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_83_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_77_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_44_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_42_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_88_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_83_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_84_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_89_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_88_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_93_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_135_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_63_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_5_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_44_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_tmp_reg_126_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_1_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_0_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_8_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_25_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_118_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_116_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_112_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_114_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_23_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_46_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_105_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_31_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_encoded_reg_79_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_7_
+                                |  Scan connected register |  -
+    check_ecc_alu0/secded_alu0_data_rxc_reg_113_
+                                |  Scan connected register |  -
+    check_ecc_alu0/gen_ecc_alu0_ecc_reg_1_
+                                |  Scan connected register |  -
+    check_ecc_alu0/gen_ecc_alu0_ecc_reg_5_
+                                |  Scan connected register |  -
+    check_ecc_alu0/gen_ecc_alu0_ecc_reg_2_
+                                |  Scan connected register |  -
+    check_ecc_alu0/gen_ecc_alu0_ecc_reg_6_
+                                |  Scan connected register |  -
+                                |                          |
+--------------------------------------------------------------------------------
+
+
+                             Clock Gating Summary
+          ------------------------------------------------------------
+          |    Number of Clock gating elements    |      856         |
+          |                                       |                  |
+          |    Number of Gated registers          | 12888 (92.53%)   |
+          |                                       |                  |
+          |    Number of Ungated registers        |  1041 (7.47%)    |
+          |                                       |                  |
+          |    Total number of registers          |    13929         |
+          ------------------------------------------------------------
+
+
+
+1

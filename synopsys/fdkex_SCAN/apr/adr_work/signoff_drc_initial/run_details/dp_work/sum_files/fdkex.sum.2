@@ -1,0 +1,3421 @@
+Tue Mar 31 06:02:49 2015
+ICV_Engine (R) Hierarchical Design Rule Checker, SUSE.64 Release J-2014.06.SP2.HF1.4218 2014/09/29
+
+  (C) Copyright 1996-2014.
+  Synopsys, Inc.  All rights reserved.
+
+
+
+  License Time=0:00:01  User=0.00 Sys=0.00 Mem=7.421
+
+Running Multi-Threaded code with 4 shared thread(s)
+
+Runset file ......................  /p/fdk/fdk73/builds/pdk733_r1.7/runsets/adr/adr.rs
+Current Directory ................  /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/apr/adr_work/signoff_drc_initial
+Hostname .........................  chlr16420
+Platform type ....................  SUSE.64
+MILKYWAY input library path ......  /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/apr/
+MILKYWAY input file name .........  fdkex_51074_LIB
+MILKYWAY block name ..............  fdkex
+Run details ......................  /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/apr/adr_work/signoff_drc_initial/run_details
+Group file directory .............  /tmp/spalutla_adr_51074
+Check reference structures .......  yes
+
+ZLIB_GROUP_FILES enabled.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=10.748
+
+WARNING: layer 255 remapped to layer 50 datatype 0
+
+
+ Milkyway memory usage: 123.934M
+   Check Time=0:00:05  User=1.52 Sys=0.32 Mem=159.781
+
+Tue Mar 31 06:03:04 2015
+ICV_Engine (R) Hierarchical Design Rule Checker, SUSE.64 Release J-2014.06.SP2.HF1.4218 2014/09/29
+
+  (C) Copyright 1996-2014.
+  Synopsys, Inc.  All rights reserved.
+
+
+
+Running Multi-Threaded code with 4 shared thread(s)
+ZLIB_GROUP_FILES enabled.
+
+Reading error hierarchy hrchy1.0001 ...
+   Elapsed Time=0:00:00  User=0.02 Sys=0.02 Mem=20.826
+
+assign() at adr.rs:30:Layer creation
+metal2_input = assign({ { 14, 0 }, { 112, 0 } })
+  Function: assign
+  Inputs: metal2_input.polygonlayer.0001, metal2_input.polygonlayer.0002, metal2_input.polygonlayer.0003, metal2_input.polygonlayer.0004, metal2_input.polygonlayer.0005, metal2_input.polygonlayer.0006, metal2_input.polygonlayer.0007, metal2_input.polygonlayer.0008, metal2_input.polygonlayer.0009, metal2_input.polygonlayer.0010, metal2_input.polygonlayer.0011, metal2_input.polygonlayer.0012, metal2_input.polygonlayer.0013, metal2_input.polygonlayer.0014, metal2_input.polygonlayer.0015, metal2_input.polygonlayer.0016
+  Outputs: metal2_input.polygonlayer.0017, metal2_input_assign.polygonlayer.0001
+No output written.
+Layer "metal2_input_assign.polygonlayer.0001" is empty.
+0 non-45 violations found.
+0 non-90 violations found.
+169901 unique polygons written.
+979336 unique polygons written.
+0 Total errors found.
+   Check Time=0:00:03  User=1.57 Sys=0.26 Mem=311.425
+
+
+Reading error hierarchy _hrchy2_part0hrchy.0001 ...
+   Elapsed Time=0:00:00  User=0.02 Sys=0.00 Mem=18.904
+
+assign() at adr.rs:30:Layer creation
+metal2_input = assign({ { 14, 0 }, { 112, 0 } })
+  Function: assign
+  Inputs: metal2_input.polygonlayer.0017
+  Outputs: metal2_input.polygonlayer.0020
+0 non-45 violations found.
+0 non-90 violations found.
+169901 unique polygons written.
+0 Total errors found.
+   Check Time=0:00:00  User=0.17 Sys=0.03 Mem=36.559
+
+
+Reading error hierarchy error._hier.0001 ...
+   Elapsed Time=0:00:00  User=0.00 Sys=0.00 Mem=11.904
+
+and() at adr.rs:123
+metal2_orig = metal2_input and boundary_m2_top
+  Function: and
+  Inputs: metal2_input.polygonlayer.0020, boundary_m2_top.polygonlayer.0001
+  Outputs: metal2_orig.polygonlayer.0001
+158859 unique polygons written.
+   Check Time=0:00:00  User=0.87 Sys=0.06 Mem=45.010
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  external_corner1() at adr.utilities.rs:1413
+metalx_overlap_coinc = external_corner1(layer1 = metalx, distance = [0.028,0.029), type = CONVEX_TO_CONVEX, convex_to_convex_boundary = INCLUSIVE_PARALLEL, angle = RIGHT)
+  Function: external_corner1
+  Inputs: metal1_input.polygonlayer.0020
+  Outputs: metalx_overlap_coinc.polygonlayer.0001
+2746 spacing violations found.
+   Check Time=0:00:02  User=1.36 Sys=0.06 Mem=87.947
+
+and() at adr.rs:131
+metal2_orig_c_segs = metal2_orig and metal2_cid_boundary
+  Function: and
+  Inputs: metal2_orig.polygonlayer.0001, metal2_cid_boundary.polygonlayer.0002
+  Outputs: metal2_orig_c_segs.polygonlayer.0001
+126737 unique polygons written.
+   Check Time=0:00:00  User=0.45 Sys=0.04 Mem=58.963
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  external_corner2_edge() at adr.utilities.rs:388
+metalx_facing = external_corner2_edge(layer1 = metalx_c, layer2 = metalx_b, distance < 0.184, type = CONVEX_TO_CONVEX, angle = RIGHT, output_type = POINT_TO_POINT)
+  Function: external_corner2_edge
+  Inputs: metal2_orig_c_segs.polygonlayer.0001, metal2_orig_b_segs.polygonlayer.0001
+  Outputs: metalx_facing.edgelayer.0002
+19269 spacing violations found.
+   Check Time=0:00:00  User=0.61 Sys=0.03 Mem=47.509
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  shrink() at adr.utilities.rs:1396
+metalx_gaps_right = metalx_gaps not shrink(layer1 = metalx_gaps, east = check_epsilon)
+  Function: shrink
+  Inputs: metal1_orig_gaps.polygonlayer.0001
+  Outputs: metalx_gaps_right.polygonlayer.0001
+1613119 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=21.169
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  shrink() at adr.utilities.rs:1397
+metalx_gaps_left = metalx_gaps not shrink(layer1 = metalx_gaps, west = check_epsilon)
+  Function: shrink
+  Inputs: metalx_gaps_right.polygonlayer.0001
+  Outputs: metalx_gaps_left.polygonlayer.0001
+1613119 unique polygons written.
+   Check Time=0:00:01  User=1.18 Sys=0.14 Mem=191.069
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  not() at adr.utilities.rs:1397
+metalx_gaps_left = metalx_gaps not shrink(layer1 = metalx_gaps, west = check_epsilon)
+  Function: not
+  Inputs: metal1_orig_gaps.polygonlayer.0001, metalx_gaps_left.polygonlayer.0001
+  Outputs: metalx_gaps_left.polygonlayer.0002
+1613119 unique polygons written.
+   Check Time=0:00:04  User=2.99 Sys=0.15 Mem=181.084
+
+line_ext_adj_lineup_vertical_no_color() at adr.rs:93
+  not() at adr.utilities.rs:1479:Duplicate command replaced with an internal copy command.
+metalx_gaps_left = metalx_gaps not shrink(layer1 = metalx_gaps, west = check_epsilon)
+  Function: not
+  Inputs: metalx_gaps_left.polygonlayer.0002
+  Outputs: metalx_gaps_left.polygonlayer.0003
+1613119 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=15.060
+
+line_ext_adj_lineup_vertical_no_color() at adr.rs:93
+  grow() at adr.utilities.rs:1489
+metalx_left_right_inside_interact_common = (grow(layer1 = metalx_gaps_left, west = (check_side_spacing + check_epsilon))) and (grow(layer1 = metalx_gaps_right, east = (check_side_spacing + check_epsilon)))
+  Function: grow
+  Inputs: metalx_gaps_left.polygonlayer.0003
+  Outputs: metalx_left_right_inside_interact_common.polygonlayer.0001
+1613119 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=21.169
+
+line_ext_adj_lineup_vertical_no_color() at adr.rs:93
+  grow() at adr.utilities.rs:1489
+metalx_left_right_inside_interact_common = (grow(layer1 = metalx_gaps_left, west = (check_side_spacing + check_epsilon))) and (grow(layer1 = metalx_gaps_right, east = (check_side_spacing + check_epsilon)))
+  Function: grow
+  Inputs: metalx_left_right_inside_interact_common.polygonlayer.0001
+  Outputs: metalx_left_right_inside_interact_common.polygonlayer.0002
+1613119 unique polygons written.
+   Check Time=0:00:02  User=1.79 Sys=0.13 Mem=179.383
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  shrink() at adr.utilities.rs:1402
+metalx_gaps_usmall_right = metalx_gaps_usmall not shrink(layer1 = metalx_gaps_usmall, east = check_epsilon)
+  Function: shrink
+  Inputs: metalx_gaps_usmall.polygonlayer.0002
+  Outputs: metalx_gaps_usmall_right.polygonlayer.0001
+757419 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=21.169
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  shrink() at adr.utilities.rs:1403
+metalx_gaps_usmall_left = metalx_gaps_usmall not shrink(layer1 = metalx_gaps_usmall, west = check_epsilon)
+  Function: shrink
+  Inputs: metalx_gaps_usmall_right.polygonlayer.0001
+  Outputs: metalx_gaps_usmall_left.polygonlayer.0001
+757419 unique polygons written.
+   Check Time=0:00:00  User=0.39 Sys=0.06 Mem=103.884
+
+line_ext_adj_lineup_vertical_no_color() at adr.rs:93
+  grow() at adr.utilities.rs:1489
+metalx_left_right_inside_interact_common = (grow(layer1 = metalx_gaps_left, west = (check_side_spacing + check_epsilon))) and (grow(layer1 = metalx_gaps_right, east = (check_side_spacing + check_epsilon)))
+  Function: grow
+  Inputs: metalx_gaps_right.polygonlayer.0004
+  Outputs: metalx_left_right_inside_interact_common.polygonlayer.0003
+1613119 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=21.169
+
+line_ext_adj_lineup_vertical_no_color() at adr.rs:93
+  grow() at adr.utilities.rs:1489
+metalx_left_right_inside_interact_common = (grow(layer1 = metalx_gaps_left, west = (check_side_spacing + check_epsilon))) and (grow(layer1 = metalx_gaps_right, east = (check_side_spacing + check_epsilon)))
+  Function: grow
+  Inputs: metalx_left_right_inside_interact_common.polygonlayer.0003
+  Outputs: metalx_left_right_inside_interact_common.polygonlayer.0004
+1613119 unique polygons written.
+   Check Time=0:00:02  User=1.77 Sys=0.13 Mem=179.383
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  not() at adr.utilities.rs:1403
+metalx_gaps_usmall_left = metalx_gaps_usmall not shrink(layer1 = metalx_gaps_usmall, west = check_epsilon)
+  Function: not
+  Inputs: metalx_gaps_usmall.polygonlayer.0002, metalx_gaps_usmall_left.polygonlayer.0001
+  Outputs: metalx_gaps_usmall_left.polygonlayer.0002
+757419 unique polygons written.
+   Check Time=0:00:02  User=0.96 Sys=0.11 Mem=102.133
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  shrink() at adr.utilities.rs:1402
+metalx_gaps_usmall_right = metalx_gaps_usmall not shrink(layer1 = metalx_gaps_usmall, east = check_epsilon)
+  Function: shrink
+  Inputs: metalx_gaps_usmall_right.polygonlayer.0001
+  Outputs: metalx_gaps_usmall_right.polygonlayer.0002
+757419 unique polygons written.
+   Check Time=0:00:00  User=0.38 Sys=0.08 Mem=103.884
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  not() at adr.utilities.rs:1402
+metalx_gaps_usmall_right = metalx_gaps_usmall not shrink(layer1 = metalx_gaps_usmall, east = check_epsilon)
+  Function: not
+  Inputs: metalx_gaps_usmall.polygonlayer.0002, metalx_gaps_usmall_right.polygonlayer.0002
+  Outputs: metalx_gaps_usmall_right.polygonlayer.0003
+757419 unique polygons written.
+   Check Time=0:00:01  User=0.96 Sys=0.09 Mem=102.133
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  not() at adr.utilities.rs:198
+metalx_c_gaps_bot = metalx_c_gaps not shrink(layer1 = metalx_c_gaps, south = check_epsilon)
+  Function: not
+  Inputs: metal2_orig_c_gaps.polygonlayer.0001, metalx_c_gaps_bot.polygonlayer.0001
+  Outputs: metalx_c_gaps_bot.polygonlayer.0002
+129273 unique polygons written.
+   Check Time=0:00:00  User=0.21 Sys=0.02 Mem=44.120
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  not() at adr.utilities.rs:385:Duplicate command replaced with an internal copy command.
+metalx_c_gaps_bot = metalx_c_gaps not shrink(layer1 = metalx_c_gaps, south = check_epsilon)
+  Function: not
+  Inputs: metalx_c_gaps_bot.polygonlayer.0002
+  Outputs: metalx_c_gaps_bot.polygonlayer.0003
+129273 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=15.060
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  shrink() at adr.utilities.rs:197
+metalx_c_gaps_top = metalx_c_gaps not shrink(layer1 = metalx_c_gaps, north = check_epsilon)
+  Function: shrink
+  Inputs: metalx_c_gaps_top.polygonlayer.0001
+  Outputs: metalx_c_gaps_top.polygonlayer.0002
+129399 unique polygons written.
+   Check Time=0:00:00  User=0.10 Sys=0.01 Mem=45.886
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  not() at adr.utilities.rs:197
+metalx_c_gaps_top = metalx_c_gaps not shrink(layer1 = metalx_c_gaps, north = check_epsilon)
+  Function: not
+  Inputs: metal2_orig_c_gaps.polygonlayer.0001, metalx_c_gaps_top.polygonlayer.0002
+  Outputs: metalx_c_gaps_top.polygonlayer.0003
+129273 unique polygons written.
+   Check Time=0:00:00  User=0.21 Sys=0.02 Mem=45.120
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  not() at adr.utilities.rs:384:Duplicate command replaced with an internal copy command.
+metalx_c_gaps_top = metalx_c_gaps not shrink(layer1 = metalx_c_gaps, north = check_epsilon)
+  Function: not
+  Inputs: metalx_c_gaps_top.polygonlayer.0003
+  Outputs: metalx_c_gaps_top.polygonlayer.0004
+129273 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=16.060
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  grow() at adr.utilities.rs:396
+metalx_c_top_b_bot_inside_interact_common = (grow(layer1 = metalx_c_gaps_top, north = 0.025)) and (grow(layer1 = metalx_b_gaps_bot, south = 0.025))
+  Function: grow
+  Inputs: metalx_c_gaps_top.polygonlayer.0004
+  Outputs: metalx_c_top_b_bot_inside_interact_common.polygonlayer.0002
+129273 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=21.169
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  grow() at adr.utilities.rs:424
+metalx_altc_bot_top_inside_interact_common = ((grow(layer1 = metalx_c_gaps_top, north = 0.102)) and (grow(layer1 = metalx_c_gaps_bot, south = 0.102))) and metalx_altc_facing_touching_area_grow
+  Function: grow
+  Inputs: metalx_c_top_b_bot_inside_interact_common.polygonlayer.0002
+  Outputs: metalx_altc_bot_top_inside_interact_common.polygonlayer.0001
+129524 unique polygons written.
+   Check Time=0:00:00  User=0.14 Sys=0.02 Mem=42.387
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  grow() at adr.utilities.rs:402
+metalx_c_bot_b_top_inside_interact_common = (grow(layer1 = metalx_b_gaps_top, north = 0.025)) and (grow(layer1 = metalx_c_gaps_bot, south = 0.025))
+  Function: grow
+  Inputs: metalx_c_gaps_bot.polygonlayer.0003
+  Outputs: metalx_c_bot_b_top_inside_interact_common.polygonlayer.0001
+129273 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=21.169
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  grow() at adr.utilities.rs:424
+metalx_altc_bot_top_inside_interact_common = ((grow(layer1 = metalx_c_gaps_top, north = 0.102)) and (grow(layer1 = metalx_c_gaps_bot, south = 0.102))) and metalx_altc_facing_touching_area_grow
+  Function: grow
+  Inputs: metalx_c_bot_b_top_inside_interact_common.polygonlayer.0001
+  Outputs: metalx_altc_bot_top_inside_interact_common.polygonlayer.0002
+129478 unique polygons written.
+   Check Time=0:00:00  User=0.14 Sys=0.02 Mem=42.387
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  not() at adr.utilities.rs:200
+metalx_b_gaps_top = metalx_b_gaps not shrink(layer1 = metalx_b_gaps, north = check_epsilon)
+  Function: not
+  Inputs: metal2_orig_b_gaps.polygonlayer.0001, metalx_b_gaps_top.polygonlayer.0002
+  Outputs: metalx_b_gaps_top.polygonlayer.0003
+73252 unique polygons written.
+   Check Time=0:00:00  User=0.12 Sys=0.00 Mem=37.135
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  not() at adr.utilities.rs:382:Duplicate command replaced with an internal copy command.
+metalx_b_gaps_top = metalx_b_gaps not shrink(layer1 = metalx_b_gaps, north = check_epsilon)
+  Function: not
+  Inputs: metalx_b_gaps_top.polygonlayer.0003
+  Outputs: metalx_b_gaps_top.polygonlayer.0004
+73252 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=16.060
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  and() at adr.utilities.rs:424
+metalx_altc_bot_top_inside_interact_common = ((grow(layer1 = metalx_c_gaps_top, north = 0.102)) and (grow(layer1 = metalx_c_gaps_bot, south = 0.102))) and metalx_altc_facing_touching_area_grow
+  Function: and
+  Inputs: metalx_altc_bot_top_inside_interact_common.polygonlayer.0001, metalx_altc_bot_top_inside_interact_common.polygonlayer.0002
+  Outputs: metalx_altc_bot_top_inside_interact_common.polygonlayer.0003
+278515 unique polygons written.
+   Check Time=0:00:00  User=0.41 Sys=0.06 Mem=37.979
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  grow() at adr.utilities.rs:402
+metalx_c_bot_b_top_inside_interact_common = (grow(layer1 = metalx_b_gaps_top, north = 0.025)) and (grow(layer1 = metalx_c_gaps_bot, south = 0.025))
+  Function: grow
+  Inputs: metalx_c_bot_b_top_inside_interact_common.polygonlayer.0001
+  Outputs: metalx_c_bot_b_top_inside_interact_common.polygonlayer.0002
+129273 unique polygons written.
+   Check Time=0:00:00  User=0.13 Sys=0.00 Mem=42.387
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  grow() at adr.utilities.rs:396
+metalx_c_top_b_bot_inside_interact_common = (grow(layer1 = metalx_c_gaps_top, north = 0.025)) and (grow(layer1 = metalx_b_gaps_bot, south = 0.025))
+  Function: grow
+  Inputs: metalx_c_top_b_bot_inside_interact_common.polygonlayer.0002
+  Outputs: metalx_c_top_b_bot_inside_interact_common.polygonlayer.0003
+129273 unique polygons written.
+   Check Time=0:00:00  User=0.12 Sys=0.02 Mem=42.387
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  or() at adr.utilities.rs:400
+metalx_c_bot_b_top_inside = (metalx_c_gaps_bot or metalx_b_gaps_top) inside metalx_facing_touching_area_grow
+  Function: or
+  Inputs: metalx_c_gaps_bot.polygonlayer.0003, metalx_b_gaps_top.polygonlayer.0004
+  Outputs: metalx_c_bot_b_top_inside.polygonlayer.0001
+202525 unique polygons written.
+   Check Time=0:00:00  User=0.12 Sys=0.00 Mem=30.496
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  or() at adr.utilities.rs:394
+metalx_c_top_b_bot_inside = (metalx_c_gaps_top or metalx_b_gaps_bot) inside metalx_facing_touching_area_grow
+  Function: or
+  Inputs: metalx_c_gaps_top.polygonlayer.0004, metalx_b_gaps_bot.polygonlayer.0003
+  Outputs: metalx_c_top_b_bot_inside.polygonlayer.0001
+202525 unique polygons written.
+   Check Time=0:00:00  User=0.11 Sys=0.02 Mem=30.496
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  external2() at adr.utilities.rs:225
+metalx_overlap = external2(layer1 = metalx_c, layer2 = metalx_b, distance < check_non_pref_adj_th, extension = NONE, orientation = PARALLEL, direction = VERTICAL, projection = IN, projection_length = [0.000,check_adj_offset))
+  Function: external2
+  Inputs: metal2_orig_c_segs.polygonlayer.0001
+  Outputs: metalx_overlap.polygonlayer.0003
+126737 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=21.169
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  external1() at adr.utilities.rs:232
+metalx_c_alt_overlap = external1(layer1 = metalx_c, distance < check_non_pref_alt_th, extension = NONE, orientation = PARALLEL, direction = VERTICAL, projection = IN, projection_length = [0.000,check_alt_offset))
+  Function: external1
+  Inputs: metalx_overlap.polygonlayer.0003
+  Outputs: metalx_c_alt_overlap.polygonlayer.0001
+1923 spacing violations found.
+   Check Time=0:00:00  User=0.38 Sys=0.02 Mem=34.026
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  delta_edge() at adr.utilities.rs:412
+metalx_altc_facing_touching_line = delta_edge(layer1 = metalx_altc_facing, delta_x = [0.056,0.136), delta_y = [0.076,0.103])
+  Function: delta_edge
+  Inputs: metalx_altc_facing.edgelayer.0002
+  Outputs: metalx_altc_facing_touching_line.edgelayer.0001
+11703 unique edge sets written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=21.169
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  delta_edge() at adr.utilities.rs:412
+metalx_altc_facing_touching_line = delta_edge(layer1 = metalx_altc_facing, delta_x = [0.056,0.136), delta_y = [0.076,0.103])
+  Function: delta_edge
+  Inputs: metalx_altc_facing_touching_line.edgelayer.0001
+  Outputs: metalx_altc_facing_touching_line.edgelayer.0002
+5467 unique edge sets written.
+   Check Time=0:00:00  User=0.02 Sys=0.00 Mem=31.026
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  internal1() at adr.utilities.rs:207
+metalx_b_gaps_usmall = internal1(layer1 = metalx_b_gaps, distance = [check_e2e,(check_e2e + check_adj_offset)), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metal2_orig_b_gaps.polygonlayer.0001
+  Outputs: metalx_b_gaps_usmall.polygonlayer.0001
+73260 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=21.169
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  external2() at adr.utilities.rs:222
+metalx_facing = external2(layer1 = metalx_c_gaps, layer2 = metalx_b_gaps, distance < check_non_pref_adj_th, extension = NONE, orientation = PARALLEL, direction = VERTICAL, projection = IN, projection_length = [0.000,check_e2e))
+  Function: external2
+  Inputs: metalx_c_gaps_usmall.polygonlayer.0001, metalx_b_gaps_usmall.polygonlayer.0001
+  Outputs: metalx_facing.polygonlayer.0002
+6402 spacing violations found.
+   Check Time=0:00:01  User=0.96 Sys=0.04 Mem=45.431
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  grow() at adr.utilities.rs:396
+metalx_c_top_b_bot_inside_interact_common = (grow(layer1 = metalx_c_gaps_top, north = 0.025)) and (grow(layer1 = metalx_b_gaps_bot, south = 0.025))
+  Function: grow
+  Inputs: metalx_c_top_b_bot_inside_interact_common.polygonlayer.0001
+  Outputs: metalx_c_top_b_bot_inside_interact_common.polygonlayer.0004
+73252 unique polygons written.
+   Check Time=0:00:00  User=0.06 Sys=0.02 Mem=35.387
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  or() at adr.utilities.rs:381
+layermx = metalx_c or metalx_b
+  Function: or
+  Inputs: metal2_orig_c_segs.polygonlayer.0001, metal2_orig_b_segs.polygonlayer.0001
+  Outputs: layermx.polygonlayer.0001
+197335 unique polygons written.
+   Check Time=0:00:00  User=0.14 Sys=0.02 Mem=31.496
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  and() at adr.utilities.rs:424
+metalx_altc_bot_top_inside_interact_common = ((grow(layer1 = metalx_c_gaps_top, north = 0.102)) and (grow(layer1 = metalx_c_gaps_bot, south = 0.102))) and metalx_altc_facing_touching_area_grow
+  Function: and
+  Inputs: metalx_altc_bot_top_inside_interact_common.polygonlayer.0003, metalx_altc_facing_touching_area_grow.polygonlayer.0002
+  Outputs: metalx_altc_bot_top_inside_interact_common.polygonlayer.0004
+5467 unique polygons written.
+   Check Time=0:00:00  User=0.14 Sys=0.03 Mem=33.948
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  not_interacting() at adr.utilities.rs:446
+metalx_altbc_gaps_within_small_common = ((metalx_altb_bot_top_inside_interact_common or metalx_altc_bot_top_inside_interact_common) interacting metalx_altbc_gaps_within_small) or ((metalx_altb_bot_top_inside_interact_common not_interacting metalx_c_gaps) or (metalx_altc_bot_top_inside_interact_common not_interacting metalx_b_gaps))
+  Function: not_interacting
+  Inputs: metalx_altc_bot_top_inside_interact_common.polygonlayer.0004, metal2_orig_b_gaps.polygonlayer.0001
+  Outputs: metalx_altbc_gaps_within_small_common.polygonlayer.0001
+2739 unique polygons written.
+   Check Time=0:00:00  User=0.03 Sys=0.00 Mem=41.057
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  and() at adr.utilities.rs:443
+metalx_altbc_gaps_within = (metalx_c_gaps and metalx_altb_bot_top_inside_interact_common) or (metalx_b_gaps and metalx_altc_bot_top_inside_interact_common)
+  Function: and
+  Inputs: metal2_orig_b_gaps.polygonlayer.0001, metalx_altc_bot_top_inside_interact_common.polygonlayer.0004
+  Outputs: metalx_altbc_gaps_within.polygonlayer.0001
+2727 unique polygons written.
+   Check Time=0:00:00  User=0.04 Sys=0.01 Mem=29.980
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  and() at adr.utilities.rs:443
+metalx_altbc_gaps_within = (metalx_c_gaps and metalx_altb_bot_top_inside_interact_common) or (metalx_b_gaps and metalx_altc_bot_top_inside_interact_common)
+  Function: and
+  Inputs: metal2_orig_c_gaps.polygonlayer.0001, metalx_altb_bot_top_inside_interact_common.polygonlayer.0004
+  Outputs: metalx_altbc_gaps_within.polygonlayer.0002
+1842 unique polygons written.
+   Check Time=0:00:00  User=0.05 Sys=0.01 Mem=30.980
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  edge_extents() at adr.utilities.rs:390
+metalx_facing_touching_area = edge_extents(metalx_facing_touching_line)
+  Function: edge_extents
+  Inputs: metalx_facing_touching_area.edgelayer.0002
+  Outputs: metalx_facing_touching_area.polygonlayer.0002
+12387 unique polygons written.
+   Check Time=0:00:00  User=0.02 Sys=0.00 Mem=27.325
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  and() at adr.utilities.rs:426
+metalx_altc_bot_top_inside_interact_except_bot = metalx_c_gaps_bot and metalx_altc_bot_top_inside_interact_except
+  Function: and
+  Inputs: metalx_c_gaps_bot.polygonlayer.0003, metalx_altc_bot_top_inside_interact_except.polygonlayer.0002
+  Outputs: metalx_altc_bot_top_inside_interact_except_bot.polygonlayer.0001
+134 unique polygons written.
+   Check Time=0:00:00  User=0.05 Sys=0.01 Mem=28.980
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  not() at adr.utilities.rs:435
+metalx_altb_bot_top_inside_interact_except = metalx_altb_bot_top_inside_interact not (metalx_altb_bot_top_inside_interact_common interacting metalx_altb_bot_top_inside_interact)
+  Function: not
+  Inputs: metalx_altb_bot_top_inside_interact.polygonlayer.0001, metalx_altb_bot_top_inside_interact_except.polygonlayer.0001
+  Outputs: metalx_altb_bot_top_inside_interact_except.polygonlayer.0002
+115 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=31.073
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  inside() at adr.utilities.rs:394
+metalx_c_top_b_bot_inside = (metalx_c_gaps_top or metalx_b_gaps_bot) inside metalx_facing_touching_area_grow
+  Function: inside
+  Inputs: metalx_c_top_b_bot_inside.polygonlayer.0001, metalx_facing_touching_area_grow.polygonlayer.0002
+  Outputs: metalx_c_top_b_bot_inside.polygonlayer.0002
+2569 unique polygons written.
+   Check Time=0:00:00  User=0.11 Sys=0.02 Mem=42.182
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  interacting() at adr.utilities.rs:395
+metalx_c_top_b_bot_inside_interact = metalx_facing_touching_area_grow interacting metalx_c_top_b_bot_inside
+  Function: interacting
+  Inputs: metalx_facing_touching_area_grow.polygonlayer.0002, metalx_c_top_b_bot_inside.polygonlayer.0002
+  Outputs: metalx_c_top_b_bot_inside_interact.polygonlayer.0001
+1489 unique polygons written.
+   Check Time=0:00:00  User=0.02 Sys=0.00 Mem=34.073
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  interacting() at adr.utilities.rs:397
+metalx_c_top_b_bot_inside_interact_except = metalx_c_top_b_bot_inside_interact not (metalx_c_top_b_bot_inside_interact_common interacting metalx_c_top_b_bot_inside_interact)
+  Function: interacting
+  Inputs: metalx_c_top_b_bot_inside_interact_common.polygonlayer.0005, metalx_c_top_b_bot_inside_interact.polygonlayer.0001
+  Outputs: metalx_c_top_b_bot_inside_interact_except.polygonlayer.0001
+1495 unique polygons written.
+   Check Time=0:00:00  User=0.04 Sys=0.01 Mem=34.104
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  or() at adr.utilities.rs:443
+metalx_altbc_gaps_within = (metalx_c_gaps and metalx_altb_bot_top_inside_interact_common) or (metalx_b_gaps and metalx_altc_bot_top_inside_interact_common)
+  Function: or
+  Inputs: metalx_altbc_gaps_within.polygonlayer.0002, metalx_altbc_gaps_within.polygonlayer.0001
+  Outputs: metalx_altbc_gaps_within.polygonlayer.0003
+4569 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=29.559
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  not() at adr.utilities.rs:213
+metalx_b_gaps_usmall_bot = metalx_b_gaps_usmall not shrink(layer1 = metalx_b_gaps_usmall, south = check_epsilon)
+  Function: not
+  Inputs: metalx_b_gaps_usmall.polygonlayer.0002, metalx_b_gaps_usmall_bot.polygonlayer.0001
+  Outputs: metalx_b_gaps_usmall_bot.polygonlayer.0002
+6458 unique polygons written.
+   Check Time=0:00:00  User=0.02 Sys=0.00 Mem=39.198
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  internal1() at adr.utilities.rs:444
+metalx_altbc_gaps_within_small = internal1(layer1 = metalx_altbc_gaps_within, distance = [0.001,0.056), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_altbc_gaps_within.polygonlayer.0003
+  Outputs: metalx_altbc_gaps_within_small.polygonlayer.0001
+4569 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=23.247
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  interacting() at adr.utilities.rs:341
+metalx_b_alt_debug2 = metalx_b_gaps_usmall_top interacting metalx_b_alt_debug1
+  Function: interacting
+  Inputs: metalx_b_gaps_usmall_top.polygonlayer.0003, metalx_b_alt_debug1.polygonlayer.0001
+  Outputs: metalx_b_alt_debug2.polygonlayer.0001
+145 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=38.073
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  interacting() at adr.utilities.rs:323
+metalx_c_alt_debug4p = metalx_c_alt_debug1 interacting metalx_c_alt_debug2p
+  Function: interacting
+  Inputs: metalx_c_alt_debug1.polygonlayer.0001, metalx_c_alt_debug2p.polygonlayer.0001
+  Outputs: metalx_c_alt_debug4p.polygonlayer.0001
+321 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.01 Mem=31.089
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  grow() at adr.utilities.rs:429
+metalx_altc_ext = (grow(layer1 = metalx_altc_bot_top_inside_interact_except_bot, north = 0.084) and metalx_c_gaps) or (grow(layer1 = metalx_altc_bot_top_inside_interact_except_top, south = 0.084) and metalx_c_gaps)
+  Function: grow
+  Inputs: metalx_altc_ext.polygonlayer.0002
+  Outputs: metalx_altc_ext.polygonlayer.0004
+134 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=25.450
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  and() at adr.utilities.rs:429
+metalx_altc_ext = (grow(layer1 = metalx_altc_bot_top_inside_interact_except_bot, north = 0.084) and metalx_c_gaps) or (grow(layer1 = metalx_altc_bot_top_inside_interact_except_top, south = 0.084) and metalx_c_gaps)
+  Function: and
+  Inputs: metalx_altc_ext.polygonlayer.0004, metal2_orig_c_gaps.polygonlayer.0001
+  Outputs: metalx_altc_ext.polygonlayer.0006
+134 unique polygons written.
+   Check Time=0:00:00  User=0.05 Sys=0.01 Mem=30.042
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  interacting() at adr.utilities.rs:345
+metalx_b_alt_debug4p = metalx_b_alt_debug1 interacting metalx_b_alt_debug2p
+  Function: interacting
+  Inputs: metalx_b_alt_debug1.polygonlayer.0001, metalx_b_alt_debug2p.polygonlayer.0001
+  Outputs: metalx_b_alt_debug4p.polygonlayer.0001
+173 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.01 Mem=31.073
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  or() at adr.utilities.rs:446
+metalx_altbc_gaps_within_small_common = ((metalx_altb_bot_top_inside_interact_common or metalx_altc_bot_top_inside_interact_common) interacting metalx_altbc_gaps_within_small) or ((metalx_altb_bot_top_inside_interact_common not_interacting metalx_c_gaps) or (metalx_altc_bot_top_inside_interact_common not_interacting metalx_b_gaps))
+  Function: or
+  Inputs: metalx_altbc_gaps_within_small_common.polygonlayer.0003, metalx_altbc_gaps_within_small_common.polygonlayer.0001
+  Outputs: metalx_altbc_gaps_within_small_common.polygonlayer.0004
+3181 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=28.559
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  or() at adr.utilities.rs:429
+metalx_altc_ext = (grow(layer1 = metalx_altc_bot_top_inside_interact_except_bot, north = 0.084) and metalx_c_gaps) or (grow(layer1 = metalx_altc_bot_top_inside_interact_except_top, south = 0.084) and metalx_c_gaps)
+  Function: or
+  Inputs: metalx_altc_ext.polygonlayer.0006, metalx_altc_ext.polygonlayer.0005
+  Outputs: metalx_altc_ext.polygonlayer.0007
+282 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=27.543
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  or() at adr.utilities.rs:325
+metalx_c_alt_debug6 = metalx_c_alt_debug2 or metalx_c_alt_debug4
+  Function: or
+  Inputs: metalx_c_alt_debug2.polygonlayer.0001, metalx_c_alt_debug4.polygonlayer.0001
+  Outputs: metalx_c_alt_debug6.polygonlayer.0001
+304 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=27.543
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  interacting() at adr.utilities.rs:244
+metalx_debug2 = metalx_c_gaps_usmall_top interacting metalx_debug1
+  Function: interacting
+  Inputs: metalx_c_gaps_usmall_top.polygonlayer.0003, metalx_facing_grow.polygonlayer.0003
+  Outputs: metalx_debug2.polygonlayer.0001
+77 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=39.073
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  interacting() at adr.utilities.rs:251
+metalx_debug4p = metalx_debug1 interacting metalx_debug2p
+  Function: interacting
+  Inputs: metalx_facing_grow.polygonlayer.0003, metalx_debug2p.polygonlayer.0001
+  Outputs: metalx_debug4p.polygonlayer.0001
+79 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=31.073
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  grow() at adr.utilities.rs:404
+metalx_c_bot_b_top_ext = (metalx_c_gaps and grow(layer1 = metalx_c_bot_b_top_inside_interact_except, north = 0.076)) or (metalx_b_gaps and grow(layer1 = metalx_c_bot_b_top_inside_interact_except, south = 0.076))
+  Function: grow
+  Inputs: metalx_c_bot_b_top_inside_interact_except.polygonlayer.0002
+  Outputs: metalx_c_bot_b_top_ext.polygonlayer.0001
+244 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=23.247
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  grow() at adr.utilities.rs:404
+metalx_c_bot_b_top_ext = (metalx_c_gaps and grow(layer1 = metalx_c_bot_b_top_inside_interact_except, north = 0.076)) or (metalx_b_gaps and grow(layer1 = metalx_c_bot_b_top_inside_interact_except, south = 0.076))
+  Function: grow
+  Inputs: metalx_c_bot_b_top_ext.polygonlayer.0001
+  Outputs: metalx_c_bot_b_top_ext.polygonlayer.0003
+244 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=25.450
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  and() at adr.utilities.rs:404
+metalx_c_bot_b_top_ext = (metalx_c_gaps and grow(layer1 = metalx_c_bot_b_top_inside_interact_except, north = 0.076)) or (metalx_b_gaps and grow(layer1 = metalx_c_bot_b_top_inside_interact_except, south = 0.076))
+  Function: and
+  Inputs: metal2_orig_b_gaps.polygonlayer.0001, metalx_c_bot_b_top_ext.polygonlayer.0003
+  Outputs: metalx_c_bot_b_top_ext.polygonlayer.0004
+62 unique polygons written.
+   Check Time=0:00:00  User=0.02 Sys=0.02 Mem=29.042
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  internal1() at adr.utilities.rs:354
+metalx_b_alt_debug10p = internal1(layer1 = metalx_b_alt_debug8p, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_b_alt_debug10p.polygonlayer.0001
+  Outputs: metalx_b_alt_debug10p.polygonlayer.0002
+159 width violations found.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=26.073
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  interacting() at adr.utilities.rs:357
+metalx_b_alt_debug12p = check_overlap_extension_hor_2(metalx_b_alt_debug6p interacting metalx_b_alt_debug10p)
+  Function: interacting
+  Inputs: metalx_b_alt_debug6p.polygonlayer.0001, metalx_b_alt_debug10p.polygonlayer.0002
+  Outputs: metalx_b_alt_debug12p.polygonlayer.0001
+159 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=30.073
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  check_overlap_extension_hor_2() at adr.utilities.rs:357
+    polygon_features() at adr.utilities.rs:182
+result = polygon_features(layer, check_overlap_extension_hor_2_f)
+  Function: polygon_features
+  Inputs: metalx_b_alt_debug12p.polygonlayer.0001
+  Outputs: result.polygonlayer.0005
+159 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=24.761
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  check_overlap_extension_hor_2() at adr.utilities.rs:356
+    polygon_features() at adr.utilities.rs:182
+result = polygon_features(layer, check_overlap_extension_hor_2_f)
+  Function: polygon_features
+  Inputs: metalx_b_alt_debug12.polygonlayer.0001
+  Outputs: result.polygonlayer.0003
+142 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=24.746
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  check_overlap_extension_hor_2() at adr.utilities.rs:334
+    polygon_features() at adr.utilities.rs:182
+result = polygon_features(layer, check_overlap_extension_hor_2_f)
+  Function: polygon_features
+  Inputs: result.polygonlayer.0002
+  Outputs: result.polygonlayer.0004
+Warning #134: Polygon_features equations created self_intersecting output polygon at (140.548, 235.308).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (137.493, 242.606).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (142.796, 256.288).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (138.868, 259.364).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (172.252, 204.418).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (84.013, 206.118).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (188.628, 213.994).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (27.512, 222.540).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (172.200, 225.166).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (89.053, 152.212).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (153.663, 153.808).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (121.800, 164.518).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (18.476, 187.324).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (80.697, 186.966).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (90.033, 117.100).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (98.064, 119.136).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (143.093, 119.934).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (82.027, 123.380).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (100.577, 124.618).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (69.032, 130.666).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (85.807, 135.454).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (148.527, 135.790).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (58.588, 144.336).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (45.200, 90.986).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (139.637, 82.324).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (34.912, 94.756).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (48.716, 101.140).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (23.100, 103.534).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (75.232, 41.626).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (116.812, 42.886).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (76.313, 52.566).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (137.047, 50.762).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (44.393, 60.546).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (52.137, 64.328).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (143.513, 64.074).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (86.507, 68.318).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (43.312, 5.716).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (7.897, 12.458).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (14.223, 15.858).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (68.727, 18.368).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (87.984, 20.542).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (26.167, 21.780).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (129.992, 24.636).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (112.897, 25.666).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (116.957, 25.666).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (3.992, 27.262).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (56.127, 28.418).
+WARNING - 290 unique polygons written.
+   Check Time=0:00:00  User=0.02 Sys=0.00 Mem=25.559
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  check_overlap_extension_hor_2() at adr.utilities.rs:335
+    polygon_features() at adr.utilities.rs:182
+result = polygon_features(layer, check_overlap_extension_hor_2_f)
+  Function: polygon_features
+  Inputs: result.polygonlayer.0001
+  Outputs: result.polygonlayer.0007
+Warning #134: Polygon_features equations created self_intersecting output polygon at (72.656, 193.322).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (108.233, 194.582).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (155.660, 206.194).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (83.663, 210.438).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (182.407, 219.216).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (34.440, 174.632).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (115.916, 173.036).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (119.547, 174.968).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (52.137, 187.042).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (84.048, 179.756).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (47.123, 115.916).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (43.877, 122.300).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (134.348, 127.886).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (87.373, 133.136).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (114.953, 134.166).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (135.876, 146.344).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (117.053, 83.094).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (74.988, 83.996).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (20.103, 87.986).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (101.640, 88.680).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (54.237, 94.034).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (8.352, 98.822).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (12.263, 41.702).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (95.868, 42.164).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (24.272, 44.200).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (60.563, 48.988).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (74.868, 49.578).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (70.897, 50.040).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (125.357, 51.636).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (19.792, 57.766).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (76.427, 59.258).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (27.033, 62.346).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (96.808, 64.046).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (27.144, 66.000).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (138.683, 70.094).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (3.933, 27.234).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (25.248, 27.002).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (26.167, 21.752).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (49.612, 19.254).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (93.533, 34.878).
+WARNING - 276 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=25.559
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  check_overlap_extension_hor_2() at adr.utilities.rs:357
+    polygon_features() at adr.utilities.rs:182
+result = polygon_features(layer, check_overlap_extension_hor_2_f)
+  Function: polygon_features
+  Inputs: result.polygonlayer.0005
+  Outputs: result.polygonlayer.0006
+Warning #134: Polygon_features equations created self_intersecting output polygon at (82.517, 245.602).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (155.413, 251.986).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (17.372, 196.126).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (148.037, 205.702).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (130.213, 181.404).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (26.676, 133.084).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (171.627, 137.514).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (98.457, 144.696).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (90.917, 149.044).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (62.357, 81.214).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (50.877, 95.220).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (105.337, 94.780).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (114.253, 106.392).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (111.668, 46.900).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (131.587, 48.138).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (118.077, 49.734).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (55.733, 54.522).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (129.988, 62.062).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (103.683, 62.502).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (142.533, 64.098).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (128.367, 72.078).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (132.148, 75.628).
+Warning #134: Polygon_features equations created self_intersecting output polygon at (74.080, 37.324).
+WARNING - 159 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.01 Mem=25.559
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  internal1() at adr.utilities.rs:301
+metalx_debug_ov11 = internal1(layer1 = metalx_debug_ov9, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_debug_ov9.polygonlayer.0002
+  Outputs: metalx_debug_ov11.polygonlayer.0001
+109 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=24.247
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  internal1() at adr.utilities.rs:300
+metalx_debug_ov10p = internal1(layer1 = metalx_debug_ov8p, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_debug_ov8p.polygonlayer.0002
+  Outputs: metalx_debug_ov10p.polygonlayer.0001
+97 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=24.247
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  internal1() at adr.utilities.rs:302
+metalx_debug_ov11p = internal1(layer1 = metalx_debug_ov9p, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_debug_ov9p.polygonlayer.0002
+  Outputs: metalx_debug_ov11p.polygonlayer.0001
+84 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=24.247
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  internal1() at adr.utilities.rs:267
+metalx_debug11 = internal1(layer1 = metalx_debug9, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_debug9.polygonlayer.0002
+  Outputs: metalx_debug11.polygonlayer.0001
+81 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=24.247
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  internal1() at adr.utilities.rs:266
+metalx_debug10p = internal1(layer1 = metalx_debug8p, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_debug8p.polygonlayer.0002
+  Outputs: metalx_debug10p.polygonlayer.0001
+79 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=24.247
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  internal1() at adr.utilities.rs:265
+metalx_debug10 = internal1(layer1 = metalx_debug8, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_debug8.polygonlayer.0002
+  Outputs: metalx_debug10.polygonlayer.0001
+77 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=24.247
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  internal1() at adr.utilities.rs:268
+metalx_debug11p = internal1(layer1 = metalx_debug9p, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_debug9p.polygonlayer.0002
+  Outputs: metalx_debug11p.polygonlayer.0001
+76 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=24.247
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  internal1() at adr.utilities.rs:299
+metalx_debug_ov10 = internal1(layer1 = metalx_debug_ov8, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_debug_ov8.polygonlayer.0002
+  Outputs: metalx_debug_ov10.polygonlayer.0001
+63 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=24.247
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  grow() at adr.utilities.rs:337
+metalx_c_alt_exten = (metalx_c_gaps_bot and grow(layer1 = metalx_c_alt_debug12, north = check_max_width)) or (metalx_c_gaps_top and grow(layer1 = metalx_c_alt_debug12p, south = check_max_width))
+  Function: grow
+  Inputs: result.polygonlayer.0004
+  Outputs: metalx_c_alt_exten.polygonlayer.0001
+290 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.01 Mem=24.247
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  grow() at adr.utilities.rs:337
+metalx_c_alt_exten = (metalx_c_gaps_bot and grow(layer1 = metalx_c_alt_debug12, north = check_max_width)) or (metalx_c_gaps_top and grow(layer1 = metalx_c_alt_debug12p, south = check_max_width))
+  Function: grow
+  Inputs: result.polygonlayer.0007
+  Outputs: metalx_c_alt_exten.polygonlayer.0002
+276 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=24.247
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  grow() at adr.utilities.rs:359
+metalx_b_alt_exten = (metalx_b_gaps_bot and grow(layer1 = metalx_b_alt_debug12, north = check_max_width)) or (metalx_b_gaps_top and grow(layer1 = metalx_b_alt_debug12p, south = check_max_width))
+  Function: grow
+  Inputs: result.polygonlayer.0006
+  Outputs: metalx_b_alt_exten.polygonlayer.0001
+159 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=24.247
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  internal1() at adr.utilities.rs:301
+metalx_debug_ov11 = internal1(layer1 = metalx_debug_ov9, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_debug_ov11.polygonlayer.0001
+  Outputs: metalx_debug_ov11.polygonlayer.0002
+37 width violations found.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=27.073
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  internal1() at adr.utilities.rs:300
+metalx_debug_ov10p = internal1(layer1 = metalx_debug_ov8p, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_debug_ov10p.polygonlayer.0001
+  Outputs: metalx_debug_ov10p.polygonlayer.0002
+33 width violations found.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=27.073
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  internal1() at adr.utilities.rs:302
+metalx_debug_ov11p = internal1(layer1 = metalx_debug_ov9p, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_debug_ov11p.polygonlayer.0001
+  Outputs: metalx_debug_ov11p.polygonlayer.0002
+34 width violations found.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=27.073
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  internal1() at adr.utilities.rs:266
+metalx_debug10p = internal1(layer1 = metalx_debug8p, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_debug10p.polygonlayer.0001
+  Outputs: metalx_debug10p.polygonlayer.0002
+79 width violations found.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=27.073
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  internal1() at adr.utilities.rs:265
+metalx_debug10 = internal1(layer1 = metalx_debug8, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_debug10.polygonlayer.0001
+  Outputs: metalx_debug10.polygonlayer.0002
+77 width violations found.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=27.073
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  internal1() at adr.utilities.rs:268
+metalx_debug11p = internal1(layer1 = metalx_debug9p, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_debug11p.polygonlayer.0001
+  Outputs: metalx_debug11p.polygonlayer.0002
+76 width violations found.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=27.073
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  internal1() at adr.utilities.rs:299
+metalx_debug_ov10 = internal1(layer1 = metalx_debug_ov8, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_debug_ov10.polygonlayer.0001
+  Outputs: metalx_debug_ov10.polygonlayer.0002
+31 width violations found.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=27.073
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  grow() at adr.utilities.rs:1410
+metalx_facing_grow = grow(layer1 = metalx_facing, west = check_epsilon, east = check_epsilon)
+  Function: grow
+  Inputs: metalx_facing.polygonlayer.0001
+  Outputs: metalx_facing_grow.polygonlayer.0001
+17482 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=24.262
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  grow() at adr.utilities.rs:337
+metalx_c_alt_exten = (metalx_c_gaps_bot and grow(layer1 = metalx_c_alt_debug12, north = check_max_width)) or (metalx_c_gaps_top and grow(layer1 = metalx_c_alt_debug12p, south = check_max_width))
+  Function: grow
+  Inputs: metalx_c_alt_exten.polygonlayer.0001
+  Outputs: metalx_c_alt_exten.polygonlayer.0003
+290 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=26.465
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  and() at adr.utilities.rs:337
+metalx_c_alt_exten = (metalx_c_gaps_bot and grow(layer1 = metalx_c_alt_debug12, north = check_max_width)) or (metalx_c_gaps_top and grow(layer1 = metalx_c_alt_debug12p, south = check_max_width))
+  Function: and
+  Inputs: metalx_c_gaps_bot.polygonlayer.0002, metalx_c_alt_exten.polygonlayer.0003
+  Outputs: metalx_c_alt_exten.polygonlayer.0005
+234 unique polygons written.
+   Check Time=0:00:00  User=0.05 Sys=0.02 Mem=31.042
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  grow() at adr.utilities.rs:337
+metalx_c_alt_exten = (metalx_c_gaps_bot and grow(layer1 = metalx_c_alt_debug12, north = check_max_width)) or (metalx_c_gaps_top and grow(layer1 = metalx_c_alt_debug12p, south = check_max_width))
+  Function: grow
+  Inputs: metalx_c_alt_exten.polygonlayer.0002
+  Outputs: metalx_c_alt_exten.polygonlayer.0004
+278 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=26.481
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  and() at adr.utilities.rs:337
+metalx_c_alt_exten = (metalx_c_gaps_bot and grow(layer1 = metalx_c_alt_debug12, north = check_max_width)) or (metalx_c_gaps_top and grow(layer1 = metalx_c_alt_debug12p, south = check_max_width))
+  Function: and
+  Inputs: metalx_c_gaps_top.polygonlayer.0003, metalx_c_alt_exten.polygonlayer.0004
+  Outputs: metalx_c_alt_exten.polygonlayer.0006
+231 unique polygons written.
+   Check Time=0:00:00  User=0.06 Sys=0.00 Mem=31.042
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  interacting() at adr.utilities.rs:306
+metalx_debug_ov13 = check_overlap_extension_hor(metalx_debug_ov7 interacting metalx_debug_ov11)
+  Function: interacting
+  Inputs: metalx_debug_ov7.polygonlayer.0001, metalx_debug_ov11.polygonlayer.0002
+  Outputs: metalx_debug_ov13.polygonlayer.0001
+37 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=31.073
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  interacting() at adr.utilities.rs:272
+metalx_debug13 = check_overlap_extension_hor(metalx_debug7 interacting metalx_debug11)
+  Function: interacting
+  Inputs: metalx_debug7.polygonlayer.0001, metalx_debug11.polygonlayer.0002
+  Outputs: metalx_debug13.polygonlayer.0001
+81 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=31.073
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  interacting() at adr.utilities.rs:271
+metalx_debug12p = check_overlap_extension_hor(metalx_debug6p interacting metalx_debug10p)
+  Function: interacting
+  Inputs: metalx_debug6p.polygonlayer.0001, metalx_debug10p.polygonlayer.0002
+  Outputs: metalx_debug12p.polygonlayer.0001
+79 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=31.073
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  interacting() at adr.utilities.rs:270
+metalx_debug12 = check_overlap_extension_hor(metalx_debug6 interacting metalx_debug10)
+  Function: interacting
+  Inputs: metalx_debug6.polygonlayer.0001, metalx_debug10.polygonlayer.0002
+  Outputs: metalx_debug12.polygonlayer.0001
+77 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=31.073
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  interacting() at adr.utilities.rs:305
+metalx_debug_ov12p = check_overlap_extension_hor(metalx_debug_ov6p interacting metalx_debug_ov10p)
+  Function: interacting
+  Inputs: metalx_debug_ov6p.polygonlayer.0001, metalx_debug_ov10p.polygonlayer.0002
+  Outputs: metalx_debug_ov12p.polygonlayer.0001
+33 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=31.073
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  interacting() at adr.utilities.rs:273
+metalx_debug13p = check_overlap_extension_hor(metalx_debug7p interacting metalx_debug11p)
+  Function: interacting
+  Inputs: metalx_debug7p.polygonlayer.0001, metalx_debug11p.polygonlayer.0002
+  Outputs: metalx_debug13p.polygonlayer.0001
+76 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=31.073
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  grow() at adr.utilities.rs:1410
+metalx_facing_grow = grow(layer1 = metalx_facing, west = check_epsilon, east = check_epsilon)
+  Function: grow
+  Inputs: metalx_facing_grow.polygonlayer.0001
+  Outputs: metalx_facing_grow.polygonlayer.0004
+17482 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=35.480
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  grow() at adr.utilities.rs:1414:Duplicate command replaced with an internal copy command.
+metalx_overlap_grow = grow(layer1 = metalx_overlap, west = check_epsilon, east = check_epsilon) or grow(layer1 = metalx_overlap_coinc, west = check_epsilon, east = check_epsilon)
+  Function: grow
+  Inputs: metalx_facing_grow.polygonlayer.0004
+  Outputs: metalx_overlap_grow.polygonlayer.0004
+17482 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=19.153
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  interacting() at adr.utilities.rs:1418
+metalx_debug2p = metalx_gaps_usmall_left interacting metalx_debug1
+  Function: interacting
+  Inputs: metalx_gaps_usmall_left.polygonlayer.0002, metalx_facing_grow.polygonlayer.0004
+  Outputs: metalx_debug2p.polygonlayer.0002
+3713 unique polygons written.
+   Check Time=0:00:00  User=0.35 Sys=0.04 Mem=52.182
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  grow() at adr.utilities.rs:359
+metalx_b_alt_exten = (metalx_b_gaps_bot and grow(layer1 = metalx_b_alt_debug12, north = check_max_width)) or (metalx_b_gaps_top and grow(layer1 = metalx_b_alt_debug12p, south = check_max_width))
+  Function: grow
+  Inputs: metalx_b_alt_exten.polygonlayer.0003
+  Outputs: metalx_b_alt_exten.polygonlayer.0004
+142 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=26.496
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  and() at adr.utilities.rs:359
+metalx_b_alt_exten = (metalx_b_gaps_bot and grow(layer1 = metalx_b_alt_debug12, north = check_max_width)) or (metalx_b_gaps_top and grow(layer1 = metalx_b_alt_debug12p, south = check_max_width))
+  Function: and
+  Inputs: metalx_b_gaps_bot.polygonlayer.0002, metalx_b_alt_exten.polygonlayer.0004
+  Outputs: metalx_b_alt_exten.polygonlayer.0006
+115 unique polygons written.
+   Check Time=0:00:00  User=0.04 Sys=0.00 Mem=31.073
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  check_overlap_extension_hor() at adr.utilities.rs:307
+    polygon_features() at adr.utilities.rs:97
+result = polygon_features(layer, check_overlap_extension_hor_f)
+  Function: polygon_features
+  Inputs: metalx_debug_ov13p.polygonlayer.0001
+  Outputs: result.polygonlayer.0015
+34 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=25.793
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  check_overlap_extension_hor() at adr.utilities.rs:305
+    polygon_features() at adr.utilities.rs:97
+result = polygon_features(layer, check_overlap_extension_hor_f)
+  Function: polygon_features
+  Inputs: metalx_debug_ov12p.polygonlayer.0001
+  Outputs: result.polygonlayer.0013
+33 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=25.777
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  check_overlap_extension_hor() at adr.utilities.rs:304
+    polygon_features() at adr.utilities.rs:97
+result = polygon_features(layer, check_overlap_extension_hor_f)
+  Function: polygon_features
+  Inputs: metalx_debug_ov12.polygonlayer.0001
+  Outputs: result.polygonlayer.0016
+31 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=25.777
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  interacting() at adr.utilities.rs:1420
+metalx_debug4 = metalx_debug1 interacting metalx_debug2
+  Function: interacting
+  Inputs: metalx_facing_grow.polygonlayer.0004, metalx_debug2.polygonlayer.0002
+  Outputs: metalx_debug4.polygonlayer.0002
+2812 unique polygons written.
+   Check Time=0:00:00  User=0.02 Sys=0.00 Mem=42.198
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  check_overlap_extension_hor() at adr.utilities.rs:272
+    polygon_features() at adr.utilities.rs:97
+result = polygon_features(layer, check_overlap_extension_hor_f)
+  Function: polygon_features
+  Inputs: result.polygonlayer.0010
+  Outputs: result.polygonlayer.0019
+WARNING - 81 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=25.621
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  check_overlap_extension_hor() at adr.utilities.rs:306
+    polygon_features() at adr.utilities.rs:97
+result = polygon_features(layer, check_overlap_extension_hor_f)
+  Function: polygon_features
+  Inputs: result.polygonlayer.0009
+  Outputs: result.polygonlayer.0024
+WARNING - 37 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.01 Mem=25.621
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  check_overlap_extension_hor() at adr.utilities.rs:304
+    polygon_features() at adr.utilities.rs:97
+result = polygon_features(layer, check_overlap_extension_hor_f)
+  Function: polygon_features
+  Inputs: result.polygonlayer.0016
+  Outputs: result.polygonlayer.0022
+WARNING - 31 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.01 Mem=25.621
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  grow() at adr.utilities.rs:313
+metalx_b_exten_ov = (metalx_b_gaps and grow(layer1 = metalx_debug_ov12, north = check_max_width)) or (metalx_b_gaps and grow(layer1 = metalx_debug_ov12p, south = check_max_width))
+  Function: grow
+  Inputs: result.polygonlayer.0022
+  Outputs: metalx_b_exten_ov.polygonlayer.0002
+31 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=24.309
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  grow() at adr.utilities.rs:361
+metalx_alt_exten = (metalx_c_gaps and (grow(layer1 = metalx_c_alt_exten, north = (check_max_width - check_epsilon), south = (check_max_width - check_epsilon)))) or (metalx_b_gaps and (grow(layer1 = metalx_b_alt_exten, north = (check_max_width - check_epsilon), south = (check_max_width - check_epsilon))))
+  Function: grow
+  Inputs: metalx_alt_exten.polygonlayer.0001
+  Outputs: metalx_alt_exten.polygonlayer.0003
+467 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=26.527
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  and() at adr.utilities.rs:361
+metalx_alt_exten = (metalx_c_gaps and (grow(layer1 = metalx_c_alt_exten, north = (check_max_width - check_epsilon), south = (check_max_width - check_epsilon)))) or (metalx_b_gaps and (grow(layer1 = metalx_b_alt_exten, north = (check_max_width - check_epsilon), south = (check_max_width - check_epsilon))))
+  Function: and
+  Inputs: metal2_orig_c_gaps.polygonlayer.0001, metalx_alt_exten.polygonlayer.0003
+  Outputs: metalx_alt_exten.polygonlayer.0005
+467 unique polygons written.
+   Check Time=0:00:00  User=0.06 Sys=0.00 Mem=31.104
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  interacting() at adr.utilities.rs:1437
+metalx_debug_ov2 = metalx_gaps_usmall_right interacting metalx_debug_ov1
+  Function: interacting
+  Inputs: metalx_gaps_usmall_right.polygonlayer.0003, metalx_overlap_grow.polygonlayer.0006
+  Outputs: metalx_debug_ov2.polygonlayer.0002
+2894 unique polygons written.
+   Check Time=0:00:00  User=0.34 Sys=0.04 Mem=51.244
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  interacting() at adr.utilities.rs:1440
+metalx_debug_ov4 = metalx_debug_ov1 interacting metalx_debug_ov2
+  Function: interacting
+  Inputs: metalx_overlap_grow.polygonlayer.0006, metalx_debug_ov2.polygonlayer.0002
+  Outputs: metalx_debug_ov4.polygonlayer.0002
+2891 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.01 Mem=42.260
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  grow() at adr.utilities.rs:314
+metalx_c_exten_ov = (metalx_c_gaps and grow(layer1 = metalx_debug_ov13, north = check_max_width)) or (metalx_c_gaps and grow(layer1 = metalx_debug_ov13p, south = check_max_width))
+  Function: grow
+  Inputs: metalx_c_exten_ov.polygonlayer.0002
+  Outputs: metalx_c_exten_ov.polygonlayer.0004
+34 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=26.590
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:137
+  and() at adr.utilities.rs:314
+metalx_c_exten_ov = (metalx_c_gaps and grow(layer1 = metalx_debug_ov13, north = check_max_width)) or (metalx_c_gaps and grow(layer1 = metalx_debug_ov13p, south = check_max_width))
+  Function: and
+  Inputs: metal2_orig_c_gaps.polygonlayer.0001, metalx_c_exten_ov.polygonlayer.0004
+  Outputs: metalx_c_exten_ov.polygonlayer.0006
+36 unique polygons written.
+   Check Time=0:00:00  User=0.06 Sys=0.01 Mem=31.167
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  not() at adr.utilities.rs:468
+metalx_patch_ext = (metalx_proc_e2e_viols not metalx_check_touching) not metalx_orig_e2e_viols
+  Function: not
+  Inputs: metalx_proc_e2e_viols.polygonlayer.0002, metalx_check_touching.polygonlayer.0001
+  Outputs: metalx_patch_ext.polygonlayer.0001
+Input layer "metalx_check_touching.polygonlayer.0001" is empty.
+15 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=19.278
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:138
+  not() at adr.utilities.rs:468:Duplicate command replaced with an internal copy command.
+metalx_patch_ext = (metalx_proc_e2e_viols not metalx_check_touching) not metalx_orig_e2e_viols
+  Function: not
+  Inputs: metalx_patch_ext.polygonlayer.0001
+  Outputs: metalx_patch_ext.polygonlayer.0002
+15 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=19.278
+
+line_extend_adj_alt_merged_lineup_vertical() at adr.rs:210
+  external_corner1_edge() at adr.utilities.rs:1277
+metalx_altb_facing = external_corner1_edge(layer1 = metalx_b, distance < 0.171, type = CONVEX_TO_CONVEX, angle = RIGHT, output_type = POINT_TO_POINT)
+  Function: external_corner1_edge
+  Inputs: metal3_orig_b.polygonlayer.0001
+  Outputs: metalx_altb_facing.edgelayer.0002
+2470 spacing violations found.
+   Check Time=0:00:00  User=0.07 Sys=0.00 Mem=36.323
+
+grow() at adr.rs:203
+metal3_orig_b_gaps = (grow(layer1 = metal3_orig_b, south = 10, north = 10, east = 0, west = 0) and boundary_m3_top_bloated) not metal3_orig_b
+  Function: grow
+  Inputs: metal3_orig_b.polygonlayer.0001
+  Outputs: metal3_orig_b_gaps.polygonlayer.0001
+57859 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=24.387
+
+grow() at adr.rs:203
+metal3_orig_b_gaps = (grow(layer1 = metal3_orig_b, south = 10, north = 10, east = 0, west = 0) and boundary_m3_top_bloated) not metal3_orig_b
+  Function: grow
+  Inputs: metal3_orig_b_gaps.polygonlayer.0001
+  Outputs: metal3_orig_b_gaps.polygonlayer.0002
+13483 unique polygons written.
+   Check Time=0:00:00  User=0.06 Sys=0.00 Mem=38.605
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  polygon_extents() at adr.utilities.rs:1447
+metalx_debug_ov8p = polygon_extents(metalx_debug_ov6p)
+  Function: polygon_extents
+  Inputs: metalx_debug_ov6p.polygonlayer.0002
+  Outputs: metalx_debug_ov8p.polygonlayer.0003
+3832 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.01 Mem=27.574
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  polygon_extents() at adr.utilities.rs:1446
+metalx_debug_ov8 = polygon_extents(metalx_debug_ov6)
+  Function: polygon_extents
+  Inputs: metalx_debug_ov6.polygonlayer.0002
+  Outputs: metalx_debug_ov8.polygonlayer.0003
+2894 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=27.574
+
+grow() at adr.rs:202
+metal3_orig_c_gaps = (grow(layer1 = metal3_orig_c, south = 10, north = 10, east = 0, west = 0) and boundary_m3_top_bloated) not metal3_orig_c
+  Function: grow
+  Inputs: metal3_orig_c.polygonlayer.0001
+  Outputs: metal3_orig_c_gaps.polygonlayer.0001
+48451 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=24.372
+
+grow() at adr.rs:202
+metal3_orig_c_gaps = (grow(layer1 = metal3_orig_c, south = 10, north = 10, east = 0, west = 0) and boundary_m3_top_bloated) not metal3_orig_c
+  Function: grow
+  Inputs: metal3_orig_c_gaps.polygonlayer.0001
+  Outputs: metal3_orig_c_gaps.polygonlayer.0002
+12309 unique polygons written.
+   Check Time=0:00:00  User=0.04 Sys=0.01 Mem=36.605
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  or() at adr.utilities.rs:1423
+metalx_debug6 = metalx_debug2 or metalx_debug4
+  Function: or
+  Inputs: metalx_debug2.polygonlayer.0002, metalx_debug4.polygonlayer.0002
+  Outputs: metalx_debug6.polygonlayer.0002
+2816 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=30.715
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  polygon_extents() at adr.utilities.rs:1426
+metalx_debug8 = polygon_extents(metalx_debug6)
+  Function: polygon_extents
+  Inputs: metalx_debug6.polygonlayer.0002
+  Outputs: metalx_debug8.polygonlayer.0003
+2816 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.01 Mem=27.574
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  polygon_extents() at adr.utilities.rs:1426
+metalx_debug8 = polygon_extents(metalx_debug6)
+  Function: polygon_extents
+  Inputs: metalx_debug8.polygonlayer.0003
+  Outputs: metalx_debug8.polygonlayer.0004
+2816 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=28.512
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  internal1() at adr.utilities.rs:1449
+metalx_debug_ov10 = internal1(layer1 = metalx_debug_ov8, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = VERTICAL)
+  Function: internal1
+  Inputs: metalx_debug_ov10.polygonlayer.0003
+  Outputs: metalx_debug_ov10.polygonlayer.0004
+2894 width violations found.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=33.229
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  interacting() at adr.utilities.rs:1452
+metalx_debug_ov12 = check_overlap_extension_ver_m1(metalx_debug_ov6 interacting metalx_debug_ov10)
+  Function: interacting
+  Inputs: metalx_debug_ov6.polygonlayer.0002, metalx_debug_ov10.polygonlayer.0004
+  Outputs: metalx_debug_ov12.polygonlayer.0002
+2894 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=42.276
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  internal1() at adr.utilities.rs:1430
+metalx_debug10p = internal1(layer1 = metalx_debug8p, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = VERTICAL)
+  Function: internal1
+  Inputs: metalx_debug8p.polygonlayer.0004
+  Outputs: metalx_debug10p.polygonlayer.0003
+3713 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=24.387
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  check_overlap_extension_ver_m1() at adr.utilities.rs:1453
+    polygon_features() at adr.utilities.rs:955
+result = polygon_features(layer, check_overlap_extension_ver_m1_f)
+  Function: polygon_features
+  Inputs: metalx_debug_ov12p.polygonlayer.0002
+  Outputs: result.polygonlayer.0025
+3832 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=26.605
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  internal1() at adr.utilities.rs:1430
+metalx_debug10p = internal1(layer1 = metalx_debug8p, distance < (check_e2e + check_adj_offset), extension = RECTANGLE, direction = VERTICAL)
+  Function: internal1
+  Inputs: metalx_debug10p.polygonlayer.0003
+  Outputs: metalx_debug10p.polygonlayer.0004
+3713 width violations found.
+   Check Time=0:00:00  User=0.01 Sys=0.01 Mem=34.260
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  interacting() at adr.utilities.rs:1433
+metalx_debug12p = check_overlap_extension_ver_m1(metalx_debug6p interacting metalx_debug10p)
+  Function: interacting
+  Inputs: metalx_debug6p.polygonlayer.0002, metalx_debug10p.polygonlayer.0004
+  Outputs: metalx_debug12p.polygonlayer.0002
+3713 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=42.307
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  check_overlap_extension_ver_m1() at adr.utilities.rs:1452
+    polygon_features() at adr.utilities.rs:955
+result = polygon_features(layer, check_overlap_extension_ver_m1_f)
+  Function: polygon_features
+  Inputs: metalx_debug_ov12.polygonlayer.0002
+  Outputs: result.polygonlayer.0026
+2894 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=26.637
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  check_overlap_extension_ver_m1() at adr.utilities.rs:1453
+    polygon_features() at adr.utilities.rs:955
+result = polygon_features(layer, check_overlap_extension_ver_m1_f)
+  Function: polygon_features
+  Inputs: result.polygonlayer.0025
+  Outputs: result.polygonlayer.0027
+WARNING - 3832 unique polygons written.
+   Check Time=0:00:00  User=0.03 Sys=0.00 Mem=28.746
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  inside() at adr.utilities.rs:1459
+metalx_debug_right_inside_extend = (metalx_gaps_right inside metalx_debug_ov12) or (metalx_gaps_right inside metalx_debug_ov12p) or (metalx_gaps_right inside metalx_debug12) or (metalx_gaps_right inside metalx_debug12p)
+  Function: inside
+  Inputs: metalx_gaps_right.polygonlayer.0003, result.polygonlayer.0027
+  Outputs: metalx_debug_right_inside_extend.polygonlayer.0001
+No output written.
+Layer "metalx_debug_right_inside_extend.polygonlayer.0001" is empty.
+   Check Time=0:00:00  User=0.69 Sys=0.07 Mem=57.369
+
+not() at adr.rs:142
+metal2_1 = (metal2_orig or metal2_1_all_ext) not metal2_1_overfill
+  Function: not
+  Inputs: metal2_1.polygonlayer.0001, metal2_1_overfill.polygonlayer.0001
+  Outputs: metal2_1.polygonlayer.0002
+Input layer "metal2_1_overfill.polygonlayer.0001" is empty.
+159089 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=20.387
+
+and() at adr.rs:147
+metal2_1_b_segs = metal2_1 and metal2_bid_boundary
+  Function: and
+  Inputs: metal2_1.polygonlayer.0002, metal2_bid_boundary.polygonlayer.0001
+  Outputs: metal2_1_b_segs.polygonlayer.0001
+70598 unique polygons written.
+   Check Time=0:00:00  User=0.62 Sys=0.05 Mem=69.306
+
+not() at adr.rs:149
+metal2_1_b_gaps = metal2_bid_boundary not metal2_1_b_segs
+  Function: not
+  Inputs: metal2_bid_boundary.polygonlayer.0001, metal2_1_b_segs.polygonlayer.0001
+  Outputs: metal2_1_b_gaps.polygonlayer.0001
+73260 unique polygons written.
+   Check Time=0:00:00  User=0.10 Sys=0.00 Mem=42.463
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  check_overlap_extension_ver_m1() at adr.utilities.rs:1452
+    polygon_features() at adr.utilities.rs:955
+result = polygon_features(layer, check_overlap_extension_ver_m1_f)
+  Function: polygon_features
+  Inputs: result.polygonlayer.0026
+  Outputs: result.polygonlayer.0029
+WARNING - 2894 unique polygons written.
+   Check Time=0:00:00  User=0.03 Sys=0.01 Mem=29.808
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  inside() at adr.utilities.rs:1459
+metalx_debug_right_inside_extend = (metalx_gaps_right inside metalx_debug_ov12) or (metalx_gaps_right inside metalx_debug_ov12p) or (metalx_gaps_right inside metalx_debug12) or (metalx_gaps_right inside metalx_debug12p)
+  Function: inside
+  Inputs: metalx_gaps_right.polygonlayer.0003, result.polygonlayer.0029
+  Outputs: metalx_debug_right_inside_extend.polygonlayer.0002
+2894 unique polygons written.
+   Check Time=0:00:00  User=0.69 Sys=0.08 Mem=60.494
+
+internal1() at adr.rs:152
+metal2_1_proc_small_gaps = internal1(layer1 = metal2_1_all_gaps, distance = [0.001,0.056), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metal2_1_all_gaps.polygonlayer.0001
+  Outputs: metal2_1_proc_small_gaps.polygonlayer.0001
+202659 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=27.605
+
+internal1() at adr.rs:152
+metal2_1_proc_small_gaps = internal1(layer1 = metal2_1_all_gaps, distance = [0.001,0.056), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metal2_1_proc_small_gaps.polygonlayer.0001
+  Outputs: metal2_1_proc_small_gaps.polygonlayer.0002
+0 width violations found.
+   Check Time=0:00:00  User=0.07 Sys=0.01 Mem=41.369
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  check_overlap_extension_ver_m1() at adr.utilities.rs:1433
+    polygon_features() at adr.utilities.rs:955
+result = polygon_features(layer, check_overlap_extension_ver_m1_f)
+  Function: polygon_features
+  Inputs: metalx_debug12p.polygonlayer.0002
+  Outputs: result.polygonlayer.0028
+3713 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=29.793
+
+interacting() at adr.rs:153
+metal2_1_e2e_viols_interactions = metal2_1_all_ext interacting metal2_1_proc_small_gaps
+  Function: interacting
+  Inputs: metal2_1_all_ext.polygonlayer.0001, metal2_1_proc_small_gaps.polygonlayer.0002
+  Outputs: metal2_1_e2e_viols_interactions.polygonlayer.0001
+Input layer "metal2_1_proc_small_gaps.polygonlayer.0002" is empty.
+No output written.
+Layer "metal2_1_e2e_viols_interactions.polygonlayer.0001" is empty.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=22.481
+
+not() at adr.rs:155:Duplicate command replaced with an internal copy command.
+metal2_2 = metal2_1 not metal2_1_e2e_viols_interactions
+  Function: not
+  Inputs: metal2_1.polygonlayer.0002
+  Outputs: metal2_2.polygonlayer.0001
+159089 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=22.481
+
+and() at adr.rs:158:Duplicate command replaced with an internal copy command.
+metal2_2_c_segs = metal2_2 and metal2_cid_boundary
+  Function: and
+  Inputs: metal2_1_c_segs.polygonlayer.0001
+  Outputs: metal2_2_c_segs.polygonlayer.0001
+126737 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=22.481
+
+not() at adr.rs:161:Duplicate command replaced with an internal copy command.
+metal2_2_c_gaps = metal2_cid_boundary not metal2_2_c_segs
+  Function: not
+  Inputs: metal2_1_c_gaps.polygonlayer.0001
+  Outputs: metal2_2_c_gaps.polygonlayer.0001
+129399 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=22.481
+
+and() at adr.rs:159:Duplicate command replaced with an internal copy command.
+metal2_2_b_segs = metal2_2 and metal2_bid_boundary
+  Function: and
+  Inputs: metal2_1_b_segs.polygonlayer.0001
+  Outputs: metal2_2_b_segs.polygonlayer.0001
+70598 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=22.481
+
+not() at adr.rs:162:Duplicate command replaced with an internal copy command.
+metal2_2_b_gaps = metal2_bid_boundary not metal2_2_b_segs
+  Function: not
+  Inputs: metal2_1_b_gaps.polygonlayer.0001
+  Outputs: metal2_2_b_gaps.polygonlayer.0001
+73260 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=22.481
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:166
+  or() at adr.utilities.rs:451:Duplicate command replaced with an internal copy command.
+metalx_altbot_top_ext_offset_ext = grow(layer1 = metalx_altbot_top_ext_offset, east = 0.080, west = 0.080) and (metalx_c_gaps or metalx_b_gaps)
+  Function: or
+  Inputs: metal2_1_all_gaps.polygonlayer.0001
+  Outputs: metalx_altbot_top_ext_offset_ext.polygonlayer.0005
+202659 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=22.481
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:166
+  external_corner2_edge() at adr.utilities.rs:388
+metalx_facing = external_corner2_edge(layer1 = metalx_c, layer2 = metalx_b, distance < 0.184, type = CONVEX_TO_CONVEX, angle = RIGHT, output_type = POINT_TO_POINT)
+  Function: external_corner2_edge
+  Inputs: metal2_2_c_segs.polygonlayer.0001, metal2_2_b_segs.polygonlayer.0001
+  Outputs: metalx_facing.edgelayer.0004
+18974 spacing violations found.
+   Check Time=0:00:00  User=0.60 Sys=0.03 Mem=54.946
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:166
+  external_corner1_edge() at adr.utilities.rs:416
+metalx_altb_facing = external_corner1_edge(layer1 = metalx_b, distance < 0.171, type = CONVEX_TO_CONVEX, angle = RIGHT, output_type = POINT_TO_POINT)
+  Function: external_corner1_edge
+  Inputs: metal2_2_b_segs.polygonlayer.0001
+  Outputs: metalx_altb_facing.edgelayer.0003
+4048 spacing violations found.
+   Check Time=0:00:00  User=0.08 Sys=0.02 Mem=40.541
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:166
+  grow() at adr.utilities.rs:396
+metalx_c_top_b_bot_inside_interact_common = (grow(layer1 = metalx_c_gaps_top, north = 0.025)) and (grow(layer1 = metalx_b_gaps_bot, south = 0.025))
+  Function: grow
+  Inputs: metalx_c_top_b_bot_inside_interact_common.polygonlayer.0006
+  Outputs: metalx_c_top_b_bot_inside_interact_common.polygonlayer.0007
+129273 unique polygons written.
+   Check Time=0:00:00  User=0.11 Sys=0.02 Mem=48.823
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:165
+  shrink() at adr.utilities.rs:200
+metalx_b_gaps_top = metalx_b_gaps not shrink(layer1 = metalx_b_gaps, north = check_epsilon)
+  Function: shrink
+  Inputs: metalx_b_gaps_top.polygonlayer.0005
+  Outputs: metalx_b_gaps_top.polygonlayer.0006
+73260 unique polygons written.
+   Check Time=0:00:00  User=0.05 Sys=0.02 Mem=44.322
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:165
+  not() at adr.utilities.rs:200
+metalx_b_gaps_top = metalx_b_gaps not shrink(layer1 = metalx_b_gaps, north = check_epsilon)
+  Function: not
+  Inputs: metal2_2_b_gaps.polygonlayer.0001, metalx_b_gaps_top.polygonlayer.0006
+  Outputs: metalx_b_gaps_top.polygonlayer.0007
+73252 unique polygons written.
+   Check Time=0:00:00  User=0.11 Sys=0.01 Mem=43.572
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:166
+  not() at adr.utilities.rs:382:Duplicate command replaced with an internal copy command.
+metalx_b_gaps_top = metalx_b_gaps not shrink(layer1 = metalx_b_gaps, north = check_epsilon)
+  Function: not
+  Inputs: metalx_b_gaps_top.polygonlayer.0007
+  Outputs: metalx_b_gaps_top.polygonlayer.0008
+73252 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=22.496
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:165
+  external1() at adr.utilities.rs:229
+metalx_c_alt_facing = external1(layer1 = metalx_c_gaps, distance < check_non_pref_alt_th, extension = NONE, orientation = PARALLEL, direction = VERTICAL, projection = IN, projection_length = [0.000,check_e2e))
+  Function: external1
+  Inputs: metalx_c_gaps_usmall.polygonlayer.0003
+  Outputs: metalx_c_alt_facing.polygonlayer.0002
+4156 spacing violations found.
+   Check Time=0:00:01  User=0.90 Sys=0.02 Mem=42.463
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  and() at adr.utilities.rs:1456
+metalx_debug_right_and_extend = (metalx_gaps_right and metalx_debug_ov12) or (metalx_gaps_right and metalx_debug_ov12p) or (metalx_gaps_right and metalx_debug12) or (metalx_gaps_right and metalx_debug12p)
+  Function: and
+  Inputs: metalx_gaps_right.polygonlayer.0003, result.polygonlayer.0031
+  Outputs: metalx_debug_right_and_extend.polygonlayer.0004
+2816 unique polygons written.
+   Check Time=0:00:00  User=0.33 Sys=0.05 Mem=53.400
+
+and() at adr.rs:202
+metal3_orig_c_gaps = (grow(layer1 = metal3_orig_c, south = 10, north = 10, east = 0, west = 0) and boundary_m3_top_bloated) not metal3_orig_c
+  Function: and
+  Inputs: metal3_orig_c_gaps.polygonlayer.0002, boundary_m3_top_bloated.polygonlayer.0001
+  Outputs: metal3_orig_c_gaps.polygonlayer.0003
+12309 unique polygons written.
+   Check Time=0:00:00  User=0.02 Sys=0.00 Mem=35.385
+
+not() at adr.rs:202
+metal3_orig_c_gaps = (grow(layer1 = metal3_orig_c, south = 10, north = 10, east = 0, west = 0) and boundary_m3_top_bloated) not metal3_orig_c
+  Function: not
+  Inputs: metal3_orig_c_gaps.polygonlayer.0003, metal3_orig_c.polygonlayer.0001
+  Outputs: metal3_orig_c_gaps.polygonlayer.0004
+56944 unique polygons written.
+   Check Time=0:00:00  User=0.09 Sys=0.00 Mem=44.556
+
+line_extend_adj_skip_track_overlap_vertical_2() at adr.rs:209
+  shrink() at adr.utilities.rs:1062
+metalx_c_gaps_right = metalx_c_gaps not shrink(layer1 = metalx_c_gaps, east = check_epsilon)
+  Function: shrink
+  Inputs: metal3_orig_c_gaps.polygonlayer.0004
+  Outputs: metalx_c_gaps_right.polygonlayer.0001
+56944 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=27.605
+
+line_extend_adj_skip_track_overlap_vertical_2() at adr.rs:209
+  shrink() at adr.utilities.rs:1063
+metalx_c_gaps_left = metalx_c_gaps not shrink(layer1 = metalx_c_gaps, west = check_epsilon)
+  Function: shrink
+  Inputs: metalx_c_gaps_right.polygonlayer.0001
+  Outputs: metalx_c_gaps_left.polygonlayer.0001
+56944 unique polygons written.
+   Check Time=0:00:00  User=0.05 Sys=0.02 Mem=44.322
+
+line_extend_adj_skip_track_overlap_vertical_2() at adr.rs:209
+  not() at adr.utilities.rs:1063
+metalx_c_gaps_left = metalx_c_gaps not shrink(layer1 = metalx_c_gaps, west = check_epsilon)
+  Function: not
+  Inputs: metal3_orig_c_gaps.polygonlayer.0004, metalx_c_gaps_left.polygonlayer.0001
+  Outputs: metalx_c_gaps_left.polygonlayer.0002
+56944 unique polygons written.
+   Check Time=0:00:00  User=0.10 Sys=0.00 Mem=43.572
+
+line_extend_adj_alt_merged_lineup_vertical() at adr.rs:210
+  not() at adr.utilities.rs:1246:Duplicate command replaced with an internal copy command.
+metalx_c_gaps_left = metalx_c_gaps not shrink(layer1 = metalx_c_gaps, west = 0.001)
+  Function: not
+  Inputs: metalx_c_gaps_left.polygonlayer.0002
+  Outputs: metalx_c_gaps_left.polygonlayer.0003
+56944 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=22.496
+
+line_extend_adj_skip_track_overlap_vertical_2() at adr.rs:209
+  shrink() at adr.utilities.rs:1065
+metalx_b_gaps_right = metalx_b_gaps not shrink(layer1 = metalx_b_gaps, east = check_epsilon)
+  Function: shrink
+  Inputs: metalx_b_gaps_right.polygonlayer.0001
+  Outputs: metalx_b_gaps_right.polygonlayer.0002
+62092 unique polygons written.
+   Check Time=0:00:00  User=0.07 Sys=0.00 Mem=44.322
+
+line_extend_adj_skip_track_overlap_vertical_2() at adr.rs:209
+  not() at adr.utilities.rs:1065
+metalx_b_gaps_right = metalx_b_gaps not shrink(layer1 = metalx_b_gaps, east = check_epsilon)
+  Function: not
+  Inputs: metal3_orig_b_gaps.polygonlayer.0004, metalx_b_gaps_right.polygonlayer.0002
+  Outputs: metalx_b_gaps_right.polygonlayer.0003
+62092 unique polygons written.
+   Check Time=0:00:00  User=0.10 Sys=0.02 Mem=43.572
+
+line_extend_adj_alt_merged_lineup_vertical() at adr.rs:210
+  not() at adr.utilities.rs:1243:Duplicate command replaced with an internal copy command.
+metalx_b_gaps_right = metalx_b_gaps not shrink(layer1 = metalx_b_gaps, east = 0.001)
+  Function: not
+  Inputs: metalx_b_gaps_right.polygonlayer.0003
+  Outputs: metalx_b_gaps_right.polygonlayer.0004
+62092 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=22.496
+
+line_extend_adj_alt_merged_lineup_vertical() at adr.rs:210
+  grow() at adr.utilities.rs:1263
+metalx_c_left_b_right_inside_interact_common = (grow(layer1 = metalx_b_gaps_right, east = 0.025)) and (grow(layer1 = metalx_c_gaps_left, west = 0.025))
+  Function: grow
+  Inputs: metalx_b_gaps_right.polygonlayer.0004
+  Outputs: metalx_c_left_b_right_inside_interact_common.polygonlayer.0002
+62092 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=27.605
+
+line_extend_adj_alt_merged_lineup_vertical() at adr.rs:210
+  grow() at adr.utilities.rs:1297
+metalx_altb_left_right_inside_interact_common = ((grow(layer1 = metalx_b_gaps_right, east = 0.102)) and (grow(layer1 = metalx_b_gaps_left, west = 0.102))) and metalx_altb_facing_touching_area_grow
+  Function: grow
+  Inputs: metalx_c_left_b_right_inside_interact_common.polygonlayer.0002
+  Outputs: metalx_altb_left_right_inside_interact_common.polygonlayer.0002
+62092 unique polygons written.
+   Check Time=0:00:00  User=0.09 Sys=0.00 Mem=40.823
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  or() at adr.utilities.rs:1455
+metalx_debug_left_and_extend = (metalx_gaps_left and metalx_debug_ov12) or (metalx_gaps_left and metalx_debug_ov12p) or (metalx_gaps_left and metalx_debug12) or (metalx_gaps_left and metalx_debug12p)
+  Function: or
+  Inputs: metalx_debug_left_and_extend.polygonlayer.0002, metalx_debug_left_and_extend.polygonlayer.0001
+  Outputs: metalx_debug_left_and_extend.polygonlayer.0003
+6723 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=33.902
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  or() at adr.utilities.rs:1456
+metalx_debug_right_and_extend = (metalx_gaps_right and metalx_debug_ov12) or (metalx_gaps_right and metalx_debug_ov12p) or (metalx_gaps_right and metalx_debug12) or (metalx_gaps_right and metalx_debug12p)
+  Function: or
+  Inputs: metalx_debug_right_and_extend.polygonlayer.0002, metalx_debug_right_and_extend.polygonlayer.0001
+  Outputs: metalx_debug_right_and_extend.polygonlayer.0003
+6720 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=33.902
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  check_overlap_extension_ver_m1() at adr.utilities.rs:1433
+    polygon_features() at adr.utilities.rs:955
+result = polygon_features(layer, check_overlap_extension_ver_m1_f)
+  Function: polygon_features
+  Inputs: result.polygonlayer.0028
+  Outputs: result.polygonlayer.0032
+WARNING - 3713 unique polygons written.
+   Check Time=0:00:00  User=0.03 Sys=0.00 Mem=31.902
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  inside() at adr.utilities.rs:1459
+metalx_debug_right_inside_extend = (metalx_gaps_right inside metalx_debug_ov12) or (metalx_gaps_right inside metalx_debug_ov12p) or (metalx_gaps_right inside metalx_debug12) or (metalx_gaps_right inside metalx_debug12p)
+  Function: inside
+  Inputs: metalx_gaps_right.polygonlayer.0003, result.polygonlayer.0032
+  Outputs: metalx_debug_right_inside_extend.polygonlayer.0005
+No output written.
+Layer "metalx_debug_right_inside_extend.polygonlayer.0005" is empty.
+   Check Time=0:00:01  User=0.66 Sys=0.11 Mem=60.525
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  or() at adr.utilities.rs:1458
+metalx_debug_left_inside_extend = (metalx_gaps_left inside metalx_debug_ov12) or (metalx_gaps_left inside metalx_debug_ov12p) or (metalx_gaps_left inside metalx_debug12) or (metalx_gaps_left inside metalx_debug12p)
+  Function: or
+  Inputs: metalx_debug_left_inside_extend.polygonlayer.0003, metalx_debug_left_inside_extend.polygonlayer.0004
+  Outputs: metalx_debug_left_inside_extend.polygonlayer.0006
+Input layer "metalx_debug_left_inside_extend.polygonlayer.0004" is empty.
+3832 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=23.543
+
+line_extend_adj_alt_merged_lineup_vertical() at adr.rs:210
+  delta_edge() at adr.utilities.rs:1278
+metalx_altb_facing_touching_line = delta_edge(layer1 = metalx_altb_facing, delta_y = [0.056,0.136), delta_x = [0.076,0.103])
+  Function: delta_edge
+  Inputs: metalx_altb_facing.edgelayer.0002
+  Outputs: metalx_altb_facing_touching_line.edgelayer.0003
+2470 unique edge sets written.
+   Check Time=0:00:00  User=0.00 Sys=0.01 Mem=28.637
+
+line_extend_adj_alt_merged_lineup_vertical() at adr.rs:210
+  or() at adr.utilities.rs:1260
+metalx_c_left_b_right_inside = (metalx_c_gaps_left or metalx_b_gaps_right) inside metalx_facing_touching_area_grow
+  Function: or
+  Inputs: metalx_c_gaps_left.polygonlayer.0003, metalx_b_gaps_right.polygonlayer.0004
+  Outputs: metalx_c_left_b_right_inside.polygonlayer.0001
+119036 unique polygons written.
+   Check Time=0:00:00  User=0.08 Sys=0.01 Mem=36.995
+
+line_extend_adj_alt_merged_lineup_vertical() at adr.rs:210
+  delta_edge() at adr.utilities.rs:1273
+metalx_altc_facing_touching_line = delta_edge(layer1 = metalx_altc_facing, delta_y = [0.056,0.136), delta_x = [0.076,0.103])
+  Function: delta_edge
+  Inputs: metalx_altc_facing.edgelayer.0001
+  Outputs: metalx_altc_facing_touching_line.edgelayer.0003
+2201 unique edge sets written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=28.652
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  or() at adr.utilities.rs:1455
+metalx_debug_left_and_extend = (metalx_gaps_left and metalx_debug_ov12) or (metalx_gaps_left and metalx_debug_ov12p) or (metalx_gaps_left and metalx_debug12) or (metalx_gaps_left and metalx_debug12p)
+  Function: or
+  Inputs: metalx_debug_left_and_extend.polygonlayer.0005, metalx_debug_left_and_extend.polygonlayer.0006
+  Outputs: metalx_debug_left_and_extend.polygonlayer.0007
+6723 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=34.964
+
+line_extend_adj_skip_track_overlap_vertical_2() at adr.rs:209
+  external1() at adr.utilities.rs:1100
+metalx_b_alt_facing = external1(layer1 = metalx_b_gaps, distance < check_non_pref_alt_th, extension = NONE, orientation = PARALLEL, direction = HORIZONTAL, projection = IN, projection_length = [0.000,check_e2e))
+  Function: external1
+  Inputs: metalx_b_gaps_usmall.polygonlayer.0004
+  Outputs: metalx_b_alt_facing.polygonlayer.0002
+849 spacing violations found.
+   Check Time=0:00:00  User=0.44 Sys=0.01 Mem=40.494
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:165
+  external1() at adr.utilities.rs:235
+metalx_b_alt_facing = external1(layer1 = metalx_b_gaps, distance < check_non_pref_alt_th, extension = NONE, orientation = PARALLEL, direction = VERTICAL, projection = IN, projection_length = [0.000,check_e2e))
+  Function: external1
+  Inputs: metalx_b_gaps_usmall.polygonlayer.0003
+  Outputs: metalx_b_alt_facing.polygonlayer.0003
+1492 spacing violations found.
+   Check Time=0:00:00  User=0.24 Sys=0.02 Mem=38.463
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:165
+  external2() at adr.utilities.rs:225
+metalx_overlap = external2(layer1 = metalx_c, layer2 = metalx_b, distance < check_non_pref_adj_th, extension = NONE, orientation = PARALLEL, direction = VERTICAL, projection = IN, projection_length = [0.000,check_adj_offset))
+  Function: external2
+  Inputs: metal2_2_b_segs.polygonlayer.0001
+  Outputs: metalx_overlap.polygonlayer.0007
+70598 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=28.668
+
+line_extend_adj_skip_track_overlap_horizontal_2() at adr.rs:165
+  external2() at adr.utilities.rs:225
+metalx_overlap = external2(layer1 = metalx_c, layer2 = metalx_b, distance < check_non_pref_adj_th, extension = NONE, orientation = PARALLEL, direction = VERTICAL, projection = IN, projection_length = [0.000,check_adj_offset))
+  Function: external2
+  Inputs: metalx_overlap.polygonlayer.0006, metalx_overlap.polygonlayer.0007
+  Outputs: metalx_overlap.polygonlayer.0008
+6087 spacing violations found.
+   Check Time=0:00:01  User=0.91 Sys=0.02 Mem=52.930
+
+line_extend_adj_skip_track_overlap_vertical_2() at adr.rs:209
+  external1() at adr.utilities.rs:1094
+metalx_c_alt_facing = external1(layer1 = metalx_c_gaps, distance < check_non_pref_alt_th, extension = NONE, orientation = PARALLEL, direction = HORIZONTAL, projection = IN, projection_length = [0.000,check_e2e))
+  Function: external1
+  Inputs: metalx_c_gaps_usmall.polygonlayer.0005
+  Outputs: metalx_c_alt_facing.polygonlayer.0003
+696 spacing violations found.
+   Check Time=0:00:00  User=0.45 Sys=0.01 Mem=40.525
+
+line_extend_adj_skip_track_overlap_vertical_2() at adr.rs:209
+  external1() at adr.utilities.rs:1097
+metalx_c_alt_overlap = external1(layer1 = metalx_c, distance < check_non_pref_alt_th, extension = NONE, orientation = PARALLEL, direction = HORIZONTAL, projection = IN, projection_length = [0.000,check_alt_offset))
+  Function: external1
+  Inputs: metalx_overlap.polygonlayer.0001
+  Outputs: metalx_c_alt_overlap.polygonlayer.0003
+97 spacing violations found.
+   Check Time=0:00:00  User=0.17 Sys=0.02 Mem=39.478
+
+line_ext_overlap_vertical_no_color() at adr.rs:91
+  grow() at adr.utilities.rs:1464
+result = (metalx_gaps and grow(layer1 = metalx_debug_left_extend_cand, east = check_max_width)) or (metalx_gaps and grow(layer1 = metalx_debug_right_extend_cand, west = check_max_width))
+  Function: grow
+  Inputs: metalx_debug_left_extend_cand.polygonlayer.0001
+  Outputs: result.polygonlayer.0033
+2891 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=28.652
+
+line_extend_adj_alt_merged_lineup_vertical() at adr.rs:210
+  grow() at adr.utilities.rs:1256
+metalx_c_right_b_left_inside_interact_common = (grow(layer1 = metalx_c_gaps_right, east = 0.025)) and (grow(layer1 = metalx_b_gaps_left, west = 0.025))
+  Function: grow
+  Inputs: metalx_c_right_b_left_inside_interact_common.polygonlayer.0001
+  Outputs: metalx_c_right_b_left_inside_interact_common.polygonlayer.0002
+56944 unique polygons written.
+   Check Time=0:00:00  User=0.07 Sys=0.01 Mem=41.886
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:166
+  edge_extents() at adr.utilities.rs:418
+metalx_altb_facing_touching_area = edge_extents(metalx_altb_facing_touching_line)
+  Function: edge_extents
+  Inputs: metalx_altb_facing_touching_line.edgelayer.0006
+  Outputs: metalx_altb_facing_touching_area.edgelayer.0003
+2261 unique edge sets written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=30.167
+
+line_extend_adj_alt_merged_lineup_vertical() at adr.rs:210
+  grow() at adr.utilities.rs:1280
+metalx_altb_facing_touching_area_grow = grow(layer1 = metalx_altb_facing_touching_area, east = 0.001, west = 0.001)
+  Function: grow
+  Inputs: metalx_altb_facing_touching_area.polygonlayer.0002
+  Outputs: metalx_altb_facing_touching_area_grow.polygonlayer.0003
+1488 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=28.637
+
+line_extend_adj_alt_merged_lineup_vertical() at adr.rs:210
+  grow() at adr.utilities.rs:1275
+metalx_altc_facing_touching_area_grow = grow(layer1 = metalx_altc_facing_touching_area, east = 0.001, west = 0.001)
+  Function: grow
+  Inputs: metalx_altc_facing_touching_area.polygonlayer.0002
+  Outputs: metalx_altc_facing_touching_area_grow.polygonlayer.0003
+1167 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=28.637
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:166
+  edge_extents() at adr.utilities.rs:413
+metalx_altc_facing_touching_area = edge_extents(metalx_altc_facing_touching_line)
+  Function: edge_extents
+  Inputs: metalx_altc_facing_touching_area.edgelayer.0003
+  Outputs: metalx_altc_facing_touching_area.polygonlayer.0003
+5314 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=33.777
+
+line_extend_adj_alt_merged_lineup_vertical() at adr.rs:210
+  grow() at adr.utilities.rs:1280
+metalx_altb_facing_touching_area_grow = grow(layer1 = metalx_altb_facing_touching_area, east = 0.001, west = 0.001)
+  Function: grow
+  Inputs: metalx_altb_facing_touching_area_grow.polygonlayer.0003
+  Outputs: metalx_altb_facing_touching_area_grow.polygonlayer.0004
+1488 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=36.870
+
+line_extend_adj_alt_merged_lineup_vertical() at adr.rs:210
+  inside() at adr.utilities.rs:1294
+metalx_altb_left_right_inside = (metalx_b_gaps_right inside metalx_altb_facing_touching_area_grow) or (metalx_b_gaps_left inside metalx_altb_facing_touching_area_grow)
+  Function: inside
+  Inputs: metalx_b_gaps_left.polygonlayer.0003, metalx_altb_facing_touching_area_grow.polygonlayer.0004
+  Outputs: metalx_altb_left_right_inside.polygonlayer.0002
+18 unique polygons written.
+   Check Time=0:00:00  User=0.11 Sys=0.01 Mem=57.618
+
+line_extend_adj_alt_merged_lineup_vertical() at adr.rs:210
+  inside() at adr.utilities.rs:1294
+metalx_altb_left_right_inside = (metalx_b_gaps_right inside metalx_altb_facing_touching_area_grow) or (metalx_b_gaps_left inside metalx_altb_facing_touching_area_grow)
+  Function: inside
+  Inputs: metalx_b_gaps_right.polygonlayer.0004, metalx_altb_facing_touching_area_grow.polygonlayer.0004
+  Outputs: metalx_altb_left_right_inside.polygonlayer.0001
+21 unique polygons written.
+   Check Time=0:00:00  User=0.10 Sys=0.02 Mem=58.712
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:166
+  grow() at adr.utilities.rs:414
+metalx_altc_facing_touching_area_grow = grow(layer1 = metalx_altc_facing_touching_area, south = 0.001, north = 0.001)
+  Function: grow
+  Inputs: metalx_altc_facing_touching_area.polygonlayer.0003
+  Outputs: metalx_altc_facing_touching_area_grow.polygonlayer.0005
+5314 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=30.839
+
+or() at adr.rs:205
+metal3_orig_gaps = metal3_orig_c_gaps or metal3_orig_b_gaps
+  Function: or
+  Inputs: metal3_orig_c_gaps.polygonlayer.0004, metal3_orig_b_gaps.polygonlayer.0004
+  Outputs: metal3_orig_gaps.polygonlayer.0001
+119036 unique polygons written.
+   Check Time=0:00:00  User=0.09 Sys=0.01 Mem=39.182
+
+line_extend_adj_alt_merged_lineup_vertical() at adr.rs:210
+  or() at adr.utilities.rs:1311:Duplicate command replaced with an internal copy command.
+metalx_altleft_right_ext_offset_ext = grow(layer1 = metalx_altleft_right_ext_offset, north = 0.080, south = 0.080) and (metalx_c_gaps or metalx_b_gaps)
+  Function: or
+  Inputs: metal3_orig_gaps.polygonlayer.0001
+  Outputs: metalx_altleft_right_ext_offset_ext.polygonlayer.0001
+119036 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=25.746
+
+line_extend_adj_alt_merged_lineup_horizontal() at adr.rs:166
+  delta_edge() at adr.utilities.rs:389
+metalx_facing_touching_line = delta_edge(layer1 = metalx_facing, delta_x = [0.056,0.182), delta_y = [0.001,0.024])
+  Function: delta_edge
+  Inputs: metalx_facing_touching_line.edgelayer.0006
+  Outputs: metalx_facing_touching_line.edgelayer.0007
+12444 unique edge sets written.
+   Check Time=0:00:00  User=0.04 Sys=0.00 Mem=40.697
+
+or() at adr.rs:94
+m1_1_all_ext = m1_1_overlap_ext or m1_1_lineup_ext
+  Function: or
+  Inputs: result.polygonlayer.0039, metalx_all_ext.polygonlayer.0002
+  Outputs: m1_1_all_ext.polygonlayer.0001
+17835 unique polygons written.
+   Check Time=0:00:00  User=0.02 Sys=0.00 Mem=38.151
+
+inside() at adr.rs:96
+m1_1_overfill = metal1_orig_gaps inside m1_1_all_ext
+  Function: inside
+  Inputs: metal1_orig_gaps.polygonlayer.0001, m1_1_all_ext.polygonlayer.0001
+  Outputs: m1_1_overfill.polygonlayer.0001
+382 unique polygons written.
+   Check Time=0:00:02  User=1.21 Sys=0.09 Mem=65.852
+
+not() at adr.rs:97
+m1_2_segs = (metal1_orig_segs or m1_1_all_ext) not m1_1_overfill
+  Function: not
+  Inputs: m1_2_segs.polygonlayer.0001, m1_1_overfill.polygonlayer.0001
+  Outputs: m1_2_segs.polygonlayer.0002
+473136 unique polygons written.
+   Check Time=0:00:00  User=0.36 Sys=0.03 Mem=57.883
+
+line_ext_adj_lineup_vertical_no_color() at adr.rs:103
+  external_corner1_edge() at adr.utilities.rs:1482
+metalx_facing = external_corner1_edge(layer1 = metalx, distance < check_adj_c2c_th, type = CONVEX_TO_CONVEX, angle = RIGHT, output_type = POINT_TO_POINT)
+  Function: external_corner1_edge
+  Inputs: m1_2_segs.polygonlayer.0002
+  Outputs: metalx_facing.edgelayer.0005
+488467 spacing violations found.
+   Check Time=0:00:19  User=15.31 Sys=0.51 Mem=192.895
+
+line_ext_adj_lineup_vertical_no_color() at adr.rs:103
+  delta_edge() at adr.utilities.rs:1483
+metalx_facing_touching_line = delta_edge(layer1 = metalx_facing, delta_y = [check_e2e,(2 * check_e2e + check_adj_offset)), delta_x = [check_epsilon,check_side_spacing])
+  Function: delta_edge
+  Inputs: metalx_facing.edgelayer.0005
+  Outputs: metalx_facing_touching_line.edgelayer.0009
+488467 unique edge sets written.
+   Check Time=0:00:00  User=0.01 Sys=0.01 Mem=35.964
+
+line_ext_adj_lineup_vertical_no_color() at adr.rs:103
+  delta_edge() at adr.utilities.rs:1483
+metalx_facing_touching_line = delta_edge(layer1 = metalx_facing, delta_y = [check_e2e,(2 * check_e2e + check_adj_offset)), delta_x = [check_epsilon,check_side_spacing])
+  Function: delta_edge
+  Inputs: metalx_facing_touching_line.edgelayer.0009
+  Outputs: metalx_facing_touching_line.edgelayer.0010
+545651 unique edge sets written.
+   Check Time=0:00:02  User=2.12 Sys=0.18 Mem=150.818
+
+line_ext_adj_lineup_vertical_no_color() at adr.rs:103
+  edge_extents() at adr.utilities.rs:1484
+metalx_facing_touching_area = edge_extents(metalx_facing_touching_line)
+  Function: edge_extents
+  Inputs: metalx_facing_touching_line.edgelayer.0010
+  Outputs: metalx_facing_touching_area.edgelayer.0005
+545651 unique edge sets written.
+   Check Time=0:00:00  User=0.43 Sys=0.07 Mem=47.166
+
+line_ext_overlap_vertical_no_color() at adr.rs:101
+  and() at adr.utilities.rs:1456
+metalx_debug_right_and_extend = (metalx_gaps_right and metalx_debug_ov12) or (metalx_gaps_right and metalx_debug_ov12p) or (metalx_gaps_right and metalx_debug12) or (metalx_gaps_right and metalx_debug12p)
+  Function: and
+  Inputs: metalx_gaps_right.polygonlayer.0007, result.polygonlayer.0092
+  Outputs: metalx_debug_right_and_extend.polygonlayer.0008
+11 unique polygons written.
+   Check Time=0:00:00  User=0.29 Sys=0.07 Mem=56.743
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  grow() at adr.utilities.rs:703
+metalx_c_bloat = grow(layer1 = metalx_c, north = check_epsilon, south = check_epsilon)
+  Function: grow
+  Inputs: metal2_c_segs.polygonlayer.0001
+  Outputs: metalx_c_bloat.polygonlayer.0001
+126737 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=32.964
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  grow() at adr.utilities.rs:703
+metalx_c_bloat = grow(layer1 = metalx_c, north = check_epsilon, south = check_epsilon)
+  Function: grow
+  Inputs: metalx_c_bloat.polygonlayer.0001
+  Outputs: metalx_c_bloat.polygonlayer.0002
+126737 unique polygons written.
+   Check Time=0:00:00  User=0.11 Sys=0.02 Mem=53.182
+
+line_ext_overlap_vertical_no_color() at adr.rs:101
+  check_overlap_extension_ver_m1() at adr.utilities.rs:1452
+    polygon_features() at adr.utilities.rs:955
+result = polygon_features(layer, check_overlap_extension_ver_m1_f)
+  Function: polygon_features
+  Inputs: result.polygonlayer.0093
+  Outputs: result.polygonlayer.0094
+WARNING - 11 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=34.260
+
+line_ext_overlap_vertical_no_color() at adr.rs:101
+  inside() at adr.utilities.rs:1459
+metalx_debug_right_inside_extend = (metalx_gaps_right inside metalx_debug_ov12) or (metalx_gaps_right inside metalx_debug_ov12p) or (metalx_gaps_right inside metalx_debug12) or (metalx_gaps_right inside metalx_debug12p)
+  Function: inside
+  Inputs: metalx_gaps_right.polygonlayer.0007, result.polygonlayer.0094
+  Outputs: metalx_debug_right_inside_extend.polygonlayer.0009
+11 unique polygons written.
+   Check Time=0:00:00  User=0.58 Sys=0.10 Mem=66.946
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  or() at adr.utilities.rs:706
+metalx_c_all = metalx_c_bloat or metalx_c_gaps
+  Function: or
+  Inputs: metalx_c_bloat.polygonlayer.0002, metal2_c_gaps.polygonlayer.0001
+  Outputs: metalx_c_all.polygonlayer.0001
+2662 unique polygons written.
+   Check Time=0:00:00  User=0.25 Sys=0.03 Mem=44.385
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  util_color_space_horizontal_even() at adr.utilities.rs:709
+    polygon_features() at adr.utilities.rs:565
+result = polygon_features(layer, util_colorize_hor_space_even_f)
+  Function: polygon_features
+  Inputs: metalx_c_all.polygonlayer.0001
+  Outputs: result.polygonlayer.0095
+2662 unique polygons written.
+   Check Time=0:00:00  User=0.11 Sys=0.02 Mem=38.245
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  util_color_space_horizontal_odd() at adr.utilities.rs:710
+    polygon_features() at adr.utilities.rs:605
+result = polygon_features(layer, util_colorize_hor_space_odd_f)
+  Function: polygon_features
+  Inputs: result.polygonlayer.0095
+  Outputs: result.polygonlayer.0097
+WARNING - 65453 unique polygons written.
+   Check Time=0:00:00  User=0.24 Sys=0.07 Mem=42.369
+
+line_ext_overlap_vertical_no_color() at adr.rs:101
+  check_overlap_extension_ver_m1() at adr.utilities.rs:1433
+    polygon_features() at adr.utilities.rs:955
+result = polygon_features(layer, check_overlap_extension_ver_m1_f)
+  Function: polygon_features
+  Inputs: metalx_debug12p.polygonlayer.0005
+  Outputs: result.polygonlayer.0089
+10 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=35.556
+
+line_ext_overlap_vertical_no_color() at adr.rs:101
+  check_overlap_extension_ver_m1() at adr.utilities.rs:1432
+    polygon_features() at adr.utilities.rs:955
+result = polygon_features(layer, check_overlap_extension_ver_m1_f)
+  Function: polygon_features
+  Inputs: result.polygonlayer.0088
+  Outputs: result.polygonlayer.0090
+WARNING - 9 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=35.354
+
+line_ext_overlap_vertical_no_color() at adr.rs:101
+  inside() at adr.utilities.rs:1459
+metalx_debug_right_inside_extend = (metalx_gaps_right inside metalx_debug_ov12) or (metalx_gaps_right inside metalx_debug_ov12p) or (metalx_gaps_right inside metalx_debug12) or (metalx_gaps_right inside metalx_debug12p)
+  Function: inside
+  Inputs: metalx_gaps_right.polygonlayer.0007, result.polygonlayer.0090
+  Outputs: metalx_debug_right_inside_extend.polygonlayer.0011
+9 unique polygons written.
+   Check Time=0:00:01  User=0.59 Sys=0.10 Mem=68.039
+
+skip_track_msr_horizontal() at adr.rs:189
+  shrink() at adr.utilities.rs:484
+metalx_c_gaps_top = metalx_c_gaps not shrink(layer1 = metalx_c_gaps, north = check_epsilon)
+  Function: shrink
+  Inputs: metal2_c_gaps.polygonlayer.0001
+  Outputs: metalx_c_gaps_top.polygonlayer.0009
+129399 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=35.151
+
+skip_track_msr_horizontal() at adr.rs:189
+  shrink() at adr.utilities.rs:485
+metalx_c_gaps_bot = metalx_c_gaps not shrink(layer1 = metalx_c_gaps, south = check_epsilon)
+  Function: shrink
+  Inputs: metalx_c_gaps_top.polygonlayer.0009
+  Outputs: metalx_c_gaps_bot.polygonlayer.0007
+129399 unique polygons written.
+   Check Time=0:00:00  User=0.08 Sys=0.02 Mem=59.868
+
+skip_track_msr_horizontal() at adr.rs:189
+  not() at adr.utilities.rs:485
+metalx_c_gaps_bot = metalx_c_gaps not shrink(layer1 = metalx_c_gaps, south = check_epsilon)
+  Function: not
+  Inputs: metal2_c_gaps.polygonlayer.0001, metalx_c_gaps_bot.polygonlayer.0007
+  Outputs: metalx_c_gaps_bot.polygonlayer.0008
+129273 unique polygons written.
+   Check Time=0:00:00  User=0.21 Sys=0.02 Mem=59.102
+
+line_ext_overlap_vertical_no_color() at adr.rs:101
+  or() at adr.utilities.rs:1455
+metalx_debug_left_and_extend = (metalx_gaps_left and metalx_debug_ov12) or (metalx_gaps_left and metalx_debug_ov12p) or (metalx_gaps_left and metalx_debug12) or (metalx_gaps_left and metalx_debug12p)
+  Function: or
+  Inputs: metalx_debug_left_and_extend.polygonlayer.0009, metalx_debug_left_and_extend.polygonlayer.0008
+  Outputs: metalx_debug_left_and_extend.polygonlayer.0010
+22 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=39.432
+
+line_ext_overlap_vertical_no_color() at adr.rs:101
+  or() at adr.utilities.rs:1456
+metalx_debug_right_and_extend = (metalx_gaps_right and metalx_debug_ov12) or (metalx_gaps_right and metalx_debug_ov12p) or (metalx_gaps_right and metalx_debug12) or (metalx_gaps_right and metalx_debug12p)
+  Function: or
+  Inputs: metalx_debug_right_and_extend.polygonlayer.0009, metalx_debug_right_and_extend.polygonlayer.0008
+  Outputs: metalx_debug_right_and_extend.polygonlayer.0010
+22 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=39.432
+
+line_ext_overlap_vertical_no_color() at adr.rs:101
+  check_overlap_extension_ver_m1() at adr.utilities.rs:1433
+    polygon_features() at adr.utilities.rs:955
+result = polygon_features(layer, check_overlap_extension_ver_m1_f)
+  Function: polygon_features
+  Inputs: result.polygonlayer.0089
+  Outputs: result.polygonlayer.0098
+WARNING - 10 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=36.447
+
+line_ext_overlap_vertical_no_color() at adr.rs:101
+  inside() at adr.utilities.rs:1459
+metalx_debug_right_inside_extend = (metalx_gaps_right inside metalx_debug_ov12) or (metalx_gaps_right inside metalx_debug_ov12p) or (metalx_gaps_right inside metalx_debug12) or (metalx_gaps_right inside metalx_debug12p)
+  Function: inside
+  Inputs: metalx_gaps_right.polygonlayer.0007, result.polygonlayer.0098
+  Outputs: metalx_debug_right_inside_extend.polygonlayer.0012
+No output written.
+Layer "metalx_debug_right_inside_extend.polygonlayer.0012" is empty.
+   Check Time=0:00:01  User=0.59 Sys=0.08 Mem=68.070
+
+line_ext_overlap_vertical_no_color() at adr.rs:101
+  or() at adr.utilities.rs:1459
+metalx_debug_right_inside_extend = (metalx_gaps_right inside metalx_debug_ov12) or (metalx_gaps_right inside metalx_debug_ov12p) or (metalx_gaps_right inside metalx_debug12) or (metalx_gaps_right inside metalx_debug12p)
+  Function: or
+  Inputs: metalx_debug_right_inside_extend.polygonlayer.0013, metalx_debug_right_inside_extend.polygonlayer.0012
+  Outputs: metalx_debug_right_inside_extend.polygonlayer.0014
+Input layer "metalx_debug_right_inside_extend.polygonlayer.0012" is empty.
+11 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.01 Mem=31.089
+
+line_ext_overlap_vertical_no_color() at adr.rs:101
+  not_interacting() at adr.utilities.rs:1462
+metalx_debug_right_extend_cand = metalx_debug_right_and_extend not_interacting metalx_debug_right_inside_extend
+  Function: not_interacting
+  Inputs: metalx_debug_right_and_extend.polygonlayer.0014, metalx_debug_right_inside_extend.polygonlayer.0014
+  Outputs: metalx_debug_right_extend_cand.polygonlayer.0002
+11 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=44.040
+
+grow() at adr.rs:219
+metal3_c_gaps = (grow(layer1 = metal3_c, south = 10, north = 10, east = 0, west = 0) and boundary_m3_top_bloated) not metal3_c
+  Function: grow
+  Inputs: metal3_c.polygonlayer.0001
+  Outputs: metal3_c_gaps.polygonlayer.0001
+48452 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=36.245
+
+grow() at adr.rs:219
+metal3_c_gaps = (grow(layer1 = metal3_c, south = 10, north = 10, east = 0, west = 0) and boundary_m3_top_bloated) not metal3_c
+  Function: grow
+  Inputs: metal3_c_gaps.polygonlayer.0001
+  Outputs: metal3_c_gaps.polygonlayer.0002
+12309 unique polygons written.
+   Check Time=0:00:00  User=0.05 Sys=0.00 Mem=48.463
+
+line_ext_overlap_vertical_no_color() at adr.rs:101
+  grow() at adr.utilities.rs:1464
+result = (metalx_gaps and grow(layer1 = metalx_debug_left_extend_cand, east = check_max_width)) or (metalx_gaps and grow(layer1 = metalx_debug_right_extend_cand, west = check_max_width))
+  Function: grow
+  Inputs: metalx_debug_left_extend_cand.polygonlayer.0002
+  Outputs: result.polygonlayer.0100
+11 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=36.229
+
+line_ext_overlap_vertical_no_color() at adr.rs:101
+  grow() at adr.utilities.rs:1464
+result = (metalx_gaps and grow(layer1 = metalx_debug_left_extend_cand, east = check_max_width)) or (metalx_gaps and grow(layer1 = metalx_debug_right_extend_cand, west = check_max_width))
+  Function: grow
+  Inputs: metalx_debug_right_extend_cand.polygonlayer.0002
+  Outputs: result.polygonlayer.0099
+11 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.01 Mem=36.229
+
+not() at adr.rs:177
+metal2_b_gaps = metal2_bid_boundary not metal2_b_segs
+  Function: not
+  Inputs: metal2_bid_boundary.polygonlayer.0001, metal2_b_segs.polygonlayer.0001
+  Outputs: metal2_b_gaps.polygonlayer.0001
+73260 unique polygons written.
+   Check Time=0:00:00  User=0.10 Sys=0.00 Mem=53.195
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  or() at adr.utilities.rs:707
+metalx_b_all = metalx_b_bloat or metalx_b_gaps
+  Function: or
+  Inputs: metalx_b_bloat.polygonlayer.0002, metal2_b_gaps.polygonlayer.0001
+  Outputs: metalx_b_all.polygonlayer.0001
+2662 unique polygons written.
+   Check Time=0:00:00  User=0.15 Sys=0.01 Mem=44.572
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  util_color_space_horizontal_even() at adr.utilities.rs:711
+    polygon_features() at adr.utilities.rs:565
+result = polygon_features(layer, util_colorize_hor_space_even_f)
+  Function: polygon_features
+  Inputs: metalx_b_all.polygonlayer.0001
+  Outputs: result.polygonlayer.0104
+2662 unique polygons written.
+   Check Time=0:00:00  User=0.06 Sys=0.01 Mem=39.432
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  util_color_space_horizontal_odd() at adr.utilities.rs:712
+    polygon_features() at adr.utilities.rs:605
+result = polygon_features(layer, util_colorize_hor_space_odd_f)
+  Function: polygon_features
+  Inputs: result.polygonlayer.0104
+  Outputs: result.polygonlayer.0106
+WARNING - 37058 unique polygons written.
+   Check Time=0:00:00  User=0.12 Sys=0.05 Mem=43.556
+
+line_ext_overlap_vertical_no_color() at adr.rs:101
+  grow() at adr.utilities.rs:1464
+result = (metalx_gaps and grow(layer1 = metalx_debug_left_extend_cand, east = check_max_width)) or (metalx_gaps and grow(layer1 = metalx_debug_right_extend_cand, west = check_max_width))
+  Function: grow
+  Inputs: result.polygonlayer.0100
+  Outputs: result.polygonlayer.0101
+11 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=38.385
+
+line_ext_overlap_vertical_no_color() at adr.rs:101
+  and() at adr.utilities.rs:1464
+result = (metalx_gaps and grow(layer1 = metalx_debug_left_extend_cand, east = check_max_width)) or (metalx_gaps and grow(layer1 = metalx_debug_right_extend_cand, west = check_max_width))
+  Function: and
+  Inputs: m1_2_gaps.polygonlayer.0001, result.polygonlayer.0101
+  Outputs: result.polygonlayer.0107
+11 unique polygons written.
+   Check Time=0:00:00  User=0.39 Sys=0.07 Mem=61.258
+
+or() at adr.rs:183
+m2_proc_gaps = metal2_c_gaps or metal2_b_gaps
+  Function: or
+  Inputs: metal2_c_gaps.polygonlayer.0001, metal2_b_gaps.polygonlayer.0001
+  Outputs: m2_proc_gaps.polygonlayer.0001
+202659 unique polygons written.
+   Check Time=0:00:00  User=0.14 Sys=0.03 Mem=45.572
+
+internal1() at adr.rs:184
+m2_proc_vsmall = internal1(layer1 = m2_proc_gaps, distance = [0.001,0.056), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: m2_proc_gaps.polygonlayer.0001
+  Outputs: m2_proc_vsmall.polygonlayer.0001
+202659 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=36.245
+
+internal1() at adr.rs:184
+m2_proc_vsmall = internal1(layer1 = m2_proc_gaps, distance = [0.001,0.056), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: m2_proc_vsmall.polygonlayer.0001
+  Outputs: m2_proc_vsmall.polygonlayer.0002
+0 width violations found.
+   Check Time=0:00:00  User=0.06 Sys=0.02 Mem=50.008
+
+skip_track_msr_horizontal() at adr.rs:189
+  shrink() at adr.utilities.rs:482
+metalx_b_gaps_top = metalx_b_gaps not shrink(layer1 = metalx_b_gaps, north = check_epsilon)
+  Function: shrink
+  Inputs: metalx_b_gaps_top.polygonlayer.0009
+  Outputs: metalx_b_gaps_top.polygonlayer.0010
+73260 unique polygons written.
+   Check Time=0:00:00  User=0.05 Sys=0.01 Mem=52.961
+
+skip_track_msr_horizontal() at adr.rs:189
+  not() at adr.utilities.rs:482
+metalx_b_gaps_top = metalx_b_gaps not shrink(layer1 = metalx_b_gaps, north = check_epsilon)
+  Function: not
+  Inputs: metal2_b_gaps.polygonlayer.0001, metalx_b_gaps_top.polygonlayer.0010
+  Outputs: metalx_b_gaps_top.polygonlayer.0011
+73252 unique polygons written.
+   Check Time=0:00:00  User=0.11 Sys=0.02 Mem=52.211
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  internal1() at adr.utilities.rs:717
+metalx_c_gaps_odd_small = internal1(layer1 = metalx_c_gaps_odd, distance = [metalx_e2e,(2 * metalx_e2e + metalx_adj_offset)), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: result.polygonlayer.0097
+  Outputs: metalx_c_gaps_odd_small.polygonlayer.0001
+65453 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=36.245
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  internal1() at adr.utilities.rs:717
+metalx_c_gaps_odd_small = internal1(layer1 = metalx_c_gaps_odd, distance = [metalx_e2e,(2 * metalx_e2e + metalx_adj_offset)), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_c_gaps_odd_small.polygonlayer.0001
+  Outputs: metalx_c_gaps_odd_small.polygonlayer.0002
+9418 width violations found.
+   Check Time=0:00:00  User=0.05 Sys=0.00 Mem=46.102
+
+skip_track_msr_horizontal() at adr.rs:189
+  external1() at adr.utilities.rs:511
+metalx_b_gaps_facing = external1(layer1 = metalx_b_gaps, distance < 0.104, extension = NONE, orientation = PARALLEL, direction = VERTICAL, projection = IN, projection_length = [0.000,0.056))
+  Function: external1
+  Inputs: metalx_b_gaps_facing.polygonlayer.0001
+  Outputs: metalx_b_gaps_facing.polygonlayer.0002
+1492 spacing violations found.
+   Check Time=0:00:00  User=0.25 Sys=0.01 Mem=46.040
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  internal1() at adr.utilities.rs:716
+metalx_b_gaps_even_small = internal1(layer1 = metalx_b_gaps_even, distance = [metalx_e2e,(2 * metalx_e2e + metalx_adj_offset)), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: result.polygonlayer.0105
+  Outputs: metalx_b_gaps_even_small.polygonlayer.0001
+36202 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=36.245
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  internal1() at adr.utilities.rs:716
+metalx_b_gaps_even_small = internal1(layer1 = metalx_b_gaps_even, distance = [metalx_e2e,(2 * metalx_e2e + metalx_adj_offset)), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_b_gaps_even_small.polygonlayer.0001
+  Outputs: metalx_b_gaps_even_small.polygonlayer.0002
+5641 width violations found.
+   Check Time=0:00:00  User=0.03 Sys=0.00 Mem=46.102
+
+and() at adr.rs:219
+metal3_c_gaps = (grow(layer1 = metal3_c, south = 10, north = 10, east = 0, west = 0) and boundary_m3_top_bloated) not metal3_c
+  Function: and
+  Inputs: metal3_c_gaps.polygonlayer.0002, boundary_m3_top_bloated.polygonlayer.0001
+  Outputs: metal3_c_gaps.polygonlayer.0003
+12309 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=44.024
+
+not() at adr.rs:219
+metal3_c_gaps = (grow(layer1 = metal3_c, south = 10, north = 10, east = 0, west = 0) and boundary_m3_top_bloated) not metal3_c
+  Function: not
+  Inputs: metal3_c_gaps.polygonlayer.0003, metal3_c.polygonlayer.0001
+  Outputs: metal3_c_gaps.polygonlayer.0004
+56945 unique polygons written.
+   Check Time=0:00:00  User=0.09 Sys=0.01 Mem=53.195
+
+or() at adr.rs:221
+metal3_proc_gaps = metal3_c_gaps or metal3_b_gaps
+  Function: or
+  Inputs: metal3_c_gaps.polygonlayer.0004, metal3_b_gaps.polygonlayer.0004
+  Outputs: metal3_proc_gaps.polygonlayer.0001
+119037 unique polygons written.
+   Check Time=0:00:00  User=0.10 Sys=0.01 Mem=44.572
+
+adjacent_track_msr_vertical() at adr.rs:230
+  or() at adr.utilities.rs:1527
+metalx_all = metalx_bloat or metalx_gaps
+  Function: or
+  Inputs: metalx_bloat.polygonlayer.0002, metal3_proc_gaps.polygonlayer.0001
+  Outputs: metalx_all.polygonlayer.0001
+25792 unique polygons written.
+   Check Time=0:00:00  User=0.22 Sys=0.02 Mem=46.572
+
+adjacent_track_msr_vertical() at adr.rs:230
+  util_color_space_vertical_even() at adr.utilities.rs:1528
+    polygon_features() at adr.utilities.rs:647
+result = polygon_features(layer, util_colorize_ver_space_even_f)
+  Function: polygon_features
+  Inputs: metalx_all.polygonlayer.0001
+  Outputs: result.polygonlayer.0109
+25792 unique polygons written.
+   Check Time=0:00:00  User=0.14 Sys=0.01 Mem=40.432
+
+adjacent_track_msr_vertical() at adr.rs:230
+  util_color_space_vertical_odd() at adr.utilities.rs:1529
+    polygon_features() at adr.utilities.rs:690
+result = polygon_features(layer, util_colorize_ver_space_odd_f)
+  Function: polygon_features
+  Inputs: result.polygonlayer.0109
+  Outputs: result.polygonlayer.0111
+WARNING - 64270 unique polygons written.
+   Check Time=0:00:00  User=0.29 Sys=0.03 Mem=56.587
+
+skip_track_msr_vertical() at adr.rs:229
+  shrink() at adr.utilities.rs:1342
+metalx_b_gaps_right = metalx_b_gaps not shrink(layer1 = metalx_b_gaps, east = 0.001)
+  Function: shrink
+  Inputs: metalx_b_gaps_right.polygonlayer.0005
+  Outputs: metalx_b_gaps_right.polygonlayer.0006
+62092 unique polygons written.
+   Check Time=0:00:00  User=0.05 Sys=0.01 Mem=52.961
+
+skip_track_msr_vertical() at adr.rs:229
+  not() at adr.utilities.rs:1342
+metalx_b_gaps_right = metalx_b_gaps not shrink(layer1 = metalx_b_gaps, east = 0.001)
+  Function: not
+  Inputs: metal3_b_gaps.polygonlayer.0004, metalx_b_gaps_right.polygonlayer.0006
+  Outputs: metalx_b_gaps_right.polygonlayer.0007
+62092 unique polygons written.
+   Check Time=0:00:00  User=0.11 Sys=0.01 Mem=52.211
+
+skip_track_msr_vertical() at adr.rs:229
+  shrink() at adr.utilities.rs:1344
+metalx_c_gaps_right = metalx_c_gaps not shrink(layer1 = metalx_c_gaps, east = 0.001)
+  Function: shrink
+  Inputs: metalx_c_gaps_right.polygonlayer.0005
+  Outputs: metalx_c_gaps_right.polygonlayer.0006
+56945 unique polygons written.
+   Check Time=0:00:00  User=0.06 Sys=0.01 Mem=52.961
+
+skip_track_msr_vertical() at adr.rs:229
+  not() at adr.utilities.rs:1344
+metalx_c_gaps_right = metalx_c_gaps not shrink(layer1 = metalx_c_gaps, east = 0.001)
+  Function: not
+  Inputs: metal3_c_gaps.polygonlayer.0004, metalx_c_gaps_right.polygonlayer.0006
+  Outputs: metalx_c_gaps_right.polygonlayer.0007
+56945 unique polygons written.
+   Check Time=0:00:00  User=0.09 Sys=0.01 Mem=52.211
+
+internal1() at adr.rs:206
+metal3_orig_e2e_viols = internal1(layer1 = metal3_orig_gaps, distance = [0.001,0.056), extension = RECTANGLE, direction = VERTICAL)
+  Function: internal1
+  Inputs: metal3_orig_gaps.polygonlayer.0001
+  Outputs: metal3_orig_e2e_viols.polygonlayer.0001
+119036 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=36.245
+
+skip_track_msr_vertical() at adr.rs:229
+  external1() at adr.utilities.rs:1370
+metalx_b_gaps_overlap = external1(layer1 = metalx_b, distance < 0.104, extension = NONE, orientation = PARALLEL, direction = HORIZONTAL, projection = IN, projection_length = [0.000,0.024))
+  Function: external1
+  Inputs: metal3_b.polygonlayer.0001
+  Outputs: metalx_b_gaps_overlap.polygonlayer.0001
+57859 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=36.245
+
+skip_track_msr_vertical() at adr.rs:229
+  external1() at adr.utilities.rs:1370
+metalx_b_gaps_overlap = external1(layer1 = metalx_b, distance < 0.104, extension = NONE, orientation = PARALLEL, direction = HORIZONTAL, projection = IN, projection_length = [0.000,0.024))
+  Function: external1
+  Inputs: metalx_b_gaps_overlap.polygonlayer.0001
+  Outputs: metalx_b_gaps_overlap.polygonlayer.0004
+171 spacing violations found.
+   Check Time=0:00:00  User=0.32 Sys=0.01 Mem=47.102
+
+skip_track_msr_horizontal() at adr.rs:189
+  delta_edge() at adr.utilities.rs:488
+metalx_c_facing_touching_line = delta_edge(layer1 = metalx_c_facing, delta_x = [0.056,0.136), delta_y = [0.076,0.103])
+  Function: delta_edge
+  Inputs: metalx_c_facing_touching_line.edgelayer.0001
+  Outputs: metalx_c_facing_touching_line.edgelayer.0003
+5307 unique edge sets written.
+   Check Time=0:00:00  User=0.02 Sys=0.01 Mem=46.102
+
+skip_track_msr_horizontal() at adr.rs:189
+  delta_edge() at adr.utilities.rs:493
+metalx_b_facing_touching_line = delta_edge(layer1 = metalx_b_facing, delta_x = [0.056,0.136), delta_y = [0.076,0.103])
+  Function: delta_edge
+  Inputs: metalx_b_facing.edgelayer.0002
+  Outputs: metalx_b_facing_touching_line.edgelayer.0001
+4046 unique edge sets written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=36.229
+
+skip_track_msr_horizontal() at adr.rs:189
+  delta_edge() at adr.utilities.rs:493
+metalx_b_facing_touching_line = delta_edge(layer1 = metalx_b_facing, delta_x = [0.056,0.136), delta_y = [0.076,0.103])
+  Function: delta_edge
+  Inputs: metalx_b_facing_touching_line.edgelayer.0001
+  Outputs: metalx_b_facing_touching_line.edgelayer.0003
+2259 unique edge sets written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=43.055
+
+skip_track_msr_vertical() at adr.rs:229
+  delta_edge() at adr.utilities.rs:1353
+metalx_b_facing_touching_line = delta_edge(layer1 = metalx_b_facing, delta_y = [0.056,0.136), delta_x = [0.076,0.103])
+  Function: delta_edge
+  Inputs: metalx_b_facing.edgelayer.0001
+  Outputs: metalx_b_facing_touching_line.edgelayer.0002
+2443 unique edge sets written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=36.229
+
+skip_track_msr_vertical() at adr.rs:229
+  delta_edge() at adr.utilities.rs:1348
+metalx_c_facing_touching_line = delta_edge(layer1 = metalx_c_facing, delta_y = [0.056,0.136), delta_x = [0.076,0.103])
+  Function: delta_edge
+  Inputs: metalx_c_facing.edgelayer.0001
+  Outputs: metalx_c_facing_touching_line.edgelayer.0002
+2185 unique edge sets written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=36.229
+
+skip_track_msr_vertical() at adr.rs:229
+  delta_edge() at adr.utilities.rs:1353
+metalx_b_facing_touching_line = delta_edge(layer1 = metalx_b_facing, delta_y = [0.056,0.136), delta_x = [0.076,0.103])
+  Function: delta_edge
+  Inputs: metalx_b_facing_touching_line.edgelayer.0002
+  Outputs: metalx_b_facing_touching_line.edgelayer.0004
+1484 unique edge sets written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=43.086
+
+skip_track_msr_vertical() at adr.rs:229
+  delta_edge() at adr.utilities.rs:1348
+metalx_c_facing_touching_line = delta_edge(layer1 = metalx_c_facing, delta_y = [0.056,0.136), delta_x = [0.076,0.103])
+  Function: delta_edge
+  Inputs: metalx_c_facing_touching_line.edgelayer.0002
+  Outputs: metalx_c_facing_touching_line.edgelayer.0004
+1161 unique edge sets written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=43.055
+
+skip_track_msr_horizontal() at adr.rs:189
+  edge_extents() at adr.utilities.rs:489
+metalx_c_facing_touching_area = edge_extents(metalx_c_facing_touching_line)
+  Function: edge_extents
+  Inputs: metalx_c_facing_touching_line.edgelayer.0003
+  Outputs: metalx_c_facing_touching_area.edgelayer.0001
+5307 unique edge sets written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=38.416
+
+skip_track_msr_horizontal() at adr.rs:189
+  edge_extents() at adr.utilities.rs:494
+metalx_b_facing_touching_area = edge_extents(metalx_b_facing_touching_line)
+  Function: edge_extents
+  Inputs: metalx_b_facing_touching_line.edgelayer.0003
+  Outputs: metalx_b_facing_touching_area.edgelayer.0001
+2259 unique edge sets written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=37.728
+
+skip_track_msr_vertical() at adr.rs:229
+  edge_extents() at adr.utilities.rs:1354
+metalx_b_facing_touching_area = edge_extents(metalx_b_facing_touching_line)
+  Function: edge_extents
+  Inputs: metalx_b_facing_touching_line.edgelayer.0004
+  Outputs: metalx_b_facing_touching_area.edgelayer.0002
+1484 unique edge sets written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=37.728
+
+skip_track_msr_vertical() at adr.rs:229
+  edge_extents() at adr.utilities.rs:1349
+metalx_c_facing_touching_area = edge_extents(metalx_c_facing_touching_line)
+  Function: edge_extents
+  Inputs: metalx_c_facing_touching_line.edgelayer.0004
+  Outputs: metalx_c_facing_touching_area.edgelayer.0002
+1161 unique edge sets written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=37.728
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  grow() at adr.utilities.rs:728
+metalx_overlap_gaps_grow = grow(layer1 = metalx_overlap_gaps, north = check_epsilon, south = check_epsilon)
+  Function: grow
+  Inputs: metalx_overlap_gaps.polygonlayer.0003
+  Outputs: metalx_overlap_gaps_grow.polygonlayer.0002
+6078 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=36.213
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  grow() at adr.utilities.rs:725
+metalx_facing_gaps_grow = grow(layer1 = metalx_facing_gaps, north = check_epsilon, south = check_epsilon)
+  Function: grow
+  Inputs: metalx_facing_gaps.polygonlayer.0001
+  Outputs: metalx_facing_gaps_grow.polygonlayer.0001
+6045 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=36.213
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  or() at adr.utilities.rs:720
+metalx_c_gaps_small = metalx_c_gaps_even_small or metalx_c_gaps_odd_small
+  Function: or
+  Inputs: metalx_c_gaps_even_small.polygonlayer.0002, metalx_c_gaps_odd_small.polygonlayer.0002
+  Outputs: metalx_c_gaps_small.polygonlayer.0001
+15880 unique polygons written.
+   Check Time=0:00:00  User=0.02 Sys=0.00 Mem=42.541
+
+skip_track_msr_horizontal() at adr.rs:189
+  edge_extents() at adr.utilities.rs:489
+metalx_c_facing_touching_area = edge_extents(metalx_c_facing_touching_line)
+  Function: edge_extents
+  Inputs: metalx_c_facing_touching_area.edgelayer.0001
+  Outputs: metalx_c_facing_touching_area.polygonlayer.0001
+5307 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=41.354
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  or() at adr.utilities.rs:721
+metalx_b_gaps_small = metalx_b_gaps_even_small or metalx_b_gaps_odd_small
+  Function: or
+  Inputs: metalx_b_gaps_even_small.polygonlayer.0002, metalx_b_gaps_odd_small.polygonlayer.0002
+  Outputs: metalx_b_gaps_small.polygonlayer.0001
+13138 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=42.541
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  or() at adr.utilities.rs:722
+metalx_gaps_small = metalx_c_gaps_small or metalx_b_gaps_small
+  Function: or
+  Inputs: metalx_c_gaps_small.polygonlayer.0001, metalx_b_gaps_small.polygonlayer.0001
+  Outputs: metalx_gaps_small.polygonlayer.0002
+29018 unique polygons written.
+   Check Time=0:00:00  User=0.03 Sys=0.00 Mem=42.572
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  shrink() at adr.utilities.rs:737
+metalx_c_gaps_odd_small_top = metalx_c_gaps_odd_small not shrink(layer1 = metalx_c_gaps_odd_small, north = check_epsilon)
+  Function: shrink
+  Inputs: metalx_c_gaps_odd_small.polygonlayer.0002
+  Outputs: metalx_c_gaps_odd_small_top.polygonlayer.0001
+9418 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=36.229
+
+skip_track_msr_horizontal() at adr.rs:189
+  edge_extents() at adr.utilities.rs:494
+metalx_b_facing_touching_area = edge_extents(metalx_b_facing_touching_line)
+  Function: edge_extents
+  Inputs: metalx_b_facing_touching_area.edgelayer.0001
+  Outputs: metalx_b_facing_touching_area.polygonlayer.0001
+2259 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=40.354
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  grow() at adr.utilities.rs:728
+metalx_overlap_gaps_grow = grow(layer1 = metalx_overlap_gaps, north = check_epsilon, south = check_epsilon)
+  Function: grow
+  Inputs: metalx_overlap_gaps_grow.polygonlayer.0002
+  Outputs: metalx_overlap_gaps_grow.polygonlayer.0003
+6078 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.01 Mem=47.431
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  shrink() at adr.utilities.rs:735
+metalx_b_gaps_even_small_top = metalx_b_gaps_even_small not shrink(layer1 = metalx_b_gaps_even_small, north = check_epsilon)
+  Function: shrink
+  Inputs: metalx_b_gaps_even_small.polygonlayer.0002
+  Outputs: metalx_b_gaps_even_small_top.polygonlayer.0001
+5641 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=36.229
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  shrink() at adr.utilities.rs:737
+metalx_c_gaps_odd_small_top = metalx_c_gaps_odd_small not shrink(layer1 = metalx_c_gaps_odd_small, north = check_epsilon)
+  Function: shrink
+  Inputs: metalx_c_gaps_odd_small_top.polygonlayer.0001
+  Outputs: metalx_c_gaps_odd_small_top.polygonlayer.0002
+9418 unique polygons written.
+   Check Time=0:00:00  User=0.02 Sys=0.00 Mem=52.946
+
+skip_track_msr_horizontal() at adr.rs:189
+  grow() at adr.utilities.rs:495
+metalx_b_facing_touching_area_grow = grow(layer1 = metalx_b_facing_touching_area, north = check_epsilon, south = check_epsilon)
+  Function: grow
+  Inputs: metalx_b_facing_touching_area.polygonlayer.0001
+  Outputs: metalx_b_facing_touching_area_grow.polygonlayer.0002
+2259 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=36.229
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  or() at adr.utilities.rs:730
+metalx_all_gaps_grow = metalx_facing_gaps_grow or metalx_overlap_gaps_grow
+  Function: or
+  Inputs: metalx_facing_gaps_grow.polygonlayer.0003, metalx_overlap_gaps_grow.polygonlayer.0003
+  Outputs: metalx_all_gaps_grow.polygonlayer.0001
+12123 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=42.541
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  interacting() at adr.utilities.rs:742
+metalx_all_gaps_interact_small = interacting(layer1 = metalx_all_gaps_grow, layer2 = metalx_gaps_small, count = 2)
+  Function: interacting
+  Inputs: metalx_all_gaps_grow.polygonlayer.0001, metalx_gaps_small.polygonlayer.0002
+  Outputs: metalx_all_gaps_interact_small.polygonlayer.0001
+16 unique polygons written.
+   Check Time=0:00:00  User=0.03 Sys=0.01 Mem=44.899
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  interacting() at adr.utilities.rs:752
+metalx_check3 = ((metalx_all_gaps_interact_small interacting metalx_c_gaps_odd_small_top) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_odd_small_bot)) or ((metalx_c_gaps_odd_small_top or metalx_b_gaps_odd_small_bot) interacting ((metalx_all_gaps_interact_small interacting metalx_c_gaps_odd_small_top) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_odd_small_bot)))
+  Function: interacting
+  Inputs: metalx_all_gaps_interact_small.polygonlayer.0001, metalx_c_gaps_odd_small_top.polygonlayer.0003
+  Outputs: metalx_check3.polygonlayer.0001
+3 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.01 Mem=52.071
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  not() at adr.utilities.rs:740
+metalx_b_gaps_odd_small_bot = metalx_b_gaps_odd_small not shrink(layer1 = metalx_b_gaps_odd_small, south = check_epsilon)
+  Function: not
+  Inputs: metalx_b_gaps_odd_small.polygonlayer.0002, metalx_b_gaps_odd_small_bot.polygonlayer.0001
+  Outputs: metalx_b_gaps_odd_small_bot.polygonlayer.0002
+7493 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=52.180
+
+skip_track_msr_horizontal() at adr.rs:189
+  inside() at adr.utilities.rs:497
+metalx_c_bot_top_both_inside = (metalx_c_facing_touching_area_grow interacting (metalx_c_gaps_top inside metalx_c_facing_touching_area_grow)) and (metalx_c_facing_touching_area_grow interacting (metalx_c_gaps_bot inside metalx_c_facing_touching_area_grow))
+  Function: inside
+  Inputs: metalx_c_gaps_top.polygonlayer.0011, metalx_c_facing_touching_area_grow.polygonlayer.0003
+  Outputs: metalx_c_bot_top_both_inside.polygonlayer.0001
+898 unique polygons written.
+   Check Time=0:00:00  User=0.06 Sys=0.02 Mem=57.226
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  not() at adr.utilities.rs:733
+metalx_c_gaps_even_small_top = metalx_c_gaps_even_small not shrink(layer1 = metalx_c_gaps_even_small, north = check_epsilon)
+  Function: not
+  Inputs: metalx_c_gaps_even_small.polygonlayer.0002, metalx_c_gaps_even_small_top.polygonlayer.0002
+  Outputs: metalx_c_gaps_even_small_top.polygonlayer.0003
+6457 unique polygons written.
+   Check Time=0:00:00  User=0.02 Sys=0.00 Mem=54.242
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  not() at adr.utilities.rs:734
+metalx_c_gaps_even_small_bot = metalx_c_gaps_even_small not shrink(layer1 = metalx_c_gaps_even_small, south = check_epsilon)
+  Function: not
+  Inputs: metalx_c_gaps_even_small.polygonlayer.0002, metalx_c_gaps_even_small_bot.polygonlayer.0001
+  Outputs: metalx_c_gaps_even_small_bot.polygonlayer.0002
+6457 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=54.242
+
+skip_track_msr_vertical() at adr.rs:229
+  grow() at adr.utilities.rs:1355
+metalx_b_facing_touching_area_grow = grow(layer1 = metalx_b_facing_touching_area, east = 0.001, west = 0.001)
+  Function: grow
+  Inputs: metalx_b_facing_touching_area_grow.polygonlayer.0001
+  Outputs: metalx_b_facing_touching_area_grow.polygonlayer.0004
+1484 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=46.509
+
+skip_track_msr_vertical() at adr.rs:229
+  inside() at adr.utilities.rs:1358
+metalx_b_left_right_both_inside = (metalx_b_facing_touching_area_grow interacting (metalx_b_gaps_right inside metalx_b_facing_touching_area_grow)) and (metalx_b_facing_touching_area_grow interacting (metalx_b_gaps_left inside metalx_b_facing_touching_area_grow))
+  Function: inside
+  Inputs: metalx_b_gaps_left.polygonlayer.0005, metalx_b_facing_touching_area_grow.polygonlayer.0004
+  Outputs: metalx_b_left_right_both_inside.polygonlayer.0002
+17 unique polygons written.
+   Check Time=0:00:00  User=0.12 Sys=0.01 Mem=67.257
+
+adjacent_track_msr_vertical() at adr.rs:230
+  grow() at adr.utilities.rs:1537
+metalx_facing_gaps_grow = grow(layer1 = metalx_facing_gaps, west = check_epsilon, east = check_epsilon)
+  Function: grow
+  Inputs: metalx_facing_gaps.polygonlayer.0002
+  Outputs: metalx_facing_gaps_grow.polygonlayer.0002
+1676 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=39.385
+
+skip_track_msr_vertical() at adr.rs:229
+  grow() at adr.utilities.rs:1350
+metalx_c_facing_touching_area_grow = grow(layer1 = metalx_c_facing_touching_area, east = 0.001, west = 0.001)
+  Function: grow
+  Inputs: metalx_c_facing_touching_area_grow.polygonlayer.0002
+  Outputs: metalx_c_facing_touching_area_grow.polygonlayer.0004
+1161 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=45.603
+
+skip_track_msr_vertical() at adr.rs:229
+  inside() at adr.utilities.rs:1357
+metalx_c_left_right_both_inside = (metalx_c_facing_touching_area_grow interacting (metalx_c_gaps_right inside metalx_c_facing_touching_area_grow)) and (metalx_c_facing_touching_area_grow interacting (metalx_c_gaps_left inside metalx_c_facing_touching_area_grow))
+  Function: inside
+  Inputs: metalx_c_gaps_left.polygonlayer.0005, metalx_c_facing_touching_area_grow.polygonlayer.0004
+  Outputs: metalx_c_left_right_both_inside.polygonlayer.0002
+13 unique polygons written.
+   Check Time=0:00:00  User=0.11 Sys=0.02 Mem=68.367
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  or() at adr.utilities.rs:768
+metalx_check7 = ((metalx_all_gaps_interact_small interacting metalx_c_gaps_odd_small_top) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_even_small_bot)) or ((metalx_c_gaps_odd_small_top or metalx_b_gaps_even_small_bot) interacting ((metalx_all_gaps_interact_small interacting metalx_c_gaps_odd_small_top) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_even_small_bot)))
+  Function: or
+  Inputs: metalx_c_gaps_odd_small_top.polygonlayer.0003, metalx_b_gaps_even_small_bot.polygonlayer.0002
+  Outputs: metalx_check7.polygonlayer.0001
+15048 unique polygons written.
+   Check Time=0:00:00  User=0.02 Sys=0.00 Mem=46.790
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  or() at adr.utilities.rs:772
+metalx_check8 = ((metalx_all_gaps_interact_small interacting metalx_c_gaps_odd_small_bot) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_even_small_top)) or ((metalx_c_gaps_odd_small_bot or metalx_b_gaps_even_small_top) interacting ((metalx_all_gaps_interact_small interacting metalx_c_gaps_odd_small_bot) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_even_small_top)))
+  Function: or
+  Inputs: metalx_c_gaps_odd_small_bot.polygonlayer.0002, metalx_b_gaps_even_small_top.polygonlayer.0003
+  Outputs: metalx_check8.polygonlayer.0001
+15048 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=46.790
+
+skip_track_msr_vertical() at adr.rs:229
+  interacting() at adr.utilities.rs:1358
+metalx_b_left_right_both_inside = (metalx_b_facing_touching_area_grow interacting (metalx_b_gaps_right inside metalx_b_facing_touching_area_grow)) and (metalx_b_facing_touching_area_grow interacting (metalx_b_gaps_left inside metalx_b_facing_touching_area_grow))
+  Function: interacting
+  Inputs: metalx_b_facing_touching_area_grow.polygonlayer.0004, metalx_b_left_right_both_inside.polygonlayer.0002
+  Outputs: metalx_b_left_right_both_inside.polygonlayer.0003
+17 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=49.367
+
+adjacent_track_msr_vertical() at adr.rs:230
+  or() at adr.utilities.rs:1534
+metalx_gaps_small = metalx_gaps_even_small or metalx_gaps_odd_small
+  Function: or
+  Inputs: metalx_gaps_even_small.polygonlayer.0002, metalx_gaps_odd_small.polygonlayer.0002
+  Outputs: metalx_gaps_small.polygonlayer.0001
+4745 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=46.821
+
+adjacent_track_msr_vertical() at adr.rs:230
+  shrink() at adr.utilities.rs:1544
+metalx_gaps_even_small_right = metalx_gaps_even_small not shrink(layer1 = metalx_gaps_even_small, east = check_epsilon)
+  Function: shrink
+  Inputs: metalx_gaps_even_small_left.polygonlayer.0001
+  Outputs: metalx_gaps_even_small_right.polygonlayer.0001
+2550 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=55.211
+
+adjacent_track_msr_vertical() at adr.rs:230
+  shrink() at adr.utilities.rs:1543
+metalx_gaps_even_small_left = metalx_gaps_even_small not shrink(layer1 = metalx_gaps_even_small, west = check_epsilon)
+  Function: shrink
+  Inputs: metalx_gaps_even_small_left.polygonlayer.0001
+  Outputs: metalx_gaps_even_small_left.polygonlayer.0002
+2550 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=55.211
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  or() at adr.utilities.rs:764
+metalx_check6 = ((metalx_all_gaps_interact_small interacting metalx_c_gaps_even_small_bot) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_odd_small_top)) or ((metalx_c_gaps_even_small_bot or metalx_b_gaps_odd_small_top) interacting ((metalx_all_gaps_interact_small interacting metalx_c_gaps_even_small_bot) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_odd_small_top)))
+  Function: or
+  Inputs: metalx_c_gaps_even_small_bot.polygonlayer.0002, metalx_b_gaps_odd_small_top.polygonlayer.0003
+  Outputs: metalx_check6.polygonlayer.0001
+13950 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.01 Mem=46.821
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  or() at adr.utilities.rs:760
+metalx_check5 = ((metalx_all_gaps_interact_small interacting metalx_c_gaps_even_small_top) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_odd_small_bot)) or ((metalx_c_gaps_even_small_top or metalx_b_gaps_odd_small_bot) interacting ((metalx_all_gaps_interact_small interacting metalx_c_gaps_even_small_top) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_odd_small_bot)))
+  Function: or
+  Inputs: metalx_c_gaps_even_small_top.polygonlayer.0003, metalx_b_gaps_odd_small_bot.polygonlayer.0002
+  Outputs: metalx_check5.polygonlayer.0001
+13950 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=46.821
+
+skip_track_msr_vertical() at adr.rs:229
+  interacting() at adr.utilities.rs:1357
+metalx_c_left_right_both_inside = (metalx_c_facing_touching_area_grow interacting (metalx_c_gaps_right inside metalx_c_facing_touching_area_grow)) and (metalx_c_facing_touching_area_grow interacting (metalx_c_gaps_left inside metalx_c_facing_touching_area_grow))
+  Function: interacting
+  Inputs: metalx_c_facing_touching_area_grow.polygonlayer.0004, metalx_c_left_right_both_inside.polygonlayer.0002
+  Outputs: metalx_c_left_right_both_inside.polygonlayer.0003
+13 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=48.305
+
+adjacent_track_msr_vertical() at adr.rs:230
+  shrink() at adr.utilities.rs:1546
+metalx_gaps_odd_small_right = metalx_gaps_odd_small not shrink(layer1 = metalx_gaps_odd_small, east = check_epsilon)
+  Function: shrink
+  Inputs: metalx_gaps_odd_small_left.polygonlayer.0001
+  Outputs: metalx_gaps_odd_small_right.polygonlayer.0001
+2195 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=55.211
+
+adjacent_track_msr_vertical() at adr.rs:230
+  shrink() at adr.utilities.rs:1545
+metalx_gaps_odd_small_left = metalx_gaps_odd_small not shrink(layer1 = metalx_gaps_odd_small, west = check_epsilon)
+  Function: shrink
+  Inputs: metalx_gaps_odd_small_left.polygonlayer.0001
+  Outputs: metalx_gaps_odd_small_left.polygonlayer.0002
+2195 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=55.211
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  or() at adr.utilities.rs:744
+metalx_check1 = ((metalx_all_gaps_interact_small interacting metalx_c_gaps_even_small_top) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_even_small_bot)) or ((metalx_c_gaps_even_small_top or metalx_b_gaps_even_small_bot) interacting ((metalx_all_gaps_interact_small interacting metalx_c_gaps_even_small_top) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_even_small_bot)))
+  Function: or
+  Inputs: metalx_c_gaps_even_small_top.polygonlayer.0003, metalx_b_gaps_even_small_bot.polygonlayer.0002
+  Outputs: metalx_check1.polygonlayer.0003
+12094 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=46.821
+
+skip_track_msr_horizontal() at adr.rs:189
+  or() at adr.utilities.rs:505
+metalx_c_gaps_bot_top_both_inside_1 = (metalx_c_gaps_facing or metalx_c_gaps_overlap) inside metalx_c_bot_top_both_inside
+  Function: or
+  Inputs: metalx_c_gaps_facing.polygonlayer.0002, metalx_c_gaps_overlap.polygonlayer.0003
+  Outputs: metalx_c_gaps_bot_top_both_inside_1.polygonlayer.0001
+6032 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=46.821
+
+adjacent_track_msr_vertical() at adr.rs:230
+  not() at adr.utilities.rs:1543
+metalx_gaps_even_small_left = metalx_gaps_even_small not shrink(layer1 = metalx_gaps_even_small, west = check_epsilon)
+  Function: not
+  Inputs: metalx_gaps_even_small.polygonlayer.0002, metalx_gaps_even_small_left.polygonlayer.0002
+  Outputs: metalx_gaps_even_small_left.polygonlayer.0003
+2550 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=54.429
+
+adjacent_track_msr_vertical() at adr.rs:230
+  not() at adr.utilities.rs:1544
+metalx_gaps_even_small_right = metalx_gaps_even_small not shrink(layer1 = metalx_gaps_even_small, east = check_epsilon)
+  Function: not
+  Inputs: metalx_gaps_even_small.polygonlayer.0002, metalx_gaps_even_small_right.polygonlayer.0001
+  Outputs: metalx_gaps_even_small_right.polygonlayer.0002
+2550 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=54.429
+
+skip_track_msr_horizontal() at adr.rs:189
+  or() at adr.utilities.rs:513
+metalx_b_gaps_bot_top_both_inside_1 = (metalx_b_gaps_facing or metalx_b_gaps_overlap) inside metalx_b_bot_top_both_inside
+  Function: or
+  Inputs: metalx_b_gaps_facing.polygonlayer.0002, metalx_b_gaps_overlap.polygonlayer.0003
+  Outputs: metalx_b_gaps_bot_top_both_inside_1.polygonlayer.0001
+2000 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=44.821
+
+skip_track_msr_vertical() at adr.rs:229
+  or() at adr.utilities.rs:1371
+metalx_b_gaps_left_right_both_inside_1 = (metalx_b_gaps_facing or metalx_b_gaps_overlap) inside metalx_b_left_right_both_inside
+  Function: or
+  Inputs: metalx_b_gaps_facing.polygonlayer.0004, metalx_b_gaps_overlap.polygonlayer.0004
+  Outputs: metalx_b_gaps_left_right_both_inside_1.polygonlayer.0001
+997 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=44.806
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  and() at adr.utilities.rs:760
+metalx_check5 = ((metalx_all_gaps_interact_small interacting metalx_c_gaps_even_small_top) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_odd_small_bot)) or ((metalx_c_gaps_even_small_top or metalx_b_gaps_odd_small_bot) interacting ((metalx_all_gaps_interact_small interacting metalx_c_gaps_even_small_top) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_odd_small_bot)))
+  Function: and
+  Inputs: metalx_check1.polygonlayer.0001, metalx_check3.polygonlayer.0002
+  Outputs: metalx_check5.polygonlayer.0002
+3 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=45.289
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  interacting() at adr.utilities.rs:760
+metalx_check5 = ((metalx_all_gaps_interact_small interacting metalx_c_gaps_even_small_top) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_odd_small_bot)) or ((metalx_c_gaps_even_small_top or metalx_b_gaps_odd_small_bot) interacting ((metalx_all_gaps_interact_small interacting metalx_c_gaps_even_small_top) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_odd_small_bot)))
+  Function: interacting
+  Inputs: metalx_check5.polygonlayer.0001, metalx_check5.polygonlayer.0002
+  Outputs: metalx_check5.polygonlayer.0003
+6 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.01 Mem=48.289
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  or() at adr.utilities.rs:756
+metalx_check4 = ((metalx_all_gaps_interact_small interacting metalx_c_gaps_odd_small_bot) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_odd_small_top)) or ((metalx_c_gaps_odd_small_bot or metalx_b_gaps_odd_small_top) interacting ((metalx_all_gaps_interact_small interacting metalx_c_gaps_odd_small_bot) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_odd_small_top)))
+  Function: or
+  Inputs: metalx_check4.polygonlayer.0004, metalx_check4.polygonlayer.0006
+  Outputs: metalx_check4.polygonlayer.0007
+6 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=44.806
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  or() at adr.utilities.rs:744
+metalx_check1 = ((metalx_all_gaps_interact_small interacting metalx_c_gaps_even_small_top) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_even_small_bot)) or ((metalx_c_gaps_even_small_top or metalx_b_gaps_even_small_bot) interacting ((metalx_all_gaps_interact_small interacting metalx_c_gaps_even_small_top) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_even_small_bot)))
+  Function: or
+  Inputs: metalx_check1.polygonlayer.0004, metalx_check1.polygonlayer.0008
+  Outputs: metalx_check1.polygonlayer.0009
+2 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=44.806
+
+adjacent_track_msr_vertical() at adr.rs:230
+  and() at adr.utilities.rs:1554
+metalx_check2 = ((metalx_all_gaps_interact_small interacting metalx_gaps_odd_small_left) and (metalx_all_gaps_interact_small interacting metalx_gaps_even_small_right)) or ((metalx_gaps_odd_small_left or metalx_gaps_even_small_right) interacting ((metalx_all_gaps_interact_small interacting metalx_gaps_odd_small_left) and (metalx_all_gaps_interact_small interacting metalx_gaps_even_small_right)))
+  Function: and
+  Inputs: metalx_check2.polygonlayer.0005, metalx_check1.polygonlayer.0006
+  Outputs: metalx_check2.polygonlayer.0009
+Input layer "metalx_check2.polygonlayer.0005" is empty.
+Input layer "metalx_check1.polygonlayer.0006" is empty.
+No output written.
+Layer "metalx_check2.polygonlayer.0009" is empty.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=35.416
+
+adjacent_track_msr_vertical() at adr.rs:230
+  interacting() at adr.utilities.rs:1554
+metalx_check2 = ((metalx_all_gaps_interact_small interacting metalx_gaps_odd_small_left) and (metalx_all_gaps_interact_small interacting metalx_gaps_even_small_right)) or ((metalx_gaps_odd_small_left or metalx_gaps_even_small_right) interacting ((metalx_all_gaps_interact_small interacting metalx_gaps_odd_small_left) and (metalx_all_gaps_interact_small interacting metalx_gaps_even_small_right)))
+  Function: interacting
+  Inputs: metalx_check2.polygonlayer.0006, metalx_check2.polygonlayer.0009
+  Outputs: metalx_check2.polygonlayer.0010
+Input layer "metalx_check2.polygonlayer.0009" is empty.
+No output written.
+Layer "metalx_check2.polygonlayer.0010" is empty.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=35.416
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  or() at adr.utilities.rs:772
+metalx_check8 = ((metalx_all_gaps_interact_small interacting metalx_c_gaps_odd_small_bot) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_even_small_top)) or ((metalx_c_gaps_odd_small_bot or metalx_b_gaps_even_small_top) interacting ((metalx_all_gaps_interact_small interacting metalx_c_gaps_odd_small_bot) and (metalx_all_gaps_interact_small interacting metalx_b_gaps_even_small_top)))
+  Function: or
+  Inputs: metalx_check8.polygonlayer.0002, metalx_check8.polygonlayer.0003
+  Outputs: metalx_check8.polygonlayer.0004
+Input layer "metalx_check8.polygonlayer.0002" is empty.
+Input layer "metalx_check8.polygonlayer.0003" is empty.
+No output written.
+Layer "metalx_check8.polygonlayer.0004" is empty.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=35.416
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  polygon_extents() at adr.utilities.rs:757
+metalx_check4_bbox = polygon_extents(metalx_check4)
+  Function: polygon_extents
+  Inputs: metalx_check4.polygonlayer.0007
+  Outputs: metalx_check4_bbox.polygonlayer.0001
+6 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=43.040
+
+skip_track_msr_horizontal() at adr.rs:189
+  internal1() at adr.utilities.rs:509
+metalx_c_gaps_bot_top_both_inside_and_b_gaps_small = internal1(layer1 = metalx_c_gaps_bot_top_both_inside_and_b_gaps, distance = [0.056,10.000), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_c_gaps_bot_top_both_inside_and_b_gaps.polygonlayer.0001
+  Outputs: metalx_c_gaps_bot_top_both_inside_and_b_gaps_small.polygonlayer.0001
+716 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=40.494
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  polygon_extents() at adr.utilities.rs:761
+metalx_check5_bbox = polygon_extents(metalx_check5)
+  Function: polygon_extents
+  Inputs: metalx_check5_bbox.polygonlayer.0001
+  Outputs: metalx_check5_bbox.polygonlayer.0002
+3 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.01 Mem=41.681
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  polygon_extents() at adr.utilities.rs:765
+metalx_check6_bbox = polygon_extents(metalx_check6)
+  Function: polygon_extents
+  Inputs: metalx_check6_bbox.polygonlayer.0001
+  Outputs: metalx_check6_bbox.polygonlayer.0002
+1 unique polygon written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=41.665
+
+skip_track_msr_horizontal() at adr.rs:189
+  internal1() at adr.utilities.rs:517
+metalx_b_gaps_bot_top_both_inside_and_c_gaps_small = internal1(layer1 = metalx_b_gaps_bot_top_both_inside_and_c_gaps, distance = [0.056,10.000), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_b_gaps_bot_top_both_inside_and_c_gaps_small.polygonlayer.0001
+  Outputs: metalx_b_gaps_bot_top_both_inside_and_c_gaps_small.polygonlayer.0002
+716 width violations found.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=45.320
+
+adjacent_msr_checks_horizontal() at adr.rs:190
+  internal1() at adr.utilities.rs:770
+metalx_check7_box_err = internal1(layer1 = metalx_check7_bbox, distance < (2 * metalx_e2e + metalx_adj_offset), extension = RECTANGLE, direction = HORIZONTAL)
+  Function: internal1
+  Inputs: metalx_check7_bbox.polygonlayer.0002
+  Outputs: metalx_check7_box_err.polygonlayer.0001
+1 unique polygon written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=40.510
+
+adjacent_track_msr_vertical() at adr.rs:230
+  polygon_extents() at adr.utilities.rs:1551
+metalx_check1_bbox = polygon_extents(metalx_check1)
+  Function: polygon_extents
+  Inputs: metalx_check1.polygonlayer.0012
+  Outputs: metalx_check1_bbox.polygonlayer.0003
+Layer "metalx_check1.polygonlayer.0012" is empty.
+No output written.
+Layer "metalx_check1_bbox.polygonlayer.0003" is empty.
+No output written.
+Layer "metalx_check1_bbox.polygonlayer.0003" is empty.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=35.416
+
+skip_track_msr_horizontal() at adr.rs:189
+  not_interacting() at adr.utilities.rs:524
+result = (metalx_c_gaps interacting (metalx_c_bot_top_both_inside not_interacting metalx_c_gaps_bot_top_both_inside_and_b_gaps_small)) or (metalx_b_gaps interacting (metalx_b_bot_top_both_inside not_interacting metalx_b_gaps_bot_top_both_inside_and_c_gaps_small))
+  Function: not_interacting
+  Inputs: metalx_b_bot_top_both_inside.polygonlayer.0005, metalx_b_gaps_bot_top_both_inside_and_c_gaps_small.polygonlayer.0002
+  Outputs: result.polygonlayer.0113
+No output written.
+Layer "result.polygonlayer.0113" is empty.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=52.211
+
+skip_track_msr_horizontal() at adr.rs:189
+  interacting() at adr.utilities.rs:524
+result = (metalx_c_gaps interacting (metalx_c_bot_top_both_inside not_interacting metalx_c_gaps_bot_top_both_inside_and_b_gaps_small)) or (metalx_b_gaps interacting (metalx_b_bot_top_both_inside not_interacting metalx_b_gaps_bot_top_both_inside_and_c_gaps_small))
+  Function: interacting
+  Inputs: metal2_b_gaps.polygonlayer.0001, result.polygonlayer.0113
+  Outputs: result.polygonlayer.0121
+Input layer "result.polygonlayer.0113" is empty.
+No output written.
+Layer "result.polygonlayer.0121" is empty.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=36.416
+
+skip_track_msr_horizontal() at adr.rs:189
+  or() at adr.utilities.rs:524
+result = (metalx_c_gaps interacting (metalx_c_bot_top_both_inside not_interacting metalx_c_gaps_bot_top_both_inside_and_b_gaps_small)) or (metalx_b_gaps interacting (metalx_b_bot_top_both_inside not_interacting metalx_b_gaps_bot_top_both_inside_and_c_gaps_small))
+  Function: or
+  Inputs: result.polygonlayer.0116, result.polygonlayer.0121
+  Outputs: result.polygonlayer.0122
+Input layer "result.polygonlayer.0116" is empty.
+Input layer "result.polygonlayer.0121" is empty.
+No output written.
+Layer "result.polygonlayer.0122" is empty.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=36.416
+
+copy() at adr.rs:256
+copy(m2_alt_msr_viols)
+  Comment: "M2 Skip track MSR"
+  Function: copy
+  Inputs: result.polygonlayer.0122
+Input layer "result.polygonlayer.0122" is empty.
+No output written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=37.416
+
+copy() at adr.rs:256
+copy(m2_alt_msr_viols)
+  Function: copy
+  Inputs: metal2_input.polygonlayer.0019, boundary_orig.polygonlayer.0019
+   Tagging Time=0:00:00  User=0.00 Sys=0.00 Mem=38.432
+
+copy() at adr.rs:274
+copy(metal3_adj_msr_viols)
+  Function: copy
+  Inputs: metal3_input.polygonlayer.0019, boundary_orig.polygonlayer.0019
+   Tagging Time=0:00:00  User=0.00 Sys=0.00 Mem=38.432
+
+or_list() at adr.rs:193
+metal2_x_interaction_markers = (metal2_orig_c_gaps or metal2_orig_b_gaps) interacting (metal2_overfill or m2_e2e_msr_viols or m2_alt_msr_viols or m2_adj_msr_viols)
+  Function: or_list
+  Inputs: metal2_overfill.polygonlayer.0001, m2_e2e_msr_viols.polygonlayer.0001, result.polygonlayer.0122, result.polygonlayer.0120
+  Outputs: metal2_x_interaction_markers.polygonlayer.0001
+Input layer "metal2_overfill.polygonlayer.0001" is empty.
+Input layer "m2_e2e_msr_viols.polygonlayer.0001" is empty.
+Input layer "result.polygonlayer.0122" is empty.
+Input layer "result.polygonlayer.0120" is empty.
+No output written.
+Layer "metal2_x_interaction_markers.polygonlayer.0001" is empty.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=37.432
+
+interacting() at adr.rs:193
+metal2_x_interaction_markers = (metal2_orig_c_gaps or metal2_orig_b_gaps) interacting (metal2_overfill or m2_e2e_msr_viols or m2_alt_msr_viols or m2_adj_msr_viols)
+  Function: interacting
+  Inputs: metalx_altbot_top_ext_offset_ext.polygonlayer.0001, metal2_x_interaction_markers.polygonlayer.0001
+  Outputs: metal2_x_interaction_markers.polygonlayer.0002
+Input layer "metal2_x_interaction_markers.polygonlayer.0001" is empty.
+No output written.
+Layer "metal2_x_interaction_markers.polygonlayer.0002" is empty.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=37.432
+
+copy() at adr.rs:262
+copy(metal2_x_interaction_markers)
+  Comment: "M2 All Violations"
+  Function: copy
+  Inputs: metal2_x_interaction_markers.polygonlayer.0002
+Input layer "metal2_x_interaction_markers.polygonlayer.0002" is empty.
+No output written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=37.432
+
+copy() at adr.rs:262
+copy(metal2_x_interaction_markers)
+  Function: copy
+  Inputs: metal2_input.polygonlayer.0019, boundary_orig.polygonlayer.0019
+   Tagging Time=0:00:00  User=0.00 Sys=0.00 Mem=38.432
+
+adjacent_track_msr_vertical() at adr.rs:117
+  external1() at adr.utilities.rs:1539
+metalx_overlap_gaps = external1(layer1 = metalx, distance < metalx_nonpref_th, extension = NONE, orientation = PARALLEL, direction = HORIZONTAL, projection = IN, projection_length = [0.000,metalx_offset))
+  Function: external1
+  Inputs: metal1.polygonlayer.0002
+  Outputs: metalx_overlap_gaps.polygonlayer.0004
+473156 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=49.525
+
+adjacent_track_msr_vertical() at adr.rs:117
+  external1() at adr.utilities.rs:1539
+metalx_overlap_gaps = external1(layer1 = metalx, distance < metalx_nonpref_th, extension = NONE, orientation = PARALLEL, direction = HORIZONTAL, projection = IN, projection_length = [0.000,metalx_offset))
+  Function: external1
+  Inputs: metalx_overlap_gaps.polygonlayer.0004
+  Outputs: metalx_overlap_gaps.polygonlayer.0005
+16417 spacing violations found.
+   Check Time=0:00:04  User=4.14 Sys=0.19 Mem=118.178
+
+adjacent_track_msr_vertical() at adr.rs:117
+  shrink() at adr.utilities.rs:1543
+metalx_gaps_even_small_left = metalx_gaps_even_small not shrink(layer1 = metalx_gaps_even_small, west = check_epsilon)
+  Function: shrink
+  Inputs: metalx_gaps_even_small_left.polygonlayer.0004
+  Outputs: metalx_gaps_even_small_left.polygonlayer.0005
+393083 unique polygons written.
+   Check Time=0:00:00  User=0.22 Sys=0.04 Mem=90.851
+
+adjacent_track_msr_vertical() at adr.rs:117
+  not() at adr.utilities.rs:1543
+metalx_gaps_even_small_left = metalx_gaps_even_small not shrink(layer1 = metalx_gaps_even_small, west = check_epsilon)
+  Function: not
+  Inputs: metalx_gaps_even_small.polygonlayer.0004, metalx_gaps_even_small_left.polygonlayer.0005
+  Outputs: metalx_gaps_even_small_left.polygonlayer.0006
+393083 unique polygons written.
+   Check Time=0:00:01  User=0.53 Sys=0.05 Mem=90.210
+
+adjacent_track_msr_vertical() at adr.rs:117
+  or() at adr.utilities.rs:1550
+metalx_check1 = ((metalx_all_gaps_interact_small interacting metalx_gaps_even_small_left) and (metalx_all_gaps_interact_small interacting metalx_gaps_even_small_right)) or ((metalx_gaps_even_small_left or metalx_gaps_even_small_right) interacting ((metalx_all_gaps_interact_small interacting metalx_gaps_even_small_left) and (metalx_all_gaps_interact_small interacting metalx_gaps_even_small_right)))
+  Function: or
+  Inputs: metalx_gaps_even_small_left.polygonlayer.0006, metalx_gaps_even_small_right.polygonlayer.0004
+  Outputs: metalx_check1.polygonlayer.0013
+786166 unique polygons written.
+   Check Time=0:00:00  User=0.42 Sys=0.04 Mem=57.883
+
+adjacent_track_msr_vertical() at adr.rs:117
+  interacting() at adr.utilities.rs:1550
+metalx_check1 = ((metalx_all_gaps_interact_small interacting metalx_gaps_even_small_left) and (metalx_all_gaps_interact_small interacting metalx_gaps_even_small_right)) or ((metalx_gaps_even_small_left or metalx_gaps_even_small_right) interacting ((metalx_all_gaps_interact_small interacting metalx_gaps_even_small_left) and (metalx_all_gaps_interact_small interacting metalx_gaps_even_small_right)))
+  Function: interacting
+  Inputs: metalx_all_gaps_interact_small.polygonlayer.0003, metalx_gaps_even_small_right.polygonlayer.0004
+  Outputs: metalx_check1.polygonlayer.0015
+290 unique polygons written.
+   Check Time=0:00:00  User=0.13 Sys=0.00 Mem=89.976
+
+adjacent_track_msr_vertical() at adr.rs:117
+  interacting() at adr.utilities.rs:1558
+metalx_check3 = ((metalx_all_gaps_interact_small interacting metalx_gaps_odd_small_left) and (metalx_all_gaps_interact_small interacting metalx_gaps_odd_small_right)) or ((metalx_gaps_odd_small_left or metalx_gaps_odd_small_right) interacting ((metalx_all_gaps_interact_small interacting metalx_gaps_odd_small_left) and (metalx_all_gaps_interact_small interacting metalx_gaps_odd_small_right)))
+  Function: interacting
+  Inputs: metalx_all_gaps_interact_small.polygonlayer.0003, metalx_gaps_odd_small_right.polygonlayer.0004
+  Outputs: metalx_check3.polygonlayer.0013
+329 unique polygons written.
+   Check Time=0:00:00  User=0.10 Sys=0.04 Mem=90.366
+
+adjacent_track_msr_vertical() at adr.rs:117
+  and() at adr.utilities.rs:1562
+metalx_check4 = ((metalx_all_gaps_interact_small interacting metalx_gaps_even_small_left) and (metalx_all_gaps_interact_small interacting metalx_gaps_odd_small_right)) or ((metalx_gaps_even_small_left or metalx_gaps_odd_small_right) interacting ((metalx_all_gaps_interact_small interacting metalx_gaps_even_small_left) and (metalx_all_gaps_interact_small interacting metalx_gaps_odd_small_right)))
+  Function: and
+  Inputs: metalx_check1.polygonlayer.0014, metalx_check3.polygonlayer.0013
+  Outputs: metalx_check4.polygonlayer.0012
+163 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=47.320
+
+adjacent_track_msr_vertical() at adr.rs:117
+  interacting() at adr.utilities.rs:1562
+metalx_check4 = ((metalx_all_gaps_interact_small interacting metalx_gaps_even_small_left) and (metalx_all_gaps_interact_small interacting metalx_gaps_odd_small_right)) or ((metalx_gaps_even_small_left or metalx_gaps_odd_small_right) interacting ((metalx_all_gaps_interact_small interacting metalx_gaps_even_small_left) and (metalx_all_gaps_interact_small interacting metalx_gaps_odd_small_right)))
+  Function: interacting
+  Inputs: metalx_check4.polygonlayer.0011, metalx_check4.polygonlayer.0012
+  Outputs: metalx_check4.polygonlayer.0013
+326 unique polygons written.
+   Check Time=0:00:00  User=0.29 Sys=0.06 Mem=62.429
+
+adjacent_track_msr_vertical() at adr.rs:117
+  or() at adr.utilities.rs:1562
+metalx_check4 = ((metalx_all_gaps_interact_small interacting metalx_gaps_even_small_left) and (metalx_all_gaps_interact_small interacting metalx_gaps_odd_small_right)) or ((metalx_gaps_even_small_left or metalx_gaps_odd_small_right) interacting ((metalx_all_gaps_interact_small interacting metalx_gaps_even_small_left) and (metalx_all_gaps_interact_small interacting metalx_gaps_odd_small_right)))
+  Function: or
+  Inputs: metalx_check4.polygonlayer.0012, metalx_check4.polygonlayer.0013
+  Outputs: metalx_check4.polygonlayer.0014
+163 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=46.868
+
+adjacent_track_msr_vertical() at adr.rs:117
+  polygon_extents() at adr.utilities.rs:1563
+metalx_check4_bbox = polygon_extents(metalx_check4)
+  Function: polygon_extents
+  Inputs: metalx_check4.polygonlayer.0014
+  Outputs: metalx_check4_bbox.polygonlayer.0005
+163 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=45.102
+
+adjacent_track_msr_vertical() at adr.rs:117
+  polygon_extents() at adr.utilities.rs:1563
+metalx_check4_bbox = polygon_extents(metalx_check4)
+  Function: polygon_extents
+  Inputs: metalx_check4_bbox.polygonlayer.0005
+  Outputs: metalx_check4_bbox.polygonlayer.0006
+163 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=43.743
+
+adjacent_track_msr_vertical() at adr.rs:117
+  internal1() at adr.utilities.rs:1564
+metalx_check4_bbox_err = internal1(layer1 = metalx_check4_bbox, distance < (2 * metalx_e2e + metalx_offset), extension = RECTANGLE, direction = VERTICAL)
+  Function: internal1
+  Inputs: metalx_check4_bbox.polygonlayer.0006
+  Outputs: metalx_check4_bbox_err.polygonlayer.0003
+163 unique polygons written.
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=42.572
+
+adjacent_track_msr_vertical() at adr.rs:117
+  internal1() at adr.utilities.rs:1564
+metalx_check4_bbox_err = internal1(layer1 = metalx_check4_bbox, distance < (2 * metalx_e2e + metalx_offset), extension = RECTANGLE, direction = VERTICAL)
+  Function: internal1
+  Inputs: metalx_check4_bbox_err.polygonlayer.0003
+  Outputs: metalx_check4_bbox_err.polygonlayer.0004
+0 width violations found.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=44.336
+
+adjacent_track_msr_vertical() at adr.rs:117
+  internal1() at adr.utilities.rs:1552
+metalx_check1_bbox_err = internal1(layer1 = metalx_check1_bbox, distance < (2 * metalx_e2e + metalx_offset), extension = RECTANGLE, direction = VERTICAL)
+  Function: internal1
+  Inputs: metalx_check1_bbox.polygonlayer.0006
+  Outputs: metalx_check1_bbox_err.polygonlayer.0003
+142 unique polygons written.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=42.509
+
+adjacent_track_msr_vertical() at adr.rs:117
+  internal1() at adr.utilities.rs:1552
+metalx_check1_bbox_err = internal1(layer1 = metalx_check1_bbox, distance < (2 * metalx_e2e + metalx_offset), extension = RECTANGLE, direction = VERTICAL)
+  Function: internal1
+  Inputs: metalx_check1_bbox_err.polygonlayer.0003
+  Outputs: metalx_check1_bbox_err.polygonlayer.0004
+0 width violations found.
+   Check Time=0:00:00  User=0.00 Sys=0.00 Mem=43.946
+
+ Check Time=0:00:00  User=0.00 Sys=0.01 Mem=37.478
+

@@ -1,0 +1,20 @@
+
+Running as genExtCmdDecks.tcl -tf starrc -ed /p/fdk/fdk73/builds/pdk733_r1.7/extraction/starrc -ctp "tttt_-10 tttt_-40 tttt_110 tttt_90" -ef mw -dd /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/ext/../apr/mwdb/fdkex_fill_LIB -dn fdkex -o star_rcxt.asic.cmd
+
+INFO: Tool flow         -> starrc
+INFO: Extr dir          -> /p/fdk/fdk73/builds/pdk733_r1.7/extraction/starrc
+INFO: Extr flow         -> mw
+INFO: Corner Temp pairs -> tttt_-10 tttt_-40 tttt_110 tttt_90
+INFO: Top design name   -> fdkex
+INFO: Design db         -> /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/ext/../apr/mwdb/fdkex_fill_LIB
+INFO: Output file       -> star_rcxt.asic.cmd
+INFO: Num cores         -> 4
+
+INFO: Generated file corners.defines for Temperature Sensitivity flow
+
+INFO: Generated file star_rcxt.asic.cmd
+
+INFO: Execute command deck star_rcxt.asic.cmd using StarRC as "StarXtract -clean star_rcxt.asic.cmd |& tee starrc.log" after making any suitable modifications
+
+INFO: Success
+

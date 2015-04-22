@@ -1,0 +1,1310 @@
+
+
+==================================================================================
+=== CALIBRE::DRC-H SUMMARY REPORT
+===
+Execution Date/Time:       Sat Apr  4 00:28:46 2015
+Calibre Version:           v2014.4_18.13    Wed Nov 5 16:04:06 PST 2014
+Rule File Pathname:        /p/fdk/fdk73/builds/pdk736_r2.2/runsets/calibre/p1273_IPall.svrf
+Rule File Title:           
+Layout System:             OASIS
+Layout Path(s):            /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/../apr/outputs/mult.signoff.post_mfill.oas
+Layout Primary Cell:       mult
+Current Directory:         /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/IPall
+User Name:                 spalutla
+Maximum Results/RuleCheck: ALL
+Maximum Result Vertices:   199
+DRC Results Database:      out.rve (ASCII)
+Layout Depth:              ALL
+Text Depth:                PRIMARY
+Summary Report File:       drc.sum (REPLACE)
+Geometry Flagging:         ACUTE = NO  SKEW = NO  ANGLED = NO  OFFGRID = NO
+                           NONSIMPLE POLYGON = YES  NONSIMPLE PATH = YES
+Excluded Cells:           
+CheckText Mapping:         COMMENT TEXT + RULE FILE INFORMATION
+Layers:                    MEMORY-BASED
+Keep Empty Checks:         YES
+----------------------------------------------------------------------------------
+--- RUNTIME WARNINGS
+---
+Rule file precision 10000 is not consistent with database precision 1000 in input file /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/../apr/outputs/mult.signoff.post_mfill.oas.
+Missing connections STAMPing layer NWELL by layer ip_esd_pactive.
+Missing connections STAMPing layer NWELL by layer ip_esd_pactive.
+Missing connections STAMPing layer NWELL by layer ip_esd_pactive.
+Missing connections STAMPing layer NWELL by layer ip_esd_pactive.
+Missing connections STAMPing layer NWELL by layer ip_esd_pactive.
+Missing connections STAMPing layer NWELL by layer ip_esd_pactive.
+Missing connections STAMPing layer NWELL by layer ip_esd_pactive.
+Missing connections STAMPing layer NWELL by layer ip_esd_pactive.
+Missing connections STAMPing layer NWELL by layer ip_esd_pactive.
+Missing connections STAMPing layer NWELL by layer ip_esd_pactive.
+Missing connections STAMPing layer NWELL by layer ip_esd_pactive.
+Missing connections STAMPing layer NWELL by layer ip_esd_pactive.
+Missing connections STAMPing layer NWELL by layer ip_esd_pactive.
+Missing connections STAMPing layer NWELL by layer ip_esd_pactive.
+Missing connections STAMPing layer NWELL by layer ip_esd_pactive.
+Label da0[0] at location (0.073,2.73) is unattached and has been ignored.
+Label da0[0] at location (0.77,3.024) is unattached and has been ignored.
+Label da0[1] at location (0.073,2.226) is unattached and has been ignored.
+Label da0[1] at location (0.524,2.562) is unattached and has been ignored.
+Label da0a[0] at location (1.052,2.562) is unattached and has been ignored.
+Label da1[0] at location (0.073,3.906) is unattached and has been ignored.
+Label da1[0] at location (0.77,4.158) is unattached and has been ignored.
+Label da1[1] at location (0.073,3.318) is unattached and has been ignored.
+Label da1[1] at location (0.732,3.192) is unattached and has been ignored.
+Label da1a[1] at location (2.412,0.966) is unattached and has been ignored.
+Label FE_PHN0_da1_1_ at location (3.57,1.376) is unattached and has been ignored.
+Label FE_PHN10_da1_0_ at location (3.64,5.008) is unattached and has been ignored.
+Label FE_PHN11_test_si1 at location (2.24,5.858) is unattached and has been ignored.
+Label FE_PHN12_da1_1_ at location (3.36,1.018) is unattached and has been ignored.
+Label FE_PHN14_da0_0_ at location (3.71,5.418) is unattached and has been ignored.
+Label FE_PHN15_da0_1_ at location (1.75,1.816) is unattached and has been ignored.
+Label FE_PHN17_da0_1_ at location (4.48,2.614) is unattached and has been ignored.
+Label FE_PHN18_da1_0_ at location (4.27,4.568) is unattached and has been ignored.
+Label FE_PHN19_da0_0_ at location (4.55,5.806) is unattached and has been ignored.
+Label FE_PHN22_da0_1_ at location (1.61,5.314) is unattached and has been ignored.
+Label FE_PHN23_da1_0_ at location (4.78,3.77) is unattached and has been ignored.
+Label FE_PHN24_da0_0_ at location (4.69,6.164) is unattached and has been ignored.
+Label FE_PHN27_test_si1 at location (2.8,7.76) is unattached and has been ignored.
+Label FE_PHN28_da1_0_ at location (3.99,5.06) is unattached and has been ignored.
+Label FE_PHN29_da0_1_ at location (1.12,3.464) is unattached and has been ignored.
+Label FE_PHN2_da1_1_ at location (4.04,1.816) is unattached and has been ignored.
+Label FE_PHN30_test_si1 at location (2.94,8.2) is unattached and has been ignored.
+Label FE_PHN31_test_si1 at location (3.08,8.61) is unattached and has been ignored.
+Label FE_PHN37_test_si1 at location (3.92,10.952) is unattached and has been ignored.
+Label FE_PHN38_test_si1 at location (4.06,11.392) is unattached and has been ignored.
+Label FE_PHN39_test_si1 at location (4.2,11.802) is unattached and has been ignored.
+Label FE_PHN3_da1_0_ at location (3.412,2.972) is unattached and has been ignored.
+Label FE_PHN4_da0_0_ at location (2.66,5.008) is unattached and has been ignored.
+Label FE_PHN5_da0_1_ at location (2.17,3.36) is unattached and has been ignored.
+Label FE_PHN7_da1_1_ at location (3.43,2.614) is unattached and has been ignored.
+Label FE_PHN8_da0_1_ at location (1.156,2.174) is unattached and has been ignored.
+Label FE_PHN9_da0_0_ at location (2.66,5.366) is unattached and has been ignored.
+Label mclk at location (0.073,4.578) is unattached and has been ignored.
+Label mclk at location (0.084,4.578) is unattached and has been ignored.
+Label n at location (12.474,4.676) is unattached and has been ignored.
+Label n_1 at location (0.84,29.746) is unattached and has been ignored.
+Label n_11 at location (3.92,3.718) is unattached and has been ignored.
+Label n_12 at location (4.13,3.024) is unattached and has been ignored.
+Label n_13 at location (3.99,2.226) is unattached and has been ignored.
+Label n_14 at location (4.9,5.47) is unattached and has been ignored.
+Label n_16 at location (4.06,4.262) is unattached and has been ignored.
+Label n_2 at location (2.732,6.164) is unattached and has been ignored.
+Label n_27 at location (1.732,3.77) is unattached and has been ignored.
+Label n_29 at location (1.47,6.112) is unattached and has been ignored.
+Label n_3 at location (26.252,20.968) is unattached and has been ignored.
+Label n_30 at location (0.84,5.858) is unattached and has been ignored.
+Label n_4 at location (0.84,20.968) is unattached and has been ignored.
+Label n_5 at location (28.56,14.584) is unattached and has been ignored.
+Label n_6 at location (12.6,28.15) is unattached and has been ignored.
+Label n_7 at location (24.676,1.018) is unattached and has been ignored.
+Label q[0] at location (0.073,1.638) is unattached and has been ignored.
+Label q[0] at location (0.63,1.638) is unattached and has been ignored.
+Label q[1] at location (0.073,1.05) is unattached and has been ignored.
+Label q[1] at location (1.512,4.128) is unattached and has been ignored.
+Label q[2] at location (0.073,0.546) is unattached and has been ignored.
+Label q[2] at location (2.204,4.21) is unattached and has been ignored.
+Label scan_en at location (0.073,5.25) is unattached and has been ignored.
+Label scan_en at location (0.524,5.336) is unattached and has been ignored.
+Label test_si1 at location (0.073,6.342) is unattached and has been ignored.
+Label test_si1 at location (0.77,6.552) is unattached and has been ignored.
+Label test_so1 at location (0.073,6.93) is unattached and has been ignored.
+Label test_so1 at location (0.84,6.91) is unattached and has been ignored.
+Label test_tm at location (0.073,5.754) is unattached and has been ignored.
+Label test_tm at location (0.084,5.754) is unattached and has been ignored.
+Label vcc at location (0,1.206) is unattached and has been ignored.
+Label vcc at location (0.054,1.26) is unattached and has been ignored.
+Label vcc at location (0.054,1.932) is unattached and has been ignored.
+Label vcc at location (0.054,4.452) is unattached and has been ignored.
+Label vcc at location (0.054,5.124) is unattached and has been ignored.
+Label vcc at location (0.054,7.644) is unattached and has been ignored.
+Label vcc at location (0.054,8.316) is unattached and has been ignored.
+Label vcc at location (0.054,10.836) is unattached and has been ignored.
+Label vcc at location (0.054,11.508) is unattached and has been ignored.
+Label vcc at location (0.054,14.028) is unattached and has been ignored.
+Label vcc at location (0.054,14.7) is unattached and has been ignored.
+Label vcc at location (0.054,17.22) is unattached and has been ignored.
+Label vcc at location (0.054,17.892) is unattached and has been ignored.
+Label vcc at location (0.054,20.412) is unattached and has been ignored.
+Label vcc at location (0.054,21.084) is unattached and has been ignored.
+Label vcc at location (0.054,23.604) is unattached and has been ignored.
+Label vcc at location (0.054,24.276) is unattached and has been ignored.
+Label vcc at location (0.054,26.796) is unattached and has been ignored.
+Label vcc at location (0.054,27.468) is unattached and has been ignored.
+Label vcc at location (0.054,29.988) is unattached and has been ignored.
+Label vcc at location (0.054,30.66) is unattached and has been ignored.
+Label vcc at location (0.054,33.18) is unattached and has been ignored.
+Label vcc at location (0.054,33.852) is unattached and has been ignored.
+Label vcc at location (0.054,36.372) is unattached and has been ignored.
+Label vcc at location (0.054,37.044) is unattached and has been ignored.
+Label vcc at location (0.054,39.564) is unattached and has been ignored.
+Label vcc at location (0.054,40.236) is unattached and has been ignored.
+Label vcc at location (0.054,42.756) is unattached and has been ignored.
+Label vcc at location (0.054,43.428) is unattached and has been ignored.
+Label vcc at location (0.054,45.948) is unattached and has been ignored.
+Label vcc at location (0.054,46.62) is unattached and has been ignored.
+Label vcc at location (0.054,49.14) is unattached and has been ignored.
+Label vcc at location (0.054,49.812) is unattached and has been ignored.
+Label vcc at location (0.054,52.332) is unattached and has been ignored.
+Label vcc at location (0.054,53.004) is unattached and has been ignored.
+Label vcc at location (0.054,55.524) is unattached and has been ignored.
+Label vcc at location (0.054,56.196) is unattached and has been ignored.
+Label vcc at location (0.054,58.716) is unattached and has been ignored.
+Label vcc at location (0.054,59.388) is unattached and has been ignored.
+Label vcc at location (0.054,61.908) is unattached and has been ignored.
+Label vcc at location (0.054,62.58) is unattached and has been ignored.
+Label vcc at location (0.132,2.394) is unattached and has been ignored.
+Label vcc at location (0.132,3.99) is unattached and has been ignored.
+Label vcc at location (0.132,8.778) is unattached and has been ignored.
+Label vcc at location (0.132,10.374) is unattached and has been ignored.
+Label vcc at location (0.132,15.162) is unattached and has been ignored.
+Label vcc at location (0.132,16.758) is unattached and has been ignored.
+Label vcc at location (0.132,21.546) is unattached and has been ignored.
+Label vcc at location (0.132,23.142) is unattached and has been ignored.
+Label vcc at location (0.132,27.93) is unattached and has been ignored.
+Label vcc at location (0.132,29.526) is unattached and has been ignored.
+Label vcc at location (0.132,34.314) is unattached and has been ignored.
+Label vcc at location (0.132,35.91) is unattached and has been ignored.
+Label vcc at location (0.132,40.698) is unattached and has been ignored.
+Label vcc at location (0.132,42.294) is unattached and has been ignored.
+Label vcc at location (0.132,47.082) is unattached and has been ignored.
+Label vcc at location (0.132,48.678) is unattached and has been ignored.
+Label vcc at location (0.132,53.466) is unattached and has been ignored.
+Label vcc at location (0.132,55.062) is unattached and has been ignored.
+Label vcc at location (0.132,59.85) is unattached and has been ignored.
+Label vcc at location (0.132,61.446) is unattached and has been ignored.
+Label vcc at location (0.21,2.558) is unattached and has been ignored.
+Label vcc at location (0.21,3.826) is unattached and has been ignored.
+Label vcc at location (0.21,8.942) is unattached and has been ignored.
+Label vcc at location (0.21,10.21) is unattached and has been ignored.
+Label vcc at location (0.21,15.326) is unattached and has been ignored.
+Label vcc at location (0.21,16.594) is unattached and has been ignored.
+Label vcc at location (0.21,21.71) is unattached and has been ignored.
+Label vcc at location (0.21,22.978) is unattached and has been ignored.
+Label vcc at location (0.21,28.094) is unattached and has been ignored.
+Label vcc at location (0.21,29.362) is unattached and has been ignored.
+Label vcc at location (0.21,34.478) is unattached and has been ignored.
+Label vcc at location (0.21,35.746) is unattached and has been ignored.
+Label vcc at location (0.21,40.862) is unattached and has been ignored.
+Label vcc at location (0.21,42.13) is unattached and has been ignored.
+Label vcc at location (0.21,47.246) is unattached and has been ignored.
+Label vcc at location (0.21,48.514) is unattached and has been ignored.
+Label vcc at location (0.21,53.63) is unattached and has been ignored.
+Label vcc at location (0.21,54.898) is unattached and has been ignored.
+Label vcc at location (0.21,60.014) is unattached and has been ignored.
+Label vcc at location (0.21,61.282) is unattached and has been ignored.
+Label vcc at location (0.54,4.812) is unattached and has been ignored.
+Label vcc at location (0.54,7.956) is unattached and has been ignored.
+Label vcc at location (0.54,17.58) is unattached and has been ignored.
+Label vcc at location (0.54,20.724) is unattached and has been ignored.
+Label vcc at location (0.54,30.348) is unattached and has been ignored.
+Label vcc at location (0.54,33.492) is unattached and has been ignored.
+Label vcc at location (0.54,43.116) is unattached and has been ignored.
+Label vcc at location (0.54,46.26) is unattached and has been ignored.
+Label vcc at location (0.54,55.884) is unattached and has been ignored.
+Label vcc at location (0.54,59.028) is unattached and has been ignored.
+Label vcc at location (1.239,0.038) is unattached and has been ignored.
+Label vcc at location (1.239,63.802) is unattached and has been ignored.
+Label vcc at location (2.121,0.038) is unattached and has been ignored.
+Label vcc at location (2.121,63.802) is unattached and has been ignored.
+Label vcc at location (2.464,0.084) is unattached and has been ignored.
+Label vcc at location (2.464,63.756) is unattached and has been ignored.
+Label vcc at location (2.52,0.15) is unattached and has been ignored.
+Label vcc at location (2.52,0.35) is unattached and has been ignored.
+Label vcc at location (2.52,63.49) is unattached and has been ignored.
+Label vcc at location (2.52,63.69) is unattached and has been ignored.
+Label vcc at location (4.2,0.15) is unattached and has been ignored.
+Label vcc at location (4.2,0.35) is unattached and has been ignored.
+Label vcc at location (4.2,63.49) is unattached and has been ignored.
+Label vcc at location (4.2,63.69) is unattached and has been ignored.
+Label vcc at location (4.256,0.084) is unattached and has been ignored.
+Label vcc at location (4.256,63.756) is unattached and has been ignored.
+Label vcc at location (4.599,0.038) is unattached and has been ignored.
+Label vcc at location (4.599,63.802) is unattached and has been ignored.
+Label vcc at location (5.481,0.038) is unattached and has been ignored.
+Label vcc at location (5.481,63.802) is unattached and has been ignored.
+Label vcc at location (7.959,0.038) is unattached and has been ignored.
+Label vcc at location (7.959,63.802) is unattached and has been ignored.
+Label vcc at location (8.841,0.038) is unattached and has been ignored.
+Label vcc at location (8.841,63.802) is unattached and has been ignored.
+Label vcc at location (9.184,0.084) is unattached and has been ignored.
+Label vcc at location (9.184,63.756) is unattached and has been ignored.
+Label vcc at location (9.24,0.15) is unattached and has been ignored.
+Label vcc at location (9.24,0.35) is unattached and has been ignored.
+Label vcc at location (9.24,63.49) is unattached and has been ignored.
+Label vcc at location (9.24,63.69) is unattached and has been ignored.
+Label vcc at location (10.92,0.15) is unattached and has been ignored.
+Label vcc at location (10.92,0.35) is unattached and has been ignored.
+Label vcc at location (10.92,63.49) is unattached and has been ignored.
+Label vcc at location (10.92,63.69) is unattached and has been ignored.
+Label vcc at location (10.976,0.084) is unattached and has been ignored.
+Label vcc at location (10.976,63.756) is unattached and has been ignored.
+Label vcc at location (11.319,0.038) is unattached and has been ignored.
+Label vcc at location (11.319,63.802) is unattached and has been ignored.
+Label vcc at location (12.201,0.038) is unattached and has been ignored.
+Label vcc at location (12.201,63.802) is unattached and has been ignored.
+Label vcc at location (14.679,0.038) is unattached and has been ignored.
+Label vcc at location (14.679,63.802) is unattached and has been ignored.
+Label vcc at location (15.561,0.038) is unattached and has been ignored.
+Label vcc at location (15.561,63.802) is unattached and has been ignored.
+Label vcc at location (15.904,0.084) is unattached and has been ignored.
+Label vcc at location (15.904,63.756) is unattached and has been ignored.
+Label vcc at location (15.96,0.15) is unattached and has been ignored.
+Label vcc at location (15.96,0.35) is unattached and has been ignored.
+Label vcc at location (15.96,63.49) is unattached and has been ignored.
+Label vcc at location (15.96,63.69) is unattached and has been ignored.
+Label vcc at location (17.64,0.15) is unattached and has been ignored.
+Label vcc at location (17.64,0.35) is unattached and has been ignored.
+Label vcc at location (17.64,63.49) is unattached and has been ignored.
+Label vcc at location (17.64,63.69) is unattached and has been ignored.
+Label vcc at location (17.696,0.084) is unattached and has been ignored.
+Label vcc at location (17.696,63.756) is unattached and has been ignored.
+Label vcc at location (18.039,0.038) is unattached and has been ignored.
+Label vcc at location (18.039,63.802) is unattached and has been ignored.
+Label vcc at location (18.921,0.038) is unattached and has been ignored.
+Label vcc at location (18.921,63.802) is unattached and has been ignored.
+Label vcc at location (21.399,0.038) is unattached and has been ignored.
+Label vcc at location (21.399,63.802) is unattached and has been ignored.
+Label vcc at location (22.281,0.038) is unattached and has been ignored.
+Label vcc at location (22.281,63.802) is unattached and has been ignored.
+Label vcc at location (22.624,0.084) is unattached and has been ignored.
+Label vcc at location (22.624,63.756) is unattached and has been ignored.
+Label vcc at location (22.68,0.15) is unattached and has been ignored.
+Label vcc at location (22.68,0.35) is unattached and has been ignored.
+Label vcc at location (22.68,63.49) is unattached and has been ignored.
+Label vcc at location (22.68,63.69) is unattached and has been ignored.
+Label vcc at location (24.36,0.15) is unattached and has been ignored.
+Label vcc at location (24.36,0.35) is unattached and has been ignored.
+Label vcc at location (24.36,63.49) is unattached and has been ignored.
+Label vcc at location (24.36,63.69) is unattached and has been ignored.
+Label vcc at location (24.416,0.084) is unattached and has been ignored.
+Label vcc at location (24.416,63.756) is unattached and has been ignored.
+Label vcc at location (24.759,0.038) is unattached and has been ignored.
+Label vcc at location (24.759,63.802) is unattached and has been ignored.
+Label vcc at location (25.641,0.038) is unattached and has been ignored.
+Label vcc at location (25.641,63.802) is unattached and has been ignored.
+Label vcc at location (28.119,0.038) is unattached and has been ignored.
+Label vcc at location (28.119,63.802) is unattached and has been ignored.
+Label vcc at location (29.001,0.038) is unattached and has been ignored.
+Label vcc at location (29.001,63.802) is unattached and has been ignored.
+Label vcc at location (29.344,0.084) is unattached and has been ignored.
+Label vcc at location (29.344,63.756) is unattached and has been ignored.
+Label vcc at location (29.4,0.15) is unattached and has been ignored.
+Label vcc at location (29.4,0.35) is unattached and has been ignored.
+Label vcc at location (29.4,63.49) is unattached and has been ignored.
+Label vcc at location (29.4,63.69) is unattached and has been ignored.
+Label vcc at location (31.08,0.15) is unattached and has been ignored.
+Label vcc at location (31.08,0.35) is unattached and has been ignored.
+Label vcc at location (31.08,63.49) is unattached and has been ignored.
+Label vcc at location (31.08,63.69) is unattached and has been ignored.
+Label vcc at location (31.136,0.084) is unattached and has been ignored.
+Label vcc at location (31.136,63.756) is unattached and has been ignored.
+Label vcc at location (31.479,0.038) is unattached and has been ignored.
+Label vcc at location (31.479,63.802) is unattached and has been ignored.
+Label vcc at location (32.361,0.038) is unattached and has been ignored.
+Label vcc at location (32.361,63.802) is unattached and has been ignored.
+Label vcc at location (34.839,0.038) is unattached and has been ignored.
+Label vcc at location (34.839,63.802) is unattached and has been ignored.
+Label vcc at location (35.721,0.038) is unattached and has been ignored.
+Label vcc at location (35.721,63.802) is unattached and has been ignored.
+Label vcc at location (36.064,0.084) is unattached and has been ignored.
+Label vcc at location (36.064,63.756) is unattached and has been ignored.
+Label vcc at location (36.12,0.15) is unattached and has been ignored.
+Label vcc at location (36.12,0.35) is unattached and has been ignored.
+Label vcc at location (36.12,63.49) is unattached and has been ignored.
+Label vcc at location (36.12,63.69) is unattached and has been ignored.
+Label vcc at location (37.8,0.15) is unattached and has been ignored.
+Label vcc at location (37.8,0.35) is unattached and has been ignored.
+Label vcc at location (37.8,63.49) is unattached and has been ignored.
+Label vcc at location (37.8,63.69) is unattached and has been ignored.
+Label vcc at location (37.856,0.084) is unattached and has been ignored.
+Label vcc at location (37.856,63.756) is unattached and has been ignored.
+Label vcc at location (38.199,0.038) is unattached and has been ignored.
+Label vcc at location (38.199,63.802) is unattached and has been ignored.
+Label vcc at location (39.081,0.038) is unattached and has been ignored.
+Label vcc at location (39.081,63.802) is unattached and has been ignored.
+Label vcc at location (41.559,0.038) is unattached and has been ignored.
+Label vcc at location (41.559,63.802) is unattached and has been ignored.
+Label vcc at location (42.441,0.038) is unattached and has been ignored.
+Label vcc at location (42.441,63.802) is unattached and has been ignored.
+Label vcc at location (42.784,0.084) is unattached and has been ignored.
+Label vcc at location (42.784,63.756) is unattached and has been ignored.
+Label vcc at location (42.84,0.15) is unattached and has been ignored.
+Label vcc at location (42.84,0.35) is unattached and has been ignored.
+Label vcc at location (42.84,63.49) is unattached and has been ignored.
+Label vcc at location (42.84,63.69) is unattached and has been ignored.
+Label vcc at location (44.52,0.15) is unattached and has been ignored.
+Label vcc at location (44.52,0.35) is unattached and has been ignored.
+Label vcc at location (44.52,63.49) is unattached and has been ignored.
+Label vcc at location (44.52,63.69) is unattached and has been ignored.
+Label vcc at location (44.576,0.084) is unattached and has been ignored.
+Label vcc at location (44.576,63.756) is unattached and has been ignored.
+Label vcc at location (44.919,0.038) is unattached and has been ignored.
+Label vcc at location (44.919,63.802) is unattached and has been ignored.
+Label vcc at location (45.801,0.038) is unattached and has been ignored.
+Label vcc at location (45.801,63.802) is unattached and has been ignored.
+Label vcc at location (48.279,0.038) is unattached and has been ignored.
+Label vcc at location (48.279,63.802) is unattached and has been ignored.
+Label vcc at location (49.161,0.038) is unattached and has been ignored.
+Label vcc at location (49.161,63.802) is unattached and has been ignored.
+Label vcc at location (49.504,0.084) is unattached and has been ignored.
+Label vcc at location (49.504,63.756) is unattached and has been ignored.
+Label vcc at location (49.56,0.15) is unattached and has been ignored.
+Label vcc at location (49.56,0.35) is unattached and has been ignored.
+Label vcc at location (49.56,63.49) is unattached and has been ignored.
+Label vcc at location (49.56,63.69) is unattached and has been ignored.
+Label vcc at location (51.24,0.15) is unattached and has been ignored.
+Label vcc at location (51.24,0.35) is unattached and has been ignored.
+Label vcc at location (51.24,63.49) is unattached and has been ignored.
+Label vcc at location (51.24,63.69) is unattached and has been ignored.
+Label vcc at location (51.296,0.084) is unattached and has been ignored.
+Label vcc at location (51.296,63.756) is unattached and has been ignored.
+Label vcc at location (51.639,0.038) is unattached and has been ignored.
+Label vcc at location (51.639,63.802) is unattached and has been ignored.
+Label vcc at location (52.521,0.038) is unattached and has been ignored.
+Label vcc at location (52.521,63.802) is unattached and has been ignored.
+Label vcc at location (54.999,0.038) is unattached and has been ignored.
+Label vcc at location (54.999,63.802) is unattached and has been ignored.
+Label vcc at location (55.881,0.038) is unattached and has been ignored.
+Label vcc at location (55.881,63.802) is unattached and has been ignored.
+Label vcc at location (56.224,0.084) is unattached and has been ignored.
+Label vcc at location (56.224,63.756) is unattached and has been ignored.
+Label vcc at location (56.28,0.15) is unattached and has been ignored.
+Label vcc at location (56.28,0.35) is unattached and has been ignored.
+Label vcc at location (56.28,63.49) is unattached and has been ignored.
+Label vcc at location (56.28,63.69) is unattached and has been ignored.
+Label vcc at location (57.96,0.15) is unattached and has been ignored.
+Label vcc at location (57.96,0.35) is unattached and has been ignored.
+Label vcc at location (57.96,63.49) is unattached and has been ignored.
+Label vcc at location (57.96,63.69) is unattached and has been ignored.
+Label vcc at location (58.016,0.084) is unattached and has been ignored.
+Label vcc at location (58.016,63.756) is unattached and has been ignored.
+Label vcc at location (58.359,0.038) is unattached and has been ignored.
+Label vcc at location (58.359,63.802) is unattached and has been ignored.
+Label vcc at location (59.241,0.038) is unattached and has been ignored.
+Label vcc at location (59.241,63.802) is unattached and has been ignored.
+Label vcc at location (61.719,0.038) is unattached and has been ignored.
+Label vcc at location (61.719,63.802) is unattached and has been ignored.
+Label vcc at location (62.601,0.038) is unattached and has been ignored.
+Label vcc at location (62.601,63.802) is unattached and has been ignored.
+Label vcc at location (62.944,0.084) is unattached and has been ignored.
+Label vcc at location (62.944,63.756) is unattached and has been ignored.
+Label vcc at location (63,0.15) is unattached and has been ignored.
+Label vcc at location (63,0.35) is unattached and has been ignored.
+Label vcc at location (63,63.49) is unattached and has been ignored.
+Label vcc at location (63,63.69) is unattached and has been ignored.
+Label vcc at location (64.68,0.15) is unattached and has been ignored.
+Label vcc at location (64.68,0.35) is unattached and has been ignored.
+Label vcc at location (64.68,63.49) is unattached and has been ignored.
+Label vcc at location (64.68,63.69) is unattached and has been ignored.
+Label vcc at location (64.736,0.084) is unattached and has been ignored.
+Label vcc at location (64.736,63.756) is unattached and has been ignored.
+Label vcc at location (65.079,0.038) is unattached and has been ignored.
+Label vcc at location (65.079,63.802) is unattached and has been ignored.
+Label vcc at location (65.961,0.038) is unattached and has been ignored.
+Label vcc at location (65.961,63.802) is unattached and has been ignored.
+Label vcc at location (66.66,4.812) is unattached and has been ignored.
+Label vcc at location (66.66,7.956) is unattached and has been ignored.
+Label vcc at location (66.66,17.58) is unattached and has been ignored.
+Label vcc at location (66.66,20.724) is unattached and has been ignored.
+Label vcc at location (66.66,30.348) is unattached and has been ignored.
+Label vcc at location (66.66,33.492) is unattached and has been ignored.
+Label vcc at location (66.66,43.116) is unattached and has been ignored.
+Label vcc at location (66.66,46.26) is unattached and has been ignored.
+Label vcc at location (66.66,55.884) is unattached and has been ignored.
+Label vcc at location (66.66,59.028) is unattached and has been ignored.
+Label vcc at location (66.99,2.558) is unattached and has been ignored.
+Label vcc at location (66.99,3.826) is unattached and has been ignored.
+Label vcc at location (66.99,8.942) is unattached and has been ignored.
+Label vcc at location (66.99,10.21) is unattached and has been ignored.
+Label vcc at location (66.99,15.326) is unattached and has been ignored.
+Label vcc at location (66.99,16.594) is unattached and has been ignored.
+Label vcc at location (66.99,21.71) is unattached and has been ignored.
+Label vcc at location (66.99,22.978) is unattached and has been ignored.
+Label vcc at location (66.99,28.094) is unattached and has been ignored.
+Label vcc at location (66.99,29.362) is unattached and has been ignored.
+Label vcc at location (66.99,34.478) is unattached and has been ignored.
+Label vcc at location (66.99,35.746) is unattached and has been ignored.
+Label vcc at location (66.99,40.862) is unattached and has been ignored.
+Label vcc at location (66.99,42.13) is unattached and has been ignored.
+Label vcc at location (66.99,47.246) is unattached and has been ignored.
+Label vcc at location (66.99,48.514) is unattached and has been ignored.
+Label vcc at location (66.99,53.63) is unattached and has been ignored.
+Label vcc at location (66.99,54.898) is unattached and has been ignored.
+Label vcc at location (66.99,60.014) is unattached and has been ignored.
+Label vcc at location (66.99,61.282) is unattached and has been ignored.
+Label vcc at location (67.068,2.394) is unattached and has been ignored.
+Label vcc at location (67.068,3.99) is unattached and has been ignored.
+Label vcc at location (67.068,8.778) is unattached and has been ignored.
+Label vcc at location (67.068,10.374) is unattached and has been ignored.
+Label vcc at location (67.068,15.162) is unattached and has been ignored.
+Label vcc at location (67.068,16.758) is unattached and has been ignored.
+Label vcc at location (67.068,21.546) is unattached and has been ignored.
+Label vcc at location (67.068,23.142) is unattached and has been ignored.
+Label vcc at location (67.068,27.93) is unattached and has been ignored.
+Label vcc at location (67.068,29.526) is unattached and has been ignored.
+Label vcc at location (67.068,34.314) is unattached and has been ignored.
+Label vcc at location (67.068,35.91) is unattached and has been ignored.
+Label vcc at location (67.068,40.698) is unattached and has been ignored.
+Label vcc at location (67.068,42.294) is unattached and has been ignored.
+Label vcc at location (67.068,47.082) is unattached and has been ignored.
+Label vcc at location (67.068,48.678) is unattached and has been ignored.
+Label vcc at location (67.068,53.466) is unattached and has been ignored.
+Label vcc at location (67.068,55.062) is unattached and has been ignored.
+Label vcc at location (67.068,59.85) is unattached and has been ignored.
+Label vcc at location (67.068,61.446) is unattached and has been ignored.
+Label vcc at location (67.146,1.26) is unattached and has been ignored.
+Label vcc at location (67.146,1.932) is unattached and has been ignored.
+Label vcc at location (67.146,4.452) is unattached and has been ignored.
+Label vcc at location (67.146,5.124) is unattached and has been ignored.
+Label vcc at location (67.146,7.644) is unattached and has been ignored.
+Label vcc at location (67.146,8.316) is unattached and has been ignored.
+Label vcc at location (67.146,10.836) is unattached and has been ignored.
+Label vcc at location (67.146,11.508) is unattached and has been ignored.
+Label vcc at location (67.146,14.028) is unattached and has been ignored.
+Label vcc at location (67.146,14.7) is unattached and has been ignored.
+Label vcc at location (67.146,17.22) is unattached and has been ignored.
+Label vcc at location (67.146,17.892) is unattached and has been ignored.
+Label vcc at location (67.146,20.412) is unattached and has been ignored.
+Label vcc at location (67.146,21.084) is unattached and has been ignored.
+Label vcc at location (67.146,23.604) is unattached and has been ignored.
+Label vcc at location (67.146,24.276) is unattached and has been ignored.
+Label vcc at location (67.146,26.796) is unattached and has been ignored.
+Label vcc at location (67.146,27.468) is unattached and has been ignored.
+Label vcc at location (67.146,29.988) is unattached and has been ignored.
+Label vcc at location (67.146,30.66) is unattached and has been ignored.
+Label vcc at location (67.146,33.18) is unattached and has been ignored.
+Label vcc at location (67.146,33.852) is unattached and has been ignored.
+Label vcc at location (67.146,36.372) is unattached and has been ignored.
+Label vcc at location (67.146,37.044) is unattached and has been ignored.
+Label vcc at location (67.146,39.564) is unattached and has been ignored.
+Label vcc at location (67.146,40.236) is unattached and has been ignored.
+Label vcc at location (67.146,42.756) is unattached and has been ignored.
+Label vcc at location (67.146,43.428) is unattached and has been ignored.
+Label vcc at location (67.146,45.948) is unattached and has been ignored.
+Label vcc at location (67.146,46.62) is unattached and has been ignored.
+Label vcc at location (67.146,49.14) is unattached and has been ignored.
+Label vcc at location (67.146,49.812) is unattached and has been ignored.
+Label vcc at location (67.146,52.332) is unattached and has been ignored.
+Label vcc at location (67.146,53.004) is unattached and has been ignored.
+Label vcc at location (67.146,55.524) is unattached and has been ignored.
+Label vcc at location (67.146,56.196) is unattached and has been ignored.
+Label vcc at location (67.146,58.716) is unattached and has been ignored.
+Label vcc at location (67.146,59.388) is unattached and has been ignored.
+Label vcc at location (67.146,61.908) is unattached and has been ignored.
+Label vcc at location (67.146,62.58) is unattached and has been ignored.
+Label vss at location (0,0.282) is unattached and has been ignored.
+Label vss at location (0.054,0.336) is unattached and has been ignored.
+Label vss at location (0.054,2.856) is unattached and has been ignored.
+Label vss at location (0.054,3.528) is unattached and has been ignored.
+Label vss at location (0.054,6.048) is unattached and has been ignored.
+Label vss at location (0.054,6.72) is unattached and has been ignored.
+Label vss at location (0.054,9.24) is unattached and has been ignored.
+Label vss at location (0.054,9.912) is unattached and has been ignored.
+Label vss at location (0.054,12.432) is unattached and has been ignored.
+Label vss at location (0.054,13.104) is unattached and has been ignored.
+Label vss at location (0.054,15.624) is unattached and has been ignored.
+Label vss at location (0.054,16.296) is unattached and has been ignored.
+Label vss at location (0.054,18.816) is unattached and has been ignored.
+Label vss at location (0.054,19.488) is unattached and has been ignored.
+Label vss at location (0.054,22.008) is unattached and has been ignored.
+Label vss at location (0.054,22.68) is unattached and has been ignored.
+Label vss at location (0.054,25.2) is unattached and has been ignored.
+Label vss at location (0.054,25.872) is unattached and has been ignored.
+Label vss at location (0.054,28.392) is unattached and has been ignored.
+Label vss at location (0.054,29.064) is unattached and has been ignored.
+Label vss at location (0.054,31.584) is unattached and has been ignored.
+Label vss at location (0.054,32.256) is unattached and has been ignored.
+Label vss at location (0.054,34.776) is unattached and has been ignored.
+Label vss at location (0.054,35.448) is unattached and has been ignored.
+Label vss at location (0.054,37.968) is unattached and has been ignored.
+Label vss at location (0.054,38.64) is unattached and has been ignored.
+Label vss at location (0.054,41.16) is unattached and has been ignored.
+Label vss at location (0.054,41.832) is unattached and has been ignored.
+Label vss at location (0.054,44.352) is unattached and has been ignored.
+Label vss at location (0.054,45.024) is unattached and has been ignored.
+Label vss at location (0.054,47.544) is unattached and has been ignored.
+Label vss at location (0.054,48.216) is unattached and has been ignored.
+Label vss at location (0.054,50.736) is unattached and has been ignored.
+Label vss at location (0.054,51.408) is unattached and has been ignored.
+Label vss at location (0.054,53.928) is unattached and has been ignored.
+Label vss at location (0.054,54.6) is unattached and has been ignored.
+Label vss at location (0.054,57.12) is unattached and has been ignored.
+Label vss at location (0.054,57.792) is unattached and has been ignored.
+Label vss at location (0.054,60.312) is unattached and has been ignored.
+Label vss at location (0.054,60.984) is unattached and has been ignored.
+Label vss at location (0.054,63.504) is unattached and has been ignored.
+Label vss at location (0.132,0.798) is unattached and has been ignored.
+Label vss at location (0.132,5.586) is unattached and has been ignored.
+Label vss at location (0.132,7.182) is unattached and has been ignored.
+Label vss at location (0.132,11.97) is unattached and has been ignored.
+Label vss at location (0.132,13.566) is unattached and has been ignored.
+Label vss at location (0.132,18.354) is unattached and has been ignored.
+Label vss at location (0.132,19.95) is unattached and has been ignored.
+Label vss at location (0.132,24.738) is unattached and has been ignored.
+Label vss at location (0.132,26.334) is unattached and has been ignored.
+Label vss at location (0.132,31.122) is unattached and has been ignored.
+Label vss at location (0.132,32.718) is unattached and has been ignored.
+Label vss at location (0.132,37.506) is unattached and has been ignored.
+Label vss at location (0.132,39.102) is unattached and has been ignored.
+Label vss at location (0.132,43.89) is unattached and has been ignored.
+Label vss at location (0.132,45.486) is unattached and has been ignored.
+Label vss at location (0.132,50.274) is unattached and has been ignored.
+Label vss at location (0.132,51.87) is unattached and has been ignored.
+Label vss at location (0.132,56.658) is unattached and has been ignored.
+Label vss at location (0.132,58.254) is unattached and has been ignored.
+Label vss at location (0.132,63.042) is unattached and has been ignored.
+Label vss at location (0.21,0.962) is unattached and has been ignored.
+Label vss at location (0.21,5.422) is unattached and has been ignored.
+Label vss at location (0.21,7.346) is unattached and has been ignored.
+Label vss at location (0.21,11.806) is unattached and has been ignored.
+Label vss at location (0.21,13.73) is unattached and has been ignored.
+Label vss at location (0.21,18.19) is unattached and has been ignored.
+Label vss at location (0.21,20.114) is unattached and has been ignored.
+Label vss at location (0.21,24.574) is unattached and has been ignored.
+Label vss at location (0.21,26.498) is unattached and has been ignored.
+Label vss at location (0.21,30.958) is unattached and has been ignored.
+Label vss at location (0.21,32.882) is unattached and has been ignored.
+Label vss at location (0.21,37.342) is unattached and has been ignored.
+Label vss at location (0.21,39.266) is unattached and has been ignored.
+Label vss at location (0.21,43.726) is unattached and has been ignored.
+Label vss at location (0.21,45.65) is unattached and has been ignored.
+Label vss at location (0.21,50.11) is unattached and has been ignored.
+Label vss at location (0.21,52.034) is unattached and has been ignored.
+Label vss at location (0.21,56.494) is unattached and has been ignored.
+Label vss at location (0.21,58.418) is unattached and has been ignored.
+Label vss at location (0.21,62.878) is unattached and has been ignored.
+Label vss at location (0.441,0.038) is unattached and has been ignored.
+Label vss at location (0.441,63.802) is unattached and has been ignored.
+Label vss at location (0.54,1.572) is unattached and has been ignored.
+Label vss at location (0.54,11.196) is unattached and has been ignored.
+Label vss at location (0.54,14.34) is unattached and has been ignored.
+Label vss at location (0.54,23.964) is unattached and has been ignored.
+Label vss at location (0.54,27.108) is unattached and has been ignored.
+Label vss at location (0.54,36.732) is unattached and has been ignored.
+Label vss at location (0.54,39.876) is unattached and has been ignored.
+Label vss at location (0.54,49.5) is unattached and has been ignored.
+Label vss at location (0.54,52.644) is unattached and has been ignored.
+Label vss at location (0.54,62.268) is unattached and has been ignored.
+Label vss at location (0.84,0.15) is unattached and has been ignored.
+Label vss at location (0.84,0.35) is unattached and has been ignored.
+Label vss at location (0.84,63.49) is unattached and has been ignored.
+Label vss at location (0.84,63.69) is unattached and has been ignored.
+Label vss at location (0.896,0.084) is unattached and has been ignored.
+Label vss at location (0.896,63.756) is unattached and has been ignored.
+Label vss at location (2.919,0.038) is unattached and has been ignored.
+Label vss at location (2.919,63.802) is unattached and has been ignored.
+Label vss at location (3.801,0.038) is unattached and has been ignored.
+Label vss at location (3.801,63.802) is unattached and has been ignored.
+Label vss at location (5.824,0.084) is unattached and has been ignored.
+Label vss at location (5.824,63.756) is unattached and has been ignored.
+Label vss at location (5.88,0.15) is unattached and has been ignored.
+Label vss at location (5.88,0.35) is unattached and has been ignored.
+Label vss at location (5.88,63.49) is unattached and has been ignored.
+Label vss at location (5.88,63.69) is unattached and has been ignored.
+Label vss at location (6.279,0.038) is unattached and has been ignored.
+Label vss at location (6.279,63.802) is unattached and has been ignored.
+Label vss at location (7.161,0.038) is unattached and has been ignored.
+Label vss at location (7.161,63.802) is unattached and has been ignored.
+Label vss at location (7.56,0.15) is unattached and has been ignored.
+Label vss at location (7.56,0.35) is unattached and has been ignored.
+Label vss at location (7.56,63.49) is unattached and has been ignored.
+Label vss at location (7.56,63.69) is unattached and has been ignored.
+Label vss at location (7.616,0.084) is unattached and has been ignored.
+Label vss at location (7.616,63.756) is unattached and has been ignored.
+Label vss at location (9.639,0.038) is unattached and has been ignored.
+Label vss at location (9.639,63.802) is unattached and has been ignored.
+Label vss at location (10.521,0.038) is unattached and has been ignored.
+Label vss at location (10.521,63.802) is unattached and has been ignored.
+Label vss at location (12.544,0.084) is unattached and has been ignored.
+Label vss at location (12.544,63.756) is unattached and has been ignored.
+Label vss at location (12.6,0.15) is unattached and has been ignored.
+Label vss at location (12.6,0.35) is unattached and has been ignored.
+Label vss at location (12.6,63.49) is unattached and has been ignored.
+Label vss at location (12.6,63.69) is unattached and has been ignored.
+Label vss at location (12.999,0.038) is unattached and has been ignored.
+Label vss at location (12.999,63.802) is unattached and has been ignored.
+Label vss at location (13.881,0.038) is unattached and has been ignored.
+Label vss at location (13.881,63.802) is unattached and has been ignored.
+Label vss at location (14.28,0.15) is unattached and has been ignored.
+Label vss at location (14.28,0.35) is unattached and has been ignored.
+Label vss at location (14.28,63.49) is unattached and has been ignored.
+Label vss at location (14.28,63.69) is unattached and has been ignored.
+Label vss at location (14.336,0.084) is unattached and has been ignored.
+Label vss at location (14.336,63.756) is unattached and has been ignored.
+Label vss at location (16.359,0.038) is unattached and has been ignored.
+Label vss at location (16.359,63.802) is unattached and has been ignored.
+Label vss at location (17.241,0.038) is unattached and has been ignored.
+Label vss at location (17.241,63.802) is unattached and has been ignored.
+Label vss at location (19.264,0.084) is unattached and has been ignored.
+Label vss at location (19.264,63.756) is unattached and has been ignored.
+Label vss at location (19.32,0.15) is unattached and has been ignored.
+Label vss at location (19.32,0.35) is unattached and has been ignored.
+Label vss at location (19.32,63.49) is unattached and has been ignored.
+Label vss at location (19.32,63.69) is unattached and has been ignored.
+Label vss at location (19.719,0.038) is unattached and has been ignored.
+Label vss at location (19.719,63.802) is unattached and has been ignored.
+Label vss at location (20.601,0.038) is unattached and has been ignored.
+Label vss at location (20.601,63.802) is unattached and has been ignored.
+Label vss at location (21,0.15) is unattached and has been ignored.
+Label vss at location (21,0.35) is unattached and has been ignored.
+Label vss at location (21,63.49) is unattached and has been ignored.
+Label vss at location (21,63.69) is unattached and has been ignored.
+Label vss at location (21.056,0.084) is unattached and has been ignored.
+Label vss at location (21.056,63.756) is unattached and has been ignored.
+Label vss at location (23.079,0.038) is unattached and has been ignored.
+Label vss at location (23.079,63.802) is unattached and has been ignored.
+Label vss at location (23.961,0.038) is unattached and has been ignored.
+Label vss at location (23.961,63.802) is unattached and has been ignored.
+Label vss at location (25.984,0.084) is unattached and has been ignored.
+Label vss at location (25.984,63.756) is unattached and has been ignored.
+Label vss at location (26.04,0.15) is unattached and has been ignored.
+Label vss at location (26.04,0.35) is unattached and has been ignored.
+Label vss at location (26.04,63.49) is unattached and has been ignored.
+Label vss at location (26.04,63.69) is unattached and has been ignored.
+Label vss at location (26.439,0.038) is unattached and has been ignored.
+Label vss at location (26.439,63.802) is unattached and has been ignored.
+Label vss at location (27.321,0.038) is unattached and has been ignored.
+Label vss at location (27.321,63.802) is unattached and has been ignored.
+Label vss at location (27.72,0.15) is unattached and has been ignored.
+Label vss at location (27.72,0.35) is unattached and has been ignored.
+Label vss at location (27.72,63.49) is unattached and has been ignored.
+Label vss at location (27.72,63.69) is unattached and has been ignored.
+Label vss at location (27.776,0.084) is unattached and has been ignored.
+Label vss at location (27.776,63.756) is unattached and has been ignored.
+Label vss at location (29.799,0.038) is unattached and has been ignored.
+Label vss at location (29.799,63.802) is unattached and has been ignored.
+Label vss at location (30.681,0.038) is unattached and has been ignored.
+Label vss at location (30.681,63.802) is unattached and has been ignored.
+Label vss at location (32.704,0.084) is unattached and has been ignored.
+Label vss at location (32.704,63.756) is unattached and has been ignored.
+Label vss at location (32.76,0.15) is unattached and has been ignored.
+Label vss at location (32.76,0.35) is unattached and has been ignored.
+Label vss at location (32.76,63.49) is unattached and has been ignored.
+Label vss at location (32.76,63.69) is unattached and has been ignored.
+Label vss at location (33.159,0.038) is unattached and has been ignored.
+Label vss at location (33.159,63.802) is unattached and has been ignored.
+Label vss at location (34.041,0.038) is unattached and has been ignored.
+Label vss at location (34.041,63.802) is unattached and has been ignored.
+Label vss at location (34.44,0.15) is unattached and has been ignored.
+Label vss at location (34.44,0.35) is unattached and has been ignored.
+Label vss at location (34.44,63.49) is unattached and has been ignored.
+Label vss at location (34.44,63.69) is unattached and has been ignored.
+Label vss at location (34.496,0.084) is unattached and has been ignored.
+Label vss at location (34.496,63.756) is unattached and has been ignored.
+Label vss at location (36.519,0.038) is unattached and has been ignored.
+Label vss at location (36.519,63.802) is unattached and has been ignored.
+Label vss at location (37.401,0.038) is unattached and has been ignored.
+Label vss at location (37.401,63.802) is unattached and has been ignored.
+Label vss at location (39.424,0.084) is unattached and has been ignored.
+Label vss at location (39.424,63.756) is unattached and has been ignored.
+Label vss at location (39.48,0.15) is unattached and has been ignored.
+Label vss at location (39.48,0.35) is unattached and has been ignored.
+Label vss at location (39.48,63.49) is unattached and has been ignored.
+Label vss at location (39.48,63.69) is unattached and has been ignored.
+Label vss at location (39.879,0.038) is unattached and has been ignored.
+Label vss at location (39.879,63.802) is unattached and has been ignored.
+Label vss at location (40.761,0.038) is unattached and has been ignored.
+Label vss at location (40.761,63.802) is unattached and has been ignored.
+Label vss at location (41.16,0.15) is unattached and has been ignored.
+Label vss at location (41.16,0.35) is unattached and has been ignored.
+Label vss at location (41.16,63.49) is unattached and has been ignored.
+Label vss at location (41.16,63.69) is unattached and has been ignored.
+Label vss at location (41.216,0.084) is unattached and has been ignored.
+Label vss at location (41.216,63.756) is unattached and has been ignored.
+Label vss at location (43.239,0.038) is unattached and has been ignored.
+Label vss at location (43.239,63.802) is unattached and has been ignored.
+Label vss at location (44.121,0.038) is unattached and has been ignored.
+Label vss at location (44.121,63.802) is unattached and has been ignored.
+Label vss at location (46.144,0.084) is unattached and has been ignored.
+Label vss at location (46.144,63.756) is unattached and has been ignored.
+Label vss at location (46.2,0.15) is unattached and has been ignored.
+Label vss at location (46.2,0.35) is unattached and has been ignored.
+Label vss at location (46.2,63.49) is unattached and has been ignored.
+Label vss at location (46.2,63.69) is unattached and has been ignored.
+Label vss at location (46.599,0.038) is unattached and has been ignored.
+Label vss at location (46.599,63.802) is unattached and has been ignored.
+Label vss at location (47.481,0.038) is unattached and has been ignored.
+Label vss at location (47.481,63.802) is unattached and has been ignored.
+Label vss at location (47.88,0.15) is unattached and has been ignored.
+Label vss at location (47.88,0.35) is unattached and has been ignored.
+Label vss at location (47.88,63.49) is unattached and has been ignored.
+Label vss at location (47.88,63.69) is unattached and has been ignored.
+Label vss at location (47.936,0.084) is unattached and has been ignored.
+Label vss at location (47.936,63.756) is unattached and has been ignored.
+Label vss at location (49.959,0.038) is unattached and has been ignored.
+Label vss at location (49.959,63.802) is unattached and has been ignored.
+Label vss at location (50.841,0.038) is unattached and has been ignored.
+Label vss at location (50.841,63.802) is unattached and has been ignored.
+Label vss at location (52.864,0.084) is unattached and has been ignored.
+Label vss at location (52.864,63.756) is unattached and has been ignored.
+Label vss at location (52.92,0.15) is unattached and has been ignored.
+Label vss at location (52.92,0.35) is unattached and has been ignored.
+Label vss at location (52.92,63.49) is unattached and has been ignored.
+Label vss at location (52.92,63.69) is unattached and has been ignored.
+Label vss at location (53.319,0.038) is unattached and has been ignored.
+Label vss at location (53.319,63.802) is unattached and has been ignored.
+Label vss at location (54.201,0.038) is unattached and has been ignored.
+Label vss at location (54.201,63.802) is unattached and has been ignored.
+Label vss at location (54.6,0.15) is unattached and has been ignored.
+Label vss at location (54.6,0.35) is unattached and has been ignored.
+Label vss at location (54.6,63.49) is unattached and has been ignored.
+Label vss at location (54.6,63.69) is unattached and has been ignored.
+Label vss at location (54.656,0.084) is unattached and has been ignored.
+Label vss at location (54.656,63.756) is unattached and has been ignored.
+Label vss at location (56.679,0.038) is unattached and has been ignored.
+Label vss at location (56.679,63.802) is unattached and has been ignored.
+Label vss at location (57.561,0.038) is unattached and has been ignored.
+Label vss at location (57.561,63.802) is unattached and has been ignored.
+Label vss at location (59.584,0.084) is unattached and has been ignored.
+Label vss at location (59.584,63.756) is unattached and has been ignored.
+Label vss at location (59.64,0.15) is unattached and has been ignored.
+Label vss at location (59.64,0.35) is unattached and has been ignored.
+Label vss at location (59.64,63.49) is unattached and has been ignored.
+Label vss at location (59.64,63.69) is unattached and has been ignored.
+Label vss at location (60.039,0.038) is unattached and has been ignored.
+Label vss at location (60.039,63.802) is unattached and has been ignored.
+Label vss at location (60.921,0.038) is unattached and has been ignored.
+Label vss at location (60.921,63.802) is unattached and has been ignored.
+Label vss at location (61.32,0.15) is unattached and has been ignored.
+Label vss at location (61.32,0.35) is unattached and has been ignored.
+Label vss at location (61.32,63.49) is unattached and has been ignored.
+Label vss at location (61.32,63.69) is unattached and has been ignored.
+Label vss at location (61.376,0.084) is unattached and has been ignored.
+Label vss at location (61.376,63.756) is unattached and has been ignored.
+Label vss at location (63.399,0.038) is unattached and has been ignored.
+Label vss at location (63.399,63.802) is unattached and has been ignored.
+Label vss at location (64.281,0.038) is unattached and has been ignored.
+Label vss at location (64.281,63.802) is unattached and has been ignored.
+Label vss at location (66.304,0.084) is unattached and has been ignored.
+Label vss at location (66.304,63.756) is unattached and has been ignored.
+Label vss at location (66.36,0.15) is unattached and has been ignored.
+Label vss at location (66.36,0.35) is unattached and has been ignored.
+Label vss at location (66.36,63.49) is unattached and has been ignored.
+Label vss at location (66.36,63.69) is unattached and has been ignored.
+Label vss at location (66.66,1.572) is unattached and has been ignored.
+Label vss at location (66.66,11.196) is unattached and has been ignored.
+Label vss at location (66.66,14.34) is unattached and has been ignored.
+Label vss at location (66.66,23.964) is unattached and has been ignored.
+Label vss at location (66.66,27.108) is unattached and has been ignored.
+Label vss at location (66.66,36.732) is unattached and has been ignored.
+Label vss at location (66.66,39.876) is unattached and has been ignored.
+Label vss at location (66.66,49.5) is unattached and has been ignored.
+Label vss at location (66.66,52.644) is unattached and has been ignored.
+Label vss at location (66.66,62.268) is unattached and has been ignored.
+Label vss at location (66.759,0.038) is unattached and has been ignored.
+Label vss at location (66.759,63.802) is unattached and has been ignored.
+Label vss at location (66.99,0.962) is unattached and has been ignored.
+Label vss at location (66.99,5.422) is unattached and has been ignored.
+Label vss at location (66.99,7.346) is unattached and has been ignored.
+Label vss at location (66.99,11.806) is unattached and has been ignored.
+Label vss at location (66.99,13.73) is unattached and has been ignored.
+Label vss at location (66.99,18.19) is unattached and has been ignored.
+Label vss at location (66.99,20.114) is unattached and has been ignored.
+Label vss at location (66.99,24.574) is unattached and has been ignored.
+Label vss at location (66.99,26.498) is unattached and has been ignored.
+Label vss at location (66.99,30.958) is unattached and has been ignored.
+Label vss at location (66.99,32.882) is unattached and has been ignored.
+Label vss at location (66.99,37.342) is unattached and has been ignored.
+Label vss at location (66.99,39.266) is unattached and has been ignored.
+Label vss at location (66.99,43.726) is unattached and has been ignored.
+Label vss at location (66.99,45.65) is unattached and has been ignored.
+Label vss at location (66.99,50.11) is unattached and has been ignored.
+Label vss at location (66.99,52.034) is unattached and has been ignored.
+Label vss at location (66.99,56.494) is unattached and has been ignored.
+Label vss at location (66.99,58.418) is unattached and has been ignored.
+Label vss at location (66.99,62.878) is unattached and has been ignored.
+Label vss at location (67.068,0.798) is unattached and has been ignored.
+Label vss at location (67.068,5.586) is unattached and has been ignored.
+Label vss at location (67.068,7.182) is unattached and has been ignored.
+Label vss at location (67.068,11.97) is unattached and has been ignored.
+Label vss at location (67.068,13.566) is unattached and has been ignored.
+Label vss at location (67.068,18.354) is unattached and has been ignored.
+Label vss at location (67.068,19.95) is unattached and has been ignored.
+Label vss at location (67.068,24.738) is unattached and has been ignored.
+Label vss at location (67.068,26.334) is unattached and has been ignored.
+Label vss at location (67.068,31.122) is unattached and has been ignored.
+Label vss at location (67.068,32.718) is unattached and has been ignored.
+Label vss at location (67.068,37.506) is unattached and has been ignored.
+Label vss at location (67.068,39.102) is unattached and has been ignored.
+Label vss at location (67.068,43.89) is unattached and has been ignored.
+Label vss at location (67.068,45.486) is unattached and has been ignored.
+Label vss at location (67.068,50.274) is unattached and has been ignored.
+Label vss at location (67.068,51.87) is unattached and has been ignored.
+Label vss at location (67.068,56.658) is unattached and has been ignored.
+Label vss at location (67.068,58.254) is unattached and has been ignored.
+Label vss at location (67.068,63.042) is unattached and has been ignored.
+Label vss at location (67.146,0.336) is unattached and has been ignored.
+Label vss at location (67.146,2.856) is unattached and has been ignored.
+Label vss at location (67.146,3.528) is unattached and has been ignored.
+Label vss at location (67.146,6.048) is unattached and has been ignored.
+Label vss at location (67.146,6.72) is unattached and has been ignored.
+Label vss at location (67.146,9.24) is unattached and has been ignored.
+Label vss at location (67.146,9.912) is unattached and has been ignored.
+Label vss at location (67.146,12.432) is unattached and has been ignored.
+Label vss at location (67.146,13.104) is unattached and has been ignored.
+Label vss at location (67.146,15.624) is unattached and has been ignored.
+Label vss at location (67.146,16.296) is unattached and has been ignored.
+Label vss at location (67.146,18.816) is unattached and has been ignored.
+Label vss at location (67.146,19.488) is unattached and has been ignored.
+Label vss at location (67.146,22.008) is unattached and has been ignored.
+Label vss at location (67.146,22.68) is unattached and has been ignored.
+Label vss at location (67.146,25.2) is unattached and has been ignored.
+Label vss at location (67.146,25.872) is unattached and has been ignored.
+Label vss at location (67.146,28.392) is unattached and has been ignored.
+Label vss at location (67.146,29.064) is unattached and has been ignored.
+Label vss at location (67.146,31.584) is unattached and has been ignored.
+Label vss at location (67.146,32.256) is unattached and has been ignored.
+Label vss at location (67.146,34.776) is unattached and has been ignored.
+Label vss at location (67.146,35.448) is unattached and has been ignored.
+Label vss at location (67.146,37.968) is unattached and has been ignored.
+Label vss at location (67.146,38.64) is unattached and has been ignored.
+Label vss at location (67.146,41.16) is unattached and has been ignored.
+Label vss at location (67.146,41.832) is unattached and has been ignored.
+Label vss at location (67.146,44.352) is unattached and has been ignored.
+Label vss at location (67.146,45.024) is unattached and has been ignored.
+Label vss at location (67.146,47.544) is unattached and has been ignored.
+Label vss at location (67.146,48.216) is unattached and has been ignored.
+Label vss at location (67.146,50.736) is unattached and has been ignored.
+Label vss at location (67.146,51.408) is unattached and has been ignored.
+Label vss at location (67.146,53.928) is unattached and has been ignored.
+Label vss at location (67.146,54.6) is unattached and has been ignored.
+Label vss at location (67.146,57.12) is unattached and has been ignored.
+Label vss at location (67.146,57.792) is unattached and has been ignored.
+Label vss at location (67.146,60.312) is unattached and has been ignored.
+Label vss at location (67.146,60.984) is unattached and has been ignored.
+Label vss at location (67.146,63.504) is unattached and has been ignored.
+----------------------------------------------------------------------------------
+--- ORIGINAL LAYER STATISTICS
+---
+LAYER CELLBOUNDARY ... TOTAL Original Geometry Count = 42     (3816)
+LAYER V1PITCHID ...... TOTAL Original Geometry Count = 0      (0)
+LAYER V3PITCHID ...... TOTAL Original Geometry Count = 0      (0)
+LAYER ULPPITCHID ..... TOTAL Original Geometry Count = 0      (0)
+LAYER DIFF ........... TOTAL Original Geometry Count = 3058   (749504)
+LAYER POLY ........... TOTAL Original Geometry Count = 3728   (855417)
+LAYER DIFFCON ........ TOTAL Original Geometry Count = 3881   (525089)
+LAYER PDIFF .......... TOTAL Original Geometry Count = 1470   (372732)
+LAYER ALLNWELL ....... TOTAL Original Geometry Count = 40     (3814)
+LAYER NDIFF .......... TOTAL Original Geometry Count = 1588   (376772)
+LAYER POLYDUMMYID .... TOTAL Original Geometry Count = 126    (72422)
+LAYER POLYCON ........ TOTAL Original Geometry Count = 2620   (301744)
+LAYER DIODEID ........ TOTAL Original Geometry Count = 0      (0)
+LAYER NWELLESD ....... TOTAL Original Geometry Count = 0      (0)
+LAYER DEEPNWELL ...... TOTAL Original Geometry Count = 0      (0)
+LAYER POLYOD ......... TOTAL Original Geometry Count = 0      (0)
+LAYER ETCHRINGID ..... TOTAL Original Geometry Count = 0      (0)
+LAYER NWELL .......... TOTAL Original Geometry Count = 40     (3814)
+LAYER METAL0 ......... TOTAL Original Geometry Count = 109508 (254827)
+LAYER METALC0 ........ TOTAL Original Geometry Count = 0      (0)
+LAYER METAL0BC ....... TOTAL Original Geometry Count = 109508 (254827)
+LAYER METAL1 ......... TOTAL Original Geometry Count = 64111  (243678)
+LAYER METAL2 ......... TOTAL Original Geometry Count = 4272   (78738)
+LAYER METALC2 ........ TOTAL Original Geometry Count = 0      (0)
+LAYER METAL2BC ....... TOTAL Original Geometry Count = 4272   (78738)
+LAYER METAL3 ......... TOTAL Original Geometry Count = 4490   (19357)
+LAYER METALC3 ........ TOTAL Original Geometry Count = 0      (0)
+LAYER METAL3BC ....... TOTAL Original Geometry Count = 4490   (19357)
+LAYER METAL4 ......... TOTAL Original Geometry Count = 3614   (13444)
+LAYER METALC4 ........ TOTAL Original Geometry Count = 0      (0)
+LAYER METAL4BC ....... TOTAL Original Geometry Count = 3614   (13444)
+LAYER METAL5 ......... TOTAL Original Geometry Count = 2347   (10401)
+LAYER METALC5 ........ TOTAL Original Geometry Count = 0      (0)
+LAYER METAL5BC ....... TOTAL Original Geometry Count = 2347   (10401)
+LAYER METAL11 ........ TOTAL Original Geometry Count = 1162   (2360)
+LAYER METAL12 ........ TOTAL Original Geometry Count = 118    (517)
+LAYER VIACON ......... TOTAL Original Geometry Count = 3188   (56897)
+LAYER VIA0 ........... TOTAL Original Geometry Count = 499    (56227)
+LAYER VIA1 ........... TOTAL Original Geometry Count = 249    (55284)
+LAYER VIA2 ........... TOTAL Original Geometry Count = 3      (9710)
+LAYER VIA3 ........... TOTAL Original Geometry Count = 3      (4849)
+LAYER VIA4 ........... TOTAL Original Geometry Count = 2      (4834)
+LAYER VIA5 ........... TOTAL Original Geometry Count = 2      (3224)
+LAYER VIA6 ........... TOTAL Original Geometry Count = 2      (1616)
+LAYER VIA7 ........... TOTAL Original Geometry Count = 1      (800)
+LAYER VIA8 ........... TOTAL Original Geometry Count = 1      (800)
+LAYER VIA9 ........... TOTAL Original Geometry Count = 1      (800)
+LAYER VIA10 .......... TOTAL Original Geometry Count = 1      (800)
+LAYER VIA11 .......... TOTAL Original Geometry Count = 1      (400)
+LAYER VIA12 .......... TOTAL Original Geometry Count = 0      (0)
+LAYER TV1 ............ TOTAL Original Geometry Count = 0      (0)
+LAYER ACTCAP_ID ...... TOTAL Original Geometry Count = 132    (68280)
+LAYER TGOXID ......... TOTAL Original Geometry Count = 0      (0)
+LAYER METALC1 ........ TOTAL Original Geometry Count = 0      (0)
+LAYER PALMG .......... TOTAL Original Geometry Count = 0      (0)
+LAYER PV2 ............ TOTAL Original Geometry Count = 152    (70503)
+LAYER PV1 ............ TOTAL Original Geometry Count = 132    (436)
+LAYER NALMG .......... TOTAL Original Geometry Count = 0      (0)
+LAYER NV2 ............ TOTAL Original Geometry Count = 153    (71003)
+LAYER NV1 ............ TOTAL Original Geometry Count = 140    (608)
+LAYER METAL6BC ....... TOTAL Original Geometry Count = 2097   (6933)
+LAYER METAL7BC ....... TOTAL Original Geometry Count = 1698   (4111)
+LAYER METAL8BC ....... TOTAL Original Geometry Count = 842    (2440)
+LAYER METAL9BC ....... TOTAL Original Geometry Count = 842    (2440)
+LAYER METAL10BC ...... TOTAL Original Geometry Count = 482    (2080)
+LAYER TM1 ............ TOTAL Original Geometry Count = 0      (0)
+LAYER C4BEMIB ........ TOTAL Original Geometry Count = 0      (0)
+LAYER METAL1BC ....... TOTAL Original Geometry Count = 64111  (243678)
+LAYER CE1 ............ TOTAL Original Geometry Count = 0      (0)
+LAYER CE2 ............ TOTAL Original Geometry Count = 0      (0)
+LAYER GATED_NACID .... TOTAL Original Geometry Count = 0      (0)
+LAYER PRES_ID ........ TOTAL Original Geometry Count = 0      (0)
+LAYER POLYCONRESID ... TOTAL Original Geometry Count = 0      (0)
+LAYER WELLRES_ID ..... TOTAL Original Geometry Count = 0      (0)
+----------------------------------------------------------------------------------
+--- RULECHECK RESULTS STATISTICS
+---
+RULECHECK IP_00_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IP_01_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IP_02_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IP_03_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IP_04_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IP_05_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IP_08_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IP_09_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IP_10_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IP_11_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_metal_PM ..... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_via_PM ....... TOTAL Result Count = 0 (0)
+RULECHECK IP_12_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IP_13_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IP_14_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IP_15_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IP_16_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IP_17_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IP_20_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IP_21_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IP_22_PM .......... TOTAL Result Count = 0 (0)
+RULECHECK IP_00_MT0 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_01_MT0 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_02_MT0 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_03_MT0 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_04_MT0 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_05_MT0 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_08_MT0 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_09_MT0 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_10_MT0 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_11_MT0 ......... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_metal_MT0 .... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_via_MT0 ...... TOTAL Result Count = 0 (0)
+RULECHECK IP_12_MT0 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_13_MT0 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_14_MT0 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_15_MT0 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_16_MT0 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_17_MT0 ......... TOTAL Result Count = 0 (0)
+RULECHECK FM_01 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_02 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_03 ............. TOTAL Result Count = 0 (0)
+RULECHECK IP_00_MT1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_01_MT1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_02_MT1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_03_MT1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_04_MT1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_05_MT1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_08_MT1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_09_MT1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_10_MT1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_11_MT1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_metal_MT1 .... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_via_MT1 ...... TOTAL Result Count = 0 (0)
+RULECHECK IP_12_MT1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_13_MT1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_14_MT1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_15_MT1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_16_MT1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_17_MT1 ......... TOTAL Result Count = 0 (0)
+RULECHECK FM_11 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_12 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_13 ............. TOTAL Result Count = 0 (0)
+RULECHECK IP_00_MT2 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_01_MT2 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_02_MT2 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_03_MT2 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_04_MT2 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_05_MT2 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_08_MT2 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_09_MT2 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_10_MT2 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_11_MT2 ......... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_metal_MT2 .... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_via_MT2 ...... TOTAL Result Count = 0 (0)
+RULECHECK IP_12_MT2 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_13_MT2 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_14_MT2 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_15_MT2 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_16_MT2 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_17_MT2 ......... TOTAL Result Count = 0 (0)
+RULECHECK FM_21 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_22 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_23 ............. TOTAL Result Count = 0 (0)
+RULECHECK IP_00_MT3 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_01_MT3 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_02_MT3 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_03_MT3 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_04_MT3 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_05_MT3 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_08_MT3 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_09_MT3 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_10_MT3 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_11_MT3 ......... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_metal_MT3 .... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_via_MT3 ...... TOTAL Result Count = 0 (0)
+RULECHECK IP_12_MT3 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_13_MT3 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_14_MT3 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_15_MT3 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_16_MT3 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_17_MT3 ......... TOTAL Result Count = 0 (0)
+RULECHECK FM_31 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_32 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_33 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_291 ............ TOTAL Result Count = 0 (0)
+RULECHECK IP_00_MT4 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_01_MT4 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_02_MT4 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_03_MT4 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_04_MT4 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_05_MT4 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_08_MT4 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_09_MT4 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_10_MT4 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_11_MT4 ......... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_metal_MT4 .... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_via_MT4 ...... TOTAL Result Count = 0 (0)
+RULECHECK IP_12_MT4 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_13_MT4 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_14_MT4 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_15_MT4 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_16_MT4 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_17_MT4 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_18_MT4 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_19_MT4 ......... TOTAL Result Count = 0 (0)
+RULECHECK FM_41 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_42 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_43 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_292 ............ TOTAL Result Count = 0 (0)
+RULECHECK IP_00_MT5 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_01_MT5 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_02_MT5 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_03_MT5 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_04_MT5 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_05_MT5 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_08_MT5 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_09_MT5 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_10_MT5 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_11_MT5 ......... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_metal_MT5 .... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_via_MT5 ...... TOTAL Result Count = 0 (0)
+RULECHECK IP_12_MT5 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_13_MT5 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_14_MT5 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_15_MT5 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_16_MT5 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_17_MT5 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_18_MT5 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_19_MT5 ......... TOTAL Result Count = 0 (0)
+RULECHECK FM_51 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_52 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_53 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_293 ............ TOTAL Result Count = 0 (0)
+RULECHECK IP_00_MT6 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_01_MT6 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_02_MT6 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_03_MT6 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_04_MT6 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_05_MT6 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_08_MT6 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_09_MT6 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_10_MT6 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_11_MT6 ......... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_metal_MT6 .... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_via_MT6 ...... TOTAL Result Count = 0 (0)
+RULECHECK IP_12_MT6 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_13_MT6 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_14_MT6 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_15_MT6 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_16_MT6 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_17_MT6 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_18_MT6 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_19_MT6 ......... TOTAL Result Count = 0 (0)
+RULECHECK FM_61 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_62 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_63 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_294 ............ TOTAL Result Count = 0 (0)
+RULECHECK IP_00_MT7 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_01_MT7 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_02_MT7 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_03_MT7 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_04_MT7 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_05_MT7 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_08_MT7 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_09_MT7 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_10_MT7 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_11_MT7 ......... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_metal_MT7 .... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_via_MT7 ...... TOTAL Result Count = 0 (0)
+RULECHECK IP_12_MT7 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_13_MT7 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_14_MT7 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_15_MT7 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_16_MT7 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_17_MT7 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_18_MT7 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_19_MT7 ......... TOTAL Result Count = 0 (0)
+RULECHECK FM_71 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_72 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_73 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_295 ............ TOTAL Result Count = 0 (0)
+RULECHECK IP_00_MT8 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_01_MT8 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_02_MT8 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_03_MT8 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_04_MT8 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_05_MT8 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_08_MT8 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_09_MT8 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_10_MT8 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_11_MT8 ......... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_metal_MT8 .... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_via_MT8 ...... TOTAL Result Count = 0 (0)
+RULECHECK IP_12_MT8 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_13_MT8 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_14_MT8 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_15_MT8 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_16_MT8 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_17_MT8 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_18_MT8 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_19_MT8 ......... TOTAL Result Count = 0 (0)
+RULECHECK FM_81 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_82 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_83 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_296 ............ TOTAL Result Count = 0 (0)
+RULECHECK IP_00_MT9 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_01_MT9 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_02_MT9 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_03_MT9 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_04_MT9 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_05_MT9 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_08_MT9 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_09_MT9 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_10_MT9 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_11_MT9 ......... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_metal_MT9 .... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_via_MT9 ...... TOTAL Result Count = 0 (0)
+RULECHECK IP_12_MT9 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_13_MT9 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_14_MT9 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_15_MT9 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_16_MT9 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_17_MT9 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_18_MT9 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_19_MT9 ......... TOTAL Result Count = 0 (0)
+RULECHECK FM_91 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_92 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_93 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_297 ............ TOTAL Result Count = 0 (0)
+RULECHECK IP_00_MT10 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_01_MT10 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_02_MT10 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_03_MT10 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_04_MT10 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_05_MT10 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_08_MT10 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_09_MT10 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_10_MT10 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_11_MT10 ........ TOTAL Result Count = 0 (0)
+RULECHECK IPnw_metal_MT10 ... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_via_MT10 ..... TOTAL Result Count = 0 (0)
+RULECHECK IP_12_MT10 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_13_MT10 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_14_MT10 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_15_MT10 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_16_MT10 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_17_MT10 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_18_MT10 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_19_MT10 ........ TOTAL Result Count = 0 (0)
+RULECHECK FM_101 ............ TOTAL Result Count = 0 (0)
+RULECHECK FM_102 ............ TOTAL Result Count = 0 (0)
+RULECHECK FM_103 ............ TOTAL Result Count = 0 (0)
+RULECHECK FM_298 ............ TOTAL Result Count = 0 (0)
+RULECHECK IP_00_MT11 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_01_MT11 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_02_MT11 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_03_MT11 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_04_MT11 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_05_MT11 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_08_MT11 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_09_MT11 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_10_MT11 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_11_MT11 ........ TOTAL Result Count = 0 (0)
+RULECHECK IPnw_metal_MT11 ... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_via_MT11 ..... TOTAL Result Count = 0 (0)
+RULECHECK IP_12_MT11 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_13_MT11 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_14_MT11 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_15_MT11 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_16_MT11 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_17_MT11 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_18_MT11 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_19_MT11 ........ TOTAL Result Count = 0 (0)
+RULECHECK FM_111 ............ TOTAL Result Count = 0 (0)
+RULECHECK FM_112 ............ TOTAL Result Count = 0 (0)
+RULECHECK FM_113 ............ TOTAL Result Count = 0 (0)
+RULECHECK FM_299 ............ TOTAL Result Count = 0 (0)
+RULECHECK IP_00_MT12 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_01_MT12 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_02_MT12 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_03_MT12 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_04_MT12 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_05_MT12 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_08_MT12 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_09_MT12 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_10_MT12 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_11_MT12 ........ TOTAL Result Count = 0 (0)
+RULECHECK IPnw_metal_MT12 ... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_via_MT12 ..... TOTAL Result Count = 0 (0)
+RULECHECK IP_12_MT12 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_13_MT12 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_14_MT12 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_15_MT12 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_16_MT12 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_17_MT12 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_18_MT12 ........ TOTAL Result Count = 0 (0)
+RULECHECK IP_19_MT12 ........ TOTAL Result Count = 0 (0)
+RULECHECK FM_121 ............ TOTAL Result Count = 0 (0)
+RULECHECK FM_122 ............ TOTAL Result Count = 0 (0)
+RULECHECK FM_123 ............ TOTAL Result Count = 0 (0)
+RULECHECK FM_T1 ............. TOTAL Result Count = 0 (0)
+RULECHECK FM_B1 ............. TOTAL Result Count = 0 (0)
+RULECHECK V0_98 ............. TOTAL Result Count = 0 (0)
+RULECHECK V1_98 ............. TOTAL Result Count = 0 (0)
+RULECHECK V2_98 ............. TOTAL Result Count = 0 (0)
+RULECHECK V3_98 ............. TOTAL Result Count = 0 (0)
+RULECHECK V4_98 ............. TOTAL Result Count = 0 (0)
+RULECHECK IP_00_TM1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_01_TM1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_02_TM1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_03_TM1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_04_TM1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_05_TM1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_06_TM1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_07_TM1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_08_TM1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_09_TM1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_10_TM1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IP_11_TM1 ......... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_metal_TM1 .... TOTAL Result Count = 0 (0)
+RULECHECK IPnw_via_TM1 ...... TOTAL Result Count = 0 (0)
+RULECHECK bjt_emit .......... TOTAL Result Count = 0 (0)
+RULECHECK bjt_coll .......... TOTAL Result Count = 0 (0)
+RULECHECK bjt_emit_new ...... TOTAL Result Count = 0 (0)
+RULECHECK bjt_coll_new ...... TOTAL Result Count = 0 (0)
+----------------------------------------------------------------------------------
+--- SUMMARY
+---
+TOTAL CPU Time:                  308
+TOTAL REAL Time:                 93
+TOTAL Original Layer Geometries: 405180 (4933966)
+TOTAL DRC RuleChecks Executed:   346
+TOTAL DRC Results Generated:     0 (0)

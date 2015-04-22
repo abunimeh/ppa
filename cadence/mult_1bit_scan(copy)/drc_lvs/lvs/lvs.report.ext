@@ -1,0 +1,29 @@
+
+
+       #############################################################
+       ##                                                         ##
+       ##               C A L I B R E    S Y S T E M              ##
+       ##                                                         ##
+       ##    C I R C U I T   E X T R A C T I O N   R E P O R T    ##
+       ##                                                         ##
+       #############################################################
+
+
+REPORT FILE NAME:         lvs.report.ext
+LAYOUT NAME:              /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/../apr/outputs/mult.signoff.post_mfill.oas ('*')
+CREATION TIME:            Sat Apr  4 00:28:48 2015
+CURRENT DIRECTORY:        /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/lvs
+USER NAME:                spalutla
+CALIBRE VERSION:          v2014.4_18.13    Wed Nov 5 16:04:06 PST 2014
+
+
+Layout text editing
+-------------------
+
+Text "=syn13" in cell d04spc00wnz03 on layer 1280 ignored
+Text "=syn13" in cell d04spc00wnz03 on layer 1280 ignored
+Text "=syn14" in cell d04spc00wnz03 on layer 1280 ignored
+Text "=syn14" in cell d04spc00wnz03 on layer 1280 ignored
+Text "=syn291" in cell d04spc00wnz03 on layer 1536 ignored
+WARNING:TEXT PRINT MAXIMUM limit of 5 exceeded. 2261 renamed or deleted text(s) not printed.
+

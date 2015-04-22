@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : clocks
+Design : fdkex
+Version: J-2014.09
+Date   : Tue Mar 31 00:53:57 2015
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+clk           500.000   {0 250}                       {clk}
+--------------------------------------------------------------------------------
+ 
+****************************************
+Report : clock_skew
+Design : fdkex
+Version: J-2014.09
+Date   : Tue Mar 31 00:53:57 2015
+****************************************
+
+                 Rise      Fall  Min Rise  Min fall        Uncertainty
+Object          Delay     Delay     Delay     Delay     Plus      Minus
+--------------------------------------------------------------------------------
+clk                 -         -         -         -    50.000    50.000
+1

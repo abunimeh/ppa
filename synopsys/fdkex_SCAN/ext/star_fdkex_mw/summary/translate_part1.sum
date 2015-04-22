@@ -1,0 +1,147 @@
+
+
+                         StarRC (TM)
+             Copyright (c) 1999-2014 Synopsys, Inc.
+                      All Rights Reserved
+
+
+ExecName: /p/foundry/eda/em64t_SLES11/starrcxt/J-2014.06-SP3/suse64_starrc/bin/StarXtract
+Version: J-2014.06-SP3
+Built on: Oct 15 2014 13:38:17
+Start Time: Tue Mar 31 10:03:32 2015
+
+Host ............ chlr16420
+
+
+SKIP_CELLS:
+d04spc00nnz01	d04dcp00wdz64	d04bar00nnz64	d04xnk04ld0f5	d04tih00wnz00	d04qna03nd0d0	d04inn00nn0b5
+	d04xnk04yn0f0	d04inn00ln0b3	d04xnk04yd0e5	d04inn00wn0a5	d04xnk04yn0e0	d04inn00yd0b3	d04xob03yd0g5
+	d04bfn00ynub5	d04fyj03nd0c0	d04bfn00nn0b5	d04fky00yd0g0	d04bfn00ln0a5	d04fyj03yd0b0	d04inn00wnuc5
+	d04xnk04nn0c0	d04inn00yn0d0	fdk73d84_asic_halo_hhb	d04inn00wn0d0	d04xnk04yn0d0	d04inn00ynud0
+	d04xok04yn0c0	d04inn00wd0f7	d04xnk04yn0a5	d04inn00ld0f7	d04xnk04ln0a5	d04bfn00nn0c0	d04xob03yd0c7
+	d04nab02nn0d0	d04xnk04nn0b5	d04cak01ln0b0	d04cgc01nd0d0	d04nan02nd0b5	d04fky00yd0a5	d04nan02wd0b6
+	d04gbf00nd0i0	d04nob02ln0b0	d04bfn00yd0o0	d04nan02ld0b7	d04xnb02yd0h0	d04non02yn0b3	d04fky00ld0b0
+	d04non02ln0b5	d04bfn00nduo0	d04non02nn0b7	d04xob03yn0b5	d04nan02ln0d0	d04mkn22yd0c7	d04kak01nn0b0
+	d04gbf10nd0f0	d04bfn00yd0c7	d04gbf10nd0f5	d04bfn00nnuc0	d04bfn00yduk0	d04bfn00ld0b4	d04xnb03yn0b5
+	d04bfn00nd0b4	d04mkn22ln0d0	d04inn00nd0c5	d04xnb03yn0b0	d04nan02yn0b5	d04nob02yd0g0	d04nan02nd0c0
+	d04nab02yd0i0	d04nan02nn0b6	d04gbf00nd0g0	d04nan02wn0b5	d04xob03ln0a5	d04kok01nn0b0	d04nak24ld0f7
+	d04nan02ln0b5	d04cob13yn0f0	d04non02wd0c5	d04inn00wduq0	d04non02nd0d0	d04cak01yd0i5	d04non02ld0d0
+	d04rrb22wn0a5	d04bfn00yd0b0	d04xnb02nn0d0	d04bfn00wd0b3	d04rrb22ln0b5	d04bfn11wn0b5	d04non02yd0h5
+	d04bfn00nd0b3	d04nab03yd0f5	d04nan03yd0d0	d04nab02nd0g0	d04bfn00yn0d0	d04mkn22yn0b5	d04can03yn0a5
+	d04mkn22ln0b5	d04inn00ynue3	d04inn00ynui5	d04nab02wn0b0	d04nob02yd0f5	d04non02nn0c0	d04cob13nn0d0
+	d04ann02yn0b5	d04nab02ld0f5	d04ann02nn0b5	d04nab03yn0f0	d04con03yn0b0	d04non02nn0f5	d04nan03nnuc0
+	d04ann04yd0d7	d04nan03yd0d7	d04can03yn0f0	d04orn02yn0a5	d04bfn00wd0h0	d04orn02nn0b0	d04non02yd0f7
+	d04ann02yn0b6	d04can03yn0e0	d04ann02wn0b6	d04ann03yd0d3	d04nan04yn0b5	d04xob02yn0b4	d04nob02yn0b5
+	d04cak01yd0f5	d04nan04nn0b5	d04xnb02yn0b0	d04nan04yd0e0	d04xnb02ln0b5	d04cak01nd0d0	d04xnb02yn0c0
+	d04cak01yd0c7	d04inn00yduo7	d04con01wn0c0	d04xob02wn0a5	d04orn02yn0c0	d04xob02yn0b0	d04bfn00nn0e0
+	d04cob13nd0b5	d04ann02yn0b3	d04bfn00wd0i0	d04ann02wn0b3	d04nak24nn0d0	d04can03wn0b0	d04aon03yn0d0
+	d04cob13yn0b0	d04gbf00nd0c5	d04nab02wn0b5	d04xnb02wn0a5	d04ann02yn0a5	d04mbn22nn0b4	d04con10wn0b0
+	d04bfn13wn0b0	d04bfn00wn0f0	d04gbf30nd0b5	d04ann03ln0b0	d04cob13yn0c0	d04aon01yn0a5	d04can03wd0b3
+	d04nan03yn0e0	d04aon11yd0d5	d04oan01yn0c0	d04ann02nn0e3	d04con02yn0c0	d04ann02yn0e0	d04qfd01ndz00
+	d04con04yn0d0	d04cak02nn0c0	d04ann02nd0d3	d04cab13yn0b0	d04non03nn0f0	d04aon03yn0a5	d04nan04yd0d0
+	d04con01yd0c5	d04con01wd0b5	d04nob03ln0b0	d04con01yd0b5	d04non02nn0d0	d04can03nd0b5	d04con03nd0c7
+	d04orn02yn0d0	d04nab03yn0c0	d04can16nn0b5	d04oan01wn0a5	d04nan04wd0b7	d04bfn12wn0a5	d04nan02yn0d5
+	d04con03nd0d7	d04can03nn0d0	d04nob02yn0c0	d04can03ln0b5	d04mkn22nn0a5	d04can03yn0b7	d04cab11yn0c0
+	d04inn00wn0h5	d04ann02nn0c0	d04ann03yn0c0	d04inn00wdui0	d04bfn00wd0c5	d04con01yd0c3	d04non02ld0f0
+	d04con01wd0c7	d04nab02nd0d3	d04nan02wd0d0	d04nak24nn0c0	d04bfn00ynue3	d04inn00yd0i0	d04can03yd0c5
+	d04nan04yn0e5	d04spc00nnz02	d04qbf00nd0o0	d04dcp00wnz04	d04qbf00nd0h0	d04inn00ynub3	d04cgc01nd0j0
+	d04inn00wnub3	d04fyj03nd0g0	d04inn00ln0b5	d04cgc01nd0i0	d04inn00ln0a5	d04xnk04nn0e0	d04inn00yd0b5
+	d04qno02nd0c7	d04bfn00yn0a5	d04fyj03ld0c0	d04bfn00wnub5	d04fyj03wd0b0	d04dcp00wnz08	d04qin00nd0i0
+	d04inn00ld0b5	d04xnk04ln0c0	d04inn00nn0c5	fdk73d84_asic_halo_hic	d04inn00ln0c5
+	fdk73d84_asic_halo_hhc	d04bfn00yn0b0	d04xob03yn0g0	d04inn00nnud0	d04xnk04nn0b0	d04inn00nd0f7
+	d04cgc01nd0f0	d04bfn00ln0c0	d04xob03nd0c7	d04nab02wn0d0	d04xnk04ln0b5	d04cak01yn0b0	d04gbf10nd0h0
+	d04nan02nd0b6	d04fky00wd0a5	d04nan02wd0b7	d04xob02yd0h0	d04nob02nn0b0	d04xob03yn0d0	d04non02wn0b3
+	d04mkn22yd0d5	d04non02yn0b5	d04fky00nd0b0	d04non02ln0b7	d04bfn00yduo0	d04nan02yn0d0	d04xob03nn0b5
+	d04kak01yn0b0	d04mkn22wd0c7	d04bfn00yd0b4	d04cgc01nd0b0	d04bfn00ynub3	d04bfn00nduk0	d04bfn00wd0b5
+	d04bfn00ld0k0	d04bfn00ld0c0	d04gbf00nd0g5	d04bfn00nd0c7	d04bar01nnz64	d04nan02yd0c0	d04non03yd0g0
+	d04nan02yn0b6	d04xob03nn0b0	d04nan02nd0c3	d04inn00yd0q0	d04nan02nn0c0	d04xnb02yn0f0	d04nan02wn0b6
+	d04nan02nd0h0	d04kok01wn0b0	d04nan04nd0i0	d04nan02ln0b6	d04cab13yn0f0	d04non02yd0c0	d04inn00yduq0
+	d04non02ld0c0	d04cak01nd0i5	d04non02nd0c7	d04xob02yn0d0	d04bfn00nn0c5	d04xnb02ln0d0	d04cak01nn0b5
+	d04non02nd0i0	d04bfn11wn0c0	d04non02wd0h5	d04cak04nn0b0	d04ann02nd0f7	d04inn00yn0e3	d04nab02yd0g0
+	d04cab11nn0b0	d04mkn22wn0b5	d04can03ln0a5	d04xob02yn0e0	d04nab02yn0b0	d04ltn80yd0e0	d04non02wn0c0
+	d04gbf10nd0d5	d04orn02yn0b5	d04cob13yn0d0	d04ann02nn0b4	d04nab02yd0f5	d04ann02wn0b5	d04bfn00wduh0
+	d04con03ln0b0	d04inn00yd0o7	d04nan03nn0b5	d04ann04nd0d7	d04nan03ynuc0	d04can03yn0e3	d04orn02yn0b0
+	d04bfn00yd0h0	d04orn02wn0a5	d04non02wd0f7	d04ann02ln0b6	d04ann04yd0c5	d04ann02yd0b7	d04cab13yn0d0
+	d04nan04yn0c0	d04xob02nn0b5	d04nan04nd0d7	d04cak01nd0f5	d04nan04nn0c0	d04xnb02wn0b5	d04cak01yd0c5
+	d04xnb02ln0b0	d04cak01nn0c0	d04xnb02yn0b7	d04cak01yn0c0	d04xob02yn0a5	d04con01ln0c0	d04cob11yd0d7
+	d04orn02nn0c0	d04ltn80yd0a5	d04bfn00wnud5	d04cob11yd0c7	d04ann02ln0b3	d04bfn00yd0i0	d04bfn00lnud5
+	d04inn00yn0i5	d04con02yn0b0	d04aon01yn0d0	d04nab02yn0b5	d04cab13yn0c0	d04nab02wn0c0	d04xnb02nn0a5
+	d04ann02ln0a5	d04ann03yn0d0	d04nan04yn0d0	d04bfn13wn0a5	d04bfn00nn0f0	d04orn02yd0f7	d04ann03nn0a5
+	d04cob13nn0c0	d04inn00wn0f5	d04can03nd0b0	d04non02ln0d5	d04aon03yd0b3	d04con04yn0b5	d04ann04nd0b7
+	d04con02yn0d0	d04ann02yn0f0	d04qfd02ndz00	d04ann04yn0c0	d04cak02yn0c0	d04ann02yd0d3	d04ann03yn0b5
+	d04orn02yd0d5	d04inn00nnuf5	d04nan04yd0c7	d04con01ld0c5	d04con01nn0d0	d04nob03yn0b0	d04can03wd0c7
+	d04aon03nn0c0	d04can03ld0c7	d04con03nn0c0	d04mkn22yn0b0	d04oan01wn0b0	d04bfn12wn0b0	d04oan01yn0a5
+	d04nan04nd0b7	d04aon03yn0b0	d04can03wn0b7	d04con03nn0d0	d04can03nn0c0	d04nob02yn0d0	d04can03nn0b7
+	d04mkn22wn0a5	d04can03yn0b5	d04ann02yn0c0	d04gbf00nd0d5	d04ann02nn0d0	d04bfn12wn0c0	d04inn00ydui0
+	d04bfn00yd0c5	d04con01yd0c7	d04non02yd0f5	d04nan02yd0d0	d04nab02ld0d3	d04nan02wd0e0	d04nak24ln0c0
+	d04bfn00nnue3	d04nob02yd0d3	d04can03ld0c5	d04cob11yn0c0	d04spc00nnz03	d04fyj43yd0g0	d04gnc01lnz00
+	d04gbf20nd0l0	d04inn00yn0b3	d04fyj43yd0b0	d04inn00wn0b3	d04fyj03ld0g0	d04inn00yn0a5	d04gbf00nd0l0
+	d04bar01nnz08	d04xnk04ln0e0	d04inn00ynuc5	d04xnb03yd0g3	d04bfn00yn0b5	d04fyj03wd0c0	d04bfn00wn0a5
+	d04fyj03nd0b0	d04inn00wd0b5	d04xok04nn0b5	d04tap02ldz05	d04cgc01nd0g0	d04inn00nn0d0	d04fky00yd0e0
+	d04inn00ln0d0	d04xnk04nn0d0	d04bfn00nn0b0	d04xnb03yd0c7	d04inn00wnud0	d04xnk04nn0a5	d04bfn00wn0c0
+	d04cgc01nd0e0	d04inn00yd0c7	d04xob03ld0c7	d04cak01nn0b0	d04xnb02yd0i0	d04nan02yd0b7	d04gbf00nd0j0
+	d04nan02nd0b7	d04fky00ld0a5	d04nan02yd0b5	d04xnb03yn0d0	d04nob02yn0b0	d04xob03nn0d0	d04non02wn0b5
+	d04mkn22ld0d5	d04non02yn0b7	d04gbf10nd0g0	d04non02nn0b3	d04gbf00nd0h5	d04nan02nn0d0	d04nob02yd0i0
+	d04kak01wn0b0	d04mkn22nd0c7	d04bfn00yd0b5	d04gbf30nd0e5	d04bfn00ynub4	d04bfn00lduk0	d04bfn00wd0c7
+	d04ann02yd0k0	d04bfn00ld0c7	d04mkn22yn0d0	d04bfn00nnub4	d04xnb02yn0g0	d04nan02yd0c3	d04ltn80yd0g0
+	d04nan02yn0c0	d04xob03yn0b0	d04nan02nd0c7	d04orn02yd0i0	d04nan02wd0c0	d04xob03yn0a5	d04nan02wn0c0
+	d04nan02yd0i0	d04kok01yn0b0	d04gbf00nd0f5	d04nan02ln0c0	d04xob02yd0c7	d04non02yd0c5	d04aon11yd0f5
+	d04non02ld0c5	d04mbn22yn0d0	d04non03nn0b5	d04xob02wn0d0	d04bfn00yn0c5	d04rrb22yn0a5	d04cak01yn0b5
+	d04non02nd0h5	d04bfn00ld0b0	d04rrb22wn0b5	d04bar01nnz16	d04ann02yd0f7	d04bfn00nn0d0	d04nan04yd0f0
+	d04cab11yn0b0	d04nak24yn0f0	d04can03nn0a5	d04xnb02yn0e0	d04nab02ln0b0	d04ltn80ld0e0	d04non02yn0c0
+	d04con04yn0f0	d04orn02wn0b5	d04nab02wd0f5	d04ann02ln0b4	d04nan02yd0f0	d04inn00nnue3	d04bfn00yduh0
+	d04con03nn0b0	d04nan03yd0f5	d04nan03wd0d7	d04nan03yd0e0	d04nan03yn0b5	d04gbf10nd0c0	d04orn02ln0a5
+	d04non02nd0g0	d04orn02wn0b0	d04xob02yn0c0	d04ann02nd0b7	d04ann04nd0c5	d04aon11wn0b0	d04xob02yn0b7
+	d04nob02ln0b5	d04xob02ln0b5	d04nan04ld0d7	d04xnb02yn0b4	d04nan04wn0b5	d04xnb02nn0b5	d04cak01ln0c0
+	d04xnb02nn0b3	d04cak01wd0b7	d04inn00nduo7	d04can03yn8b0	d04xob02nn0a5	d04con01nn0c0	d04orn04yn0c0
+	d04bfn00ynud5	d04ltn80ld0c0	d04bfn00yn0e0	d04bfn00nd0i0	d04ann02nn0b0	d04non02yn0f0	d04can03yn0b0
+	d04con03yd0b5	d04con02nn0b0	d04con02yd0c0	d04nab02yn0c0	d04orn02yn0f0	d04non02yn0c5	d04xnb02ln0a5
+	d04ann02nn0a5	d04bfn13wn0c0	d04nan04ln0d0	fdk73d84_asic_halo_hvn	d04cak01yn0d0	d04kok01yn0d0
+	d04ann03yn0a5	d04con01yd0d7	d04cob11nn0b0	d04gbf00nd0c0	d04non02yn0d5	d04ann04yd0b7	d04con02nn0c0
+	d04ann04ld0b7	d04inn00ynuf5	d04mbn22yn0a5	d04non02yn0e0	d04non02yn0e5	d04bfn00yn0e3	d04ann02ld0d3
+	d04aon03ln0a5	d04orn02yd0c5	d04inn00lnuf5	d04nan04ld0c7	d04con01nd0c5	d04con01nd0b5	d04nan04nn0e0
+	d04can03wd0b5	d04aon03yn0b5	d04can03yd0b5	d04con03wn0c0	d04mkn22nn0b0	d04oan01ln0b5	d04orn02yd0c3
+	d04oan01yn0b0	d04nan04ld0b7	d04con03yn0d0	d04can03wn0b5	d04con03yd0d7	d04can03nn0b5	d04nob03yn0b5
+	d04can03yn0d0	d04mkn22yn0a5	d04can03yn0b4	d04ann02yn0d0	d04bfn00nd0c5	d04ann02wn0c0	d04cak01yn0f0
+	d04inn00ldui0	d04non02nd0f0	d04con01ld0c7	d04non02yd0f0	d04nan02yd0e0	d04nak24yn0c0	d04nab02yn0f0
+	d04nab02yd0d3	d04bfn00wnue3	d04nob02wd0d3	d04cob11nn0c0	d04can03wd0c5	d04bar00nnz32	d04xnk04yd0f5
+	d04bar01nnz04	d04fyj43yd0c0	d04inn00yn0b5	d04qno03nd0d0	d04inn00wn0b5	d04fyj03yd0g0	d04inn00nn0a5
+	d04qin00nd0q0	d04qfd02nnz00	d04cgc01nd0h0	d04bfn00wn0b5	d04qna02nd0c7	d04bfn00nn0a5	d04fyj03yd0c0
+	d04bfn00nnub5	d04fyj03ld0b0	d04inn00nnuc5	d04xnk04yn0c0	d04inn00yn0c5	fdk73d84_asic_halo_hib
+	d04inn00wn0c5	d04gbf00nd0j5	d04inn00yd0f7	d04xnk04ln0d0	d04bfn11wn0a5	d04xnk04yn0b0	d04inn00lnud0
+	d04xnk04ln0b0	d04bfn00yn0c0	d04xnk04yn0b5	d04nab02yn0d0	d04xnk04wn0b5	d04cak01wn0b0	d04xob03yn0e0
+	d04nan02yd0b6	d04xnb03yn0e0	d04nan02wd0b5	d04gbf00nd0i5	d04nob02wn0b0	d04bfn00ld0o0	d04nan02ld0b5
+	d04xob03ln0d0	d04non02wn0b7	d04fky00yd0b0	d04non02ln0b3	d04cgc01nd0c0	d04non02nn0b5	d04xob03yn0c0
+	d04nan02wn0d0	d04gbf00nd0h0	d04inn00yd0c5	d04mkn22ld0c7	d04bfn00yd0c0	d04ann02yd0h7	d04bfn00ynuc0
+	d04bfn00wduk0	d04bfn00wnub4	d04bfn00yd0k0	d04bfn00lnuc0	d04mkn22nn0d0	d04inn00wd0c5	d04xob02yn0g0
+	d04nan02yd0c7	d04nab03yd0i5	d04nan03nn0d0	d04inn00nd0q0	d04nan02nn0b5	d04xob02yn0f0	d04nan02wd0c3
+	d04xob03nn0a5	d04nan03yn0d0	d04nan02yd0h0	d04nan02ld0c3	d04gbf00nd0f0	d04non02yd0d0	d04inn00nduq0
+	d04non02yd0c7	d04gbf00nd0e5	d04non02ld0c7	d04mbn22nn0d0	d04bfn00yd0a5	d04xnb02wn0d0	d04bfn00wd0a5
+	d04xnb02yn0d0	d04bfn11wn0b0	d04non02yd0i0	d04bfn00ld0b3	d04rrb22yn0b0	d04cak04yn0b0	d04cob11yn0f0
+	d04cak02nn0b0	d04aon03yn0f0	d04bfn00ln0d0	d04mkn22nn0b5	d04can03wn0a5	d04mkn22yn0c0	d04nab02nn0b0
+	d04kok01yn0f0	d04non02ln0c0	d04nan02yd0g0	d04ann02yn0b4	d04nab02nd0f5	d04ann02ln0b5	d04ann03yd0f7
+	d04inn00wnue3	d04non02yn0f5	d04nan03nd0b7	d04gbf10nd0d0	d04nan03yd0b7	d04nan03nd0e0	d04nan03yn0c0
+	d04bfn00ld0h0	d04orn02nn0a5	d04non02yd0g0	d04bfn00yn0d5	d04xob02yn0b3	d04ann02wd0b7	d04ann03yn0f0
+	d04aon11yn0b0	d04xob02yn0b5	d04nob02nn0b5	d04con01yn0f0	d04nan04ln0b5	d04xnb02yn0b3	d04nan04yd0d7
+	d04xnb02nn0b4	d04cak01nd0c7	d04xnb02yn0b5	d04cak01yd0b7	d04gbf00nd0e0	d04con01yn0c0	d04xob02ln0a5
+	d04kok01wd0b0	d04orn04wn0c0	d04bfn00nnud5	d04cob13yd0b5	d04ann02yn0b0	d04bfn00ld0i0	d04ann02nn0b3
+	d04non02nn0f0	d04can03nn0b0	d04con03nd0b5	d04cob13nn0b0	d04gbf00nd0d0	d04nab02nn0c0	d04xnb02yn0a5
+	d04non02nn0c5	d04mbn22yn0b0	d04ann02wn0a5	d04bfn13wn0b5	d04nan04nn0d0	d04nob03yn0d0	d04bfn00yn0f0
+	d04con01ld0d7	d04bfn00ln0f0	d04can03yd0b3	d04cob11yn0b0	d04gbf00nd0b5	d04non02nn0d5	d04ann02yd0c5
+	d04con02nn0d0	d04ann02yn0e3	d04non02nn0e0	d04nob02yn0f0	d04non04nn0b5	d04inn00nnuh5	d04cab13nn0b0
+	d04orn02wd0c5	d04aon03wn0a5	d04inn00ynuh5	d04can16nn0b0	d04nan02yn0f0	d04nan04yn0e0	d04con01yn0d0
+	d04non02yn0d0	d04can03nd0c7	d04con03yn0c0	d04non04yn0c0	d04con03yd0c7	d04nan03yn0f0	d04oan01nn0b0
+	d04nan04yd0b7	d04oan01yn0b5	d04nan02nn0d5	d04cak04yn0b5	d04can03wn0b4	d04nob02nn0c0	d04can03ln0c0
+	d04mkn22ln0a5	d04can03yn0c0	d04bfn12wn0b5	d04can03yn0b3	d04ann02ln0c0	d04bfn00ld0c5	d04aon01yn0b5
+	d04cak01nn0f0	d04inn00ndui0	d04non02ld0f5	d04con01nd0c7	d04non02wd0f0	d04nan02nd0d0	d04nak24wn0c0
+	d04nab02nn0f0	d04inn00yn0h5	d04gbf00nd0b0	d04nan04yn0f0	
+  
+ReadHNdb      Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=117.8 
+NetSelect     Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=117.8 
+CellSelect    Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=117.8 
+PlaceTerm     Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=118.9 
+PlaceText     Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=119.5 
+Db2Xin        Elp=00:00:08 Cpu=00:00:01 Usr=0.8    Sys=0.3    Mem=347.1 
+Translate     Elp=00:00:02 Cpu=00:00:00 Usr=1.0    Sys=0.0    Mem=369.5 
+  
+Done          Elp=00:00:10 Cpu=00:00:02 Usr=1.8    Sys=0.3    Mem=369.5 

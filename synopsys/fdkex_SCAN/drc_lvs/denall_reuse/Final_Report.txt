@@ -1,0 +1,16 @@
+The total number of DRC in the design: 756 
+The number of DRC relating to Macro/Boundary are: 24
+The number of actual errors : 732
+LDI_500    96    0     96
+LDI_501    96    0     96
+LDI_502    96    0     96
+LDI_503    96    0     96
+LDI_504    96    0     96
+LDI_505    96    0     96
+LDI_506    63    0     63
+LD_506    24    24     0
+LD_507    89    0     89
+NODATA_ce1    1    0     1
+NODATA_ce2    1    0     1
+NODATA_tm1    1    0     1
+NODATA_v9    1    0     1

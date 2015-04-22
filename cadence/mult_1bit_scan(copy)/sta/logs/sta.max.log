@@ -1,0 +1,578 @@
+Checking out Tempus Timing Signoff Solution license ...
+	tpsxl		CHECKED OUT:	"Tempus_Timing_Signoff_XL"
+Tempus_Timing_Signoff_XL 14.2 license checkout succeeded.
+You can run 16 CPU jobs with the base license that is currently checked out.
+If required, use the set_multi_cpu_usage command to enable multi-CPU processing.
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2014.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: Tempus Timing Signoff Solution v14.22-s053_1 (64bit) 02/02/2015 13:03 (Linux 2.6.18-194.el5)
+@(#)CDS: NanoRoute v14.22-s043 NR150131-2019/14_22-UB (database version 2.30, 252.6.1) {superthreading v1.24}
+@(#)CDS: CeltIC v14.22-s026_1 (64bit) 01/22/2015 04:28:20 (Linux 2.6.18-194.el5)
+@(#)CDS: AAE 14.22-s013 (64bit) 02/02/2015 (Linux 2.6.18-194.el5)
+@(#)CDS: CTE 14.22-s027_1 (64bit) Jan 22 2015 02:49:41 (Linux 2.6.18-194.el5)
+@(#)CDS: CPE v14.22-s048
+@(#)CDS: OA 22.50-p011 Tue Nov 11 03:24:55 2014
+@(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+@(#)CDS: RCDB 11.5
+--- Starting "Tempus Timing Signoff Solution v14.22-s053_1" on Sat Apr  4 00:25:31 2015 (mem=91.1M) ---
+--- Running on chlr16421 (x86_64 w/Linux 3.0.51-0.7.9-default) ---
+This version was compiled on Mon Feb 2 13:03:12 PST 2015.
+environment variable TMPDIR is '/tmp/tempus_tmpdir_27048_IGE6hz'.
+INFO:(SI-9593) The default process is 65nm          [tempus]
+Sourcing tcl/tk file '/p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/kit/afdk73_kit_c//asicflows/cadence/sta_dot6_d04_std/run.tcl' ...
+ ## INFO ## => SOURCING setup.tcl... 
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/kit/afdk73_kit_c/asicflows/cadence/sta_dot6_d04_std/project_setup.tcl : START Sat Apr  4 00:25:32 MST 2015
+==>INFORMATION: P_source_if_exists: project_setup.tcl : END Sat Apr  4 00:25:32 MST 2015 : RUNTIME in (hh:mm:ss) : 00:00:00 hrs
+==>INFORMATION: P_source_if_exists: Sourcing ./scripts/block_setup.tcl : START Sat Apr  4 00:25:32 MST 2015
+==>INFORMATION: P_source_if_exists: block_setup.tcl : END Sat Apr  4 00:25:32 MST 2015 : RUNTIME in (hh:mm:ss) : 00:00:00 hrs
+==>INFORMATION: Creating directory reports
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/kit/afdk73_kit_c/asicflows/cadence/sta_dot6_d04_std/tempus_var_setup.tcl : START Sat Apr  4 00:25:32 MST 2015
+**WARN: (ENCSYC-881):	You have enabled beta feature encEnableFinFetGrid. Usage
+      and support of this beta feature are subject to prior agreement with Cadence.
+      In addition, Cadence assumes you understand the feature limitations and
+      expected results.
+      Contact your Cadence representative if you have any questions.
+      If you have turned on this feature by mistake, you can turn it off by
+      resetting the encEnableFinFetGrid variable to 0, via
+      "setBetaFeature encEnableFinFetGrid 0 ".
+==>INFORMATION: P_source_if_exists: tempus_var_setup.tcl : END Sat Apr  4 00:25:32 MST 2015 : RUNTIME in (hh:mm:ss) : 00:00:00 hrs
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/kit/afdk73_kit_c/asicflows/cadence/sta_dot6_d04_std/library.tcl : START Sat Apr  4 00:25:32 MST 2015
+Scheduling  timing library file(s) '/p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8/ccs/ln/d04_ln_p1273_6x2r0_psss_0.75v_-40c_ccst.lib' to be loaded when the set_top_module command is issued
+Scheduling  timing library file(s) '/p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8/ccs/ln/d04_ln_p1273_6x2r0_psss_0.75v_-40c_ccst.lib' to be loaded when the set_top_module command is issued
+**WARN: (UI-235):	The  timing library file /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8/ccs/ln/d04_ln_p1273_6x2r0_psss_0.75v_-40c_ccst.lib has already been scheduled for reading, skip this specification for this read_lib command.
+Scheduling  timing library file(s) '/p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8/ccs/nn/d04_nn_p1273_6x2r0_psss_0.75v_-40c_ccst.lib' to be loaded when the set_top_module command is issued
+Scheduling  timing library file(s) '/p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8/ccs/nn/d04_nn_p1273_6x2r0_psss_0.75v_-40c_ccst.lib' to be loaded when the set_top_module command is issued
+**WARN: (UI-235):	The  timing library file /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8/ccs/nn/d04_nn_p1273_6x2r0_psss_0.75v_-40c_ccst.lib has already been scheduled for reading, skip this specification for this read_lib command.
+Scheduling  timing library file(s) '/p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8/ccs/wn/d04_wn_p1273_6x2r0_psss_0.75v_-40c_ccst.lib' to be loaded when the set_top_module command is issued
+Scheduling  timing library file(s) '/p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8/ccs/wn/d04_wn_p1273_6x2r0_psss_0.75v_-40c_ccst.lib' to be loaded when the set_top_module command is issued
+**WARN: (UI-235):	The  timing library file /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8/ccs/wn/d04_wn_p1273_6x2r0_psss_0.75v_-40c_ccst.lib has already been scheduled for reading, skip this specification for this read_lib command.
+Scheduling  timing library file(s) '/p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/lib/ln/d04_ln_misc_p1273_6x2r0_psss_0.75v_-40c_nldm.lib' to be loaded when the set_top_module command is issued
+Scheduling  timing library file(s) '/p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/lib/ln/d04_ln_misc_p1273_6x2r0_psss_0.75v_-40c_nldm.lib' to be loaded when the set_top_module command is issued
+**WARN: (UI-235):	The  timing library file /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/lib/ln/d04_ln_misc_p1273_6x2r0_psss_0.75v_-40c_nldm.lib has already been scheduled for reading, skip this specification for this read_lib command.
+Scheduling  timing library file(s) '/p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/lib/nn/d04_nn_misc_p1273_6x2r0_psss_0.75v_-40c_nldm.lib' to be loaded when the set_top_module command is issued
+Scheduling  timing library file(s) '/p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/lib/nn/d04_nn_misc_p1273_6x2r0_psss_0.75v_-40c_nldm.lib' to be loaded when the set_top_module command is issued
+**WARN: (UI-235):	The  timing library file /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/lib/nn/d04_nn_misc_p1273_6x2r0_psss_0.75v_-40c_nldm.lib has already been scheduled for reading, skip this specification for this read_lib command.
+Scheduling  timing library file(s) '/p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/lib/wn/d04_wn_misc_p1273_6x2r0_psss_0.75v_-40c_nldm.lib' to be loaded when the set_top_module command is issued
+Scheduling  timing library file(s) '/p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/lib/wn/d04_wn_misc_p1273_6x2r0_psss_0.75v_-40c_nldm.lib' to be loaded when the set_top_module command is issued
+**WARN: (UI-235):	The  timing library file /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/lib/wn/d04_wn_misc_p1273_6x2r0_psss_0.75v_-40c_nldm.lib has already been scheduled for reading, skip this specification for this read_lib command.
+Scheduling LEF file(s) '/p/fdk/fdk73/builds/pdk736_r2.2/apr/edi/d04/p1273.lef' to be loaded when the set_top_module command is issued
+Scheduling LEF file(s) '/p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8/lef/nn/d04_nn.lef' to be loaded when the set_top_module command is issued
+Scheduling LEF file(s) '/p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8/lef/wn/d04_wn.lef' to be loaded when the set_top_module command is issued
+Scheduling LEF file(s) '/p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8/lef/ln/d04_ln.lef' to be loaded when the set_top_module command is issued
+Scheduling LEF file(s) '/p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/lef/ln/d04_ln_misc.lef' to be loaded when the set_top_module command is issued
+Scheduling LEF file(s) '/p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/lef/nn/d04_nn_misc.lef' to be loaded when the set_top_module command is issued
+Scheduling LEF file(s) '/p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/lef/wn/d04_wn_misc.lef' to be loaded when the set_top_module command is issued
+Scheduling LEF file(s) '/p/fdk/fdk73/builds/halo736_r2.2/lef/intel73halo.lef' to be loaded when the set_top_module command is issued
+Scheduling LEF file(s) '/p/fdk/fdk73/builds/tic736_r2.2/lef/intel73tapeout.lef' to be loaded when the set_top_module command is issued
+==>INFORMATION: P_source_if_exists: library.tcl : END Sat Apr  4 00:25:32 MST 2015 : RUNTIME in (hh:mm:ss) : 00:00:00 hrs
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/kit/afdk73_kit_c/asicflows/cadence/sta_dot6_d04_std/design_import.tcl : START Sat Apr  4 00:25:32 MST 2015
+Scheduling netlist file(s) '/nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/sta/inputs/netlist/mult.vg' to be loaded when the set_top_module command is issued
+
+Loading LEF file /p/fdk/fdk73/builds/pdk736_r2.2/apr/edi/d04/p1273.lef ...
+**WARN: (ENCLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'VCNAX_GEN', 
+**WARN: (ENCLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'VCNB_GEN', 
+
+Loading LEF file /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8/lef/nn/d04_nn.lef ...
+Set DBUPerIGU to M2 pitch 70.
+
+Loading LEF file /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8/lef/wn/d04_wn.lef ...
+
+Loading LEF file /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p8/lef/ln/d04_ln.lef ...
+
+Loading LEF file /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/lef/ln/d04_ln_misc.lef ...
+
+Loading LEF file /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/lef/nn/d04_nn_misc.lef ...
+
+Loading LEF file /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/lef/wn/d04_wn_misc.lef ...
+WARNING (LEFPARS-2002): NAMESCASESENSITIVE is a required statement on LEF file with version 5.5 and earlier.
+Without NAMESCASESENSITIVE defined, the LEF file is technically incorrect.
+Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file /p/fdk/fdk73/builds/stdcells/stdcell736_d.0.0p1_misc/lef/wn/d04_wn_misc.lef at line 11335.
+
+Loading LEF file /p/fdk/fdk73/builds/halo736_r2.2/lef/intel73halo.lef ...
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hcb' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE core2h is
+chosen because it is a core site with height 0.7980 that matches the macro
+SIZE height.
+**WARN: (ENCLF-46):	Class CORE macro 'fdk73d86_asic_halo_hcb_ts' has no SITE statement defined.
+Class CORE macros require a SITE statement. The SITE ENC_CORE_0 was
+created and will be used for this macro, using height 0.6720 that
+matches the macro SIZE height, and width 0.0700 that matches the
+m2 routing pitch. Define the site explicitly in the LEF file, to
+this message in the future.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hcb_tt' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE ENC_CORE_0 is
+chosen because it is a core site with height 0.6720 that matches the macro
+SIZE height.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hcc' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE core2h is
+chosen because it is a core site with height 0.7980 that matches the macro
+SIZE height.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hhb' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE core2h is
+chosen because it is a core site with height 0.7980 that matches the macro
+SIZE height.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hhb_ts' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE ENC_CORE_0 is
+chosen because it is a core site with height 0.6720 that matches the macro
+SIZE height.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hhb_tt' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE ENC_CORE_0 is
+chosen because it is a core site with height 0.6720 that matches the macro
+SIZE height.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hhc' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE core2h is
+chosen because it is a core site with height 0.7980 that matches the macro
+SIZE height.
+**WARN: (ENCLF-46):	Class CORE macro 'fdk73d86_asic_halo_hhx6dg' has no SITE statement defined.
+Class CORE macros require a SITE statement. The SITE ENC_CORE_1 was
+created and will be used for this macro, using height 0.2520 that
+matches the macro SIZE height, and width 0.0700 that matches the
+m2 routing pitch. Define the site explicitly in the LEF file, to
+this message in the future.
+**WARN: (ENCLF-46):	Class CORE macro 'fdk73d86_asic_halo_hhx8dg' has no SITE statement defined.
+Class CORE macros require a SITE statement. The SITE ENC_CORE_2 was
+created and will be used for this macro, using height 0.3360 that
+matches the macro SIZE height, and width 0.0700 that matches the
+m2 routing pitch. Define the site explicitly in the LEF file, to
+this message in the future.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hib' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE core2h is
+chosen because it is a core site with height 0.7980 that matches the macro
+SIZE height.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hib_ts' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE ENC_CORE_0 is
+chosen because it is a core site with height 0.6720 that matches the macro
+SIZE height.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hib_tt' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE ENC_CORE_0 is
+chosen because it is a core site with height 0.6720 that matches the macro
+SIZE height.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hibi2_ts' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE ENC_CORE_0 is
+chosen because it is a core site with height 0.6720 that matches the macro
+SIZE height.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hibi_ts' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE ENC_CORE_0 is
+chosen because it is a core site with height 0.6720 that matches the macro
+SIZE height.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hic' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE core2h is
+chosen because it is a core site with height 0.7980 that matches the macro
+SIZE height.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hvn' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE core2h is
+chosen because it is a core site with height 0.7980 that matches the macro
+SIZE height.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hvn6dg' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE ENC_CORE_1 is
+chosen because it is a core site with height 0.2520 that matches the macro
+SIZE height.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hvn8dg' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE ENC_CORE_2 is
+chosen because it is a core site with height 0.3360 that matches the macro
+SIZE height.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hvn_ts' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE ENC_CORE_0 is
+chosen because it is a core site with height 0.6720 that matches the macro
+SIZE height.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hvn_tt' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE ENC_CORE_0 is
+chosen because it is a core site with height 0.6720 that matches the macro
+SIZE height.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hvngap_ts' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE ENC_CORE_0 is
+chosen because it is a core site with height 0.6720 that matches the macro
+SIZE height.
+**WARN: (ENCLF-45):	Macro 'fdk73d86_asic_halo_hvni6dg' has no SITE statement and it is a class
+CORE macro that requires a SITE statement. The SITE ENC_CORE_1 is
+chosen because it is a core site with height 0.2520 that matches the macro
+SIZE height.
+**WARN: (EMS-62):	Message <ENCLF-45> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+
+Loading LEF file /p/fdk/fdk73/builds/tic736_r2.2/lef/intel73tapeout.lef ...
+**WARN: (ENCLF-63):	The layer 'ce1' referenced in OBS in macro 'c4b' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+**WARN: (ENCLF-63):	The layer 'ce2' referenced in OBS in macro 'c4b' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+**WARN: (ENCLF-63):	The layer 'ce1' referenced in OBS in macro 'c4emib' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+**WARN: (ENCLF-63):	The layer 'ce2' referenced in OBS in macro 'c4emib' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+**WARN: (ENCLF-63):	The layer 'ce1' referenced in OBS in macro 'd86mtoprs_i_small' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+**WARN: (ENCLF-63):	The layer 'ce2' referenced in OBS in macro 'd86mtoprs_i_small' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+**WARN: (ENCLF-63):	The layer 'ce1' referenced in OBS in macro 'd86mtoprs_y_small' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+**WARN: (ENCLF-63):	The layer 'ce2' referenced in OBS in macro 'd86mtoprs_y_small' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+**WARN: (ENCLF-63):	The layer 'ce1' referenced in OBS in macro 'fdk73tic6_prs_i_top_8mg_cont' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+**WARN: (ENCLF-63):	The layer 'ce2' referenced in OBS in macro 'fdk73tic6_prs_i_top_8mg_cont' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+**WARN: (ENCLF-63):	The layer 'ce1' referenced in OBS in macro 'fdk73tic6_prs_y_bot_8mg_cont' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+**WARN: (ENCLF-63):	The layer 'ce2' referenced in OBS in macro 'fdk73tic6_prs_y_bot_8mg_cont' is not found in the database. The obstruction geometries specified on the layer are being ignored. A layer must be defined in the LEF technology LAYER section before it can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the layer does not exist or is specified after the one that defines the macro.
+**WARN: (ENCLF-201):	Pin 'edm_resint' in macro 'd86ltoedm1273pgdx0_diode' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'edm_resint' in macro 'd86ltoedm1273pgdx0_diode' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-201):	Pin 'edm_resint' in macro 'd86ltoedm1273pgdx0' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'edm_resint' in macro 'd86ltoedm1273pgdx0' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-201):	Pin 'edm_resout' in macro 'd86ltoedm1273pgdiox0' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'edm_resout' in macro 'd86ltoedm1273pgdiox0' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-201):	Pin 'com' in macro 'd86ltoedm1273pgdiox0' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'com' in macro 'd86ltoedm1273pgdiox0' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-201):	Pin 'edm_res' in macro 'd86ltoedm1273pgdiox0' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'edm_res' in macro 'd86ltoedm1273pgdiox0' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-201):	Pin 'edm_resin' in macro 'd86ltoedm1273pgdiox0' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'edm_resin' in macro 'd86ltoedm1273pgdiox0' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-201):	Pin 'edm_resint' in macro 'd86ltoedm1273pgdfillx0' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'edm_resint' in macro 'd86ltoedm1273pgdfillx0' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-201):	Pin 'edm_resint' in macro 'd86ltoedm1273ogdx0_diode' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'edm_resint' in macro 'd86ltoedm1273ogdx0_diode' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-201):	Pin 'edm_resint' in macro 'd86ltoedm1273ogdx0' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'edm_resint' in macro 'd86ltoedm1273ogdx0' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-201):	Pin 'edm_resout' in macro 'd86ltoedm1273ogdiox0' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'edm_resout' in macro 'd86ltoedm1273ogdiox0' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-201):	Pin 'edm_resin' in macro 'd86ltoedm1273ogdiox0' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'edm_resin' in macro 'd86ltoedm1273ogdiox0' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-201):	Pin 'com' in macro 'd86ltoedm1273ogdiox0' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'com' in macro 'd86ltoedm1273ogdiox0' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-201):	Pin 'edm_res' in macro 'd86ltoedm1273ogdiox0' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'edm_res' in macro 'd86ltoedm1273ogdiox0' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-201):	Pin 'edm_resint' in macro 'd86ltoedm1273ogdfillx0' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'edm_resint' in macro 'd86ltoedm1273ogdfillx0' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-201):	Pin 'edm_resint' in macro 'd86ltoedm1273crnx0' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'edm_resint' in macro 'd86ltoedm1273crnx0' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-201):	Pin 'bump' in macro 'c4emib' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'bump' in macro 'c4emib' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-201):	Pin 'bump' in macro 'c4b' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'bump' in macro 'c4b' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'a' in macro 'd04gnci1wnz00' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'a' in macro 'd04gnc01wnz00' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (ENCLF-200):	Pin 'b' in macro 'd04gnc02wnz00' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (EMS-62):	Message <ENCLF-200> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+
+viaInitial starts at Sat Apr  4 00:25:37 2015
+viaInitial ends at Sat Apr  4 00:25:37 2015
+*** Begin netlist parsing (mem=408.2M) ***
+Reading verilog netlist '/nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/sta/inputs/netlist/mult.vg'
+
+*** Memory Usage v#1 (Current mem = 414.234M, initial mem = 91.129M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:01.0, mem=414.2M) ***
+Set top cell to mult.
+Loading view definition file from .ssv_emulate_view_definition_27048.tcl
+Starting library reading in 'Multi-threaded flow' (with '4' threads)
+
+Threads Configured:4
+Reading   timing library /nfs/site/disks/icf_fdk73_customer001/fdk73_builds/stdcells_for_kit/stdcell736_d.0.0p8/ccs/ln/d04_ln_p1273_6x2r0_psss_0.75v_-40c_ccst.lib.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22ld0b0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22ld0c0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22ld0d0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22ld0e0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22ld0f0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22ld0g0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22ld0h0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22ld0i0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22ld0j0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn00ld0a5'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn00ld0b0'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn00ld0b5'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn00ld0c0'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn00ld0e0'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn00ld0g0'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn00ld0k0'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn03ld0a5'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn03ld0b0'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn03ld0b5'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn03ld0c0'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn03ld0e0'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn03ld0g0'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn03ld0k0'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn0cld0a5'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn0cld0b0'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn0cld0c0'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn0cld0e0'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn0cld0g0'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+**WARN: (TECHLIB-359):	Pin 'IQ2' does not exist in cell 'd04frn43ld0a5'. This cell contains more than one latch/ff groups. The software supports only one sequential group. The functions expression will be ignored.
+Message <TECHLIB-359> has exceeded the message display limit of '20'. setMessageLimit/set_message_limit sets the limit. unsetMessageLimit/unset_message_limit can be used to reset this.
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22ld0j0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22ld0j0'
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22ld0i0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22ld0i0'
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22ld0h0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22ld0h0'
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22ld0g0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22ld0g0'
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22ld0f0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22ld0f0'
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22ld0e0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22ld0e0'
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22ld0d0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22ld0d0'
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22ld0c0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22ld0c0'
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22ld0b0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22ld0b0'
+Read 1397 cells in  d04_ln_p1273_6x2r0_psss_0.75v_-40c_ccst.
+Reading   timing library /nfs/site/disks/icf_fdk73_customer001/fdk73_builds/stdcells_for_kit/stdcell736_d.0.0p8/ccs/nn/d04_nn_p1273_6x2r0_psss_0.75v_-40c_ccst.lib.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22nd0b0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22nd0c0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22nd0d0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22nd0e0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22nd0f0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22nd0j0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22nd0j0'
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22nd0i0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22nd0i0'
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22nd0h0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22nd0h0'
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22nd0g0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22nd0g0'
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22nd0f0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22nd0f0'
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22nd0e0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22nd0e0'
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22nd0d0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22nd0d0'
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22nd0c0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22nd0c0'
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22nd0b0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22nd0b0'
+Read 1397 cells in  d04_nn_p1273_6x2r0_psss_0.75v_-40c_ccst.
+Reading   timing library /nfs/site/disks/icf_fdk73_customer001/fdk73_builds/stdcells_for_kit/stdcell736_d.0.0p8/ccs/wn/d04_wn_p1273_6x2r0_psss_0.75v_-40c_ccst.lib.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22wd0b0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22wd0c0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22wd0d0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22wd0e0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22wd0f0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+**WARN: (TECHLIB-400):	State table for cell 'd04cgm22wd0g0' is ignored because it contains multiple references to input map. The input_map attribute can be defined more than once for multi-bit sequential cells only.
+Message <TECHLIB-400> has exceeded the message display limit of '20'. setMessageLimit/set_message_limit sets the limit. unsetMessageLimit/unset_message_limit can be used to reset this.
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22wd0j0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22wd0j0'
+**ERROR: (TECHLIB-1143):	The pin 'ck' in the statetable/input_map is not defined in the cell 'd04cgm22wd0i0'. The statetable will be ignored. Fix incorrect pin names or any special characters in the statetable to rectify the error.
+**WARN: (TECHLIB-369):	Unable to extract the 'next_state' function for sequential cell 'd04cgm22wd0i0'
+Message <TECHLIB-1143> has exceeded the message display limit of '20'. setMessageLimit/set_message_limit sets the limit. unsetMessageLimit/unset_message_limit can be used to reset this.
+Message <TECHLIB-369> has exceeded the message display limit of '20'. setMessageLimit/set_message_limit sets the limit. unsetMessageLimit/unset_message_limit can be used to reset this.
+Read 1397 cells in  d04_wn_p1273_6x2r0_psss_0.75v_-40c_ccst.
+Reading   timing library /nfs/site/disks/icf_fdk73_kit_build001/fdk73_builds/stdcells_for_kit/stdcell736_d.0.0_misc/lib/ln/d04_ln_misc_p1273_6x2r0_psss_0.75v_-40c_nldm.lib.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'd04bth00lnz00' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'd04bth01lnz00' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'd04tih00lnz00' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'd04til00lnz00' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'd04til00lnz03' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'y' of cell 'vcc' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'y' of cell 'vss' is not defined in the library.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04gnci1lnz00'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04gnc02lnz00'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04gnc01lnz00'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04gnc00lnz00'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04dpd00lnz00'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04dcpi0ldz16'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04dcpi0ldz04'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04dcpb0ldz04'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04dcp00lnz64'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04dcp00lnz32'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04dcp00lnz16'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04dcp00lnz08'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04dcp00lnz04'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04dcp00ldz64'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04dcp00ldz32'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04dcp00ldz16'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04dcp00ldz08'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04dcp00ldz04'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04bgn01lnz00'. The cell will only be used for analysis.
+**WARN: (TECHLIB-302):	No function defined for cell 'd04bgn00lnz00'. The cell will only be used for analysis.
+Message <TECHLIB-302> has exceeded the message display limit of '20'. setMessageLimit/set_message_limit sets the limit. unsetMessageLimit/unset_message_limit can be used to reset this.
+Read 48 cells in  d04_ln_misc_p1273_6x2r0_psss_0.75v_-40c_nldm.
+Reading   timing library /nfs/site/disks/icf_fdk73_kit_build001/fdk73_builds/stdcells_for_kit/stdcell736_d.0.0_misc/lib/nn/d04_nn_misc_p1273_6x2r0_psss_0.75v_-40c_nldm.lib.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'd04bth00nnz00' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'd04bth01nnz00' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'd04tih00nnz00' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'a' of cell 'd04qct00ndz00' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'a' of cell 'd04qct00ndz00' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'b' of cell 'd04qct00ndz00' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'b' of cell 'd04qct00ndz00' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'a' of cell 'd04qct01ndz00' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'a' of cell 'd04qct01ndz00' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'b' of cell 'd04qct01ndz00' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'b' of cell 'd04qct01ndz00' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'd04til00nnz00' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'o' of cell 'd04til00nnz03' is not defined in the library.
+Message <TECHLIB-436> has exceeded the message display limit of '20'. setMessageLimit/set_message_limit sets the limit. unsetMessageLimit/unset_message_limit can be used to reset this.
+Read 65 cells in  d04_nn_misc_p1273_6x2r0_psss_0.75v_-40c_nldm.
+Reading   timing library /nfs/site/disks/icf_fdk73_kit_build001/fdk73_builds/stdcells_for_kit/stdcell736_d.0.0_misc/lib/wn/d04_wn_misc_p1273_6x2r0_psss_0.75v_-40c_nldm.lib.
+Read 48 cells in  d04_wn_misc_p1273_6x2r0_psss_0.75v_-40c_nldm.
+Library reading multithread flow ended.
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+*** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=1.96min, fe_real=1.18min, fe_mem=1834.1M) ***
+Building hierarchical netlist for Cell mult ...
+*** Netlist is unique.
+** info: there are 4610 modules.
+** info: there are 229 stdCell insts.
+** info: there are 172 multi-height stdCell insts (8 stdCells)
+
+*** Memory Usage v#1 (Current mem = 1836.301M, initial mem = 91.129M) ***
+**WARN: (ENCFP-3960):	The cell 'd04dcpi0wdz04' and cell 'd04dcp00wdz64' are using same tech site core, but they have different VDDonbotom attributes. Need to align VDD/GND pins of single height row/double height row when creating rows. Check and correct the LEF file or OA abstract view.
+**WARN: (ENCFP-3961):	The techSite 'ENC_CORE_2' has no related cells in LEF library. Cannot make calculations for this site type unless cell models of this type exist in the LEF library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF to avoid this message.
+**WARN: (ENCFP-3961):	The techSite 'ENC_CORE_1' has no related cells in LEF library. Cannot make calculations for this site type unless cell models of this type exist in the LEF library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF to avoid this message.
+**WARN: (ENCFP-3961):	The techSite 'core2h84' has no related cells in LEF library. Cannot make calculations for this site type unless cell models of this type exist in the LEF library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF to avoid this message.
+**WARN: (ENCFP-3961):	The techSite 'bonuscore84' has no related cells in LEF library. Cannot make calculations for this site type unless cell models of this type exist in the LEF library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF to avoid this message.
+**WARN: (ENCFP-3961):	The techSite 'core84' has no related cells in LEF library. Cannot make calculations for this site type unless cell models of this type exist in the LEF library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF to avoid this message.
+**WARN: (ENCFP-3961):	The techSite 'unit' has no related cells in LEF library. Cannot make calculations for this site type unless cell models of this type exist in the LEF library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF to avoid this message.
+Honor LEF defined pitches for advanced node
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Input Pin Transition Delay as 0.1 ps.
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from Cap Table]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from Cap Table]
+    RC-Corner PostRoute Clock Cap Factor  : 1   
+    RC-Corner PostRoute Clock Res Factor  : 1   
+CTE reading timing constraint file '/dev/null' ...
+Current (total cpu=0:01:58, real=0:01:12, peak res=3038.9M, current mem=1923.2M)
+Total number of combinational cells: 3023
+Total number of sequential cells: 1206
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 117
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: d04gbf00wd0b0 d04gbf00wd0c0 d04gbf00wd0b5 d04gbf00wd0d5 d04gbf00wd0e5 d04gbf00wd0g0 d04gbf00wd0h0 d04gbf00wd0j0 d04gbf00wdub0 d04gbf00wduc0 d04gbf00wdub5 d04gbf00wdue5 d04gbf00wdug0 d04gbf00wduh0 d04gbf10wd0b0 d04gbf10wd0b5 d04gbf00nd0b0 d04gbf00nd0c0 d04gbf00nd0b5 d04gbf00nd0c5 d04gbf00nd0d5 d04gbf00nd0d0 d04gbf00nd0e0 d04gbf00nd0e5 d04gbf00nd0f0 d04gbf00nd0g0 d04gbf00nd0f5 d04gbf00nd0h0 d04gbf00nd0g5 d04gbf00nd0h5 d04gbf00nd0i5 d04gbf00nd0i0 d04gbf00nd0j0 d04gbf00nd0k0 d04gbf00nd0j5 d04gbf00nd0k5 d04gbf00nd0l0 d04gbf00ndub0 d04gbf00nduc0 d04gbf00ndub5 d04gbf00ndud0 d04gbf00nduc5 d04gbf00ndud5 d04gbf00ndue0 d04gbf00ndue5 d04gbf00nduf0 d04gbf00nduf5 d04gbf00ndug5 d04gbf00ndug0 d04gbf00nduh0 d04gbf10nd0b0 d04gbf10nd0b5 d04gbf10nd0c0 d04gbf10nd0d0 d04gbf10nd0c5 d04gbf10nd0d5 d04gbf10nd0e0 d04gbf10nd0e5 d04gbf10nd0f5 d04gbf10nd0f0 d04gbf10nd0g5 d04gbf10nd0g0 d04gbf10nd0h0 d04gbf10nd0h5 d04gbf10nd0i5 d04gbf10nd0i0 d04gbf10nd0j0 d04gbf10nd0j5 d04gbf10nd0k0 d04gbf10nd0k5 d04gbf10nd0l0 d04gbf20nd0b5 d04gbf20nd0b0 d04gbf20nd0c0 d04gbf20nd0c5 d04gbf20nd0d0 d04gbf20nd0e0 d04gbf20nd0d5 d04gbf20nd0e5 d04gbf20nd0g0 d04gbf20nd0h0 d04gbf30nd0b5 d04gbf30nd0b0 d04gbf30nd0c0 d04gbf00ld0b0 d04gbf00ld0c0 d04gbf00ld0b5 d04gbf00ld0c5 d04gbf00ld0d5 d04gbf00ld0d0 d04gbf00ld0e0 d04gbf00ld0e5 d04gbf00ld0f0 d04gbf00ld0g0 d04gbf00ld0f5 d04gbf00ld0h0 d04gbf00ld0g5 d04gbf00ld0h5 d04gbf00ld0i5 d04gbf00ld0i0 d04gbf00ld0j0 d04gbf00ld0k0 d04gbf00ld0j5 d04gbf00ld0k5 d04gbf00ld0l0 d04gbf00ldub0 d04gbf00lduc0 d04gbf00ldub5 d04gbf00ldud0 d04gbf00lduc5 d04gbf00ldud5 d04gbf00ldue0 d04gbf00ldue5 d04gbf00lduf0 d04gbf00lduf5 d04gbf00ldug5 d04gbf00ldug0 d04gbf00lduh0 d04gbf10ld0b0 d04gbf10ld0b5 d04gbf10ld0c0 d04gbf10ld0d5 d04gbf10ld0e0 d04gbf10ld0e5 d04gbf10ld0h0 d04gbf10ld0h5 d04gbf10ld0i5 d04gbf10ld0i0 d04gbf10ld0j0 d04gbf10ld0j5 d04gbf10ld0k0 d04gbf10ld0k5 d04gbf10ld0l0 d04bbf00wn0b0 d04bbf00wn1b0 d04bfn00wd0a5 d04bfn00wd0b3 d04bfn00wd0b0 d04bfn00wd0b4 d04bfn00wd0b5 d04bfn00wd0c0 d04bfn00wd0c7 d04bfn00wd0i0 d04bfn00wd0k0 d04bfn00wduh0 d04bfn00wduk0 d04bfn00wduo0 d04bfn00wn0a5 d04bfn00wn0b0 d04bfn00wn0b3 d04bfn00wn0b4 d04bfn00wn0c0 d04bfn00wn0b5 d04bfn00wn0c5 d04bfn00wn0e0 d04bfn00wn0d5 d04bfn00wn0e3 d04bfn00wn0f0 d04bfn00wnua5 d04bfn00wnub3 d04bfn00wnub4 d04bfn00wnub5 d04bfn00wnuc0 d04bfn00wnud5 d04bfn00wnue3 d04bbf00nn0b0 d04bbf00nn0d0 d04bbf00nn0g0 d04bbf00nn1b0 d04bbf00nn1d0 d04bbf00nn1g0 d04bfn00nd0a5 d04bfn00nd0b3 d04bfn00nd0b0 d04bfn00nd0b4 d04bfn00nd0b5 d04bfn00nd0c0 d04bfn00nd0c7 d04bfn00nd0c5 d04bfn00nd0i0 d04bfn00nd0h0 d04bfn00nd0k0 d04bfn00nd0o0 d04bfn00nd0p0 d04bfn00nd0q0 d04bfn00nd0r0 d04bfn00nduh0 d04bfn00nduk0 d04bfn00nduo0 d04bfn00nn0a5 d04bfn00nn0b0 d04bfn00nn0b3 d04bfn00nn0b4 d04bfn00nn0c0 d04bfn00nn0b5 d04bfn00nn0d0 d04bfn00nn0c5 d04bfn00nn0e0 d04bfn00nn0d5 d04bfn00nn0e3 d04bfn00nn0f0 d04bfn00nnua5 d04bfn00nnub3 d04bfn00nnub4 d04bfn00nnub5 d04bfn00nnuc0 d04bfn00nnud5 d04bfn00nnue3 d04bfn11nn0a5 d04bfn11nn0b0 d04bfn11nn0c0 d04bfn11nn0b5 d04bbf00ln0b0 d04bbf00ln0d0 d04bbf00ln0g0 d04bbf00ln1b0 d04bbf00ln1d0 d04bbf00ln1g0 d04bfn00ld0a5 d04bfn00ld0b3 d04bfn00ld0b0 d04bfn00ld0b4 d04bfn00ld0b5 d04bfn00ld0c0 d04bfn00ld0c7 d04bfn00ld0c5 d04bfn00ld0i0 d04bfn00ld0h0 d04bfn00ld0k0 d04bfn00ld0o0 d04bfn00lduh0 d04bfn00lduk0 d04bfn00lduo0 d04bfn00ln0a5 d04bfn00ln0b0 d04bfn00ln0b3 d04bfn00ln0b4 d04bfn00ln0c0 d04bfn00ln0b5 d04bfn00ln0d0 d04bfn00ln0c5 d04bfn00ln0e0 d04bfn00ln0d5 d04bfn00ln0e3 d04bfn00ln0f0 d04bfn00lnua5 d04bfn00lnub3 d04bfn00lnub4 d04bfn00lnub5 d04bfn00lnuc0 d04bfn00lnud5 d04bfn00lnue3 d04bfn11ln0a5 d04bfn11ln0b0
+Total number of usable buffers: 254
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: d04bin00wn0b0 d04bin00wn0e0 d04bin00wn0g0 d04bin00wn1b0 d04bin00wn1e0 d04bin00wn1g0 d04inn00wd0b3 d04inn00wd0b5 d04inn00wd0c7 d04inn00wd0c5 d04inn00wd0f7 d04inn00wd0i0 d04inn00wd0o7 d04inn00wd0q0 d04inn00wdui0 d04inn00wduo7 d04inn00wduq0 d04inn00wn0a5 d04inn00wn0b5 d04inn00wn0b3 d04inn00wn0c5 d04inn00wn0d0 d04inn00wn0e3 d04inn00wn0f5 d04inn00wn0h5 d04inn00wn0i5 d04inn00wnuc5 d04inn00wnub3 d04inn00wnud0 d04inn00wnue3 d04inn00wnuf5 d04inn00wnuh5 d04inn00wnui5 d04inn12wn0b0 d04inn12wn0a5 d04inn12wn0b5 d04bin00nn0b0 d04inn12wn0c0 d04bin00nn0e0 d04bin00nn0g0 d04bin00nn1b0 d04bin00nn1e0 d04bin00nn1g0 d04inn00nd0b3 d04inn00nd0b5 d04inn00nd0c7 d04inn00nd0c5 d04inn00nd0f7 d04inn00nd0i0 d04inn00nd0o7 d04inn00nd0q0 d04inn00ndui0 d04inn00nduo7 d04inn00nduq0 d04inn00nn0a5 d04inn00nn0b5 d04inn00nn0b3 d04inn00nn0c5 d04inn00nn0d0 d04inn00nn0e3 d04inn00nn0f5 d04inn00nn0h5 d04inn00nn0i5 d04inn00nnuc5 d04inn00nnub3 d04inn00nnud0 d04inn00nnue3 d04inn00nnuf5 d04inn00nnuh5 d04inn00nnui5 d04inn12nn0b0 d04inn12nn0a5 d04inn12nn0b5 d04bin00ln0b0 d04inn12nn0c0 d04bin00ln0e0 d04bin00ln0g0 d04bin00ln1b0 d04bin00ln1e0 d04bin00ln1g0 d04inn00ld0b3 d04inn00ld0b5 d04inn00ld0c7 d04inn00ld0c5 d04inn00ld0f7 d04inn00ld0i0 d04inn00ld0o7 d04inn00ld0q0 d04inn00ldui0 d04inn00lduo7 d04inn00lduq0 d04inn00ln0a5 d04inn00ln0b5 d04inn00ln0b3 d04inn00ln0c5 d04inn00ln0d0 d04inn00ln0e3 d04inn00ln0f5 d04inn00ln0h5 d04inn00ln0i5 d04inn00lnuc5 d04inn00lnub3 d04inn00lnud0 d04inn00lnue3 d04inn00lnuf5 d04inn00lnuh5 d04inn00lnui5 d04inn12ln0b0 d04inn12ln0a5 d04inn12ln0c0 d04inn12ln0b5 d04gin00wd0b0 d04gin00wd0c0 d04gin00wd0b5 d04gin00wd0c5 d04gin00wd0d0 d04gin00wd0d5 d04gin00wd0e0 d04gin00wd0f0 d04gin00wd0e5 d04gin00wd0f5 d04gin00wd0g5 d04gin00wd0g0 d04gin00wd0h5 d04gin00wd0h0 d04gin00wd0i0 d04gin00wd0j0 d04gin00wd0i5 d04gin00wd0k0 d04gin00wd0j5 d04gin00wd0k5 d04gin00wd0l0 d04gin20wd0b5 d04gin20wd0b0 d04gin20wd0c5 d04gin20wd0c0 d04gin20wd0d0 d04gin20wd0e0 d04gin20wd0d5 d04gin20wd0e5 d04gin20wd0f0 d04gin20wd0g0 d04gin20wd0f5 d04gin20wd0g5 d04gin20wd0h0 d04gin20wd0h5 d04gin20wd0i0 d04gin20wd0i5 d04gin20wd0j0 d04gin20wd0j5 d04gin20wd0k0 d04gin20wd0k5 d04gin20wd0l0 d04gin30wd0b5 d04gin30wd0c0 d04gin30wd0c5 d04gin30wd0d5 d04gin30wd0d0 d04gin30wd0e0 d04gin30wd0f0 d04gin30wd0e5 d04gin30wd0f5 d04gin30wd0g0 d04gin30wd0h0 d04gin30wd0g5 d04gin30wd0h5 d04gin30wd0i5 d04gin30wd0i0 d04gin30wd0j0 d04gin30wd0k0 d04gin30wd0j5 d04gin30wd0k5 d04gin30wd0l0 d04gin00nd0b0 d04gin00nd0c0 d04gin00nd0b5 d04gin00nd0c5 d04gin00nd0d0 d04gin00nd0d5 d04gin00nd0e0 d04gin00nd0f0 d04gin00nd0e5 d04gin00nd0f5 d04gin00nd0g5 d04gin00nd0g0 d04gin00nd0h5 d04gin00nd0h0 d04gin00nd0i0 d04gin00nd0j0 d04gin00nd0i5 d04gin00nd0k0 d04gin00nd0j5 d04gin00nd0k5 d04gin00nd0l0 d04gin20nd0b5 d04gin20nd0b0 d04gin20nd0c5 d04gin20nd0c0 d04gin20nd0d0 d04gin20nd0e0 d04gin20nd0d5 d04gin20nd0e5 d04gin20nd0f0 d04gin20nd0g0 d04gin20nd0f5 d04gin20nd0g5 d04gin20nd0h0 d04gin20nd0h5 d04gin20nd0i0 d04gin20nd0i5 d04gin20nd0j0 d04gin20nd0j5 d04gin20nd0k0 d04gin20nd0k5 d04gin20nd0l0 d04gin30nd0b5 d04gin30nd0c0 d04gin30nd0c5 d04gin30nd0d5 d04gin30nd0d0 d04gin30nd0e0 d04gin30nd0f0 d04gin30nd0e5 d04gin30nd0f5 d04gin30nd0g0 d04gin30nd0h0 d04gin30nd0g5 d04gin30nd0h5 d04gin30nd0i5 d04gin30nd0i0 d04gin30nd0j0 d04gin30nd0k0 d04gin30nd0j5 d04gin30nd0k5 d04gin30nd0l0 d04gin00ld0b0 d04gin00ld0c0 d04gin00ld0b5 d04gin00ld0c5 d04gin00ld0d0 d04gin00ld0d5 d04gin00ld0e0 d04gin00ld0f0 d04gin00ld0e5 d04gin00ld0f5 d04gin00ld0g5 d04gin00ld0g0 d04gin00ld0h5 d04gin00ld0h0 d04gin00ld0i0 d04gin00ld0j0 d04gin00ld0i5 d04gin00ld0k0 d04gin00ld0j5 d04gin00ld0k5 d04gin00ld0l0 d04gin20ld0b5 d04gin20ld0b0 d04gin20ld0c5 d04gin20ld0c0 d04gin20ld0d0 d04gin20ld0e0 d04gin20ld0d5 d04gin20ld0e5 d04gin20ld0f0 d04gin20ld0g0 d04gin20ld0f5 d04gin20ld0g5 d04gin20ld0h0 d04gin20ld0h5 d04gin20ld0i0 d04gin20ld0i5 d04gin20ld0j0 d04gin20ld0j5 d04gin20ld0k0 d04gin20ld0k5 d04gin20ld0l0 d04gin30ld0b5 d04gin30ld0c0 d04gin30ld0c5 d04gin30ld0d5 d04gin30ld0d0 d04gin30ld0e0 d04gin30ld0f0 d04gin30ld0e5 d04gin30ld0f5 d04gin30ld0g0 d04gin30ld0h0 d04gin30ld0g5 d04gin30ld0h5 d04gin30ld0i5 d04gin30ld0i0 d04gin30ld0j0 d04gin30ld0k0 d04gin30ld0j5 d04gin30ld0l0 d04gin30ld0k5
+Total number of usable inverters: 297
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: d04gbf00wd0c5 d04gbf00wd0d0 d04gbf00wd0e0 d04gbf00wd0f0 d04gbf00wd0f5 d04gbf00wd0g5 d04gbf00wd0h5 d04gbf00wd0i5 d04gbf00wd0i0 d04gbf00wd0k0 d04gbf00wd0j5 d04gbf00wd0k5 d04gbf00wd0l0 d04gbf00wdud0 d04gbf00wduc5 d04gbf00wdud5 d04gbf00wdue0 d04gbf00wduf0 d04gbf00wduf5 d04gbf00wdug5 d04gbf10wd0c0 d04gbf10wd0d0 d04gbf10wd0c5 d04gbf10wd0d5 d04gbf10wd0e0 d04gbf10wd0e5 d04gbf10wd0f5 d04gbf10wd0f0 d04gbf10wd0g5 d04gbf10wd0g0 d04gbf10wd0h0 d04gbf10wd0h5 d04gbf10wd0i5 d04gbf10wd0i0 d04gbf10wd0j0 d04gbf10wd0j5 d04gbf10wd0k0 d04gbf10wd0k5 d04gbf10wd0l0 d04gbf20wd0b5 d04gbf20wd0b0 d04gbf20wd0c0 d04gbf20wd0c5 d04gbf20wd0d0 d04gbf20wd0e0 d04gbf20wd0d5 d04gbf20wd0e5 d04gbf20wd0f0 d04gbf20wd0f5 d04gbf20wd0g0 d04gbf20wd0h0 d04gbf20wd0g5 d04gbf20wd0h5 d04gbf20wd0i5 d04gbf20wd0i0 d04gbf20wd0j0 d04gbf20wd0k0 d04gbf20wd0j5 d04gbf20wd0k5 d04gbf20wd0l0 d04gbf30wd0b5 d04gbf30wd0b0 d04gbf30wd0c0 d04gbf30wd0c5 d04gbf30wd0d0 d04gbf30wd0e0 d04gbf30wd0d5 d04gbf30wd0f0 d04gbf30wd0e5 d04gbf30wd0g0 d04gbf30wd0f5 d04gbf30wd0g5 d04gbf30wd0h0 d04gbf30wd0h5 d04gbf30wd0i5 d04gbf30wd0i0 d04gbf30wd0j0 d04gbf30wd0j5 d04gbf30wd0k0 d04gbf30wd0k5 d04gbf30wd0l0 d04gbf20nd0f0 d04gbf20nd0f5 d04gbf20nd0g5 d04gbf20nd0h5 d04gbf20nd0i5 d04gbf20nd0i0 d04gbf20nd0j0 d04gbf20nd0k0 d04gbf20nd0j5 d04gbf20nd0k5 d04gbf20nd0l0 d04gbf30nd0c5 d04gbf30nd0d0 d04gbf30nd0e0 d04gbf30nd0d5 d04gbf30nd0f0 d04gbf30nd0e5 d04gbf30nd0g0 d04gbf30nd0f5 d04gbf30nd0g5 d04gbf30nd0h0 d04gbf30nd0h5 d04gbf30nd0i5 d04gbf30nd0i0 d04gbf30nd0j0 d04gbf30nd0j5 d04gbf30nd0k0 d04gbf30nd0k5 d04gbf30nd0l0 d04gbf10ld0d0 d04gbf10ld0c5 d04gbf10ld0f5 d04gbf10ld0f0 d04gbf10ld0g5 d04gbf10ld0g0 d04gbf20ld0b5 d04gbf20ld0b0 d04gbf20ld0c0 d04gbf20ld0c5 d04gbf20ld0d0 d04gbf20ld0e0 d04gbf20ld0d5 d04gbf20ld0e5 d04gbf20ld0f0 d04gbf20ld0f5 d04gbf20ld0g0 d04gbf20ld0h0 d04gbf20ld0g5 d04gbf20ld0h5 d04gbf20ld0i5 d04gbf20ld0i0 d04gbf20ld0j0 d04gbf20ld0k0 d04gbf20ld0j5 d04gbf20ld0k5 d04gbf20ld0l0 d04gbf30ld0b5 d04gbf30ld0b0 d04gbf30ld0c0 d04gbf30ld0c5 d04gbf30ld0d0 d04gbf30ld0e0 d04gbf30ld0d5 d04gbf30ld0f0 d04gbf30ld0e5 d04gbf30ld0g0 d04gbf30ld0f5 d04gbf30ld0g5 d04gbf30ld0h0 d04gbf30ld0h5 d04gbf30ld0i5 d04gbf30ld0i0 d04gbf30ld0j0 d04gbf30ld0j5 d04gbf30ld0k0 d04gbf30ld0l0 d04gbf30ld0k5 d04bbf00wn0d0 d04bbf00wn0g0 d04bbf00wn1d0 d04bbf00wn1g0 d04bbf12wn0b0 d04bbf12wn1b0 d04bbf13wn0b0 d04bbf13wn1b0 d04bfn00wd0c5 d04bfn00wd0h0 d04bfn00wd0o0 d04bfn00wd0p0 d04bfn00wd0q0 d04bfn00wd0r0 d04bfn00wn0d0 d04bfn11wn0a5 d04bfn11wn0b0 d04bfn11wn0c0 d04bfn11wn0b5 d04bfn12wd0b0 d04bfn12wd0c0 d04bfn12wn0b0 d04bfn12wn0a5 d04bfn12wn0c0 d04bfn12wn0b5 d04bfn13wd0b0 d04bfn13wd0c0 d04bfn13wn0b0 d04bfn13wn0a5 d04bfn13wn0c0 d04bfn13wn0b5 d04bfn14wd0a5 d04bfn14wd0b0 d04bfn14wd0c0 d04bfn14wd0b5 d04bfn15wd0a5 d04bfn15wd0b0 d04bfn15wd0c0 d04bfn15wd0b5 d04bfn16wd0a5 d04bfn16wd0b0 d04bfn16wd0c0 d04bfn16wd0b5 d04bfn17wd0a5 d04bfn17wd0b0 d04bfn17wd0b5 d04bfn17wd0c0 d04bbf12nn0b0 d04bbf12nn1b0 d04bbf13nn0b0 d04bbf13nn1b0 d04bfn12nd0b0 d04bfn12nd0c0 d04bfn12nn0b0 d04bfn12nn0a5 d04bfn12nn0c0 d04bfn12nn0b5 d04bfn13nd0b0 d04bfn13nd0c0 d04bfn13nn0b0 d04bfn13nn0a5 d04bfn13nn0c0 d04bfn13nn0b5 d04bfn14nd0a5 d04bfn14nd0b0 d04bfn14nd0c0 d04bfn14nd0b5 d04bfn15nd0a5 d04bfn15nd0b0 d04bfn15nd0c0 d04bfn15nd0b5 d04bfn16nd0a5 d04bfn16nd0b0 d04bfn16nd0c0 d04bfn16nd0b5 d04bfn17nd0a5 d04bfn17nd0b0 d04bfn17nd0b5 d04bfn17nd0c0 d04bbf12ln0b0 d04bbf12ln1b0 d04bbf13ln0b0 d04bbf13ln1b0 d04bfn00ld0p0 d04bfn00ld0q0 d04bfn00ld0r0 d04bfn11ln0c0 d04bfn11ln0b5 d04bfn12ld0b0 d04bfn12ld0c0 d04bfn12ln0b0 d04bfn12ln0a5 d04bfn12ln0c0 d04bfn12ln0b5 d04bfn13ld0b0 d04bfn13ld0c0 d04bfn13ln0b0 d04bfn13ln0a5 d04bfn13ln0c0 d04bfn13ln0b5 d04bfn14ld0a5 d04bfn14ld0b0 d04bfn14ld0c0 d04bfn14ld0b5 d04bfn15ld0a5 d04bfn15ld0b0 d04bfn15ld0c0 d04bfn15ld0b5 d04bfn16ld0a5 d04bfn16ld0b0 d04bfn16ld0c0 d04bfn16ld0b5 d04bfn17ld0a5 d04bfn17ld0b0 d04bfn17ld0c0 d04bfn17ld0b5
+Total number of identified usable delay cells: 274
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+**ERROR: (ENCSYC-2):	Timing information is not defined for cell d04tap02ldz00; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+==> INFORMATION : library is set to 
+==> INFORMATION : Reading  sdc file /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/sta/inputs/constraints/mult.sdc
+Current (total cpu=0:01:59, real=0:01:12, peak res=3038.9M, current mem=1923.2M)
+mult
+Number of path exceptions in the constraint file = 1
+Number of paths exceptions after getting compressed = 1
+INFO (CTE): Constraints read successfully.
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1657.8M, current mem=1937.7M)
+Current (total cpu=0:01:59, real=0:01:12, peak res=3038.9M, current mem=1937.7M)
+read_spef Option :  -starN -rc_corner default_emulate_rc_corner ../apr/outputs/pisf_-40c.spef.gz 
+
+SPEF files for RC Corner default_emulate_rc_corner:
+Top-level spef file '../apr/outputs/pisf_-40c.spef.gz'.
+Start spef parsing (MEM=1937.74).
+Number of corners: 1
+Number of parallel threads processing the nets is: 4
+Parse ../apr/outputs/pisf_-40c.spef.gz.
+Spef file reading completed:: 10 %
+Spef file reading completed:: 20 %
+Spef file reading completed:: 30 %
+Spef file reading completed:: 40 %
+Spef file reading completed:: 50 %
+Spef file reading completed:: 60 %
+Spef file reading completed:: 70 %
+Spef file reading completed:: 80 %
+Spef file reading completed:: 90 %
+Spef file reading completed:: 100 %
+Spef file reading completed:: 100 %
+Number of Resistors     : 425
+Number of Ground Caps   : 323
+Number of Coupling Caps : 6
+
+End spef parsing (MEM=1971.77 CPU=0:00:00.0 REAL=0:00:00.0).
+==>INFORMATION: P_source_if_exists: design_import.tcl : END Sat Apr  4 00:26:39 MST 2015 : RUNTIME in (hh:mm:ss) : 00:01:07 hrs
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/kit/afdk73_kit_c/asicflows/cadence/sta_dot6_d04_std/create_path_group.tcl : START Sat Apr  4 00:26:40 MST 2015
+Multithreaded Timing Analysis is initialized with 4 threads
+
+==>INFORMATION: P_source_if_exists: create_path_group.tcl : END Sat Apr  4 00:26:40 MST 2015 : RUNTIME in (hh:mm:ss) : 00:00:01 hrs
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/kit/afdk73_kit_c/asicflows/cadence/sta_dot6_d04_std/timing_analysis_settings.tcl : START Sat Apr  4 00:26:40 MST 2015
+**WARN: (ENCSYC-6134):	Setting analysis mode to setup does not have any impact on timing analysis as simultaneous setup/hold mode analysis is on. Use '-late' option to report setup timing reports.
+==>INFORMATION: P_source_if_exists: timing_analysis_settings.tcl : END Sat Apr  4 00:26:40 MST 2015 : RUNTIME in (hh:mm:ss) : 00:00:00 hrs
+Saving AAE Data ...
+Saving parasitic data in file 'mult.max.Session.dat/mult.rcdb.d' ...
+Saving timing graph ...
+Writing Netlist "mult.max.Session.dat/mult.v.gz" ...
+AAE_INFO: Saving delay data on disk. 
+Saving configuration ...
+Saving preference file mult.max.Session.dat/enc.pref.tcl ...
+TAT_INFO: saveRC REAL = 0 : CPU = 0 : MEM = 0.
+TAT_INFO: save_eosdb REAL = 0 : CPU = 0 : MEM = 0.
+TAT_INFO: saveNetlist REAL = 0 : CPU = 0 : MEM = 0.
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/kit/afdk73_kit_c/asicflows/cadence/sta_dot6_d04_std/timing_reports.tcl : START Sat Apr  4 00:26:47 MST 2015
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/kit/afdk73_kit_c/asicflows/cadence/sta_dot6_d04_std/p_report_qor.tcl : START Sat Apr  4 00:26:47 MST 2015
+==>INFORMATION: P_source_if_exists: p_report_qor.tcl : END Sat Apr  4 00:26:47 MST 2015 : RUNTIME in (hh:mm:ss) : 00:00:00 hrs
+set_analysis_mode -domain allClockDomain -checkType setup -skew true -log true -warn true -sequentialConstProp false -clockPropagation sdcControl -clkSrcPath true -timingSelfLoopsNoSkew true -asyncChecks async -useOutputPinCap true -timeBorrowing true -clockGatingCheck true -enableMultipleDriveNet true -analysisType onChipVariation -cppr none -timingEngine static
+==>INFORMATION: P_source_if_exists: timing_reports.tcl : END Sat Apr  4 00:26:47 MST 2015 : RUNTIME in (hh:mm:ss) : 00:00:00 hrs
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/kit/afdk73_kit_c/asicflows/cadence/sta_dot6_d04_std/generate_c_tot.tcl : START Sat Apr  4 00:26:47 MST 2015
+==>INFORMATION: P_source_if_exists: generate_c_tot.tcl : END Sat Apr  4 00:26:47 MST 2015 : RUNTIME in (hh:mm:ss) : 00:00:00 hrs
+#INFO-MSG==>  Generating Total pin capacitance list ... 
+
+
+*** Memory Usage v#1 (Current mem = 1198.887M, initial mem = 91.129M) ***
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   ENCLF-155            2  ViaRule only supports routing/cut layer,...
+WARNING   ENCLF-45            24  Macro '%s' has no SITE statement and it ...
+WARNING   ENCLF-46             3  Class CORE macro '%s' has no SITE statem...
+WARNING   ENCLF-63            12  The layer '%s' referenced %s is not foun...
+WARNING   ENCLF-200          395  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   ENCLF-201           17  Pin '%s' in macro '%s' has no ANTENNADIF...
+WARNING   ENCFP-3961           6  The techSite '%s' has no related cells i...
+WARNING   ENCFP-3960           1  The cell '%s' and cell '%s' are using sa...
+WARNING   UI-235               6  The %s file %s has already been schedule...
+ERROR     ENCSYC-2             1  Timing information is not defined for ce...
+WARNING   ENCSYC-881           1  You have enabled beta feature %s. Usage ...
+WARNING   ENCSYC-6134          1  Setting analysis mode to %s does not hav...
+WARNING   ENCESI-3106          1  Delay calculation extrapolated slew on m...
+WARNING   TCLCMD-515           1  Option '%s' is obsolete and will be remo...
+WARNING   TECHLIB-302         20  No function defined for cell '%s'. The c...
+WARNING   TECHLIB-369         20  Unable to extract the '%s' function for ...
+WARNING   TECHLIB-400         20  State table for cell '%s' is ignored bec...
+WARNING   TECHLIB-436         20  Attribute '%s' on '%s' pin '%s' of cell ...
+ERROR     TECHLIB-1143        20  The pin '%s' in the statetable/input_map...
+*** Message Summary: 550 warning(s), 21 error(s)
+
+--- Ending "Tempus Timing Signoff Solution" (totcpu=0:02:07, real=0:01:20, mem=1198.9M) ---

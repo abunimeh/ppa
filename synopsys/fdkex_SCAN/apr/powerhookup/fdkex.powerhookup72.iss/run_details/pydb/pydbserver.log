@@ -1,0 +1,57 @@
+PYDB_Server(R) , SUSE.64 Release J-2014.06.SP2.HF1.4016 2014/09/22
+
+  (C) Copyright 2007-2014.
+  Synopsys, Inc.  All rights reserved.
+
+Listening for connections on port 7765
+PYDB_Server Started on host chlr16420, Tue 03/31/2015 05:46:10
+Client chlr16420(26548) connected (1 total client)
+Verified current licenses.
+Client chlr16420(27404) connected (2 total clients)
+Client chlr16420(27405) connected (3 total clients)
+Begin error insertion: assign_text:bad_text_net_prefix_and_digits
+Error insertion complete: assign_text:bad_text_net_prefix_and_digits
+  Error Insertion Time=0:00:00  User=0.01 Sys=0.00 Mem=9.882 MySQL=33.447 Unpooled=0.019
+Begin error insertion: assign_text:bad_text_net_prefix_and_digits
+Error insertion complete: assign_text:bad_text_net_prefix_and_digits
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=9.897 MySQL=32.592 Unpooled=0.019
+Begin error insertion: assign_text:bad_text_net_prefix_and_digits
+Error insertion complete: assign_text:bad_text_net_prefix_and_digits
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=9.866 MySQL=32.592 Unpooled=0.019
+Begin error insertion: assign_text:bad_text_net_prefix_and_digits
+Error insertion complete: assign_text:bad_text_net_prefix_and_digits
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=9.866 MySQL=32.578 Unpooled=0.020
+Begin error insertion: assign_text:bad_text_net_prefix_and_digits
+Error insertion complete: assign_text:bad_text_net_prefix_and_digits
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=9.897 MySQL=32.578 Unpooled=0.020
+Begin error insertion: assign_text:bad_text_net_prefix_and_digits
+Error insertion complete: assign_text:bad_text_net_prefix_and_digits
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=9.897 MySQL=32.592 Unpooled=0.023
+Client chlr16420(27404) disconnected (2 clients remain)
+Client chlr16420(27404) connected (3 total clients)
+Begin error insertion: /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill/powerhookup72_combined.rs:1910:texted_with:text_unused
+Error insertion complete: /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill/powerhookup72_combined.rs:1910:texted_with:text_unused
+  Error Insertion Time=0:00:00  User=0.03 Sys=0.01 Mem=10.202 MySQL=33.558 Unpooled=0.021
+Begin error insertion: /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill/powerhookup72_combined.rs:499:texted_with:text_unused
+Error insertion complete: /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill/powerhookup72_combined.rs:499:texted_with:text_unused
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=10.202 MySQL=32.615 Unpooled=0.021
+Begin error insertion: /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill/powerhookup72_combined.rs:500:texted_with:text_unused
+Error insertion complete: /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill/powerhookup72_combined.rs:500:texted_with:text_unused
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=10.038 MySQL=32.615 Unpooled=0.021
+Begin error insertion: /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill/powerhookup72_combined.rs:527:texted_with:text_unused
+Error insertion complete: /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill/powerhookup72_combined.rs:527:texted_with:text_unused
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=10.038 MySQL=32.615 Unpooled=0.021
+Begin error insertion: /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill/powerhookup72_combined.rs:528:texted_with:text_unused
+Error insertion complete: /p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill/powerhookup72_combined.rs:528:texted_with:text_unused
+  Error Insertion Time=0:00:00  User=0.00 Sys=0.00 Mem=10.038 MySQL=32.615 Unpooled=0.021
+Client chlr16420(27405) disconnected (2 clients remain)
+Client chlr16420(27405) connected (3 total clients)
+Client chlr16420(27404) disconnected (2 clients remain)
+Client chlr16420(27405) disconnected (1 client remains)
+ Total error insertion Time=0:00:23  User=0.04 Sys=0.01 Mem=10.202 MySQL=33.558 Unpooled=0.023
+  Total Commands: 11
+  Total Errors: 442
+  Avg Time/Cmd: Wall=0 User=0.00 Sys=0.00 Mem=9.984 MySQL Mem=0.020
+Shutdown requested by client chlr16420(26548)
+0 clients remain connected
+Overall server Time=0:01:09  User=0.06 Sys=0.04 Mem=10.287 MySQL=33.558 Unpooled=0.033

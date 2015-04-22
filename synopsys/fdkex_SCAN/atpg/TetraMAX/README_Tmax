@@ -1,0 +1,53 @@
+
+Setup ADF environment first
+     setenv INTEL_ASIC     <PATH_TO_ASIC_FDK_KIT>
+     setenv INTEL_STDCELLS <PATH_TO_STDCELLS>
+
+Notes for OCC insertion & ATPG:
+-------------------------------
+     The OCC logic was inserted during synthesis/DFT insertion step
+     OCC insertion was enabled using the following variable setting in scan_stitch_template.tcl:
+     set INTEL_SCAN_ATSPEED_CLK_CTRL          {pll_inst1/clk1x,refclk,ATEclk}
+
+     Fake PLL model was used for ATPG and simulation
+     Users need to modify the SPF file as needed, to generate at-speed capture pulses
+
+To run Tetramax in NON_compression mode
+---------------------------------------
+
+  mkdir logs
+
+  1. Run DFT insertion in NON_compression mode and copy netlist, SPF file
+     cp ../syn/outputs/fdkex.syn.vg  ./inputs/no_compression/
+     cp ../syn/outputs/fdkex.syn.spf ./inputs/no_compression/
+
+  2. Run Tetramax in NON_compression mode (Transition Delay Fault and Stuckat ATPG)
+     cd scripts
+     ./run_tmax
+     This run will create atpg/vcs_sim directory with VCS simulation scripts 
+
+  3. Run zero_delay ATPG simulation using VCS in NON_compression mode
+     cd scripts
+     ./run_vcs
+
+To run Tetramax in scan_compression mode
+----------------------------------------
+
+  mkdir logs
+
+  1. Run DFT insertion in scan_compression mode and copy netlist, SPF files
+     cp ../syn/outputs/fdkex.syn.vg  ./inputs/compression/
+     cp ../syn/outputs/fdkex.syn.scan_compress.spf ./inputs/compression/
+     cp ../syn/outputs/fdkex.syn.scan_internal.spf ./inputs/compression/
+
+  2. Run Tetramax in scan_compression mode (Transition Delay Fault and Stuckat ATPG in compression_mode;
+     stuckat ATPG in internal_scan mode)
+     cd scripts
+     ./run_tmax_scan_compression
+     This run will create atpg/vcs_sim directory with VCS simulation scripts
+
+  3. Run zero_delay ATPG simulation using VCS in NON_compression mode
+     cd scripts
+     ./run_vcs_scan_compression
+
+

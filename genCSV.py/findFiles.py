@@ -1,37 +1,60 @@
 class findFiles:
     @staticmethod
-    def searchDir(test_case):
+    def search_dir(test_case, tool):
         import fnmatch
         import os
         from Configurations import Configurations
+        #from OtherMetricClass import OtherMetricClass
 
         # file_names = ['*.fill.qor.rpt', '*.fill.physical.rpt', '*.cts.clock_tree.rpt', 'icc.log', '*.min.qor.rpt',
         #             '*.inc_compile.qor.rpt' , 'dc.log', '*.link.rpt', '*.max.qor.rpt', '*.run_time.rpt',
         #             '*.noise.qor.rpt', '*.power.power.rpt', '*.LAYOUT_ERRORS', 'Final_Report.txt',
         #             'drc_IPall.dp.log', 'denall_reuse.dp.log', 'trclvs.dp.log']
-        file_names = list(Configurations().get_file_endings().split(","))
-        print("Current file endings to search for:", file_names)
+        file_names = list(Configurations().get_file_endings(tool).split(","))
+        # This line gets rid of empty strings
         file_names = list(filter(None, file_names))
-        print("NOW Current file endings to search for:", file_names)
+        print("Current file endings to search for:", file_names)
         # test_case is the argument sent in when the user call the script
         if '--add' in test_case:
-            file_names = findFiles.add_file_ending(file_names)
-            exit("exiting the script")
+            file_ending = findFiles.add_file_ending(file_names)
+            ans = input("Would you like to add metrics associated with the new file ending(Y or N)?")
+            while ans != "Y" or ans != "N":
+                if ans == "Y":
+                    #OtherMetricClass.search_file(file_ending)
+                    break
+                elif ans == "N":
+                    exit("Exiting the script")
+                else:
+                    ans = input("Would you like to add metrics associated with the new file ending(Y or N)?")
+            exit("Exiting the script")
         elif '--remove' in test_case:
-            file_names = findFiles.remove_file_ending(file_names)
-            exit("exiting the script")
+            file_ending = findFiles.remove_file_ending(file_names)
+            ans = input("Would you like to remove the metrics searched associated with the new file ending(Y or N)?")
+            while ans != "Y" or ans != "N":
+                if ans == "Y":
+                    #OtherMetricClass.search_file(file_ending)
+                    break
+                elif ans == "N":
+                    exit("Exiting the script")
+                else:
+                    ans = input("Would you like to remove metrics associated with the file ending(Y or N)?")
+            exit("Exiting the script")
         matches = []
         print("os.walk in",  test_case)
         for root, dirnames, filenames in os.walk(test_case):
             for file in file_names:
-                if ".LAYOUT_ERRORS" not in file:
-                    for filename in fnmatch.filter(filenames, file):
-                        matches.append(os.path.join(root, filename))
-                else:
+                if ".LAYOUT_ERRORS" in file:
                     if 'drc_lvs' in root:
                         for filename in fnmatch.filter(filenames, file):
                             matches.append(os.path.join(root, filename))
-        print("files to be searched:")
+                elif 'drc.sum' in file:
+                    if 'drc_lvs' in root:
+                        for filename in fnmatch.filter(filenames, file):
+                            matches.append(os.path.join(root, filename))
+                else:
+                    for filename in fnmatch.filter(filenames, file):
+                        matches.append(os.path.join(root, filename))
+        print("Files to be searched:")
         for file in matches:
             print(file)
         print(len(matches), "Total found\n\n")
@@ -41,7 +64,13 @@ class findFiles:
     def add_file_ending(file_names):
         from configparser import ConfigParser
         answer = "N"
-        file_ending = "s"
+        file_ending = ""
+        tool = "synopsys"
+        which_tool = input("Enter 1 for Cadence, 2 for Synopsys")
+        if which_tool == 1:
+            tool = "synopsys"
+        elif which_tool == 2:
+            tool = "cadence"
         while file_ending != "exit":
             if answer == "N":
                 file_ending = input("Enter the unique file ending (type 'exit' to quit):")
@@ -64,7 +93,7 @@ class findFiles:
                         print("New list:", new_file_names)
                         config = ConfigParser()
                         config.read('Config.ini')
-                        config.set('file_endings', 'filenames', new_file_names)
+                        config.set('file_endings', tool, new_file_names)
                         # Write to 'Config.ini'
                         with open('Config.ini', 'w') as configfile:
                             config.write(configfile)
@@ -73,13 +102,19 @@ class findFiles:
                         answer = "N"
         if file_ending == "exit":
                         exit("exiting")
-        return file_names
+        return file_ending
 
     @staticmethod
     def remove_file_ending(file_names):
         from configparser import ConfigParser
         answer = "N"
-        file_ending = "s"
+        file_ending = ""
+        tool = "synopsys"
+        which_tool = input("Enter 1 for Cadence, 2 for Synopsys")
+        if which_tool == 1:
+            tool = "synopsys"
+        elif which_tool == 2:
+            tool = "cadence"
         while file_ending != "exit":
             if answer == "N":
                 file_ending = input("Enter the unique file ending to be removed(type 'exit' to quit):")
@@ -102,7 +137,7 @@ class findFiles:
                         print("New list:", new_file_names)
                         config = ConfigParser()
                         config.read('Config.ini')
-                        config.set('file_endings', 'filenames', new_file_names)
+                        config.set('file_endings', tool, new_file_names)
                         # Write to 'Config.ini'
                         with open('Config.ini', 'w') as configfile:
                             config.write(configfile)
@@ -111,4 +146,4 @@ class findFiles:
                         answer = "N"
         if file_ending == "exit":
                         exit("exiting")
-        return file_names
+        return file_ending

@@ -1,6 +1,0 @@
-Parsing option_file: netlist_assembly3.tech (EX-304)
-  
-Netlist       Elp=00:00:05 Cpu=00:00:03 Usr=3.5    Sys=0.2    Mem=171.8 
-xTractor      Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=171.8 
-  
-Done          Elp=00:00:05 Cpu=00:00:03 Usr=3.5    Sys=0.2    Mem=171.8 

@@ -35,14 +35,15 @@ class FinalRpt:
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()
-
         rptData = FinalRptData()
-
+        rptData.foundNumOfActuEr = [FinalRpt.replaceSpace(stage), "N/A"]
         for line in lines:
             foundNumOfActuEr = re.search(r'(The[\s]*number[\s]*of[\s]*actual[\s]*errors)[\s]*:+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
-
             if foundNumOfActuEr:
-                rptData.foundNumOfActuEr = FinalRpt.replaceSpace(stage), (foundNumOfActuEr.group(2)+" (NB)")
-                DataItems.append(rptData.foundNumOfActuEr)
+                rptData.foundNumOfActuEr[1] = (foundNumOfActuEr.group(2)+" (NB)")
+                DataItems.append(tuple(rptData.foundNumOfActuEr))
+                return DataItems
+
+        DataItems.append(tuple(rptData.foundNumOfActuEr))
 
         return DataItems

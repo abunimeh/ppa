@@ -1,0 +1,11 @@
+    SYN: PASS
+    APR: PASS (w)
+    FILL_MERGE: PASS
+    EXT: DNR
+    STA: COMPLETED with Errors in ' max min noise' run(s) (Check logs under sta/logs)
+    DRC_GDEN: COMPLETED with 4 (NB) viols (Check file drc_lvs/gden/drc.sum)
+    DRC_DENALL_REUSE: COMPLETED with 9 (NB) viols (Check file drc_lvs/denall_reuse/drc.sum)
+    DRC_TRCLVS: FAIL (Check file drc_lvs/lvs/lvs.report)
+    DRC_HV: COMPLETED with 387 (NB) viols (Check file drc_lvs/HV/drc.sum)
+    DRC_IPALL: PASS
+    DRC_DRCD: COMPLETED with 524 (NB) viols (Check file drc_lvs/drcc/drc.sum)

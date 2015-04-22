@@ -40,16 +40,19 @@ class PVTMetric:
         value_sum = ""
         value = 0
         pvtdata = PVTMetricData()
+        pvtdata.foundDBfile = [(stage + "_pvt"), "N/A"]
+
         for line in lines:
             found_db_file = re.search(r'(Loading[\s]*db[\s]*file).*/[\w]*_[\w]*_[\w]*_([rx\d]+[\w]+_[\w]+_[\d\.]+v_[-]*[\d]+c_[\w]+)', line, re.I)
             if found_db_file:
                 value = found_db_file.group(2)
                 if value not in foundValue:
                     foundValue.append(value)
-        for value in foundValue:
-            value_sum += (value+" ")
+        for values in foundValue:
+            value_sum += (values+" ")
         if value:
-            pvtdata.foundDBfile = (stage + "_pvt"), value_sum
-            DataItems.append(pvtdata.foundDBfile)
+            pvtdata.foundDBfile[1] = value_sum
+
+        DataItems.append(pvtdata.foundDBfile)
 
         return DataItems

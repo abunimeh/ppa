@@ -1,0 +1,106 @@
+
+****************************************
+Report : qor
+Design : mult
+Version: TEMPUS 14.22-s053_1
+Sat Apr  4 00:26:47 MST 2015
+Date   : 
+****************************************
+
+
+  Timing Path Group 'OUTPUTS' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:               490.50000
+  Critical Path Slack:                459.50000
+  Total Negative Slack:                 0.00000
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'reg2reg' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            2
+  Critical Path Length:               511.00000
+  Critical Path Slack:                599.60000
+  Total Negative Slack:                 0.00000
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'REG2REG' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            2
+  Critical Path Length:               511.00000
+  Critical Path Slack:                599.60000
+  Total Negative Slack:                 0.00000
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'INPUTS' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           18
+  Critical Path Length:              1216.60000
+  Critical Path Slack:                556.40000
+  Total Negative Slack:                 0.00000
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+
+  Timing Path Group 'OUTPUTS' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:               460.20000
+  Critical Path Slack:                960.20000
+  Total Negative Slack:                 0.00000
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'reg2reg' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:               469.20000
+  Critical Path Slack:                 58.60000
+  Total Negative Slack:                 0.00000
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'REG2REG' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:               469.20000
+  Critical Path Slack:                 58.60000
+  Total Negative Slack:                 0.00000
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'INPUTS' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            5
+  Critical Path Length:               888.70000
+  Critical Path Slack:                477.10000
+  Total Negative Slack:                 0.00000
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+
+  Cell Count
+  ---------------------------------------------
+  Hierarchical Cell Count:                    0
+  Hierarchical Port Count:                    0
+  Leaf Cell Count:                          229
+  ---------------------------------------------
+
+
+  Area
+  ---------------------------------------------
+  Design Area:                        27.030000
+  ---------------------------------------------
+
+
+  Design Rule Violations
+  ---------------------------------------------
+  Total No. of Pins in Design:              167
+  min_capacitance Count:                      2
+  min_capacitance Cost:                -0.11000
+  Total DRC Cost:                      -0.11000
+  ---------------------------------------------
+

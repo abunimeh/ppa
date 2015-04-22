@@ -1,0 +1,197 @@
+Connection to IPC server failed.
+Starting IPC Server. (Port = 1925)
+IPC Server started successfully.
+Using display unix:50
+;; ;# Tcl
+                  Milkyway(TM)
+  Version I-2013.12-SP5-1 for SUSE.64 -- Sep 24, 2014
+                                                  
+
+Linux 3.0.51-0.7.9-default #1 SMP Thu Nov 29 22:12:17 UTC 2012 (f3be9d0) x86_64
+
+Host: chlr16420 (SUSE.64)
+
+Copyright (C) 1991-2014 Synopsys, Inc. All rights reserved.
+Your use of this program is subject to the terms and conditions of
+a written license agreement between you, or your company, and Synopsys.
+Use the Tcl command "help about" for additional information about
+certain restrictions on your use of this software and its inputs and outputs.
+Install Path: /p/foundry/eda/em64t_SLES11/milkyway/I-2013.12-SP5-1
+
+Loading /p/foundry/eda/em64t_SLES11/milkyway/I-2013.12-SP5-1/etc/scheme/.avntrc
+#t
+ Info: loading setup file(s)
+ configureWindow 0 25x24+0+0
+ source ./write_lef.tcl
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/ln/d04_ln_misc (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+	12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_ln_misc)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_ln_misc)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_ln_misc)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/ln/d04_ln_misc_tapcore2h (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+	12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_ln_misc_tapcore2h)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_ln_misc_tapcore2h)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_ln_misc_tapcore2h)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/nn/d04_nn_misc (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+	12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_nn_misc)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_nn_misc)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_nn_misc)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/nn/d04_nn_misc_tapcore2h (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+	12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_nn_misc_tapcore2h)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_nn_misc_tapcore2h)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_nn_misc_tapcore2h)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/wn/d04_wn_misc (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+	12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_wn_misc)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_wn_misc)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_wn_misc)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/wn/d04_wn_misc_tapcore2h (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+	12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_wn_misc_tapcore2h)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_wn_misc_tapcore2h)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_wn_misc_tapcore2h)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/yn/d04_yn_misc (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+	12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_yn_misc)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_yn_misc)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_yn_misc)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0_misc/fram/yn/d04_yn_misc_tapcore2h (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+	12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_yn_misc_tapcore2h)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_yn_misc_tapcore2h)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_yn_misc_tapcore2h)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0//fram/ln/d04_ln (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+	12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_ln)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_ln)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_ln)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0//fram/nn/d04_nn (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+	12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_nn)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_nn)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_nn)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0//fram/wn/d04_wn (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+	12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_wn)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_wn)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_wn)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0//fram/yn/d04_yn (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+	12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_yn)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_yn)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+	Main Library (fdkex_51074_LIB)    |	Reference Library (d04_yn)
+	Upper Layer     m1 (0, 17)        |	m1 (0, 14)	 (MWLIBP-324)
+Version I-2013.12-SP5-1 for SUSE.64 -- Sep 24, 2014
+>>>Start to output cut layer vcn
+>>>Start to output cut layer v0
+>>>Start to output cut layer v1
+>>>Start to output cut layer v2
+>>>Start to output cut layer v3
+>>>Start to output cut layer v4
+>>>Start to output cut layer v5
+>>>Start to output cut layer v6
+>>>Start to output cut layer v7
+>>>Start to output cut layer v8
+>>>Start to output cut layer v9
+>>>Start to output cut layer tv1
+WARNING : No routing direction for layer c4, set to V
+Kill NullXServer PID = 54925
+Thank you for using Milkyway

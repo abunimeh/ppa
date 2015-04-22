@@ -1,0 +1,447 @@
+
+
+==================================================================================
+=== CALIBRE::DRC-H SUMMARY REPORT
+===
+Execution Date/Time:       Sat Apr  4 00:28:46 2015
+Calibre Version:           v2014.4_18.13    Wed Nov 5 16:04:06 PST 2014
+Rule File Pathname:        /p/fdk/fdk73/builds/pdk736_r2.2/runsets/calibre/p1273_HV.svrf
+Rule File Title:           
+Layout System:             OASIS
+Layout Path(s):            /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/../apr/outputs/mult.signoff.post_mfill.oas
+Layout Primary Cell:       mult
+Current Directory:         /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/HV
+User Name:                 spalutla
+Maximum Results/RuleCheck: ALL
+Maximum Result Vertices:   199
+DRC Results Database:      out.rve (ASCII)
+Layout Depth:              ALL
+Text Depth:                PRIMARY
+Summary Report File:       drc.sum (REPLACE)
+Geometry Flagging:         ACUTE = NO  SKEW = NO  ANGLED = NO  OFFGRID = NO
+                           NONSIMPLE POLYGON = YES  NONSIMPLE PATH = YES
+Excluded Cells:           
+CheckText Mapping:         COMMENT TEXT + RULE FILE INFORMATION
+Layers:                    MEMORY-BASED
+Keep Empty Checks:         YES
+----------------------------------------------------------------------------------
+--- RUNTIME WARNINGS
+---
+Rule file precision 10000 is not consistent with database precision 1000 in input file /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot6/cadence/2015-04-04/runs/d04/mult_1bit_scan/drc_lvs/../apr/outputs/mult.signoff.post_mfill.oas.
+HCELL mult not located or not allowed.
+TEXT PRINT MAXIMUM limit of 1000 exceeded. 1328 object(s) not printed.
+There is no data for layout net name APEX.
+There is no data for layout net name APEX.
+There is no data for layout net name APEX.
+There is no data for layout net name APEX.
+There is no data for layout net name APEX.
+There is no data for layout net name APEX.
+There is no data for layout net name APEX.
+There is no data for layout net name APEX.
+There is no data for layout net name APEX.
+There is no data for layout net name APEX.
+There is no data for layout net name APEX.
+There is no data for layout net name APEX.
+There is no data for layout net name APEX.
+There is no data for layout net name APEX.
+There is no data for layout net name APEX.
+There is no data for layout net name APEX.
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name working_voltage_list.
+There is no data for layout net name APEX.
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_ehv.
+There is no data for layout net name ?_ehv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_hv.
+There is no data for layout net name ?_hv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_ehv.
+There is no data for layout net name ?_ehv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_hv.
+There is no data for layout net name ?_hv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_ehv.
+There is no data for layout net name ?_ehv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_hv.
+There is no data for layout net name ?_hv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_ehv.
+There is no data for layout net name ?_ehv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_hv.
+There is no data for layout net name ?_hv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_ehv.
+There is no data for layout net name ?_ehv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_hv.
+There is no data for layout net name ?_hv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_ehv.
+There is no data for layout net name ?_ehv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_hv.
+There is no data for layout net name ?_hv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_ehv.
+There is no data for layout net name ?_ehv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_hv.
+There is no data for layout net name ?_hv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_ehv.
+There is no data for layout net name ?_ehv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_hv.
+There is no data for layout net name ?_hv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_ehv.
+There is no data for layout net name ?_ehv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_hv.
+There is no data for layout net name ?_hv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_ehv.
+There is no data for layout net name ?_ehv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_hv.
+There is no data for layout net name ?_hv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_ehv.
+There is no data for layout net name ?_ehv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_hv.
+There is no data for layout net name ?_hv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_ehv.
+There is no data for layout net name ?_ehv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_hv.
+There is no data for layout net name ?_hv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_ehv.
+There is no data for layout net name ?_ehv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_hv.
+There is no data for layout net name ?_hv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_ehv.
+There is no data for layout net name ?_ehv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_hv.
+There is no data for layout net name ?_hv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_ehv.
+There is no data for layout net name ?_ehv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_hv.
+There is no data for layout net name ?_hv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_ehv.
+There is no data for layout net name ?_ehv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_hv.
+There is no data for layout net name ?_hv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_uhv.
+There is no data for layout net name ?_uhv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_ehv.
+There is no data for layout net name ?_ehv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_hv.
+There is no data for layout net name ?_hv[?].
+There is no data for layout net name APEX.
+There is no data for layout net name ?_nom.
+There is no data for layout net name ?_nom[?].
+There is no data for layout net name APEX.
+----------------------------------------------------------------------------------
+--- ORIGINAL LAYER STATISTICS
+---
+LAYER CELLBOUNDARY ... TOTAL Original Geometry Count = 42     (3816)
+LAYER V1PITCHID ...... TOTAL Original Geometry Count = 0      (0)
+LAYER V3PITCHID ...... TOTAL Original Geometry Count = 0      (0)
+LAYER DIFF ........... TOTAL Original Geometry Count = 3058   (749504)
+LAYER POLY ........... TOTAL Original Geometry Count = 3728   (855417)
+LAYER DIFFCON ........ TOTAL Original Geometry Count = 3881   (525089)
+LAYER PDIFF .......... TOTAL Original Geometry Count = 0      (0)
+LAYER ALLNWELL ....... TOTAL Original Geometry Count = 40     (3814)
+LAYER NDIFF .......... TOTAL Original Geometry Count = 1588   (376772)
+LAYER POLYDUMMYID .... TOTAL Original Geometry Count = 126    (72422)
+LAYER POLYCON ........ TOTAL Original Geometry Count = 2620   (301744)
+LAYER DIODEID ........ TOTAL Original Geometry Count = 0      (0)
+LAYER NES_ID ......... TOTAL Original Geometry Count = 0      (0)
+LAYER NWELLESD ....... TOTAL Original Geometry Count = 0      (0)
+LAYER DEEPNWELL ...... TOTAL Original Geometry Count = 0      (0)
+LAYER NWELL .......... TOTAL Original Geometry Count = 40     (3814)
+LAYER METAL0BC ....... TOTAL Original Geometry Count = 109508 (254827)
+LAYER METAL2BC ....... TOTAL Original Geometry Count = 4272   (78738)
+LAYER METAL3BC ....... TOTAL Original Geometry Count = 4490   (19357)
+LAYER METAL4BC ....... TOTAL Original Geometry Count = 3614   (13444)
+LAYER METAL5BC ....... TOTAL Original Geometry Count = 2347   (10401)
+LAYER METAL11 ........ TOTAL Original Geometry Count = 1162   (2360)
+LAYER METAL12 ........ TOTAL Original Geometry Count = 118    (517)
+LAYER VIACON ......... TOTAL Original Geometry Count = 3188   (56897)
+LAYER VIA0 ........... TOTAL Original Geometry Count = 499    (56227)
+LAYER VIA1 ........... TOTAL Original Geometry Count = 249    (55284)
+LAYER VIA2 ........... TOTAL Original Geometry Count = 3      (9710)
+LAYER VIA3 ........... TOTAL Original Geometry Count = 3      (4849)
+LAYER VIA4 ........... TOTAL Original Geometry Count = 2      (4834)
+LAYER VIA5 ........... TOTAL Original Geometry Count = 2      (3224)
+LAYER VIA6 ........... TOTAL Original Geometry Count = 2      (1616)
+LAYER VIA7 ........... TOTAL Original Geometry Count = 1      (800)
+LAYER VIA8 ........... TOTAL Original Geometry Count = 1      (800)
+LAYER VIA9 ........... TOTAL Original Geometry Count = 1      (800)
+LAYER VIA10 .......... TOTAL Original Geometry Count = 1      (800)
+LAYER VIA11 .......... TOTAL Original Geometry Count = 1      (400)
+LAYER VIA12 .......... TOTAL Original Geometry Count = 0      (0)
+LAYER TV1 ............ TOTAL Original Geometry Count = 0      (0)
+LAYER TM1RESID ....... TOTAL Original Geometry Count = 0      (0)
+LAYER TM1 ............ TOTAL Original Geometry Count = 0      (0)
+LAYER POLYCONRESID ... TOTAL Original Geometry Count = 0      (0)
+LAYER DIFFCONRESID ... TOTAL Original Geometry Count = 0      (0)
+LAYER PRES_ID ........ TOTAL Original Geometry Count = 0      (0)
+LAYER WELLRES_ID ..... TOTAL Original Geometry Count = 0      (0)
+LAYER C4BEMIB ........ TOTAL Original Geometry Count = 0      (0)
+LAYER VDMOSID ........ TOTAL Original Geometry Count = 0      (0)
+LAYER ESDDIODE_ID .... TOTAL Original Geometry Count = 0      (0)
+LAYER METAL10BC ...... TOTAL Original Geometry Count = 482    (2080)
+LAYER METAL9BC ....... TOTAL Original Geometry Count = 842    (2440)
+LAYER METAL8BC ....... TOTAL Original Geometry Count = 842    (2440)
+LAYER METAL7BC ....... TOTAL Original Geometry Count = 1698   (4111)
+LAYER METAL6BC ....... TOTAL Original Geometry Count = 2097   (6933)
+LAYER METAL1BC ....... TOTAL Original Geometry Count = 64111  (243678)
+LAYER NWELLHVBLOCK ... TOTAL Original Geometry Count = 0      (0)
+LAYER MET0BCRESID .... TOTAL Original Geometry Count = 0      (0)
+LAYER MET1BCRESID .... TOTAL Original Geometry Count = 0      (0)
+LAYER MET2BCRESID .... TOTAL Original Geometry Count = 0      (0)
+LAYER MET3BCRESID .... TOTAL Original Geometry Count = 0      (0)
+LAYER MET4BCRESID .... TOTAL Original Geometry Count = 0      (0)
+LAYER MET5BCRESID .... TOTAL Original Geometry Count = 0      (0)
+LAYER MET6BCRESID .... TOTAL Original Geometry Count = 0      (0)
+LAYER MET7BCRESID .... TOTAL Original Geometry Count = 0      (0)
+LAYER MET8BCRESID .... TOTAL Original Geometry Count = 0      (0)
+LAYER MET9BCRESID .... TOTAL Original Geometry Count = 0      (0)
+LAYER MET10BCRESID ... TOTAL Original Geometry Count = 0      (0)
+LAYER MET11RESID ..... TOTAL Original Geometry Count = 0      (0)
+LAYER MET12RESID ..... TOTAL Original Geometry Count = 0      (0)
+LAYER DEVHVBLOCK ..... TOTAL Original Geometry Count = 0      (0)
+LAYER METALHVBLOCK ... TOTAL Original Geometry Count = 0      (0)
+LAYER GATED_NACID .... TOTAL Original Geometry Count = 1      (8)
+LAYER NACID .......... TOTAL Original Geometry Count = 0      (0)
+LAYER ACTCAP_ID ...... TOTAL Original Geometry Count = 132    (68280)
+LAYER CE1 ............ TOTAL Original Geometry Count = 0      (0)
+LAYER CE2 ............ TOTAL Original Geometry Count = 0      (0)
+----------------------------------------------------------------------------------
+--- RULECHECK RESULTS STATISTICS
+---
+RULECHECK NW_128 ... TOTAL Result Count = 0  (0)
+RULECHECK NW_129 ... TOTAL Result Count = 0  (0)
+RULECHECK HV_01 .... TOTAL Result Count = 0  (0)
+RULECHECK HV_02 .... TOTAL Result Count = 0  (0)
+RULECHECK HV_04 .... TOTAL Result Count = 0  (0)
+RULECHECK HV_09 .... TOTAL Result Count = 0  (0)
+RULECHECK HV_11 .... TOTAL Result Count = 0  (0)
+RULECHECK HV_12 .... TOTAL Result Count = 0  (0)
+RULECHECK HV_13 .... TOTAL Result Count = 0  (0)
+RULECHECK HV_16 .... TOTAL Result Count = 0  (0)
+RULECHECK HV_18 .... TOTAL Result Count = 0  (0)
+RULECHECK HV_20 .... TOTAL Result Count = 0  (0)
+RULECHECK HV_22 .... TOTAL Result Count = 0  (0)
+RULECHECK HV_23 .... TOTAL Result Count = 0  (0)
+RULECHECK HV_25 .... TOTAL Result Count = 0  (0)
+RULECHECK HV_26 .... TOTAL Result Count = 0  (0)
+RULECHECK HV_27 .... TOTAL Result Count = 0  (0)
+RULECHECK HV_90 .... TOTAL Result Count = 0  (0)
+RULECHECK HV_91 .... TOTAL Result Count = 0  (0)
+RULECHECK EHV_01 ... TOTAL Result Count = 0  (0)
+RULECHECK EHV_02 ... TOTAL Result Count = 0  (0)
+RULECHECK EHV_04 ... TOTAL Result Count = 0  (0)
+RULECHECK EHV_06 ... TOTAL Result Count = 0  (0)
+RULECHECK EHV_07 ... TOTAL Result Count = 0  (0)
+RULECHECK EHV_09 ... TOTAL Result Count = 0  (0)
+RULECHECK EHV_11 ... TOTAL Result Count = 0  (0)
+RULECHECK EHV_12 ... TOTAL Result Count = 0  (0)
+RULECHECK EHV_13 ... TOTAL Result Count = 0  (0)
+RULECHECK EHV_15 ... TOTAL Result Count = 0  (0)
+RULECHECK EHV_16 ... TOTAL Result Count = 0  (0)
+RULECHECK EHV_18 ... TOTAL Result Count = 0  (0)
+RULECHECK EHV_20 ... TOTAL Result Count = 0  (0)
+RULECHECK EHV_23 ... TOTAL Result Count = 0  (0)
+RULECHECK EHV_24 ... TOTAL Result Count = 0  (0)
+RULECHECK EHV_25 ... TOTAL Result Count = 0  (0)
+RULECHECK EHV_26 ... TOTAL Result Count = 0  (0)
+RULECHECK EHV_27 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_01 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_02 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_04 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_05 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_06 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_07 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_09 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_10 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_11 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_12 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_13 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_14 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_15 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_16 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_20 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_21 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_34 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_40 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_41 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_42 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_43 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_44 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_45 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_46 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_47 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_48 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_49 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_50 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_51 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_52 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_53 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_54 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_55 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_56 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_58 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_59 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_60 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_61 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_62 ... TOTAL Result Count = 0  (0)
+RULECHECK UHV_63 ... TOTAL Result Count = 0  (0)
+RULECHECK UNW_14 ... TOTAL Result Count = 0  (0)
+RULECHECK ENW_14 ... TOTAL Result Count = 0  (0)
+RULECHECK HNW_14 ... TOTAL Result Count = 0  (0)
+RULECHECK UNW_21 ... TOTAL Result Count = 0  (0)
+RULECHECK ENW_21 ... TOTAL Result Count = 0  (0)
+RULECHECK HNW_21 ... TOTAL Result Count = 0  (0)
+RULECHECK UNW_22 ... TOTAL Result Count = 0  (0)
+RULECHECK ENW_22 ... TOTAL Result Count = 0  (0)
+RULECHECK HNW_22 ... TOTAL Result Count = 0  (0)
+RULECHECK ER_HV .... TOTAL Result Count = 0  (0)
+RULECHECK HV_er1 ... TOTAL Result Count = 86 (387)
+----------------------------------------------------------------------------------
+--- SUMMARY
+---
+TOTAL CPU Time:                  64
+TOTAL REAL Time:                 58
+TOTAL Original Layer Geometries: 214792 (3798247)
+TOTAL DRC RuleChecks Executed:   88
+TOTAL DRC Results Generated:     86 (387)
