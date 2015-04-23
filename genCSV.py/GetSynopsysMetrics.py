@@ -18,7 +18,7 @@ class GetSynopsysMetrics:
         from PvPower import PvPower
         from TotalDrcErrors import TotalDrcErrors
         metricNames = []
-        
+
         for file in list_of_files:
             if file.endswith('.qor.rpt'):
                 qrpt = QorRpt.searchfile(file)

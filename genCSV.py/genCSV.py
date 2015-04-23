@@ -1,16 +1,12 @@
 #!/usr/bin/env python3
 # MAIN
-# print os.path.relpath(root, directory)
-
 import csv
 import sys
 from FindFiles import findFiles
 from GetCadenceMetrics import GetCadenceMetrics
 from GetSynopsysMetrics import GetSynopsysMetrics
 
-
 #from OtherMetricClass import OtherMetricClass
-
 
 print("number of arguments received:", (len(sys.argv)-1))
 test_cases_list = []
@@ -56,15 +52,15 @@ for test_case in test_cases_list:
             writer = csv.writer(my_file, lineterminator='\n')
             writer.writerow(names)
             writer.writerow(values)
-            writer.writerow(' ')
+            #writer.writerow(' ')
         my_file.close()
         print('Regr_Suite_Runs_Comparison_Data.csv created with %s' % test_case)
     else:
         # Appends the csv with the following testcases
         with open(r'Regr_Suite_Runs_Comparison_Data.csv', 'a') as my_file:
             writer = csv.writer(my_file, lineterminator='\n')
-            writer.writerow(names)
+            #writer.writerow(names)
             writer.writerow(values)
-            writer.writerow(' ')
+            #writer.writerow(' ')
         my_file.close()
         print('Regr_Suite_Runs_Comparison_Data.csv appended with %s' % test_case)

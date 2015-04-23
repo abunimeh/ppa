@@ -40,8 +40,18 @@ class findFiles:
                     ans = input("Would you like to remove metrics associated with the file ending(Y or N)?")
             exit("Exiting the script")
         matches = []
+        include = test_case, r'syn', r'apr', r'drc_lvs', r'sta',  r'reports', r'logs', r'reports', r'logs', \
+                r'reports_max', r'reports_min', r'denall_reuse', r'drcc', r'gden', r'HV', r'IPall', r'lvs'
         print("os.walk in",  test_case)
-        for root, dirnames, filenames in os.walk(test_case):
+        for root, dirnames, filenames in os.walk(test_case, topdown=True):
+            dirnames[:] = [d for d in dirnames if d in include]
+            print("ROOT:", root)
+            print("DIRNAMES:", dirnames)
+            if "ext" in root:
+                continue
+            if "fill_merge" in root:
+                print("GOOO!")
+                continue
             for file in file_names:
                 if ".LAYOUT_ERRORS" in file:
                     if 'drc_lvs' in root:
