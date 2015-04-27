@@ -1,0 +1,176 @@
+Starting shell in Topographical mode...
+
+######## Synopsys Build Information ########
+Product Version:  J-2014.09
+Build Date:       Aug 25, 2014
+############################################
+
+-I- Setting FDK DIR to /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s/
+-I- scripts search path variable INTEL_SCRIPTS_SEARCH_PATH is set to: ./scripts                              /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s//asicflows/synopsys/syn/dot3/d04                              /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s//asicflows/synopsys/syn                              /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s//asicflows/synopsys/common/dot3/d04                              /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s//asicflows/synopsys/common
+==>SOURCING: /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s/asicflows/synopsys/common/procs.tcl START TIME: Tue Mar 17 00:03:32 2015
+==>ENDING: /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s/asicflows/synopsys/common/procs.tcl END TIME: Tue Mar 17 00:03:32 2015 RUNTIME in (hh:mm:ss): 00:00:00 MEMORY: 61596KB
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s/asicflows/synopsys/common/tooltype.tcl : START Tue Mar 17 00:03:33 MST 2015
+==>INFORMATION: P_source_if_exists: tooltype.tcl : END Tue Mar 17 00:03:33 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:00:00 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:00 hrs : MEMORY : 61596 KB
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s/asicflows/synopsys/common/procs_common.tcl : START Tue Mar 17 00:03:33 MST 2015
+==>INFORMATION: P_source_if_exists: procs_common.tcl : END Tue Mar 17 00:03:33 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:00:00 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:00 hrs : MEMORY : 61596 KB
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s/asicflows/synopsys/common/aliases.tcl : START Tue Mar 17 00:03:33 MST 2015
+==>INFORMATION: P_source_if_exists: aliases.tcl : END Tue Mar 17 00:03:33 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:00:00 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:00 hrs : MEMORY : 61596 KB
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s/asicflows/synopsys/common/run_proc.tcl : START Tue Mar 17 00:03:33 MST 2015
+==>INFORMATION: P_source_if_exists: run_proc.tcl : END Tue Mar 17 00:03:33 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:00:00 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:00 hrs : MEMORY : 61660 KB
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s/asicflows/synopsys/common/dot3/d04/project_setup.tcl : START Tue Mar 17 00:03:33 MST 2015
+Warning: You requested 4 cores. However, load on host chlr12735 is 18.12. Tool will ignore the request and use 1 cores. (UIO-231)
+==>INFORMATION: P_source_if_exists: project_setup.tcl : END Tue Mar 17 00:03:33 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:00:00 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:00 hrs : MEMORY : 61724 KB
+==>INFORMATION: P_source_if_exists: Sourcing ./scripts/block_setup.tcl : START Tue Mar 17 00:03:33 MST 2015
+==>INFORMATION: P_source_if_exists: block_setup.tcl : END Tue Mar 17 00:03:33 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:00:00 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:00 hrs : MEMORY : 61724 KB
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s/asicflows/synopsys/syn/dot3/d04/library.tcl : START Tue Mar 17 00:03:33 MST 2015
+#INFO-MSG==>  ==>INFORMATION: Setting variables to support CCS Timing Models
+#INFO-MSG==>  ==>INFORMATION: search_path is set to ./scripts                              /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s//asicflows/synopsys/syn/dot3/d04                              /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s//asicflows/synopsys/syn                              /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s//asicflows/synopsys/common/dot3/d04                              /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s//asicflows/synopsys/common . /p/foundry/eda/em64t_SLES11/designcompiler/J-2014.09/libraries/syn /p/foundry/eda/em64t_SLES11/designcompiler/J-2014.09/minpower/syn /p/foundry/eda/em64t_SLES11/designcompiler/J-2014.09/dw/syn_ver /p/foundry/eda/em64t_SLES11/designcompiler/J-2014.09/dw/sim_ver /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/ccs/ln /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/ccs/nn /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/ccs/wn /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/ccs/yn /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/lib/ln /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/lib/nn /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/lib/wn /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/lib/yn
+==>INFORMATION: target_library is set to d04_ln_p1273_3x1r6_psss_0.75v_-10c_ccst.ldb d04_nn_p1273_3x1r6_psss_0.75v_-10c_ccst.ldb d04_wn_p1273_3x1r6_psss_0.75v_-10c_ccst.ldb d04_yn_p1273_3x1r6_psss_0.75v_-10c_ccst.ldb
+#INFO-MSG==>  ==>INFORMATION: link_library is set to * d04_ln_p1273_3x1r6_psss_0.75v_-10c_ccst.ldb d04_nn_p1273_3x1r6_psss_0.75v_-10c_ccst.ldb d04_wn_p1273_3x1r6_psss_0.75v_-10c_ccst.ldb d04_yn_p1273_3x1r6_psss_0.75v_-10c_ccst.ldb dw_foundation.sldb
+#INFO-MSG==>  ==>INFORMATION: mw_reference_library is set to /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/fram/ln/d04_ln /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/fram/nn/d04_nn /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/fram/wn/d04_wn /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/fram/yn/d04_yn
+==>INFORMATION: P_source_if_exists: library.tcl : END Tue Mar 17 00:03:33 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:00:00 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:00 hrs : MEMORY : 61788 KB
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s/asicflows/synopsys/syn/dc_var_setup.tcl : START Tue Mar 17 00:03:33 MST 2015
+==>INFORMATION: P_source_if_exists: dc_var_setup.tcl : END Tue Mar 17 00:03:33 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:00:00 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:00 hrs : MEMORY : 62236 KB
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-17/kit/afdk73_kit_s/asicflows/synopsys/common/dot3/d04/dont_use.tcl : START Tue Mar 17 00:03:33 MST 2015
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/ccs/ln/d04_ln_p1273_3x1r6_psss_0.75v_-10c_ccst.ldb'
+Information: Using CCS timing libraries. (TIM-024)
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/ccs/nn/d04_nn_p1273_3x1r6_psss_0.75v_-10c_ccst.ldb'
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/ccs/wn/d04_wn_p1273_3x1r6_psss_0.75v_-10c_ccst.ldb'
+Loading db file '/p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0_prea1/ccs/yn/d04_yn_p1273_3x1r6_psss_0.75v_-10c_ccst.ldb'
+Loading db file '/p/foundry/eda/em64t_SLES11/designcompiler/J-2014.09/libraries/syn/dw_foundation.sldb'
+#INFO-MSG==>  Setting APR dont_use cells
+#INFO-MSG==>  Setting dont_use on seleted cells based on dont_use_default the ASIC flow
+#INFO-MSG==>  Setting dont_use on vcc
+   because SPECIAL: voltage pins
+#INFO-MSG==>   no 'vcc' cells found in libraries loaded in the design 
+#INFO-MSG==>  Setting dont_use on vss
+   because SPECIAL: voltage pins
+#INFO-MSG==>   no 'vss' cells found in libraries loaded in the design 
+#INFO-MSG==>  Setting dont_use on d04bfn00*ua5
+   because HIGH_COST: Buffer count increases and synthesis uses only this drive strength if allowed
+#INFO-MSG==>  Setting dont_use on d04bfn00?n0b3
+   because SPECIAL:b3 and b4 were pruned to maintain cell P/N timing, area, totalZ across the family
+#INFO-MSG==>  Setting dont_use on d04bfn00?n0b4
+   because SPECIAL:b3 and b4 were pruned to maintain cell P/N timing, area, totalZ across the family
+#INFO-MSG==>  Setting dont_use on d04hgy*
+   because SPECIAL:Synchronizers and Metastable Hardened DFFs
+#INFO-MSG==>  Setting dont_use on d04hhy*
+   because  SPECIAL:Synchronizer Cell
+#INFO-MSG==>  Setting dont_use on d04nob03wn0c0
+   because  Incorrect transition value is library
+#INFO-MSG==>  Setting dont_use on d04bbf*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bca*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bco*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bfy*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bin*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bly*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bmb*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bna*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bno*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bth*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>   no 'd04bth*' cells found in libraries loaded in the design 
+#INFO-MSG==>  Setting dont_use on d04bxo*
+   because FILL_ONLY:Functional bonus cells. Used during ECO mode
+#INFO-MSG==>  Setting dont_use on d04bdc*
+   because FILL_ONLY:Functional bonus cells
+#INFO-MSG==>   no 'd04bdc*' cells found in libraries loaded in the design 
+#INFO-MSG==>  Setting dont_use on d04bgn*
+   because FILL_ONLY:Functional bonus cells
+#INFO-MSG==>   no 'd04bgn*' cells found in libraries loaded in the design 
+#INFO-MSG==>  Setting dont_use on d04bfn00?nua5
+   because LOW_DRIVE CELL
+#INFO-MSG==>  Setting dont_use on d04ann04?n0a5
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04ann04?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04ann04?n0b5
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04con01?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04nab03?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04nan02?n0a5
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04nan02?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04nan03?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04nan04?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04non02?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04non03?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04non04?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04orn03?n0a5
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04orn04?n0a5
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04orn04?n0b0
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04orn04?n0b5
+   because DRC COST: HPD Cells
+#INFO-MSG==>  Setting dont_use on d04bfn1*
+   because ROUTE_ONLY:Min delay buffers/inverters.  Used during hold fixing
+#INFO-MSG==>  Setting dont_use on d04inn12*
+   because ROUTE_ONLY:Min delay buffers/inverters.  Used during hold fixing
+#INFO-MSG==>  Setting dont_use on d04gbf*
+   because CTS_ONLY:Clock buffers and inverters.  Used during CTS
+#INFO-MSG==>  Setting dont_use on d04gin*
+   because CTS_ONLY:Clock buffers and inverters.  Used during CTS
+#INFO-MSG==>  Setting dont_use on d04gan*
+   because RTL_ONLY:RTL instantition required. Clock logical cells
+#INFO-MSG==>  Setting dont_use on d04gna*
+   because RTL_ONLY:RTL instantition required. Clock logical cells
+#INFO-MSG==>  Setting dont_use on d04gno*
+   because RTL_ONLY:RTL instantition required. Clock logical cells
+#INFO-MSG==>  Setting dont_use on d04gor*
+   because RTL_ONLY:RTL instantition required. Clock logical cells
+#INFO-MSG==>  Setting dont_use on d04gmx22*
+   because RTL_ONLY:RTL instantition required. Clock logical cells
+#INFO-MSG==>  Setting dont_use on d04cdc03*
+   because RTL_ONLY:RTL instantition required. Clock divider.
+#INFO-MSG==>  Setting dont_use on d04cgc00*
+   because CTS_ONLY:Gated clock buffers.  CTS uses cgc01
+#INFO-MSG==>  Setting dont_use on d04cgc02*
+   because CTS_ONLY:Gated clock buffers.  CTS uses cgc01
+#INFO-MSG==>  Setting dont_use on d04cgc03*
+   because CTS_ONLY:Gated clock buffers.  CTS uses cgc01
+#INFO-MSG==>  Setting dont_use on d04cgm22*
+   because CTS_ONLY:Gated clock buffers.  CTS uses cgc01
+#INFO-MSG==>  Setting dont_use on d04frt03?d0k0
+   because Retention flop : incorrect embedded well tap causes DRC violation 
+#INFO-MSG==>  Setting dont_use on d04f2*
+   because HIGH_COST:Multi Bit Flop: Need special flow to use it. 
+#INFO-MSG==>  Setting dont_use on d04f4*
+   because HIGH_COST:Multi Bit Flop: Need special flow to use it. 
+#INFO-MSG==>  Setting dont_use on d04qct01*
+   because SPECIAL:Inconsitent direction of lib pins b/w logical and physical library
+#INFO-MSG==>   no 'd04qct01*' cells found in libraries loaded in the design 
+#INFO-MSG==>  Setting dont_use on d04qct00*
+   because SPECIAL:Inconsitent direction of lib pins b/w logical and physical library
+#INFO-MSG==>   no 'd04qct00*' cells found in libraries loaded in the design 
+#INFO-MSG==>  Setting dont_use on d04cab13?d0b5
+   because HIGH_COST:Have implant layers missing, and cause drcd NV*_UV* violations
+#INFO-MSG==>  Setting dont_use on d04cab13?d0c5
+   because HIGH_COST:Have implant layers missing, and cause drcd NV*_UV* violations
+#INFO-MSG==>  Setting dont_use on d04pws10lqtb0 d04pws10lq8b0 d04pws10ld8b0 d04pws00lq8b0 d04pws00ld8b0 d04pws00ld0b0 d04pws10nqtb0 d04pws10nq8b0 d04pws10nd8b0 d04pws00nq8b0 d04pws00nd8b0 d04pws00nd0b0 d04pws10wqtb0 d04pws10wq8b0 d04pws10wd8b0 d04pws00wq8b0 d04pws00wd8b0 d04pws00wd0b0 d04pws10yqtb0 d04pws10yq8b0 d04pws10yd8b0 d04pws00yq8b0 d04pws00yd8b0 d04pws00yd0b0
+   because SPECIAL: Cells with max_capacitance=0 in the lib file
+==>INFORMATION: P_source_if_exists: dont_use.tcl : END Tue Mar 17 00:05:35 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:02:02 hrs : CPU RUNTIME in (hh:mm:ss) : 00:01:48 hrs : MEMORY : 2352188 KB
+
+ CAUTION: Available Disk Space is at 981505920 , Your disk space is approaching full and is less than the default low limits set. Please ensure sufficient diskspace to run complete APR flow on the design.
+
+#INFO-MSG==>    Completed steps 
+#INFO-MSG==>   Starting from first step:  read_design
+

@@ -1,22 +1,24 @@
-__author__ = 'dcart_000'
+__author__ = ''
 
 
 class GetCadenceMetrics:
     @staticmethod
-    def get_cadence_metrics(list_of_files, test_case):
+    def get_cadence_metrics(list_of_files, test_case, tool):
         import os
         from datetime import datetime
         from operator import itemgetter
-        from CadenceSignOffSum import CadenceSignOffSum
-        from CadenceGateCount import CadenceGateCount
-        from CadencePowerReport import CadencePowerRpt
-        from CadenceAprRunLog import CadenceAprRunLog
+
         from CadenceQorReport import CadenceQorReport
-        from CadenceViolations import CadenceViolations
         from CadenceRunTime import CadenceRunTime
         from CadenceStaMaxQor import CadenceStaMaxQor
         from CadenceStaMinQor import CadenceStaMinQor
         from CalibreErrors import CalibreErrors
+        from OtherMetricClass import OtherMetricClass
+        # from CadenceSignOffSum import CadenceSignOffSum
+        # from CadenceGateCount import CadenceGateCount
+        # from CadencePowerReport import CadencePowerRpt
+        # from CadenceAprRunLog import CadenceAprRunLog
+        # from CadenceViolations import CadenceViolations
         metric_names = []
 
         for file in list_of_files:
@@ -30,15 +32,6 @@ class GetCadenceMetrics:
                 elif '.final.qor.rpt' in file:
                     cadence_qor = CadenceQorReport.searchfile(file)
                     metric_names.append(cadence_qor)
-            elif file.endswith('post_route_hold_optDesign.summary'):
-                route_design = CadenceSignOffSum.searchfile(file)
-                metric_names.append(route_design)
-            elif file.endswith('signoff.power.rpt'):
-                pwr_rpt_data = CadencePowerRpt.searchfile(file)
-                metric_names.append(pwr_rpt_data)
-            elif file.endswith('.final.all_violators.rpt'):
-                cadence_violations = CadenceViolations.searchfile(file)
-                metric_names.append(cadence_violations)
             elif file.endswith('sta.max.log'):
                 cadence_runtime = CadenceRunTime.searchfile(file)
                 metric_names.append(cadence_runtime)
@@ -48,15 +41,40 @@ class GetCadenceMetrics:
             elif file.endswith("lvs.report"):
                 calibre_fail_errors = CalibreErrors.searchfile(file)
                 metric_names.append(calibre_fail_errors)
-            elif file.endswith('apr_run.log'):
-                apr_run_log = CadenceAprRunLog.searchfile(file)
-                metric_names.append(apr_run_log)
-            elif file.endswith('block_stats_signoff.rpt'):
-                gate_count = CadenceGateCount.searchfile(file)
-                metric_names.append(gate_count)
+            else:
+                metric_names.append(OtherMetricClass.searchfile(file, tool))
+
+
+
+
+
+
+            # elif file.endswith('post_route_hold_optDesign.summary'):
+            #     route_design = CadenceSignOffSum.searchfile(file)
+            #     metric_names.append(route_design)
+            #     found_route_design = True
+            # elif file.endswith('signoff.power.rpt'):
+            #     pwr_rpt_data = CadencePowerRpt.searchfile(file)
+            #     metric_names.append(pwr_rpt_data)
+            #     found_pwr_data = True
+            # elif file.endswith('.final.all_violators.rpt'):
+            #     cadence_violations = CadenceViolations.searchfile(file)
+            #     metric_names.append(cadence_violations)
+            #     found_viol = True
+
+            # elif file.endswith('apr_run.log'):
+            #     apr_run_log = CadenceAprRunLog.searchfile(file)
+            #     metric_names.append(apr_run_log)
+            #     found_apr_log = True
+            # elif file.endswith('block_stats_signoff.rpt'):
+            #     gate_count = CadenceGateCount.searchfile(file)
+            #     metric_names.append(gate_count)
+            #     found_gate_count = True
+
 
         temp, syn, apr, sta, calibre = [], [], [], [], []
-
+        # print(metric_names)
+        metric_names = filter(None, metric_names)
         # This loop is to arrange the files in the correct order
         for metric in metric_names:
             met = tuple(metric)

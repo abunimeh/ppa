@@ -3,16 +3,19 @@ class findFiles:
     def search_dir(test_case, tool):
         import fnmatch
         import os
+        import json
         from Configurations import Configurations
         #from OtherMetricClass import OtherMetricClass
 
-        # file_names = ['*.fill.qor.rpt', '*.fill.physical.rpt', '*.cts.clock_tree.rpt', 'icc.log', '*.min.qor.rpt',
-        #             '*.inc_compile.qor.rpt' , 'dc.log', '*.link.rpt', '*.max.qor.rpt', '*.run_time.rpt',
-        #             '*.noise.qor.rpt', '*.power.power.rpt', '*.LAYOUT_ERRORS', 'Final_Report.txt',
-        #             'drc_IPall.dp.log', 'denall_reuse.dp.log', 'trclvs.dp.log']
-        file_names = list(Configurations().get_file_endings(tool).split(","))
-        # This line gets rid of empty strings
+
+        # Finds the file name endings
+        with open(r'C:\dev\intel\ppa\genCSV.py\config.json', 'r') as f:
+            json_data = json.load(f)
+            file_names = json_data['file_endings'][tool]
+
+        # This line gets rid of empty strings just in case one is accidently passed
         file_names = list(filter(None, file_names))
+
         print("Current file endings to search for:", file_names)
         # test_case is the argument sent in when the user call the script
         if '--add' in test_case:
@@ -40,24 +43,16 @@ class findFiles:
                     ans = input("Would you like to remove metrics associated with the file ending(Y or N)?")
             exit("Exiting the script")
         matches = []
-        include = test_case, r'syn', r'apr', r'drc_lvs', r'sta',  r'reports', r'logs', r'reports', r'logs', \
-                r'reports_max', r'reports_min', r'denall_reuse', r'drcc', r'gden', r'HV', r'IPall', r'lvs'
+        include = [test_case, 'syn', 'apr', 'drc_lvs', 'sta', 'pv', 'runs', 'reports', 'logs', 'logs', 'reports_max',
+                   'reports_min', 'denall_reuse', 'drcc', 'gden', 'HV', 'IPall', 'lvs', 'max', 'min', 'power', 'noise']
         print("os.walk in",  test_case)
         for root, dirnames, filenames in os.walk(test_case, topdown=True):
             dirnames[:] = [d for d in dirnames if d in include]
             print("ROOT:", root)
             print("DIRNAMES:", dirnames)
-            if "ext" in root:
-                continue
-            if "fill_merge" in root:
-                print("GOOO!")
-                continue
+
             for file in file_names:
-                if ".LAYOUT_ERRORS" in file:
-                    if 'drc_lvs' in root:
-                        for filename in fnmatch.filter(filenames, file):
-                            matches.append(os.path.join(root, filename))
-                elif 'drc.sum' in file:
+                if 'drc.sum' in file:
                     if 'drc_lvs' in root:
                         for filename in fnmatch.filter(filenames, file):
                             matches.append(os.path.join(root, filename))

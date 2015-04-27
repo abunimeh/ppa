@@ -1,10 +1,9 @@
 
 class QorRptData:
-    foundCellCount = ()
+    pass
 
 
 class QorRpt:
-    foundCellCount = ()
 
     @staticmethod
     def metric_naming(file):
@@ -15,9 +14,7 @@ class QorRpt:
         pv_max = re.search(r'.*pv.*max.*', file, re.I)
         pv_min = re.search(r'.*pv.*min.*', file, re.I)
         pv_noise = re.search(r'.*pv.*noise.*', file, re.I)
-        if syn:
-            stage = 'syn'
-        elif apr:
+        if apr:
             stage = 'apr'
         elif pv_max:
             stage = 'pv max tttt'
@@ -25,6 +22,8 @@ class QorRpt:
             stage = 'pv min tttt'
         elif pv_noise:
             stage = 'pv noise tttt'
+        elif syn:
+            stage = 'syn'
         return stage
 
     @staticmethod

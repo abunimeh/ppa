@@ -1,9 +1,9 @@
 class RunTimeRptData:
-    def outdata(self, metric_list):
-        for metrics in metric_list:
-            print(metrics)
+    pass
+
 
 class RunTimeRpt:
+    # metric_naming() finds the stage of the metrics and returns the name
     @staticmethod
     def metric_naming(file):
         import re
@@ -14,20 +14,22 @@ class RunTimeRpt:
         pv_noise = re.search(r'.*pv.*noise.*', file, re.I)
         if pv_max:
             stage = 'pv max tttt'
-        if pv_min:
+        elif pv_min:
             stage = 'pv min tttt'
-        if pv_power:
+        elif pv_power:
             stage = 'pv power tttt'
-        if pv_noise:
+        elif pv_noise:
             stage = 'pv noise tttt'
         return stage
 
+    # replaceSpace() replaces all the blank spaces with underscores
     @staticmethod
     def replaceSpace(metricname):
         import re
         newName = re.sub(r'[\W]+', "_", metricname)
         return newName
 
+    # searchfile() opens the file sent to it and searches for the specified metrics
     @staticmethod
     def searchfile(file):
         import re
@@ -39,14 +41,27 @@ class RunTimeRpt:
         f.close()
         DataItems = []
         rptData = RunTimeRptData()
-        rptData.foundRunTime = [RunTimeRpt.replaceSpace(stage + " run time"), "N/A"]
+        rptData.foundRunTime_max = [RunTimeRpt.replaceSpace("pv max tttt" + " run time"), "N/A"]
+        rptData.foundRunTime_min = [RunTimeRpt.replaceSpace("pv min tttt" + " run time"), "N/A"]
+        rptData.foundRunTime_noise = [RunTimeRpt.replaceSpace("pv noise tttt" + " run time"), "N/A"]
+        rptData.foundRunTime_power = [RunTimeRpt.replaceSpace("pv power tttt" + " run time"), "N/A"]
 
         for line in lines:
             foundRunTime = re.search(r'(Runtime[\s]*of[\s]*Entire[\s]*Timing[\s]*Run)[\s]*=+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
 
             if foundRunTime:
-                rptData.foundRunTime[1] = foundRunTime.group(2)
+                if "pv max tttt" is stage:
+                    rptData.foundRunTime_max[1] = foundRunTime.group(2)
+                elif "pv min tttt" is stage:
+                    rptData.foundRunTime_min[1] = foundRunTime.group(2)
+                elif "pv power tttt" is stage:
+                    rptData.foundRunTime_noise[1] = foundRunTime.group(2)
+                elif "pv noise tttt" is stage:
+                    rptData.foundRunTime_power[1] = foundRunTime.group(2)
 
-        DataItems.append(rptData.foundRunTime)
+        DataItems.append(tuple(rptData.foundRunTime_max))
+        DataItems.append(tuple(rptData.foundRunTime_min))
+        DataItems.append(tuple(rptData.foundRunTime_power))
+        DataItems.append(tuple(rptData.foundRunTime_noise))
 
         return DataItems

@@ -1,4 +1,4 @@
-__author__ = 'dcart_000'
+__author__ = ''
 
 
 class CadenceAprRunLogData:
@@ -6,10 +6,14 @@ class CadenceAprRunLogData:
 
 
 class CadenceAprRunLog:
+    # matchLine() takes the line that the method searchfile() is looking for at the time and the keywords of the regular
+    # expression. The method does the regular expression and returns it.
     @staticmethod
     def mathcLine(line, *args):
         import re
+        # match_words will be the string of args with "[\s]*" replacing " "
         match_words = ""
+        # no_match will be the string of args with no spaces
         no_match = ""
         for arg in args:
             match_words += arg.replace(" ", "[\s]*") + "[\s]*"
@@ -19,12 +23,14 @@ class CadenceAprRunLog:
         result = re.search(line_variables, line, re.I)
         return result
 
+    # replace_space() replaces the empty spaces with underscores
     @staticmethod
     def replace_space(metric_list):
         import re
         new_name = re.sub(r'[\W]+', "_", metric_list)
         return new_name
 
+    # searchfile() takes the file name given to it by
     @staticmethod
     def searchfile(file):
         # Open the file with read only permit

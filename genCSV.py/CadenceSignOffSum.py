@@ -21,6 +21,7 @@ class CadenceSignOffSum:
 
     @staticmethod
     def searchfile(file):
+        print(file)
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines

@@ -1,4 +1,4 @@
-__author__ = 'dcart_000'
+__author__ = ''
 
 
 class CadenceStaMinQorData:

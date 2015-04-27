@@ -2,6 +2,7 @@ class PVTMetricData:
     pass
 
 class PVTMetric:
+    # This class is not part of the configuration
     @staticmethod
     def metric_naming(file):
         import re

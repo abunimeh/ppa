@@ -1,4 +1,4 @@
-__author__ = 'dcart_000'
+__author__ = ''
 
 
 class CadenceQorReportData:
@@ -34,8 +34,8 @@ class CadenceQorReport:
         f.close()
         data_items = []
         qor_rpt_data = CadenceQorReportData()
-        qor_rpt_data.found_syn_reg = [CadenceQorReport.replace_space('syn REG2REG WNS'), "N/A"]
-        qor_rpt_data.found_syn_reg = [CadenceQorReport.replace_space('syn REG2REG TNS'), "N/A"]
+        qor_rpt_data.found_syn_wns = [CadenceQorReport.replace_space('syn REG2REG WNS'), "N/A"]
+        qor_rpt_data.found_syn_tns = [CadenceQorReport.replace_space('syn REG2REG TNS'), "N/A"]
         qor_rpt_data.found_cell_count = [CadenceQorReport.replace_space('syn Cell Count'), "N/A"]
         qor_rpt_data.found_runtime = [CadenceQorReport.replace_space('syn cpu runtime'), "N/A"]
 
@@ -45,15 +45,15 @@ class CadenceQorReport:
             found_runtime = CadenceQorReport.mathcLine(line, 'Runtime')
 
             if found_syn_reg:
-                qor_rpt_data.found_syn_reg[1] = found_syn_reg.group(2)
-                qor_rpt_data.found_syn_reg[1] = found_syn_reg.group(3)
+                qor_rpt_data.found_syn_wns[1] = found_syn_reg.group(2)
+                qor_rpt_data.found_syn_tns[1] = found_syn_reg.group(3)
             elif found_cell_count:
                 qor_rpt_data.found_cell_count[1] = found_cell_count.group(2)
             elif found_runtime:
                 qor_rpt_data.found_runtime[1] = found_runtime.group(2)
 
-        data_items.append(tuple(qor_rpt_data.found_syn_reg))
-        data_items.append(tuple(qor_rpt_data.found_syn_reg))
+        data_items.append(tuple(qor_rpt_data.found_syn_wns))
+        data_items.append(tuple(qor_rpt_data.found_syn_tns))
         data_items.append(tuple(qor_rpt_data.found_cell_count))
         data_items.append(tuple(qor_rpt_data.found_runtime))
 
