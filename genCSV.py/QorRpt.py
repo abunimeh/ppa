@@ -1,12 +1,14 @@
-
+# This class is future a soon slight refactor of the metrics gathering process
 class QorRptData:
     pass
 
 
 class QorRpt:
-
+    # @staticmethod is put before methods when the self variable won't be used in the method
+    # This method is used to find and return the stage(e.g. "syn" or "py") by using the file name that was passed into
+    # the method search_file. The method then uses regular expressions to find and return the stage name.
     @staticmethod
-    def metric_naming(file):
+    def metric_stage_name(file):
         import re
         stage = ""
         syn = re.search(r'.*syn.*', file, re.I)
@@ -26,111 +28,122 @@ class QorRpt:
             stage = 'syn'
         return stage
 
+    # This method is what is used to do the regular expression on the lines of the file. The method simply takes in
+    # the three first arguments as the names for the regular expression and the fourth argument as the line the
+    # regular expression will search.
     @staticmethod
-    def mathcLine(regex1, regex2, regex3, line):
+    def match_line(regex1, regex2, regex3, file_line):
         import re
-        line_variables = r'(%s[\s]*%s[\s]*%s[\s]*):+[\s]*(-*[\d]+[\.]*[\d]*)+.*' % (regex1, regex2, regex3)
-        result = re.search(line_variables, line, re.I)
+        line_variables = r'(%s[\s]*%s[\s]*%s[\s]*):+[\s]*([-\d\.]*)+.*' % (regex1, regex2, regex3)
+        result = re.search(line_variables, file_line, re.I)
         return result
 
+    # This method is used to basically replace the spaces in the given metric name with underscores
     @staticmethod
-    def replaceSpace(metricname):
+    def replace_space(metric_list):
         import re
-        new_name = re.sub(r'[\W]+', "_", metricname)
+        new_name = re.sub(r'[\W]+', "_", metric_list)
         return new_name
 
+    # This method is used to search the given file and retrieve the required metrics out of those files
     @staticmethod
-    def searchfile(file):
+    def search_file(file):
         import re
-        stage = QorRpt.metric_naming(file)
+        stage = QorRpt.metric_stage_name(file)
 
         # Open the file with read only permit
         f = open(file, "r")
-        # The variable "lines" is a list containing all lines
-        lines = f.readlines()
-
-        # look_count is used to search a certain amount after reg2reg
-        look_count = 0
-        reportDataItems = []
-        # close the file after reading the lines.
+        # The variable "file_lines" is a list containing all file_lines
+        file_lines = f.readlines()
+        # Close the file after reading the file_lines.
         f.close()
-        rptData = QorRptData()
-        rptData.foundVersion = [QorRpt.replaceSpace(stage + " tool version"), "N/A"]
-        rptData.foundCritSlack = [QorRpt.replaceSpace(stage + " REG2REG " + "worst setup viol"), "N/A"]
+        # in_section is used to search a certain amount after reg2reg
+        in_section = False
+        metric_list = []
+        rpt_data = QorRptData()
+        rpt_data.found_version = [QorRpt.replace_space(stage + " tool version"), "\t"]
+        rpt_data.found_crit_slack = [QorRpt.replace_space(stage + " REG2REG " + "worst setup viol"), "\t"]
         if 'pv min' in stage:
-            rptData.foundCritSlack[0] = QorRpt.replaceSpace(stage + " REG2REG " + "worst hold viol")
-        rptData.foundWorstHoldVio = [QorRpt.replaceSpace(stage + " REG2REG " + "worst hold violation"), "N/A"]
-        rptData.foundCritPathLength = [QorRpt.replaceSpace(stage + " REG2REG " + "critical path len"), "N/A"]
-        rptData.foundTotNegSlack = [QorRpt.replaceSpace(stage + " REG2REG " + "total neg slack"), "N/A"]
-        rptData.foundTotHoldVio = [QorRpt.replaceSpace(stage + " REG2REG " + "total hold viol"), "N/A"]
-        QorRptData.foundCellCount = [QorRpt.replaceSpace(stage + " Cell Count"), "N/A"]
-        rptData.foundCompileTime = [QorRpt.replaceSpace(stage + " cpu runtime"), "N/A"]
-        rptData.foundMaxTransVi = [QorRpt.replaceSpace(stage + " max trans viols"), "N/A"]
-        rptData.foundMaxCapVi = [QorRpt.replaceSpace(stage + " max cap viols"), "N/A"]
-        rptData.foundMaxFanVi = [QorRpt.replaceSpace(stage + " max fanout viols"), "N/A"]
+            rpt_data.found_crit_slack[0] = QorRpt.replace_space(stage + " REG2REG " + "worst hold viol")
+        rpt_data.found_worst_hold_vio = [QorRpt.replace_space(stage + " REG2REG " + "worst hold violation"), "\t"]
+        rpt_data.found_crit_path_length = [QorRpt.replace_space(stage + " REG2REG " + "critical path len"), "\t"]
+        rpt_data.found_tot_neg_slack = [QorRpt.replace_space(stage + " REG2REG " + "total neg slack"), "\t"]
+        rpt_data.found_tot_hold_vio = [QorRpt.replace_space(stage + " REG2REG " + "total hold viol"), "\t"]
+        rpt_data.found_cell_count = [QorRpt.replace_space(stage + " Cell Count"), "\t"]
+        rpt_data.foundCompileTime = [QorRpt.replace_space(stage + " cpu runtime"), "\t"]
+        rpt_data.foundMaxTransVi = [QorRpt.replace_space(stage + " max trans viols"), "\t"]
+        rpt_data.foundMaxCapVi = [QorRpt.replace_space(stage + " max cap viols"), "\t"]
+        rpt_data.foundMaxFanVi = [QorRpt.replace_space(stage + " max fanout viols"), "\t"]
 
-        for line in lines:
-            rptData.foundRegGroup = re.search(r'.*(REG2REG).*', line, re.I)
-            foundVersion = re.search(r'(Version):[\s]*([\S]*)', line, re.I)
-            if foundVersion:
-                rptData.foundVersion[1] = foundVersion.group(2)
-            elif rptData.foundRegGroup:
+        # Loop through each file_line to find the metrics
+        for file_line in file_lines:
+            found_reg_group = re.search(r'.*(REG2REG).*', file_line, re.I)
+            found_version = re.search(r'(Version):[\s]*([\S]*)', file_line, re.I)
+            if found_version:
+                # Regular expression method 'search' returns the found regular expressions back in groups designated by
+                # the parentheses in the regular expression
+                rpt_data.found_version[1] = found_version.group(2)
+            # If we found the line that contains the word REG2REG then we set 'in_section' to True
+            elif found_reg_group:
                 if 'pv max tttt' in stage:
-                    if 'max_delay/setup' in line:
-                        look_count = 10
+                    if 'max_delay/setup' in file_line:
+                        in_section = True
                 elif 'pv min tttt' in stage:
-                    if 'min_delay/hold' in line:
-                        look_count = 10
+                    if 'min_delay/hold' in file_line:
+                        in_section = True
                 else:
-                    look_count = 10
-            elif look_count != 0 and stage != 'pv noise tttt':
-                foundCritSlack = QorRpt.mathcLine("Critical", "path", "slack", line)
-                foundWorstHoldVio = QorRpt.mathcLine("Worst", "hold", "violation", line)
-                foundCritPathLength = QorRpt.mathcLine("critical", "path", "length", line)
-                foundTotNegSlack = QorRpt.mathcLine("total", "Negative", "slack", line)
-                foundTotHoldVio = QorRpt.mathcLine("total", "hold", "violation", line)
-                found_new_section = re.search(r'.*Timing[\s]*Path[\s]*Group.*', line, re.I)
+                    in_section = True
+            # If 'in_section' is true and the stage is not 'pv noise tttt' then search for the certain metrics that are
+            # found in that section
+            elif in_section and stage != 'pv noise tttt':
+                found_crit_slack = QorRpt.match_line("Critical", "path", "slack", file_line)
+                found_worst_hold_vio = QorRpt.match_line("Worst", "hold", "violation", file_line)
+                found_crit_path_length = QorRpt.match_line("critical", "path", "length", file_line)
+                found_tot_neg_slack = QorRpt.match_line("total", "Negative", "slack", file_line)
+                found_tot_hold_vio = QorRpt.match_line("total", "hold", "violation", file_line)
+                found_new_section = re.search(r'.*Timing[\s]*Path[\s]*Group.*', file_line, re.I)
 
-                if foundCritSlack:
-                    rptData.foundCritSlack[1] = foundCritSlack.group(2)
-                elif foundWorstHoldVio:
-                    rptData.foundWorstHoldVio[1] = foundWorstHoldVio.group(2)
-                elif foundCritPathLength:
-                    rptData.foundCritPathLength[1] = foundCritPathLength.group(2)
-                elif foundTotNegSlack:
-                    rptData.foundTotNegSlack[1] = foundTotNegSlack.group(2)
-                elif foundTotHoldVio:
-                    rptData.foundTotHoldVio[1] = foundTotHoldVio.group(2)
+                if found_crit_slack:
+                    rpt_data.found_crit_slack[1] = found_crit_slack.group(2)
+                elif found_worst_hold_vio:
+                    rpt_data.found_worst_hold_vio[1] = found_worst_hold_vio.group(2)
+                elif found_crit_path_length:
+                    rpt_data.found_crit_path_length[1] = found_crit_path_length.group(2)
+                elif found_tot_neg_slack:
+                    rpt_data.found_tot_neg_slack[1] = found_tot_neg_slack.group(2)
+                elif found_tot_hold_vio:
+                    rpt_data.found_tot_hold_vio[1] = found_tot_hold_vio.group(2)
                 elif found_new_section:
-                    look_count = 0
+                    in_section = False
 
-            foundCellCount = QorRpt.mathcLine("Leaf", "Cell", "Count", line)
-            foundCompileTime = QorRpt.mathcLine("Overall", "Compile", "Time", line)
-            foundMaxTransVi = QorRpt.mathcLine("Max", "trans", "Violations", line)
-            foundMaxCapVi = QorRpt.mathcLine("Max", "Cap", "Violations", line)
-            foundMaxFanVi = QorRpt.mathcLine("Max", "Fanout", "Violations", line)
+            found_cell_count = QorRpt.match_line("Leaf", "Cell", "Count", file_line)
+            found_compile_time = QorRpt.match_line("Overall", "Compile", "Time", file_line)
+            found_max_trans_vi = QorRpt.match_line("Max", "trans", "Violations", file_line)
+            found_max_cap_vi = QorRpt.match_line("Max", "Cap", "Violations", file_line)
+            found_max_fan_vi = QorRpt.match_line("Max", "Fanout", "Violations", file_line)
 
-            if foundCellCount:
-                rptData.foundCellCount[1] = foundCellCount.group(2)
-            elif foundCompileTime:
-                rptData.foundCompileTime[1] = foundCompileTime.group(2)
-            elif foundMaxTransVi:
-                rptData.foundMaxTransVi[1] = foundMaxTransVi.group(2)
-            elif foundMaxCapVi:
-                rptData.foundMaxCapVi[1] = foundMaxCapVi.group(2)
-            elif foundMaxFanVi:
-                rptData.foundMaxFanVi[1] = foundMaxFanVi.group(2)
+            if found_cell_count:
+                rpt_data.found_cell_count[1] = found_cell_count.group(2)
+            elif found_compile_time:
+                rpt_data.foundCompileTime[1] = found_compile_time.group(2)
+            elif found_max_trans_vi:
+                rpt_data.foundMaxTransVi[1] = found_max_trans_vi.group(2)
+            elif found_max_cap_vi:
+                rpt_data.foundMaxCapVi[1] = found_max_cap_vi.group(2)
+            elif found_max_fan_vi:
+                rpt_data.foundMaxFanVi[1] = found_max_fan_vi.group(2)
 
-        reportDataItems.append(tuple(rptData.foundVersion))
-        reportDataItems.append(tuple(rptData.foundCritSlack))
-        reportDataItems.append(tuple(rptData.foundWorstHoldVio))
-        reportDataItems.append(tuple(rptData.foundCritPathLength))
-        reportDataItems.append(tuple(rptData.foundTotNegSlack))
-        reportDataItems.append(tuple(rptData.foundTotHoldVio))
-        reportDataItems.append(tuple(rptData.foundCellCount))
-        reportDataItems.append(tuple(rptData.foundCompileTime))
-        reportDataItems.append(tuple(rptData.foundMaxTransVi))
-        reportDataItems.append(tuple(rptData.foundMaxCapVi))
-        reportDataItems.append(tuple(rptData.foundMaxFanVi))
+        # Append the metrics that we found to the metric_list
+        metric_list.append(tuple(rpt_data.found_version))
+        metric_list.append(tuple(rpt_data.found_crit_slack))
+        metric_list.append(tuple(rpt_data.found_worst_hold_vio))
+        metric_list.append(tuple(rpt_data.found_crit_path_length))
+        metric_list.append(tuple(rpt_data.found_tot_neg_slack))
+        metric_list.append(tuple(rpt_data.found_tot_hold_vio))
+        metric_list.append(tuple(rpt_data.found_cell_count))
+        metric_list.append(tuple(rpt_data.foundCompileTime))
+        metric_list.append(tuple(rpt_data.foundMaxTransVi))
+        metric_list.append(tuple(rpt_data.foundMaxCapVi))
+        metric_list.append(tuple(rpt_data.foundMaxFanVi))
 
-        return reportDataItems
+        return metric_list

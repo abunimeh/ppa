@@ -4,104 +4,67 @@ __author__ = ''
 class GetSynopsysMetrics:
     @staticmethod
     def get_synopsys_metrics(list_of_files, test_case, tool):
-        import os
-        from datetime import datetime
-        from operator import itemgetter
+
+        from OrganizeMetrics import OrganizeFoundMetrics
         from PVTmetric import PVTMetric
         from Drc_Errors import DRCError
         from dpLog import dpLog
         from TotalDrcErrors import TotalDrcErrors
         from OtherMetricClass import OtherMetricClass
-        # from FinalRpt import FinalRpt
-        # from PhysicalRpt import PhysicalRpt
+        from FinalRpt import FinalRpt
+        from PhysicalRpt import PhysicalRpt
+        from ClockTreeRpt import clockTreeRpt
         # from RunTimeRpt import RunTimeRpt
         # from QorRpt import QorRpt
-        # from clockTree import clockTreeRpt
         # from PvPower import PvPower
-        metricNames = []
-        found_tool_version = 0
+
+        # metric_collections contains the multiple list that are returned from the methods in the loop below
+        metric_collections = []
+        # Loop through the list of files given from main
         for file in list_of_files:
-
+            print("### Parsing:", file)
             if file.endswith('dc.log'):
-                pvtmetrics = PVTMetric.searchfile(file)
-                metricNames.append(pvtmetrics)
+                pvt_metrics = PVTMetric.search_file(file)
+                metric_collections.append(pvt_metrics)
             elif file.endswith('icc.log'):
-                pvtmetrics = PVTMetric.searchfile(file)
-                metricNames.append(pvtmetrics)
+                pvt_metrics = PVTMetric.search_file(file)
+                metric_collections.append(pvt_metrics)
             elif file.endswith('link.rpt'):
-                pvtmetrics = PVTMetric.searchfile(file)
-                metricNames.append(pvtmetrics)
+                pvt_metrics = PVTMetric.search_file(file)
+                metric_collections.append(pvt_metrics)
             elif file.endswith('.dp.log'):
-                dplog = dpLog.searchfile(file)
-                metricNames.append(dplog)
-
+                dp_log = dpLog.search_file(file)
+                metric_collections.append(dp_log)
             elif file.endswith('LAYOUT_ERRORS'):
-                if found_tool_version == 0:
-                    layout_er = DRCError.searchfile(file)
-                    for i in range(len(layout_er)):
-                        if "drc_tool_version" in layout_er[i]:
-                            found_tool_version = 1
-                    metricNames.append(layout_er)
+                layout_er = DRCError.search_file(file, metric_collections)
+                metric_collections.append(layout_er)
+            elif file.endswith('Final_Report.txt'):
+                final_rpt = FinalRpt.search_file(file)
+                metric_collections.append(final_rpt)
+            elif file.endswith('fill.physical.rpt'):
+                physical_rpt = PhysicalRpt.search_file(file)
+                metric_collections.append(physical_rpt)
+            elif file.endswith(".cts.clock_tree.rpt"):
+                clock_tree_data = clockTreeRpt.search_file(file)
+                metric_collections.append(clock_tree_data)
             else:
-                metricNames.append(OtherMetricClass.searchfile(file, tool))
-            # uncomment the code below if we want to search for metrics with hard coded classes
-            # elif file.endswith('fill.physical.rpt'):
-            #     physicalrpt = PhysicalRpt.searchfile(file)
-            #     metricNames.append(physicalrpt)
-            # elif file.endswith('Final_Report.txt'):
-            #     finalrpt = FinalRpt.searchfile(file)
-            #     metricNames.append(finalrpt)
+                metric_collections.append(OtherMetricClass.search_file(file, tool))
+
+            # uncomment the code below if we want to search for temp_metric_collection with hard coded classes
             # elif file.endswith('run_time.rpt'):
-            #     runtimerpt = RunTimeRpt.searchfile(file)
-            #     metricNames.append(runtimerpt)
+            #     runtimerpt = RunTimeRpt.search_file(file)
+            #     metric_collections.append(runtimerpt)
             # if file.endswith('.qor.rpt'):
-            #     qrpt = QorRpt.searchfile(file)
-            #     metricNames.append(qrpt)
+            #     qrpt = QorRpt.search_file(file)
+            #     metric_collections.append(qrpt)
             # elif file.endswith('power.power.rpt'):
-            #     ppower = PvPower.searchfile(file)
-            #     metricNames.append(ppower)
+            #     ppower = PvPower.search_file(file)
+            #     metric_collections.append(ppower)
 
-        total_drc_errors = TotalDrcErrors.get_total_count(metricNames)
-        metricNames.append([("drc_total_viols", total_drc_errors)])
+        # Now that we have the list of metrics from all the files we can do use the TotalDrcErrors class to get the
+        # total number of drc errors
+        total_drc_errors = TotalDrcErrors.get_total_count(metric_collections)
+        metric_collections.append([("drc_total_viols", total_drc_errors)])
+        temp_metric_collections = OrganizeFoundMetrics.add_missing_metrics(metric_collections, test_case, tool)
 
-
-        temp, syn, apr, drc, pv_max, pv_min, pv_power, pv_noise = [], [], [], [], [], [], [], []
-
-        # This loop is to arrange the files in the correct order
-        i = 0
-        for metric in metricNames:
-            met = tuple(metric)
-            i += 1
-            for name in range(len(met)):
-                if "syn" in met[name][0]:
-                    syn.append(met[name])
-                    continue
-                elif "apr" in met[name][0]:
-                    apr.append(met[name])
-                    continue
-                elif "drc" in met[name][0]:
-                    drc.append(met[name])
-                    continue
-                elif "pv_max" in met[name][0]:
-                    pv_max.append(met[name])
-                    continue
-                elif "pv_min" in met[name][0]:
-                    pv_min.append((met[name]))
-                    continue
-                elif "pv_power" in met[name][0]:
-                    pv_power.append((met[name]))
-                    continue
-                elif "pv_noise" in met[name][0]:
-                    pv_noise.append((met[name]))
-                    continue
-        print(i)
-        tool_metric = [("Tool", "synopsys")]
-        test_case_metric = [("Testcase_Name", os.path.basename(test_case))]
-        date_metric = [("DateTime", str(datetime.now()))]
-
-        temp = [test_case_metric, date_metric, tool_metric, tuple(sorted(syn, key=itemgetter(0))),
-                tuple(sorted(apr, key=itemgetter(0))), tuple(sorted(drc, key=itemgetter(0))),
-                tuple(sorted(pv_max, key=itemgetter(0))), tuple(sorted(pv_min, key=itemgetter(0))),
-                tuple(sorted(pv_power, key=itemgetter(0))), tuple(sorted(pv_noise, key=itemgetter(0)))]
-
-        return temp
+        return temp_metric_collections

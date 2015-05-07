@@ -13,7 +13,7 @@ class CadenceQorReport:
         no_match = ""
         for arg in args:
             match_words += arg.replace(" ", "[\s]*") + "[\s]*"
-        line_variables = '^(%s)[^\d]*([-\d\.:]+)[\s]*([-\d\.:]*).*' % match_words
+        line_variables = '^(%s)[\s]*([-\d\.:]+)[\s]*([-\d\.:]*).*' % match_words
         result = re.search(line_variables, line, re.I)
         return result
 
@@ -24,7 +24,7 @@ class CadenceQorReport:
         return new_name
 
     @staticmethod
-    def searchfile(file):
+    def search_file(file):
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines

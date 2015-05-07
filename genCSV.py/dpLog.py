@@ -5,9 +5,9 @@ class dpLog:
     def metric_naming(file):
         import re
         stage = ""
-        denall = re.search(r'.*denall.*', file, re.I)
-        ipall = re.search(r'.*drcd.*', file, re.I)
-        drcd = re.search(r'.*ipall.*', file, re.I)
+        denall = re.search(r'.*denall_reuse.*', file, re.I)
+        drcd = re.search(r'.*drcd.*', file, re.I)
+        ipall = re.search(r'.*ipall.*', file, re.I)
         trclvs = re.search(r'.*trclvs.*', file, re.I)
         if denall:
             stage = 'drc denall reuse'
@@ -26,7 +26,7 @@ class dpLog:
         return newName
 
     @staticmethod
-    def searchfile(file):
+    def search_file(file):
         import re
         foundFlag = 0
         DataItems = []
@@ -36,22 +36,22 @@ class dpLog:
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()
+        i = 0
         dpData = dpLogData()
         dpData.foundPeakMem = [dpLog.replaceSpace(stage + " Peak Memory"), "N/A"]
         dpData.foundRuntime = [dpLog.replaceSpace(stage + " Runtime"), "N/A"]
-
         # reversed in order to find the last value in the file
         for line in reversed(lines):
-            foundPeakMem = re.search(r':+[\s]*(Peak)[\s]*=+[\s]*([\d]+[\.]*[\d]*[\s]*\(mb\)+)+', line, re.I)
+            foundPeakMem = re.search(r'.*:[\s]*(Peak)[\s]*=[\s]*([\d]*[\s]*\(mb\))', line, re.I)
             foundRuntime = re.search(r'(Overall[\s]*engine[\s]*time)[\s]*=+[\s]*([\d]*:*[\d]*:*[\d]+)+', line, re.I)
 
-            if foundPeakMem and foundFlag != 1:
+            if foundPeakMem:
                 dpData.foundPeakMem[1] = foundPeakMem.group(2)
-                foundFlag = 1
+                DataItems.append(tuple(dpData.foundPeakMem))
             elif foundRuntime:
                 dpData.foundRuntime[1] = foundRuntime.group(2)
-
-        DataItems.append(tuple(dpData.foundRuntime))
-        DataItems.append(tuple(dpData.foundPeakMem))
+                DataItems.append(tuple(dpData.foundRuntime))
+            if len(DataItems) == 2:
+                break
 
         return DataItems

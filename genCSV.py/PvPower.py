@@ -15,7 +15,7 @@ class PvPower:
         return newName
 
     @staticmethod
-    def searchfile(file):
+    def search_file(file):
         DataItems = []
         # Open the file with read only permit
         f = open(file, "r")

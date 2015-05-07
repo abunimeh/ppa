@@ -84,18 +84,17 @@ class OtherMetricClass:
         return stage
 
     @staticmethod
-    def searchfile(file, tool):
-        reg_ex_list = []
+    def search_file(file, tool):
         ending = ""
         import json
-        with open(r'C:\dev\intel\ppa\genCSV.py\config.json', 'r') as f:
+        with open(r'config.json', 'r') as f:
             json_data = json.load(f)
             # gets the line_keywords from the JSON file
             list_of_files = json_data['line_keywords'][tool]
 
         for metric_objects in list_of_files:
             if file.endswith(metric_objects):
-                # ending contains
+                # ending contains the dictionary of variables for a given file type (e.g. fill.qor.rpt)
                 ending = metric_objects
                 break
         if ending is not "":
@@ -120,27 +119,24 @@ class OtherMetricClass:
                         elif metric_object_name["stage"] == 3:
                             met_name = OtherMetricClass.metric_naming_3(file) + metric_object_name["metric_name"]
                         met_value = OtherMetricClass.mathcLine(metric_object_name["metric_reg_exp"], line)
-                        # it = metric_object_name["metric_reg_exp"]
-                        # if it not in reg_ex_list:
-                        #             reg_ex_list.append(metric_object_name["metric_reg_exp"])
                         if met_value:
                             if met_value.group(2) == '':
                                 metric = met_name, 0
                             else:
-                                metric = met_name, met_value.group(2)
+                                if "add_to_value" in metric_object_name:
+                                    metric = met_name, met_value.group(2)+metric_object_name["add_to_value"]
+                                else:
+                                    metric = met_name, met_value.group(2)
                             data_items.append(metric)
                     else:
-                        it = metric_object_name["metric_name"]
-                        if it not in reg_ex_list:
-                            reg_ex_list.append(metric_object_name["metric_name"])
                         if last_line != line:
                             beginning_line = OtherMetricClass.mathcLine(metric_object_name["found_section_reg_exp"]["begin_line"], line)
-                            ending_line = OtherMetricClass.mathcLine(metric_object_name["found_section_reg_exp"]["end_line"], line)
                             if beginning_line:
-                                section = 1
-                                last_line = line
-                        if last_line != line and section == 1:
-                            # if section == 1:
+                                if last_line != line:
+                                    section = 1
+                                continue
+                            ending_line = OtherMetricClass.mathcLine(metric_object_name["found_section_reg_exp"]["end_line"], line)
+                        if section == 1:
                             if metric_object_name["stage"] == "none":
                                 met_name = metric_object_name["metric_name"]
                             elif metric_object_name["stage"] == 1:
@@ -159,7 +155,6 @@ class OtherMetricClass:
                             if ending_line:
                                 section = 0
                         last_line = line
-        for ex in reg_ex_list:
-            print(ex)
+
         return data_items
 

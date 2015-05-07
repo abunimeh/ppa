@@ -21,7 +21,7 @@ class CadenceGateCount:
         return new_name
 
     @staticmethod
-    def searchfile(file):
+    def search_file(file):
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
@@ -33,7 +33,7 @@ class CadenceGateCount:
         gate_count = CadenceGateCountData()
 
         gate_count.found_cell_count = [CadenceGateCount.replace_space('apr Cell Count'), "N/A"]
-        gate_count.found_utilization = [CadenceGateCount.replace_space('apr Utilization'), "N/A"]
+        gate_count.found_utilization = [CadenceGateCount.replace_space('apr utilization'), "N/A"]
 
         for line in lines:
             found_cell_count = CadenceGateCount.mathcLine('Inst count', line)

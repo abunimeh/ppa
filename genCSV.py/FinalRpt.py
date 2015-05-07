@@ -26,7 +26,7 @@ class FinalRpt:
         return newName
 
     @staticmethod
-    def searchfile(file):
+    def search_file(file):
         import re
         DataItems = []
         stage = FinalRpt.metric_naming(file)
@@ -37,6 +37,7 @@ class FinalRpt:
         f.close()
         rptData = FinalRptData()
         rptData.foundNumOfActuEr = [FinalRpt.replaceSpace(stage), "N/A"]
+        print("FINRPT", file)
         for line in lines:
             foundNumOfActuEr = re.search(r'(The[\s]*number[\s]*of[\s]*actual[\s]*errors)[\s]*:+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
             if foundNumOfActuEr:

@@ -9,26 +9,27 @@ class PVTMetric:
         stage = ""
         syn = re.search(r'.*syn.*', file, re.I)
         apr = re.search(r'.*apr.*', file, re.I)
-        pv_max = re.search(r'.*pv.*max.*', file, re.I)
-        pv_min = re.search(r'.*pv.*min.*', file, re.I)
-        pv_noise = re.search(r'.*pv.*noise.*', file, re.I)
-        pv_power = re.search(r'.*pv.*power.*', file, re.I)
-        if syn:
-            stage = 'syn'
+        pv_max = re.search(r'.*pv.*max.*|.*sta.*max.*', file, re.I)
+        pv_min = re.search(r'.*pv.*min.*|.*sta.*min.*', file, re.I)
+        pv_power = re.search(r'.*pv.*power.*|.*sta.*power.*', file, re.I)
+        pv_noise = re.search(r'.*pv.*noise.*|.*sta.*noise.*', file, re.I)
+
         if apr:
             stage = 'apr'
-        if pv_max:
+        elif pv_max:
             stage = 'pv_max'
-        if pv_min:
+        elif pv_min:
             stage = 'pv_min'
-        if pv_noise:
+        elif pv_noise:
             stage = 'pv_noise'
-        if pv_power:
+        elif pv_power:
             stage = 'pv_power'
+        elif syn:
+            stage = 'syn'
         return stage
 
     @staticmethod
-    def searchfile(file):
+    def search_file(file):
         import re
         stage = PVTMetric.metric_naming(file)
         # Open the file with read only permit
@@ -41,8 +42,6 @@ class PVTMetric:
         value_sum = ""
         value = 0
         pvtdata = PVTMetricData()
-        pvtdata.foundDBfile = [(stage + "_pvt"), "N/A"]
-
         for line in lines:
             found_db_file = re.search(r'(Loading[\s]*db[\s]*file).*/[\w]*_[\w]*_[\w]*_([rx\d]+[\w]+_[\w]+_[\d\.]+v_[-]*[\d]+c_[\w]+)', line, re.I)
             if found_db_file:
@@ -52,8 +51,8 @@ class PVTMetric:
         for values in foundValue:
             value_sum += (values+" ")
         if value:
-            pvtdata.foundDBfile[1] = value_sum
+            pvtdata.found_db_file = (stage + "_pvt"), value_sum
+            DataItems.append(pvtdata.found_db_file)
 
-        DataItems.append(pvtdata.foundDBfile)
 
         return DataItems

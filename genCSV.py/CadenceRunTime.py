@@ -24,7 +24,7 @@ class CadenceRunTime:
         return new_name
 
     @staticmethod
-    def searchfile(file):
+    def search_file(file):
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines

@@ -6,7 +6,7 @@ class CadenceAprRunLogData:
 
 
 class CadenceAprRunLog:
-    # matchLine() takes the line that the method searchfile() is looking for at the time and the keywords of the regular
+    # matchLine() takes the line that the method search_file() is looking for at the time and the keywords of the regular
     # expression. The method does the regular expression and returns it.
     @staticmethod
     def mathcLine(line, *args):
@@ -30,9 +30,9 @@ class CadenceAprRunLog:
         new_name = re.sub(r'[\W]+', "_", metric_list)
         return new_name
 
-    # searchfile() takes the file name given to it by
+    # search_file() takes the file name given to it by
     @staticmethod
-    def searchfile(file):
+    def search_file(file):
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
@@ -43,20 +43,19 @@ class CadenceAprRunLog:
         data_items = []
         found_drc_violations = False
         run_log_data = CadenceAprRunLogData()
-
+        i = 0
         run_log_data.found_drc_vio = [CadenceAprRunLog.replace_space('apr DRC Violations'), "N/A"]
         run_log_data.found_run_time = [CadenceAprRunLog.replace_space('apr Run Time'), "N/A"]
         for line in reversed(lines):
-            if found_drc_violations:
-                break
             found_drc_vio = CadenceAprRunLog.mathcLine(line, 'Total number of DRC violations')
             found_run_time = CadenceAprRunLog.mathcLine(line, 'Ending "Encounter" (totcpu=')
             if found_drc_vio:
                 run_log_data.found_drc_vio[1] = found_drc_vio.group(2)
-                found_drc_violations = True
+                data_items.append(tuple(run_log_data.found_drc_vio))
             elif found_run_time:
                 run_log_data.found_run_time[1] = found_run_time.group(2)
+                data_items.append(tuple(run_log_data.found_run_time))
+            if len(data_items) == 2:
+                break
 
-        data_items.append(tuple(run_log_data.found_drc_vio))
-        data_items.append(tuple(run_log_data.found_run_time))
         return data_items

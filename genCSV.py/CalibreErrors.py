@@ -39,7 +39,7 @@ class CalibreErrors:
         return new_name
 
     @staticmethod
-    def searchfile(file):
+    def search_file(file):
         import re
         # Open the file with read only permit
         f = open(file, "r")

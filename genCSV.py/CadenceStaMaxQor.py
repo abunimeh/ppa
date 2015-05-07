@@ -21,7 +21,7 @@ class CadenceStaMaxQor:
         return new_name
 
     @staticmethod
-    def searchfile(file):
+    def search_file(file):
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
@@ -31,11 +31,6 @@ class CadenceStaMaxQor:
         data_items = []
         found_section = False
         sta_max_qor_data = CadenceStaMaxQorData()
-        sta_max_qor_data.found_crit_path = [CadenceStaMaxQor.replace_space('sta max tttt REG2REG worst setup viols'), "N/A"]
-        sta_max_qor_data.found_total_neg_slack = [CadenceStaMaxQor.replace_space('sta max tttt REG2REG TNS'), "N/A"]
-        sta_max_qor_data.found_cell_count = [CadenceStaMaxQor.replace_space('sta Cell Count'), "N/A"]
-        sta_max_qor_data.found_max_trans_count = [CadenceStaMaxQor.replace_space('sta max trans viols'), "N/A"]
-        sta_max_qor_data.found_max_cap_count = [CadenceStaMaxQor.replace_space('sta max cap viols'), "N/A"]
 
         for line in lines:
             found_reg2reg_section = CadenceStaMaxQor.mathcLine(line, "Timing Path Group 'REG2REG' \(max_delay\/setup\)")
@@ -50,22 +45,21 @@ class CadenceStaMaxQor:
                 found_section = True
             elif found_section:
                 if found_crit_path:
-                    sta_max_qor_data.found_crit_path[1] = found_crit_path.group(2)
+                    sta_max_qor_data.found_crit_path = CadenceStaMaxQor.replace_space('sta max tttt REG2REG worst setup viols'), found_crit_path.group(2)
+                    data_items.append(sta_max_qor_data.found_crit_path)
                 elif found_total_neg_slack:
-                    sta_max_qor_data.found_total_neg_slack[1] = found_total_neg_slack.group(2)
+                    sta_max_qor_data.found_total_neg_slack = CadenceStaMaxQor.replace_space('sta max tttt REG2REG TNS'), found_total_neg_slack.group(2)
+                    data_items.append(sta_max_qor_data.found_total_neg_slack)
                 elif found_next_section:
                     found_section = False
             elif found_cell_count:
-                sta_max_qor_data.found_cell_count[1] = found_cell_count.group(2)
+                sta_max_qor_data.found_cell_count = CadenceStaMaxQor.replace_space('sta Cell Count'), found_cell_count.group(2)
+                data_items.append(sta_max_qor_data.found_cell_count)
             elif found_max_trans_count:
-                sta_max_qor_data.found_max_trans_count[1] = found_max_trans_count.group(2)
+                sta_max_qor_data.found_max_trans_count = CadenceStaMaxQor.replace_space('sta max trans viols'), found_max_trans_count.group(2)
+                data_items.append(sta_max_qor_data.found_max_trans_count)
             elif found_max_cap_count:
-                sta_max_qor_data.found_max_cap_count[1] = found_max_cap_count.group(2)
-
-        data_items.append(tuple(sta_max_qor_data.found_crit_path))
-        data_items.append(tuple(sta_max_qor_data.found_total_neg_slack))
-        data_items.append(tuple(sta_max_qor_data.found_cell_count))
-        data_items.append(tuple(sta_max_qor_data.found_max_trans_count))
-        data_items.append(tuple(sta_max_qor_data.found_max_cap_count))
+                sta_max_qor_data.found_max_cap_count = CadenceStaMaxQor.replace_space('sta max cap viols'), found_max_cap_count.group(2)
+                data_items.append(sta_max_qor_data.found_max_cap_count)
 
         return data_items

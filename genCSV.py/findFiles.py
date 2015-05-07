@@ -9,7 +9,7 @@ class findFiles:
 
 
         # Finds the file name endings
-        with open(r'C:\dev\intel\ppa\genCSV.py\config.json', 'r') as f:
+        with open(r'config.json', 'r') as f:
             json_data = json.load(f)
             file_names = json_data['file_endings'][tool]
 
@@ -20,7 +20,7 @@ class findFiles:
         # test_case is the argument sent in when the user call the script
         if '--add' in test_case:
             file_ending = findFiles.add_file_ending(file_names)
-            ans = input("Would you like to add metrics associated with the new file ending(Y or N)?")
+            ans = input("Would you like to add temp_metric_collection associated with the new file ending(Y or N)?")
             while ans != "Y" or ans != "N":
                 if ans == "Y":
                     #OtherMetricClass.search_file(file_ending)
@@ -28,11 +28,11 @@ class findFiles:
                 elif ans == "N":
                     exit("Exiting the script")
                 else:
-                    ans = input("Would you like to add metrics associated with the new file ending(Y or N)?")
+                    ans = input("Would you like to add temp_metric_collection associated with the new file ending(Y or N)?")
             exit("Exiting the script")
         elif '--remove' in test_case:
             file_ending = findFiles.remove_file_ending(file_names)
-            ans = input("Would you like to remove the metrics searched associated with the new file ending(Y or N)?")
+            ans = input("Would you like to remove the temp_metric_collection searched associated with the new file ending(Y or N)?")
             while ans != "Y" or ans != "N":
                 if ans == "Y":
                     #OtherMetricClass.search_file(file_ending)
@@ -40,25 +40,36 @@ class findFiles:
                 elif ans == "N":
                     exit("Exiting the script")
                 else:
-                    ans = input("Would you like to remove metrics associated with the file ending(Y or N)?")
+                    ans = input("Would you like to remove temp_metric_collection associated with the file ending(Y or N)?")
             exit("Exiting the script")
         matches = []
         include = [test_case, 'syn', 'apr', 'drc_lvs', 'sta', 'pv', 'runs', 'reports', 'logs', 'logs', 'reports_max',
-                   'reports_min', 'denall_reuse', 'drcc', 'gden', 'HV', 'IPall', 'lvs', 'max', 'min', 'power', 'noise']
+                   'reports_min', 'denall_reuse', 'drcc', 'gden', 'HV', 'drc_IPall', 'lvs', 'max', 'min', 'power',
+                   'noise', 'drcd', 'trclvs']
         print("os.walk in",  test_case)
         for root, dirnames, filenames in os.walk(test_case, topdown=True):
             dirnames[:] = [d for d in dirnames if d in include]
-            print("ROOT:", root)
-            print("DIRNAMES:", dirnames)
+            # Because the files we are searching for in the drc_lvs directory does not follow the patterns that the rest of the files do we have to do the following
+            if "drcd" in root or "denall_reuse" in root or "drc_IPall" in root or "trclvs" in root:
+                for root_name, directory_names, files in os.walk(root):
+                    for file_endings in file_names:
+                        for drcd_file in fnmatch.filter(files, file_endings):
+                            matches.append(os.path.join(root_name, drcd_file))
 
-            for file in file_names:
-                if 'drc.sum' in file:
-                    if 'drc_lvs' in root:
+            else:
+                for file in file_names:
+                    if 'drc.sum' in file:
+                        if 'drc_lvs' in root:
+                            for filename in fnmatch.filter(filenames, file):
+                                matches.append(os.path.join(root, filename))
+                    elif '*.link.rpt' in file:
+                        if 'pv' in root or 'sta' in root:
+                            for filename in fnmatch.filter(filenames, file):
+                                matches.append(os.path.join(root, filename))
+                    else:
                         for filename in fnmatch.filter(filenames, file):
                             matches.append(os.path.join(root, filename))
-                else:
-                    for filename in fnmatch.filter(filenames, file):
-                        matches.append(os.path.join(root, filename))
+
         print("Files to be searched:")
         for file in matches:
             print(file)

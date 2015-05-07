@@ -28,15 +28,45 @@
             "Final_Report.txt",
             "drc_IPall.dp.log",
             "denall_reuse.dp.log",
-            "trclvs.dp.log"
+            "trclvs.dp.log",
+            "drcd.dp.log"
         ]
     },
+    "default_list_of_metrics":[
+          "Apr_Shorts", "Apr_Memory", "syn_Cell_Count", "Testcase_Name",
+          "DateTime", "Tool", "syn_Cell_Count", "syn_REG2REG_critical_path_len", "syn_REG2REG_total_hold_viol",
+          "syn_REG2REG_total_neg_slack", "syn_REG2REG_worst_hold_violation", "syn_REG2REG_worst_setup_viol",
+          "syn_cpu_runtime", "syn_max_cap_viols", "syn_max_fanout_viols", "syn_max_trans_viols", "syn_pvt",
+          "syn_tool_version", "apr_Cell_Count", "apr_DRC", "apr_Memory", "apr_REG2REG_critical_path_len",
+          "apr_REG2REG_total_hold_viol", "apr_REG2REG_total_neg_slack", "apr_REG2REG_worst_hold_violation",
+          "apr_REG2REG_worst_setup_viol", "apr_Shorts", "apr_cpu_runtime", "apr_cts_max_global_skew",
+          "apr_max_cap_viols", "apr_max_fanout_viols", "apr_max_trans_viols", "apr_pvt", "apr_tool_version",
+          "apr_utilization", "drc_IPall", "drc_IPall_Peak_Memory", "drc_IPall_Runtime", "drc_denall",
+          "drc_denall_reuse_Peak_Memory", "drc_denall_reuse_Runtime", "drc_drcd", "drc_drcd_Peak_Memory",
+          "drc_drcd_Runtime", "drc_tool_version", "drc_total_viols", "drc_trclvs", "drc_trclvs_Peak_Memory",
+          "drc_trclvs_Runtime", "pv_max_pvt", "pv_max_tttt_Cell_Count", "pv_max_tttt_REG2REG_critical_path_len",
+          "pv_max_tttt_REG2REG_total_neg_slack", "pv_max_tttt_REG2REG_worst_setup_viol", "pv_max_tttt_run_time",
+          "pv_max_tttt_tool_version", "pv_min_pvt", "pv_min_tttt_Cell_Count",
+          "pv_min_tttt_REG2REG_critical_path_len", "pv_min_tttt_REG2REG_total_neg_slack",
+          "pv_min_tttt_REG2REG_worst_setup_viol", "pv_min_tttt_run_time", "pv_min_tttt_tool_version",
+          "pv_power_pvt", "pv_power_tttt_internal", "pv_power_tttt_leakage", "pv_power_tttt_run_time",
+          "pv_power_tttt_switch", "pv_power_tttt_total", "pv_noise_pvt", "pv_noise_tttt_Cell_Count",
+          "pv_noise_tttt_max_fanout_viols", "pv_noise_tttt_max_trans_viols", "pv_noise_tttt_run_time",
+          "pv_noise_tttt_tool_version", "apr_Power_Internal","apr_Power_Leakage","apr_Power_Switching",
+          "apr_Power_Total","apr_REG2REG_TNS","apr_REG2REG_WNS","apr_Run_Time","calibre_HV",
+          "calibre_denall_reuse","calibre_drcc","calibre_gden","calibre_lvs","sta_Cell_Count","sta_Run_Time",
+          "sta_max_cap_viols","sta_max_trans_viols","sta_max_tttt_REG2REG_TNS",
+          "sta_max_tttt_REG2REG_worst_setup_viols","sta_min_tttt_REG2REG_TNS",
+          "sta_min_tttt_REG2REG_worst_hold_viols","syn_Cell_Count","syn_REG2REG_TNS","syn_REG2REG_WNS","apr_DRC_Violations"
+
+    ],
 	"Search_Key":{
       "Order":{
 		"default":"3",
         "1":"*.stage/testcase/testcase/stage",
         "2":"*.stage/testcase/stage",
-        "3":"*testcase/stage"
+        "3":"*testcase/stage",
+        "4": ".*/YYYY-MM-DD/runs/d**/testcase"
     }
     },
     "line_keywords": {
@@ -47,7 +77,7 @@
                         "end_line": "none",
                         "begin_line": "none"
                     },
-                    "metric_reg_exp": ".*(WNS)[^\\|]*\\|[^\\|]*\\|[\\s]*([\\d.]*).*",
+                    "metric_reg_exp": ".*(WNS)[^\\|]*\\|[^\\|]*\\|[\\s]*([-\\d\\.]*).*",
                     "metric_name": "apr_REG2REG_WNS",
                     "stage": "none",
                     "directory": "none"
@@ -57,7 +87,7 @@
                         "end_line": "none",
                         "begin_line": "none"
                     },
-                    "metric_reg_exp": ".*(TNS)[^\\|]*\\|[^\\|]*\\|[\\s]*([\\d.]*).*",
+                    "metric_reg_exp": ".*(TNS)[^\\|]*\\|[^\\|]*\\|[\\s]*([-\\d\\.]*).*",
                     "metric_name": "apr_REG2REG_TNS",
                     "stage": "none",
                     "directory": "none"
@@ -67,9 +97,10 @@
                         "end_line": "none",
                         "begin_line": "none"
                     },
-                    "metric_reg_exp": ".*(max_cap)[^\\|]*\\|[^\\|]*\\|[\\s]*([\\d.]*).*",
+                    "metric_reg_exp": ".*(max_cap)[^\\|]*\\|[\\s]*([-\\d\\.]*).*\\|.*",
                     "metric_name": "apr_max_cap_viols",
                     "stage": "none",
+
                     "directory": "none"
               },
               "found_max_trans": {
@@ -77,7 +108,7 @@
                         "end_line": "none",
                         "begin_line": "none"
                     },
-                    "metric_reg_exp": ".*(max_tran)[^\\|]*\\|[^\\|]*\\|[\\s]*([\\d.]*).*",
+                    "metric_reg_exp": ".*(max_tran)[^\\|]*\\|[\\s]*([-\\d\\.]*).*\\|.*",
                     "metric_name": "apr_max_trans_viols",
                     "stage": "none",
                     "directory": "none"
@@ -90,7 +121,7 @@
                         "begin_line": "none"
                     },
                     "metric_reg_exp": "(Density[\\s]*):+[\\s]*([-\\d\\.]*).*",
-                    "metric_name": "apr_Utilization",
+                    "metric_name": "apr_utilization",
                     "stage": "none",
                     "directory": "none"
               },
@@ -195,7 +226,7 @@
                         "end_line": "none",
                         "begin_line": "none"
                     },
-                    "metric_reg_exp": ".*(Max_fanout[\\s]*design[\\s]*rule:)([-\\d\\.]*).*",
+                    "metric_reg_exp": ".*(Max_fanout[\\s]*design[\\s]*rule:*)[\\D]*([-\\d\\.]*).*",
                     "metric_name": "syn_max_fanout_viols",
                     "stage": "none",
                     "directory": "none"
@@ -219,48 +250,7 @@
         },
         "synopsys": {
             ".LAYOUT_ERRORS": {},
-            ".fill.physical.rpt": {
-              "found_util": {
-                    "found_section_reg_exp": {
-                        "end_line": "none",
-                        "begin_line": "none"
-                    },
-                    "metric_reg_exp": "(Std[\\s]*cells[\\s]*utilization[\\s]*):+[\\s]*(-*[\\d\\.]*%).*",
-                    "metric_name": "apr_utilization",
-                    "stage": "none",
-                    "directory": "none"
-                },
-                "found_short": {
-                    "found_section_reg_exp": {
-                        "end_line": "none",
-                        "begin_line": "none"
-                    },
-                    "metric_reg_exp": "(Short):+[\\s]*(-*[\\d]+[\\.]*[\\d]*).*",
-                    "metric_name": "apr Shorts",
-                    "stage": "none",
-                    "directory": "none"
-                },
-                "found_total_er": {
-                    "found_section_reg_exp": {
-                        "end_line": "none",
-                        "begin_line": "none"
-                    },
-                    "metric_reg_exp": "(Total[\\s]*error[\\s]*number[\\s]*):+[\\s]*(-*[\\d]+[\\.]*[\\d]*).*",
-                    "metric_name": "apr_DRC",
-                    "stage": "none",
-                    "directory": "none"
-                },
-                "found_total_memory": {
-                    "found_section_reg_exp": {
-                        "end_line": "none",
-                        "begin_line": "none"
-                    },
-                    "metric_reg_exp": "(Total[\\s]*Proc[\\s]*Memory[\\s]*):+[\\s]*(-*[\\d]+[\\.]*[\\d]*).*",
-                    "metric_name": "apr_Memory",
-                    "stage": "none",
-                    "directory": "none"
-                }
-            },
+            ".fill.physical.rpt": {},
             ".inc_compile.qor.rpt": {
                 "found_max_cap_vi": {
                     "found_section_reg_exp": {
@@ -307,7 +297,7 @@
                     "metric_name": "syn_REG2REG_total_neg_slack",
                     "found_section_reg_exp": {
                         "end_line": ".*(Timing[\\s]*Path[\\s]*Group).*",
-                        "begin_line": ".*(REG2REG).*"
+                        "begin_line": ".*(Timing[\\s]*Path[\\s]*Group).*(REG2REG).*"
                     },
                     "stage": "none",
                     "directory": "none"
@@ -347,7 +337,7 @@
                     "metric_name": "syn_tool_version",
                     "found_section_reg_exp": {
                         "end_line": "none",
-                        "begin_line": "none*"
+                        "begin_line": "none"
                     },
                     "stage": "none",
                     "directory": "none"
@@ -380,7 +370,7 @@
                         "end_line": "none",
                         "begin_line": "none"
                     },
-                    "metric_reg_exp": "(Max[\\s]*Cap[\\s]*Violations[\\s]*):+[\\s]*([-\\d\\.]*).*",
+                    "metric_reg_exp": "(Max[\\s]*Cap[\\s]*Violations[\\s]*|max_capacitance[\\s]*Count):+[\\s]*([-\\d\\.]*).*",
                     "metric_name": "pv_noise_tttt_max_cap_viols",
                     "stage": "none",
                     "directory": "none"
@@ -395,33 +385,13 @@
                     "stage": "none",
                     "directory": "none"
                 },
-                "found_worst_hold_viol": {
-                    "metric_reg_exp": "(Worst[\\s]*hold[\\s]*violation[\\s]*):+[\\s]*([-\\d\\.]*).*",
-                    "metric_name": "pv_noise_tttt_REG2REG_worst_hold_violation",
-                    "found_section_reg_exp": {
-                        "end_line": ".*(Timing[\\s]*Path[\\s]*Group).*",
-                        "begin_line": ".*(REG2REG).*"
-                    },
-                    "stage": "none",
-                    "directory": "none"
-                },
                 "found_max_trans_vi": {
                     "found_section_reg_exp": {
                         "end_line": "none",
                         "begin_line": "none"
                     },
-                    "metric_reg_exp": "(Max[\\s]*trans[\\s]*Violations[\\s]*):+[\\s]*([-\\d\\.]*).*",
+                    "metric_reg_exp": "(Max[\\s]*trans[\\s]*Violations[\\s]*|max_transition[\\s]*Count):+[\\s]*([-\\d\\.]*).*",
                     "metric_name": "pv_noise_tttt_max_trans_viols",
-                    "stage": "none",
-                    "directory": "none"
-                },
-                "found_tot_neg_slack": {
-                    "metric_reg_exp": "(total[\\s]*Negative[\\s]*slack[\\s]*):+[\\s]*([-\\d\\.]*).*",
-                    "metric_name": "pv_noise_tttt_REG2REG_total_neg_slack",
-                    "found_section_reg_exp": {
-                        "end_line": ".*(Timing[\\s]*Path[\\s]*Group).*",
-                        "begin_line": ".*(REG2REG).*"
-                    },
                     "stage": "none",
                     "directory": "none"
                 },
@@ -430,7 +400,7 @@
                         "end_line": "none",
                         "begin_line": "none"
                     },
-                    "metric_reg_exp": "(Max[\\s]*Fanout[\\s]*Violations[\\s]*):+[\\s]*([-\\d\\.]*).*",
+                    "metric_reg_exp": "(Max[\\s]*Fanout[\\s]*Violations[\\s]*|max_fanout[\\s]*Count):+[\\s]*([-\\d\\.]*).*",
                     "metric_name": "pv_noise_tttt_max_fanout_viols",
                     "stage": "none",
                     "directory": "none"
@@ -445,42 +415,12 @@
                     "stage": "none",
                     "directory": "none"
                 },
-                "found_tot_hold_viol": {
-                    "metric_reg_exp": "(total[\\s]*hold[\\s]*violation[\\s]*):+[\\s]*([-\\d\\.]*).*",
-                    "metric_name": "pv_noise_tttt_REG2REG_total_hold_viol",
-                    "found_section_reg_exp": {
-                        "end_line": ".*(Timing[\\s]*Path[\\s]*Group).*",
-                        "begin_line": ".*(REG2REG).*"
-                    },
-                    "stage": "none",
-                    "directory": "none"
-                },
                 "found_version": {
                     "metric_reg_exp": "(Version):[\\s]*([\\S]*)",
                     "metric_name": "pv_noise_tttt_tool_version",
                     "found_section_reg_exp": {
                         "end_line": "none",
                         "begin_line": "none"
-                    },
-                    "stage": "none",
-                    "directory": "none"
-                },
-                "found_crit_slack": {
-                    "metric_reg_exp": "(Critical[\\s]*path[\\s]*slack[\\s]*):+[\\s]*([-\\d\\.]*).*",
-                    "metric_name": "pv_noise_tttt_REG2REG_worst_setup_viol",
-                    "found_section_reg_exp": {
-                        "end_line": ".*(Timing[\\s]*Path[\\s]*Group).*",
-                        "begin_line": ".*(REG2REG).*"
-                    },
-                    "stage": "none",
-                    "directory": "none"
-                },
-                "found_crit_path_length": {
-                    "metric_reg_exp": "(critical[\\s]*path[\\s]*length[\\s]*):+[\\s]*([-\\d\\.]*).*",
-                    "metric_name": "pv_noise_tttt_REG2REG_critical_path_len",
-                    "found_section_reg_exp": {
-                        "end_line": ".*(Timing[\\s]*Path[\\s]*Group).*",
-                        "begin_line": ".*(REG2REG).*"
                     },
                     "stage": "none",
                     "directory": "none"
@@ -582,7 +522,7 @@
                     "metric_name": "pv_max_tttt_REG2REG_worst_hold_violation",
                     "found_section_reg_exp": {
                         "end_line": ".*(Timing[\\s]*Path[\\s]*Group).*",
-                        "begin_line": ".*(REG2REG).*"
+                        "begin_line": "(Timing[\\s]*Path[\\s]*Group).*(REG2REG).*(max_delay/setup).*"
                     },
                     "stage": "none",
                     "directory": "none"
@@ -602,7 +542,7 @@
                     "metric_name": "pv_max_tttt_REG2REG_total_neg_slack",
                     "found_section_reg_exp": {
                         "end_line": ".*(Timing[\\s]*Path[\\s]*Group).*",
-                        "begin_line": ".*(REG2REG).*"
+                        "begin_line": "(Timing[\\s]*Path[\\s]*Group).*(REG2REG).*(max_delay/setup).*"
                     },
                     "stage": "none",
                     "directory": "none"
@@ -632,7 +572,7 @@
                     "metric_name": "pv_max_tttt_REG2REG_total_hold_viol",
                     "found_section_reg_exp": {
                         "end_line": ".*(Timing[\\s]*Path[\\s]*Group).*",
-                        "begin_line": ".*(REG2REG).*"
+                        "begin_line": "(Timing[\\s]*Path[\\s]*Group).*(REG2REG).*(max_delay/setup).*"
                     },
                     "stage": "none",
                     "directory": "none"
@@ -652,7 +592,7 @@
                     "metric_name": "pv_max_tttt_REG2REG_worst_setup_viol",
                     "found_section_reg_exp": {
                         "end_line": ".*(Timing[\\s]*Path[\\s]*Group).*",
-                        "begin_line": ".*(REG2REG).*"
+                        "begin_line": "(Timing[\\s]*Path[\\s]*Group).*(REG2REG).*(max_delay/setup).*"
                     },
                     "stage": "none",
                     "directory": "none"
@@ -662,7 +602,7 @@
                     "metric_name": "pv_max_tttt_REG2REG_critical_path_len",
                     "found_section_reg_exp": {
                         "end_line": ".*(Timing[\\s]*Path[\\s]*Group).*",
-                        "begin_line": ".*(REG2REG).*"
+                        "begin_line": "(Timing[\\s]*Path[\\s]*Group).*(REG2REG).*(max_delay/setup).*"
                     },
                     "stage": "none",
                     "directory": "none"
@@ -806,7 +746,7 @@
                     "metric_name": "pv_min_tttt_REG2REG_worst_hold_violation",
                     "found_section_reg_exp": {
                         "end_line": ".*(Timing[\\s]*Path[\\s]*Group).*",
-                        "begin_line": ".*(REG2REG).*"
+                        "begin_line": "(Timing[\\s]*Path[\\s]*Group).*(REG2REG).*(min_delay/hold).*"
                     },
                     "stage": "none",
                     "directory": "none"
@@ -826,7 +766,7 @@
                     "metric_name": "pv_min_tttt_REG2REG_total_neg_slack",
                     "found_section_reg_exp": {
                         "end_line": ".*(Timing[\\s]*Path[\\s]*Group).*",
-                        "begin_line": ".*(REG2REG).*"
+                        "begin_line": "(Timing[\\s]*Path[\\s]*Group).*(REG2REG).*(min_delay/hold).*"
                     },
                     "stage": "none",
                     "directory": "none"
@@ -856,7 +796,7 @@
                     "metric_name": "pv_min_tttt_REG2REG_total_hold_viol",
                     "found_section_reg_exp": {
                         "end_line": ".*(Timing[\\s]*Path[\\s]*Group).*",
-                        "begin_line": ".*(REG2REG).*"
+                        "begin_line": "(Timing[\\s]*Path[\\s]*Group).*(REG2REG).*(min_delay/hold).*"
                     },
                     "stage": "none",
                     "directory": "none"
@@ -876,7 +816,7 @@
                     "metric_name": "pv_min_tttt_REG2REG_worst_setup_viol",
                     "found_section_reg_exp": {
                         "end_line": ".*(Timing[\\s]*Path[\\s]*Group).*",
-                        "begin_line": ".*(REG2REG).*"
+                        "begin_line": "(Timing[\\s]*Path[\\s]*Group).*(REG2REG).*(min_delay/hold).*"
                     },
                     "stage": "none",
                     "directory": "none"
@@ -886,7 +826,7 @@
                     "metric_name": "pv_min_tttt_REG2REG_critical_path_len",
                     "found_section_reg_exp": {
                         "end_line": ".*(Timing[\\s]*Path[\\s]*Group).*",
-                        "begin_line": ".*(REG2REG).*"
+                        "begin_line": "(Timing[\\s]*Path[\\s]*Group).*(REG2REG).*(min_delay/hold).*"
                     },
                     "stage": "none",
                     "directory": "none"
