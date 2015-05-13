@@ -65,7 +65,7 @@
 		"default":"3",
         "1":"*.stage/testcase/testcase/stage",
         "2":"*.stage/testcase/stage",
-        "3":"*testcase/stage",
+        "3":"*testcase/",
         "4": ".*/YYYY-MM-DD/runs/d**/testcase"
     }
     },
@@ -130,7 +130,7 @@
                         "end_line": "none",
                         "begin_line": "none"
                     },
-                    "metric_reg_exp": "(Inst[\\s]*count[\\s]*):+[\\s]*([-\\d\\.]*).*",
+                    "metric_reg_exp": "(stdcell[\\s]*count[\\s]*):+[\\s]*([-\\d\\.]*).*",
                     "metric_name": "apr_Cell_Count",
                     "stage": "none",
                     "directory": "none"

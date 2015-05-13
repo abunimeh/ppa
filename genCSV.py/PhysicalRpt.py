@@ -10,7 +10,7 @@ class PhysicalRpt:
     @staticmethod
     def match_line(regex1, regex2, regex3, file_line):
         import re
-        words_to_match = r'(%s[\s]*%s[\s]*%s[\s]*.*):+[\s]*([\d]+[\.]*[\d]*.*%s*)' % (regex1, regex2, regex3, '%')
+        words_to_match = r'(%s[\s]*%s[\s]*%s[\s]*.*):+[\s]*([\d\.]*.*)' % (regex1, regex2, regex3)
         regular_expression = re.search(words_to_match, file_line, re.I)
         return regular_expression
 
@@ -31,9 +31,9 @@ class PhysicalRpt:
         file_lines = f.readlines()
         f.close()
         rpt_data = PhysicalRptData()
-        rpt_data.found_util = [PhysicalRpt.replace_space("apr utilization"), "\t"]
+        rpt_data.found_util = [PhysicalRpt.replace_space("apr utilization (%)"), "\t"]
         rpt_data.found_total_error = [PhysicalRpt.replace_space("apr DRC"), "\t"]
-        rpt_data.found_total_mem = [PhysicalRpt.replace_space("apr Memory"), "\t"]
+        rpt_data.found_total_mem = [PhysicalRpt.replace_space("apr Memory (MB)"), "\t"]
 
         # Loop through each file_line to find the metrics
         for file_line in file_lines:
@@ -52,7 +52,7 @@ class PhysicalRpt:
             elif found_total_error:
                 rpt_data.found_total_error[1] = found_total_error.group(2)
             elif found_total_mem:
-                rpt_data.found_total_mem[1] = found_total_mem.group(2) + "(MB)"
+                rpt_data.found_total_mem[1] = found_total_mem.group(2)
 
         # Append the metrics that we found to the metric_list
         metric_list.append(tuple(rpt_data.found_util))

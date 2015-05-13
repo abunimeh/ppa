@@ -6,8 +6,9 @@ class GenerateMetrics:
     def determine_testcases(command_line_args):
         import json
         import os
+        config_file = os.path.dirname(command_line_args[0]) + 'config.json'
         # With open is a secure way to open and close a file. Using with we don't have to implicitly close the file as it does it on its own
-        with open(r'config.json', 'r') as f:
+        with open(config_file, 'r') as f:
             json_data = json.load(f)
             # finds the default value for the order number to search files in the json file
             dir_structure = json_data['Search_Key']["Order"]["default"]
@@ -26,7 +27,7 @@ class GenerateMetrics:
                     for dir_names in first_level:
                         files_to_search = [os.path.join(dir_names, name) for name in os.listdir(dir_names)if os.path.isdir(os.path.join(dir_names, name))]
                         for files in files_to_search:
-                            test_cases_list.append(files)
+                            test_cases_list.append(files, config_file)
             print("Found %s testcases" % len(test_cases_list))
             print("Testcases:", test_cases_list)
         # 2 is designed for megatest when the duplicate testcase folder is removed
@@ -90,7 +91,6 @@ class GenerateMetrics:
         names, values = [], []
         name = 0
         value = 1
-
 
         print("temp_metric_collection found: ")
         for temp_metric_collection in temp_metric_collections:
