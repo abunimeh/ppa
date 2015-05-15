@@ -3,8 +3,10 @@ __author__ = 'tjstickx'
 
 class OrganizeFoundMetrics:
     @staticmethod
-    def add_missing_metrics(metric_collections, test_case, tool, config_file):
+    def add_missing_metrics(metric_collections, test_case, tool):
         import json
+        import genCSV
+        config_file = genCSV.config_file
         metric_names = []
         new_metrics_collections = []
         # Open the JSON file and get the default list of metrics

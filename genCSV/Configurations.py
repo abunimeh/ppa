@@ -1,7 +1,13 @@
-#__author__ = 'Thomas'
+#_author__ = 'Thomas'
 
 
 class Configurations:
+
+    def __init__(self, config_full_name):
+        self.config_name = config_full_name
+
+    def config_name(self):
+        return self.config_name
 
     @staticmethod
     def parser_final():

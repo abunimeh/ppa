@@ -3,7 +3,7 @@ __author__ = ''
 
 class GetSynopsysMetrics:
     @staticmethod
-    def get_synopsys_metrics(list_of_files, test_case, tool, config_file):
+    def get_synopsys_metrics(list_of_files, test_case, tool):
 
         from OrganizeMetrics import OrganizeFoundMetrics
         from PVTmetric import PVTMetric
@@ -48,7 +48,7 @@ class GetSynopsysMetrics:
                 clock_tree_data = clockTreeRpt.search_file(file)
                 metric_collections.append(clock_tree_data)
             else:
-                metric_collections.append(OtherMetricClass.search_file(file, tool, config_file))
+                metric_collections.append(OtherMetricClass.search_file(file, tool))
 
             # uncomment the code below if we want to search for temp_metric_collection with hard coded classes
             # elif file.endswith('run_time.rpt'):
@@ -65,6 +65,6 @@ class GetSynopsysMetrics:
         # total number of drc errors
         total_drc_errors = TotalDrcErrors.get_total_count(metric_collections)
         metric_collections.append([("drc_total_viols", total_drc_errors)])
-        temp_metric_collections = OrganizeFoundMetrics.add_missing_metrics(metric_collections, test_case, tool, config_file)
+        temp_metric_collections = OrganizeFoundMetrics.add_missing_metrics(metric_collections, test_case, tool)
 
         return temp_metric_collections

@@ -3,7 +3,7 @@ __author__ = ''
 
 class GetCadenceMetrics:
     @staticmethod
-    def get_cadence_metrics(list_of_files, test_case, tool, config_file):
+    def get_cadence_metrics(list_of_files, test_case, tool):
         from OrganizeMetrics import OrganizeFoundMetrics
         from CadenceQorReport import CadenceQorReport
         from CadenceRunTime import CadenceRunTime
@@ -42,7 +42,7 @@ class GetCadenceMetrics:
                 apr_run_log = CadenceAprRunLog.search_file(file)
                 metric_collections.append(apr_run_log)
             else:
-                metric_collections.append(OtherMetricClass.search_file(file, tool, config_file))
+                metric_collections.append(OtherMetricClass.search_file(file, tool))
 
             # elif file.endswith('post_route_hold_optDesign.summary'):
             #     route_design = CadenceSignOffSum.search_file(file)
@@ -57,7 +57,7 @@ class GetCadenceMetrics:
             #     gate_count = CadenceGateCount.search_file(file)
             #     metric_collections.append(gate_count)
 
-        temp_metric_collections = OrganizeFoundMetrics.add_missing_metrics(metric_collections, test_case, tool, config_file)
+        temp_metric_collections = OrganizeFoundMetrics.add_missing_metrics(metric_collections, test_case, tool)
 
 
         return temp_metric_collections

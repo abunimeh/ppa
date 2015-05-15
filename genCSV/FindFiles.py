@@ -1,14 +1,15 @@
 class findFiles:
     @staticmethod
-    def search_dir(test_case, tool, config_file):
+    def search_dir(test_case, tool):
         import fnmatch
         import os
         import json
+        import genCSV
         #from Configurations import Configurations
         #from OtherMetricClass import OtherMetricClass
-
-
+        config_file = genCSV.config_file
         # Finds the file name endings
+        print("YEEES")
         with open(config_file, 'r') as f:
             json_data = json.load(f)
             file_names = json_data['file_endings'][tool]
