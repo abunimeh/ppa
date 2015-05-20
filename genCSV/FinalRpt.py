@@ -36,15 +36,15 @@ class FinalRpt:
         lines = f.readlines()
         f.close()
         rptData = FinalRptData()
-        rptData.foundNumOfActuEr = [FinalRpt.replaceSpace(stage), "N/A"]
+        rptData.found_num_of_errors = [FinalRpt.replaceSpace(stage) + " (NB)", "N/A"]
         print("FINRPT", file)
         for line in lines:
-            foundNumOfActuEr = re.search(r'(The[\s]*number[\s]*of[\s]*actual[\s]*errors)[\s]*:+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
-            if foundNumOfActuEr:
-                rptData.foundNumOfActuEr[1] = (foundNumOfActuEr.group(2)+" (NB)")
-                DataItems.append(tuple(rptData.foundNumOfActuEr))
+            found_num_of_errors = re.search(r'(The[\s]*number[\s]*of[\s]*actual[\s]*errors)[\s]*:+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
+            if found_num_of_errors:
+                rptData.found_num_of_errors[1] = (found_num_of_errors.group(2))
+                DataItems.append(tuple(rptData.found_num_of_errors))
                 return DataItems
 
-        DataItems.append(tuple(rptData.foundNumOfActuEr))
+        DataItems.append(tuple(rptData.found_num_of_errors))
 
         return DataItems

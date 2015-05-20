@@ -4,12 +4,11 @@ class findFiles:
         import fnmatch
         import os
         import json
-        import genCSV
+        from genCSV import GenerateMetrics
         #from Configurations import Configurations
         #from OtherMetricClass import OtherMetricClass
-        config_file = genCSV.config_file
+        config_file = GenerateMetrics.return_config_name()
         # Finds the file name endings
-        print("YEEES")
         with open(config_file, 'r') as f:
             json_data = json.load(f)
             file_names = json_data['file_endings'][tool]

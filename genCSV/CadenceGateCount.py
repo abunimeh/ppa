@@ -33,7 +33,7 @@ class CadenceGateCount:
         gate_count = CadenceGateCountData()
 
         gate_count.found_cell_count = [CadenceGateCount.replace_space('apr Cell Count'), "N/A"]
-        gate_count.found_utilization = [CadenceGateCount.replace_space('apr utilization'), "N/A"]
+        gate_count.found_utilization = [CadenceGateCount.replace_space('apr utilization') + " (%)", "N/A"]
 
         for line in lines:
             found_cell_count = CadenceGateCount.mathcLine('Inst count', line)
@@ -41,7 +41,7 @@ class CadenceGateCount:
             if found_cell_count:
                 gate_count.found_cell_count[1] = found_cell_count.group(2)
             elif found_utilization:
-                gate_count.found_utilization[1] = found_utilization.group(2)
+                gate_count.found_utilization[1] = float(found_utilization.group(2)) #"{0:.2f}".format(float(found_utilization.group(2))*100)
 
         data_items.append(tuple(gate_count.found_cell_count))
         data_items.append(tuple(gate_count.found_utilization))

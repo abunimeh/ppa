@@ -33,7 +33,7 @@
         ]
     },
     "default_list_of_metrics":[
-          "Apr_Shorts", "Apr_Memory", "syn_Cell_Count", "Testcase_Name",
+          "Apr_Shorts", "Apr_Memory", "Testcase_Name",
           "DateTime", "Tool", "syn_Cell_Count", "syn_REG2REG_critical_path_len", "syn_REG2REG_total_hold_viol",
           "syn_REG2REG_total_neg_slack", "syn_REG2REG_worst_hold_violation", "syn_REG2REG_worst_setup_viol",
           "syn_cpu_runtime", "syn_max_cap_viols", "syn_max_fanout_viols", "syn_max_trans_viols", "syn_pvt",
@@ -41,12 +41,12 @@
           "apr_REG2REG_total_hold_viol", "apr_REG2REG_total_neg_slack", "apr_REG2REG_worst_hold_violation",
           "apr_REG2REG_worst_setup_viol", "apr_Shorts", "apr_cpu_runtime", "apr_cts_max_global_skew",
           "apr_max_cap_viols", "apr_max_fanout_viols", "apr_max_trans_viols", "apr_pvt", "apr_tool_version",
-          "apr_utilization", "drc_IPall", "drc_IPall_Peak_Memory", "drc_IPall_Runtime", "drc_denall",
+          "apr_utilization (%)", "drc_IPall", "drc_IPall_Peak_Memory", "drc_IPall_Runtime", "drc_denall",
           "drc_denall_reuse_Peak_Memory", "drc_denall_reuse_Runtime", "drc_drcd", "drc_drcd_Peak_Memory",
           "drc_drcd_Runtime", "drc_tool_version", "drc_total_viols", "drc_trclvs", "drc_trclvs_Peak_Memory",
           "drc_trclvs_Runtime", "pv_max_pvt", "pv_max_tttt_Cell_Count", "pv_max_tttt_REG2REG_critical_path_len",
           "pv_max_tttt_REG2REG_total_neg_slack", "pv_max_tttt_REG2REG_worst_setup_viol", "pv_max_tttt_run_time",
-          "pv_max_tttt_tool_version", "pv_min_pvt", "pv_min_tttt_Cell_Count",
+          "pv_max_tttt_tool_version", "pv_min_pvt", "pv_min_tttt_Cell_Count","pv_noise_tttt_max_cap_viols",
           "pv_min_tttt_REG2REG_critical_path_len", "pv_min_tttt_REG2REG_total_neg_slack",
           "pv_min_tttt_REG2REG_worst_setup_viol", "pv_min_tttt_run_time", "pv_min_tttt_tool_version",
           "pv_power_pvt", "pv_power_tttt_internal", "pv_power_tttt_leakage", "pv_power_tttt_run_time",
@@ -57,7 +57,7 @@
           "calibre_denall_reuse","calibre_drcc","calibre_gden","calibre_lvs","sta_Cell_Count","sta_Run_Time",
           "sta_max_cap_viols","sta_max_trans_viols","sta_max_tttt_REG2REG_TNS",
           "sta_max_tttt_REG2REG_worst_setup_viols","sta_min_tttt_REG2REG_TNS",
-          "sta_min_tttt_REG2REG_worst_hold_viols","syn_Cell_Count","syn_REG2REG_TNS","syn_REG2REG_WNS","apr_DRC_Violations"
+          "sta_min_tttt_REG2REG_worst_hold_viols","syn_REG2REG_TNS","syn_REG2REG_WNS","apr_DRC_Violations"
 
     ],
 	"Search_Key":{

@@ -13,7 +13,7 @@ class GetCadenceMetrics:
         from CadenceAprRunLog import CadenceAprRunLog
         from OtherMetricClass import OtherMetricClass
         # from CadenceSignOffSum import CadenceSignOffSum
-        # from CadenceGateCount import CadenceGateCount
+        from CadenceGateCount import CadenceGateCount
         # from CadencePowerReport import CadencePowerRpt
         # from CadenceViolations import CadenceViolations
         metric_collections = []
@@ -41,9 +41,13 @@ class GetCadenceMetrics:
             elif file.endswith('apr_run.log'):
                 apr_run_log = CadenceAprRunLog.search_file(file)
                 metric_collections.append(apr_run_log)
+            elif file.endswith('block_stats_signoff.rpt'):
+                gate_count = CadenceGateCount.search_file(file)
+                metric_collections.append(gate_count)
             else:
                 metric_collections.append(OtherMetricClass.search_file(file, tool))
-
+            import sys
+        print("ARGUMENTS", sys.argv)
             # elif file.endswith('post_route_hold_optDesign.summary'):
             #     route_design = CadenceSignOffSum.search_file(file)
             #     metric_collections.append(route_design)

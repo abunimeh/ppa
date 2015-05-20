@@ -87,8 +87,8 @@ class OtherMetricClass:
     def search_file(file, tool):
         ending = ""
         import json
-        import genCSV
-        config_file = genCSV.config_file
+        from GenerateMetrics import GenerateMetrics
+        config_file = GenerateMetrics.return_config_name()
         with open(config_file, 'r') as f:
             json_data = json.load(f)
             # gets the line_keywords from the JSON file

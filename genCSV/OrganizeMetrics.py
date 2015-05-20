@@ -5,8 +5,8 @@ class OrganizeFoundMetrics:
     @staticmethod
     def add_missing_metrics(metric_collections, test_case, tool):
         import json
-        import genCSV
-        config_file = genCSV.config_file
+        from GenerateMetrics import GenerateMetrics
+        config_file = GenerateMetrics.return_config_name()
         metric_names = []
         new_metrics_collections = []
         # Open the JSON file and get the default list of metrics
@@ -27,8 +27,24 @@ class OrganizeFoundMetrics:
                 new_metric = default_metric_name, "\t"
                 new_metrics_collections.append(new_metric)
         metric_collections.append(new_metrics_collections)
+        metric_collections = OrganizeFoundMetrics.format_metric_values(metric_collections)
         temp_metric_collections = OrganizeFoundMetrics.sort_metrics(metric_collections, test_case, tool)
         return temp_metric_collections
+
+    @staticmethod
+    def format_metric_values(metric_collections):
+        metric_value = 1
+        for metric_collection in metric_collections:
+            # Because metric_collection is a list that might have different lengths we use range(len(metric_collection))
+            # in the following for loop
+            metric_collections = list(metric_collections)
+            for metric_pair in range(len(metric_collection)):
+                try:
+                    metric_collection[metric_pair][metric_value] = "{0:.2f}".format(float(metric_collection[metric_pair][metric_value]))
+                except ValueError:
+                    continue
+        return metric_collections
+            # "{0:.2f}".format(float(found_utilization.group(2)))
 
     # This method is used to add the metrics that don't appear after parsing the required files
     @staticmethod
