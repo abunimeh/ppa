@@ -24,6 +24,7 @@ class PhysicalRpt:
     # This method is used to search the given file and retrieve the required metrics out of those files
     @staticmethod
     def search_file(file):
+        from OrganizingAndFormatingMetrics.FormatMetrics import FormatMetrics
         metric_list = []
         # Open the file with read only permit
         f = open(file, "r")
@@ -45,14 +46,14 @@ class PhysicalRpt:
             # Regular expression method 'search' returns the found regular expressions back in groups designated by
             # the parentheses in the regular expression
             if found_util:
-                rpt_data.found_util[1] = found_util.group(2)
+                rpt_data.found_util[1] = FormatMetrics.format_metric_values(found_util.group(2))
             elif found_short:
-                rpt_data.found_short = PhysicalRpt.replace_space("apr Shorts"), found_short.group(2)
+                rpt_data.found_short = PhysicalRpt.replace_space("apr Shorts"), FormatMetrics.format_metric_values(found_short.group(2))
                 metric_list.append(rpt_data.found_short)
             elif found_total_error:
-                rpt_data.found_total_error[1] = found_total_error.group(2)
+                rpt_data.found_total_error[1] = FormatMetrics.format_metric_values(found_total_error.group(2))
             elif found_total_mem:
-                rpt_data.found_total_mem[1] = found_total_mem.group(2)
+                rpt_data.found_total_mem[1] = FormatMetrics.format_metric_values(found_total_mem.group(2))
 
         # Append the metrics that we found to the metric_list
         metric_list.append(tuple(rpt_data.found_util))

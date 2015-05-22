@@ -5,7 +5,7 @@ class CadenceQorReportData:
     pass
 
 
-class CadenceQorReport:
+class CaQorReport:
     @staticmethod
     def mathcLine(line, *args):
         import re
@@ -25,6 +25,7 @@ class CadenceQorReport:
 
     @staticmethod
     def search_file(file):
+        from OrganizingAndFormatingMetrics.FormatMetrics import FormatMetrics
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
@@ -34,19 +35,19 @@ class CadenceQorReport:
         f.close()
         data_items = []
         qor_rpt_data = CadenceQorReportData()
-        qor_rpt_data.found_syn_wns = [CadenceQorReport.replace_space('syn REG2REG WNS'), "N/A"]
-        qor_rpt_data.found_syn_tns = [CadenceQorReport.replace_space('syn REG2REG TNS'), "N/A"]
-        qor_rpt_data.found_cell_count = [CadenceQorReport.replace_space('syn Cell Count'), "N/A"]
-        qor_rpt_data.found_runtime = [CadenceQorReport.replace_space('syn cpu runtime'), "N/A"]
+        qor_rpt_data.found_syn_wns = [CaQorReport.replace_space('syn REG2REG WNS'), "N/A"]
+        qor_rpt_data.found_syn_tns = [CaQorReport.replace_space('syn REG2REG TNS'), "N/A"]
+        qor_rpt_data.found_cell_count = [CaQorReport.replace_space('syn Cell Count'), "N/A"]
+        qor_rpt_data.found_runtime = [CaQorReport.replace_space('syn cpu runtime'), "N/A"]
 
         for line in lines:
-            found_syn_reg = CadenceQorReport.mathcLine(line, 'REG2REG')
-            found_cell_count = CadenceQorReport.mathcLine(line, 'Leaf Instance Count')
-            found_runtime = CadenceQorReport.mathcLine(line, 'Runtime')
+            found_syn_reg = CaQorReport.mathcLine(line, 'REG2REG')
+            found_cell_count = CaQorReport.mathcLine(line, 'Leaf Instance Count')
+            found_runtime = CaQorReport.mathcLine(line, 'Runtime')
 
             if found_syn_reg:
-                qor_rpt_data.found_syn_wns[1] = found_syn_reg.group(2)
-                qor_rpt_data.found_syn_tns[1] = found_syn_reg.group(3)
+                qor_rpt_data.found_syn_wns[1] = FormatMetrics.format_metric_values(found_syn_reg.group(2))
+                qor_rpt_data.found_syn_tns[1] = FormatMetrics.format_metric_values(found_syn_reg.group(3))
             elif found_cell_count:
                 qor_rpt_data.found_cell_count[1] = found_cell_count.group(2)
             elif found_runtime:

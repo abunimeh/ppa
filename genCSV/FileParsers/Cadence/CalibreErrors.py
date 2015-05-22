@@ -41,6 +41,7 @@ class CalibreErrors:
     @staticmethod
     def search_file(file):
         import re
+        from OrganizingAndFormatingMetrics.FormatMetrics import FormatMetrics
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines

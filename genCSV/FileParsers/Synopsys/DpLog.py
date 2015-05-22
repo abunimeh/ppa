@@ -28,6 +28,7 @@ class dpLog:
     @staticmethod
     def search_file(file):
         import re
+        from OrganizingAndFormatingMetrics.FormatMetrics import FormatMetrics
         foundFlag = 0
         DataItems = []
         stage = dpLog.metric_naming(file)

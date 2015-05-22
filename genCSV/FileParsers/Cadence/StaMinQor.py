@@ -5,7 +5,7 @@ class CadenceStaMinQorData:
     pass
 
 
-class CadenceStaMinQor:
+class StaMinQor:
     @staticmethod
     def mathcLine(line, regex1):
         import re
@@ -22,6 +22,7 @@ class CadenceStaMinQor:
 
     @staticmethod
     def search_file(file):
+        from OrganizingAndFormatingMetrics.FormatMetrics import FormatMetrics
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
@@ -31,22 +32,22 @@ class CadenceStaMinQor:
         data_items = []
         found_section = False
         sta_min_qor_data = CadenceStaMinQorData()
-        sta_min_qor_data.found_hold_viol = [CadenceStaMinQor.replace_space('sta min tttt REG2REG worst hold viols'), "N/A"]
-        sta_min_qor_data.found_min_tns = [CadenceStaMinQor.replace_space('sta min tttt REG2REG TNS'), "N/A"]
+        sta_min_qor_data.found_hold_viol = [StaMinQor.replace_space('sta min tttt REG2REG worst hold viols'), "N/A"]
+        sta_min_qor_data.found_min_tns = [StaMinQor.replace_space('sta min tttt REG2REG TNS'), "N/A"]
 
         for line in lines:
-            found_reg2reg_section = CadenceStaMinQor.mathcLine(line, "Timing Path Group 'REG2REG' \(min_delay\/hold\)")
-            found_hold_viol = CadenceStaMinQor.mathcLine(line, 'Critical Path Slack:')
-            found_min_tns = CadenceStaMinQor.mathcLine(line, 'Total Negative Slack:')
-            found_next_section = CadenceStaMinQor.mathcLine(line, 'Timing Path Group')
+            found_reg2reg_section = StaMinQor.mathcLine(line, "Timing Path Group 'REG2REG' \(min_delay\/hold\)")
+            found_hold_viol = StaMinQor.mathcLine(line, 'Critical Path Slack:')
+            found_min_tns = StaMinQor.mathcLine(line, 'Total Negative Slack:')
+            found_next_section = StaMinQor.mathcLine(line, 'Timing Path Group')
 
             if found_reg2reg_section:
                 found_section = True
             elif found_section:
                 if found_hold_viol:
-                    sta_min_qor_data.found_hold_viol[1] = found_hold_viol.group(2)
+                    sta_min_qor_data.found_hold_viol[1] = FormatMetrics.format_metric_values(found_hold_viol.group(2))
                 elif found_min_tns:
-                    sta_min_qor_data.found_min_tns[1] = found_min_tns.group(2)
+                    sta_min_qor_data.found_min_tns[1] = FormatMetrics.format_metric_values(found_min_tns.group(2))
                 elif found_next_section:
                     found_section = False
 

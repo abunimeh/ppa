@@ -4,7 +4,7 @@ class findFiles:
         import fnmatch
         import os
         import json
-        from genCSV import GenerateMetrics
+        from GenerateMetrics import GenerateMetrics
         #from Configurations import Configurations
         #from OtherMetricClass import OtherMetricClass
         config_file = GenerateMetrics.return_config_name()

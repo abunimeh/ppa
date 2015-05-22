@@ -88,6 +88,7 @@ class OtherMetricClass:
         ending = ""
         import json
         from GenerateMetrics import GenerateMetrics
+        from OrganizingAndFormatingMetrics.FormatMetrics import FormatMetrics
         config_file = GenerateMetrics.return_config_name()
         with open(config_file, 'r') as f:
             json_data = json.load(f)
@@ -128,7 +129,7 @@ class OtherMetricClass:
                                 if "add_to_value" in metric_object_name:
                                     metric = met_name, met_value.group(2)+metric_object_name["add_to_value"]
                                 else:
-                                    metric = met_name, met_value.group(2)
+                                    metric = met_name, FormatMetrics.format_metric_values(met_value.group(2))
                             data_items.append(metric)
                     else:
                         if last_line != line:
@@ -152,7 +153,7 @@ class OtherMetricClass:
                                 if met_value.group(2) == '':
                                     metric = met_name, 0
                                 else:
-                                    metric = met_name, met_value.group(2)
+                                    metric = met_name, FormatMetrics.format_metric_values(met_value.group(2))
                                 data_items.append(metric)
                             if ending_line:
                                 section = 0

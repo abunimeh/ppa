@@ -5,15 +5,15 @@ class GetSynopsysMetrics:
     @staticmethod
     def get_synopsys_metrics(list_of_files, test_case, tool):
 
-        from OrganizeMetrics import OrganizeFoundMetrics
-        from PVTmetric import PVTMetric
-        from Drc_Errors import DRCError
-        from dpLog import dpLog
-        from TotalDrcErrors import TotalDrcErrors
-        from OtherMetricClass import OtherMetricClass
-        from FinalRpt import FinalRpt
-        from PhysicalRpt import PhysicalRpt
-        from clockTree import clockTreeRpt
+        from OrganizingAndFormatingMetrics.OrganizeMetrics import OrganizeFoundMetrics
+        from FileParsers.Synopsys.PVTmetric import PVTMetric
+        from FileParsers.Synopsys.DrcErrors import DRCError
+        from FileParsers.Synopsys.DpLog import dpLog
+        from FileParsers.Synopsys.TotalDrcErrors import TotalDrcErrors
+        from FileParsers.OtherMetricClass import OtherMetricClass
+        from FileParsers.Synopsys.FinalRpt import FinalRpt
+        from FileParsers.Synopsys.PhysicalRpt import PhysicalRpt
+        from FileParsers.Synopsys.ClockTree import clockTreeRpt
         # from RunTimeRpt import RunTimeRpt
         # from QorRpt import QorRpt
         # from PvPower import PvPower

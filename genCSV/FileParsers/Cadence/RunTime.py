@@ -5,7 +5,7 @@ class CadenceRunTimeData:
     pass
 
 
-class CadenceRunTime:
+class CaRunTime:
     @staticmethod
     def mathcLine(line, *args):
         import re
@@ -35,28 +35,28 @@ class CadenceRunTime:
         #f.close()
         data_items = []
         run_time_data = CadenceRunTimeData()
-        run_time_data.found_run_time = [CadenceRunTime.replace_space('sta Run Time'), "N/A"]
+        run_time_data.found_run_time = [CaRunTime.replace_space('sta Run Time'), "N/A"]
         #f = open(file, 'r')
         #line = f.readline()
         i = 0
         for line in open(file):   
         #while line:
             try:
-                found_run_time = CadenceRunTime.mathcLine(line, 'Ending "Tempus Timing Signoff Solution"')
+                found_run_time = CaRunTime.mathcLine(line, 'Ending "Tempus Timing Signoff Solution"')
 
                 if found_run_time:
                     run_time_data.found_run_time[1] = found_run_time.group(2)
-                if i % 300 == 0:
-                    print("mult of 300")
-                i += 1
-                # print(i)
+                # if i % 300 == 0:
+                #     print("mult of 300")
+                # i += 1
+                # # print(i)
                 #line = f.readline()
             except:
                 e = sys.exc_info()[0]
-                print(e)
+                # print(e)
                 #write_to_page("<p>Error:%s</p>" % e)
         #f.close()
-        print("left loop")
+        # print("left loop")
         data_items.append(tuple(run_time_data.found_run_time))
 
         return data_items

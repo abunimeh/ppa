@@ -1,4 +1,5 @@
-__author__ = 'dcart_000'
+__author__ = ''
+
 
 class GenerateMetrics:
     @staticmethod
@@ -10,10 +11,15 @@ class GenerateMetrics:
         # pdb.set_trace()
         print("My config", config_file)
         # command_line_args[0] is always the script location so we get rid of it since we don't need it anymore
-        if command_line_args[1].endswith("config.json"):
-            test_case_args = command_line_args[2:len(command_line_args)]
-        else:
-            test_case_args = command_line_args[1:len(command_line_args)]
+        test_case_args = command_line_args[1:len(command_line_args)]
+        for test_case_arg in test_case_args:
+            if test_case_arg.endswith('config.json'):
+                test_case_args.remove(test_case_arg)
+        # command_line_args[0] is always the script location so we get rid of it since we don't need it anymore
+        # if command_line_args[1].endswith("config.json"):
+        #     test_case_args = command_line_args[2:len(command_line_args)]
+        # else:
+        #     test_case_args = command_line_args[1:len(command_line_args)]
 
         # With open is a secure way to open and close a file. Using with we don't have to implicitly close the file
         # as it does it on its own
@@ -105,7 +111,6 @@ class GenerateMetrics:
     @staticmethod
     def generate_csv(temp_metric_collections, test_case, csv_written):
         import csv
-
         names, values = [], []
         name = 0
         value = 1
@@ -143,9 +148,11 @@ class GenerateMetrics:
     def return_config_name():
         import sys
         import os
+        # sys_args = [r'C:\dev\Intel\ppa\cadence\mult_1bit_scan(copy)']
         for argument in sys.argv:
             if argument.endswith("config.json"):
-               config_file = sys.argv[1]
+               config_file = argument
+               return config_file
             else:
                config_file = os.path.join(sys.path[0], 'config.json')
         return config_file

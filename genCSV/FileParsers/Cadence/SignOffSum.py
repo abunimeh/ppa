@@ -21,6 +21,7 @@ class CadenceSignOffSum:
 
     @staticmethod
     def search_file(file):
+        from OrganizingAndFormatingMetrics.FormatMetrics import FormatMetrics
         print(file)
         # Open the file with read only permit
         f = open(file, "r")
@@ -42,13 +43,13 @@ class CadenceSignOffSum:
             found_max_trans = CadenceSignOffSum.mathcLine('max_tran', line)
 
             if found_wns:
-                s_o_sum.found_wns[1] = found_wns.group(2)
+                s_o_sum.found_wns[1] = FormatMetrics.format_metric_values(found_wns.group(2))
             elif found_tns:
-                s_o_sum.found_apr_tns[1] = found_tns.group(2)
+                s_o_sum.found_apr_tns[1] = FormatMetrics.format_metric_values(found_tns.group(2))
             elif found_max_cap:
-                s_o_sum.found_max_cap[1] = found_max_cap.group(2)
+                s_o_sum.found_max_cap[1] = FormatMetrics.format_metric_values(found_max_cap.group(2))
             elif found_max_trans:
-                s_o_sum.found_max_trans[1] = found_max_trans.group(2)
+                s_o_sum.found_max_trans[1] = FormatMetrics.format_metric_values(found_max_trans.group(2))
 
         data_items.append(tuple(s_o_sum.found_wns))
         data_items.append(tuple(s_o_sum.found_apr_tns))

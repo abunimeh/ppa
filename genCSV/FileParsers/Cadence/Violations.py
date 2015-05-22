@@ -24,6 +24,7 @@ class CadenceViolations:
 
     @staticmethod
     def search_file(file):
+        from OrganizingAndFormatingMetrics.FormatMetrics import FormatMetrics
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
@@ -47,21 +48,21 @@ class CadenceViolations:
                 if found_max_trans.group(2) == '':
                     value_found = 0
                 else:
-                    value_found = found_max_trans.group(2)
+                    value_found = FormatMetrics.format_metric_values(found_max_trans.group(2))
                 viol_data.found_max_trans[1] = value_found
 
             elif found_max_cap:
                 if found_max_cap.group(2) == '':
                     value_found = 0
                 else:
-                    value_found = found_max_cap.group(2)
+                    value_found = FormatMetrics.format_metric_values(found_max_cap.group(2))
                 viol_data.found_max_cap[1] = value_found
 
             elif found_max_fanout:
                 if found_max_fanout.group(2) == '':
                     value_found = 0
                 else:
-                    value_found = found_max_fanout.group(2)
+                    value_found = FormatMetrics.format_metric_values(found_max_fanout.group(2))
                 viol_data.found_max_fanout[1] = value_found
 
         data_items.append(tuple(viol_data.found_max_trans))
