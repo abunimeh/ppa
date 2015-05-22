@@ -24,7 +24,7 @@ class RunTimeRpt:
 
     # replace_space() replaces all the blank spaces with underscores
     @staticmethod
-    def replaceSpace(metricname):
+    def replace_space(metricname):
         import re
         newName = re.sub(r'[\W]+', "_", metricname)
         return newName
@@ -33,7 +33,8 @@ class RunTimeRpt:
     @staticmethod
     def search_file(file):
         import re
-        from OrganizingAndFormatingMetrics.FormatMetrics import FormatMetrics
+        from Metrics.FormatMetric import FormatMetric
+
         stage = RunTimeRpt.metric_naming(file)
         # Open the file with read only permit
         f = open(file, "r")
@@ -42,23 +43,23 @@ class RunTimeRpt:
         f.close()
         DataItems = []
         rptData = RunTimeRptData()
-        rptData.foundRunTime_max = [RunTimeRpt.replaceSpace("pv max tttt" + " run time"), "N/A"]
-        rptData.foundRunTime_min = [RunTimeRpt.replaceSpace("pv min tttt" + " run time"), "N/A"]
-        rptData.foundRunTime_noise = [RunTimeRpt.replaceSpace("pv noise tttt" + " run time"), "N/A"]
-        rptData.foundRunTime_power = [RunTimeRpt.replaceSpace("pv power tttt" + " run time"), "N/A"]
+        rptData.foundRunTime_max = [RunTimeRpt.replace_space("pv max tttt" + " run time")+" (secs)", "N/A"]
+        rptData.foundRunTime_min = [RunTimeRpt.replace_space("pv min tttt" + " run time")+" (secs)", "N/A"]
+        rptData.foundRunTime_noise = [RunTimeRpt.replace_space("pv noise tttt" + " run time")+" (secs)", "N/A"]
+        rptData.foundRunTime_power = [RunTimeRpt.replace_space("pv power tttt" + " run time")+" (secs)", "N/A"]
 
         for line in lines:
             foundRunTime = re.search(r'(Runtime[\s]*of[\s]*Entire[\s]*Timing[\s]*Run)[\s]*=+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
 
             if foundRunTime:
                 if "pv max tttt" is stage:
-                    rptData.foundRunTime_max[1] = FormatMetrics.format_metric_values(foundRunTime.group(2))
+                    rptData.foundRunTime_max[1] = FormatMetric.format_metric_values(foundRunTime.group(2))
                 elif "pv min tttt" is stage:
-                    rptData.foundRunTime_min[1] = FormatMetrics.format_metric_values(foundRunTime.group(2))
+                    rptData.foundRunTime_min[1] = FormatMetric.format_metric_values(foundRunTime.group(2))
                 elif "pv power tttt" is stage:
-                    rptData.foundRunTime_noise[1] = FormatMetrics.format_metric_values(foundRunTime.group(2))
+                    rptData.foundRunTime_noise[1] = FormatMetric.format_metric_values(foundRunTime.group(2))
                 elif "pv noise tttt" is stage:
-                    rptData.foundRunTime_power[1] = FormatMetrics.format_metric_values(foundRunTime.group(2))
+                    rptData.foundRunTime_power[1] = FormatMetric.format_metric_values(foundRunTime.group(2))
 
         DataItems.append(tuple(rptData.foundRunTime_max))
         DataItems.append(tuple(rptData.foundRunTime_min))

@@ -44,6 +44,11 @@ class PVTMetric:
         pvtdata = PVTMetricData()
         for line in lines:
             found_db_file = re.search(r'(Loading[\s]*db[\s]*file).*/[\w]*_[\w]*_[\w]*_([rx\d]+[\w]+_[\w]+_[\d\.]+v_[-]*[\d]+c_[\w]+)', line, re.I)
+            if file.endswith("icc.log"):
+                found_kit = re.search(r'(==>SOURCING:)[\s]*.*/([afdkitcsr\._\d]+[\d]+[afdkitcsr\._\d]+)/', line)
+                if found_kit:
+                    pvtdata.found_kit = "Kit", found_kit.group(2)
+                    DataItems.append(pvtdata.found_kit)
             if found_db_file:
                 value = found_db_file.group(2)
                 if value not in foundValue:

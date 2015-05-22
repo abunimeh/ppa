@@ -33,28 +33,28 @@
         ]
     },
     "default_list_of_metrics":[
-          "Apr_Shorts", "Apr_Memory", "Testcase_Name",
+          "Apr_Shorts", "Apr_Memory (MB)", "Testcase_Name", "Kit",
           "DateTime", "Tool", "syn_Cell_Count", "syn_REG2REG_critical_path_len", "syn_REG2REG_total_hold_viol",
           "syn_REG2REG_total_neg_slack", "syn_REG2REG_worst_hold_violation", "syn_REG2REG_worst_setup_viol",
-          "syn_cpu_runtime", "syn_max_cap_viols", "syn_max_fanout_viols", "syn_max_trans_viols", "syn_pvt",
-          "syn_tool_version", "apr_Cell_Count", "apr_DRC", "apr_Memory", "apr_REG2REG_critical_path_len",
+          "syn_cpu_runtime (secs)", "syn_max_cap_viols", "syn_max_fanout_viols", "syn_max_trans_viols", "syn_pvt",
+          "syn_tool_version", "apr_Cell_Count", "apr_DRC", "apr_REG2REG_critical_path_len",
           "apr_REG2REG_total_hold_viol", "apr_REG2REG_total_neg_slack", "apr_REG2REG_worst_hold_violation",
-          "apr_REG2REG_worst_setup_viol", "apr_Shorts", "apr_cpu_runtime", "apr_cts_max_global_skew",
+          "apr_REG2REG_worst_setup_viol", "apr_Shorts", "apr_cpu_runtime (secs)", "apr_cts_max_global_skew",
           "apr_max_cap_viols", "apr_max_fanout_viols", "apr_max_trans_viols", "apr_pvt", "apr_tool_version",
-          "apr_utilization (%)", "drc_IPall", "drc_IPall_Peak_Memory", "drc_IPall_Runtime", "drc_denall",
-          "drc_denall_reuse_Peak_Memory", "drc_denall_reuse_Runtime", "drc_drcd", "drc_drcd_Peak_Memory",
-          "drc_drcd_Runtime", "drc_tool_version", "drc_total_viols", "drc_trclvs", "drc_trclvs_Peak_Memory",
-          "drc_trclvs_Runtime", "pv_max_pvt", "pv_max_tttt_Cell_Count", "pv_max_tttt_REG2REG_critical_path_len",
-          "pv_max_tttt_REG2REG_total_neg_slack", "pv_max_tttt_REG2REG_worst_setup_viol", "pv_max_tttt_run_time",
+          "apr_utilization (%)", "drc_IPall (NB)", "drc_IPall_Peak_Memory (MB)", "drc_IPall_Runtime (secs)", "drc_denall (NB)",
+          "drc_denall_reuse_Peak_Memory (MB)", "drc_denall_reuse_Runtime (secs)", "drc_drcd (NB)", "drc_drcd_Peak_Memory (MB)",
+          "drc_drcd_Runtime (secs)", "drc_tool_version", "drc_total_viols", "drc_trclvs (NB)", "drc_trclvs_Peak_Memory (MB)",
+          "drc_trclvs_Runtime (secs)", "pv_max_pvt", "pv_max_tttt_Cell_Count", "pv_max_tttt_REG2REG_critical_path_len",
+          "pv_max_tttt_REG2REG_total_neg_slack", "pv_max_tttt_REG2REG_worst_setup_viol", "pv_max_tttt_run_time (secs)",
           "pv_max_tttt_tool_version", "pv_min_pvt", "pv_min_tttt_Cell_Count","pv_noise_tttt_max_cap_viols",
           "pv_min_tttt_REG2REG_critical_path_len", "pv_min_tttt_REG2REG_total_neg_slack",
-          "pv_min_tttt_REG2REG_worst_setup_viol", "pv_min_tttt_run_time", "pv_min_tttt_tool_version",
-          "pv_power_pvt", "pv_power_tttt_internal", "pv_power_tttt_leakage", "pv_power_tttt_run_time",
+          "pv_min_tttt_REG2REG_worst_setup_viol", "pv_min_tttt_run_time (secs)", "pv_min_tttt_tool_version",
+          "pv_power_pvt", "pv_power_tttt_internal", "pv_power_tttt_leakage", "pv_power_tttt_run_time (secs)",
           "pv_power_tttt_switch", "pv_power_tttt_total", "pv_noise_pvt", "pv_noise_tttt_Cell_Count",
-          "pv_noise_tttt_max_fanout_viols", "pv_noise_tttt_max_trans_viols", "pv_noise_tttt_run_time",
+          "pv_noise_tttt_max_fanout_viols", "pv_noise_tttt_max_trans_viols", "pv_noise_tttt_run_time (secs)",
           "pv_noise_tttt_tool_version", "apr_Power_Internal","apr_Power_Leakage","apr_Power_Switching",
-          "apr_Power_Total","apr_REG2REG_TNS","apr_REG2REG_WNS","apr_Run_Time","calibre_HV",
-          "calibre_denall_reuse","calibre_drcc","calibre_gden","calibre_lvs","sta_Cell_Count","sta_Run_Time",
+          "apr_Power_Total","apr_REG2REG_TNS","apr_REG2REG_WNS","apr_Run_Time (secs)","calibre_HV",
+          "calibre_denall_reuse","calibre_drcc","calibre_gden","calibre_lvs","sta_Cell_Count","sta_Run_Time (secs)",
           "sta_max_cap_viols","sta_max_trans_viols","sta_max_tttt_REG2REG_TNS",
           "sta_max_tttt_REG2REG_worst_setup_viols","sta_min_tttt_REG2REG_TNS",
           "sta_min_tttt_REG2REG_worst_hold_viols","syn_REG2REG_TNS","syn_REG2REG_WNS","apr_DRC_Violations"
@@ -195,7 +195,7 @@
                         "begin_line": "none"
                     },
                     "metric_reg_exp": ".*(Ending[\\s]*\"Encounter\"[\\s]*\\(totcpu=[\\s]*)([-\\d\\.\\:]*).*",
-                    "metric_name": "apr_Run_Time",
+                    "metric_name": "apr_Run_Time (secs)",
                     "stage": "none",
                     "directory": "none"
             }
@@ -239,7 +239,7 @@
                         "begin_line": "none"
                     },
                     "metric_reg_exp": ".*(Ending[\\s]*\"Tempus[\\s]*Timing[\\s]*Signoff[\\s]*Solution\"[\\s]*\\(totcpu=)([-\\d\\.\\:]*).*",
-                    "metric_name": "sta_Run_Time",
+                    "metric_name": "sta_Run_Time (secs)",
                     "stage": "none",
                     "directory": "none"
             }
@@ -318,7 +318,7 @@
                         "begin_line": "none"
                     },
                     "metric_reg_exp": "(Overall[\\s]*Compile[\\s]*Time[\\s]*):+[\\s]*([-\\d\\.\\:]*).*",
-                    "metric_name": "syn_cpu_runtime",
+                    "metric_name": "syn_cpu_runtime (secs)",
                     "stage": "none",
                     "directory": "none"
                 },
@@ -411,7 +411,7 @@
                         "begin_line": "none"
                     },
                     "metric_reg_exp": "(Overall[\\s]*Compile[\\s]*Time[\\s]*):+[\\s]*([-\\d\\.]*).*",
-                    "metric_name": "pv_noise_tttt_cpu_runtime",
+                    "metric_name": "pv_noise_tttt_cpu_runtime (secs)",
                     "stage": "none",
                     "directory": "none"
                 },
@@ -434,7 +434,7 @@
                         "begin_line": "none"
                     },
                     "metric_reg_exp": ".*(Runtime[\\s]*of[\\s]*Entire[\\s]*Timing[\\s]*Run)[\\s]*=+[\\s]*([\\d\\.]*).*",
-                    "metric_name": "run_time",
+                    "metric_name": "run_time (secs)",
                     "stage": 2,
                     "directory": "none"
 				      }
@@ -563,7 +563,7 @@
                         "begin_line": "none"
                     },
                     "metric_reg_exp": "(Overall[\\s]*Compile[\\s]*Time[\\s]*):+[\\s]*([-\\d\\.]*).*",
-                    "metric_name": "pv_max_tttt_cpu_runtime",
+                    "metric_name": "pv_max_tttt_cpu_runtime (secs)",
                     "stage": "none",
                     "directory": "none"
                 },
@@ -675,7 +675,7 @@
                         "begin_line": "none"
                     },
                     "metric_reg_exp": "(Overall[\\s]*Compile[\\s]*Time[\\s]*):+[\\s]*([-\\d\\.]*).*",
-                    "metric_name": "apr_cpu_runtime",
+                    "metric_name": "apr_cpu_runtime (secs)",
                     "stage": "none",
                     "directory": "none"
                 },
@@ -787,7 +787,7 @@
                         "begin_line": "none"
                     },
                     "metric_reg_exp": "(Overall[\\s]*Compile[\\s]*Time[\\s]*):+[\\s]*([-\\d\\.]*).*",
-                    "metric_name": "pv_min_tttt_cpu_runtime",
+                    "metric_name": "pv_min_tttt_cpu_runtime (secs)",
                     "stage": "none",
                     "directory": "none"
                 },

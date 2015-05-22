@@ -20,15 +20,15 @@ class dpLog:
         return stage
 
     @staticmethod
-    def replaceSpace(metricname):
+    def replace_space(metric_name):
         import re
-        newName = re.sub(r'[\W]+', "_", metricname)
+        newName = re.sub(r'[\W]+', "_", metric_name)
         return newName
 
     @staticmethod
     def search_file(file):
         import re
-        from OrganizingAndFormatingMetrics.FormatMetrics import FormatMetrics
+        from Metrics.FormatMetric import FormatMetric
         foundFlag = 0
         DataItems = []
         stage = dpLog.metric_naming(file)
@@ -38,19 +38,20 @@ class dpLog:
         lines = f.readlines()
         f.close()
         i = 0
+        formt = FormatMetric()
         dpData = dpLogData()
-        dpData.foundPeakMem = [dpLog.replaceSpace(stage + " Peak Memory") + " MB", "N/A"]
-        dpData.foundRuntime = [dpLog.replaceSpace(stage + " Runtime"), "N/A"]
+        dpData.foundPeakMem = [dpLog.replace_space(stage + " Peak Memory") + " (MB)", "N/A"]
+        dpData.foundRuntime = [dpLog.replace_space(stage + " Runtime")+" (secs)", "N/A"]
         # reversed in order to find the last value in the file
         for line in reversed(lines):
             foundPeakMem = re.search(r'.*:[\s]*(Peak)[\s]*=[\s]*([\d]*[\s]*)\(mb\)', line, re.I)
             foundRuntime = re.search(r'(Overall[\s]*engine[\s]*time)[\s]*=+[\s]*([\d]*:*[\d]*:*[\d]+)+', line, re.I)
 
             if foundPeakMem:
-                dpData.foundPeakMem[1] = foundPeakMem.group(2)
+                dpData.foundPeakMem[1] = formt.format_metric_values(foundPeakMem.group(2))
                 DataItems.append(tuple(dpData.foundPeakMem))
             elif foundRuntime:
-                dpData.foundRuntime[1] = foundRuntime.group(2)
+                dpData.foundRuntime[1] = formt.format_metric_values(foundRuntime.group(2))
                 DataItems.append(tuple(dpData.foundRuntime))
             if len(DataItems) == 2:
                 break

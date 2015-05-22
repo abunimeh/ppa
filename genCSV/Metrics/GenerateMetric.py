@@ -1,13 +1,13 @@
 __author__ = ''
 
 
-class GenerateMetrics:
+class GenerateMetric:
     @staticmethod
     def determine_testcases(command_line_args):
         import json
         import os
         # import pdb
-        config_file = GenerateMetrics.return_config_name()
+        config_file = GenerateMetric.return_config_name()
         # pdb.set_trace()
         print("My config", config_file)
         # command_line_args[0] is always the script location so we get rid of it since we don't need it anymore
@@ -82,13 +82,13 @@ class GenerateMetrics:
                             test_cases_list.append(third_lvl_files)
             print("Found %s testcases" % len(test_cases_list))
             print("Testcases:", test_cases_list)
-        GenerateMetrics.get_metrics(test_cases_list)
+        GenerateMetric.get_metrics(test_cases_list)
 
     @staticmethod
     def get_metrics(test_cases_list):
-        from FindFiles import findFiles
-        from GetCadenceMetrics import GetCadenceMetrics
-        from GetSynopsysMetrics import GetSynopsysMetrics
+        from FindFile import FindFiles
+        from Metrics.CadenceMetric import CadenceMetric
+        from Metrics.SynopsysMetric import SynopsysMetric
         # print("### Found testcases ###")
         csv_written = False
         for test_case in test_cases_list:
@@ -100,13 +100,13 @@ class GenerateMetrics:
             elif "synopsys" in test_case:
                 tool = "synopsys"
             temp_metric_collections = []
-            list_of_files = findFiles.search_dir(test_case, tool)
+            list_of_files = FindFiles.search_dir(test_case, tool)
             if tool is "cadence":
-                temp_metric_collections = GetCadenceMetrics.get_cadence_metrics(list_of_files, test_case, tool)
+                temp_metric_collections = CadenceMetric.get_cadence_metrics(list_of_files, test_case, tool)
             else:
-                temp_metric_collections = GetSynopsysMetrics.get_synopsys_metrics(list_of_files, test_case, tool)
+                temp_metric_collections = SynopsysMetric.get_synopsys_metrics(list_of_files, test_case, tool)
 
-            csv_written = GenerateMetrics.generate_csv(temp_metric_collections, test_case, csv_written)
+            csv_written = GenerateMetric.generate_csv(temp_metric_collections, test_case, csv_written)
 
     @staticmethod
     def generate_csv(temp_metric_collections, test_case, csv_written):

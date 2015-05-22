@@ -1,12 +1,13 @@
 __author__ = 'tjstickx'
 
 
-class OrganizeFoundMetrics:
+class OrganizeMetric:
     @staticmethod
     def add_missing_metrics(metric_collections, test_case, tool):
         import json
-        from GenerateMetrics import GenerateMetrics
-        config_file = GenerateMetrics.return_config_name()
+        from Metrics.GenerateMetric import GenerateMetric
+
+        config_file = GenerateMetric.return_config_name()
         metric_names = []
         new_metrics_collections = []
         # Open the JSON file and get the default list of metrics
@@ -27,30 +28,9 @@ class OrganizeFoundMetrics:
                 new_metric = default_metric_name, "\t"
                 new_metrics_collections.append(new_metric)
         metric_collections.append(new_metrics_collections)
-        # metric_collections = OrganizeFoundMetrics.format_metric_values(metric_collections)
-        temp_metric_collections = OrganizeFoundMetrics.sort_metrics(metric_collections, test_case, tool)
+        # metric_collections = OrganizeMetric.format_metric_values(metric_collections)
+        temp_metric_collections = OrganizeMetric.sort_metrics(metric_collections, test_case, tool)
         return temp_metric_collections
-
-    # @staticmethod
-    # def format_metric_values(metric_collections):
-    #     metric_value = 1
-    #     metric_collections = list(metric_collections)
-    #     print(metric_collections)
-    #     for metric_collection in metric_collections:
-    #         # Because metric_collection is a list that might have different lengths we use range(len(metric_collection))
-    #         # in the following for loop
-    #         metric_collection = list(metric_collection)
-    #         print(metric_collection)
-    #         for metric_pair in range(len(metric_collection)):
-    #             # metric_pair = list(metric_pair)
-    #             print(metric_collection[metric_pair][metric_value], type(metric_collection[metric_pair][metric_value]))
-    #             # try:
-    #
-    #             #     metric_collection[metric_pair][metric_value] = "{0:.2f}".format(float(metric_collection[metric_pair][metric_value]))
-    #             # except ValueError:
-    #             #     continue
-    #     return metric_collections
-    #         # "{0:.2f}".format(float(found_utilization.group(2)))
 
     # This method is used to add the metrics that don't appear after parsing the required files
     @staticmethod
@@ -58,12 +38,12 @@ class OrganizeFoundMetrics:
         import os
         from datetime import datetime
         from operator import itemgetter
-        temp_metric_collections, syn, apr, calibre, drc, pv_max, pv_min, pv_power, pv_noise, sta = [], [], [], [], [], [], [], [],[],[]
-        # metric_pairs = [GetSynopsysMetrics.MetricPair("syn", syn), GetSynopsysMetrics.MetricPair("apr", apr),
-        #                 GetSynopsysMetrics.MetricPair("drc", drc),  GetSynopsysMetrics.MetricPair("pv_max", pv_max),
-        #                 GetSynopsysMetrics.MetricPair("pv_min", pv_min),
-        #                 GetSynopsysMetrics.MetricPair("pv_power", pv_power),
-        #                 GetSynopsysMetrics.MetricPair("pv_noise", pv_noise),
+        temp_metric_collections, syn, apr, calibre, drc, pv_max, pv_min, pv_power, pv_noise, sta, kit= [], [], [], [], [], [], [], [],[],[], []
+        # metric_pairs = [SynopsysMetric.MetricPair("syn", syn), SynopsysMetric.MetricPair("apr", apr),
+        #                 SynopsysMetric.MetricPair("drc", drc),  SynopsysMetric.MetricPair("pv_max", pv_max),
+        #                 SynopsysMetric.MetricPair("pv_min", pv_min),
+        #                 SynopsysMetric.MetricPair("pv_power", pv_power),
+        #                 SynopsysMetric.MetricPair("pv_noise", pv_noise),
         #                 ]
         metric_collections = filter(None, metric_collections)
         metric_count = 0
@@ -99,13 +79,16 @@ class OrganizeFoundMetrics:
                     calibre.append(metric_list[metric_pair])
                 elif "sta" in metric_list[metric_pair][metric_name]:
                     sta.append(metric_list[metric_pair])
+
+                elif "Kit" in metric_list[metric_pair][metric_name]:
+                    kit.append(metric_list[metric_pair])
                 # for metric_pair in metric_pairs:
                 #     metric_count += 1
-                #     if(GetSynopsysMetrics.organize_metrics(metric_pair.metric_pair, metric_list[metric_pair][0],
+                #     if(SynopsysMetric.organize_metrics(metric_pair.metric_pair, metric_list[metric_pair][0],
                 #                                            metric_list, metric_pair.state_list)):
                 #         break
 
-                # if GetSynopsysMetrics.organize_metrics("syn", metric_list[metric_pair][0],  metric_list, syn):
+                # if SynopsysMetric.organize_metrics("syn", metric_list[metric_pair][0],  metric_list, syn):
                 #     continue
                 #
 
@@ -114,14 +97,12 @@ class OrganizeFoundMetrics:
         # following "if" statements when gathering the test case name and the kit name
         if os.path.basename(test_case) != "":
             test_case_name = os.path.basename(test_case)
-            kit_name = os.path.basename(os.path.dirname(test_case))
         else:
             test_case_name = os.path.basename(os.path.dirname(test_case))
-            kit_name = os.path.basename(os.path.dirname(os.path.dirname(test_case)))
 
-        default_metrics_collection = [("Testcase_Name", test_case_name), ("kit", kit_name),
+        default_metrics_collection = [("Testcase_Name", test_case_name),
                                       ("DateTime", str(datetime.now())), ("Tool", tool)]
-        temp_metric_collections = [default_metrics_collection, tuple(sorted(syn, key=itemgetter(0))),
+        temp_metric_collections = [default_metrics_collection, tuple(kit), tuple(sorted(syn, key=itemgetter(0))),
                                    tuple(sorted(apr, key=itemgetter(0))), tuple(sorted(drc, key=itemgetter(0))),
                                    tuple(sorted(calibre, key=itemgetter(0))), tuple(sorted(pv_max, key=itemgetter(0))),
                                    tuple(sorted(pv_min, key=itemgetter(0))), tuple(sorted(pv_power, key=itemgetter(0))),

@@ -1,9 +1,9 @@
 __author__ = ''
 
 
-class OtherMetricClass:
+class DynamicParser:
     @staticmethod
-    def mathcLine(regex1, line):
+    def mathc_line(regex1, line):
         import re
         keyword = regex1.replace(" ", "")
         line_variables = regex1
@@ -12,9 +12,9 @@ class OtherMetricClass:
         return result
 
     @staticmethod
-    def replaceSpace(metricname):
+    def replace_space(metric_name):
         import re
-        new_name = re.sub(r'[\W]+', "_", metricname)
+        new_name = re.sub(r'[\W]+', "_", metric_name)
         return new_name
 
     @staticmethod
@@ -87,9 +87,10 @@ class OtherMetricClass:
     def search_file(file, tool):
         ending = ""
         import json
-        from GenerateMetrics import GenerateMetrics
-        from OrganizingAndFormatingMetrics.FormatMetrics import FormatMetrics
-        config_file = GenerateMetrics.return_config_name()
+        from Metrics.GenerateMetric import GenerateMetric
+        from Metrics.FormatMetric import FormatMetric
+
+        config_file = GenerateMetric.return_config_name()
         with open(config_file, 'r') as f:
             json_data = json.load(f)
             # gets the line_keywords from the JSON file
@@ -116,12 +117,12 @@ class OtherMetricClass:
                         if metric_object_name["stage"] == "none":
                             met_name = metric_object_name["metric_name"]
                         elif metric_object_name["stage"] == 1:
-                            met_name = OtherMetricClass.metric_naming_1(file) + metric_object_name["metric_name"]
+                            met_name = DynamicParser.metric_naming_1(file) + metric_object_name["metric_name"]
                         elif metric_object_name["stage"] == 2:
-                            met_name = OtherMetricClass.metric_naming_2(file) + metric_object_name["metric_name"]
+                            met_name = DynamicParser.metric_naming_2(file) + metric_object_name["metric_name"]
                         elif metric_object_name["stage"] == 3:
-                            met_name = OtherMetricClass.metric_naming_3(file) + metric_object_name["metric_name"]
-                        met_value = OtherMetricClass.mathcLine(metric_object_name["metric_reg_exp"], line)
+                            met_name = DynamicParser.metric_naming_3(file) + metric_object_name["metric_name"]
+                        met_value = DynamicParser.mathc_line(metric_object_name["metric_reg_exp"], line)
                         if met_value:
                             if met_value.group(2) == '':
                                 metric = met_name, 0
@@ -129,31 +130,31 @@ class OtherMetricClass:
                                 if "add_to_value" in metric_object_name:
                                     metric = met_name, met_value.group(2)+metric_object_name["add_to_value"]
                                 else:
-                                    metric = met_name, FormatMetrics.format_metric_values(met_value.group(2))
+                                    metric = met_name, FormatMetric.format_metric_values(met_value.group(2))
                             data_items.append(metric)
                     else:
                         if last_line != line:
-                            beginning_line = OtherMetricClass.mathcLine(metric_object_name["found_section_reg_exp"]["begin_line"], line)
+                            beginning_line = DynamicParser.mathc_line(metric_object_name["found_section_reg_exp"]["begin_line"], line)
                             if beginning_line:
                                 if last_line != line:
                                     section = 1
                                 continue
-                            ending_line = OtherMetricClass.mathcLine(metric_object_name["found_section_reg_exp"]["end_line"], line)
+                            ending_line = DynamicParser.mathc_line(metric_object_name["found_section_reg_exp"]["end_line"], line)
                         if section == 1:
                             if metric_object_name["stage"] == "none":
                                 met_name = metric_object_name["metric_name"]
                             elif metric_object_name["stage"] == 1:
-                                met_name = OtherMetricClass.metric_naming_1(file) + metric_object_name["metric_name"]
+                                met_name = DynamicParser.metric_naming_1(file) + metric_object_name["metric_name"]
                             elif metric_object_name["stage"] == 2:
-                                met_name = OtherMetricClass.metric_naming_2(file) + metric_object_name["metric_name"]
+                                met_name = DynamicParser.metric_naming_2(file) + metric_object_name["metric_name"]
                             elif metric_object_name["stage"] == 3:
-                                met_name = OtherMetricClass.metric_naming_3(file) + metric_object_name["metric_name"]
-                            met_value = OtherMetricClass.mathcLine(metric_object_name["metric_reg_exp"], line)
+                                met_name = DynamicParser.metric_naming_3(file) + metric_object_name["metric_name"]
+                            met_value = DynamicParser.mathc_line(metric_object_name["metric_reg_exp"], line)
                             if met_value:
                                 if met_value.group(2) == '':
                                     metric = met_name, 0
                                 else:
-                                    metric = met_name, FormatMetrics.format_metric_values(met_value.group(2))
+                                    metric = met_name, FormatMetric.format_metric_values(met_value.group(2))
                                 data_items.append(metric)
                             if ending_line:
                                 section = 0

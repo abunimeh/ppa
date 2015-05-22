@@ -7,7 +7,7 @@ class CadenceViolationsData:
 
 class CadenceViolations:
     @staticmethod
-    def mathcLine(line, *args):
+    def match_line(line, *args):
         import re
         match_words = ""
         for arg in args:
@@ -24,7 +24,7 @@ class CadenceViolations:
 
     @staticmethod
     def search_file(file):
-        from OrganizingAndFormatingMetrics.FormatMetrics import FormatMetrics
+        from Metrics.FormatMetric import FormatMetric
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
@@ -32,6 +32,7 @@ class CadenceViolations:
 
         # close the file after reading the lines.
         f.close()
+        formt = FormatMetric()
         data_items = []
         viol_data = CadenceViolationsData()
         value_found = 0
@@ -40,29 +41,29 @@ class CadenceViolations:
         viol_data.found_max_fanout = [CadenceViolations.replace_space('syn max fanout viols'), "N/A"]
 
         for line in lines:
-            found_max_trans = CadenceViolations.mathcLine(line, 'Max_transition design rule:')
-            found_max_cap = CadenceViolations.mathcLine(line, 'Max_capacitance design rule:')
-            found_max_fanout = CadenceViolations.mathcLine(line, 'Max_fanout design rule:')
+            found_max_trans = CadenceViolations.match_line(line, 'Max_transition design rule:')
+            found_max_cap = CadenceViolations.match_line(line, 'Max_capacitance design rule:')
+            found_max_fanout = CadenceViolations.match_line(line, 'Max_fanout design rule:')
 
             if found_max_trans:
                 if found_max_trans.group(2) == '':
                     value_found = 0
                 else:
-                    value_found = FormatMetrics.format_metric_values(found_max_trans.group(2))
+                    value_found = formt.format_metric_values(found_max_trans.group(2))
                 viol_data.found_max_trans[1] = value_found
 
             elif found_max_cap:
                 if found_max_cap.group(2) == '':
                     value_found = 0
                 else:
-                    value_found = FormatMetrics.format_metric_values(found_max_cap.group(2))
+                    value_found = formt.format_metric_values(found_max_cap.group(2))
                 viol_data.found_max_cap[1] = value_found
 
             elif found_max_fanout:
                 if found_max_fanout.group(2) == '':
                     value_found = 0
                 else:
-                    value_found = FormatMetrics.format_metric_values(found_max_fanout.group(2))
+                    value_found = formt.format_metric_values(found_max_fanout.group(2))
                 viol_data.found_max_fanout[1] = value_found
 
         data_items.append(tuple(viol_data.found_max_trans))

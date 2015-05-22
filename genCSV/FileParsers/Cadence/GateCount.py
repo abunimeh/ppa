@@ -22,14 +22,14 @@ class CadenceGateCount:
 
     @staticmethod
     def search_file(file):
-        from OrganizingAndFormatingMetrics.FormatMetrics import FormatMetrics
+        from Metrics.FormatMetric import FormatMetric
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         # close the file after reading the lines.
         f.close()
-
+        formt = FormatMetric()
         data_items = []
         gate_count = CadenceGateCountData()
 
@@ -40,9 +40,9 @@ class CadenceGateCount:
             found_cell_count = CadenceGateCount.mathcLine('Inst count', line)
             found_utilization = CadenceGateCount.mathcLine('Density', line)
             if found_cell_count:
-                gate_count.found_cell_count[1] = found_cell_count.group(2)
+                gate_count.found_cell_count[1] = formt.format_metric_values(found_cell_count.group(2))
             elif found_utilization:
-                gate_count.found_utilization[1] = FormatMetrics.format_metric_values(float(found_utilization.group(2))*100) #"{0:.2f}".format(float(found_utilization.group(2))*100)
+                gate_count.found_utilization[1] = formt.format_metric_values(float(found_utilization.group(2))*100) #"{0:.2f}".format(float(found_utilization.group(2))*100)
 
         data_items.append(tuple(gate_count.found_cell_count))
         data_items.append(tuple(gate_count.found_utilization))

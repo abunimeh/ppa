@@ -45,7 +45,9 @@ class DRCError:
     @staticmethod
     def search_file(file, metricNames):
         import re
-        stage = DRCError.metric_naming(file)
+        from Metrics.FormatMetric import FormatMetric
+        formt = FormatMetric()
+        stage = formt.replace_space(DRCError.metric_naming(file))
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
@@ -70,10 +72,10 @@ class DRCError:
         if fin_rpt == 1:
             return data_items
         if violationCount > 0:
-            errorData.found_violation = DRCError.replace_space(stage), violationCount
+            errorData.found_violation = stage, formt.format_metric_values(violationCount)
             data_items.append(errorData.found_violation)
         else:
-            errorData.found_violation = DRCError.replace_space(stage), "PASS"
+            errorData.found_violation = stage + " (NB)", "PASS"
             data_items.append(errorData.found_violation)
 
         return data_items

@@ -49,7 +49,8 @@ class QorRpt:
     @staticmethod
     def search_file(file):
         import re
-        from OrganizingAndFormatingMetrics.FormatMetrics import FormatMetrics
+        from Metrics.FormatMetric import FormatMetric
+
         stage = QorRpt.metric_stage_name(file)
 
         # Open the file with read only permit
@@ -71,7 +72,7 @@ class QorRpt:
         rpt_data.found_tot_neg_slack = [QorRpt.replace_space(stage + " REG2REG " + "total neg slack"), "\t"]
         rpt_data.found_tot_hold_vio = [QorRpt.replace_space(stage + " REG2REG " + "total hold viol"), "\t"]
         rpt_data.found_cell_count = [QorRpt.replace_space(stage + " Cell Count"), "\t"]
-        rpt_data.foundCompileTime = [QorRpt.replace_space(stage + " cpu runtime"), "\t"]
+        rpt_data.foundCompileTime = [QorRpt.replace_space(stage + " cpu runtime")+" (secs)", "\t"]
         rpt_data.foundMaxTransVi = [QorRpt.replace_space(stage + " max trans viols"), "\t"]
         rpt_data.foundMaxCapVi = [QorRpt.replace_space(stage + " max cap viols"), "\t"]
         rpt_data.foundMaxFanVi = [QorRpt.replace_space(stage + " max fanout viols"), "\t"]
@@ -105,15 +106,15 @@ class QorRpt:
                 found_new_section = re.search(r'.*Timing[\s]*Path[\s]*Group.*', file_line, re.I)
 
                 if found_crit_slack:
-                    rpt_data.found_crit_slack[1] = FormatMetrics.format_metric_values(found_crit_slack.group(2))
+                    rpt_data.found_crit_slack[1] = FormatMetric.format_metric_values(found_crit_slack.group(2))
                 elif found_worst_hold_vio:
-                    rpt_data.found_worst_hold_vio[1] = FormatMetrics.format_metric_values(found_worst_hold_vio.group(2))
+                    rpt_data.found_worst_hold_vio[1] = FormatMetric.format_metric_values(found_worst_hold_vio.group(2))
                 elif found_crit_path_length:
-                    rpt_data.found_crit_path_length[1] = FormatMetrics.format_metric_values(found_crit_path_length.group(2))
+                    rpt_data.found_crit_path_length[1] = FormatMetric.format_metric_values(found_crit_path_length.group(2))
                 elif found_tot_neg_slack:
-                    rpt_data.found_tot_neg_slack[1] = FormatMetrics.format_metric_values(found_tot_neg_slack.group(2))
+                    rpt_data.found_tot_neg_slack[1] = FormatMetric.format_metric_values(found_tot_neg_slack.group(2))
                 elif found_tot_hold_vio:
-                    rpt_data.found_tot_hold_vio[1] = FormatMetrics.format_metric_values(found_tot_hold_vio.group(2))
+                    rpt_data.found_tot_hold_vio[1] = FormatMetric.format_metric_values(found_tot_hold_vio.group(2))
                 elif found_new_section:
                     in_section = False
 
@@ -128,11 +129,11 @@ class QorRpt:
             elif found_compile_time:
                 rpt_data.foundCompileTime[1] = found_compile_time.group(2)
             elif found_max_trans_vi:
-                rpt_data.foundMaxTransVi[1] = FormatMetrics.format_metric_values(found_max_trans_vi.group(2))
+                rpt_data.foundMaxTransVi[1] = FormatMetric.format_metric_values(found_max_trans_vi.group(2))
             elif found_max_cap_vi:
-                rpt_data.foundMaxCapVi[1] = FormatMetrics.format_metric_values(found_max_cap_vi.group(2))
+                rpt_data.foundMaxCapVi[1] = FormatMetric.format_metric_values(found_max_cap_vi.group(2))
             elif found_max_fan_vi:
-                rpt_data.foundMaxFanVi[1] = FormatMetrics.format_metric_values(found_max_fan_vi.group(2))
+                rpt_data.foundMaxFanVi[1] = FormatMetric.format_metric_values(found_max_fan_vi.group(2))
 
         # Append the metrics that we found to the metric_list
         metric_list.append(tuple(rpt_data.found_version))

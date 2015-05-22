@@ -1,21 +1,21 @@
 __author__ = ''
 
 
-class GetCadenceMetrics:
+class CadenceMetric:
     @staticmethod
     def get_cadence_metrics(list_of_files, test_case, tool):
-        from OrganizingAndFormatingMetrics.OrganizeMetrics import OrganizeFoundMetrics
+        from Metrics.OrganizeMetric import OrganizeMetric
         from FileParsers.Cadence.QorReportCad import CaQorReport
         from FileParsers.Cadence.RunTime import CaRunTime
         from FileParsers.Cadence.StaMaxQor import StaMaxQor
         from FileParsers.Cadence.StaMinQor import StaMinQor
         from FileParsers.Cadence.CalibreErrors import CalibreErrors
         from FileParsers.Cadence.AprRunLog import AprRunLog
-        from FileParsers.OtherMetricClass import OtherMetricClass
-        # from CadenceSignOffSum import CadenceSignOffSum
+        from FileParsers.DynamicParser import DynamicParser
+        # from FileParsers.Cadence.SignOffSum import CadenceSignOffSum
         from FileParsers.Cadence.GateCount import CadenceGateCount
-        # from CadencePowerReport import CadencePowerRpt
-        # from CadenceViolations import CadenceViolations
+        # fromFileParsers.Cadence.PowerReport import CadencePowerRpt
+        # from FileParsers.Cadence.Violations import CadenceViolations
         metric_collections = []
 
         for file in list_of_files:
@@ -45,7 +45,7 @@ class GetCadenceMetrics:
                 gate_count = CadenceGateCount.search_file(file)
                 metric_collections.append(gate_count)
             else:
-                metric_collections.append(OtherMetricClass.search_file(file, tool))
+                metric_collections.append(DynamicParser.search_file(file, tool))
         #     import sys
         # print("ARGUMENTS", sys.argv)
             # elif file.endswith('post_route_hold_optDesign.summary'):
@@ -61,7 +61,6 @@ class GetCadenceMetrics:
             #     gate_count = CadenceGateCount.search_file(file)
             #     metric_collections.append(gate_count)
 
-        temp_metric_collections = OrganizeFoundMetrics.add_missing_metrics(metric_collections, test_case, tool)
-
+        temp_metric_collections = OrganizeMetric.add_missing_metrics(metric_collections, test_case, tool)
 
         return temp_metric_collections

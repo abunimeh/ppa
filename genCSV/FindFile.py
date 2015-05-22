@@ -1,13 +1,13 @@
-class findFiles:
+class FindFiles:
     @staticmethod
     def search_dir(test_case, tool):
         import fnmatch
         import os
         import json
-        from GenerateMetrics import GenerateMetrics
+        from Metrics.GenerateMetric import GenerateMetric
         #from Configurations import Configurations
-        #from OtherMetricClass import OtherMetricClass
-        config_file = GenerateMetrics.return_config_name()
+        #from DynamicParser import DynamicParser
+        config_file = GenerateMetric.return_config_name()
         # Finds the file name endings
         with open(config_file, 'r') as f:
             json_data = json.load(f)
@@ -19,11 +19,11 @@ class findFiles:
         print("Current file endings to search for:", file_names)
         # test_case is the argument sent in when the user call the script
         if '--add' in test_case:
-            file_ending = findFiles.add_file_ending(file_names)
+            file_ending = FindFiles.add_file_ending(file_names)
             ans = input("Would you like to add temp_metric_collection associated with the new file ending(Y or N)?")
             while ans != "Y" or ans != "N":
                 if ans == "Y":
-                    #OtherMetricClass.search_file(file_ending)
+                    #DynamicParser.search_file(file_ending)
                     break
                 elif ans == "N":
                     exit("Exiting the script")
@@ -31,11 +31,11 @@ class findFiles:
                     ans = input("Would you like to add temp_metric_collection associated with the new file ending(Y or N)?")
             exit("Exiting the script")
         elif '--remove' in test_case:
-            file_ending = findFiles.remove_file_ending(file_names)
+            file_ending = FindFiles.remove_file_ending(file_names)
             ans = input("Would you like to remove the temp_metric_collection searched associated with the new file ending(Y or N)?")
             while ans != "Y" or ans != "N":
                 if ans == "Y":
-                    #OtherMetricClass.search_file(file_ending)
+                    #DynamicParser.search_file(file_ending)
                     break
                 elif ans == "N":
                     exit("Exiting the script")
