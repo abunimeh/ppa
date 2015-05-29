@@ -74,5 +74,4 @@ class AprRunLog:
                     data_items.append(run_log_data.found_kit)
             if len(data_items) == 3:
                 break
-        print(data_items)
         return data_items

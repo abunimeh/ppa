@@ -89,8 +89,9 @@ class DynamicParser:
         import json
         from Metrics.GenerateMetric import GenerateMetric
         from Metrics.FormatMetric import FormatMetric
+        from FindFile import FindFiles
 
-        config_file = GenerateMetric.return_config_name()
+        config_file = FindFiles.return_config_name()
         with open(config_file, 'r') as f:
             json_data = json.load(f)
             # gets the line_keywords from the JSON file

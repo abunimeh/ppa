@@ -52,8 +52,8 @@ class CalibreErrors:
         formt = FormatMetric()
         stage = CalibreErrors.metric_naming(file)
         calibre_errors = CalibreErrorsData()
-        calibre_errors.found_violation = [CalibreErrors.replace_space('calibre' + stage), "N/A"]
-        calibre_errors.found_fail_violations = [CalibreErrors.replace_space('calibre' + stage), "N/A"]
+        calibre_errors.found_violation = [CalibreErrors.replace_space('calibre' + stage), "\t"]
+        calibre_errors.found_fail_violations = [CalibreErrors.replace_space('calibre' + stage), "\t"]
 
         if file.endswith("drc.sum"):
             for line in lines:
@@ -71,7 +71,7 @@ class CalibreErrors:
                     data_items.append(tuple(calibre_errors.found_fail_violations))
                     return data_items
 
-        data_items.append(tuple(calibre_errors.found_violation))
-        data_items.append(tuple(calibre_errors.found_fail_violations))
+        # data_items.append(tuple(calibre_errors.found_violation))
+        # data_items.append(tuple(calibre_errors.found_fail_violations))
 
         return data_items

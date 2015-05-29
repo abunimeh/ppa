@@ -21,9 +21,9 @@ class DRCError:
         return stage
 
     @staticmethod
-    def replace_space(metricname):
+    def replace_space(metric_name):
         import re
-        newName = re.sub(r'[\W]+', "_", metricname)
+        newName = re.sub(r'[\W]+', "_", metric_name)
         return newName
 
     @staticmethod
@@ -35,15 +35,15 @@ class DRCError:
             print("Using Final_Report.txt to get errors in %s\n" % directory)
             return 1
     @staticmethod
-    def tool_version_found(metricNames):
-        for metric in metricNames:
-            met = tuple(metric)
-            for name in range(len(met)):
-                if "drc_tool_version" in met[name][0]:
+    def tool_version_found(metric_collections):
+        for metric_pair in metric_collections:
+            # met = tuple(metric)
+            # for name in range(len(met)):
+                if "drc_tool_version" in metric_pair[0]:
                     return True
         return False
     @staticmethod
-    def search_file(file, metricNames):
+    def search_file(file, metric_collections):
         import re
         from Metrics.FormatMetric import FormatMetric
         formt = FormatMetric()
@@ -55,27 +55,27 @@ class DRCError:
         f.close()
         errorData = DRCErrorData()
         violationCount = 0
-        data_items = []
+        metric_items = []
         fin_rpt = DRCError.does_fin_rpt_exist(file)
-        tool_found = DRCError.tool_version_found(metricNames)
+        tool_found = DRCError.tool_version_found(metric_collections)
         for line in lines:
             found_tool_version = re.search(r'(Generated[\s]*by):.*[\s]+([\S]*[\.]+[\S]*[\.]*[\S]*[\.]*[\S]*[\.]*[\S]*)[\s]*', line, re.I)
             if found_tool_version:
                 if tool_found is False:
                     errorData.found_tool_version = DRCError.replace_space("drc tool version"), found_tool_version.group(2)
-                    data_items.append(errorData.found_tool_version)
+                    metric_items.append(errorData.found_tool_version)
             if fin_rpt != 1:
                 found_violation = re.search(r'[\s]*([\d]+)[\s]*(violation+[s]*[\s]*found)+[\s]*', line, re.I)
                 if found_violation:
                     violationCount += int(found_violation.group(1))
 
         if fin_rpt == 1:
-            return data_items
+            return metric_items
         if violationCount > 0:
-            errorData.found_violation = stage, formt.format_metric_values(violationCount)
-            data_items.append(errorData.found_violation)
+            errorData.found_violation = stage + " (NB)", formt.format_metric_values(violationCount)
+            metric_items.append(errorData.found_violation)
         else:
             errorData.found_violation = stage + " (NB)", "PASS"
-            data_items.append(errorData.found_violation)
+            metric_items.append(errorData.found_violation)
 
-        return data_items
+        return metric_items
