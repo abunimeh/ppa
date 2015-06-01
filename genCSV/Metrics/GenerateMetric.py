@@ -174,10 +174,10 @@ class GenerateMetric:
             # temp_metric_list = tuple(temp_metric_collection)
             print(metric_pair)
             if csv_written is False:
-                names += [metric_pair[metric_name]]
-                values += [metric_pair[metric_value]]
+                names.append(metric_pair[metric_name])
+                values.append(metric_pair[metric_value])
             else:
-                values += [metric_pair[metric_value]]
+                values.append(metric_pair[metric_value])
             # for metric in range(len(temp_metric_list)):
             #     print(temp_metric_list[metric])
             #     # Names and values are concatenated into a string in order to have horizontal column
@@ -201,27 +201,34 @@ class GenerateMetric:
             # Creates a csv with the first testcase only
             # The 'wt' argument in the following "with open" statement means that if the file doesnt exist then it
             # will be and if one does exist it will be completely overwritten.
-            with open(csv_name, 'wt') as my_file:
-                writer = csv.writer(my_file, lineterminator='\n')
-                writer.writerow(names)
-                writer.writerow(values)
-            print(csv_name, 'created with', test_case)
+            try:
+                with open(csv_name, 'wt') as my_file:
+                    writer = csv.writer(my_file, lineterminator='\n')
+                    writer.writerow(names)
+                    writer = csv.writer(my_file, lineterminator='\n', quoting=csv.QUOTE_ALL)
+                    writer.writerow(values)
+                print(csv_name, 'created with', test_case)
+            except IOError:
+                print("### Unable to open the csv file. The file might be open in a csv reader. ###")
         else:
-            # The 'a' argument in the following "with open" statement means that if the file does exist then it will be
-            # appended to.
-            with open(csv_name, 'a') as my_file:
-                writer = csv.writer(my_file, lineterminator='\n')
-                writer.writerow(values)
-            print(csv_name, 'appended with', test_case)
+            try:
+                # The 'a' argument in the following "with open" statement means that if the file does exist then it will be
+                # appended to.
+                with open(csv_name, 'a') as my_file:
+                    writer = csv.writer(my_file, lineterminator='\n', quoting=csv.QUOTE_ALL)
+                    writer.writerow(values)
+                print(csv_name, 'appended with', test_case)
+            except IOError:
+                print("### Unable to open the csv file. The file might be open in a csv reader. ###")
         print()
         return csv_written
 
     @staticmethod
     def check_csv(csv_name):
-
         max_comma_count = 500
         csv_aligned = True
         line_number = 0
+
         with open(csv_name, 'r') as my_file:
             for line in my_file:
                 line_number += 1

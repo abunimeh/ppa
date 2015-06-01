@@ -67,6 +67,8 @@ class FindFiles:
         import sys
         import os
 
+        # If a config.json file is passed in then the program will use that as the configuration file otherwise we use the one
+        # located at the script location
         # sys.argv is a built in list that contains the command line arguments
         for argument in sys.argv:
             if argument.endswith(".json"):

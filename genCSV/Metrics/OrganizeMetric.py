@@ -27,8 +27,8 @@ class OrganizeMetric:
 
         for default_metric_name in default_metric_names:
             if default_metric_name not in metric_names:
-                # '\t' is the default value for blank metrics
-                new_metric = (default_metric_name, "\t")
+                # "" is the default value for blank metrics
+                new_metric = (default_metric_name, "")
                 new_metrics_collections.append(new_metric)
 
         metric_list.extend(new_metrics_collections)

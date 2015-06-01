@@ -33,7 +33,7 @@
         ]
     },
     "default_list_of_metrics":[
-          "apr_Shorts", "apr_Memory (MB)", "Testcase_Name", "Kit",
+          "apr_Memory (MB)", "Testcase_Name", "Kit",
           "DateTime", "Tool", "syn_Cell_Count", "syn_REG2REG_critical_path_len", "syn_REG2REG_total_hold_viol",
           "syn_REG2REG_total_neg_slack", "syn_REG2REG_worst_hold_violation", "syn_REG2REG_worst_setup_viol",
           "syn_cpu_runtime (secs)", "syn_max_cap_viols", "syn_max_fanout_viols", "syn_max_trans_viols", "syn_pvt",
