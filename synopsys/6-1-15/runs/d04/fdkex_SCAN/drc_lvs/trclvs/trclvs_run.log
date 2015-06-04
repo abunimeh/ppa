@@ -1,0 +1,150 @@
+
+IC Validator (R) Hierarchical Design Verification, SUSE.64 Release J-2014.06.SP2.HF1.4045 2014/09/29
+
+  (C) Copyright 1996-2014.
+  Synopsys, Inc.  All rights reserved.
+
+Called as: /p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1/bin/EM64T_SUSE64/icv -i ../../apr/outputs/fdkex.apr.oas -c fdkex -vue -D _drPROCESS=_drdotThree -D _drSECTION_LEVEL=_drYES -I . -I /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/PXL -f OASIS -rd /tmp/spalutla/adf_nightly_regr/2015-03-31/drc_trclvs_run_details_18936 -D _drTRCVIEW=_drstandard -sf icv -s ../fdkex.icv /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/trclvs.rs
+
+
+
+
+Using /usr/bin/ssh as remote shell program
+
+
+Using user-specified ICV_INCLUDES setting as:
+"/p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1/include"
+
+Parsing runset "/p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/trclvs.rs"
+
+Disabling runset caching because ICV_DISABLE_RUNSET_CACHE is set.
+p12723_dr.rs:108: warning: The macro is redefined
+         #define _drALLOW_ULV _drYES
+    from /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/trclvs.rs: 73:    	#include <p12723_dr.rs>
+    previously macro "_drALLOW_ULV" defined as: #define _drALLOW_ULV _drNO 	/* /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_dr.rs:29	*/
+dr_cell_lists:2962: warning: Undefined symbol "_drTC_FULL_DIE" (in non-evaluated sub-expression)
+    #if( defined(_drTC_FULL_DIE) && _drTC_FULL_DIE == _drYES)
+    from /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/trclvs.rs: 75:    	#include <dr_cell_lists>
+p12723_options.rs:11: warning: Undefined symbol "_drCOLLAT" (in non-evaluated sub-expression)
+         #if (defined(_drCOLLAT) && _drCOLLAT == _drYES)
+    from /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/trclvs.rs: 78:    	#include <p12723_options.rs>
+p12723_UserTextOptions.rs:9: warning: Undefined symbol "_drHV_ONLY_LIST_TEXT" (in non-evaluated sub-expression)
+         #if (_drTRCVIEW == _drHV && _drHV_ONLY_LIST_TEXT == _drYES)
+    from /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_options.rs: 149:         #include <p12723_UserTextOptions.rs>
+    from /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/trclvs.rs: 78:    	#include <p12723_options.rs>
+
+
+/p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/1273/p1273dx_LVScompare.rs:12: warning: match(no_explode_condition) will be retired in future release.
+/p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/1273/p1273dx_LVScompare.rs:736: warning: ICV LVS device setting currently use overwrite mode. Use command line option '-D ICV_ENABLE_DEVICE_SETTING_APPEND_MODE' or runset instruction '#define ICV_ENABLE_DEVICE_SETTING_APPEND_MODE' to enable LVS device setting append mode in this release.
+Parsing finished
+Runset Compile Time=0:01:35 User=89.77 Sys=3.57 Mem=7016.402
+
+
+ICV_Master (R), SUSE.64 Release J-2014.06.SP2.HF1.4116 2014/09/29
+
+  (C) Copyright 1996-2014.
+  Synopsys, Inc.  All rights reserved.
+
+
+Called as: /p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1/bin/EM64T_SUSE64/icv -i ../../apr/outputs/fdkex.apr.oas -c fdkex -vue -D _drPROCESS=_drdotThree -D _drSECTION_LEVEL=_drYES -I . -I /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/PXL -f OASIS -rd /tmp/spalutla/adf_nightly_regr/2015-03-31/drc_trclvs_run_details_18936 -D _drTRCVIEW=_drstandard -sf icv -s ../fdkex.icv /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/trclvs.rs
+ 
+
+Using user-specified ICV_INCLUDES setting as:
+"/p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1/include"
+
+Virtual Machine Init Time=0:00:01 User=1.14 Sys=0.28 Mem=7016.402
+
+
+Checked out necessary DP licenses.
+Selecting "chlr16420" as Primary host
+
+System Startup Time=0:00:02 User=0.01 Sys=1.15 Mem=7016.402
+
+
+Command execution begins.  Details recorded in the summary and log files:
+    /tmp/spalutla/adf_nightly_regr/2015-03-31/drc_trclvs_run_details_18936/fdkex.sum
+    /tmp/spalutla/adf_nightly_regr/2015-03-31/drc_trclvs_run_details_18936/trclvs.dp.log
+
+Running ...
+Import schematic netlist ../fdkex.icv ... 
+  ICV_Engine run is   1% complete.    Elapsed Time=0:00:30
+  ICV_Engine run is   2% complete.    Elapsed Time=0:00:30
+  ICV_Engine run is   3% complete.    Elapsed Time=0:00:30
+  ICV_Engine run is   4% complete.    Elapsed Time=0:00:30
+  ICV_Engine run is   5% complete.    Elapsed Time=0:00:30
+  ICV_Engine run is  10% complete.    Elapsed Time=0:00:39
+  ICV_Engine run is  15% complete.    Elapsed Time=0:00:39
+  ICV_Engine run is  20% complete.    Elapsed Time=0:00:39
+  ICV_Engine run is  25% complete.    Elapsed Time=0:00:39
+  ICV_Engine run is  30% complete.    Elapsed Time=0:00:40
+  ICV_Engine run is  35% complete.    Elapsed Time=0:00:40
+  ICV_Engine run is  40% complete.    Elapsed Time=0:00:40
+  ICV_Engine run is  45% complete.    Elapsed Time=0:00:40
+  ICV_Engine run is  50% complete.    Elapsed Time=0:00:40
+  ICV_Engine run is  55% complete.    Elapsed Time=0:01:00
+  ICV_Engine run is  60% complete.    Elapsed Time=0:01:12
+  ICV_Engine run is  65% complete.    Elapsed Time=0:01:16
+  ICV_Engine run is  70% complete.    Elapsed Time=0:01:23
+  ICV_Engine run is  75% complete.    Elapsed Time=0:01:23
+  ICV_Engine run is  80% complete.    Elapsed Time=0:01:23
+  ICV_Engine run is  85% complete.    Elapsed Time=0:01:55
+  ICV_Engine run is  90% complete.    Elapsed Time=0:02:27
+  ICV_Engine run is  95% complete.    Elapsed Time=0:02:27
+
+ICV_Netlist (R) Stand-alone netlist generator, SUSE.64 Release J-2014.06.SP2.HF1.4015 2014/08/19
+
+  (C) Copyright 1996-2014.
+  Synopsys, Inc.  All rights reserved.
+
+ Generating NETLIST file "fdkex.net".
+
+ Netlisting Time=0:00:03  User=1.30 Sys=0.14 Mem=78.593
+
+   Check Time=0:00:03  User=0.00 Sys=0.00 Mem=83.771
+
+LVS compare start time    : 2015-03-31 10:36:47
+  ICV_Compare run is   0% complete.    Elapsed Time=0:00:01
+  ICV_Compare run is   5% complete.    Elapsed Time=0:00:01
+  ICV_Compare run is  10% complete.    Elapsed Time=0:00:01
+  ICV_Compare run is  15% complete.    Elapsed Time=0:00:02
+  ICV_Compare run is  20% complete.    Elapsed Time=0:00:03
+  ICV_Compare run is  25% complete.    Elapsed Time=0:00:03
+  ICV_Compare run is  30% complete.    Elapsed Time=0:00:03
+  ICV_Compare run is  35% complete.    Elapsed Time=0:00:03
+  ICV_Compare run is  40% complete.    Elapsed Time=0:00:03
+  ICV_Compare run is  45% complete.    Elapsed Time=0:00:03
+  ICV_Compare run is  50% complete.    Elapsed Time=0:00:04
+  ICV_Compare run is  55% complete.    Elapsed Time=0:00:04
+  ICV_Compare run is  60% complete.    Elapsed Time=0:00:04
+  ICV_Compare run is  65% complete.    Elapsed Time=0:00:04
+  ICV_Compare run is 100% complete.    Elapsed Time=0:00:07
+LVS compare end time      : 2015-03-31 10:36:54
+Total runtime for LVS compare Time=0:00:07  User=4.72 Sys=0.79 Mem=276.210
+   Check Time=0:00:08  User=0.01 Sys=0.00 Mem=69.899
+
+  ICV_Engine run is 100% complete.    Elapsed Time=0:03:30
+
+Completing error storage...
+  Overall error storage time: None
+
+Generating fdkex.LAYOUT_ERRORS...
+  Generation Time=0:00:00  User=0.00 Sys=0.00 Mem=9.866
+
+Generating fdkex.TOP_LAYOUT_ERRORS...
+  Generation Time=0:00:00  User=0.00 Sys=0.00 Mem=9.897
+
+   Check Time=0:00:00  User=0.00 Sys=0.01 Mem=248.991
+
+-------------
+
+IC Validator Run: Time=0:05:08
+
+IC Validator Peak Machine Memory Report
+chlr16420    : Peak = 2846(Mb)
+
+Overall Disk Usage Disk=544.082
+Overall Design Hierarchy Mem=8.926
+Overall engine Time=0:05:08 Highest command Mem=2845.577 
+
+Overall Master Mem=7016.570
+IC Validator is done.

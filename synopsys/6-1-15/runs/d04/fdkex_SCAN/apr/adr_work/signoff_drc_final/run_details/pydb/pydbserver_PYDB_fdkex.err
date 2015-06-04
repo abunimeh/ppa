@@ -1,0 +1,2 @@
+PYDB Server Startup at 2015-03-31 06:06:34
+150331  6:06:36 [Warning] Can't open and lock time zone table: Table 'mysql.time_zone_leap_second' doesn't exist trying to live without them

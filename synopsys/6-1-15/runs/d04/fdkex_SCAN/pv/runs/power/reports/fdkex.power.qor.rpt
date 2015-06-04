@@ -1,0 +1,148 @@
+
+****************************************
+Report : qor
+Design : fdkex
+Version: J-2014.06-SP2
+Date   : Tue Mar 31 10:16:56 2015
+****************************************
+
+
+  Timing Path Group 'async_default' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            8
+  Critical Path Length:                  617.18
+  Critical Path Slack:                   -44.31
+  Total Negative Slack:                -4773.13
+  No. of Violating Paths:                   449
+  ---------------------------------------------
+
+  Timing Path Group 'clock_gating_default' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            8
+  Critical Path Length:                  597.84
+  Critical Path Slack:                   -34.29
+  Total Negative Slack:                -2946.04
+  No. of Violating Paths:                   248
+  ---------------------------------------------
+
+  Timing Path Group 'COMB' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            5
+  Critical Path Length:                  400.40
+  Critical Path Slack:                  -283.74
+  Total Negative Slack:                 -567.36
+  No. of Violating Paths:                     2
+  ---------------------------------------------
+
+  Timing Path Group 'INPUTS' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           11
+  Critical Path Length:                  602.27
+  Critical Path Slack:                   -17.50
+  Total Negative Slack:                 -505.41
+  No. of Violating Paths:                   104
+  ---------------------------------------------
+
+  Timing Path Group 'OUTPUTS' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            3
+  Critical Path Length:                  280.45
+  Critical Path Slack:                  -413.78
+  Total Negative Slack:               -22442.86
+  No. of Violating Paths:                   148
+  ---------------------------------------------
+
+  Timing Path Group 'REG2REG' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            5
+  Critical Path Length:                  386.88
+  Critical Path Slack:                    21.24
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+
+  Timing Path Group 'async_default' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            5
+  Critical Path Length:                  414.13
+  Critical Path Slack:                   154.30
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'clock_gating_default' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            4
+  Critical Path Length:                  235.16
+  Critical Path Slack:                    37.63
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'COMB' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            5
+  Critical Path Length:                  387.96
+  Critical Path Slack:                   671.30
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'INPUTS' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            2
+  Critical Path Length:                  368.43
+  Critical Path Slack:                   112.81
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'OUTPUTS' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:                  199.60
+  Critical Path Slack:                   482.94
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'REG2REG' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1
+  Critical Path Length:                  205.56
+  Critical Path Slack:                   -24.83
+  Total Negative Slack:                -1186.51
+  No. of Violating Paths:                   390
+  ---------------------------------------------
+
+
+  Cell Count
+  ---------------------------------------------
+  Hierarchical Cell Count:                    4
+  Hierarchical Port Count:                 2626
+  Leaf Cell Count:                        59414
+  ---------------------------------------------
+
+
+  Area
+  ---------------------------------------------
+  Design Area:                     27005.091797
+  Area Cost:                      -27005.091800
+  ---------------------------------------------
+
+
+  Design Rule Violations
+  ---------------------------------------------
+  Total No. of Pins in Design:           208797
+  clock_gating_setup Count:                 248
+  min_capacitance Count:                     59
+  max_transition Count:                      16
+  max_fanout Count:                         564
+  clock_gating_setup Cost:             -2946.04
+  min_capacitance Cost:                  -11.09
+  max_transition Cost:                  -111.74
+  max_fanout Cost:                     -3515.00
+  Total DRC Cost:                      -6583.86
+  ---------------------------------------------
+

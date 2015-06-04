@@ -1,0 +1,198 @@
+
+
+                         StarRC (TM)
+             Copyright (c) 1999-2014 Synopsys, Inc.
+                      All Rights Reserved
+
+
+ExecName: /p/foundry/eda/em64t_SLES11/starrcxt/J-2014.06-SP3/suse64_starrc/bin/StarXtract
+Version: J-2014.06-SP3
+Built on: Oct 15 2014 13:38:17
+Start Time: Tue Mar 31 10:02:30 2015
+
+Host ............ chlr16420
+
+xTractorName:/p/foundry/eda/em64t_SLES11/starrcxt/J-2014.06-SP3/suse64_starrc/bin/xTractor
+Version: J-2014.06-SP3
+Built on: Oct 15 2014 13:38:39
+WARNING: MODE is no longer required for Milkyway and LEF/DEF flows.  Ignoring MODE in command file.
+         Please refer to StarRC H-2012.12 release notes for more information. (SX-0499)
+WARNING: Ignoring operating_temperature in star_cmd, will use operating_temperatures in corner file. (SX-0362)
+
+Block ........... fdkex
+Star Directory ..
+ /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/ext/star_fdkex_mw
+
+Milkyway DB .....
+ /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/apr/mwdb/fdkex_fill_LIB
+
+ Ref Libs Report is skipped.
+WARNING: FILL_COUPLING_THRESHOLD will be obsolete for gate-level designs in 2014.12 (SX-3130)
+WARNING: REPORT_SMIN_VIOLATION:YES may not report accurate SMIN violations. Refer to pre-flow
+         DesignRuleCheck for accurate reporting. (SX-3071)
+TRANSLATE_FLOATING_AS_FILL:YES is applied while ignoring REMOVE_FLOATING_NETS:YES. (SX-0246)
+METAL_FILL_POLYGON_HANDLING is applicable to input metal fills only. Since
+TRANSLATE_FLOATING_AS_FILL is set to YES, floating nets are translated as floating metal fill. (SX-0247)
+
+Map Layers:  Tue Mar 31 10:02:42 2015
+WARNING: DEVICE terminal":"CONDUCTOR layer "poly" has no connections. (SX-1851)
+WARNING: DEVICE terminal":"CONDUCTOR layer "tcn" has no connections. (SX-1851)
+WARNING: DEVICE terminal":"CONDUCTOR layer "gcn" has no connections. (SX-1851)
+  Warnings: 3    Errors: 0    (See file summary/layers.sum)
+  Layers        Elp=00:00:03 Cpu=00:00:03 Usr=2.8    Sys=0.3    Mem=218.2 
+Done
+
+Create Models:  Tue Mar 31 10:02:46 2015
+  Warnings: 0    Errors: 0
+  Models        Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=87.9  
+Done
+
+Build HN:  Tue Mar 31 10:02:47 2015
+  Warnings: 0    Errors: 0
+  HN            Elp=00:00:09 Cpu=00:00:06 Usr=5.6    Sys=0.6    Mem=335.7 
+Done
+
+Process Cells:  Tue Mar 31 10:02:56 2015
+WARNING: Floating nets will be translated as fill. (SX-0728)
+  Warnings: 1    Errors: 0    (See file summary/cells.sum)
+  Cells         Elp=00:00:25 Cpu=00:00:20 Usr=19.8   Sys=0.8    Mem=960.0 
+Done
+
+Process Skip Cells_part1:  Tue Mar 31 10:03:21 2015
+  Warnings: 0    Errors: 0
+  SkipCells_part1 Elp=00:00:02 Cpu=00:00:00 Usr=0.1    Sys=0.1    Mem=119.2 
+Done
+
+Process Skip Cells_part2:  Tue Mar 31 10:03:23 2015
+  Warnings: 0    Errors: 0
+  SkipCells_part2 Elp=00:00:02 Cpu=00:00:00 Usr=0.1    Sys=0.1    Mem=119.2 
+Done
+
+Merge Skip Cells:  Tue Mar 31 10:03:32 2015
+  Warnings: 0    Errors: 0
+  MergeSkipCells Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=105.8 
+Done
+
+Translate_part1 DB:  Tue Mar 31 10:03:32 2015
+  Warnings: 0    Errors: 0
+  Translate_part1 Elp=00:00:10 Cpu=00:00:02 Usr=1.8    Sys=0.3    Mem=369.5 
+Done
+
+Merge Translate:  Tue Mar 31 10:03:43 2015
+  Warnings: 0    Errors: 0
+  MergeTranslate Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=0.0   
+Done
+
+Preprocess Reconnect:  Tue Mar 31 10:03:44 2015
+  Warnings: 0    Errors: 0
+  PreReconnect  Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=88.0  
+Done
+
+Reconnect Unimportant:  Tue Mar 31 10:03:44 2015
+  Warnings: 0    Errors: 0
+  ReconnectU    Elp=00:00:46 Cpu=00:00:43 Usr=42.7   Sys=0.6    Mem=1047.8
+Done
+
+Preprocess Reconnect:  Tue Mar 31 10:04:31 2015
+NOT RUNNING PreReconnect !!  Using previous results. 
+  Previous PreReconnect  Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=88.0 (SX-1107)
+Done
+
+Reconnect Unimportant:  Tue Mar 31 10:04:31 2015
+NOT RUNNING ReconnectU !!  Using previous results. 
+  Previous ReconnectU    Elp=00:00:46 Cpu=00:00:43 Usr=42.7   Sys=0.6    Mem=1047.8 (SX-1107)
+Done
+
+Partition_part1 DB:  Tue Mar 31 10:04:31 2015
+Completed   1%  Time=00:00:00  RemainingTime=00:00:08  Mem=105.762
+Completed  11%  Time=00:00:00  RemainingTime=00:00:04  Mem=106.371
+Completed  21%  Time=00:00:00  RemainingTime=00:00:04  Mem=106.859
+Completed  41%  Time=00:00:01  RemainingTime=00:00:03  Mem=107.707
+Completed  61%  Time=00:00:02  RemainingTime=00:00:02  Mem=108.445
+Completed  81%  Time=00:00:03  RemainingTime=00:00:01  Mem=109.285
+Completed 100%  Time=00:00:04  RemainingTime=00:00:00  Mem=110.105
+  Warnings: 0    Errors: 0
+  Partition_part1 Elp=00:00:05 Cpu=00:00:04 Usr=4.2    Sys=0.1    Mem=109.5 
+Done
+
+Netlist Assembly Setup:  Tue Mar 31 10:04:38 2015
+  Warnings: 0    Errors: 0
+  NetlistAssemblySetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=101.0 
+Done
+
+xTract_part4 DB:  Tue Mar 31 10:04:40 2015
+Completed   1%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed   9%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  13%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  17%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  21%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  25%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  28%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  32%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  36%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  40%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  44%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  48%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  51%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  55%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  59%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  63%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  67%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  71%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  75%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  78%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  82%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  86%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  90%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  94%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  98%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+  Extracted 0 capacitors, 96 resistors, 0 reluctors, 526 nodes
+   Reduced to 374 nodes,  (28.8973%)
+   Reduced to 0 resistors,  (100%)
+   Warnings: 0    Errors: 0
+  xTract_part4  Elp=00:00:01 Cpu=00:00:00 Usr=0.8    Sys=0.1    Mem=375.3 
+Done
+
+xTract Post Process DB:  Tue Mar 31 10:09:41 2015
+  Warnings: 0    Errors: 0
+  xTractPP      Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=68.6  
+Done
+
+Netlist_part1 DB:  Tue Mar 31 10:09:43 2015
+Completed   0%  Time=00:00:00  RemainingTime=00:00:15  Mem=132.645
+Completed  10%  Time=00:00:02  RemainingTime=00:00:21  Mem=335.363
+Completed  20%  Time=00:00:04  RemainingTime=00:00:17  Mem=513.488
+Completed  40%  Time=00:00:16  RemainingTime=00:00:24  Mem=732.434
+Completed  60%  Time=00:00:24  RemainingTime=00:00:15  Mem=1048.69
+Completed  80%  Time=00:00:49  RemainingTime=00:00:11  Mem=1146.75
+Completed 100%  Time=00:01:54  RemainingTime=00:00:00  Mem=1146.75
+  Warnings: 0    Errors: 0
+  Netlist_part1 Elp=00:02:29 Cpu=00:01:58 Usr=114.7  Sys=3.4    Mem=1146.3
+Done
+
+Netlist_merge_end DB:  Tue Mar 31 10:14:03 2015
+  Warnings: 0    Errors: 0
+  Netlist_merge_end Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.1    Mem=65.7  
+Done
+  
+Layers               Elp=00:00:03 Cpu=00:00:03 Usr=2.8    Sys=0.3    Mem=218.2 
+Models               Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=87.9  
+HN                   Elp=00:00:09 Cpu=00:00:06 Usr=5.6    Sys=0.6    Mem=335.7 
+Cells                Elp=00:00:25 Cpu=00:00:20 Usr=19.8   Sys=0.8    Mem=960.0 
+SkipCells_part1      Elp=00:00:02 Cpu=00:00:00 Usr=0.1    Sys=0.1    Mem=119.2 
+SkipCells_part2      Elp=00:00:02 Cpu=00:00:00 Usr=0.1    Sys=0.1    Mem=119.2 
+MergeSkipCells       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=105.8 
+Translate_part1      Elp=00:00:10 Cpu=00:00:02 Usr=1.8    Sys=0.3    Mem=369.5 
+MergeTranslate       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=0.0   
+PreReconnect         Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=88.0  
+ReconnectU           Elp=00:00:46 Cpu=00:00:43 Usr=42.7   Sys=0.6    Mem=1047.8
+Partition_part1      Elp=00:00:05 Cpu=00:00:04 Usr=4.2    Sys=0.1    Mem=109.5 
+NetlistAssemblySetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=101.0 
+xTract_part4         Elp=00:00:01 Cpu=00:00:00 Usr=0.8    Sys=0.1    Mem=375.3 
+xTractPP             Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=68.6  
+Netlist_part1        Elp=00:02:29 Cpu=00:01:58 Usr=114.7  Sys=3.4    Mem=1146.3
+Netlist_merge_end    Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.1    Mem=65.7  
+  
+Done          Elp=00:04:12 Cpu=00:03:19 Usr=192.7  Sys=6.5    Mem=1146.3

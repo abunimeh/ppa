@@ -1,0 +1,8 @@
+Information: Crosstalk Composite aggressor mode is statistical with threshold(s)-(Noise Peak Ratio 0.010, Percentile 99.73). (XTALK-303)
+Warning: Some timing arcs have been disabled for breaking timing loops
+	or because of constant propagation. Use the 'report_disable_timing'
+	command to get the list of these disabled timing arcs. (PTE-003)
+Information: Starting crosstalk aware timing iteration 1. (XTALK-001)
+Information: Starting crosstalk aware timing iteration 2. (XTALK-001)
+Information: Number of nets evaluated in the previous iteration: 59426. (XTALK-105)
+1

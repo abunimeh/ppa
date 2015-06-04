@@ -1,0 +1,14 @@
+/p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill/details/dfm_defines.rh:78: NOTE: DR_DFM_PROCESS set to 1273
+/p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill/details/m6config71.rs:418: -**- in__get_m6_design_rules71_9_ref_31757(): drs.metal_widths: { 0.04, 0.044, 0.06, 0.08, 0.1 }
+/p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill/details/m6config71.rs:418: -**- in__get_m6_design_rules71_9_ref_31757(): drs.metal_widths: { 0.04, 0.044, 0.06, 0.08, 0.1 }
+/p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill/common_init.rs:57: viaToGDS layers 1,2,3 for process greater than 1274 == false set to 13 17 21
+/p/fdk/fdk73/builds/pdk733_r1.7/fill/icv/flexfill/fill_utils/fill_utilities.rs:28: dfm_debug_filter is 
+Completing error storage...
+  Overall error storage time: User=0.04 Sys=0.01 Mem=10.202
+
+Generating fdkex.LAYOUT_ERRORS...
+  Generation Time=0:00:00  User=0.01 Sys=0.01 Mem=10.272
+
+Generating fdkex.TOP_LAYOUT_ERRORS...
+  Generation Time=0:00:00  User=0.00 Sys=0.00 Mem=10.287
+

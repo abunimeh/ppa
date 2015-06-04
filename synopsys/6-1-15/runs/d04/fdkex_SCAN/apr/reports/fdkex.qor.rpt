@@ -1,0 +1,139 @@
+ 
+****************************************
+Report : qor
+Design : fdkex
+Version: J-2014.09-SP1
+Date   : Tue Mar 31 09:58:10 2015
+****************************************
+
+
+  Timing Path Group 'COMB'
+  -----------------------------------
+  Levels of Logic:               5.00
+  Critical Path Length:        112.87
+  Critical Path Slack:        -329.54
+  Critical Path Clk Period:    500.00
+  Total Negative Slack:       -658.22
+  No. of Violating Paths:        2.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'INPUTS'
+  -----------------------------------
+  Levels of Logic:               7.00
+  Critical Path Length:        281.33
+  Critical Path Slack:        -344.36
+  Critical Path Clk Period:    500.00
+  Total Negative Slack:   -6603312.50
+  No. of Violating Paths:    33677.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'OUTPUTS'
+  -----------------------------------
+  Levels of Logic:               1.00
+  Critical Path Length:        128.00
+  Critical Path Slack:        -253.21
+  Critical Path Clk Period:    500.00
+  Total Negative Slack:      -5229.89
+  No. of Violating Paths:       97.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'REG2REG'
+  -----------------------------------
+  Levels of Logic:              19.00
+  Critical Path Length:        437.64
+  Critical Path Slack:         -74.32
+  Critical Path Clk Period:    500.00
+  Total Negative Slack:     -15301.27
+  No. of Violating Paths:      503.00
+  Worst Hold Violation:        -24.57
+  Total Hold Violation:       -771.59
+  No. of Hold Violations:      136.00
+  -----------------------------------
+
+  Timing Path Group 'clk'
+  -----------------------------------
+  Levels of Logic:               6.00
+  Critical Path Length:        348.85
+  Critical Path Slack:           4.46
+  Critical Path Clk Period:    500.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          4
+  Hierarchical Port Count:       2634
+  Leaf Cell Count:              59412
+  Buf/Inv Cell Count:           26999
+  Buf Cell Count:               24360
+  Inv Cell Count:                2639
+  CT Buf/Inv Cell Count:          534
+  Combinational Cell Count:     44608
+  Sequential Cell Count:        14804
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:    11058.548311
+  Noncombinational Area: 15932.221405
+  Buf/Inv Area:           6234.031896
+  Total Buffer Area:          5738.86
+  Total Inverter Area:         495.17
+  Macro/Black Box Area:     13.406399
+  Net Area:                  0.000000
+  Net XLength        :      294440.91
+  Net YLength        :      279788.06
+  -----------------------------------
+  Cell Area:             27004.176116
+  Design Area:           27004.176116
+  Net Length        :       574229.00
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:         59535
+  Nets With Violations:           576
+  Max Trans Violations:             0
+  Max Cap Violations:              24
+  Max Fanout Violations:          565
+  -----------------------------------
+
+
+  Hostname: chlr16420
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.00
+  Logic Optimization:                  0.00
+  Mapping Optimization:            10908.75
+  -----------------------------------------
+  Overall Compile Time:            11416.49
+  Overall Compile Wall Clock Time: 1427795456.00
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 344.36  TNS: 6623256.00  Number of Violating Paths: 34236  (with Crosstalk delta delays)
+
+
+  Design (Hold)  WNS: 24.57  TNS: 771.59  Number of Violating Paths: 136  (with Crosstalk delta delays)
+
+  --------------------------------------------------------------------
+
+
+1

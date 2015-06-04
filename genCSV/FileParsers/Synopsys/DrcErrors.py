@@ -32,7 +32,7 @@ class DRCError:
         directory = os.path.dirname(file)
         files_in_directory = os.listdir(directory)
         if "Final_Report.txt" in files_in_directory:
-            print("Using Final_Report.txt to get errors in %s\n" % directory)
+            print("Using Final_Report.txt to get errors in %s" % directory)
             return 1
     @staticmethod
     def tool_version_found(metric_collections):

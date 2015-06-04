@@ -6,15 +6,15 @@ class FindFiles:
 
         file_endings = FindFiles.return_file_endings(tool)
         found_files = []
-        included_path_names = [test_case, 'syn', 'apr', 'drc_lvs', 'sta', 'pv', 'runs', 'reports', 'logs', 'logs', 'reports_max',
-                   'reports_min', 'denall_reuse', 'drcc', 'gden', 'HV', 'drc_IPall', 'lvs', 'max', 'min', 'power',
-                   'noise', 'drcd', 'trclvs']
+        included_path_names = [test_case, 'syn', 'apr', 'drc_lvs', 'sta', 'pv', 'runs', 'reports', 'logs',
+                   'reports_max', 'reports_min', 'denall_reuse', 'drcc', 'gden', 'HV', 'drc_IPall', 'lvs', 'max',
+                   'min', 'power', 'noise', 'drcd', 'trclvs']
 
-        print("Current file endings to search for:", file_endings)
-        print()
-
-        # test_case is the argument sent in when the user calls the script
-        print("Searching for files in",  test_case)
+        # print("Current file endings to search for:", file_endings)
+        # print()
+        #
+        # # test_case is the argument sent in when the user calls the script
+        # print("Searching for files in",  test_case)
 
         for root, dirnames, filenames in os.walk(test_case, topdown=True):
             # This statement makes sure that we only search for paths that includes the names in the list, included_path_names
@@ -43,23 +43,19 @@ class FindFiles:
                         for filename in fnmatch.filter(filenames, file):
                             found_files.append(os.path.join(root, filename))
 
-        print("Files to be searched:")
-        for file in found_files:
-            print(file, os.path.getsize(file))
-
-        print(len(found_files), "Total found")
-        print()
-        print()
         return found_files
 
     @staticmethod
     def return_csv_name():
         import json
+
         config_file = FindFiles.return_config_name()
+
         with open(config_file, 'r') as f:
             json_data = json.load(f)
             # finds the default value for the order number to search files in the json file
             csv_location = json_data['Csv_location']
+
         return csv_location
 
     @staticmethod

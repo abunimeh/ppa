@@ -1,7 +1,0 @@
-icv fdkex _drTRCVIEW=_drstandard _drSECTION_LEVEL=_drYES _drPROCESS=_drdotThree OASIS /tmp/spalutla/adf_nightly_regr/2015-03-31/drc_trclvs_run_details_18936 /p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1/bin/EM64T_SUSE64/icv /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/trclvs.rs /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/PXL ../../apr/outputs/fdkex.apr.oas . -vue -sf -rd -i -f -c -I -I -D -D -D 
-schematic=../fdkex.icv
-ICV_HOME_DIR=/p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1
-ICV_INLCUDES=/p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1/include
-fdkex
-/tmp/spalutla/adf_nightly_regr/2015-03-31/drc_trclvs_run_details_18936
-Complete

@@ -38,7 +38,7 @@ class FinalRpt:
         f.close()
         rptData = FinalRptData()
         rptData.found_num_of_errors = [FinalRpt.replaceSpace(stage) + " (NB)", "N/A"]
-        print("FINRPT", file)
+
         for line in lines:
             found_num_of_errors = re.search(r'(The[\s]*number[\s]*of[\s]*actual[\s]*errors)[\s]*:+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
             if found_num_of_errors:

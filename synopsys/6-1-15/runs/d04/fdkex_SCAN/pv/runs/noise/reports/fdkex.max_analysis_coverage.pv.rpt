@@ -1,0 +1,21 @@
+****************************************
+Report : analysis_coverage
+	-status_details {untested}
+	-sort_by name
+	-check_type {setup recovery clock_gating_setup out_setup}
+	-exclude_untested {constant_disabled user_disabled user_disabled false_paths}
+Design : fdkex
+Version: J-2014.06-SP2
+Date   : Tue Mar 31 10:16:29 2015
+****************************************
+
+Type of Check         Total              Met         Violated         Untested
+--------------------------------------------------------------------------------
+setup                 75673     75520 (100%)       153 (  0%)         0 (  0%)
+recovery              48926     47935 ( 98%)       991 (  2%)         0 (  0%)
+clock_gating_setup     1712      1480 ( 86%)       232 ( 14%)         0 (  0%)
+out_setup               148         0 (  0%)       148 (100%)         0 (  0%)
+--------------------------------------------------------------------------------
+All Checks           126459    124935 ( 99%)      1524 (  1%)         0 (  0%)
+
+1

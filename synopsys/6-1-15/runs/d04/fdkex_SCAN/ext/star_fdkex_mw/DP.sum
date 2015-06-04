@@ -1,0 +1,40 @@
+----------------------------------------------------------------------------------------------
+CPU#   | STAGE SUMMARY                                            |END TIME        |HOST NAME
+----------------------------------------------------------------------------------------------
+CPU_01 |*Layers              Elp=00:00:03 Cpu=00:00:03 Mem=218.2  |Mar 31 10:02:46 |chlr16420
+CPU_01 |*Models              Elp=00:00:00 Cpu=00:00:00 Mem=87.9   |Mar 31 10:02:46 |chlr16420
+CPU_01 |*HN                  Elp=00:00:09 Cpu=00:00:06 Mem=335.7  |Mar 31 10:02:56 |chlr16420
+CPU_01 |*Cells               Elp=00:00:25 Cpu=00:00:20 Mem=960    |Mar 31 10:03:21 |chlr16420
+CPU_01 |*SkipCells_DP        Elp=00:00:04 Cpu=00:00:00 Mem=119.2  |Mar 31 10:03:25 |chlr16420
+CPU_02 |*SkipCells_DP        Elp=00:00:03 Cpu=00:00:00 Mem=119.2  |Mar 31 10:03:28 |chlr16420
+CPU_03 |*SkipCells_DP        Elp=00:00:03 Cpu=00:00:00 Mem=119.2  |Mar 31 10:03:28 |chlr16420
+CPU_01 |*MergeSkipCells      Elp=00:00:00 Cpu=00:00:00 Mem=105.8  |Mar 31 10:03:32 |chlr16420
+CPU_01 |*Translate_DP        Elp=00:00:11 Cpu=00:00:02 Mem=369.5  |Mar 31 10:03:43 |chlr16420
+CPU_02 |*Translate_DP        Elp=00:00:07 Cpu=00:00:01 Mem=330    |Mar 31 10:03:40 |chlr16420
+CPU_03 |*Translate_DP        Elp=00:00:02 Cpu=00:00:00 Mem=191.3  |Mar 31 10:03:36 |chlr16420
+CPU_01 |*MergeTranslate      Elp=00:00:00 Cpu=00:00:00 Mem=0      |Mar 31 10:03:44 |chlr16420
+CPU_01 |*PreReconnect        Elp=00:00:00 Cpu=00:00:00 Mem=88     |Mar 31 10:03:44 |chlr16420
+CPU_01 |*ReconnectU          Elp=00:00:46 Cpu=00:00:43 Mem=1047.8 |Mar 31 10:04:31 |chlr16420
+CPU_01 |*Partition_DP        Elp=00:00:06 Cpu=00:00:04 Mem=109.5  |Mar 31 10:04:37 |chlr16420
+CPU_02 |*Partition_DP        Elp=00:00:03 Cpu=00:00:01 Mem=105.5  |Mar 31 10:04:35 |chlr16420
+CPU_04 |*Partition_DP        Elp=00:00:06 Cpu=00:00:04 Mem=109.3  |Mar 31 10:04:37 |chlr16420
+CPU_04 |*PartitionPP         Elp=00:00:00 Cpu=00:00:00 Mem=96.4   |Mar 31 10:04:37 |chlr16420
+CPU_01 |*xTract_DP           Elp=00:00:03 Cpu=00:00:00 Mem=375.3  |Mar 31 10:04:41 |chlr16420
+CPU_02 |*xTract_DP           Elp=00:00:36 Cpu=00:00:31 Mem=1035.2 |Mar 31 10:05:14 |chlr16420
+CPU_03 |*xTract_DP           Elp=00:00:05 Cpu=00:00:02 Mem=375.3  |Mar 31 10:04:44 |chlr16420
+CPU_04 |*xTract_DP           Elp=00:05:03 Cpu=00:04:50 Mem=6417.7 |Mar 31 10:09:40 |chlr16420
+CPU_01 |*xTractPP            Elp=00:00:00 Cpu=00:00:00 Mem=68.6   |Mar 31 10:09:41 |chlr16420
+CPU_04 |*ReportViolations    Elp=00:00:00 Cpu=00:00:00 Mem=0      |Mar 31 10:09:42 |chlr16420
+CPU_01 |*Netlist_DP          Elp=00:04:20 Cpu=00:01:58 Mem=1146.3 |Mar 31 10:14:03 |chlr16420
+CPU_02 |*Netlist_DP          Elp=00:04:17 Cpu=00:00:07 Mem=174.3  |Mar 31 10:14:01 |chlr16420
+CPU_03 |*Netlist_DP          Elp=00:00:29 Cpu=00:00:10 Mem=214    |Mar 31 10:10:13 |chlr16420
+CPU_04 |*Netlist_DP          Elp=00:00:34 Cpu=00:00:06 Mem=244.4  |Mar 31 10:10:18 |chlr16420
+----------------------------------------------------------------------------------------------
+Start Time: Tue Mar 31 10:02:42 2015
+End Time: Tue Mar 31 10:14:09 2015
+----------------------------------------------------------------------------------------------
+Overall:         Elp=00:11:27  Cpu=00:05:01
+PreXtraction:    Elp=00:01:55  Cpu=00:01:19
+Xtraction:       Elp=00:05:03  Cpu=00:04:50
+PostXtraction:   Elp=00:04:29  Cpu=00:01:58
+----------------------------------------------------------------------------------------------

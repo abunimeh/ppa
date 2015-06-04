@@ -123,10 +123,12 @@ class DynamicParser:
                             met_name = DynamicParser.metric_naming_2(file) + metric_object_name["metric_name"]
                         elif metric_object_name["stage"] == 3:
                             met_name = DynamicParser.metric_naming_3(file) + metric_object_name["metric_name"]
+
                         met_value = DynamicParser.mathc_line(metric_object_name["metric_reg_exp"], line)
+
                         if met_value:
                             if met_value.group(2) == '':
-                                metric = met_name, 0
+                                metric = met_name, 0.00
                             else:
                                 if "add_to_value" in metric_object_name:
                                     metric = met_name, met_value.group(2)+metric_object_name["add_to_value"]
@@ -141,6 +143,7 @@ class DynamicParser:
                                     section = 1
                                 continue
                             ending_line = DynamicParser.mathc_line(metric_object_name["found_section_reg_exp"]["end_line"], line)
+
                         if section == 1:
                             if metric_object_name["stage"] == "none":
                                 met_name = metric_object_name["metric_name"]
@@ -150,10 +153,11 @@ class DynamicParser:
                                 met_name = DynamicParser.metric_naming_2(file) + metric_object_name["metric_name"]
                             elif metric_object_name["stage"] == 3:
                                 met_name = DynamicParser.metric_naming_3(file) + metric_object_name["metric_name"]
+
                             met_value = DynamicParser.mathc_line(metric_object_name["metric_reg_exp"], line)
                             if met_value:
                                 if met_value.group(2) == '':
-                                    metric = met_name, 0
+                                    metric = met_name, 0.00
                                 else:
                                     metric = met_name, FormatMetric.format_metric_values(met_value.group(2))
                                 data_items.append(metric)

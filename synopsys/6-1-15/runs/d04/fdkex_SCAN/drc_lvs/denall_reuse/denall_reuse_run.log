@@ -1,0 +1,115 @@
+
+IC Validator (R) Hierarchical Design Verification, SUSE.64 Release J-2014.06.SP2.HF1.4045 2014/09/29
+
+  (C) Copyright 1996-2014.
+  Synopsys, Inc.  All rights reserved.
+
+Called as: /p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1/bin/EM64T_SUSE64/icv -i ../../apr/outputs/fdkex.apr.oas -c fdkex -vue -D _drPROCESS=_drdotThree -D _drSECTION_LEVEL=_drYES -I . -I /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/PXL -f OASIS -rd /tmp/spalutla/adf_nightly_regr/2015-03-31/drc_denall_reuse_run_details_18936 /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/denall_reuse.rs
+
+
+
+
+Using /usr/bin/ssh as remote shell program
+
+
+Using user-specified ICV_INCLUDES setting as:
+"/p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1/include"
+
+Parsing runset "/p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/denall_reuse.rs"
+
+Disabling runset caching because ICV_DISABLE_RUNSET_CACHE is set.
+p12723_dr.rs:108: warning: The macro is redefined
+         #define _drALLOW_ULV _drYES
+    from /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/denall_reuse.rs: 35:    	#include <p12723_dr.rs>
+    previously macro "_drALLOW_ULV" defined as: #define _drALLOW_ULV _drNO 	/* /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_dr.rs:29	*/
+dr_cell_lists:2962: warning: Undefined symbol "_drTC_FULL_DIE" (in non-evaluated sub-expression)
+    #if( defined(_drTC_FULL_DIE) && _drTC_FULL_DIE == _drYES)
+    from /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/denall_reuse.rs: 37:    	#include <dr_cell_lists>
+p12723_options.rs:11: warning: Undefined symbol "_drCOLLAT" (in non-evaluated sub-expression)
+         #if (defined(_drCOLLAT) && _drCOLLAT == _drYES)
+    from /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/denall_reuse.rs: 40:    	#include <p12723_options.rs>
+p12723_UserTextOptions.rs:9: warning: Undefined symbol "_drHV_ONLY_LIST_TEXT" (in non-evaluated sub-expression)
+         #if (_drTRCVIEW == _drHV && _drHV_ONLY_LIST_TEXT == _drYES)
+    from /p/fdk/fdk73/shelf/repo/runsets/icv/1273_v1.0.1f1p1/2/PXL/p12723_options.rs: 149:         #include <p12723_UserTextOptions.rs>
+    from /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/denall_reuse.rs: 40:    	#include <p12723_options.rs>
+
+
+Parsing finished
+Runset Compile Time=0:01:20 User=76.58 Sys=2.88 Mem=6907.770
+
+
+ICV_Master (R), SUSE.64 Release J-2014.06.SP2.HF1.4116 2014/09/29
+
+  (C) Copyright 1996-2014.
+  Synopsys, Inc.  All rights reserved.
+
+
+Called as: /p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1/bin/EM64T_SUSE64/icv -i ../../apr/outputs/fdkex.apr.oas -c fdkex -vue -D _drPROCESS=_drdotThree -D _drSECTION_LEVEL=_drYES -I . -I /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/PXL -f OASIS -rd /tmp/spalutla/adf_nightly_regr/2015-03-31/drc_denall_reuse_run_details_18936 /p/fdk/fdk73/builds/pdk733_r1.7/runsets/icv/denall_reuse.rs
+ 
+
+Using user-specified ICV_INCLUDES setting as:
+"/p/foundry/eda/em64t_SLES11/icvalidator/J-2014.06-SP2-1/include"
+
+Virtual Machine Init Time=0:00:01 User=0.69 Sys=0.14 Mem=6907.770
+
+
+Checked out necessary DP licenses.
+Selecting "chlr16420" as Primary host
+
+System Startup Time=0:00:02 User=0.00 Sys=0.88 Mem=6907.770
+
+
+Command execution begins.  Details recorded in the summary and log files:
+    /tmp/spalutla/adf_nightly_regr/2015-03-31/drc_denall_reuse_run_details_18936/fdkex.sum
+    /tmp/spalutla/adf_nightly_regr/2015-03-31/drc_denall_reuse_run_details_18936/denall_reuse.dp.log
+
+Running ...
+  ICV_Engine run is   1% complete.    Elapsed Time=0:00:43
+  ICV_Engine run is   2% complete.    Elapsed Time=0:00:43
+  ICV_Engine run is   3% complete.    Elapsed Time=0:00:43
+  ICV_Engine run is   4% complete.    Elapsed Time=0:00:43
+  ICV_Engine run is   5% complete.    Elapsed Time=0:00:43
+  ICV_Engine run is  10% complete.    Elapsed Time=0:00:43
+  ICV_Engine run is  15% complete.    Elapsed Time=0:00:43
+  ICV_Engine run is  20% complete.    Elapsed Time=0:00:43
+  ICV_Engine run is  25% complete.    Elapsed Time=0:00:45
+  ICV_Engine run is  30% complete.    Elapsed Time=0:00:45
+  ICV_Engine run is  35% complete.    Elapsed Time=0:00:45
+  ICV_Engine run is  40% complete.    Elapsed Time=0:00:45
+  ICV_Engine run is  45% complete.    Elapsed Time=0:00:46
+  ICV_Engine run is  50% complete.    Elapsed Time=0:00:46
+  ICV_Engine run is  55% complete.    Elapsed Time=0:00:46
+  ICV_Engine run is  60% complete.    Elapsed Time=0:00:47
+  ICV_Engine run is  65% complete.    Elapsed Time=0:00:47
+  ICV_Engine run is  70% complete.    Elapsed Time=0:00:47
+  ICV_Engine run is  75% complete.    Elapsed Time=0:00:47
+  ICV_Engine run is  80% complete.    Elapsed Time=0:01:13
+  ICV_Engine run is  85% complete.    Elapsed Time=0:01:18
+  ICV_Engine run is  90% complete.    Elapsed Time=0:01:31
+  ICV_Engine run is  95% complete.    Elapsed Time=0:01:43
+  ICV_Engine run is 100% complete.    Elapsed Time=0:01:57
+
+Completing error storage...
+  Overall error storage time: User=0.10 Sys=0.04 Mem=10.100
+
+Generating fdkex.LAYOUT_ERRORS...
+  Generation Time=0:00:00  User=0.06 Sys=0.01 Mem=11.317
+
+Generating fdkex.TOP_LAYOUT_ERRORS...
+  Generation Time=0:00:00  User=0.05 Sys=0.01 Mem=11.317
+
+   Check Time=0:00:00  User=0.01 Sys=0.00 Mem=220.042
+
+-------------
+
+IC Validator Run: Time=0:03:20
+
+IC Validator Peak Machine Memory Report
+chlr16420    : Peak = 2841(Mb)
+
+Overall Disk Usage Disk=0.043
+Overall Design Hierarchy Mem=4.466
+Overall engine Time=0:03:20 Highest command Mem=2841.476 
+
+Overall Master Mem=6908.379
+IC Validator is done.

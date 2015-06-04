@@ -1,0 +1,22 @@
+Parsing option_file: netlist_part4.tech (EX-304)
+Running Amd_64b    
+parsing layer info
+HN escaping is set to SPEF mode
+CouplingIdealNetSelector filter is added
+adding NetTableFilter for NETS...
+done init writers.
+done init formats.
+done init instance section.
+NoCaps filter is added
+SelectNoCapsCircuitOutput filter is added
+NoRes filter is added
+SelectNoRes filter is added
+MultipleDeclareCircuitOutput filter is added
+done init circuit output.
+XoutMergeCondition_Dp loading ctextOffset
+  
+Netlist       Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=97.3  
+xTractor      Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=97.3  
+  
+Done          Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=97.3  
+

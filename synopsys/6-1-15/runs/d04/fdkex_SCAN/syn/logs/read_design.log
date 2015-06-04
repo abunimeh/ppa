@@ -1,0 +1,645 @@
+#INFO-MSG==>   Setting log file  : ./logs/read_design.log
+#INFO-MSG==>    ALL read_design substeps :  read_design 
+#INFO-MSG==>    Completed substeps : 
+#INFO-MSG==>    Remaining substeps :  read_design  
+#INFO-MSG==>  Executing substep read_design
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/kit/afdk73_kit_s/asicflows/synopsys/syn/read_design.tcl : START Tue Mar 31 00:05:34 MST 2015
+==>INFORMATION: Executing input file setup checks....
+==>INFORMATION: Checking for existence of constraint files....
+==>INFORMATION: Constraint file existence: fdkex.clocks.tcl and fdkex.constraints.tcl file exist. Will be using them.
+==>INFORMATION: Checking for scan input file....
+==>INFORMATION: Scan input existence: Scan stitch template exists
+Information: The SAIF name mapping information database is now active. (PWR-602)
+Start to load technology file /p/fdk/fdk73/builds/pdk733_r1.7/apr/icc//d04/p1273.tf.
+Warning: LayerExt 'm1' is missing the attribute 'rectSpaceRegionNonPreferredMinDist'. (line 402) (TFCHK-014)
+Warning: Cut layer 'vcn' has a non-cross primary default ContactCode 'VCNAX'. (line 1796) (TFCHK-092)
+Warning: Layer 'm2' has a pitch 0.052 that does not match the recommended wire-to-via pitch 0.08 or 0.054. (TFCHK-049)
+Warning: Layer 'm4' has a pitch 0.056 that does not match the recommended wire-to-via pitch 0.078 or 0.054. (TFCHK-049)
+Warning: Layer 'm6' has a pitch 0.08 that does not match the recommended wire-to-via pitch 0.104 or 0.082. (TFCHK-049)
+Warning: Layer 'm8' has a pitch 0.252 that does not match the recommended wire-to-via pitch 0.539. (TFCHK-049)
+Warning: Layer 'm9' has a pitch 1.08 that does not match the recommended wire-to-via pitch 1.35 or 1.875. (TFCHK-049)
+Warning: Layer 'tm1' has a pitch 16 that does not match the recommended wire-to-via pitch 14.25 or 26.25. (TFCHK-049)
+Warning: Layer 'c4' has a pitch 130.3 that does not match the recommended wire-to-via pitch 93.5 or 105.5. (TFCHK-049)
+Warning: Layer 'm2' has a pitch 0.052 that does not match the doubled pitch 0.112 or tripled pitch 0.168. (TFCHK-050)
+Warning: Layer 'm3' has a pitch 0.052 that does not match the doubled pitch 0.14 or tripled pitch 0.21. (TFCHK-050)
+Warning: Layer 'm4' has a pitch 0.056 that does not match the doubled pitch 0.104 or tripled pitch 0.156. (TFCHK-050)
+Warning: Layer 'm5' has a pitch 0.052 that does not match the doubled pitch 0.104 or tripled pitch 0.156. (TFCHK-050)
+Warning: Layer 'm6' has a pitch 0.08 that does not match the doubled pitch 0.112 or tripled pitch 0.168. (TFCHK-050)
+Warning: Layer 'm7' has a pitch 0.112 that does not match the doubled pitch 0.104 or tripled pitch 0.156. (TFCHK-050)
+Warning: Layer 'm8' has a pitch 0.252 that does not match the doubled pitch 0.16 or tripled pitch 0.24. (TFCHK-050)
+Warning: Layer 'm9' has a pitch 1.08 that does not match the doubled pitch 0.224 or tripled pitch 0.336. (TFCHK-050)
+Warning: Layer 'tm1' has a pitch 16 that does not match the doubled pitch 0.504 or tripled pitch 0.756. (TFCHK-050)
+Warning: Layer 'c4' has a pitch 130.3 that does not match the doubled pitch 2.16 or tripled pitch 3.24. (TFCHK-050)
+Warning: Tile 'core84' has a width 0.084 that is not a multiple of the metal layer pitch 0.056 or 0.07. (TFCHK-066)
+Warning: Tile 'core2h84' has a width 0.084 that is not a multiple of the metal layer pitch 0.056 or 0.07. (TFCHK-066)
+Warning: Non-default ContactCode 'VIA5O' on layer 'v5' has cut size with no matching cut name found. (TFCHK-110)
+Warning: cutNameTbl on layer 'v0' has cut name 'CUT0PAX, CUT0NA1, CUT0EX, CUT0TBX' with no matching ContactCode found. (TFCHK-111)
+Warning: CapModel sections are missing. Capacitance models should be loaded with a TLU+ file later. (TFCHK-084)
+Technology file /p/fdk/fdk73/builds/pdk733_r1.7/apr/icc//d04/p1273.tf has been loaded successfully.
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0/fram/ln/d04_ln (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+        12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+        Main Library (fdkex_syn_LIB)      |     Reference Library (d04_ln)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+        Main Library (fdkex_syn_LIB)      |     Reference Library (d04_ln)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+        Main Library (fdkex_syn_LIB)      |     Reference Library (d04_ln)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0/fram/nn/d04_nn (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+        12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+        Main Library (fdkex_syn_LIB)      |     Reference Library (d04_nn)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+        Main Library (fdkex_syn_LIB)      |     Reference Library (d04_nn)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+        Main Library (fdkex_syn_LIB)      |     Reference Library (d04_nn)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0/fram/wn/d04_wn (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+        12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+        Main Library (fdkex_syn_LIB)      |     Reference Library (d04_wn)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+        Main Library (fdkex_syn_LIB)      |     Reference Library (d04_wn)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+        Main Library (fdkex_syn_LIB)      |     Reference Library (d04_wn)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Reference Library Inconsistent With Main Library
+Reference Library: /nfs/site/disks/icf_fdk_aocvm001/fdklib/fdk73_build/stdcell733_d.0.0/fram/yn/d04_yn (MWLIBP-300)
+Warning: Inconsistent Number Of Metal Layers:
+        12 (Main Library) <==> 11 (Reference Library). (MWLIBP-301)
+Warning: Inconsistent Data for Contact Code 121
+        Main Library (fdkex_syn_LIB)      |     Reference Library (d04_yn)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 197
+        Main Library (fdkex_syn_LIB)      |     Reference Library (d04_yn)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+Warning: Inconsistent Data for Contact Code 199
+        Main Library (fdkex_syn_LIB)      |     Reference Library (d04_yn)
+        Upper Layer     m1 (0, 17)        |     m1 (0, 14)       (MWLIBP-324)
+
+Sanity check for TLU+ vs MW-Tech files:
+ max_tlu+: /p/fdk/fdk73/builds/pdk733_r1.7/extraction/icc/techfiles/p1273_3x1r6.tttt.tluplus
+ min_tlu+: /p/fdk/fdk73/builds/pdk733_r1.7/extraction/icc/techfiles/p1273_3x1r6.tttt.tluplus
+ mapping_file: /p/fdk/fdk73/builds/pdk733_r1.7/extraction/starrc/cmdfiles/asic.starrc.map
+ max_emul_tlu+: /p/fdk/fdk73/builds/pdk733_r1.7/extraction/icc/techfiles/p1273_3x1r6.tttt.mfill.tluplus
+ min_emul_tlu+: /p/fdk/fdk73/builds/pdk733_r1.7/extraction/icc/techfiles/p1273_3x1r6.tttt.mfill.tluplus
+ MW design lib: fdkex_syn_LIB
+
+--------- Sanity Check on TLUPlus Files -------------
+1. Checking the conducting layer names in ITF and mapping file ... 
+[ Passed! ]
+2. Checking the via layer names in ITF and mapping file ... 
+[ Passed! ]
+3. Checking the consistency of Min Width and Min Spacing between MW-tech and ITF ... 
+Warning: minSpacing value of layer "c4" (metal12) does not match : ITF (30.000) vs MW-tech (45.000). (TLUP-005)
+Warning: minWidth value of layer "c4" (metal12) does not match : ITF (54.600) vs MW-tech (85.000). (TLUP-004)
+----------------- Check Ends ------------------
+Running PRESTO HDLC
+Compiling source file ./inputs/rtl/alu_core.vs
+Opening include file ./inputs/rtl/parameters.vs
+Opening include file ./inputs/rtl/functions.vs
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./inputs/rtl/check_ecc_alu.vs
+Opening include file ./inputs/rtl/parameters.vs
+Opening include file ./inputs/rtl/functions.vs
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./inputs/rtl/check_ecc_in.vs
+Opening include file ./inputs/rtl/parameters.vs
+Opening include file ./inputs/rtl/functions.vs
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./inputs/rtl/fdkex.vs
+Opening include file ./inputs/rtl/parameters.vs
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./inputs/rtl/fifo.vs
+Opening include file ./inputs/rtl/parameters.vs
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./inputs/rtl/gen_ecc_alu.vs
+Opening include file ./inputs/rtl/parameters.vs
+Opening include file ./inputs/rtl/functions.vs
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./inputs/rtl/gen_ecc_in.vs
+Opening include file ./inputs/rtl/parameters.vs
+Opening include file ./inputs/rtl/functions.vs
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./inputs/rtl/init_mask_alu.vs
+Opening include file ./inputs/rtl/parameters.vs
+Opening include file ./inputs/rtl/functions.vs
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./inputs/rtl/init_mask_in.vs
+Opening include file ./inputs/rtl/parameters.vs
+Opening include file ./inputs/rtl/functions.vs
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./inputs/rtl/secded_alu.vs
+Opening include file ./inputs/rtl/parameters.vs
+Opening include file ./inputs/rtl/functions.vs
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ./inputs/rtl/secded_in.vs
+Opening include file ./inputs/rtl/parameters.vs
+Opening include file ./inputs/rtl/functions.vs
+Presto compilation completed successfully.
+Loading db file '/p/foundry/eda/em64t_SLES11/designcompiler/J-2014.09/libraries/syn/gtech.db'
+Loading db file '/p/foundry/eda/em64t_SLES11/designcompiler/J-2014.09/libraries/syn/standard.sldb'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'fdkex'.
+Information: Building the design 'init_mask_in'. (HDL-193)
+
+Inferred memory devices in process
+        in routine init_mask_in line 76 in file
+                './inputs/rtl/init_mask_in.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mask_reg       | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      seed0_reg      | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine init_mask_in line 88 in file
+                './inputs/rtl/init_mask_in.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mask_reg       | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      seed1_reg      | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine init_mask_in line 100 in file
+                './inputs/rtl/init_mask_in.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mask_reg       | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      seed2_reg      | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine init_mask_in line 112 in file
+                './inputs/rtl/init_mask_in.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mask_reg       | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      seed3_reg      | Flip-flop |  80   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine init_mask_in line 124 in file
+                './inputs/rtl/init_mask_in.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mask_reg       | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      seed4_reg      | Flip-flop |  96   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine init_mask_in line 136 in file
+                './inputs/rtl/init_mask_in.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mask_reg       | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      seed5_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine init_mask_in line 148 in file
+                './inputs/rtl/init_mask_in.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mask_reg       | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      seed6_reg      | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'init_mask_alu' instantiated from design 'fdkex' with
+        the parameters "width_data=128,width_sec=8,width_data_sec=136". (HDL-193)
+
+Inferred memory devices in process
+        in routine init_mask_alu_width_data128_width_sec8_width_data_sec136 line 77 in file
+                './inputs/rtl/init_mask_alu.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mask_reg       | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|      seed0_reg      | Flip-flop |  138  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine init_mask_alu_width_data128_width_sec8_width_data_sec136 line 89 in file
+                './inputs/rtl/init_mask_alu.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mask_reg       | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|      seed1_reg      | Flip-flop |  140  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine init_mask_alu_width_data128_width_sec8_width_data_sec136 line 101 in file
+                './inputs/rtl/init_mask_alu.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mask_reg       | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|      seed2_reg      | Flip-flop |  144  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine init_mask_alu_width_data128_width_sec8_width_data_sec136 line 113 in file
+                './inputs/rtl/init_mask_alu.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mask_reg       | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|      seed3_reg      | Flip-flop |  144  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine init_mask_alu_width_data128_width_sec8_width_data_sec136 line 125 in file
+                './inputs/rtl/init_mask_alu.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mask_reg       | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|      seed4_reg      | Flip-flop |  160  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine init_mask_alu_width_data128_width_sec8_width_data_sec136 line 137 in file
+                './inputs/rtl/init_mask_alu.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mask_reg       | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|      seed5_reg      | Flip-flop |  192  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine init_mask_alu_width_data128_width_sec8_width_data_sec136 line 149 in file
+                './inputs/rtl/init_mask_alu.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mask_reg       | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|      seed6_reg      | Flip-flop |  256  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine init_mask_alu_width_data128_width_sec8_width_data_sec136 line 161 in file
+                './inputs/rtl/init_mask_alu.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mask_reg       | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|      seed7_reg      | Flip-flop |  256  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'gen_ecc_in'. (HDL-193)
+
+Inferred memory devices in process
+        in routine gen_ecc_in line 68 in file
+                './inputs/rtl/gen_ecc_in.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       ecc_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'fifo' instantiated from design 'fdkex' with
+        the parameters "width_data=72". (HDL-193)
+Warning:  ./inputs/rtl/fifo.vs:137: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine fifo_width_data72 line 98 in file
+                './inputs/rtl/fifo.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     addr_rd_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine fifo_width_data72 line 108 in file
+                './inputs/rtl/fifo.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     addr_wr_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine fifo_width_data72 line 122 in file
+                './inputs/rtl/fifo.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     data_rd_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine fifo_width_data72 line 132 in file
+                './inputs/rtl/fifo.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  72   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine fifo_width_data72 line 149 in file
+                './inputs/rtl/fifo.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cnt_data_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+================================================================
+|   block name/line     | Inputs | Outputs | # sel inputs | MB |
+================================================================
+| fifo_width_data72/126 |   32   |   72    |      5       | N  |
+================================================================
+Presto compilation completed successfully.
+Information: Building the design 'check_ecc_in'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'alu_core'. (HDL-193)
+Warning:  ./inputs/rtl/alu_core.vs:79: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 74 in file
+        './inputs/rtl/alu_core.vs'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            79            |    user/user     |
+===============================================
+
+Inferred memory devices in process
+        in routine alu_core line 74 in file
+                './inputs/rtl/alu_core.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      dout_reg       | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|     tmp_add_reg     | Flip-flop |  65   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'gen_ecc_alu' instantiated from design 'fdkex' with
+        the parameters "width_data=128,width_sec=8,width_ecc=9". (HDL-193)
+
+Inferred memory devices in process
+        in routine gen_ecc_alu_width_data128_width_sec8_width_ecc9 line 68 in file
+                './inputs/rtl/gen_ecc_alu.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       ecc_reg       | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'fifo' instantiated from design 'fdkex' with
+        the parameters "width_data=137". (HDL-193)
+Warning:  ./inputs/rtl/fifo.vs:137: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+        in routine fifo_width_data137 line 98 in file
+                './inputs/rtl/fifo.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     addr_rd_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine fifo_width_data137 line 108 in file
+                './inputs/rtl/fifo.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     addr_wr_reg     | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine fifo_width_data137 line 122 in file
+                './inputs/rtl/fifo.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     data_rd_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine fifo_width_data137 line 132 in file
+                './inputs/rtl/fifo.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  137  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  38   |  Y  | N  | N  | N  | N  | N  | N  |
+|    data_mem_reg     | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine fifo_width_data137 line 149 in file
+                './inputs/rtl/fifo.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cnt_data_reg     | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+=================================================================
+|    block name/line     | Inputs | Outputs | # sel inputs | MB |
+=================================================================
+| fifo_width_data137/126 |   32   |   137   |      5       | N  |
+=================================================================
+Presto compilation completed successfully.
+Information: Building the design 'check_ecc_alu' instantiated from design 'fdkex' with
+        the parameters "width_data=128,width_sec=8,width_ecc=9,width_data_ecc=137". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'secded_in'. (HDL-193)
+Warning:  ./inputs/rtl/secded_in.vs:118: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 92 in file
+        './inputs/rtl/secded_in.vs'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            96            |    user/user     |
+===============================================
+
+Statistics for case statements in always block at line 112 in file
+        './inputs/rtl/secded_in.vs'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           118            |    user/user     |
+===============================================
+
+Inferred memory devices in process
+        in routine secded_in line 92 in file
+                './inputs/rtl/secded_in.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    flag_ded_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine secded_in line 112 in file
+                './inputs/rtl/secded_in.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_tmp_reg     | Flip-flop |  71   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_rxc_reg     | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  data_encoded_reg   | Flip-flop |  71   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'secded_alu' instantiated from design 'check_ecc_alu_width_data128_width_sec8_width_ecc9_width_data_ecc137' with
+        the parameters "width_data=128,width_ecc=9,width_sec=8,width_data_sec=136". (HDL-193)
+Warning:  ./inputs/rtl/secded_alu.vs:118: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 92 in file
+        './inputs/rtl/secded_alu.vs'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            96            |    user/user     |
+===============================================
+
+Statistics for case statements in always block at line 112 in file
+        './inputs/rtl/secded_alu.vs'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           118            |    user/user     |
+===============================================
+
+Inferred memory devices in process
+        in routine secded_alu_width_data128_width_sec8_width_ecc9_width_data_sec136 line 92 in file
+                './inputs/rtl/secded_alu.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    flag_ded_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine secded_alu_width_data128_width_sec8_width_ecc9_width_data_sec136 line 112 in file
+                './inputs/rtl/secded_alu.vs'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_tmp_reg     | Flip-flop |  136  |  Y  | N  | Y  | N  | N  | N  | N  |
+|    data_rxc_reg     | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+|  data_encoded_reg   | Flip-flop |  136  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is 'fdkex'.
+
+  Linking design 'fdkex'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (12 designs)              /nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/syn/fdkex.db, etc
+  d04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/ln/d04_ln_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb
+  d04_nn_p1273_3x1r6u1_psss_0.75v_-10c_ccst (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/nn/d04_nn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb
+  d04_wn_p1273_3x1r6u1_psss_0.75v_-10c_ccst (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/wn/d04_wn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb
+  d04_yn_p1273_3x1r6u1_psss_0.75v_-10c_ccst (library) /p/fdk/fdk73/builds/stdcells/stdcell733_d.0.0/ccs/yn/d04_yn_p1273_3x1r6u1_psss_0.75v_-10c_ccst.ldb
+  dw_foundation.sldb (library) /p/foundry/eda/em64t_SLES11/designcompiler/J-2014.09/libraries/syn/dw_foundation.sldb
+
+==>INFORMATION: P_source_if_exists: read_design.tcl : END Tue Mar 31 00:05:43 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:00:08 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:06 hrs : MEMORY : 2352236 KB
+#INFO-MSG==>  Time to run substep read_design in (hh:mm:ss) : 00:00:09 hrs
+#INFO-MSG==>  Time to run step read_design in (hh:mm:ss) : 00:00:09 hrs
+#INFO-MSG==>  Saving design fdkex ...
+Writing ddc file './ddc/fdkex_read_design.ddc'.
+#INFO-MSG==>   No report requirement specified INTEL_REPORTS(read_design) 
+#INFO-MSG==>   No report requirement specified INTEL_OUTPUTS(read_design) 
+#INFO-MSG==>  Time to create reports and outputs for read_design in (hh:mm:ss) : 00:00:00 hrs
+

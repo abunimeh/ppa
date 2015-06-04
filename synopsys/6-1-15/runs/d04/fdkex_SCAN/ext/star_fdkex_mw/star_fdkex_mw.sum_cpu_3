@@ -1,0 +1,101 @@
+
+
+                         StarRC (TM)
+             Copyright (c) 1999-2014 Synopsys, Inc.
+                      All Rights Reserved
+
+
+ExecName: /p/foundry/eda/em64t_SLES11/starrcxt/J-2014.06-SP3/suse64_starrc/bin/StarXtract
+Version: J-2014.06-SP3
+Built on: Oct 15 2014 13:38:17
+Start Time: Tue Mar 31 10:02:43 2015
+
+Host ............ chlr16420
+
+xTractorName:/p/foundry/eda/em64t_SLES11/starrcxt/J-2014.06-SP3/suse64_starrc/bin/xTractor
+Version: J-2014.06-SP3
+Built on: Oct 15 2014 13:38:39
+Start Time: Tue Mar 31 10:02:43 2015
+TRANSLATE_FLOATING_AS_FILL:YES is applied while ignoring REMOVE_FLOATING_NETS:YES. (SX-0246)
+METAL_FILL_POLYGON_HANDLING is applicable to input metal fills only. Since
+TRANSLATE_FLOATING_AS_FILL is set to YES, floating nets are translated as floating metal fill. (SX-0247)
+
+Process Skip Cells_part4:  Tue Mar 31 10:03:25 2015
+  Warnings: 0    Errors: 0
+  SkipCells_part4 Elp=00:00:03 Cpu=00:00:00 Usr=0.1    Sys=0.1    Mem=119.2 
+Done
+
+Translate_part3 DB:  Tue Mar 31 10:03:34 2015
+  Warnings: 0    Errors: 0
+  Translate_part3 Elp=00:00:01 Cpu=00:00:00 Usr=0.4    Sys=0.1    Mem=191.3 
+Done
+
+xTract_part2 DB:  Tue Mar 31 10:04:39 2015
+Completed   0%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed   1%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  15%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  20%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  25%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  30%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  34%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  39%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  44%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  49%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  54%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  59%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  64%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  69%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  74%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  79%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  84%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  89%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  94%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  98%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+  Extracted 0 capacitors, 740 resistors, 0 reluctors, 17938 nodes
+   Reduced to 16190 nodes,  (9.74468%)
+   Reduced to 0 resistors,  (100%)
+   Warnings: 0    Errors: 0
+  xTract_part2  Elp=00:00:02 Cpu=00:00:01 Usr=0.9    Sys=0.2    Mem=375.3 
+Done
+
+xTract_part9 DB:  Tue Mar 31 10:04:43 2015
+Completed  12%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  37%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  62%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  87%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+  Extracted 3199 capacitors, 800 resistors, 0 reluctors, 2003 nodes
+   Reduced to 515 nodes,  (74.2886%)
+   Reduced to 525 resistors,  (34.375%)
+   Reduced to 318 capacitors: 93 Cc and 225 Cg (90.0594%)
+   Warnings: 0    Errors: 0
+  xTract_part9  Elp=00:00:01 Cpu=00:00:01 Usr=0.8    Sys=0.2    Mem=375.3 
+Done
+
+Netlist_part2 DB:  Tue Mar 31 10:09:44 2015
+Completed   0%  Time=00:00:00  RemainingTime=00:00:06  Mem=111.34
+Completed  10%  Time=00:00:00  RemainingTime=00:00:01  Mem=133.777
+Completed  20%  Time=00:00:00  RemainingTime=00:00:01  Mem=153.465
+Completed  40%  Time=00:00:00  RemainingTime=00:00:01  Mem=193.848
+Completed  60%  Time=00:00:01  RemainingTime=00:00:00  Mem=214.035
+Completed  80%  Time=00:00:05  RemainingTime=00:00:01  Mem=214.41
+Completed 100%  Time=00:00:09  RemainingTime=00:00:00  Mem=214.41
+  Warnings: 0    Errors: 0
+  Netlist_part2 Elp=00:00:12 Cpu=00:00:10 Usr=10.0   Sys=0.3    Mem=214.0 
+Done
+  
+SkipCells_part4 Elp=00:00:03 Cpu=00:00:00 Usr=0.1    Sys=0.1    Mem=119.2 
+Translate_part3 Elp=00:00:01 Cpu=00:00:00 Usr=0.4    Sys=0.1    Mem=191.3 
+xTract_part2    Elp=00:00:02 Cpu=00:00:01 Usr=0.9    Sys=0.2    Mem=375.3 
+xTract_part9    Elp=00:00:01 Cpu=00:00:01 Usr=0.8    Sys=0.2    Mem=375.3 
+Netlist_part2   Elp=00:00:12 Cpu=00:00:10 Usr=10.0   Sys=0.3    Mem=214.0 
+  
+Done          Elp=00:00:19 Cpu=00:00:13 Usr=12.2   Sys=0.9    Mem=375.3 
+
+End Time: Tue Mar 31 10:14:06 2015

@@ -1,0 +1,20 @@
+****************************************
+Report : min pulse width
+	-all_violators
+	-path_type summary
+Design : fdkex
+Version: J-2014.06-SP2
+Date   : Tue Mar 31 10:29:39 2015
+****************************************
+
+
+   sequential_clock_pulse_width
+
+                             Required        Actual
+   Pin                      pulse width    pulse width       Slack
+   -----------------------------------------------------------------
+   fifo1/data_mem_reg_23__28_/clk (high)
+                              232.19         182.15         -50.04  (VIOLATED)
+
+
+1

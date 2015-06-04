@@ -1,0 +1,59 @@
+Parsing option_file: xtract.tech (EX-304)
+Running Amd_64b    
+Initializing extraction ... (EX-724)
+creating xout file: xout_split_part2
+loading offset file
+* Maximum opened files = 1
+Reading binary grd file
+/p/fdk/fdk73/builds/pdk733_r1.7/extraction/starrc/techfiles/p1273_3x1r6.tttt.nxtgrd ... (EX-135)
+----- R mode: reuse cap  environments -----
+----- Importing design ----- 
+Ary stats nx=9 ny=244 dx=7957 dy=9165 nentry=51871  max/cell=296 av/cell=23.6207
+ Ary stats nx=1 ny=1 dx=71611 dy=2236201 nentry=0  max/cell=0 av/cell=0
+ Import design time is 1 seconds.
+----- Initializing models ----- 
+Initialize models time is 0 seconds.
+----- Extracting 670 nets ----- 
+Completed   0%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed   1%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  15%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  20%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  25%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  30%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  34%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  39%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  44%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  49%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  54%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  59%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  64%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  69%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  74%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  79%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  84%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  89%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  94%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed  98%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.434
+Extraction time is 0 seconds.
+----- Reducing 670 nets ----- 
+Reduction time is 0 seconds.
+Total capacitance environments constructed = 0
+Unique capacitance environments constructed = 0
+Total resistance environments constructed = 0
+Unique resistance environments constructed = 0
+Extracted 0 capacitors, 740 resistors, 0 reluctors, 17938 nodes
+Reduced to 16190 nodes,  (9.74468%)
+Reduced to 0 resistors,  (100%)
+* Maximum opened files = 1
+printing coupled2selected_part2
+  
+xTractor      Elp=00:00:02 Cpu=00:00:01 Usr=0.9    Sys=0.2    Mem=375.3 
+  
+Done          Elp=00:00:02 Cpu=00:00:01 Usr=0.9    Sys=0.2    Mem=375.3 
+

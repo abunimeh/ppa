@@ -1,0 +1,116 @@
+
+
+                         StarRC (TM)
+             Copyright (c) 1999-2014 Synopsys, Inc.
+                      All Rights Reserved
+
+
+ExecName: /p/foundry/eda/em64t_SLES11/starrcxt/J-2014.06-SP3/suse64_starrc/bin/StarXtract
+Version: J-2014.06-SP3
+Built on: Oct 15 2014 13:38:17
+Start Time: Tue Mar 31 10:02:30 2015
+
+Host ............ chlr16420
+
+xTractorName:/p/foundry/eda/em64t_SLES11/starrcxt/J-2014.06-SP3/suse64_starrc/bin/xTractor
+Version: J-2014.06-SP3
+Built on: Oct 15 2014 13:38:39
+WARNING: MODE is no longer required for Milkyway and LEF/DEF flows.  Ignoring MODE in command file.
+         Please refer to StarRC H-2012.12 release notes for more information. (SX-0499)
+TRANSLATE_FLOATING_AS_FILL:YES is applied while ignoring REMOVE_FLOATING_NETS:YES. (SX-0246)
+METAL_FILL_POLYGON_HANDLING is applicable to input metal fills only. Since
+TRANSLATE_FLOATING_AS_FILL is set to YES, floating nets are translated as floating metal fill. (SX-0247)
+
+Partition_part2 DB:  Tue Mar 31 10:04:31 2015
+Completed   1%  Time=00:00:00  RemainingTime=00:00:04  Mem=105.27
+Completed  11%  Time=00:00:00  RemainingTime=00:00:04  Mem=105.859
+Completed  21%  Time=00:00:00  RemainingTime=00:00:04  Mem=106.348
+Completed  41%  Time=00:00:01  RemainingTime=00:00:03  Mem=107.305
+Completed  61%  Time=00:00:02  RemainingTime=00:00:02  Mem=108.168
+Completed  81%  Time=00:00:03  RemainingTime=00:00:01  Mem=109.055
+Completed 100%  Time=00:00:04  RemainingTime=00:00:00  Mem=109.492
+  Warnings: 0    Errors: 0
+  Partition_part2 Elp=00:00:06 Cpu=00:00:04 Usr=4.2    Sys=0.0    Mem=109.3 
+Done
+
+PartitionPP:  Tue Mar 31 10:04:37 2015
+  Warnings: 0    Errors: 0
+  PartitionPP   Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=96.4  
+Done
+
+Netlist Setup:  Tue Mar 31 10:04:37 2015
+  Warnings: 0    Errors: 0
+  NetlistSetup  Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=117.8 
+Done
+
+Merge Index:  Tue Mar 31 10:04:39 2015
+  Warnings: 0    Errors: 0
+  MergeIndex    Elp=00:00:01 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=116.3 
+Done
+
+xTract_part5 DB:  Tue Mar 31 10:04:42 2015
+Completed   0%  Time=00:00:01  RemainingTime=00:02:57  Mem=4195.33
+Completed   1%  Time=00:00:05  RemainingTime=00:04:21  Mem=4236.65
+Completed   2%  Time=00:00:06  RemainingTime=00:03:28  Mem=4249.55
+Completed   3%  Time=00:00:07  RemainingTime=00:02:58  Mem=4261.18
+Completed   4%  Time=00:00:09  RemainingTime=00:02:58  Mem=4282.36
+Completed   5%  Time=00:00:11  RemainingTime=00:03:05  Mem=4306.99
+Completed  10%  Time=00:00:22  RemainingTime=00:03:00  Mem=4422.35
+Completed  15%  Time=00:00:31  RemainingTime=00:02:46  Mem=4534.48
+Completed  20%  Time=00:00:48  RemainingTime=00:03:03  Mem=4710.16
+Completed  25%  Time=00:00:52  RemainingTime=00:02:31  Mem=4756.91
+Completed  30%  Time=00:01:01  RemainingTime=00:02:16  Mem=4848.64
+Completed  35%  Time=00:01:14  RemainingTime=00:02:11  Mem=4994.76
+Completed  40%  Time=00:01:22  RemainingTime=00:01:58  Mem=5082.77
+Completed  45%  Time=00:01:29  RemainingTime=00:01:46  Mem=5162.8
+Completed  50%  Time=00:01:40  RemainingTime=00:01:36  Mem=5300.51
+Completed  55%  Time=00:01:51  RemainingTime=00:01:28  Mem=5426.63
+Completed  60%  Time=00:02:02  RemainingTime=00:01:19  Mem=5655.61
+Completed  65%  Time=00:02:06  RemainingTime=00:01:05  Mem=5699.57
+Completed  70%  Time=00:02:16  RemainingTime=00:00:56  Mem=5824.43
+Completed  75%  Time=00:02:41  RemainingTime=00:00:51  Mem=6058.86
+Completed  80%  Time=00:02:53  RemainingTime=00:00:41  Mem=6168.48
+Completed  85%  Time=00:02:58  RemainingTime=00:00:29  Mem=6218.5
+Completed  90%  Time=00:03:03  RemainingTime=00:00:18  Mem=6270.5
+Completed  95%  Time=00:03:08  RemainingTime=00:00:08  Mem=6323.32
+Completed 100%  Time=00:03:12  RemainingTime=00:00:00  Mem=6367
+  Extracted 30491404 capacitors, 4485785 resistors, 0 reluctors, 4591934 nodes
+   Reduced to 3063643 nodes,  (33.2821%)
+   Reduced to 3025585 resistors,  (32.5517%)
+   Reduced to 6304030 capacitors: 4925492 Cc and 1378538 Cg (79.3252%)
+   Warnings: 0    Errors: 0
+  xTract_part5  Elp=00:04:57 Cpu=00:04:50 Usr=286.7  Sys=3.8    Mem=6417.7
+Done
+
+Report Violations:  Tue Mar 31 10:09:42 2015
+  Warnings: 0    Errors: 0
+  ReportViolations Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=0.0   
+Done
+
+Netlist_part4 DB:  Tue Mar 31 10:09:44 2015
+  Warnings: 0    Errors: 0
+  Netlist_part4 Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=97.3  
+Done
+
+Netlist_assembly2 DB:  Tue Mar 31 10:09:55 2015
+Completed   0%  Time=00:00:00  RemainingTime=00:00:00  Mem=98.2578
+Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=109.715
+Completed  20%  Time=00:00:00  RemainingTime=00:00:00  Mem=109.715
+Completed  40%  Time=00:00:00  RemainingTime=00:00:01  Mem=176.723
+Completed  60%  Time=00:00:00  RemainingTime=00:00:01  Mem=187.91
+Completed  80%  Time=00:00:01  RemainingTime=00:00:00  Mem=233.98
+Completed 100%  Time=00:00:06  RemainingTime=00:00:00  Mem=244.793
+  Warnings: 0    Errors: 0
+  Netlist_assembly2 Elp=00:00:10 Cpu=00:00:06 Usr=6.4    Sys=0.3    Mem=244.4 
+Done
+  
+Partition_part2   Elp=00:00:06 Cpu=00:00:04 Usr=4.2    Sys=0.0    Mem=109.3 
+PartitionPP       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=96.4  
+NetlistSetup      Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=117.8 
+MergeIndex        Elp=00:00:01 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=116.3 
+xTract_part5      Elp=00:04:57 Cpu=00:04:50 Usr=286.7  Sys=3.8    Mem=6417.7
+ReportViolations  Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=0.0   
+Netlist_part4     Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=97.3  
+Netlist_assembly2 Elp=00:00:10 Cpu=00:00:06 Usr=6.4    Sys=0.3    Mem=244.4 
+  
+Done          Elp=00:05:14 Cpu=00:05:01 Usr=297.6  Sys=4.1    Mem=6417.7

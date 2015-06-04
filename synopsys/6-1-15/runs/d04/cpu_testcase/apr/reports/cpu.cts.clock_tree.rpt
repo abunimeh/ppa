@@ -1,0 +1,457 @@
+Information: Updating graph... (UID-83)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+ 
+****************************************
+Report : clock tree
+Design : cpu
+Version: J-2014.09-SP1
+Date   : Tue Mar 17 01:10:50 2015
+****************************************
+
+Information: Float pin scale factor for the 'max' operating condition of scenario 'default' is set to 1.000 (CTS-375)
+
+============ Global Skew Report ================
+
+Clock Tree Name                : "clk"
+Clock Period                   : 2000.00000     
+Clock Tree root pin            : "clk"
+Number of Levels               : 4
+Number of Sinks                : 484
+Number of CT Buffers           : 8
+Number of CTS added gates      : 0
+Number of Preexisting Gates    : 18
+Number of Preexisting Buf/Inv  : 0
+Total Number of Clock Cells    : 26
+Total Area of CT Buffers       : 4.85982        
+Total Area of CT cells         : 28.04172       
+Max Global Skew                : 11.75554  
+Number of MaxTran Violators    : 0
+Number of MaxCap Violators     : 0
+Number of MaxFanout Violators  : 0
+
+
+Operating Condition               worst
+Clock global Skew                 11.756
+Longest path delay                128.956
+Shortest path delay               117.201
+
+The longest path delay end pin: reg_bankB_content_reg_7__4_/clk
+The shortest path delay end pin: cntr_wr_reg_reg/clk
+
+The longest Path:
+Pin                                         Cap       Fanout    Trans     Incr      Arri
+----------------------------------------------------------------------------------------------------
+clk                                         0.000            1  0.000     0.000     0.000     r
+clk                                         2.192            1  0.000     0.000     0.000     r
+cts_d04gbf00nd0h0_BC/clk                    2.192            1  0.826     0.417     0.417     r
+cts_d04gbf00nd0h0_BC/clkout                 12.051           3  14.821    20.634    21.051    r
+cts_d04gbf00nd0h0_G2B2I1/clk                12.051           1  16.563    3.748     24.799    r
+cts_d04gbf00nd0h0_G2B2I1/clkout             33.057           7  33.153    33.547    58.346    r
+reg_bankA_clk_gate_content_reg_7__latch/clk 33.057           1  46.761    10.031    68.376    r
+reg_bankA_clk_gate_content_reg_7__latch/clkout
+                                            38.059          24  28.916    48.563    116.940   r
+reg_bankB_content_reg_7__4_/clk             38.059           0  39.417    12.017    128.956   r
+[clock delay]                                                                       128.956
+----------------------------------------------------------------------------------------------------
+
+The Shortest Path:
+Pin                                         Cap       Fanout    Trans     Incr      Arri
+----------------------------------------------------------------------------------------------------
+clk                                         0.000            1  0.000     0.000     0.000     r
+clk                                         2.192            1  0.000     0.000     0.000     r
+cts_d04gbf00nd0h0_BC/clk                    2.192            1  0.826     0.417     0.417     r
+cts_d04gbf00nd0h0_BC/clkout                 12.051           3  14.821    20.634    21.051    r
+cts_d04gbf00nd0e5_G2B2I2/clk                12.051           1  16.458    3.376     24.427    r
+cts_d04gbf00nd0e5_G2B2I2/clkout             12.379           4  24.241    43.129    67.556    r
+cts_d04gbf00nd0g0_G2B1I4/clk                12.379           1  26.255    3.221     70.777    r
+cts_d04gbf00nd0g0_G2B1I4/clkout             26.738          18  33.307    39.825    110.601   r
+cntr_wr_reg_reg/clk                         26.738           0  36.610    6.599     117.201   r
+[clock delay]                                                                       117.201
+----------------------------------------------------------------------------------------------------
+
+1
+ 
+****************************************
+Report : clock timing
+        -type transition
+        -launch
+        -nworst 100
+        -setup
+Design : cpu
+Version: J-2014.09-SP1
+Date   : Tue Mar 17 01:10:50 2015
+****************************************
+
+  Clock: clk
+                                     --- Latency ---
+  Clock Pin                    Source    Network   Total     Trans
+----------------------------------------------------------------------------
+  alu_out_d_reg_0_/clk         0.00      124.23    124.23    50.52     wrp-+
+  alu_out_d_reg_1_/clk         0.00      124.05    124.05    50.52     wrp-+
+  alu_out_d_reg_2_/clk         0.00      123.98    123.98    50.52     wrp-+
+  alu_out_d_reg_3_/clk         0.00      124.00    124.00    50.52     wrp-+
+  alu_out_d_reg_4_/clk         0.00      124.39    124.39    50.52     wrp-+
+  alu_out_d_reg_5_/clk         0.00      124.26    124.26    50.52     wrp-+
+  alu_out_d_reg_6_/clk         0.00      124.05    124.05    50.52     wrp-+
+  alu_out_d_reg_7_/clk         0.00      123.74    123.74    50.52     wrp-+
+  alu_out_d_reg_8_/clk         0.00      124.05    124.05    50.52     wrp-+
+  alu_out_d_reg_9_/clk         0.00      124.38    124.38    50.52     wrp-+
+  alu_out_d_reg_10_/clk        0.00      123.77    123.77    50.52     wrp-+
+  alu_out_d_reg_11_/clk        0.00      123.94    123.94    50.52     wrp-+
+  op_b_eq_reg/clk              0.00      123.76    123.76    50.52     wrp-+
+  reg_bankB_addr_bs_reg_0_/clk 0.00      124.45    124.45    50.52     wrp-+
+  reg_bankB_addr_bs_reg_1_/clk 0.00      124.35    124.35    50.52     wrp-+
+  reg_bankB_addr_bs_reg_2_/clk 0.00      124.38    124.38    50.52     wrp-+
+  reg_bankB_addr_bs_reg_3_/clk 0.00      124.39    124.39    50.52     wrp-+
+  cntr_wr_addr_reg_1_/clk      0.00      124.19    124.19    47.87     wrp-+
+  cntr_wr_addr_reg_2_/clk      0.00      124.12    124.12    47.87     wrp-+
+  cntr_wr_addr_reg_3_/clk      0.00      124.26    124.26    47.87     wrp-+
+  op_a_eq_reg/clk              0.00      124.16    124.16    47.87     wrp-+
+  reg_bankA_addr_as_reg_0_/clk 0.00      124.21    124.21    47.87     wrp-+
+  reg_bankA_addr_as_reg_1_/clk 0.00      124.08    124.08    47.87     wrp-+
+  reg_bankA_addr_as_reg_2_/clk 0.00      124.23    124.23    47.87     wrp-+
+  reg_bankA_addr_as_reg_3_/clk 0.00      123.96    123.96    47.87     wrp-+
+  reg_bankA_addr_bs_reg_0_/clk 0.00      123.96    123.96    47.87     wrp-+
+  reg_bankA_addr_bs_reg_1_/clk 0.00      124.28    124.28    47.87     wrp-+
+  reg_bankA_addr_bs_reg_2_/clk 0.00      124.28    124.28    47.87     wrp-+
+  reg_bankA_addr_bs_reg_3_/clk 0.00      124.25    124.25    47.87     wrp-+
+  reg_bankB_addr_as_reg_0_/clk 0.00      124.18    124.18    47.87     wrp-+
+  reg_bankB_addr_as_reg_1_/clk 0.00      124.10    124.10    47.87     wrp-+
+  reg_bankB_addr_as_reg_2_/clk 0.00      124.23    124.23    47.87     wrp-+
+  reg_bankB_addr_as_reg_3_/clk 0.00      124.19    124.19    47.87     wrp-+
+  cntr_DWR_reg/clk             0.00      120.44    120.44    37.90     wrp-+
+  cntr_adr_mux_reg/clk         0.00      120.52    120.52    37.90     wrp-+
+  cntr_alucop_reg_2_/clk       0.00      120.51    120.51    37.90     wrp-+
+  cntr_alucop_reg_3_/clk       0.00      120.53    120.53    37.90     wrp-+
+  cntr_c_r_reg/clk             0.00      120.39    120.39    37.90     wrp-+
+  cntr_i_r_reg/clk             0.00      120.21    120.21    37.90     wrp-+
+  cntr_mux_B_reg_0_/clk        0.00      120.36    120.36    37.90     wrp-+
+  cntr_mux_B_reg_1_/clk        0.00      120.18    120.18    37.90     wrp-+
+  cntr_mux_B_reg_2_/clk        0.00      120.35    120.35    37.90     wrp-+
+  cntr_mux_B_reg_3_/clk        0.00      119.91    119.91    37.90     wrp-+
+  cntr_mux_pc_reg/clk          0.00      119.85    119.85    37.90     wrp-+
+  cntr_n_r_reg/clk             0.00      120.37    120.37    37.90     wrp-+
+  cntr_o_r_reg/clk             0.00      120.30    120.30    37.90     wrp-+
+  cntr_pc_num_reg_0_/clk       0.00      120.01    120.01    37.90     wrp-+
+  cntr_pc_num_reg_1_/clk       0.00      120.50    120.50    37.90     wrp-+
+  cntr_pc_num_reg_2_/clk       0.00      120.39    120.39    37.90     wrp-+
+  cntr_pc_num_reg_3_/clk       0.00      119.96    119.96    37.90     wrp-+
+  cntr_phase_reg_2_/clk        0.00      120.41    120.41    37.90     wrp-+
+  cntr_sr_sw_cmd_d_reg/clk     0.00      120.02    120.02    37.90     wrp-+
+  cntr_wr_pc_reg/clk           0.00      120.37    120.37    37.90     wrp-+
+  cntr_z_r_reg/clk             0.00      120.41    120.41    37.90     wrp-+
+  reg_bankA_content_reg_9__0_/clk
+                               0.00      124.14    124.14    35.38     wrp-+
+  reg_bankA_content_reg_9__1_/clk
+                               0.00      124.08    124.08    35.38     wrp-+
+  reg_bankA_content_reg_9__2_/clk
+                               0.00      124.00    124.00    35.38     wrp-+
+  reg_bankA_content_reg_9__3_/clk
+                               0.00      124.13    124.13    35.38     wrp-+
+  reg_bankA_content_reg_9__4_/clk
+                               0.00      124.03    124.03    35.38     wrp-+
+  reg_bankA_content_reg_9__5_/clk
+                               0.00      124.24    124.24    35.38     wrp-+
+  reg_bankA_content_reg_9__6_/clk
+                               0.00      124.00    124.00    35.38     wrp-+
+  reg_bankA_content_reg_9__7_/clk
+                               0.00      124.13    124.13    35.38     wrp-+
+  reg_bankA_content_reg_9__8_/clk
+                               0.00      122.79    122.79    35.38     wrp-+
+  reg_bankA_content_reg_9__9_/clk
+                               0.00      124.23    124.23    35.38     wrp-+
+  reg_bankA_content_reg_9__10_/clk
+                               0.00      123.30    123.30    35.38     wrp-+
+  reg_bankA_content_reg_9__11_/clk
+                               0.00      124.19    124.19    35.38     wrp-+
+  reg_bankB_content_reg_9__0_/clk
+                               0.00      124.91    124.91    35.38     wrp-+
+  reg_bankB_content_reg_9__1_/clk
+                               0.00      126.81    126.81    35.38     wrp-+
+  reg_bankB_content_reg_9__2_/clk
+                               0.00      126.05    126.05    35.38     wrp-+
+  reg_bankB_content_reg_9__3_/clk
+                               0.00      126.46    126.46    35.38     wrp-+
+  reg_bankB_content_reg_9__4_/clk
+                               0.00      125.56    125.56    35.38     wrp-+
+  reg_bankB_content_reg_9__5_/clk
+                               0.00      126.86    126.86    35.38     wrp-+
+  reg_bankB_content_reg_9__6_/clk
+                               0.00      126.56    126.56    35.38     wrp-+
+  reg_bankB_content_reg_9__7_/clk
+                               0.00      126.56    126.56    35.38     wrp-+
+  reg_bankB_content_reg_9__8_/clk
+                               0.00      126.58    126.58    35.38     wrp-+
+  reg_bankB_content_reg_9__9_/clk
+                               0.00      126.90    126.90    35.38     wrp-+
+  reg_bankB_content_reg_9__10_/clk
+                               0.00      126.55    126.55    35.38     wrp-+
+  reg_bankB_content_reg_9__11_/clk
+                               0.00      126.67    126.67    35.38     wrp-+
+  reg_bankA_content_reg_10__0_/clk
+                               0.00      124.04    124.04    34.98     wrp-+
+  reg_bankA_content_reg_10__1_/clk
+                               0.00      124.03    124.03    34.98     wrp-+
+  reg_bankA_content_reg_10__2_/clk
+                               0.00      124.03    124.03    34.98     wrp-+
+  reg_bankA_content_reg_10__3_/clk
+                               0.00      123.96    123.96    34.98     wrp-+
+  reg_bankA_content_reg_10__4_/clk
+                               0.00      124.14    124.14    34.98     wrp-+
+  reg_bankA_content_reg_10__5_/clk
+                               0.00      123.99    123.99    34.98     wrp-+
+  reg_bankA_content_reg_10__6_/clk
+                               0.00      123.73    123.73    34.98     wrp-+
+  reg_bankA_content_reg_10__7_/clk
+                               0.00      123.88    123.88    34.98     wrp-+
+  reg_bankA_content_reg_10__8_/clk
+                               0.00      122.84    122.84    34.98     wrp-+
+  reg_bankA_content_reg_10__9_/clk
+                               0.00      123.66    123.66    34.98     wrp-+
+  reg_bankA_content_reg_10__10_/clk
+                               0.00      123.56    123.56    34.98     wrp-+
+  reg_bankA_content_reg_10__11_/clk
+                               0.00      124.15    124.15    34.98     wrp-+
+  reg_bankB_content_reg_10__0_/clk
+                               0.00      124.38    124.38    34.98     wrp-+
+  reg_bankB_content_reg_10__1_/clk
+                               0.00      125.34    125.34    34.98     wrp-+
+  reg_bankB_content_reg_10__2_/clk
+                               0.00      124.52    124.52    34.98     wrp-+
+  reg_bankB_content_reg_10__3_/clk
+                               0.00      124.42    124.42    34.98     wrp-+
+  reg_bankB_content_reg_10__4_/clk
+                               0.00      124.91    124.91    34.98     wrp-+
+  reg_bankB_content_reg_10__5_/clk
+                               0.00      125.33    125.33    34.98     wrp-+
+  reg_bankB_content_reg_10__6_/clk
+                               0.00      125.09    125.09    34.98     wrp-+
+  reg_bankB_content_reg_10__7_/clk
+                               0.00      125.22    125.22    34.98     wrp-+
+  reg_bankB_content_reg_10__8_/clk
+                               0.00      125.21    125.21    34.98     wrp-+
+  reg_bankB_content_reg_10__9_/clk
+                               0.00      125.34    125.34    34.98     wrp-+
+----------------------------------------------------------------------------
+
+1
+ 
+****************************************
+Report : clock timing
+        -type latency
+        -launch
+        -nworst 100
+        -setup
+Design : cpu
+Version: J-2014.09-SP1
+Date   : Tue Mar 17 01:10:50 2015
+****************************************
+
+  Clock: clk
+                                               --- Latency ---
+  Clock Pin                    Trans     Source    Network   Total
+----------------------------------------------------------------------------
+  reg_bankB_content_reg_7__4_/clk
+                               28.92     0.00      128.96    128.96    wrp-+
+  reg_bankB_content_reg_7__2_/clk
+                               28.92     0.00      128.94    128.94    wrp-+
+  reg_bankB_content_reg_7__10_/clk
+                               28.92     0.00      128.85    128.85    wrp-+
+  reg_bankB_content_reg_7__6_/clk
+                               28.92     0.00      128.76    128.76    wrp-+
+  reg_bankB_content_reg_7__8_/clk
+                               28.92     0.00      128.71    128.71    wrp-+
+  reg_bankB_content_reg_7__7_/clk
+                               28.92     0.00      128.35    128.35    wrp-+
+  reg_bankB_content_reg_7__1_/clk
+                               28.92     0.00      128.27    128.27    wrp-+
+  reg_bankB_content_reg_7__5_/clk
+                               28.92     0.00      128.19    128.19    wrp-+
+  reg_bankB_content_reg_7__3_/clk
+                               28.92     0.00      128.10    128.10    wrp-+
+  reg_bankB_content_reg_7__9_/clk
+                               28.92     0.00      128.04    128.04    wrp-+
+  reg_bankB_content_reg_7__11_/clk
+                               28.92     0.00      128.02    128.02    wrp-+
+  reg_bankB_content_reg_4__2_/clk
+                               33.98     0.00      127.52    127.52    wrp-+
+  reg_bankB_content_reg_4__4_/clk
+                               33.98     0.00      127.49    127.49    wrp-+
+  reg_bankB_content_reg_4__7_/clk
+                               33.98     0.00      127.43    127.43    wrp-+
+  reg_bankB_content_reg_4__10_/clk
+                               33.98     0.00      127.40    127.40    wrp-+
+  reg_bankB_content_reg_4__6_/clk
+                               33.98     0.00      127.39    127.39    wrp-+
+  reg_bankA_content_reg_7__5_/clk
+                               28.92     0.00      127.32    127.32    wrp-+
+  reg_bankA_content_reg_7__9_/clk
+                               28.92     0.00      127.30    127.30    wrp-+
+  reg_bankA_content_reg_7__11_/clk
+                               28.92     0.00      127.25    127.25    wrp-+
+  reg_bankA_content_reg_7__6_/clk
+                               28.92     0.00      127.15    127.15    wrp-+
+  reg_bankA_content_reg_7__7_/clk
+                               28.92     0.00      127.11    127.11    wrp-+
+  reg_bankA_content_reg_7__10_/clk
+                               28.92     0.00      127.09    127.09    wrp-+
+  reg_bankB_content_reg_4__1_/clk
+                               33.98     0.00      127.06    127.06    wrp-+
+  reg_bankA_content_reg_7__8_/clk
+                               28.92     0.00      127.03    127.03    wrp-+
+  reg_bankA_content_reg_7__4_/clk
+                               28.92     0.00      127.03    127.03    wrp-+
+  reg_bankB_content_reg_13__11_/clk
+                               26.19     0.00      127.02    127.02    wrp-+
+  reg_bankB_content_reg_7__0_/clk
+                               28.92     0.00      127.02    127.02    wrp-+
+  reg_bankA_content_reg_7__1_/clk
+                               28.92     0.00      127.02    127.02    wrp-+
+  reg_bankB_content_reg_6__4_/clk
+                               27.46     0.00      126.99    126.99    wrp-+
+  reg_bankB_content_reg_6__2_/clk
+                               27.46     0.00      126.98    126.98    wrp-+
+  reg_bankB_content_reg_13__8_/clk
+                               26.19     0.00      126.97    126.97    wrp-+
+  reg_bankB_content_reg_13__6_/clk
+                               26.19     0.00      126.93    126.93    wrp-+
+  reg_bankA_content_reg_7__0_/clk
+                               28.92     0.00      126.92    126.92    wrp-+
+  reg_bankB_content_reg_9__9_/clk
+                               35.38     0.00      126.90    126.90    wrp-+
+  reg_bankB_content_reg_13__10_/clk
+                               26.19     0.00      126.89    126.89    wrp-+
+  reg_bankB_content_reg_9__5_/clk
+                               35.38     0.00      126.86    126.86    wrp-+
+  reg_bankB_content_reg_6__10_/clk
+                               27.46     0.00      126.86    126.86    wrp-+
+  reg_bankA_content_reg_7__2_/clk
+                               28.92     0.00      126.85    126.85    wrp-+
+  reg_bankB_content_reg_6__6_/clk
+                               27.46     0.00      126.81    126.81    wrp-+
+  reg_bankB_content_reg_9__1_/clk
+                               35.38     0.00      126.81    126.81    wrp-+
+  reg_bankB_content_reg_8__9_/clk
+                               34.41     0.00      126.78    126.78    wrp-+
+  reg_bankB_content_reg_8__5_/clk
+                               34.41     0.00      126.76    126.76    wrp-+
+  reg_bankB_content_reg_8__1_/clk
+                               34.41     0.00      126.76    126.76    wrp-+
+  reg_bankB_content_reg_4__5_/clk
+                               33.98     0.00      126.74    126.74    wrp-+
+  reg_bankB_content_reg_6__8_/clk
+                               27.46     0.00      126.74    126.74    wrp-+
+  reg_bankA_content_reg_7__3_/clk
+                               28.92     0.00      126.73    126.73    wrp-+
+  reg_bankB_content_reg_8__10_/clk
+                               34.41     0.00      126.68    126.68    wrp-+
+  reg_bankB_content_reg_8__11_/clk
+                               34.41     0.00      126.68    126.68    wrp-+
+  reg_bankB_content_reg_9__11_/clk
+                               35.38     0.00      126.67    126.67    wrp-+
+  reg_bankB_content_reg_8__6_/clk
+                               34.41     0.00      126.65    126.65    wrp-+
+  reg_bankB_content_reg_4__8_/clk
+                               33.98     0.00      126.63    126.63    wrp-+
+  reg_bankB_content_reg_8__8_/clk
+                               34.41     0.00      126.62    126.62    wrp-+
+  reg_bankB_content_reg_4__9_/clk
+                               33.98     0.00      126.59    126.59    wrp-+
+  reg_bankB_content_reg_8__7_/clk
+                               34.41     0.00      126.59    126.59    wrp-+
+  reg_bankB_content_reg_13__4_/clk
+                               26.19     0.00      126.59    126.59    wrp-+
+  reg_bankB_content_reg_9__8_/clk
+                               35.38     0.00      126.58    126.58    wrp-+
+  reg_bankA_content_reg_6__8_/clk
+                               27.46     0.00      126.57    126.57    wrp-+
+  reg_bankB_content_reg_9__6_/clk
+                               35.38     0.00      126.56    126.56    wrp-+
+  reg_bankB_content_reg_9__7_/clk
+                               35.38     0.00      126.56    126.56    wrp-+
+  reg_bankB_content_reg_9__10_/clk
+                               35.38     0.00      126.55    126.55    wrp-+
+  reg_bankA_content_reg_6__1_/clk
+                               27.46     0.00      126.55    126.55    wrp-+
+  reg_bankB_content_reg_13__2_/clk
+                               26.19     0.00      126.53    126.53    wrp-+
+  reg_bankA_content_reg_6__5_/clk
+                               27.46     0.00      126.51    126.51    wrp-+
+  reg_bankB_content_reg_9__3_/clk
+                               35.38     0.00      126.46    126.46    wrp-+
+  reg_bankB_content_reg_14__8_/clk
+                               34.16     0.00      126.43    126.43    wrp-+
+  reg_bankB_content_reg_14__6_/clk
+                               34.16     0.00      126.43    126.43    wrp-+
+  reg_bankB_content_reg_6__9_/clk
+                               27.46     0.00      126.42    126.42    wrp-+
+  reg_bankB_content_reg_6__5_/clk
+                               27.46     0.00      126.40    126.40    wrp-+
+  reg_bankB_content_reg_6__1_/clk
+                               27.46     0.00      126.39    126.39    wrp-+
+  reg_bankB_content_reg_14__10_/clk
+                               34.16     0.00      126.37    126.37    wrp-+
+  reg_bankB_content_reg_12__5_/clk
+                               26.43     0.00      126.34    126.34    wrp-+
+  reg_bankB_content_reg_6__7_/clk
+                               27.46     0.00      126.34    126.34    wrp-+
+  reg_bankA_content_reg_6__9_/clk
+                               27.46     0.00      126.33    126.33    wrp-+
+  reg_bankB_content_reg_12__1_/clk
+                               26.43     0.00      126.32    126.32    wrp-+
+  reg_bankB_content_reg_14__2_/clk
+                               34.16     0.00      126.29    126.29    wrp-+
+  reg_bankB_content_reg_4__3_/clk
+                               33.98     0.00      126.26    126.26    wrp-+
+  reg_bankB_content_reg_12__7_/clk
+                               26.43     0.00      126.25    126.25    wrp-+
+  reg_bankB_content_reg_13__5_/clk
+                               26.19     0.00      126.25    126.25    wrp-+
+  reg_bankA_content_reg_8__11_/clk
+                               34.41     0.00      126.23    126.23    wrp-+
+  reg_bankB_content_reg_14__7_/clk
+                               34.16     0.00      126.22    126.22    wrp-+
+  reg_bankB_content_reg_13__9_/clk
+                               26.19     0.00      126.21    126.21    wrp-+
+  reg_bankA_content_reg_8__6_/clk
+                               34.41     0.00      126.21    126.21    wrp-+
+  reg_bankA_content_reg_8__5_/clk
+                               34.41     0.00      126.19    126.19    wrp-+
+  reg_bankB_content_reg_13__1_/clk
+                               26.19     0.00      126.19    126.19    wrp-+
+  reg_bankB_content_reg_13__3_/clk
+                               26.19     0.00      126.18    126.18    wrp-+
+  reg_bankB_content_reg_12__8_/clk
+                               26.43     0.00      126.18    126.18    wrp-+
+  reg_bankB_content_reg_14__1_/clk
+                               34.16     0.00      126.17    126.17    wrp-+
+  reg_bankB_content_reg_8__2_/clk
+                               34.41     0.00      126.16    126.16    wrp-+
+  reg_bankA_content_reg_8__1_/clk
+                               34.41     0.00      126.16    126.16    wrp-+
+  reg_bankB_content_reg_6__3_/clk
+                               27.46     0.00      126.14    126.14    wrp-+
+  reg_bankB_content_reg_13__7_/clk
+                               26.19     0.00      126.12    126.12    wrp-+
+  reg_bankA_content_reg_6__11_/clk
+                               27.46     0.00      126.11    126.11    wrp-+
+  reg_bankB_content_reg_12__6_/clk
+                               26.43     0.00      126.10    126.10    wrp-+
+  reg_bankA_content_reg_8__9_/clk
+                               34.41     0.00      126.09    126.09    wrp-+
+  reg_bankB_content_reg_9__2_/clk
+                               35.38     0.00      126.05    126.05    wrp-+
+  reg_bankB_content_reg_8__3_/clk
+                               34.41     0.00      126.04    126.04    wrp-+
+  reg_bankB_content_reg_12__10_/clk
+                               26.43     0.00      125.98    125.98    wrp-+
+  reg_bankA_content_reg_4__8_/clk
+                               33.98     0.00      125.98    125.98    wrp-+
+  reg_bankA_content_reg_4__5_/clk
+                               33.98     0.00      125.97    125.97    wrp-+
+  reg_bankA_content_reg_4__9_/clk
+                               33.98     0.00      125.95    125.95    wrp-+
+----------------------------------------------------------------------------
+
+1

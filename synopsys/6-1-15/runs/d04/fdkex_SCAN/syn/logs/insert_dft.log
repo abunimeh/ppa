@@ -1,0 +1,90 @@
+#INFO-MSG==>   Setting log file  : ./logs/insert_dft.log
+#INFO-MSG==>    ALL insert_dft substeps :  insert_dft 
+#INFO-MSG==>    Completed substeps : 
+#INFO-MSG==>    Remaining substeps :  insert_dft  
+#INFO-MSG==>  Executing substep insert_dft
+==>INFORMATION: P_source_if_exists: Sourcing /p/fdkgt/adf_qa/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/kit/afdk73_kit_s/asicflows/synopsys/syn/insert_dft.tcl : START Tue Mar 31 00:35:10 MST 2015
+Accepted scan state.
+==>INFORMATION: Found ./scripts/scan_stitch_template.tcl file
+Accepted dft signal specification for modes: all_dft
+==>INFORMATION: Defining test clock(s):  set_dft_signal -view existing_dft -type ScanClock -timing 45 55 -port clk
+==>INFORMATION: first_testclk_name: clk
+==>INFORMATION: testclk_period: 100000
+==>INFORMATION: Defining test reset(s): set_dft_signal -view existing_dft -port rstb -type Reset -active_state 0
+Accepted dft signal specification for modes: all_dft
+==>INFORMATION: Test constraints NOT defined or set to 'none'; Proceeding without test mode constraints
+==>INFORMATION: Port scan_enable doesn't exist
+==>INFORMATION: Creating new port scan_enable for scan_enable
+Creating port 'scan_enable' in design 'fdkex'.
+Accepted dft signal specification for modes: all_dft
+==>INFORMATION: Scan_enable port is scan_enable
+==>INFORMATION: Port test_tm doesn't exist
+==>INFORMATION: Defining new port {test_tm} as clock_gating_enable
+Creating port 'test_tm' in design 'fdkex'.
+Accepted dft signal specification for modes: all_dft
+==>INFORMATION: Clock_gating_en port is test_tm
+==>INFORMATION: Scan_compression NOT enabled. Proceeding with simple scan configuration.
+==>INFORMATION: INTEL_SCAN_CHAIN_LENGTH not specified or set to 'default'; Max_chain_length will be set to 750
+Accepted scan configuration for modes: all_dft
+==>INFORMATION: Scan_in/scan_out NOT defined or set to 'none' or 'default'; Creating scan chain(s) with default test_si*/test_so* port name(s)
+INTEL_SCAN_ATSPEED_CLK_CTRL variable not defined in ./scripts/scan_stitch_template.tcl; Proceeding without OCC
+==>INFORMATION: Setting up DFT configuration
+Accepted insert_dft configuration specification.
+Accepted insert_dft configuration specification.
+Accepted scan configuration for modes: all_dft
+Accepted scan configuration for modes: all_dft
+==>INFORMATION: Creating test protocol
+==>INFORMATION: Performing DFT insertion
+==>INFORMATION: Saving simple scan test protocol
+Writing test protocol file '/nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/syn/outputs/fdkex.syn.spf' for mode 'Internal_scan'...
+==>INFORMATION: set_false_path -through scan_enable
+==>INFORMATION: set_false_path -through test_tm
+==>INFORMATION: set_input_delay -clock clk 100 test_si1
+==>INFORMATION: set_input_delay -clock clk 100 test_si2
+==>INFORMATION: set_input_delay -clock clk 100 test_si3
+==>INFORMATION: set_input_delay -clock clk 100 test_si4
+==>INFORMATION: set_input_delay -clock clk 100 test_si5
+==>INFORMATION: set_input_delay -clock clk 100 test_si6
+==>INFORMATION: set_input_delay -clock clk 100 test_si7
+==>INFORMATION: set_input_delay -clock clk 100 test_si8
+==>INFORMATION: set_input_delay -clock clk 100 test_si9
+==>INFORMATION: set_input_delay -clock clk 100 test_si10
+==>INFORMATION: set_input_delay -clock clk 100 test_si11
+==>INFORMATION: set_input_delay -clock clk 100 test_si12
+==>INFORMATION: set_input_delay -clock clk 100 test_si13
+==>INFORMATION: set_input_delay -clock clk 100 test_si14
+==>INFORMATION: set_input_delay -clock clk 100 test_si15
+==>INFORMATION: set_input_delay -clock clk 100 test_si16
+==>INFORMATION: set_input_delay -clock clk 100 test_si17
+==>INFORMATION: set_input_delay -clock clk 100 test_si18
+==>INFORMATION: set_input_delay -clock clk 100 test_si19
+==>INFORMATION: set_output_delay -clock clk 100 test_so3
+==>INFORMATION: set_output_delay -clock clk 100 test_so4
+==>INFORMATION: set_output_delay -clock clk 100 test_so5
+==>INFORMATION: set_output_delay -clock clk 100 test_so6
+==>INFORMATION: set_output_delay -clock clk 100 test_so7
+==>INFORMATION: set_output_delay -clock clk 100 test_so8
+==>INFORMATION: set_output_delay -clock clk 100 test_so9
+==>INFORMATION: set_output_delay -clock clk 100 test_so10
+==>INFORMATION: set_output_delay -clock clk 100 test_so11
+==>INFORMATION: set_output_delay -clock clk 100 test_so12
+==>INFORMATION: set_output_delay -clock clk 100 test_so13
+==>INFORMATION: set_output_delay -clock clk 100 test_so14
+==>INFORMATION: set_output_delay -clock clk 100 test_so15
+==>INFORMATION: set_output_delay -clock clk 100 test_so16
+==>INFORMATION: set_output_delay -clock clk 100 test_so17
+==>INFORMATION: set_output_delay -clock clk 100 test_so18
+==>INFORMATION: set_output_delay -clock clk 100 test_so19
+==>INFORMATION: P_source_if_exists: insert_dft.tcl : END Tue Mar 31 00:36:22 MST 2015 : WALLCLOCK RUNTIME in (hh:mm:ss) : 00:01:12 hrs : CPU RUNTIME in (hh:mm:ss) : 00:00:35 hrs : MEMORY : 2352236 KB
+#INFO-MSG==>  Time to run substep insert_dft in (hh:mm:ss) : 00:01:12 hrs
+#INFO-MSG==>  Time to run step insert_dft in (hh:mm:ss) : 00:01:12 hrs
+#INFO-MSG==>  Saving design fdkex ...
+Writing ddc file './ddc/fdkex_insert_dft.ddc'.
+#INFO-MSG==>   No report requirement specified INTEL_REPORTS(insert_dft) 
+==>INFORMATION: Generating an output verilog
+Writing verilog file '/nfs/ch/disks/icf_fdk_regression001/nightly_adf_kit_build_regr/builds_regr/nightly/1273/dot3/synopsys/2015-03-31/runs/d04/fdkex_SCAN/syn/outputs/fdkex.insert_dft.vg'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+==>INFORMATION: Output file: outputs/fdkex.insert_dft.vg
+#WARNING-MSG==>  Skip generating output upf because INTEL_UPF is '0' instead of '1'!
+#INFO-MSG==>  Time to create reports and outputs for insert_dft in (hh:mm:ss) : 00:00:03 hrs
+

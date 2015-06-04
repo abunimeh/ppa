@@ -1,0 +1,24 @@
+ 
+****************************************
+check_design summary:
+Version:     J-2014.09
+Date:        Tue Mar 31 00:54:01 2015
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               5
+    Nets connected to multiple pins on same cell (LINT-33)          5
+--------------------------------------------------------------------------------
+
+Warning: In design 'fdkex', the same net is connected to more than one pin on submodule 'fifo0'. (LINT-33)
+   Net 'n19412' is connected to pins 'IN5', 'IN7''.
+Warning: In design 'fdkex', the same net is connected to more than one pin on submodule 'fifo1'. (LINT-33)
+   Net 'n22092' is connected to pins 'IN1', 'IN13''.
+Warning: In design 'fdkex', the same net is connected to more than one pin on submodule 'fifo1'. (LINT-33)
+   Net 'n18951' is connected to pins 'IN10', 'IN11''.
+Warning: In design 'fdkex', the same net is connected to more than one pin on submodule 'fifo1'. (LINT-33)
+   Net 'n22793' is connected to pins 'IN41', 'IN42''.
+Warning: In design 'fdkex', the same net is connected to more than one pin on submodule 'fifo2'. (LINT-33)
+   Net 'n18946' is connected to pins 'IN31', 'IN48''.
+1
