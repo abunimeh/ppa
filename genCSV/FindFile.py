@@ -10,15 +10,9 @@ class FindFiles:
                    'reports_max', 'reports_min', 'denall_reuse', 'drcc', 'gden', 'HV', 'drc_IPall', 'lvs', 'max',
                    'min', 'power', 'noise', 'drcd', 'trclvs']
 
-        # print("Current file endings to search for:", file_endings)
-        # print()
-        #
-        # # test_case is the argument sent in when the user calls the script
-        # print("Searching for files in",  test_case)
-
-        for root, dirnames, filenames in os.walk(test_case, topdown=True):
+        for root, dir_names, file_names in os.walk(test_case, topdown=True):
             # This statement makes sure that we only search for paths that includes the names in the list, included_path_names
-            dirnames[:] = [d for d in dirnames if d in included_path_names]
+            dir_names[:] = [d for d in dir_names if d in included_path_names]
 
             # Because the files we are searching for in the drc_lvs directory does not follow the patterns that the rest of the files do we have to do the following
             if "drcd" in root or "denall_reuse" in root or "drc_IPall" in root or "trclvs" in root:
@@ -31,16 +25,16 @@ class FindFiles:
                 for file in file_endings:
                     if 'drc.sum' in file:
                         if 'drc_lvs' in root:
-                            for filename in fnmatch.filter(filenames, file):
+                            for filename in fnmatch.filter(file_names, file):
                                 found_files.append(os.path.join(root, filename))
 
                     elif '*.link.rpt' in file:
                         if 'pv' in root or 'sta' in root:
-                            for filename in fnmatch.filter(filenames, file):
+                            for filename in fnmatch.filter(file_names, file):
                                 found_files.append(os.path.join(root, filename))
 
                     else:
-                        for filename in fnmatch.filter(filenames, file):
+                        for filename in fnmatch.filter(file_names, file):
                             found_files.append(os.path.join(root, filename))
 
         return found_files

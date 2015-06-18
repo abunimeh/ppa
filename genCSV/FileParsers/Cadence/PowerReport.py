@@ -27,7 +27,7 @@ class CadencePowerRpt:
 
     @staticmethod
     def search_file(file):
-        from Metrics.FormatMetric import FormatMetric
+        import Metrics.FormatMetric as Format
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
@@ -35,7 +35,6 @@ class CadencePowerRpt:
 
         # close the file after reading the lines.
         f.close()
-        formt = FormatMetric()
         data_items = []
         power_rpt_data = CadencePowerRptData()
         power_rpt_data.found_power_internal = [CadencePowerRpt.replace_space('apr Power Internal'), "N/A"]
@@ -50,13 +49,13 @@ class CadencePowerRpt:
             found_power_total = CadencePowerRpt.mathcLine(line, 'Total', 'Power')
 
             if found_power_internal:
-                power_rpt_data.found_power_internal[1] = formt.format_metric_values(found_power_internal.group(2))
+                power_rpt_data.found_power_internal[1] = Format.format_metric_values(found_power_internal.group(2))
             elif found_power_switching:
-                power_rpt_data.found_power_switching[1] = formt.format_metric_values(found_power_switching.group(2))
+                power_rpt_data.found_power_switching[1] = Format.format_metric_values(found_power_switching.group(2))
             elif found_power_leakage:
-                power_rpt_data.found_power_leakage[1] = formt.format_metric_values(found_power_leakage.group(2))
+                power_rpt_data.found_power_leakage[1] = Format.format_metric_values(found_power_leakage.group(2))
             elif found_power_total:
-                power_rpt_data.found_power_total[1] = formt.format_metric_values(found_power_total.group(2))
+                power_rpt_data.found_power_total[1] = Format.format_metric_values(found_power_total.group(2))
 
         data_items.append(tuple(power_rpt_data.found_power_internal))
         data_items.append(tuple(power_rpt_data.found_power_switching))

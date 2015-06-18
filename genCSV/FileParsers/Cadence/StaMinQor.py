@@ -22,14 +22,13 @@ class StaMinQor:
 
     @staticmethod
     def search_file(file):
-        from Metrics.FormatMetric import FormatMetric
+        import Metrics.FormatMetric as Format
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         # close the file after reading the lines.
         f.close()
-        formt = FormatMetric()
         data_items = []
         found_section = False
         sta_min_qor_data = CadenceStaMinQorData()
@@ -46,9 +45,9 @@ class StaMinQor:
                 found_section = True
             elif found_section:
                 if found_hold_viol:
-                    sta_min_qor_data.found_hold_viol[1] = formt.format_metric_values(found_hold_viol.group(2))
+                    sta_min_qor_data.found_hold_viol[1] = Format.format_metric_values(found_hold_viol.group(2))
                 elif found_min_tns:
-                    sta_min_qor_data.found_min_tns[1] = formt.format_metric_values(found_min_tns.group(2))
+                    sta_min_qor_data.found_min_tns[1] = Format.format_metric_values(found_min_tns.group(2))
                 elif found_next_section:
                     found_section = False
 

@@ -26,14 +26,13 @@ class CaRunTime:
     @staticmethod
     def search_file(file):
         import sys
-        from Metrics.FormatMetric import FormatMetric
+        import Metrics.FormatMetric as Format
         # Open the file with read only permit
         #open(file, "r")as lines:
         # The variable "lines" is a list containing all lines
         #lines = f.readlines()
         # close the file after reading the lines.
         #f.close()
-        formt = FormatMetric()
         data_items = []
         run_time_data = CadenceRunTimeData()
         run_time_data.found_run_time = [CaRunTime.replace_space('sta Run Time') + " (secs)", "N/A"]
@@ -47,7 +46,7 @@ class CaRunTime:
                 found_run_time = CaRunTime.mathcLine(line, 'Ending "Tempus Timing Signoff Solution"')
 
                 if found_run_time:
-                    run_time_data.found_run_time[1] = formt.convert_to_seconds_format(found_run_time.group(2))
+                    run_time_data.found_run_time[1] = Format.convert_to_seconds_format(found_run_time.group(2))
                 # if i % 300 == 0:
                 #     print("mult of 300")
                 # i += 1

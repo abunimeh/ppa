@@ -65,13 +65,13 @@
 	"Search_Key":{
       "Order":{
 		"default":"3",
-        "1":"*.stage/testcase/testcase/stage",
-        "2":"*.stage/testcase/stage",
-        "3":"*testcase/stage",
-        "4": ".*/YYYY-MM-DD/runs/d**/testcase"
+        "1":"For megatest with the duplicate testcase name directories (stage/testcase/testcase/stages). The arguments passed in should end with the first stage/phase E.g megatest/syn",
+        "2":"For megatest without the duplicate testcase name directories. The arguments passed in should end with the first stage/phase E.g megatest/syn",
+        "3":"For any single testcase, E.g /cpu_testcase",
+        "4":"For the nightly structure, the argument(s) passed in should end with the path up to the directory with the date. E.g synopsys/2015-06-02/"
     }
     },
-    "line_keywords": {
+    "metrics_dictionary": {
         "cadence": { 
           "post_route_hold_optDesign.summary":{
             "found_wns": {

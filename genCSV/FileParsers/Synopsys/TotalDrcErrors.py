@@ -2,7 +2,7 @@ class TotalDrcErrors:
     @staticmethod
     def get_total_count(metric_list):
         import re
-        from Metrics.FormatMetric import FormatMetric
+        import Metrics.FormatMetric as Format
         drc_tot_numb = 0
         metric_name = 0
         metric_value = 1
@@ -15,5 +15,5 @@ class TotalDrcErrors:
                     if er_number:
                         drc_tot_numb += float(er_number.group(1))
 
-        drc_tot_numb = FormatMetric.format_metric_values(drc_tot_numb)
+        drc_tot_numb = Format.format_metric_values(drc_tot_numb)
         return drc_tot_numb

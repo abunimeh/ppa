@@ -16,7 +16,7 @@ class PvPower:
 
     @staticmethod
     def search_file(file):
-        from Metrics.FormatMetric import FormatMetric
+        import Metrics.FormatMetric as Format
 
         DataItems = []
         # Open the file with read only permit
@@ -38,13 +38,13 @@ class PvPower:
             foundTotalPwr = PvPower.match_line("Total", "Power", " ", line)
 
             if foundCInternPwr:
-                pvData.foundCInternPwr[1] = FormatMetric.format_metric_values(foundCInternPwr.group(2))
+                pvData.foundCInternPwr[1] = Format.format_metric_values(foundCInternPwr.group(2))
             elif foundCLeakPwr:
-                pvData.foundCLeakPwr[1] = FormatMetric.format_metric_values(foundCLeakPwr.group(2))
+                pvData.foundCLeakPwr[1] = Format.format_metric_values(foundCLeakPwr.group(2))
             elif foundNetSwPwr:
-                pvData.foundNetSwPwr[1] = FormatMetric.format_metric_values(foundNetSwPwr.group(2))
+                pvData.foundNetSwPwr[1] = Format.format_metric_values(foundNetSwPwr.group(2))
             elif foundTotalPwr:
-                pvData.foundTotalPwr[1] = FormatMetric.format_metric_values(foundTotalPwr.group(2))
+                pvData.foundTotalPwr[1] = Format.format_metric_values(foundTotalPwr.group(2))
 
         DataItems.append(tuple(pvData.foundCInternPwr))
         DataItems.append(tuple(pvData.foundCLeakPwr))

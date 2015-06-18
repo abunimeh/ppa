@@ -24,15 +24,13 @@ class CadenceViolations:
 
     @staticmethod
     def search_file(file):
-        from Metrics.FormatMetric import FormatMetric
+        import Metrics.FormatMetric as Format
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
-
         # close the file after reading the lines.
         f.close()
-        formt = FormatMetric()
         data_items = []
         viol_data = CadenceViolationsData()
         value_found = 0
@@ -49,21 +47,21 @@ class CadenceViolations:
                 if found_max_trans.group(2) == '':
                     value_found = 0
                 else:
-                    value_found = formt.format_metric_values(found_max_trans.group(2))
+                    value_found = Format.format_metric_values(found_max_trans.group(2))
                 viol_data.found_max_trans[1] = value_found
 
             elif found_max_cap:
                 if found_max_cap.group(2) == '':
                     value_found = 0
                 else:
-                    value_found = formt.format_metric_values(found_max_cap.group(2))
+                    value_found = Format.format_metric_values(found_max_cap.group(2))
                 viol_data.found_max_cap[1] = value_found
 
             elif found_max_fanout:
                 if found_max_fanout.group(2) == '':
                     value_found = 0
                 else:
-                    value_found = formt.format_metric_values(found_max_fanout.group(2))
+                    value_found = Format.format_metric_values(found_max_fanout.group(2))
                 viol_data.found_max_fanout[1] = value_found
 
         data_items.append(tuple(viol_data.found_max_trans))

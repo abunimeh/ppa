@@ -33,7 +33,7 @@ class RunTimeRpt:
     @staticmethod
     def search_file(file):
         import re
-        from Metrics.FormatMetric import FormatMetric
+        import Metrics.FormatMetric as Format
 
         stage = RunTimeRpt.metric_naming(file)
         # Open the file with read only permit
@@ -53,13 +53,13 @@ class RunTimeRpt:
 
             if foundRunTime:
                 if "pv max tttt" is stage:
-                    rptData.foundRunTime_max[1] = FormatMetric.format_metric_values(foundRunTime.group(2))
+                    rptData.foundRunTime_max[1] = Format.format_metric_values(foundRunTime.group(2))
                 elif "pv min tttt" is stage:
-                    rptData.foundRunTime_min[1] = FormatMetric.format_metric_values(foundRunTime.group(2))
+                    rptData.foundRunTime_min[1] = Format.format_metric_values(foundRunTime.group(2))
                 elif "pv power tttt" is stage:
-                    rptData.foundRunTime_noise[1] = FormatMetric.format_metric_values(foundRunTime.group(2))
+                    rptData.foundRunTime_noise[1] = Format.format_metric_values(foundRunTime.group(2))
                 elif "pv noise tttt" is stage:
-                    rptData.foundRunTime_power[1] = FormatMetric.format_metric_values(foundRunTime.group(2))
+                    rptData.foundRunTime_power[1] = Format.format_metric_values(foundRunTime.group(2))
 
         DataItems.append(tuple(rptData.foundRunTime_max))
         DataItems.append(tuple(rptData.foundRunTime_min))

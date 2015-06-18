@@ -28,7 +28,7 @@ class FinalRpt:
     @staticmethod
     def search_file(file):
         import re
-        from Metrics.FormatMetric import FormatMetric
+        import Metrics.FormatMetric as Format
         DataItems = []
         stage = FinalRpt.metric_naming(file)
         # Open the file with read only permit
@@ -42,7 +42,7 @@ class FinalRpt:
         for line in lines:
             found_num_of_errors = re.search(r'(The[\s]*number[\s]*of[\s]*actual[\s]*errors)[\s]*:+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
             if found_num_of_errors:
-                rptData.found_num_of_errors[1] = FormatMetric.format_metric_values(found_num_of_errors.group(2))
+                rptData.found_num_of_errors[1] = Format.format_metric_values(found_num_of_errors.group(2))
                 DataItems.append(tuple(rptData.found_num_of_errors))
                 return DataItems
 

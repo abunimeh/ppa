@@ -22,14 +22,13 @@ class StaMaxQor:
 
     @staticmethod
     def search_file(file):
-        from Metrics.FormatMetric import FormatMetric
+        import Metrics.FormatMetric as Format
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         # close the file after reading the lines.
         f.close()
-        formt = FormatMetric()
         data_items = []
         found_section = False
         sta_max_qor_data = CadenceStaMaxQorData()
@@ -48,24 +47,24 @@ class StaMaxQor:
             elif found_section:
                 if found_crit_path:
                     sta_max_qor_data.found_crit_path = StaMaxQor.replace_space('sta max tttt REG2REG worst setup viols'),\
-                                                       formt.format_metric_values(found_crit_path.group(2))
+                                                       Format.format_metric_values(found_crit_path.group(2))
                     data_items.append(sta_max_qor_data.found_crit_path)
                 elif found_total_neg_slack:
                     sta_max_qor_data.found_total_neg_slack = StaMaxQor.replace_space('sta max tttt REG2REG TNS'),\
-                                                             formt.format_metric_values(found_total_neg_slack.group(2))
+                                                             Format.format_metric_values(found_total_neg_slack.group(2))
                     data_items.append(sta_max_qor_data.found_total_neg_slack)
                 elif found_next_section:
                     found_section = False
             elif found_cell_count:
-                sta_max_qor_data.found_cell_count = StaMaxQor.replace_space('sta Cell Count'), formt.format_metric_values(found_cell_count.group(2))
+                sta_max_qor_data.found_cell_count = StaMaxQor.replace_space('sta Cell Count'), Format.format_metric_values(found_cell_count.group(2))
                 data_items.append(sta_max_qor_data.found_cell_count)
             elif found_max_trans_count:
                 sta_max_qor_data.found_max_trans_count = StaMaxQor.replace_space('sta max trans viols'), \
-                                                         formt.format_metric_values(found_max_trans_count.group(2))
+                                                         Format.format_metric_values(found_max_trans_count.group(2))
                 data_items.append(sta_max_qor_data.found_max_trans_count)
             elif found_max_cap_count:
                 sta_max_qor_data.found_max_cap_count = StaMaxQor.replace_space('sta max cap viols'),\
-                                                       formt.format_metric_values(found_max_cap_count.group(2))
+                                                       Format.format_metric_values(found_max_cap_count.group(2))
                 data_items.append(sta_max_qor_data.found_max_cap_count)
 
         return data_items

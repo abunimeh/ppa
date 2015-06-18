@@ -4,8 +4,8 @@
 # import os
 import sys
 # import genCSV
-from Metrics.GenerateMetric import GenerateMetric
+import Metrics.GenerateMetric
 # sys_args = ["C:\dev\intel\ppa\cadence\mult_1bit_scan(copy)"]
 
-GenerateMetric.determine_testcases(sys.argv)
+Metrics.GenerateMetric.determine_testcases(sys.argv)
 

@@ -41,7 +41,7 @@ class CalibreErrors:
     @staticmethod
     def search_file(file):
         import re
-        from Metrics.FormatMetric import FormatMetric
+        import Metrics.FormatMetric as Format
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
@@ -49,7 +49,6 @@ class CalibreErrors:
         # close the file after reading the lines.
         f.close()
         data_items = []
-        formt = FormatMetric()
         stage = CalibreErrors.metric_naming(file)
         calibre_errors = CalibreErrorsData()
         calibre_errors.found_violation = [CalibreErrors.replace_space('calibre' + stage), "\t"]
@@ -59,7 +58,7 @@ class CalibreErrors:
             for line in lines:
                 found_violation = re.search('(TOTAL[\s]*DRC[\s]*Results[\s]*Generated:)[\s]*([-\d\.]*).*', line, re.I)
                 if found_violation:
-                    calibre_errors.found_violation[1] = formt.format_metric_values(found_violation.group(2))
+                    calibre_errors.found_violation[1] = Format.format_metric_values(found_violation.group(2))
                     data_items.append(tuple(calibre_errors.found_violation))
                     return data_items
 

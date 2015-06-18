@@ -9,7 +9,7 @@ class AprRunLog:
     # matchLine() takes the line that the method search_file() is looking for at the time and the keywords of the regular
     # expression. The method does the regular expression and returns it.
     @staticmethod
-    def mathcLine(line, *args):
+    def match_line(line, *args):
         import re
         # match_words will be the string of args with "[\s]*" replacing " "
         match_words = ""
@@ -32,40 +32,39 @@ class AprRunLog:
 
     # check_list() checks to see if the metric has already been added to the list
     @staticmethod
-    def check_list(metric_list, metric_name):
+    def check_list(metrics, metric_name):
         metric_in_list = True
-        for metrics in metric_list:
-            if metric_name is metrics[0]:
+        for metric_pair in metrics:
+            if metric_name == metric_pair[0]:
                 metric_in_list = False
+                break
         return metric_in_list
 
     # search_file() takes the file name given to it by
     @staticmethod
     def search_file(file):
         import re
-        from Metrics.FormatMetric import FormatMetric
+        import Metrics.FormatMetric as Format
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
-
         # close the file after reading the lines.
         f.close()
         data_items = []
-        found_drc_violations = False
         run_log_data = CadenceAprRunLogData()
-        formt = FormatMetric
+
         for line in reversed(lines):
-            found_drc_vio = AprRunLog.mathcLine(line, 'Total number of DRC violations')
-            found_run_time = AprRunLog.mathcLine(line, 'Ending "Encounter" (totcpu=')
+            found_drc_vio = AprRunLog.match_line(line, 'Total number of DRC violations')
+            found_run_time = AprRunLog.match_line(line, 'Ending "Encounter" (totcpu=')
             found_kit = re.search(r'(==>INFORMATION:[\s]*P_source_if_exists:[\s]*Sourcing)[\s]*.*/([afdkitcsr\._\d]+[_]+[afdkitcsr\._\d]*[^/])/',line)
 
             if found_drc_vio:
-                run_log_data.found_drc_vio = AprRunLog.replace_space('apr DRC Violations'), formt.format_metric_values(found_drc_vio.group(2))
+                run_log_data.found_drc_vio = AprRunLog.replace_space('apr DRC Violations'), Format.format_metric_values(found_drc_vio.group(2))
                 if AprRunLog.check_list(data_items, run_log_data.found_drc_vio[0]):
                     data_items.append(run_log_data.found_drc_vio)
             elif found_run_time:
-                run_log_data.found_run_time = AprRunLog.replace_space('apr Run Time') + ' (secs)', formt.format_metric_values(found_run_time.group(2))
+                run_log_data.found_run_time = AprRunLog.replace_space('apr Run Time') + ' (secs)', Format.format_metric_values(found_run_time.group(2))
                 if AprRunLog.check_list(data_items, run_log_data.found_run_time[0]):
                     data_items.append(run_log_data.found_run_time)
             elif found_kit:

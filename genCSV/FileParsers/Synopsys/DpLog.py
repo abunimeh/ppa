@@ -1,6 +1,6 @@
 class dpLogData:
     pass
-class dpLog:
+class DpLog:
     @staticmethod
     def metric_naming(file):
         import re
@@ -26,33 +26,41 @@ class dpLog:
         return newName
 
     @staticmethod
+    def check_list(metrics, metric_name):
+        metric_in_list = True
+        for metric_pair in metrics:
+            if metric_name == metric_pair[0]:
+                metric_in_list = False
+                break
+        return metric_in_list
+
+    @staticmethod
     def search_file(file):
         import re
-        from Metrics.FormatMetric import FormatMetric
-        foundFlag = 0
+        import Metrics.FormatMetric as Format
         DataItems = []
-        stage = dpLog.metric_naming(file)
+        stage = DpLog.metric_naming(file)
         # Open the file with read only permit
         f = open(file, "r")
         # The variable "lines" is a list containing all lines
         lines = f.readlines()
         f.close()
-        i = 0
-        formt = FormatMetric()
-        dpData = dpLogData()
-        dpData.foundPeakMem = [dpLog.replace_space(stage + " Peak Memory") + " (MB)", "N/A"]
-        dpData.foundRuntime = [dpLog.replace_space(stage + " Runtime")+" (secs)", "N/A"]
-        # reversed in order to find the last value in the file
-        for line in reversed(lines):
-            foundPeakMem = re.search(r'.*:[\s]*(Peak)[\s]*=[\s]*([\d]*[\s]*)\(mb\)', line, re.I)
-            foundRuntime = re.search(r'(Overall[\s]*engine[\s]*time)[\s]*=+[\s]*([\d]*:*[\d]*:*[\d]+)+', line, re.I)
 
-            if foundPeakMem:
-                dpData.foundPeakMem[1] = formt.format_metric_values(foundPeakMem.group(2))
-                DataItems.append(tuple(dpData.foundPeakMem))
-            elif foundRuntime:
-                dpData.foundRuntime[1] = formt.format_metric_values(foundRuntime.group(2))
-                DataItems.append(tuple(dpData.foundRuntime))
+        dpData = dpLogData()
+        dpData.foundPeakMem = [DpLog.replace_space(stage + " Peak Memory") + " (MB)", "N/A"]
+        dpData.foundRuntime = [DpLog.replace_space(stage + " Runtime")+" (secs)", "N/A"]
+        # We read in the lines in reversed in order to find the last value in the file
+        for line in reversed(lines):
+            if DpLog.check_list(DataItems, dpData.foundPeakMem[0]):
+                foundPeakMem = re.search(r'.*:[\s]*(Peak)[\s]*=[\s]*([\d]+[\s]*)\(mb\)', line, re.I)
+                if foundPeakMem:
+                    dpData.foundPeakMem[1] = Format.format_metric_values(foundPeakMem.group(2))
+                    DataItems.append(tuple(dpData.foundPeakMem))
+            if DpLog.check_list(DataItems, dpData.foundRuntime[0]):
+                foundRuntime = re.search(r'(Overall[\s]*engine[\s]*time)[\s]*=+[\s]*([\d]*:*[\d]*:*[\d]+)+', line, re.I)
+                if foundRuntime:
+                    dpData.foundRuntime[1] = Format.format_metric_values(foundRuntime.group(2))
+                    DataItems.append(tuple(dpData.foundRuntime))
             if len(DataItems) == 2:
                 break
 
