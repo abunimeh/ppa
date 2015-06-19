@@ -61,18 +61,18 @@ class ToolMetric(object):
             # elif file.endswith('.final.all_violators.rpt'):
             #     cadence_violations = CadenceViolations.search_file(file)
             #     metric_collections.append(cadence_violations)
-
+        print(" ")
         organizer = OrganizeMetric(self.metrics, self.test_case, self.tool)
         temp_metric_collections = organizer.add_missing_metrics_old()
 
         return temp_metric_collections
 
     def get_synopsys_metrics(self):
+        import FileParsers.Synopsys.TotalDrcErrors as DrcErrors
         from Metrics.OrganizeMetric import OrganizeMetric
         from FileParsers.Synopsys.PVTmetric import PVTMetric
         from FileParsers.Synopsys.DrcErrors import DRCError
         from FileParsers.Synopsys.DpLog import DpLog
-        from FileParsers.Synopsys.TotalDrcErrors import TotalDrcErrors
         from FileParsers.DynamicParser import DynamicParser
         from FileParsers.Synopsys.FinalRpt import FinalRpt
         from FileParsers.Synopsys.PhysicalRpt import PhysicalRpt
@@ -140,9 +140,10 @@ class ToolMetric(object):
             #     ppower = PvPower.search_file(file)
             #     metric_collections.extend(ppower)
 
+        print(" ")
         # Now that we have the list of metrics from all the files we can do use the TotalDrcErrors class to get the
         # total number of drc errors
-        total_drc_errors = TotalDrcErrors.get_total_count(self.metrics)
+        total_drc_errors = DrcErrors.get_total_count(self.metrics)
         self.metrics.extend([("drc_total_viols", total_drc_errors)])
         organizer = OrganizeMetric(self.metrics, self.test_case, self.tool)
         temp_metric_collections = organizer.add_missing_metrics_old()

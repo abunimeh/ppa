@@ -51,8 +51,8 @@ class CalibreErrors:
         data_items = []
         stage = CalibreErrors.metric_naming(file)
         calibre_errors = CalibreErrorsData()
-        calibre_errors.found_violation = [CalibreErrors.replace_space('calibre' + stage), "\t"]
-        calibre_errors.found_fail_violations = [CalibreErrors.replace_space('calibre' + stage), "\t"]
+        calibre_errors.found_violation = [Format.replace_space('calibre' + stage), "\t"]
+        calibre_errors.found_fail_violations = [Format.replace_space('calibre' + stage), "\t"]
 
         if file.endswith("drc.sum"):
             for line in lines:

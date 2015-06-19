@@ -7,7 +7,7 @@ class CadenceRunTimeData:
 
 class CaRunTime:
     @staticmethod
-    def mathcLine(line, *args):
+    def match_line(line, *args):
         import re
         match_words = ""
         no_match = ""
@@ -35,7 +35,7 @@ class CaRunTime:
         #f.close()
         data_items = []
         run_time_data = CadenceRunTimeData()
-        run_time_data.found_run_time = [CaRunTime.replace_space('sta Run Time') + " (secs)", "N/A"]
+        run_time_data.found_run_time = [Format.replace_space('sta Run Time') + " (secs)", "N/A"]
 
         #f = open(file, 'r')
         #line = f.readline()
@@ -43,7 +43,7 @@ class CaRunTime:
         for line in open(file):   
         #while line:
             try:
-                found_run_time = CaRunTime.mathcLine(line, 'Ending "Tempus Timing Signoff Solution"')
+                found_run_time = CaRunTime.match_line(line, 'Ending "Tempus Timing Signoff Solution"')
 
                 if found_run_time:
                     run_time_data.found_run_time[1] = Format.convert_to_seconds_format(found_run_time.group(2))

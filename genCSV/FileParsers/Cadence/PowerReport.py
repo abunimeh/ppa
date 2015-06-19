@@ -37,10 +37,10 @@ class CadencePowerRpt:
         f.close()
         data_items = []
         power_rpt_data = CadencePowerRptData()
-        power_rpt_data.found_power_internal = [CadencePowerRpt.replace_space('apr Power Internal'), "N/A"]
-        power_rpt_data.found_power_switching = [CadencePowerRpt.replace_space('apr Power Switching'), "N/A"]
-        power_rpt_data.found_power_leakage = [CadencePowerRpt.replace_space('apr Power Leakage'), "N/A"]
-        power_rpt_data.found_power_total = [CadencePowerRpt.replace_space('apr Power Total'), "N/A"]
+        power_rpt_data.found_power_internal = [Format.replace_space('apr Power Internal'), "N/A"]
+        power_rpt_data.found_power_switching = [Format.replace_space('apr Power Switching'), "N/A"]
+        power_rpt_data.found_power_leakage = [Format.replace_space('apr Power Leakage'), "N/A"]
+        power_rpt_data.found_power_total = [Format.replace_space('apr Power Total'), "N/A"]
 
         for line in lines:
             found_power_internal = CadencePowerRpt.mathcLine(line, 'Total', 'Internal', 'Power')

@@ -38,13 +38,6 @@ class QorRpt:
         result = re.search(line_variables, file_line, re.I)
         return result
 
-    # This method is used to basically replace the spaces in the given metric name with underscores
-    @staticmethod
-    def replace_space(metric_list):
-        import re
-        new_name = re.sub(r'[\W]+', "_", metric_list)
-        return new_name
-
     # This method is used to search the given file and retrieve the required metrics out of those files
     @staticmethod
     def search_file(file):
@@ -63,19 +56,19 @@ class QorRpt:
         in_section = False
         metric_list = []
         rpt_data = QorRptData()
-        rpt_data.found_version = [QorRpt.replace_space(stage + " tool version"), "\t"]
-        rpt_data.found_crit_slack = [QorRpt.replace_space(stage + " REG2REG " + "worst setup viol"), "\t"]
+        rpt_data.found_version = [Format.replace_space(stage + " tool version"), "\t"]
+        rpt_data.found_crit_slack = [Format.replace_space(stage + " REG2REG " + "worst setup viol"), "\t"]
         if 'pv min' in stage:
-            rpt_data.found_crit_slack[0] = QorRpt.replace_space(stage + " REG2REG " + "worst hold viol")
-        rpt_data.found_worst_hold_vio = [QorRpt.replace_space(stage + " REG2REG " + "worst hold violation"), "\t"]
-        rpt_data.found_crit_path_length = [QorRpt.replace_space(stage + " REG2REG " + "critical path len"), "\t"]
-        rpt_data.found_tot_neg_slack = [QorRpt.replace_space(stage + " REG2REG " + "total neg slack"), "\t"]
-        rpt_data.found_tot_hold_vio = [QorRpt.replace_space(stage + " REG2REG " + "total hold viol"), "\t"]
-        rpt_data.found_cell_count = [QorRpt.replace_space(stage + " Cell Count"), "\t"]
-        rpt_data.foundCompileTime = [QorRpt.replace_space(stage + " cpu runtime")+" (secs)", "\t"]
-        rpt_data.foundMaxTransVi = [QorRpt.replace_space(stage + " max trans viols"), "\t"]
-        rpt_data.foundMaxCapVi = [QorRpt.replace_space(stage + " max cap viols"), "\t"]
-        rpt_data.foundMaxFanVi = [QorRpt.replace_space(stage + " max fanout viols"), "\t"]
+            rpt_data.found_crit_slack[0] = Format.replace_space(stage + " REG2REG " + "worst hold viol")
+        rpt_data.found_worst_hold_vio = [Format.replace_space(stage + " REG2REG " + "worst hold violation"), "\t"]
+        rpt_data.found_crit_path_length = [Format.replace_space(stage + " REG2REG " + "critical path len"), "\t"]
+        rpt_data.found_tot_neg_slack = [Format.replace_space(stage + " REG2REG " + "total neg slack"), "\t"]
+        rpt_data.found_tot_hold_vio = [Format.replace_space(stage + " REG2REG " + "total hold viol"), "\t"]
+        rpt_data.found_cell_count = [Format.replace_space(stage + " Cell Count"), "\t"]
+        rpt_data.foundCompileTime = [Format.replace_space(stage + " cpu runtime")+" (secs)", "\t"]
+        rpt_data.foundMaxTransVi = [Format.replace_space(stage + " max trans viols"), "\t"]
+        rpt_data.foundMaxCapVi = [Format.replace_space(stage + " max cap viols"), "\t"]
+        rpt_data.foundMaxFanVi = [Format.replace_space(stage + " max fanout viols"), "\t"]
 
         # Loop through each file_line to find the metrics
         for file_line in file_lines:

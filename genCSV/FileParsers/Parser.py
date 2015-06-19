@@ -2,9 +2,9 @@ __author__ = 'dcart_000'
 
 
 class Parser(object):
-
-    def get_file_lines(self):
-        with open(self.file, "r") as f:
+    @staticmethod
+    def get_file_lines(file):
+        with open(file, "r") as f:
                 # The variable "lines" is a list containing all lines
                 lines = f.readlines()
         return lines

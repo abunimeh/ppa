@@ -22,13 +22,6 @@ class RunTimeRpt:
             stage = 'pv noise tttt'
         return stage
 
-    # replace_space() replaces all the blank spaces with underscores
-    @staticmethod
-    def replace_space(metricname):
-        import re
-        newName = re.sub(r'[\W]+', "_", metricname)
-        return newName
-
     # search_file() opens the file sent to it and searches for the specified temp_metric_collection
     @staticmethod
     def search_file(file):
@@ -43,10 +36,10 @@ class RunTimeRpt:
         f.close()
         DataItems = []
         rptData = RunTimeRptData()
-        rptData.foundRunTime_max = [RunTimeRpt.replace_space("pv max tttt" + " run time")+" (secs)", "N/A"]
-        rptData.foundRunTime_min = [RunTimeRpt.replace_space("pv min tttt" + " run time")+" (secs)", "N/A"]
-        rptData.foundRunTime_noise = [RunTimeRpt.replace_space("pv noise tttt" + " run time")+" (secs)", "N/A"]
-        rptData.foundRunTime_power = [RunTimeRpt.replace_space("pv power tttt" + " run time")+" (secs)", "N/A"]
+        rptData.foundRunTime_max = [Format.replace_space("pv max tttt" + " run time")+" (secs)", "N/A"]
+        rptData.foundRunTime_min = [Format.replace_space("pv min tttt" + " run time")+" (secs)", "N/A"]
+        rptData.foundRunTime_noise = [Format.replace_space("pv noise tttt" + " run time")+" (secs)", "N/A"]
+        rptData.foundRunTime_power = [Format.replace_space("pv power tttt" + " run time")+" (secs)", "N/A"]
 
         for line in lines:
             foundRunTime = re.search(r'(Runtime[\s]*of[\s]*Entire[\s]*Timing[\s]*Run)[\s]*=+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)

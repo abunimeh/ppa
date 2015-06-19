@@ -11,8 +11,8 @@ class OrganizeMetric:
     @staticmethod
     def get_default_metrics():
         import json
-        from FindFile import FindFiles
-        config_file = FindFiles.return_config_name()
+        import FindFile
+        config_file = FindFile.return_config_name()
         # Open the JSON file and get the default list of metrics
         with open(config_file, 'r') as f:
             json_data = json.load(f)
@@ -54,31 +54,22 @@ class OrganizeMetric:
         for metric_pair in metrics:
             if "syn" in metric_pair[self.metric_name]:
                 syn.append(metric_pair)
-
             elif "apr" in metric_pair[self.metric_name]:
                 apr.append(metric_pair)
-
             elif "drc" in metric_pair[self.metric_name]:
                 drc.append(metric_pair)
-
             elif "pv_max" in metric_pair[self.metric_name]:
                 pv_max.append(metric_pair)
-
             elif "pv_min" in metric_pair[self.metric_name]:
                 pv_min.append(metric_pair)
-
             elif "pv_power" in metric_pair[self.metric_name]:
                 pv_power.append(metric_pair)
-
             elif "pv_noise" in metric_pair[self.metric_name]:
                 pv_noise.append(metric_pair)
-
             elif "calibre" in metric_pair[self.metric_name]:
                 calibre.append(metric_pair)
-
             elif "sta" in metric_pair[self.metric_name]:
                 sta.append(metric_pair)
-
             elif "Kit" in metric_pair[self.metric_name]:
                 kit.append(metric_pair)
 
@@ -101,9 +92,26 @@ class OrganizeMetric:
         else:
             test_case_name = os.path.basename(os.path.dirname(self.test_case))
 
-        testcase_defaults = [("Testcase_Name", test_case_name),("DateTime", str(datetime.now())),
-                             ("Tool", self.tool)]
+        testcase_defaults = [("Test_case_name", test_case_name), ("Test_case_path", self.test_case),
+                             ("Test_case_creation_date", self.add_directory_date()), ("DateTime", str(datetime.now())),
+                             ("Tool", self.tool), ("Dot", self.add_dot_metric())]
+
         return testcase_defaults
+
+    def add_directory_date(self):
+        import os
+        import datetime
+        datetime.datetime.fromtimestamp(os.path.getctime(self.test_case))
+        creation_time = os.path.getctime(self.test_case)
+        return str(datetime.datetime.fromtimestamp(creation_time))
+
+    def add_dot_metric(self):
+        import re
+        dot_metric = re.search(r'/(dot[\d]+)/', self.test_case)
+        if dot_metric:
+            return dot_metric.groups(1)
+        return ""
+
 
     @staticmethod
     def get_test_case_number(test_case_number=[0]):

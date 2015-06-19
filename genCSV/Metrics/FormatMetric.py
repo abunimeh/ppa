@@ -34,7 +34,8 @@ def two_point_float_format(metric_value):
 # @staticmethod
 # def format_metric_names(metric_names):
 
-def replace_space(metric_list):
+# This method is used to basically replace the spaces in the given metric name with underscores
+def replace_space(metric_name):
     import re
-    new_name = re.sub(r'[\W]+', "_", metric_list)
+    new_name = re.sub(r'[\W]+', "_", metric_name)
     return new_name

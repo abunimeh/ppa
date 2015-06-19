@@ -7,7 +7,7 @@ class CadenceQorReportData:
 
 class CaQorReport:
     @staticmethod
-    def mathcLine(line, *args):
+    def match_line(line, *args):
         import re
         match_words = ""
         no_match = ""
@@ -35,15 +35,15 @@ class CaQorReport:
         f.close()
         data_items = []
         qor_rpt_data = CadenceQorReportData()
-        qor_rpt_data.found_syn_wns = [CaQorReport.replace_space('syn REG2REG WNS'), "N/A"]
-        qor_rpt_data.found_syn_tns = [CaQorReport.replace_space('syn REG2REG TNS'), "N/A"]
-        qor_rpt_data.found_cell_count = [CaQorReport.replace_space('syn Cell Count'), "N/A"]
-        qor_rpt_data.found_runtime = [CaQorReport.replace_space('syn cpu runtime')+" (secs)", "N/A"]
+        qor_rpt_data.found_syn_wns = [Format.replace_space('syn REG2REG WNS'), "N/A"]
+        qor_rpt_data.found_syn_tns = [Format.replace_space('syn REG2REG TNS'), "N/A"]
+        qor_rpt_data.found_cell_count = [Format.replace_space('syn Cell Count'), "N/A"]
+        qor_rpt_data.found_runtime = [Format.replace_space('syn cpu runtime')+" (secs)", "N/A"]
 
         for line in lines:
-            found_syn_reg = CaQorReport.mathcLine(line, 'REG2REG')
-            found_cell_count = CaQorReport.mathcLine(line, 'Leaf Instance Count')
-            found_runtime = CaQorReport.mathcLine(line, 'Runtime')
+            found_syn_reg = CaQorReport.match_line(line, 'REG2REG')
+            found_cell_count = CaQorReport.match_line(line, 'Leaf Instance Count')
+            found_runtime = CaQorReport.match_line(line, 'Runtime')
 
             if found_syn_reg:
                 qor_rpt_data.found_syn_wns[1] = Format.format_metric_values(found_syn_reg.group(2))

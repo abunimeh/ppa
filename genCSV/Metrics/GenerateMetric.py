@@ -51,9 +51,9 @@ def trim_argument_list(command_line_args):
 
 def get_directory_search_key():
     import json
-    from FindFile import FindFiles
+    import FindFile
 
-    config_file = FindFiles.return_config_name()
+    config_file = FindFile.return_config_name()
     print("My config file:", config_file)
 
     # With open is a secure way to open and close a file. Using with we don't have to implicitly close the file
@@ -75,7 +75,7 @@ def search_directory(paths, directory_level):
 
     for path in paths:
         path_collection = [os.path.join(path, name) for name in os.listdir(path)if os.path.isdir(
-                os.path.join(path, name)) if os.path.join(path, name).endswith(my_name)]
+                           os.path.join(path, name)) if os.path.join(path, name).endswith(my_name)]
         path_collections.extend(path_collection)
 
     if directory_level != 0:
@@ -130,11 +130,11 @@ def combine_identical_testcases(test_cases):
 
 def get_metrics(test_cases):
     import os
-    from FindFile import FindFiles
+    import FindFile
     from Metrics.ToolMetric import ToolMetric
 
     csv_written = False
-    csv_name = FindFiles.return_csv_name()
+    csv_name = FindFile.return_csv_name()
 
     for test_case in test_cases:
         metrics_collections = []
@@ -143,11 +143,11 @@ def get_metrics(test_cases):
         if isinstance(test_case, (list, tuple)):
             for temp_test_case in range(len(test_case)):
                 tool = check_tool(test_case[temp_test_case])
-                list_of_files.extend(FindFiles.search_dir(test_case[temp_test_case], tool))
+                list_of_files.extend(FindFile.search_dir(test_case[temp_test_case], tool))
             test_case = test_case[0]
         else:
             tool = check_tool(test_case)
-            list_of_files.extend(FindFiles.search_dir(test_case, tool))
+            list_of_files.extend(FindFile.search_dir(test_case, tool))
 
         print("Files to be searched:")
 
@@ -198,7 +198,7 @@ def get_csv_values(metrics_collections, csv_written):
             values.append(metric_pair[metric_value])
         else:
             values.append(metric_pair[metric_value])
-
+    print(" ")
     metric_values.append(names)
     metric_values.append(values)
 

@@ -20,12 +20,6 @@ class FinalRpt:
         return stage
 
     @staticmethod
-    def replaceSpace(metricname):
-        import re
-        newName = re.sub(r'[\W]+', "_", metricname)
-        return newName
-
-    @staticmethod
     def search_file(file):
         import re
         import Metrics.FormatMetric as Format
@@ -37,7 +31,7 @@ class FinalRpt:
         lines = f.readlines()
         f.close()
         rptData = FinalRptData()
-        rptData.found_num_of_errors = [FinalRpt.replaceSpace(stage) + " (NB)", "N/A"]
+        rptData.found_num_of_errors = [Format.replace_space(stage) + " (NB)", "N/A"]
 
         for line in lines:
             found_num_of_errors = re.search(r'(The[\s]*number[\s]*of[\s]*actual[\s]*errors)[\s]*:+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)

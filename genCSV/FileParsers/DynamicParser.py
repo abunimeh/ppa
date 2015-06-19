@@ -125,8 +125,8 @@ class DynamicParser(object):
 
     def get_metrics_dictionary(self):
         import json
-        from FindFile import FindFiles
-        config_file = FindFiles.return_config_name()
+        import FindFile
+        config_file = FindFile.return_config_name()
 
         with open(config_file, 'r') as f:
             json_data = json.load(f)
@@ -169,5 +169,3 @@ class DynamicParser(object):
                                 section = 0
                         last_line = line
         return self.metrics
-        # return data_items
-

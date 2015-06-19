@@ -14,13 +14,6 @@ class PhysicalRpt:
         regular_expression = re.search(words_to_match, file_line, re.I)
         return regular_expression
 
-    # This method is used to basically replace the spaces in the given metric name with underscores
-    @staticmethod
-    def replace_space(metric_name):
-        import re
-        new_name = re.sub(r'[\W]+', "_", metric_name)
-        return new_name
-
     # This method is used to search the given file and retrieve the required metrics out of those files
     @staticmethod
     def search_file(file):
@@ -33,9 +26,9 @@ class PhysicalRpt:
         file_lines = f.readlines()
         f.close()
         rpt_data = PhysicalRptData()
-        rpt_data.found_util = [PhysicalRpt.replace_space("apr utilization")+" (%)", "\t"]
-        rpt_data.found_total_error = [PhysicalRpt.replace_space("apr DRC"), "\t"]
-        rpt_data.found_total_mem = [PhysicalRpt.replace_space("apr Memory")+" (MB)", "\t"]
+        rpt_data.found_util = [Format.replace_space("apr utilization")+" (%)", "\t"]
+        rpt_data.found_total_error = [Format.replace_space("apr DRC"), "\t"]
+        rpt_data.found_total_mem = [Format.replace_space("apr Memory")+" (MB)", "\t"]
 
         # Loop through each file_line to find the metrics
         for file_line in file_lines:
@@ -49,7 +42,7 @@ class PhysicalRpt:
             if found_util:
                 rpt_data.found_util[1] = Format.format_metric_values(found_util.group(2))
             elif found_short:
-                rpt_data.found_short = PhysicalRpt.replace_space("apr Shorts"), Format.format_metric_values(found_short.group(2))
+                rpt_data.found_short = Format.replace_space("apr Shorts"), Format.format_metric_values(found_short.group(2))
                 metric_list.append(rpt_data.found_short)
             elif found_total_error:
                 rpt_data.found_total_error[1] = Format.format_metric_values(found_total_error.group(2))

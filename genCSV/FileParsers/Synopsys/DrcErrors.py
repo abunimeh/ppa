@@ -34,6 +34,7 @@ class DRCError:
         if "Final_Report.txt" in files_in_directory:
             print("Using Final_Report.txt to get errors in %s" % directory)
             return 1
+
     @staticmethod
     def tool_version_found(metric_collections):
         for metric_pair in metric_collections:
@@ -42,6 +43,7 @@ class DRCError:
                 if "drc_tool_version" in metric_pair[0]:
                     return True
         return False
+
     @staticmethod
     def search_file(file, metric_collections):
         import re
@@ -62,7 +64,7 @@ class DRCError:
             found_tool_version = re.search(r'(Generated[\s]*by):.*[\s]+([\S]*[\.]+[\S]*[\.]*[\S]*[\.]*[\S]*[\.]*[\S]*)[\s]*', line, re.I)
             if found_tool_version:
                 if tool_found is False:
-                    errorData.found_tool_version = DRCError.replace_space("drc tool version"), found_tool_version.group(2)
+                    errorData.found_tool_version = Format.replace_space("drc tool version"), found_tool_version.group(2)
                     metric_items.append(errorData.found_tool_version)
             if fin_rpt != 1:
                 found_violation = re.search(r'[\s]*([\d]+)[\s]*(violation+[s]*[\s]*found)+[\s]*', line, re.I)

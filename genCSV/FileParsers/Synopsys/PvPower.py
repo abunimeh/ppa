@@ -26,10 +26,10 @@ class PvPower:
         f.close()
         pvData = PvPowerData()
         pv = "pv power tttt"
-        pvData.foundCInternPwr = [PvPower.replace_space(pv + " internal"), "N/A"]
-        pvData.foundCLeakPwr = [PvPower.replace_space(pv + " leakage"), "N/A"]
-        pvData.foundNetSwPwr = [PvPower.replace_space(pv + " switch"), "N/A"]
-        pvData.foundTotalPwr = [PvPower.replace_space(pv + " total"), "N/A"]
+        pvData.foundCInternPwr = [Format.replace_space(pv + " internal"), "N/A"]
+        pvData.foundCLeakPwr = [Format.replace_space(pv + " leakage"), "N/A"]
+        pvData.foundNetSwPwr = [Format.replace_space(pv + " switch"), "N/A"]
+        pvData.foundTotalPwr = [Format.replace_space(pv + " total"), "N/A"]
 
         for line in lines:
             foundCInternPwr = PvPower.match_line("Cell", "Internal", "Power", line)

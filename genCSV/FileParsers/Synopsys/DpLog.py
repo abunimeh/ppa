@@ -47,8 +47,8 @@ class DpLog:
         f.close()
 
         dpData = dpLogData()
-        dpData.foundPeakMem = [DpLog.replace_space(stage + " Peak Memory") + " (MB)", "N/A"]
-        dpData.foundRuntime = [DpLog.replace_space(stage + " Runtime")+" (secs)", "N/A"]
+        dpData.foundPeakMem = [Format.replace_space(stage + " Peak Memory") + " (MB)", "N/A"]
+        dpData.foundRuntime = [Format.replace_space(stage + " Runtime")+" (secs)", "N/A"]
         # We read in the lines in reversed in order to find the last value in the file
         for line in reversed(lines):
             if DpLog.check_list(DataItems, dpData.foundPeakMem[0]):

@@ -60,11 +60,11 @@ class AprRunLog:
             found_kit = re.search(r'(==>INFORMATION:[\s]*P_source_if_exists:[\s]*Sourcing)[\s]*.*/([afdkitcsr\._\d]+[_]+[afdkitcsr\._\d]*[^/])/',line)
 
             if found_drc_vio:
-                run_log_data.found_drc_vio = AprRunLog.replace_space('apr DRC Violations'), Format.format_metric_values(found_drc_vio.group(2))
+                run_log_data.found_drc_vio = Format.replace_space('apr DRC Violations'), Format.format_metric_values(found_drc_vio.group(2))
                 if AprRunLog.check_list(data_items, run_log_data.found_drc_vio[0]):
                     data_items.append(run_log_data.found_drc_vio)
             elif found_run_time:
-                run_log_data.found_run_time = AprRunLog.replace_space('apr Run Time') + ' (secs)', Format.format_metric_values(found_run_time.group(2))
+                run_log_data.found_run_time = Format.replace_space('apr Run Time') + ' (secs)', Format.format_metric_values(found_run_time.group(2))
                 if AprRunLog.check_list(data_items, run_log_data.found_run_time[0]):
                     data_items.append(run_log_data.found_run_time)
             elif found_kit:

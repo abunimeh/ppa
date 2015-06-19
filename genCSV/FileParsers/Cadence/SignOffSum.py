@@ -7,7 +7,7 @@ class CadenceSignOffSumData:
 
 class CadenceSignOffSum:
     @staticmethod
-    def mathc_line(regex1, line):
+    def match_line(regex1, line):
         import re
         line_variables = '.*(%s)[^\|]*\|[^\|]*\|[\s]*([\d.]*).*' % regex1
         result = re.search(line_variables, line, re.I)
@@ -32,16 +32,16 @@ class CadenceSignOffSum:
         f.close()
 
         s_o_sum = CadenceSignOffSumData()
-        s_o_sum.found_wns = [CadenceSignOffSum.replace_space('apr REG2REG WNS'), "N/A"]
-        s_o_sum.found_apr_tns = [CadenceSignOffSum.replace_space('apr REG2REG TNS'), "N/A"]
-        s_o_sum.found_max_cap = [CadenceSignOffSum.replace_space('apr max cap viols'), "N/A"]
-        s_o_sum.found_max_trans = [CadenceSignOffSum.replace_space('apr max trans viols'), "N/A"]
+        s_o_sum.found_wns = [Format.replace_space('apr REG2REG WNS'), "N/A"]
+        s_o_sum.found_apr_tns = [Format.replace_space('apr REG2REG TNS'), "N/A"]
+        s_o_sum.found_max_cap = [Format.replace_space('apr max cap viols'), "N/A"]
+        s_o_sum.found_max_trans = [Format.replace_space('apr max trans viols'), "N/A"]
 
         for line in lines:
-            found_wns = CadenceSignOffSum.mathc_line('WNS', line)
-            found_tns = CadenceSignOffSum.mathc_line('TNS', line)
-            found_max_cap = CadenceSignOffSum.mathc_line('max_cap', line)
-            found_max_trans = CadenceSignOffSum.mathc_line('max_tran', line)
+            found_wns = CadenceSignOffSum.match_line('WNS', line)
+            found_tns = CadenceSignOffSum.match_line('TNS', line)
+            found_max_cap = CadenceSignOffSum.match_line('max_cap', line)
+            found_max_trans = CadenceSignOffSum.match_line('max_tran', line)
 
             if found_wns:
                 s_o_sum.found_wns[1] = Format.format_metric_values(found_wns.group(2))

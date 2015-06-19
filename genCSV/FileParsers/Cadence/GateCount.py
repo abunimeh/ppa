@@ -7,7 +7,7 @@ class CadenceGateCountData:
 
 class CadenceGateCount:
     @staticmethod
-    def mathcLine(regex1, line):
+    def match_line(regex1, line):
         import re
         keyword = regex1.replace(" ", "")
         line_variables = '.*(%s)[^%s\d]*([-\d\.]*).*' % (regex1, keyword)
@@ -32,12 +32,12 @@ class CadenceGateCount:
         data_items = []
         gate_count = CadenceGateCountData()
 
-        gate_count.found_cell_count = [CadenceGateCount.replace_space('apr Cell Count'), "N/A"]
-        gate_count.found_utilization = [CadenceGateCount.replace_space('apr utilization') + " (%)", "N/A"]
+        gate_count.found_cell_count = [Format.replace_space('apr Cell Count'), "N/A"]
+        gate_count.found_utilization = [Format.replace_space('apr utilization') + " (%)", "N/A"]
 
         for line in lines:
-            found_cell_count = CadenceGateCount.mathcLine('Inst count', line)
-            found_utilization = CadenceGateCount.mathcLine('Density', line)
+            found_cell_count = CadenceGateCount.match_line('Inst count', line)
+            found_utilization = CadenceGateCount.match_line('Density', line)
             if found_cell_count:
                 gate_count.found_cell_count[1] = Format.format_metric_values(found_cell_count.group(2))
             elif found_utilization:
