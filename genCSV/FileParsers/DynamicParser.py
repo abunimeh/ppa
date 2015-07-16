@@ -1,11 +1,11 @@
 __author__ = ''
-import FileParsers.Parser
+from FileParsers.Parser import Parser
 
-class DynamicParser(object):
+
+class DynamicParser(Parser):
     def __init__(self, file, tool):
-        self.file = file
+        super(DynamicParser, self).__init__(file)
         self.tool = tool
-        self.metrics = []
         self.file_ending = ""
 
     @staticmethod
@@ -16,12 +16,6 @@ class DynamicParser(object):
         # print("line_var:", line_variables)
         result = re.search(line_variables, line, re.I)
         return result
-
-    @staticmethod
-    def replace_space(metric_name):
-        import re
-        new_name = re.sub(r'[\W]+', "_", metric_name)
-        return new_name
 
     @staticmethod
     def metric_naming_1(file):

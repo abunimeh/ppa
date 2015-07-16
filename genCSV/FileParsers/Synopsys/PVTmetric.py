@@ -1,7 +1,13 @@
 class PVTMetricData:
     pass
 
-class PVTMetric:
+from FileParsers.Parser import Parser
+
+
+class PVTMetric(Parser):
+    def __init__(self, file):
+        super(PVTMetric, self).__init__(file)
+
     # This class is not part of the configuration
     @staticmethod
     def metric_naming(file):
@@ -28,36 +34,31 @@ class PVTMetric:
             stage = 'syn'
         return stage
 
-    @staticmethod
-    def search_file(file):
+    def search_file(self):
         import re
-        stage = PVTMetric.metric_naming(file)
-        # Open the file with read only permit
-        f = open(file, "r")
-        # The variable "lines" is a list containing all lines
-        lines = f.readlines()
-        f.close()
-        DataItems = []
-        foundValue = []
+        stage = PVTMetric.metric_naming(self.file)
+        lines = self.get_file_lines()
+        pvt_values = []
         value_sum = ""
-        value = 0
-        pvtdata = PVTMetricData()
+        # pvt_value = 0
+        # pvt_data = PVTMetricData()
         for line in lines:
-            found_db_file = re.search(r'(Loading[\s]*db[\s]*file).*/[\w]*_[\w]*_[\w]*_([rx\d]+[\w]+_[\w]+_[\d\.]+v_[-]*[\d]+c_[\w]+)', line, re.I)
-            if file.endswith("icc.log"):
-                found_kit = re.search(r'(==>SOURCING:)[\s]*.*/([afdkitcsr\._\d]+[\d]+[afdkitcsr\._\d]+)/', line)
+            found_pvt_value = re.search(r'(Loading[\s]*db[\s]*file).*/[\w]*_[\w]*_[\w]*_([rx\d]+[\w]+_[\w]+_[\d\.]+v_[-]*[\d]+c_[\w]+)', line, re.I)
+            if self.file.endswith("icc.log"):
+                found_kit = re.search(r'(==>SOURCING:)[\s]*.*/([afdkitcsr]+[afdkitcsr\._\d]+[\d]+[afdkitcsr\._\d]+)/', line)
                 if found_kit:
-                    pvtdata.found_kit = "Kit", found_kit.group(2)
-                    DataItems.append(pvtdata.found_kit)
-            if found_db_file:
-                value = found_db_file.group(2)
-                if value not in foundValue:
-                    foundValue.append(value)
-        for values in foundValue:
-            value_sum += (values+" ")
-        if value:
-            pvtdata.found_db_file = (stage + "_pvt"), value_sum
-            DataItems.append(pvtdata.found_db_file)
-
-
-        return DataItems
+                    # pvt_data.found_kit = "Kit", found_kit.group(2)
+                    self.metrics.append(("Kit", found_kit.group(2)))
+            if found_pvt_value:
+                pvt_value = found_pvt_value.group(2)
+                if pvt_value not in pvt_values:
+                    pvt_values.append(pvt_value)
+        for pvt_value in pvt_values:
+            value_sum += (pvt_value+" ")
+        if len(pvt_values):
+            #pvt_data.found_db_file = (stage + "_pvt"), value_sum
+            self.metrics.append((stage + "_pvt", value_sum))
+        if not self.check_list("Kit"):
+            kit_in_file_name = re.search(r'/([a-zA-Z_]{1,3}[\d\.]+_[sScC]{1})/', self.file)
+            if kit_in_file_name:
+                self.metrics.append(kit_in_file_name.group(1))

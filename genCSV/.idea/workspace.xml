@@ -3,27 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="8903b242-1c10-45fa-b7f4-a347b27b2af1" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FileParsers/Parser.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FileParsers/Synopsys/PhysicalReport.py" />
       <change type="DELETED" beforePath="C:\dev\intel\ppa\genCSV\#FindFiles.py#" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\intel\ppa\genCSV\FileParsers\Synopsys\PhysicalRpt.py" afterPath="" />
       <change type="DELETED" beforePath="C:\dev\intel\ppa\genCSV\Metrics\CadenceMetric.py" afterPath="" />
+      <change type="MOVED" beforePath="C:\dev\intel\ppa\genCSV\FileParsers\Synopsys\FinalRpt.py" afterPath="$PROJECT_DIR$/FileParsers/Synopsys/FinalReport.py" />
+      <change type="MOVED" beforePath="C:\dev\intel\ppa\genCSV\FileParsers\Synopsys\QorRpt.py" afterPath="$PROJECT_DIR$/FileParsers/Synopsys/QorReport.py" />
       <change type="MOVED" beforePath="C:\dev\intel\ppa\genCSV\Metrics\SynopsysMetric.py" afterPath="$PROJECT_DIR$/Metrics/ToolMetric.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Regr_Suite_Runs_Comparison_Data.csv" afterPath="$PROJECT_DIR$/Regr_Suite_Runs_Comparison_Data.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileParsers/Cadence/AprRunLog.py" afterPath="$PROJECT_DIR$/FileParsers/Cadence/AprRunLog.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileParsers/Cadence/CalibreErrors.py" afterPath="$PROJECT_DIR$/FileParsers/Cadence/CalibreErrors.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileParsers/Synopsys/ClockTree.py" afterPath="$PROJECT_DIR$/FileParsers/Synopsys/ClockTree.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileParsers/Synopsys/DpLog.py" afterPath="$PROJECT_DIR$/FileParsers/Synopsys/DpLog.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileParsers/Synopsys/DrcErrors.py" afterPath="$PROJECT_DIR$/FileParsers/Synopsys/DrcErrors.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileParsers/DynamicParser.py" afterPath="$PROJECT_DIR$/FileParsers/DynamicParser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileParsers/Synopsys/FinalRpt.py" afterPath="$PROJECT_DIR$/FileParsers/Synopsys/FinalRpt.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FindFile.py" afterPath="$PROJECT_DIR$/FindFile.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Metrics/FormatMetric.py" afterPath="$PROJECT_DIR$/Metrics/FormatMetric.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileParsers/Cadence/GateCount.py" afterPath="$PROJECT_DIR$/FileParsers/Cadence/GateCount.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Metrics/GenerateMetric.py" afterPath="$PROJECT_DIR$/Metrics/GenerateMetric.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Metrics/OrganizeMetric.py" afterPath="$PROJECT_DIR$/Metrics/OrganizeMetric.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileParsers/Synopsys/PhysicalRpt.py" afterPath="$PROJECT_DIR$/FileParsers/Synopsys/PhysicalRpt.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileParsers/Synopsys/PVTmetric.py" afterPath="$PROJECT_DIR$/FileParsers/Synopsys/PVTmetric.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileParsers/Cadence/PowerReport.py" afterPath="$PROJECT_DIR$/FileParsers/Cadence/PowerReport.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileParsers/Synopsys/PvPower.py" afterPath="$PROJECT_DIR$/FileParsers/Synopsys/PvPower.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileParsers/Cadence/QorReportCad.py" afterPath="$PROJECT_DIR$/FileParsers/Cadence/QorReportCad.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileParsers/Synopsys/QorRpt.py" afterPath="$PROJECT_DIR$/FileParsers/Synopsys/QorRpt.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Regr_Suite_Runs_Comparison_Data.csv" afterPath="$PROJECT_DIR$/Regr_Suite_Runs_Comparison_Data.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileParsers/Cadence/RunTime.py" afterPath="$PROJECT_DIR$/FileParsers/Cadence/RunTime.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileParsers/Synopsys/RunTimeRpt.py" afterPath="$PROJECT_DIR$/FileParsers/Synopsys/RunTimeRpt.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileParsers/Cadence/SignOffSum.py" afterPath="$PROJECT_DIR$/FileParsers/Cadence/SignOffSum.py" />
@@ -67,101 +69,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RunTimeRpt.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/RunTimeRpt.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1139">
-              <caret line="10" column="23" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenerateMetric.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Metrics/GenerateMetric.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9162161" vertical-offset="4169" max-vertical-offset="4539">
-              <caret line="160" column="36" selection-start-line="160" selection-start-column="36" selection-end-line="160" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FindFile.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FindFile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1649">
-              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrganizeMetric.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Metrics/OrganizeMetric.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2312" max-vertical-offset="2839">
-              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TotalDrcErrors.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/TotalDrcErrors.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="391">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DynamicParser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FileParsers/DynamicParser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="3009">
-              <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ToolMetric.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ToolMetric.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Metrics/ToolMetric.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="2669">
-              <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.5331808" vertical-offset="328" max-vertical-offset="2975">
+              <caret line="33" column="59" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClockTree.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/ClockTree.py">
+      <file leaf-file-name="Violations.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/Violations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="544">
-              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FileParsers/Parser.py">
+      <file leaf-file-name="StaMinQor.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/StaMinQor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="510">
-              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormatMetric.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Metrics/FormatMetric.py">
+      <file leaf-file-name="StaMaxQor.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/StaMaxQor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="412" max-vertical-offset="782">
-              <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
+              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RunTime.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/RunTime.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
+              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SignOffSum.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/SignOffSum.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
+              <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PowerReport.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/PowerReport.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1190">
+              <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QorReportCad.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/QorReportCad.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CalibreErrors.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/CalibreErrors.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1377">
+              <caret line="69" column="42" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GateCount.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/GateCount.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="901">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -175,9 +177,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Drc_Errors.py" />
-        <option value="$PROJECT_DIR$/PvPower.py" />
-        <option value="$PROJECT_DIR$/PVTmetric.py" />
         <option value="$PROJECT_DIR$/CadenceStaMaxQor.py" />
         <option value="$PROJECT_DIR$/Configurations.py" />
         <option value="$PROJECT_DIR$/PhysicalRpt.py" />
@@ -195,37 +194,40 @@
         <option value="$PROJECT_DIR$/GetCadenceMetrics.py" />
         <option value="$PROJECT_DIR$/OrganizingAndFormatingMetrics/OrganizeMetrics.py" />
         <option value="$PROJECT_DIR$/OrganizingAndFormatingMetrics/FormatMetrics.py" />
-        <option value="$PROJECT_DIR$/FileParsers/Synopsys/PVTmetric.py" />
         <option value="$PROJECT_DIR$/genCSV.py" />
         <option value="$PROJECT_DIR$/config.json" />
         <option value="$PROJECT_DIR$/Metrics/SynopsysMetric.py" />
-        <option value="$PROJECT_DIR$/FileParsers/Synopsys/ClockTree.py" />
-        <option value="$PROJECT_DIR$/FileParsers/Cadence/Violations.py" />
-        <option value="$PROJECT_DIR$/FileParsers/Cadence/StaMinQor.py" />
         <option value="$PROJECT_DIR$/Metrics/CadenceMetric.py" />
         <option value="$PROJECT_DIR$/FileParsers/Cadence/CalibreErrors.py" />
-        <option value="$PROJECT_DIR$/FileParsers/Cadence/AprRunLog.py" />
         <option value="$PROJECT_DIR$/FileParsers/Cadence/PowerReport.py" />
         <option value="$PROJECT_DIR$/FileParsers/Cadence/SignOffSum.py" />
         <option value="$PROJECT_DIR$/FileParsers/Cadence/StaMaxQor.py" />
         <option value="$PROJECT_DIR$/FileParsers/Cadence/RunTime.py" />
         <option value="$PROJECT_DIR$/FileParsers/Cadence/QorReportCad.py" />
         <option value="$PROJECT_DIR$/FileParsers/Cadence/GateCount.py" />
-        <option value="$PROJECT_DIR$/FileParsers/Synopsys/DpLog.py" />
-        <option value="$PROJECT_DIR$/FileParsers/Synopsys/DrcErrors.py" />
-        <option value="$PROJECT_DIR$/FileParsers/Synopsys/FinalRpt.py" />
-        <option value="$PROJECT_DIR$/FileParsers/Synopsys/PhysicalRpt.py" />
-        <option value="$PROJECT_DIR$/FileParsers/Synopsys/PvPower.py" />
-        <option value="$PROJECT_DIR$/FileParsers/Synopsys/QorRpt.py" />
-        <option value="$PROJECT_DIR$/FileParsers/Synopsys/RunTimeRpt.py" />
         <option value="$PROJECT_DIR$/Metrics/FormatMetric.py" />
         <option value="$PROJECT_DIR$/FileParsers/Synopsys/TotalDrcErrors.py" />
-        <option value="$PROJECT_DIR$/FileParsers/Parser.py" />
-        <option value="$PROJECT_DIR$/Metrics/ToolMetric.py" />
-        <option value="$PROJECT_DIR$/Metrics/OrganizeMetric.py" />
-        <option value="$PROJECT_DIR$/FileParsers/DynamicParser.py" />
         <option value="$PROJECT_DIR$/FindFile.py" />
+        <option value="$PROJECT_DIR$/Metrics/OrganizeMetric.py" />
+        <option value="$PROJECT_DIR$/FileParsers/Synopsys/RunTimeRpt.py" />
+        <option value="$PROJECT_DIR$/FileParsers/DynamicParser.py" />
+        <option value="$PROJECT_DIR$/FileParsers/Synopsys/DrcErrors.py" />
+        <option value="$PROJECT_DIR$/FileParsers/Synopsys/ClockTree.py" />
+        <option value="$PROJECT_DIR$/FileParsers/Synopsys/FinalRpt.py" />
+        <option value="$PROJECT_DIR$/FileParsers/Synopsys/FinalReport.py" />
+        <option value="$PROJECT_DIR$/FileParsers/Synopsys/PhysicalRpt.py" />
+        <option value="$PROJECT_DIR$/FileParsers/Synopsys/DpLog.py" />
+        <option value="$PROJECT_DIR$/FileParsers/Synopsys/QorRpt.py" />
+        <option value="$PROJECT_DIR$/FileParsers/Synopsys/PhysicalReport.py" />
+        <option value="$PROJECT_DIR$/FileParsers/Synopsys/PvPower.py" />
+        <option value="$PROJECT_DIR$/FileParsers/Synopsys/QorReport.py" />
+        <option value="$PROJECT_DIR$/FileParsers/Cadence/Violations.py" />
+        <option value="$PROJECT_DIR$/FileParsers/Cadence/StaMinQor.py" />
+        <option value="$PROJECT_DIR$/FileParsers/Parser.py" />
+        <option value="$PROJECT_DIR$/FileParsers/Synopsys/PVTmetric.py" />
+        <option value="$PROJECT_DIR$/FileParsers/Cadence/AprRunLog.py" />
         <option value="$PROJECT_DIR$/Metrics/GenerateMetric.py" />
+        <option value="$PROJECT_DIR$/Metrics/ToolMetric.py" />
       </list>
     </option>
   </component>
@@ -233,10 +235,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="413" />
-    <option name="y" value="12" />
-    <option name="width" value="1197" />
-    <option name="height" value="873" />
+    <option name="x" value="88" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -261,6 +262,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -345,12 +347,11 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/ObjectTesting" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="preferences.lookFeel" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -611,19 +612,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="413" y="12" width="1197" height="873" extended-state="0" />
-    <editor active="true" />
+    <frame x="88" y="0" width="1456" height="876" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13808267" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1683381" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22132254" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32123655" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.462888" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.375" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -631,7 +632,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24889868" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24731183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39891893" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
@@ -693,11 +694,17 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/ClockTree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="43" max-vertical-offset="476">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FindFile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="976" max-vertical-offset="1581">
           <caret line="76" column="52" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -838,39 +845,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Regr_Suite_Runs_Comparison_Data.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="652">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/genCSV.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.9454546" vertical-offset="603" max-vertical-offset="14382">
-          <caret line="45" column="123" selection-start-line="45" selection-start-column="96" selection-end-line="45" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/Violations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="364" max-vertical-offset="1292">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/StaMinQor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1054">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -881,127 +860,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/StaMaxQor.py">
+    <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1275">
-          <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="886" max-vertical-offset="14382">
+          <caret line="55" column="92" selection-start-line="55" selection-start-column="87" selection-end-line="55" selection-end-column="92" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/SignOffSum.py">
+    <entry file="file://$PROJECT_DIR$/FindFile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1105">
-          <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/RunTime.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/QorReportCad.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="1139">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/PowerReport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="415" max-vertical-offset="1190">
-          <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/GateCount.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="901">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/CalibreErrors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1377">
-          <caret line="69" column="42" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/AprRunLog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="650" max-vertical-offset="1377">
-          <caret line="66" column="52" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/DpLog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="361" max-vertical-offset="1241">
-          <caret line="54" column="44" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/DrcErrors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1496">
-          <caret line="49" column="45" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/FinalRpt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/PhysicalRpt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="191" max-vertical-offset="1071">
-          <caret line="42" column="52" selection-start-line="42" selection-start-column="52" selection-end-line="42" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/PvPower.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="24" max-vertical-offset="1020">
-          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/QorRpt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1670" max-vertical-offset="2550">
-          <caret line="89" column="37" selection-start-line="89" selection-start-column="37" selection-end-line="89" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/PVTmetric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1173">
-          <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/ClockTree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/Parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1649">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1009,62 +878,202 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/RunTimeRpt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1139">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="67" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1156">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Metrics/ToolMetric.py">
+    <entry file="file://$PROJECT_DIR$/FileParsers/DynamicParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="2669">
-          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-          <folding />
+        <state vertical-scroll-proportion="-1.7586207" vertical-offset="0" max-vertical-offset="2907">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Metrics/FormatMetric.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+        <state vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="782">
           <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/QorReport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="2159">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/ClockTree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/DpLog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="559" max-vertical-offset="1037">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/DrcErrors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="1445">
+          <caret line="8" column="44" selection-start-line="3" selection-start-column="0" selection-end-line="8" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/FinalReport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <caret line="7" column="47" selection-start-line="2" selection-start-column="0" selection-end-line="7" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/PhysicalReport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="833">
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Metrics/OrganizeMetric.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2312" max-vertical-offset="2839">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2839">
+          <caret line="72" column="71" selection-start-line="72" selection-start-column="71" selection-end-line="72" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FileParsers/DynamicParser.py">
+    <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/PvPower.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="3009">
-          <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FindFile.py">
+    <entry file="file://$PROJECT_DIR$/FileParsers/Synopsys/PVTmetric.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1649">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="1173">
+          <caret line="56" column="40" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Metrics/GenerateMetric.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9162161" vertical-offset="4169" max-vertical-offset="4539">
-          <caret line="160" column="36" selection-start-line="160" selection-start-column="36" selection-end-line="160" selection-end-column="36" />
+        <state vertical-scroll-proportion="17.724138" vertical-offset="2758" max-vertical-offset="4947">
+          <caret line="132" column="19" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/AprRunLog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="848" max-vertical-offset="1377">
+          <caret line="59" column="111" selection-start-line="59" selection-start-column="111" selection-end-line="59" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileParsers/Parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+          <caret line="26" column="99" selection-start-line="26" selection-start-column="99" selection-end-line="26" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/StaMinQor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="426" max-vertical-offset="850">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/Violations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/StaMaxQor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/RunTime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/SignOffSum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
+          <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/PowerReport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1190">
+          <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/QorReportCad.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/CalibreErrors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1377">
+          <caret line="69" column="42" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileParsers/Cadence/GateCount.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="901">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Metrics/ToolMetric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5331808" vertical-offset="328" max-vertical-offset="2975">
+          <caret line="33" column="59" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
           <folding />
         </state>
       </provider>

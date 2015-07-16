@@ -152,7 +152,7 @@ def get_metrics(test_cases):
         print("Files to be searched:")
 
         for file in list_of_files:
-            print(file, os.path.getsize(file))
+            print(file, format_file_size(os.path.getsize(file)))
 
         print(len(list_of_files), "Total found")
         print(" ")
@@ -165,6 +165,18 @@ def get_metrics(test_cases):
         csv_written = write_csv(metrics_collections, csv_written, test_case, csv_name)
 
     check_csv(csv_name)
+
+
+def format_file_size(unformatted_size):
+        import math
+        size_name = ("B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB")
+        i = int(math.floor(math.log(unformatted_size, 1024)))
+        p = math.pow(1024, i)
+        s = round(unformatted_size/p, 2)
+        if s > 0:
+            return '%s %s' % (s, size_name[i])
+        else:
+            return '0B'
 
 
 def check_tool(test_case):
@@ -225,7 +237,7 @@ def write_csv(metrics_collections, csv_written, test_case, csv_name):
                 writer.writerow(metric_values[values])
             print(csv_name, 'created with', test_case)
         except IOError:
-            print("### Unable to open the csv file. The file might be open in a csv reader. ###")
+            exit_script()
     else:
         try:
             # The 'a' argument in the following "with open" statement means that if the file does exist then it will be
@@ -235,15 +247,27 @@ def write_csv(metrics_collections, csv_written, test_case, csv_name):
                 writer.writerow(metric_values[values])
             print(csv_name, 'appended with', test_case)
         except IOError:
-            print("### Unable to open the csv file. The file might be open in a csv reader. ###")
-    print()
+            exit_script()
+    print(" ")
     return csv_written
+
+
+def exit_script():
+    answer = input("### Unable to open the csv file. The file might be open in a csv reader."
+                   " Enter 0 to exit or enter anything else to continue ###")
+    if answer == "0":
+        raise SystemExit
 
 
 def check_csv(csv_name):
     max_comma_count = 500
     csv_aligned = True
     line_number = 0
+    try:
+        file = open(csv_name, 'wt')
+    except IOError:
+        raise SystemExit
+    file.close()
 
     with open(csv_name, 'r') as my_file:
         for line in my_file:

@@ -56,6 +56,8 @@ class OrganizeMetric:
                 syn.append(metric_pair)
             elif "apr" in metric_pair[self.metric_name]:
                 apr.append(metric_pair)
+            elif "calibre" in metric_pair[self.metric_name]:
+                calibre.append(metric_pair)
             elif "drc" in metric_pair[self.metric_name]:
                 drc.append(metric_pair)
             elif "pv_max" in metric_pair[self.metric_name]:
@@ -66,11 +68,9 @@ class OrganizeMetric:
                 pv_power.append(metric_pair)
             elif "pv_noise" in metric_pair[self.metric_name]:
                 pv_noise.append(metric_pair)
-            elif "calibre" in metric_pair[self.metric_name]:
-                calibre.append(metric_pair)
             elif "sta" in metric_pair[self.metric_name]:
                 sta.append(metric_pair)
-            elif "Kit" in metric_pair[self.metric_name]:
+            elif "Kit" in metric_pair[self.metric_name] and len(kit) == 0:
                 kit.append(metric_pair)
 
         temp_metric_collections.extend(self.add_testcase_defaults() + kit + sorted(syn, key=itemgetter(0)) +
@@ -109,7 +109,7 @@ class OrganizeMetric:
         import re
         dot_metric = re.search(r'/(dot[\d]+)/', self.test_case)
         if dot_metric:
-            return dot_metric.groups(1)
+            return str(dot_metric.groups(1))
         return ""
 
 

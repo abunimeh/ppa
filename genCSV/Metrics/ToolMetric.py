@@ -29,8 +29,9 @@ class ToolMetric(object):
                     sta_max_qor = StaMaxQor.search_file(file)
                     self.metrics.extend(sta_max_qor)
                 elif 'reports_min' in file:
-                    sta_min_qor = StaMinQor.search_file(file)
-                    self.metrics.extend(sta_min_qor)
+                    sta_min_qor = StaMinQor(file)
+                    sta_min_qor.search_file()
+                    self.metrics.extend(sta_min_qor.metrics)
                 elif '.final.qor.rpt' in file:
                     cadence_qor = CaQorReport.search_file(file)
                     self.metrics.extend(cadence_qor)
@@ -48,9 +49,11 @@ class ToolMetric(object):
                 self.metrics.extend(apr_run_log)
             elif file.endswith('block_stats_signoff.rpt'):
                 gate_count = CadenceGateCount.search_file(file)
+                # my_list.append(gate_count)
                 self.metrics.extend(gate_count)
             else:
-                self.metrics.extend(DynamicParser.search_file(file, self.tool))
+                dynamic_parser = DynamicParser(file, self.tool)
+                self.metrics.extend(dynamic_parser.search_file())
 
             # elif file.endswith('post_route_hold_optDesign.summary'):
             #     route_design = CadenceSignOffSum.search_file(file)
@@ -74,23 +77,24 @@ class ToolMetric(object):
         from FileParsers.Synopsys.DrcErrors import DRCError
         from FileParsers.Synopsys.DpLog import DpLog
         from FileParsers.DynamicParser import DynamicParser
-        from FileParsers.Synopsys.FinalRpt import FinalRpt
-        from FileParsers.Synopsys.PhysicalRpt import PhysicalRpt
-        from FileParsers.Synopsys.ClockTree import clockTreeRpt
+        from FileParsers.Synopsys.FinalReport import FinalReport
+        from FileParsers.Synopsys.PhysicalReport import PhysicalReport
+        from FileParsers.Synopsys.ClockTree import ClockTreeReport
         # from FileParsers.Synopsys.RunTimeRpt import RunTimeRpt
-        # from FileParsers.Synopsys.QorRpt import QorRpt
+        # from FileParsers.Synopsys.QorReport import QorReport
         # from FileParsers.Synopsys.PvPower import PvPower
 
         # metrics contains the multiple list that are returned from the methods in the loop below
         # Loop through the list of files given from main
+        my_list =[]
         for file in self.list_of_files:
             print("### Parsing:", file)
             # added_to_metrics = False
             # my_dict = {'dc.log': PVTMetric.search_file(file), 'icc.log': PVTMetric.search_file(file),
             #            'link.rpt': PVTMetric.search_file(file), '.dp.log': DpLog.search_file(file),
             #            'LAYOUT_ERRORS': DRCError.search_file(file, metric_collections),
-            #            'Final_Report.txt': FinalRpt.search_file(file), 'fill.physical.rpt': PhysicalRpt.search_file(file),
-            #            '.cts.clock_tree.rpt':clockTreeRpt.search_file(file)}
+            #            'Final_Report.txt': FinalReport.search_file(file), 'fill.physical.rpt': PhysicalReport.search_file(file),
+            #            '.cts.clock_tree.rpt':ClockTreeReport.search_file(file)}
             # for file_endings in my_dict:
             #
             #     if file.endswith(file_endings):
@@ -102,40 +106,54 @@ class ToolMetric(object):
             # if not added_to_metrics:
             #     metric_collections.extend(DynamicParser.search_file(file, tool))
             if file.endswith('dc.log'):
-                pvt_metrics = PVTMetric.search_file(file)
-                self.metrics.extend(pvt_metrics)
+                # pvt_metrics = PVTMetric.search_file(file)
+                my_list.append(PVTMetric(file))
+                # self.metrics.extend(pvt_metrics)
             elif file.endswith('icc.log'):
-                pvt_metrics = PVTMetric.search_file(file)
-                self.metrics.extend(pvt_metrics)
+                # pvt_metrics = PVTMetric.search_file(file)
+                my_list.append(PVTMetric(file))
+                # self.metrics.extend(pvt_metrics)
             elif file.endswith('link.rpt'):
-                pvt_metrics = PVTMetric.search_file(file)
-                self.metrics.extend(pvt_metrics)
+                # pvt_metrics = PVTMetric.search_file(file)
+                my_list.append(PVTMetric(file))
+                # self.metrics.extend(pvt_metrics)
             elif file.endswith('.dp.log'):
-                dp_log = DpLog.search_file(file)
-                self.metrics.extend(dp_log)
+                my_list.append(DpLog(file))
+                # dp_log = DpLog.search_file(file)
+                # self.metrics.extend(dp_log)
             elif file.endswith('LAYOUT_ERRORS'):
-                layout_er = DRCError.search_file(file, self.metrics)
-                self.metrics.extend(layout_er)
+                my_list.append(DRCError(file, self.metrics))
+                # layout_er = DRCError.search_file(file, self.metrics)
+                # self.metrics.extend(layout_er)
             elif file.endswith('Final_Report.txt'):
-                final_rpt = FinalRpt.search_file(file)
-                self.metrics.extend(final_rpt)
+                my_list.append(FinalReport(file))
+                # final_rpt = FinalReport.search_file(file)
+                # self.metrics.extend(final_rpt)
             elif file.endswith('fill.physical.rpt'):
-                physical_rpt = PhysicalRpt.search_file(file)
-                self.metrics.extend(physical_rpt)
+                my_list.append(PhysicalReport(file))
+                # physical_rpt = PhysicalReport.search_file(file)
+                # self.metrics.extend(physical_rpt)
             elif file.endswith(".cts.clock_tree.rpt"):
-                clock_tree_data = clockTreeRpt.search_file(file)
-                self.metrics.extend(clock_tree_data)
+                my_list.append(ClockTreeReport(file))
+                # clock_tree_data = ClockTreeReport.search_file(file)
+                # self.metrics.extend(clock_tree_data)
             else:
-                dynamic_parser = DynamicParser(file, self.tool)
-                self.metrics.extend(dynamic_parser.search_file())
-
+                # dynamic_parser = DynamicParser(file, self.tool)
+                my_list.append(DynamicParser(file, self.tool))
+                # self.metrics.extend(dynamic_parser.search_file())
+            # my_list = [dynamic_parser]
+        i = 0
+        for o in my_list:
+            o.search_file()
+            # print(o.file)
+            self.metrics.extend(o.metrics)
+            # print("METRICS", o.metrics)
+        print("MYY COUNT", i)
             # uncomment the code below if we want to search for temp_metric_collection with hard coded classes
             # elif file.endswith('run_time.rpt'):
-            #     runtimerpt = RunTimeRpt.search_file(file)
-            #     metric_collections.extend(runtimerpt)
+            #     my_list.append(RunTimeRpt(file))
             # if file.endswith('.qor.rpt'):
-            #     qrpt = QorRpt.search_file(file)
-            #     metric_collections.extend(qrpt)
+            #     my_list.append(RunTimeRpt(file)))
             # elif file.endswith('power.power.rpt'):
             #     ppower = PvPower.search_file(file)
             #     metric_collections.extend(ppower)

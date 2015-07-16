@@ -1,11 +1,11 @@
 __author__ = ''
 
-
-class CadenceViolationsData:
-    pass
+from FileParsers.Parser import Parser
 
 
-class CadenceViolations:
+class CadenceViolations(Parser):
+    def __init__(self, file):
+        super(CadenceViolations, self).__init__(file)
     @staticmethod
     def match_line(line, *args):
         import re
@@ -22,50 +22,30 @@ class CadenceViolations:
         new_name = re.sub(r'[\W]+', "_", metric_list)
         return new_name
 
-    @staticmethod
-    def search_file(file):
+    def search_file(self):
         import Metrics.FormatMetric as Format
-        # Open the file with read only permit
-        f = open(file, "r")
-        # The variable "lines" is a list containing all lines
-        lines = f.readlines()
-        # close the file after reading the lines.
-        f.close()
-        data_items = []
-        viol_data = CadenceViolationsData()
         value_found = 0
-        viol_data.found_max_trans = [CadenceViolations.replace_space('syn max trans viols'), "N/A"]
-        viol_data.found_max_cap = [CadenceViolations.replace_space('syn max cap viols'), "N/A"]
-        viol_data.found_max_fanout = [CadenceViolations.replace_space('syn max fanout viols'), "N/A"]
-
-        for line in lines:
-            found_max_trans = CadenceViolations.match_line(line, 'Max_transition design rule:')
-            found_max_cap = CadenceViolations.match_line(line, 'Max_capacitance design rule:')
-            found_max_fanout = CadenceViolations.match_line(line, 'Max_fanout design rule:')
+        for line in self.get_file_lines():
+            found_max_trans = self.match_line(line, 'Max_transition design rule:')
+            found_max_cap = self.match_line(line, 'Max_capacitance design rule:')
+            found_max_fanout = self.match_line(line, 'Max_fanout design rule:')
 
             if found_max_trans:
                 if found_max_trans.group(2) == '':
                     value_found = 0
                 else:
                     value_found = Format.format_metric_values(found_max_trans.group(2))
-                viol_data.found_max_trans[1] = value_found
+                self.metrics.append((Format.replace_space('syn max trans viols'), value_found))
 
             elif found_max_cap:
                 if found_max_cap.group(2) == '':
                     value_found = 0
                 else:
                     value_found = Format.format_metric_values(found_max_cap.group(2))
-                viol_data.found_max_cap[1] = value_found
-
+                self.metrics.append((Format.replace_space('syn max cap viols'), value_found))
             elif found_max_fanout:
                 if found_max_fanout.group(2) == '':
                     value_found = 0
                 else:
                     value_found = Format.format_metric_values(found_max_fanout.group(2))
-                viol_data.found_max_fanout[1] = value_found
-
-        data_items.append(tuple(viol_data.found_max_trans))
-        data_items.append(tuple(viol_data.found_max_cap))
-        data_items.append(tuple(viol_data.found_max_fanout))
-
-        return data_items
+                self.metrics.append((Format.replace_space('syn max fanout viols'), value_found))

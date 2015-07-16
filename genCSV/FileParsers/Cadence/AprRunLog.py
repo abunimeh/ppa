@@ -57,7 +57,7 @@ class AprRunLog:
         for line in reversed(lines):
             found_drc_vio = AprRunLog.match_line(line, 'Total number of DRC violations')
             found_run_time = AprRunLog.match_line(line, 'Ending "Encounter" (totcpu=')
-            found_kit = re.search(r'(==>INFORMATION:[\s]*P_source_if_exists:[\s]*Sourcing)[\s]*.*/([afdkitcsr\._\d]+[_]+[afdkitcsr\._\d]*[^/])/',line)
+            found_kit = re.search(r'(==>INFORMATION:[\s]*P_source_if_exists:[\s]*Sourcing)[\s]*.*/([afdkitcsr]+[afdkitcsr\._\d]+[_]+[afdkitcsr\._\d]*[^/])/',line)
 
             if found_drc_vio:
                 run_log_data.found_drc_vio = Format.replace_space('apr DRC Violations'), Format.format_metric_values(found_drc_vio.group(2))
