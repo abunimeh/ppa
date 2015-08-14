@@ -1,11 +1,10 @@
-__author__ = ''
+from FileParsers.Parser import Parser
 
 
-class CadenceAprRunLogData:
-    pass
+class AprRunLog(Parser):
+    def __init__(self, file):
+        super(AprRunLog, self).__init__(file)
 
-
-class AprRunLog:
     # matchLine() takes the line that the method search_file() is looking for at the time and the keywords of the regular
     # expression. The method does the regular expression and returns it.
     @staticmethod
@@ -23,54 +22,27 @@ class AprRunLog:
         result = re.search(line_variables, line, re.I)
         return result
 
-    # replace_space() replaces the empty spaces with underscores
-    @staticmethod
-    def replace_space(metric_list):
+
+    def search_file(self):
         import re
-        new_name = re.sub(r'[\W]+', "_", metric_list)
-        return new_name
 
-    # check_list() checks to see if the metric has already been added to the list
-    @staticmethod
-    def check_list(metrics, metric_name):
-        metric_in_list = True
-        for metric_pair in metrics:
-            if metric_name == metric_pair[0]:
-                metric_in_list = False
-                break
-        return metric_in_list
+        drc_violation_metric_name = self.replace_space('apr DRC Violations')
+        run_time_metric_name = self.replace_space('apr Run TIME') + ' (secs)'
+        kit_metric_name = "Kit"
 
-    # search_file() takes the file name given to it by
-    @staticmethod
-    def search_file(file):
-        import re
-        import Metrics.FormatMetric as Format
-        # Open the file with read only permit
-        f = open(file, "r")
-        # The variable "lines" is a list containing all lines
-        lines = f.readlines()
-        # close the file after reading the lines.
-        f.close()
-        data_items = []
-        run_log_data = CadenceAprRunLogData()
-
-        for line in reversed(lines):
-            found_drc_vio = AprRunLog.match_line(line, 'Total number of DRC violations')
-            found_run_time = AprRunLog.match_line(line, 'Ending "Encounter" (totcpu=')
+        for line in self.get_file_lines():
+            found_drc_vio = self.match_line(line, 'Total number of DRC violations')
+            found_run_time = self.match_line(line, 'Ending "Encounter" (totcpu=')
             found_kit = re.search(r'(==>INFORMATION:[\s]*P_source_if_exists:[\s]*Sourcing)[\s]*.*/([afdkitcsr]+[afdkitcsr\._\d]+[_]+[afdkitcsr\._\d]*[^/])/',line)
 
             if found_drc_vio:
-                run_log_data.found_drc_vio = Format.replace_space('apr DRC Violations'), Format.format_metric_values(found_drc_vio.group(2))
-                if AprRunLog.check_list(data_items, run_log_data.found_drc_vio[0]):
-                    data_items.append(run_log_data.found_drc_vio)
+                if not self.check_list(drc_violation_metric_name):
+                    self.metrics.append((drc_violation_metric_name, self.format_metric_values(found_drc_vio.group(2))))
             elif found_run_time:
-                run_log_data.found_run_time = Format.replace_space('apr Run Time') + ' (secs)', Format.format_metric_values(found_run_time.group(2))
-                if AprRunLog.check_list(data_items, run_log_data.found_run_time[0]):
-                    data_items.append(run_log_data.found_run_time)
+                if not self.check_list(run_time_metric_name):
+                    self.metrics.append((run_time_metric_name, self.format_metric_values(found_run_time.group(2))))
             elif found_kit:
-                run_log_data.found_kit = "Kit", found_kit.group(2)
-                if AprRunLog.check_list(data_items, run_log_data.found_kit[0]):
-                    data_items.append(run_log_data.found_kit)
-            if len(data_items) == 3:
+                if not self.check_list(kit_metric_name):
+                    self.metrics.append((kit_metric_name, found_kit.group(2)))
+            if len(self.metrics) == 3:
                 break
-        return data_items

@@ -1,6 +1,7 @@
 def get_total_count(metric_list):
+    from FileParsers.Parser import Parser
     import re
-    import Metrics.FormatMetric as Format
+    parser = Parser(" ")
     drc_tot_numb = 0
     metric_name = 0
     metric_value = 1
@@ -13,5 +14,5 @@ def get_total_count(metric_list):
                 if er_number:
                     drc_tot_numb += float(er_number.group(1))
 
-    drc_tot_numb = Format.format_metric_values(drc_tot_numb)
+    drc_tot_numb = parser.format_metric_values(drc_tot_numb)
     return drc_tot_numb

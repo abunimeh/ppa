@@ -1,5 +1,3 @@
-class FinalRptData:
-    pass
 from FileParsers.Parser import Parser
 
 
@@ -9,31 +7,25 @@ class FinalReport(Parser):
 
     def metric_naming(self):
         import re
-        stage = ""
-        denall = re.search(r'.*denall.*', self.file, re.I)
-        ipall = re.search(r'.*ipall.*', self.file, re.I)
-        drcd = re.search(r'.*drcd.*', self.file, re.I)
-        trclvs = re.search(r'.*trclvs.*', self.file, re.I)
-        if denall:
-            stage = 'drc denall'
-        if ipall:
-            stage = 'drc IPall'
-        if drcd:
-            stage = 'drc drcd'
-        if trclvs:
-            stage = 'drc trclvs'
-        return stage
+        import os.path
+        executing_file_location = os.path.realpath(__file__)
+        found_stage = re.search(r'(denall|ipall|drcd|trclvs)', self.file, re.I)
+
+        if found_stage:
+            stage_name = found_stage.group(1)
+            if stage_name == "ipall":
+                stage_name = "Ipall"
+            return stage_name
+        else:
+            print("Error!! Stage not found!! The method 'metric_naming' in the file %s needs to be edited \n" % executing_file_location)
 
     def search_file(self):
         import re
-        import Metrics.FormatMetric as Format
         stage = self.metric_naming()
-        lines = self.get_file_lines()
-        rptData = FinalRptData()
-        violation_name = Format.replace_space(stage) + " (NB)"
+        violation_name = self.replace_space("drc " + stage) + " (NB)"
 
-        for line in lines:
+        for line in self.get_file_lines():
             found_violation = re.search(r'(The[\s]*number[\s]*of[\s]*actual[\s]*errors)[\s]*:+[\s]*([\d]+[\.]*[\d]*)+.*', line, re.I)
-            if found_violation:
-                self.metrics.append((violation_name, Format.format_metric_values(found_violation.group(2))))
+
+            if self.add_to_metrics(found_violation, violation_name):
                 break

@@ -1,11 +1,10 @@
-__author__ = ''
+from FileParsers.Parser import Parser
 
 
-class CadenceGateCountData:
-    pass
+class CadenceGateCount(Parser):
+    def __init__(self, file):
+        super(CadenceGateCount, self).__init__(file)
 
-
-class CadenceGateCount:
     @staticmethod
     def match_line(regex1, line):
         import re
@@ -14,35 +13,17 @@ class CadenceGateCount:
         result = re.search(line_variables, line, re.I)
         return result
 
-    @staticmethod
-    def replace_space(metric_list):
-        import re
-        new_name = re.sub(r'[\W]+', "_", metric_list)
-        return new_name
+    def search_file(self):
 
-    @staticmethod
-    def search_file(file):
-        import Metrics.FormatMetric as Format
-        # Open the file with read only permit
-        f = open(file, "r")
-        # The variable "lines" is a list containing all lines
-        lines = f.readlines()
-        # close the file after reading the lines.
-        f.close()
-        data_items = []
-        gate_count = CadenceGateCountData()
+        cell_count_metric_name = self.replace_space('apr Cell Count')
+        found_utilization_metric_name = self.replace_space('apr utilization') + " (%)"
 
-        gate_count.found_cell_count = [Format.replace_space('apr Cell Count'), "N/A"]
-        gate_count.found_utilization = [Format.replace_space('apr utilization') + " (%)", "N/A"]
+        for line in self.get_file_lines():
+            found_cell_count = self.match_line('Inst count', line)
+            found_utilization = self.match_line('Density', line)
 
-        for line in lines:
-            found_cell_count = CadenceGateCount.match_line('Inst count', line)
-            found_utilization = CadenceGateCount.match_line('Density', line)
-            if found_cell_count:
-                gate_count.found_cell_count[1] = Format.format_metric_values(found_cell_count.group(2))
-            elif found_utilization:
-                gate_count.found_utilization[1] = Format.format_metric_values(float(found_utilization.group(2))*100) #"{0:.2f}".format(float(found_utilization.group(2))*100)
+            if found_utilization:
+                self.metrics.append((found_utilization_metric_name, self.format_metric_values(float(found_utilization.group(2))*100)))
+            else:
+                self.add_to_metrics(found_cell_count, cell_count_metric_name)
 
-        data_items.append(tuple(gate_count.found_cell_count))
-        data_items.append(tuple(gate_count.found_utilization))
-        return data_items

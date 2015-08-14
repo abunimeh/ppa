@@ -17,13 +17,10 @@ class PhysicalReport(Parser):
 
     # This method is used to search the given file and retrieve the required metrics out of those files
     def search_file(self):
-        import Metrics.FormatMetric as Format
-
-        # lines = self.get_file_lines()
-        apr_utilization_name = Format.replace_space("apr utilization")+" (%)"
-        apr_short_name = Format.replace_space("apr Shorts")
-        apr_error_name = Format.replace_space("apr DRC")
-        apr_memory_name = Format.replace_space("apr Memory")+" (MB)"
+        apr_utilization_name = self.replace_space("apr utilization")+" (%)"
+        apr_short_name = self.replace_space("apr Shorts")
+        apr_error_name = self.replace_space("apr DRC")
+        apr_memory_name = self.replace_space("apr Memory")+" (MB)"
 
         # Loop through each file line to find the metrics
         for line in self.get_file_lines():
@@ -34,11 +31,12 @@ class PhysicalReport(Parser):
 
             # Regular expression method 'search' returns the found regular expressions back in groups designated by
             # the parentheses in the regular expression
-            if found_apr_utilization:
-                self.metrics.append((apr_utilization_name, Format.format_metric_values(found_apr_utilization.group(2))))
-            elif found_apr_short:
-                self.metrics.append((apr_short_name, Format.format_metric_values(found_apr_short.group(2))))
-            elif found_total_error:
-                self.metrics.append((apr_error_name, Format.format_metric_values(found_total_error.group(2))))
+            if self.add_to_metrics(found_apr_utilization, apr_utilization_name):
+                pass
+            elif self.add_to_metrics(found_apr_short, apr_short_name):
+                pass
+            elif self.add_to_metrics(found_total_error, apr_error_name):
+                pass
             elif found_total_mem:
-                self.metrics.append((apr_memory_name, Format.format_metric_values(found_total_mem.group(2))))
+                if not self.check_list(apr_memory_name):
+                    self.metrics.append((apr_memory_name, self.format_metric_values(found_total_mem.group(2))))

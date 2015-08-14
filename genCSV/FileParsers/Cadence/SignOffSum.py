@@ -1,11 +1,10 @@
-__author__ = ''
+from FileParsers.Parser import Parser
 
 
-class CadenceSignOffSumData:
-    pass
+class CadenceSignOffSum(Parser):
+    def __init__(self, file):
+        super(CadenceSignOffSum, self).__init__(file)
 
-
-class CadenceSignOffSum:
     @staticmethod
     def match_line(regex1, line):
         import re
@@ -13,48 +12,24 @@ class CadenceSignOffSum:
         result = re.search(line_variables, line, re.I)
         return result
 
-    @staticmethod
-    def replace_space(metricname):
-        import re
-        new_name = re.sub(r'[\W]+', "_", metricname)
-        return new_name
+    def search_file(self):
 
-    @staticmethod
-    def search_file(file):
-        import Metrics.FormatMetric as Format
+        wns_metric_name = self.replace_space('apr REG2REG WNS')
+        apr_tns_metric_name = self.replace_space('apr REG2REG TNS')
+        max_cap_metric_name = self.replace_space('apr max cap viols')
+        max_trans_metric_name = self.replace_space('apr max trans viols')
 
-        # Open the file with read only permit
-        f = open(file, "r")
-        # The variable "lines" is a list containing all lines
-        lines = f.readlines()
-        data_items = []
-        # close the file after reading the lines.
-        f.close()
+        for line in self.get_file_lines():
+            found_wns = self.match_line('WNS', line)
+            found_tns = self.match_line('TNS', line)
+            found_max_cap = self.match_line('max_cap', line)
+            found_max_trans = self.match_line('max_tran', line)
 
-        s_o_sum = CadenceSignOffSumData()
-        s_o_sum.found_wns = [Format.replace_space('apr REG2REG WNS'), "N/A"]
-        s_o_sum.found_apr_tns = [Format.replace_space('apr REG2REG TNS'), "N/A"]
-        s_o_sum.found_max_cap = [Format.replace_space('apr max cap viols'), "N/A"]
-        s_o_sum.found_max_trans = [Format.replace_space('apr max trans viols'), "N/A"]
-
-        for line in lines:
-            found_wns = CadenceSignOffSum.match_line('WNS', line)
-            found_tns = CadenceSignOffSum.match_line('TNS', line)
-            found_max_cap = CadenceSignOffSum.match_line('max_cap', line)
-            found_max_trans = CadenceSignOffSum.match_line('max_tran', line)
-
-            if found_wns:
-                s_o_sum.found_wns[1] = Format.format_metric_values(found_wns.group(2))
-            elif found_tns:
-                s_o_sum.found_apr_tns[1] = Format.format_metric_values(found_tns.group(2))
-            elif found_max_cap:
-                s_o_sum.found_max_cap[1] = Format.format_metric_values(found_max_cap.group(2))
-            elif found_max_trans:
-                s_o_sum.found_max_trans[1] = Format.format_metric_values(found_max_trans.group(2))
-
-        data_items.append(tuple(s_o_sum.found_wns))
-        data_items.append(tuple(s_o_sum.found_apr_tns))
-        data_items.append(tuple(s_o_sum.found_max_cap))
-        data_items.append(tuple(s_o_sum.found_max_trans))
-
-        return data_items
+            if self.add_to_metrics(found_wns, wns_metric_name):
+                pass
+            elif self.add_to_metrics(found_tns, apr_tns_metric_name):
+                self.metrics.append((apr_tns_metric_name, self.format_metric_values(found_tns.group(2))))
+            elif self.add_to_metrics(found_max_cap, max_cap_metric_name):
+                self.metrics.append((max_cap_metric_name, self.format_metric_values(found_max_cap.group(2))))
+            elif self.add_to_metrics(found_max_trans, max_trans_metric_name):
+                self.metrics.append((max_trans_metric_name, self.format_metric_values(found_max_trans.group(2))))

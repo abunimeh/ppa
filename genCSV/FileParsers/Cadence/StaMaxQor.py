@@ -1,11 +1,10 @@
-__author__ = ''
+from FileParsers.Parser import Parser
 
 
-class CadenceStaMaxQorData:
-    pass
+class StaMaxQor(Parser):
+    def __init__(self, file):
+        super(StaMaxQor, self).__init__(file)
 
-
-class StaMaxQor:
     @staticmethod
     def match_line(line, regex1):
         import re
@@ -14,57 +13,36 @@ class StaMaxQor:
         result = re.search(line_variables, line)
         return result
 
-    @staticmethod
-    def replace_space(metric_list):
-        import re
-        new_name = re.sub(r'[\W]+', "_", metric_list)
-        return new_name
-
-    @staticmethod
-    def search_file(file):
-        import Metrics.FormatMetric as Format
-        # Open the file with read only permit
-        f = open(file, "r")
-        # The variable "lines" is a list containing all lines
-        lines = f.readlines()
-        # close the file after reading the lines.
-        f.close()
-        data_items = []
+    def search_file(self):
         found_section = False
-        sta_max_qor_data = CadenceStaMaxQorData()
 
-        for line in lines:
-            found_reg2reg_section = StaMaxQor.match_line(line, "Timing Path Group 'REG2REG' \(max_delay\/setup\)")
-            found_crit_path = StaMaxQor.match_line(line, 'Critical Path Slack:')
-            found_total_neg_slack = StaMaxQor.match_line(line, 'Total Negative Slack:')
-            found_cell_count = StaMaxQor.match_line(line, 'Leaf Cell Count:')
-            found_max_trans_count = StaMaxQor.match_line(line, 'max_transition Count:')
-            found_max_cap_count = StaMaxQor.match_line(line, 'max_capacitance Count:')
-            found_next_section = StaMaxQor.match_line(line, 'Timing Path Group')
+        worst_setup_violations_metric_name = self.replace_space('sta max tttt REG2REG worst setup viols')
+        total_negative_slack_metric_name = self.replace_space('sta max tttt REG2REG TNS')
+        cell_count_metric_name = self.replace_space('sta Cell Count')
+        max_transition_count_metric_name = self.replace_space('sta max trans viols')
+        max_capacitance_count_metric_name = self.replace_space('sta max cap viols')
+
+        for line in self.get_file_lines():
+            found_reg2reg_section = self.match_line(line, "Timing Path Group 'REG2REG' \(max_delay\/setup\)")
+            found_worst_setup_violations = self.match_line(line, 'Critical Path Slack:')
+            found_total_neg_slack = self.match_line(line, 'Total Negative Slack:')
+            found_cell_count = self.match_line(line, 'Leaf Cell Count:')
+            found_max_trans_count = self.match_line(line, 'max_transition Count:')
+            found_max_cap_count = self.match_line(line, 'max_capacitance Count:')
+            found_next_section = self.match_line(line, 'Timing Path Group')
 
             if found_reg2reg_section:
                 found_section = True
             elif found_section:
-                if found_crit_path:
-                    sta_max_qor_data.found_crit_path = Format.replace_space('sta max tttt REG2REG worst setup viols'),\
-                                                       Format.format_metric_values(found_crit_path.group(2))
-                    data_items.append(sta_max_qor_data.found_crit_path)
+                if found_worst_setup_violations:
+                    self.metrics.append((worst_setup_violations_metric_name, self.format_metric_values(found_worst_setup_violations.group(2))))
                 elif found_total_neg_slack:
-                    sta_max_qor_data.found_total_neg_slack = Format.replace_space('sta max tttt REG2REG TNS'),\
-                                                             Format.format_metric_values(found_total_neg_slack.group(2))
-                    data_items.append(sta_max_qor_data.found_total_neg_slack)
+                    self.metrics.append((total_negative_slack_metric_name, self.format_metric_values(found_total_neg_slack.group(2))))
                 elif found_next_section:
                     found_section = False
             elif found_cell_count:
-                sta_max_qor_data.found_cell_count = Format.replace_space('sta Cell Count'), Format.format_metric_values(found_cell_count.group(2))
-                data_items.append(sta_max_qor_data.found_cell_count)
+                self.metrics.append((cell_count_metric_name, self.format_metric_values(found_cell_count.group(2))))
             elif found_max_trans_count:
-                sta_max_qor_data.found_max_trans_count = Format.replace_space('sta max trans viols'), \
-                                                         Format.format_metric_values(found_max_trans_count.group(2))
-                data_items.append(sta_max_qor_data.found_max_trans_count)
+                self.metrics.append((max_transition_count_metric_name, self.format_metric_values(found_max_trans_count.group(2))))
             elif found_max_cap_count:
-                sta_max_qor_data.found_max_cap_count = Format.replace_space('sta max cap viols'),\
-                                                       Format.format_metric_values(found_max_cap_count.group(2))
-                data_items.append(sta_max_qor_data.found_max_cap_count)
-
-        return data_items
+                self.metrics.append((max_capacitance_count_metric_name, self.format_metric_values(found_max_cap_count.group(2))))

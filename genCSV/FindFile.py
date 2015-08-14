@@ -25,11 +25,9 @@ def search_dir(test_case, tool):
                 if 'drc.sum' in file:
                     if 'drc_lvs' in root:
                         found_files = add_matching_files(file_names, file, root, found_files)
-
                 elif '*.link.rpt' in file:
                     if 'pv' in root or 'sta' in root:
                         found_files = add_matching_files(file_names, file, root, found_files)
-
                 else:
                     found_files = add_matching_files(file_names, file, root, found_files)
 
@@ -48,7 +46,6 @@ def return_csv_name():
     import json
 
     config_file = return_config_name()
-
     with open(config_file, 'r') as f:
         json_data = json.load(f)
         # finds the default value for the order number to search files in the json file
@@ -60,19 +57,14 @@ def return_csv_name():
 def return_config_name():
     import sys
     import os
+    import genCSV
 
-    # If a config.json file is passed in then the program will use that as the configuration file otherwise we use the one
-    # located at the script location
-    # sys.argv is a built in list that contains the command line arguments
-    for argument in sys.argv:
-        if argument.endswith(".json"):
-            config_file = argument
-            return config_file
-
-        else:
-            config_file = os.path.join(sys.path[0], 'config.json')
-
-    return config_file
+    # If a config.json file is passed in then the program will use that as the configuration file otherwise we
+    # use the one located at the script location
+    if genCSV.args.c:
+        return genCSV.args.c
+    else:
+        return os.path.join(sys.path[0], 'config.json')
 
 
 def return_file_endings(tool):

@@ -1,65 +1,43 @@
-__author__ = ''
+from FileParsers.Parser import Parser
 
 
-class CadencePowerRptData:
-    pass
+class PowerReport(Parser):
+    def __init__(self, file):
+        super(PowerReport, self).__init__(file)
 
-
-class CadencePowerRpt:
     @staticmethod
-    def mathcLine(line, *args):
+    def match_line(line, *args):
         import re
         match_words = ""
         no_match = ""
         for arg in args:
             match_words += arg.replace(" ", "[\s]*") + "[\s]*"
             no_match += arg.replace(" ", "")
-        # print(match_words, no_match)
         line_variables = '.*(%s)[^%s\d]*([-\d\.]+).*' % (match_words, no_match)
         result = re.search(line_variables, line, re.I)
         return result
 
-    @staticmethod
-    def replace_space(metric_list):
-        import re
-        new_name = re.sub(r'[\W]+', "_", metric_list)
-        return new_name
+    def search_file(self):
 
-    @staticmethod
-    def search_file(file):
-        import Metrics.FormatMetric as Format
-        # Open the file with read only permit
-        f = open(file, "r")
-        # The variable "lines" is a list containing all lines
-        lines = f.readlines()
+        internal_metric_name = self.replace_space('apr Power Internal')
+        switching_metric_name = self.replace_space('apr Power Switching')
+        leakage_metric_name = self.replace_space('apr Power Leakage')
+        total_metric_name = self.replace_space('apr Power Total')
 
-        # close the file after reading the lines.
-        f.close()
-        data_items = []
-        power_rpt_data = CadencePowerRptData()
-        power_rpt_data.found_power_internal = [Format.replace_space('apr Power Internal'), "N/A"]
-        power_rpt_data.found_power_switching = [Format.replace_space('apr Power Switching'), "N/A"]
-        power_rpt_data.found_power_leakage = [Format.replace_space('apr Power Leakage'), "N/A"]
-        power_rpt_data.found_power_total = [Format.replace_space('apr Power Total'), "N/A"]
+        for line in self.get_file_lines():
+            found_power_internal = self.match_line(line, 'Total', 'Internal', 'Power')
+            if self.add_to_metrics(found_power_internal, internal_metric_name):
+                continue
 
-        for line in lines:
-            found_power_internal = CadencePowerRpt.mathcLine(line, 'Total', 'Internal', 'Power')
-            found_power_switching = CadencePowerRpt.mathcLine(line, 'Total', 'Switching', 'Power')
-            found_power_leakage = CadencePowerRpt.mathcLine(line, 'Total', 'Leakage', 'Power')
-            found_power_total = CadencePowerRpt.mathcLine(line, 'Total', 'Power')
+            found_power_switching = self.match_line(line, 'Total', 'Switching', 'Power')
+            if self.add_to_metrics(found_power_switching, switching_metric_name):
+                continue
 
-            if found_power_internal:
-                power_rpt_data.found_power_internal[1] = Format.format_metric_values(found_power_internal.group(2))
-            elif found_power_switching:
-                power_rpt_data.found_power_switching[1] = Format.format_metric_values(found_power_switching.group(2))
-            elif found_power_leakage:
-                power_rpt_data.found_power_leakage[1] = Format.format_metric_values(found_power_leakage.group(2))
-            elif found_power_total:
-                power_rpt_data.found_power_total[1] = Format.format_metric_values(found_power_total.group(2))
+            found_power_leakage = self.match_line(line, 'Total', 'Leakage', 'Power')
+            if self.add_to_metrics(found_power_leakage, leakage_metric_name):
+                continue
 
-        data_items.append(tuple(power_rpt_data.found_power_internal))
-        data_items.append(tuple(power_rpt_data.found_power_switching))
-        data_items.append(tuple(power_rpt_data.found_power_leakage))
-        data_items.append(tuple(power_rpt_data.found_power_total))
+            found_power_total = self.match_line(line, 'Total', 'Power')
+            if self.add_to_metrics(found_power_total, total_metric_name):
+                continue
 
-        return data_items

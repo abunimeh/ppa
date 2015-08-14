@@ -4,6 +4,7 @@ __author__ = 'tjstickx'
 class OrganizeMetric:
     def __init__(self, metrics, test_case, tool):
         self.metrics = metrics
+        self.new_metrics = []
         self.test_case = test_case
         self.tool = tool
         self.metric_name = 0
@@ -21,12 +22,22 @@ class OrganizeMetric:
         return default_metric_names
 
     def create_list_of_metric_names(self):
+        import re
         metric_names = []
         # Add each metric name that was captured from parsing the files to the list metric_names
         for metric_pair in self.metrics:
             # Because metric_pair is a list that might have different lengths we use range(len(metric_pair))
             # in the following for loop
-            metric_names.append(metric_pair[self.metric_name])
+            if metric_pair[self.metric_name] not in metric_names:
+                time_in_metric = re.search(r'time', metric_pair[self.metric_name], re.I)
+                if time_in_metric:
+                    self.new_metrics.append((re.sub('Time|time', 'TIME', metric_pair[self.metric_name]), metric_pair[1]))
+                    metric_names.append((re.sub('Time|time', 'TIME', metric_pair[self.metric_name])))
+                else:
+                    self.new_metrics.append(metric_pair)
+                    metric_names.append(metric_pair[self.metric_name])
+            else:
+                print("DUPLICATE METRIC FOUND %s \n" %(metric_pair,))
         return metric_names
 
     # This method is used to add the metrics that don't appear after parsing the required files
@@ -34,6 +45,7 @@ class OrganizeMetric:
         new_metrics_collections = []
         default_metric_names = self.get_default_metrics()
         metric_names = self.create_list_of_metric_names()
+        self.metrics = self.new_metrics
 
         for default_metric_name in default_metric_names:
             if default_metric_name not in metric_names:
@@ -52,6 +64,7 @@ class OrganizeMetric:
 
         # This loop is to arrange the files in the correct order
         for metric_pair in metrics:
+
             if "syn" in metric_pair[self.metric_name]:
                 syn.append(metric_pair)
             elif "apr" in metric_pair[self.metric_name]:
@@ -93,7 +106,7 @@ class OrganizeMetric:
             test_case_name = os.path.basename(os.path.dirname(self.test_case))
 
         testcase_defaults = [("Test_case_name", test_case_name), ("Test_case_path", self.test_case),
-                             ("Test_case_creation_date", self.add_directory_date()), ("DateTime", str(datetime.now())),
+                             ("Test_case_creation_date", self.add_directory_date()), ("DateTIME", str(datetime.now())),
                              ("Tool", self.tool), ("Dot", self.add_dot_metric())]
 
         return testcase_defaults
@@ -109,53 +122,10 @@ class OrganizeMetric:
         import re
         dot_metric = re.search(r'/(dot[\d]+)/', self.test_case)
         if dot_metric:
-            return str(dot_metric.groups(1))
+            return str(dot_metric.group(1))
         return ""
-
 
     @staticmethod
     def get_test_case_number(test_case_number=[0]):
         test_case_number[0] += 1
         return test_case_number[0]
-
-
-    # metric_pairs = [SynopsysMetric.MetricPair("syn", syn), SynopsysMetric.MetricPair("apr", apr),
-    #                 SynopsysMetric.MetricPair("drc", drc),  SynopsysMetric.MetricPair("pv_max", pv_max),
-    #                 SynopsysMetric.MetricPair("pv_min", pv_min),
-    #                 SynopsysMetric.MetricPair("pv_power", pv_power),
-    #                 SynopsysMetric.MetricPair("pv_noise", pv_noise),
-    #                 ]
-    # metric_types = {'syn': syn, 'apr': apr, 'calibre': calibre, 'drc': drc, 'pv_max': pv_max, 'pv_min': pv_min,
-    #                 'pv_power': pv_power, 'pv_noise': pv_noise, 'sta': sta, 'Kit': kit}
-    # elif "Testcase_Name" in metric_pair[metric_name]:
-
-    #     kit.append(metric_pair)
-    #
-    # elif "DateTime" in metric_pair[metric_name]:
-    #     kit.append(metric_pair)
-    #
-    # elif "Tool" in metric_pair[metric_name]:
-    #     kit.append(metric_pair)
-    # for metric_pair in metric_pairs:
-    #     metric_count += 1
-    #     if(SynopsysMetric.organize_metrics(metric_pair.metric_pair, metric_pair[metric_pair][0],
-    #                                            metric_pair, metric_pair.state_list)):
-    #         break
-    # if SynopsysMetric.organize_metrics("syn", metric_pair[metric_pair][0],  metric_pair, syn):
-    #     continue
-
-    # # The last two methods are for future refactoring
-    # @staticmethod
-    # def organize_metrics(match_metric_name, metric_name, metric_names, stage_list):
-    #     result = False
-    #
-    #     if match_metric_name in metric_names[metric_name][0]:
-    #         stage_list.append(metric_names[metric_name])
-    #         result = True
-    #
-    #     return result
-    #
-    # class MetricPair:
-    #     def __init__(self, metric_name, state_list):
-    #         self.metric_name = metric_name
-    #         self.state_list = state_list

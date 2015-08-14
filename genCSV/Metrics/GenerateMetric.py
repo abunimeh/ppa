@@ -1,52 +1,65 @@
 __author__ = ''
 
-    
-def determine_testcases(command_line_args):
-    test_cases = []
-    test_case_args = trim_argument_list(command_line_args)
-    dir_structure = get_directory_search_key()
 
-    print("Number locations to search:", (len(test_case_args)))
-    print("Locations:", test_case_args)
-    print(" ")
-    print("### Finding the required testcases ###")
-    print(" ")
+def determine_testcases(search_path_arguments):
+    import genCSV
+    test_cases = []
+    combine_test_cases = False
+    directories_down = genCSV.args.d
+    dir_structure = int(get_directory_search_key())
+
+    print("Number of locations to search: %s \n" % (len(search_path_arguments)))
+    print("Locations: %s \n\n" % search_path_arguments)
+    print("### Finding the required testcases ### \n\n")
+
+    if genCSV.args.comb:
+        combine_test_cases = True
+
+    if genCSV.args.a:
+        print("Automatically searching for testcase(s). \n")
+        for search_path_argument in search_path_arguments:
+            test_cases.extend(search_directory(search_path_argument, 20, True))
+
+    elif directories_down:
+        print("Looking %s directories deep \n" % directories_down)
+        test_cases.extend(search_directory(search_path_arguments, directories_down, False))
 
     # The following 4 statements is how the script searches for testcases in the given arguments
     # 1 is designed for the current megatest with the duplicate directory
-    if dir_structure == "1":
-        test_cases.extend(search_directory(test_case_args, 2))
-        test_cases = list(combine_identical_testcases(test_cases))
+    elif dir_structure == 1:
+        print("Searching for Megatest testcases with duplicate testcase names in the path \n")
+        test_cases.extend(search_directory(search_path_arguments, 2, False))
+        combine_test_cases = False
 
     # 2 is designed for megatest when the duplicate testcase folder is removed
-    elif dir_structure == "2":
-        test_cases.extend(search_directory(test_case_args, 1))
-        test_cases = list(combine_identical_testcases(test_cases))
+    elif dir_structure == 2:
+        print("Searching for Megatest testcases \n")
+        test_cases.extend(search_directory(search_path_arguments, 1, False))
+        combine_test_cases = False
 
     # 3 is for searching by the testcase itself
-    elif dir_structure == "3":
-        test_cases.extend(verify_test_case_directory(test_case_args))
+    elif dir_structure == 3:
+        print("Searching the given testcase argument(s) \n")
+        test_cases.extend(verify_test_case_directory(search_path_arguments))
 
     # 4 is for searching by the date folder and three levels into that
-    elif dir_structure == "4":
-        test_cases.extend(search_directory(test_case_args, 3))
+    elif dir_structure == 4:
+        print("Searching for Nigthly testcase(s) \n")
+        test_cases.extend(search_directory(search_path_arguments, 3, False))
 
-    print("Found %s testcases" % len(test_cases))
-    print("Testcases:", test_cases)
+    if combine_test_cases:
+        test_cases = list(combine_identical_testcases(test_cases))
 
+    found_testcases = len(test_cases)
+
+    if found_testcases > 0:
+        print("Found %s testcases \n" % found_testcases)
+        print("Testcases:  %s \n\n" % (', '.join(test_cases)))
+    else:
+        print("*** Error couldn't find any testcases. Are you sure you have the right configuration option? "
+              "Exiting the script!")
+        raise SystemExit
     get_metrics(test_cases)
-
-
-def trim_argument_list(command_line_args):
-    # command_line_args[0] is always the script location so we get rid of it since we don't need it anymore
-    test_case_args = command_line_args[1:len(command_line_args)]
-
-    # This loop removes json files from the command line arguments passed in when the script is called
-    for test_case_arg in test_case_args:
-        if test_case_arg.endswith('.json'):
-            test_case_args.remove(test_case_arg)
-
-    return test_case_args
 
 
 def get_directory_search_key():
@@ -54,32 +67,45 @@ def get_directory_search_key():
     import FindFile
 
     config_file = FindFile.return_config_name()
-    print("My config file:", config_file)
-
+    print("\nMy config file: %s \n" % config_file)
     # With open is a secure way to open and close a file. Using with we don't have to implicitly close the file
     # as it does it on its own
-    with open(config_file, 'r') as f:
-        json_data = json.load(f)
-        # finds the default value for the order number to search files in the json file
-        dir_structure = json_data['Search_Key']["Order"]["default"]
+    try:
+        with open(config_file, 'r') as f:
+            json_data = json.load(f)
+            # finds the default value for the order number to search files in the json file
+            dir_structure = json_data['Search_Key']["Order"]["default"]
+    except FileNotFoundError:
+        print("*** Error the configuration file: %s  was not found!! Exiting the script!! ***\n\n" % config_file)
+        raise SystemExit
 
-    return dir_structure
+    return int(dir_structure)
 
 
-def search_directory(paths, directory_level):
+def get_subdirectories(paths):
     import os
-
     path_collections = []
-    my_name = ""
-    directory_level -= 1
-
-    for path in paths:
-        path_collection = [os.path.join(path, name) for name in os.listdir(path)if os.path.isdir(
-                           os.path.join(path, name)) if os.path.join(path, name).endswith(my_name)]
+    if isinstance(paths, (list, tuple)):
+        for path in paths:
+            path_collection = [os.path.join(path, name) for name in os.listdir(path)if os.path.isdir(
+                               os.path.join(path, name))]
+            path_collections.extend(path_collection)
+    else:
+        path_collection = [os.path.join(paths, name) for name in os.listdir(paths)if os.path.isdir(
+                           os.path.join(paths, name))]
         path_collections.extend(path_collection)
+    return path_collections
 
+
+def search_directory(paths, directory_level, auto_search):
+    directory_level -= 1
+    path_collections = get_subdirectories(paths)
+    if auto_search:
+        test_cases = verify_test_case_directory(path_collections)
+        if len(test_cases) > 0:
+            return test_cases
     if directory_level != 0:
-        path_collections = search_directory(path_collections, directory_level)
+        path_collections = search_directory(path_collections, directory_level, auto_search)
     else:
         path_collections = verify_test_case_directory(path_collections)
 
@@ -88,20 +114,41 @@ def search_directory(paths, directory_level):
 
 def verify_test_case_directory(paths):
     import os
+    import genCSV
     test_cases = []
-    default_test_case_directories = ['syn', 'apr', 'drc_lvs', 'sta', 'pv', 'ext', 'denall_reuse',
-                                     'drcc', 'gden', 'HV', 'drc_IPall', 'lvs', 'drcd', 'trclvs']
+    default_test_case_sub_dirs = ('syn', 'apr', 'drc_lvs', 'sta', 'pv', 'ext', 'denall_reuse',
+                                  'drcc', 'gden', 'HV', 'drc_IPall', 'lvs', 'drcd', 'trclvs')
+    default_test_case_files = ("testcase_src_path", "last_1_rundirs", "design_name")
 
     for path in paths:
-        directories = [name for name in os.listdir(path) if os.path.isdir(os.path.join(
-                       path, name)) if name in default_test_case_directories]
-        if path.endswith("fdkex_mcmm") or len(directories) == 0:
-            print("SKIPPED:", path)
+        try:
+            directories = [file_name for file_name in os.listdir(path) if check_directory(
+                           path, file_name, default_test_case_sub_dirs, default_test_case_files)]
+            if path.endswith("fdkex_mcmm") or len(directories) == 0:
+                if not genCSV.args.a:
+                    print("SKIPPED:  %s \n" % path)
+                continue
+            else:
+                test_cases.append(path)
+        except FileNotFoundError:
+            print("*** Error the file: %s was not found *** \n\n" % path)
             continue
-        else:
-            test_cases.append(path)
 
     return test_cases
+
+
+def check_directory(path, file_name, default_test_case_sub_dirs, default_test_case_files):
+    import os
+    file = os.path.join(path, file_name)
+    sub_dirs = ("reports", "logs", "inputs", 'outputs')
+
+    if os.path.isdir(file)and file_name in default_test_case_sub_dirs:
+        for directory in os.listdir(file):
+            if directory in sub_dirs:
+                return True
+    elif file_name in default_test_case_files:
+        return True
+    return False
 
 
 def combine_identical_testcases(test_cases):
@@ -152,10 +199,9 @@ def get_metrics(test_cases):
         print("Files to be searched:")
 
         for file in list_of_files:
-            print(file, format_file_size(os.path.getsize(file)))
+            print("%s %s \n" % (file, format_file_size(os.path.getsize(file))))
 
-        print(len(list_of_files), "Total found")
-        print(" ")
+        print("%s Total found \n\n" % len(list_of_files))
         tool_metric = ToolMetric(list_of_files, test_case, tool)
         if tool is "cadence":
             metrics_collections.extend(tool_metric.get_cadence_metrics())
@@ -168,30 +214,63 @@ def get_metrics(test_cases):
 
 
 def format_file_size(unformatted_size):
-        import math
-        size_name = ("B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB")
-        i = int(math.floor(math.log(unformatted_size, 1024)))
-        p = math.pow(1024, i)
-        s = round(unformatted_size/p, 2)
-        if s > 0:
-            return '%s %s' % (s, size_name[i])
-        else:
-            return '0B'
+    import math
+    size_name = ("B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB")
+    i = int(math.floor(math.log(unformatted_size, 1024)))
+    p = math.pow(1024, i)
+    s = round(unformatted_size/p, 2)
+    if s > 0:
+        return '%s %s' % (s, size_name[i])
+    else:
+        return '0B'
 
 
 def check_tool(test_case):
     import re
 
+    test_case_tool_path = get_test_case_tool_path(test_case)
     # The following regular expressions are made to find the tool for megatest testcases
-    cadence_tool = re.search(r'/([a-zA-Z_]{1,3}[\d\.]+_[cC]{1})/', test_case)
+    cadence_tool = re.search(r'/([a-zA-Z_]{1,3}[\d\.]+_[cC]{1})/', test_case_tool_path)
 
-    if "cadence" in test_case or cadence_tool:
-        tool = "cadence"
+    if "cadence" in test_case_tool_path or cadence_tool:
+        return "cadence"
     else:
         # default tool is synopsys
-        tool = "synopsys"
+        return "synopsys"
 
-    return tool
+
+def get_test_case_tool_path(test_case):
+    import os
+    sub_directories = os.listdir(test_case)
+
+    if "testcase_src_path" in sub_directories:
+        tool_file = "testcase_src_path"
+    elif "last_1_rundirs" in sub_directories:
+        tool_file = "last_1_rundirs"
+    else:
+        return test_case
+    try:
+        with open(os.path.join(test_case, tool_file), 'r') as file:
+            return file.readline()
+    except IOError:
+        return test_case
+
+
+def write_csv(metrics_collections, csv_written, test_case, csv_name):
+    names = 0
+    values = 1
+    metric_values = get_csv_values(metrics_collections, csv_written)
+
+    if csv_written is False:
+        csv_written = True
+        write_header(csv_name, metric_values[names])
+        write_values(csv_name, metric_values[values])
+        print('%s created with %s \n\n' % (csv_name, test_case))
+    else:
+        write_values(csv_name, metric_values[values])
+        print('%s appended with %s \n\n' % (csv_name, test_case))
+
+    return csv_written
 
 
 def get_csv_values(metrics_collections, csv_written):
@@ -203,53 +282,41 @@ def get_csv_values(metrics_collections, csv_written):
 
     print("Metrics found: ")
     for metric_pair in metrics_collections:
-        # temp_metric_list = tuple(temp_metric_collection)
         print(metric_pair)
         if csv_written is False:
             names.append(metric_pair[metric_name])
             values.append(metric_pair[metric_value])
         else:
             values.append(metric_pair[metric_value])
-    print(" ")
+    print("\n")
     metric_values.append(names)
     metric_values.append(values)
 
     return metric_values
 
 
-def write_csv(metrics_collections, csv_written, test_case, csv_name):
+def write_header(csv_name, metric_names):
     import csv
+    # The 'w' argument in the following "with open" statement means that if the file doesnt exist then it
+    # will be and if one does exist it will be completely overwritten.
+    try:
+        with open(csv_name, 'w') as my_file:
+            writer = csv.writer(my_file, lineterminator='\n')
+            writer.writerow(metric_names)
+    except IOError:
+        exit_script()
 
-    names = 0
-    values = 1
-    metric_values = get_csv_values(metrics_collections, csv_written)
 
-    if csv_written is False:
-        csv_written = True
-        # Creates a csv with the first testcase only
-        # The 'wt' argument in the following "with open" statement means that if the file doesnt exist then it
-        # will be and if one does exist it will be completely overwritten.
-        try:
-            with open(csv_name, 'wt') as my_file:
-                writer = csv.writer(my_file, lineterminator='\n')
-                writer.writerow(metric_values[names])
-                writer = csv.writer(my_file, lineterminator='\n', quoting=csv.QUOTE_ALL)
-                writer.writerow(metric_values[values])
-            print(csv_name, 'created with', test_case)
-        except IOError:
-            exit_script()
-    else:
-        try:
-            # The 'a' argument in the following "with open" statement means that if the file does exist then it will be
-            # appended to.
-            with open(csv_name, 'a') as my_file:
-                writer = csv.writer(my_file, lineterminator='\n', quoting=csv.QUOTE_ALL)
-                writer.writerow(metric_values[values])
-            print(csv_name, 'appended with', test_case)
-        except IOError:
-            exit_script()
-    print(" ")
-    return csv_written
+def write_values(csv_name, metric_values):
+    import csv
+    try:
+        # The 'a' argument in the following "with open" statement means that if the file does exist then it will be
+        # appended to.
+        with open(csv_name, 'a') as my_file:
+            writer = csv.writer(my_file, lineterminator='\n', quoting=csv.QUOTE_ALL)
+            writer.writerow(metric_values)
+    except IOError:
+        exit_script()
 
 
 def exit_script():
@@ -263,23 +330,20 @@ def check_csv(csv_name):
     max_comma_count = 500
     csv_aligned = True
     line_number = 0
-    try:
-        file = open(csv_name, 'wt')
-    except IOError:
-        raise SystemExit
-    file.close()
 
-    with open(csv_name, 'r') as my_file:
-        for line in my_file:
-            line_number += 1
-            line_commas = line.count(",")
-            if line_commas < max_comma_count:
-                max_comma_count = line_commas
-            if line_commas != max_comma_count and max_comma_count is not 0:
-                csv_aligned = False
-                print("##Line: %s has a different amount of metrics" % line_number)
-    print()
-    if csv_aligned is True:
-        print("The csv is ready to upload to polaris")
-    else:
-        print("The csv needs to be fixed before uploading to polaris")
+    try:
+        with open(csv_name, 'a+') as my_file:
+            for line in my_file:
+                line_number += 1
+                line_commas = line.count(",")
+                if line_commas < max_comma_count:
+                    max_comma_count = line_commas
+                if line_commas != max_comma_count and max_comma_count is not 0:
+                    csv_aligned = False
+                    print("##Line: %s has a different amount of metrics \n" % line_number)
+        if csv_aligned is True:
+            print("The csv is ready to upload to polaris")
+        else:
+            print("The csv needs to be fixed before uploading to polaris")
+    except IOError:
+            raise SystemExit

@@ -1,76 +1,43 @@
-__author__ = ''
+from FileParsers.Parser import Parser
 
 
-class CalibreErrorsData:
-    pass
+class CalibreErrors(Parser):
+    def __init__(self, file):
+        super(CalibreErrors, self).__init__(file)
 
-
-class CalibreErrors:
-    @staticmethod
-    def metric_naming(file):
+    def metric_naming(self):
         import re
         import os.path
-        stage = ""
-        dir_name = os.path.split(os.path.dirname(file))[1]
-        denall = re.search(r'.*denall_reuse.*', dir_name, re.I)
-        ipall = re.search(r'.*ipall.*', dir_name, re.I)
-        drcd = re.search(r'.*drcc.*', dir_name, re.I)
-        trclvs = re.search(r'.*lvs.*', dir_name, re.I)
-        gden = re.search(r'.*gden.*', dir_name, re.I)
-        HV = re.search(r'.*HV.*', dir_name, re.I)
-        if denall:
-            stage = ' denall reuse'
-        elif ipall:
-            stage = ' IPall'
-        elif drcd:
-            stage = ' drcc'
-        elif trclvs:
-            stage = ' lvs'
-        elif gden:
-            stage = ' gden'
-        elif HV:
-            stage = ' HV'
-        return stage
 
-    @staticmethod
-    def replace_space(metric_list):
+        executing_file_location = os.path.realpath(__file__)
+        dir_name = os.path.split(os.path.dirname(self.file))[1]
+        stage_found = re.search(r'(denall_reuse|ipall|drcc|lvs|gden|HV)', dir_name, re.I)
+
+        if stage_found:
+            stage_name = " " + stage_found.group(1)
+            if stage_name == ' ipall':
+                stage_name = " Ipall"
+            return stage_name
+        else:
+            print("Error!! Stage not found!! The method 'metric_naming' in the file %s needs to be edited \n" % executing_file_location)
+
+    def search_file(self):
         import re
-        new_name = re.sub(r'[\W]+', "_", metric_list)
-        return new_name
 
-    @staticmethod
-    def search_file(file):
-        import re
-        import Metrics.FormatMetric as Format
-        # Open the file with read only permit
-        f = open(file, "r")
-        # The variable "lines" is a list containing all lines
-        lines = f.readlines()
-        # close the file after reading the lines.
-        f.close()
-        data_items = []
-        stage = CalibreErrors.metric_naming(file)
-        calibre_errors = CalibreErrorsData()
-        calibre_errors.found_violation = [Format.replace_space('calibre' + stage), "\t"]
-        calibre_errors.found_fail_violations = [Format.replace_space('calibre' + stage), "\t"]
+        stage = self.metric_naming()
+        violation_metric_name = self.replace_space('calibre' + stage)
+        fail_violation_metric_name = self.replace_space('calibre' + stage)
 
-        if file.endswith("drc.sum"):
-            for line in lines:
+        if self.file.endswith("drc.sum"):
+            for line in self.get_file_lines():
                 found_violation = re.search('(TOTAL[\s]*DRC[\s]*Results[\s]*Generated:)[\s]*([-\d\.]*).*', line, re.I)
                 if found_violation:
-                    calibre_errors.found_violation[1] = Format.format_metric_values(found_violation.group(2))
-                    data_items.append(tuple(calibre_errors.found_violation))
-                    return data_items
+                    self.metrics.append((violation_metric_name, self.format_metric_values(found_violation.group(2))))
+                    break
 
-        elif file.endswith("lvs.report"):
-            for line in lines:
+        elif self.file.endswith("lvs.report"):
+            for line in self.get_file_lines():
                 found_fail_violation = re.search('.*#*[\s]*(INCORRECT)[\s]*.*', line, re.I)
                 if found_fail_violation:
-                    calibre_errors.found_fail_violations[1] = "FAIL"
-                    data_items.append(tuple(calibre_errors.found_fail_violations))
-                    return data_items
-
-        # data_items.append(tuple(calibre_errors.found_violation))
-        # data_items.append(tuple(calibre_errors.found_fail_violations))
-
-        return data_items
+                    self.metrics.append((fail_violation_metric_name, "FAIL"))
+                    break

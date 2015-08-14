@@ -11,9 +11,7 @@ class DynamicParser(Parser):
     @staticmethod
     def match_line(regex1, line):
         import re
-        keyword = regex1.replace(" ", "")
         line_variables = regex1
-        # print("line_var:", line_variables)
         result = re.search(line_variables, line, re.I)
         return result
 
@@ -99,22 +97,25 @@ class DynamicParser(Parser):
         return metric_object_name["metric_name"]
 
     def get_file_lines(self):
+        from time import sleep
         if self.file_ending is not "":
             with open(self.file, "r") as f:
                 # The variable "lines" is a list containing all lines
-                lines = f.readlines()
-        return lines
+                return f.readlines()
+        else:
+            print("***Error! The file %s is not in the configuration file \n" % self.file)
+            sleep(4)
+            return
 
     def append_metric(self, metric_object_name, line):
-        import Metrics.FormatMetric as Format
-        met_name = self.determine_metric_name(metric_object_name)
-        met_value = self.match_line(metric_object_name["metric_reg_exp"], line)
+        metric_name = self.determine_metric_name(metric_object_name)
+        metric_regexp = self.match_line(metric_object_name["metric_reg_exp"], line)
 
-        if met_value:
-            if met_value.group(2) == '':
-                metric = met_name, 0.00
+        if metric_regexp:
+            if metric_regexp.group(2) == '':
+                metric = metric_name, 0.00
             else:
-                metric = met_name, Format.format_metric_values(met_value.group(2))
+                metric = metric_name, self.format_metric_values(metric_regexp.group(2))
             self.metrics.append(metric)
 
     def get_metrics_dictionary(self):
@@ -128,7 +129,7 @@ class DynamicParser(Parser):
             try:
                 metrics_dictionary = json_data['metrics_dictionary'][self.tool]
             except KeyError:
-                print("***Error! Something is wrong in the json configuration file")
+                print("***Error! Something is wrong in the json configuration file \n")
         return metrics_dictionary
 
     def check_for_file_in_metrics_dictionary(self, metrics_dictionary):
@@ -141,11 +142,10 @@ class DynamicParser(Parser):
     def search_file(self):
         metrics_dictionary = self.get_metrics_dictionary()
         self.check_for_file_in_metrics_dictionary(metrics_dictionary)
-        lines = self.get_file_lines()
         section = 0
         last_line = ""
         if self.file_ending is not "":
-            for line in lines:
+            for line in self.get_file_lines():
                 for metric_object, metric_object_name in metrics_dictionary[self.file_ending].items():
                     if metric_object_name["found_section_reg_exp"]["begin_line"] == "none":
                         self.append_metric(metric_object_name, line)
@@ -162,4 +162,3 @@ class DynamicParser(Parser):
                             if ending_line:
                                 section = 0
                         last_line = line
-        return self.metrics

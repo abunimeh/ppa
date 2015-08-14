@@ -1,6 +1,3 @@
-class PvPowerData:
-    pass
-
 from FileParsers.Parser import Parser
 
 
@@ -16,24 +13,22 @@ class PvPower(Parser):
         return result
 
     def search_file(self):
-        import Metrics.FormatMetric as Format
-
         pv = "pv power tttt"
 
         for line in self.get_file_lines():
-            foundCInternPwr = PvPower.match_line("Cell", "Internal", "Power", line)
-            foundCLeakPwr = PvPower.match_line("Cell", "Leakage", "Power", line)
-            foundNetSwPwr = PvPower.match_line("Net", "switching", "Power", line)
-            foundTotalPwr = PvPower.match_line("Total", "Power", " ", line)
+            found_internal_power = self.match_line("Cell", "Internal", "Power", line)
+            found_leakage_power = self.match_line("Cell", "Leakage", "Power", line)
+            found_switching_power = self.match_line("Net", "switching", "Power", line)
+            found_total_power = self.match_line("Total", "Power", " ", line)
 
-            if foundCInternPwr:
-                self.metrics.append((Format.replace_space(pv + " internal"), Format.format_metric_values(foundCInternPwr.group(2))))
-            elif foundCLeakPwr:
-                self.metrics.append((Format.replace_space(pv + " leakage"), Format.format_metric_values(foundCLeakPwr.group(2))))
-            elif foundNetSwPwr:
-                self.metrics.append((Format.replace_space(pv + " switch"), Format.format_metric_values(foundNetSwPwr.group(2))))
-            elif foundTotalPwr:
-                self.metrics.append((Format.replace_space(pv + " total"), Format.format_metric_values(foundTotalPwr.group(2))))
+            if self.add_to_metrics(found_internal_power, self.replace_space(pv + " internal")):
+                pass
+            elif self.add_to_metrics(found_leakage_power, self.replace_space(pv + " leakage")):
+                pass
+            elif self.add_to_metrics(found_switching_power, self.replace_space(pv + " switch")):
+                pass
+            elif self.add_to_metrics(found_total_power, self.replace_space(pv + " total")):
+                pass
 
 
 
